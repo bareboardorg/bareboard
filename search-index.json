@@ -132,6 +132,41 @@
     "description": "28 bench tools examined: pictures, FCC IDs, datasheets, litigation checks, and a basic DIY audit for each \u2014 Siglent backdoor accounts, the FTDI kill-switch, the Rigol keygen saga, the Fluke\u2013SparkFun seizure, and the clone epidemics."
   },
   {
+    "title": "The Autopsy Report",
+    "url": "/autopsy.html",
+    "description": "An autopsy report is what BareBoard does best: we take a device, open it, and publish what is actually inside \u2014 verified, dated, and honest about what we don't know."
+  },
+  {
+    "title": "Contribute",
+    "url": "/contribute.html",
+    "description": "You do not need to be an expert. You need a retired device, a screwdriver, a phone camera, and honesty about what you don't know. This page is written so anyone can do it."
+  },
+  {
+    "title": "The Five Eras",
+    "url": "/eras.html",
+    "description": "How hardware went from open to sealed \u2014 and what we do about it. Hardware history moves in decades: each one redraws what a repairer can see, probe, and document."
+  },
+  {
+    "title": "Glossary",
+    "url": "/glossary.html",
+    "description": "Every technical term we use, in plain language. If a term is missing, that's a bug \u2014 tell us on Contribute."
+  },
+  {
+    "title": "The Library",
+    "url": "/library.html",
+    "description": "Two shelves: preserved public documents (downloaded, hashed, kept) and original manuals (written by us from public research, where no manual exists). Built to survive link rot, paywalls, and"
+  },
+  {
+    "title": "The Registry",
+    "url": "/registry.html",
+    "description": "Every important document, ranked by honesty. A document's value to a repairer is not proportional to how hard a company guards it \u2014 so we say exactly what exists, what is public, and what is"
+  },
+  {
+    "title": "Autopsy Report BB-AR-001 \u2014 Siemens S7-300 CPU 315-2 DP",
+    "url": "/autopsy/s7-300-cpu-315-2dp.html",
+    "description": "\u2190 All reports \u00b7 Report BB-AR-001 \u00b7 2026-10-08"
+  },
+  {
     "title": "Bench Notes",
     "url": "/notes/",
     "description": "Short technical observations from the BareBoard workbench."

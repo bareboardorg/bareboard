@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: upload.wikimedia.org thumb.wikimedia.org; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glossary — BareBoard</title>
+<meta name="description" content="Every technical term we use, in plain language. If a term is missing, that's a bug — tell us on Contribute.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Glossary">
+<meta property="og:description" content="Every technical term we use, in plain language. If a term is missing, that's a bug — tell us on Contribute.">
+<meta property="og:url" content="https://www.bareboard.org/glossary.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/autopsy.html">Autopsy</a></li>
+        <li><a href="/hot-100.html">Top 100</a></li>
+        <li><a href="/most-wanted.html">Most Wanted</a></li>
+        <li><a href="/watchmen.html">W&sup3;</a></li>
+        <li><a href="/watchmen-round-2.html">W&sup3; R2</a></li>
+        <li><a href="/registry.html">Registry</a></li>
+        <li><a href="/library.html">Library</a></li>
+        <li><a href="/contribute.html">Contribute</a></li>
+        <li><a href="/foundry.html">Foundry</a></li>
+        <li><a href="/eras.html">Eras</a></li>
+        <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+        <li><a href="/glossary.html">Glossary</a></li>
+        <li><a href="/support.html">Support</a></li>
+        <li><a href="/terms.html">Legal</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<h1>Glossary</h1>
+<p>Every technical term we use, in plain language. If a term is missing, that's a bug —
+tell us on <a href="/contribute.html">Contribute</a>.</p>
+
+<table>
+<tr><th>Term</th><th>Plain meaning</th></tr>
+<tr><td><strong>Datasheet</strong></td><td>The manufacturer's public document describing a chip: what it does, its pins, its limits. The most valuable public document in repair.</td></tr>
+<tr><td><strong>Schematic</strong></td><td>A map of how components are wired together on a board. Tells you what connects to what.</td></tr>
+<tr><td><strong>PCB</strong></td><td>Printed circuit board — the physical board components are soldered onto.</td></tr>
+<tr><td><strong>Register</strong></td><td>A chip's internal control slot. Writing a value to a register changes what the chip does.</td></tr>
+<tr><td><strong>MMIO</strong></td><td>Memory-mapped I/O — a way chips expose their registers as if they were memory addresses the CPU can read and write.</td></tr>
+<tr><td><strong>Firmware</strong></td><td>The software running inside a chip or device, below the operating system.</td></tr>
+<tr><td><strong>JTAG</strong></td><td>A hardware debug interface on chips, used by factories and repair benches. Often locked after manufacturing.</td></tr>
+<tr><td><strong>e-fuse / OTP</strong></td><td>One-time-programmable hardware fuses inside a chip. Once "burned," they can't be undone — they set permanent security states.</td></tr>
+<tr><td><strong>PMIC</strong></td><td>Power management IC — the chip that decides which parts of a board get which voltage, and when.</td></tr>
+<tr><td><strong>SoC</strong></td><td>System on a chip — CPU, GPU, memory controller, and more on one piece of silicon.</td></tr>
+<tr><td><strong>SEP / Secure Enclave</strong></td><td>Apple's isolated security coprocessor. Holds keys and biometric data so the main processor can't read them.</td></tr>
+<tr><td><strong>PLC</strong></td><td>Programmable logic controller — the industrial computer that runs pumps, motors, and whole plants.</td></tr>
+<tr><td><strong>FTL</strong></td><td>Flash translation layer — the SSD controller's system for pretending worn-out flash blocks are fine.</td></tr>
+<tr><td><strong>VSC</strong></td><td>Vendor-specific command — a hidden command a manufacturer adds to a standard interface, outside the public specification.</td></tr>
+<tr><td><strong>NDA</strong></td><td>Non-disclosure agreement — a contract that keeps a document secret. Sealed documents are not public documents.</td></tr>
+<tr><td><strong>I²C / SPI / UART</strong></td><td>Three common low-speed ways chips talk to each other over short wires.</td></tr>
+<tr><td><strong>DFU</strong></td><td>Device firmware update — a mode that lets you reflash a chip. Its presence is a good openness sign.</td></tr>
+<tr><td><strong>Autopsy report</strong></td><td>BareBoard's core document: what's actually inside a device, verified and dated.</td></tr>
+</table>
+
+  <footer>&mdash; Alan Moore, <em>Watchmen</em> (1986&ndash;1987). The phrase appears as graffiti throughout the graphic novel, adapted from Juvenal&rsquo;s Latin <em>&ldquo;Quis custodiet ipsos custodes?&rdquo;</em> (<em>Satires</em> VI, circa 100 AD).</footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+</body>
+</html>

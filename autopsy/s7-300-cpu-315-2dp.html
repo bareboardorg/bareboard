@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: upload.wikimedia.org thumb.wikimedia.org; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopsy Report BB-AR-001 — Siemens S7-300 CPU 315-2 DP — BareBoard</title>
+<meta name="description" content="← All reports · Report BB-AR-001 · 2026-10-08">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Autopsy Report BB-AR-001 — Siemens S7-300 CPU 315-2 DP">
+<meta property="og:description" content="← All reports · Report BB-AR-001 · 2026-10-08">
+<meta property="og:url" content="https://www.bareboard.org/autopsy/s7-300-cpu-315-2dp.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/autopsy.html">Autopsy</a></li>
+        <li><a href="/hot-100.html">Top 100</a></li>
+        <li><a href="/most-wanted.html">Most Wanted</a></li>
+        <li><a href="/watchmen.html">W&sup3;</a></li>
+        <li><a href="/watchmen-round-2.html">W&sup3; R2</a></li>
+        <li><a href="/registry.html">Registry</a></li>
+        <li><a href="/library.html">Library</a></li>
+        <li><a href="/contribute.html">Contribute</a></li>
+        <li><a href="/foundry.html">Foundry</a></li>
+        <li><a href="/eras.html">Eras</a></li>
+        <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+        <li><a href="/glossary.html">Glossary</a></li>
+        <li><a href="/support.html">Support</a></li>
+        <li><a href="/terms.html">Legal</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<p class="small"><a href="/autopsy.html">← All reports</a> · Report BB-AR-001 · 2026-10-08</p>
+<h1>Autopsy Report — Siemens SIMATIC S7-300 · CPU 315-2 DP (6ES7315-2AG10-0AB0)</h1>
+<p><strong>Status: documentation phase — bench work pending.</strong> This report contains
+verified public documentation only. No bench findings are claimed; every pending item is
+dated and marked. That is the standard.</p>
+
+<h2>Device</h2>
+<table>
+<tr><th>Field</th><th>Value</th></tr>
+<tr><td>Device</td><td>Siemens SIMATIC S7-300 modular <a href="/glossary.html">PLC</a>, CPU 315-2 DP</td></tr>
+<tr><td>Order number</td><td>6ES7315-2AG10-0AB0</td></tr>
+<tr><td>Class</td><td>Mid-range CPU; machines built early 2000s–2010s (packaging lines, machine tools, material handling) [2]</td></tr>
+<tr><td>Product status</td><td>Discontinued by Siemens; successor 6ES7315-2AH14-0AB0 (256 KB work memory) [2][3]</td></tr>
+<tr><td>Physical</td><td>40 × 125 × 130 mm, ~0.5 kg [3]</td></tr>
+</table>
+
+<h2>Acquisition</h2>
+<p><strong>Owner-reported:</strong> retired from industrial service; surplus/resale path.
+Verification of the acquisition record is pending — dated 2026-10-08. The unit was out of
+service before examination; no in-service system was touched. This is the same class of
+device as the <a href="/most-wanted.html">Most Wanted</a> water-treatment PLC entry —
+retired units only, always.</p>
+
+<h2>Tools</h2>
+<p>Bench-standard kit (screwdrivers, multimeter, current-limited 24 V DC supply, camera).
+Tool trustworthiness is tracked on the <a href="/watchmen.html">Watchmen</a> board;
+any programmer or USB-serial adapter used on this unit will be audited there first.</p>
+
+<h2>Findings</h2>
+<h3>A. Verified from public documentation (numbered, cited)</h3>
+<ol>
+<li><strong>Compute &amp; memory.</strong> 128 KB integrated work memory; load memory on a
+SIMATIC Micro Memory Card (MMC) up to 8 MB; the CPU requires an MMC to operate [1][2].</li>
+<li><strong>Interfaces.</strong> MPI for programming/HMI/global data (up to 12 Mbit/s) and
+PROFIBUS DP as master or slave (up to 12 Mbit/s, up to 124 DP slaves) [2].</li>
+<li><strong>Power.</strong> Integrated 24 V DC supply input [1]; in a full rack, PS307/PS305
+modules supply 24 V DC from 120/230 V AC mains (PS305: 24–110 V DC input), in 2 A, 5 A, and
+10 A variants [1][8].</li>
+<li><strong>Scale.</strong> Up to 16,384 digital I/O, 1,024 analog I/O, 4 racks [4].</li>
+<li><strong>Architecture.</strong> Modular rack system on a mounting rail: PS power supply,
+CPU, SM signal modules (321 digital-in, 322 digital-out, 331 analog-in, 332 analog-out),
+IM interface modules, CP communication modules, joined by the P-bus backplane [4][5].</li>
+<li><strong>Identification.</strong> "CPU 3xx" label on the front panel; the 6ES7 prefix
+marks the STEP 7 PLC family; middle digits encode module function; the suffix encodes
+communications (PN, DP, PN/DP, C = compact) [4][5]. S5 units are labeled "CPU 1xx/2xx" —
+a different rack architecture [4].</li>
+<li><strong>Service reality.</strong> Siemens does not sell the CPU main board separately —
+board-level repair means third-party rework or whole-module replacement. No-power faults
+trace to the PSU, the memory card, or board damage (burn marks, bulging capacitors) [9].</li>
+<li><strong>Documentation.</strong> The official Installation Operating Instructions
+(A5E00105492-08, 06/2008) are public from Siemens, and preservation copies exist on
+archive.org [6][10].</li>
+</ol>
+
+<h3>B. Bench findings — PENDING (dated 2026-10-08)</h3>
+<p>No bench work has been performed or claimed. Planned steps, each to be evidenced when done:</p>
+<ol>
+<li>Photograph all labels, connectors, and switch positions before opening anything.</li>
+<li>Open the CPU module; record every chip marking. Siemens module markings decode with the
+public part-number system [5]; third-party chips go to the datasheet hunt.</li>
+<li>If the rack PSU is present: open the PS307 <strong>after discharging the mains
+capacitors</strong>; photograph the board; check electrolytics for bulging [9].</li>
+<li>Inspect the MMC slot and any card present (read-only; image, never write).</li>
+<li>Record the MPI/DP connector pinout against the public manual [6].</li>
+<li>Check the battery compartment; record the cell type from its label (not yet verified).</li>
+<li>Bench power-on: current-limited 24 V DC, no fieldbus attached; record LED behavior
+(SF/BF/DC5V) against the public diagnostics documentation [9].</li>
+</ol>
+
+<h2>Chip inventory</h2>
+<p>Pending bench work (step 2 above). Public context that will help: Siemens' own part-number
+system decodes module markings [5], and the rack's PS/SM/IM/CP modules each carry decodable
+6ES7 numbers [4].</p>
+
+<h2>Safety notes</h2>
+<ul>
+<li><strong>Mains hazard:</strong> PS307/PS305 are mains-connected (120/230 V AC, Class I,
+grounded). Discharge capacitors before opening; treat the primary side as live until proven otherwise [7][8].</li>
+<li><strong>Battery:</strong> a backup cell compartment is expected on the CPU module — type
+to be verified from the label on the bench (dated 2026-10-08).</li>
+<li><strong>Fieldbus:</strong> never connect a bench PLC to a live PROFIBUS DP network or
+in-service I/O. Retired unit, bench only.</li>
+</ul>
+
+<h2>Uncertainty (dated)</h2>
+<ul>
+<li>Acquisition path: owner-reported, unverified — 2026-10-08.</li>
+<li>All bench findings: none claimed; bench work pending — 2026-10-08.</li>
+<li>Work memory figure (128 KB): confirmed by three independent listings [1][2][3]; to be
+confirmed against the unit label and the official Siemens datasheet on the bench — 2026-10-08.</li>
+<li>Backup battery type: not yet verified — 2026-10-08.</li>
+</ul>
+
+<h2>Disclosure</h2>
+<p>Retired unit; no in-service exposure. If bench work later finds weaknesses relevant to
+S7-300 systems still deployed in industry (they are common), disclosure goes to Siemens
+PSIRT and ICS-CERT with a coordinated timeline. Verified findings only — always.</p>
+
+<h2>Sources</h2>
+<ol class="small">
+<li><a href="https://ddpartssolution.com/products/siemens-6es7315-2ag10-0ab0-simatic-s7-300-cpu-315-2dp-central-processing-unit-with-mpi-and-profibus-dp-interfaces">Parts-solution listing — CPU 315-2 DP specs</a> (accessed 2026-10-08)</li>
+<li><a href="https://oukecnc.com/blog/6es7315-2ag10-0ab0-specs-failures-replacement.html">Specs, failures &amp; replacement guide — 6ES7315-2AG10-0AB0</a> (accessed 2026-10-08)</li>
+<li><a href="https://www.aotewell.com/siemens/siemens-plcs/6es7315-2ag10-0ab0-simatic-s7-300-cpu-315-2dp.html">Aotewell listing — dimensions, weight, stop-production status</a> (accessed 2026-10-08)</li>
+<li><a href="https://industrialmonitordirect.com/blogs/knowledgebase/siemens-s7-300-plc-part-number-identification-guide">S7-300 part-number identification guide — I/O capacity, identification tips</a> (accessed 2026-10-08)</li>
+<li><a href="https://industrialmonitordirect.com/blogs/knowledgebase/siemens-part-numbering-system-s7-300400-decoder">Siemens S7-300/400 part-numbering decoder</a> (accessed 2026-10-08)</li>
+<li><a href="https://cache.industry.siemens.com/dl/files/386/36305386/att_63908/v1/s7300_cpu_31xc_and_cpu_31x_operating_instructions_en-US_en-US.pdf">Siemens (official) — S7-300 CPU 31xC/31x Installation Operating Instructions, A5E00105492-08, 06/2008</a> (accessed 2026-10-08)</li>
+<li><a href="https://apim.industry.siemens.cloud/ted/datasheet?format=pdf&mlfbs=6ES7307-1EA01-0AA0&language=en&caller=SIOS">Siemens (official) — PS307 5 A power supply datasheet, 6ES7307-1EA01-0AA0</a> (accessed 2026-10-08)</li>
+<li><a href="https://www.mrovendor.in/siemens.html">MROvendor — PS307/PS305 overview, 2/5/10 A variants, input ranges</a> (accessed 2026-10-08)</li>
+<li><a href="https://industrialmonitordirect.com/blogs/knowledgebase/troubleshooting-siemens-s7-300-plc-with-no-indicator-lights-after-power-on">S7-300 no-power troubleshooting guide</a> (accessed 2026-10-08)</li>
+<li><a href="https://archive.org/details/manuallib-id-32036">archive.org preservation copy — S7-300 CPU 31xC/31x Installation Operating Instructions</a> (accessed 2026-10-08)</li>
+</ol>
+<p class="small">License: CC BY-SA 4.0 — BareBoard. Findings A are compiled from the public
+sources above; bench findings will be added only with evidence, dated.</p>
+
+  <footer>&mdash; Alan Moore, <em>Watchmen</em> (1986&ndash;1987). The phrase appears as graffiti throughout the graphic novel, adapted from Juvenal&rsquo;s Latin <em>&ldquo;Quis custodiet ipsos custodes?&rdquo;</em> (<em>Satires</em> VI, circa 100 AD).</footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: upload.wikimedia.org thumb.wikimedia.org; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Autopsy Report — BareBoard</title>
+<meta name="description" content="An autopsy report is what BareBoard does best: we take a device, open it, and publish what is actually inside — verified, dated, and honest about what we don't know.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="The Autopsy Report">
+<meta property="og:description" content="An autopsy report is what BareBoard does best: we take a device, open it, and publish what is actually inside — verified, dated, and honest about what we don't know.">
+<meta property="og:url" content="https://www.bareboard.org/autopsy.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/autopsy.html">Autopsy</a></li>
+        <li><a href="/hot-100.html">Top 100</a></li>
+        <li><a href="/most-wanted.html">Most Wanted</a></li>
+        <li><a href="/watchmen.html">W&sup3;</a></li>
+        <li><a href="/watchmen-round-2.html">W&sup3; R2</a></li>
+        <li><a href="/registry.html">Registry</a></li>
+        <li><a href="/library.html">Library</a></li>
+        <li><a href="/contribute.html">Contribute</a></li>
+        <li><a href="/foundry.html">Foundry</a></li>
+        <li><a href="/eras.html">Eras</a></li>
+        <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+        <li><a href="/glossary.html">Glossary</a></li>
+        <li><a href="/support.html">Support</a></li>
+        <li><a href="/terms.html">Legal</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<h1>The Autopsy Report</h1>
+<p>An autopsy report is what BareBoard does best: we take a device, open it, and
+publish what is actually inside — verified, dated, and honest about what we don't know.</p>
+
+<h2>The three rules</h2>
+<ol>
+<li><strong>Every claim has evidence.</strong> A photo, a measurement, a screenshot, a citation.</li>
+<li><strong>Every unknown is marked.</strong> Write "unknown — dated 2026-10-08" rather than guessing.</li>
+<li><strong>The device was legally acquired and retired.</strong> Never an in-service,
+life-critical, or civic device.</li>
+</ol>
+
+<h2>Required fields</h2>
+<table>
+<tr><th>Field</th><th>What goes in it</th></tr>
+<tr><td>Device / model / year</td><td>Exact model number and year. Photos of the label.</td></tr>
+<tr><td>Acquisition</td><td>Where you got it, when, and that it was legal (receipt, auction lot, surplus).</td></tr>
+<tr><td>Tools used</td><td>Screwdrivers, multimeter, programmer — and whether each tool was audited (<a href="/watchmen.html">watchmen</a>).</td></tr>
+<tr><td>Findings</td><td>Numbered. Each finding has its evidence attached.</td></tr>
+<tr><td>Uncertainty</td><td>What you could not verify, dated and marked.</td></tr>
+<tr><td>Disclosure status</td><td>Vendor contacted? CVD/ICS-CERT filed? Coordinated timeline.</td></tr>
+<tr><td>Sources</td><td>Every public source used, with dates.</td></tr>
+</table>
+
+<div class="notice"><strong>Anyone can do this.</strong> The full template is in
+<a href="/templates/autopsy-report.md">templates/autopsy-report.md</a>, and
+<a href="/contribute.html">Contribute</a> walks you through your first report in 30 minutes.</div>
+
+<h2>Reports</h2>
+<div class="card">
+<h3><a href="/autopsy/s7-300-cpu-315-2dp.html">Siemens SIMATIC S7-300 — CPU 315-2 DP (6ES7315-2AG10-0AB0)</a></h3>
+<p>Report BB-AR-001 · 2026-10-08 · <strong>Documentation phase — bench work pending.</strong>
+Verified public findings: modular rack architecture, 128 KB work memory + MMC load memory,
+MPI + PROFIBUS DP interfaces, PS307 mains power supply, service and successor status.
+No bench findings are claimed; every pending item is dated.</p>
+</div>
+<p class="small">One report on the bench. Want the next one? <a href="/contribute.html">Write it</a> —
+the template takes 30 minutes.</p>
+
+  <footer>&mdash; Alan Moore, <em>Watchmen</em> (1986&ndash;1987). The phrase appears as graffiti throughout the graphic novel, adapted from Juvenal&rsquo;s Latin <em>&ldquo;Quis custodiet ipsos custodes?&rdquo;</em> (<em>Satires</em> VI, circa 100 AD).</footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+</body>
+</html>

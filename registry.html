@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: upload.wikimedia.org thumb.wikimedia.org; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Registry — BareBoard</title>
+<meta name="description" content="Every important document, ranked by honesty. A document's value to a repairer is not proportional to how hard a company guards it — so we say exactly what exists, what is public, and what is">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="The Registry">
+<meta property="og:description" content="Every important document, ranked by honesty. A document's value to a repairer is not proportional to how hard a company guards it — so we say exactly what exists, what is public, and what is">
+<meta property="og:url" content="https://www.bareboard.org/registry.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d1d1f'/%3E%3Ctext x='32' y='45' font-family='system-ui,-apple-system,sans-serif' font-size='36' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/autopsy.html">Autopsy</a></li>
+        <li><a href="/hot-100.html">Top 100</a></li>
+        <li><a href="/most-wanted.html">Most Wanted</a></li>
+        <li><a href="/watchmen.html">W&sup3;</a></li>
+        <li><a href="/watchmen-round-2.html">W&sup3; R2</a></li>
+        <li><a href="/registry.html">Registry</a></li>
+        <li><a href="/library.html">Library</a></li>
+        <li><a href="/contribute.html">Contribute</a></li>
+        <li><a href="/foundry.html">Foundry</a></li>
+        <li><a href="/eras.html">Eras</a></li>
+        <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+        <li><a href="/glossary.html">Glossary</a></li>
+        <li><a href="/support.html">Support</a></li>
+        <li><a href="/terms.html">Legal</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<h1>The Registry</h1>
+<p>Every important document, ranked by honesty. A document's value to a repairer is not
+proportional to how hard a company guards it — so we say exactly what exists, what is
+public, and what is sealed.</p>
+
+<h2>Status legend</h2>
+<ul>
+<li>🟢 <strong>PUBLIC</strong> — the vendor publishes it. Collect, preserve, cite.</li>
+<li>🔵 <strong>PUBLIC-RESEARCH</strong> — no vendor doc, but public research exists. We compile originals from it.</li>
+<li>🟠 <strong>SEALED (NDA)</strong> — vendor-internal. Listed for awareness, with public-research pointers. <strong>No bounties.</strong></li>
+<li>⛔ <strong>EXCLUDED</strong> — material that exists only to defeat hardware security. Never a target.</li>
+</ul>
+
+<h2>Level legend (<a href="/foundry.html">The Foundry</a>)</h2>
+<ul>
+<li><strong>L0</strong> — silicon (chips, secure elements) · <strong>L1</strong> — interconnect (boards, power rails)</li>
+<li><strong>L2</strong> — controllers (storage, wireless, firmware) · <strong>L3</strong> — systems (devices, human impact)</li>
+</ul>
+
+<h2>The board (condensed)</h2>
+<table>
+<tr><th>Target</th><th>Level</th><th>Status</th><th>Legitimate resource</th></tr>
+<tr><td>Intel CSME register maps</td><td>L0</td><td>🟠</td><td>me_cleaner · REcon 2014 · coreboot tooling → original doc in Library</td></tr>
+<tr><td>Intel DFX / JTAG lock-override procedures</td><td>L0</td><td>⛔</td><td>Excluded — circumvention material</td></tr>
+<tr><td>AMD PSP integration manual</td><td>L0</td><td>🟠</td><td>coreboot PSP Integration Guide · PSPTool → original doc in Library</td></tr>
+<tr><td>Apple SEP register specs</td><td>L0</td><td>🟠</td><td>Black Hat 2016 · MOSEC 2020 → original doc in Library</td></tr>
+<tr><td>Qualcomm QSEE fuse maps</td><td>L0</td><td>🟠</td><td>Public academic TrustZone research</td></tr>
+<tr><td>Microsoft Pluton</td><td>L0</td><td>🟢</td><td>Microsoft Learn documentation</td></tr>
+<tr><td>STMicro ST33</td><td>L0</td><td>🟢</td><td>st.com datasheets (security-target docs are NDA)</td></tr>
+<tr><td>NXP SE050 EdgeLock</td><td>L0</td><td>🟢</td><td>nxp.com datasheet + user guides + open-source middleware</td></tr>
+<tr><td>Google Titan M/M2</td><td>L0</td><td>🟠</td><td>Better: OpenTitan — fully open-source root of trust</td></tr>
+<tr><td>Apple ANS NVMe controller</td><td>L2</td><td>🟠</td><td>Asahi Linux m1n1 project documents it publicly</td></tr>
+<tr><td>Samsung / Phison / SMI controller registers</td><td>L2</td><td>🟠</td><td>nvme-cli · smartmontools · vendor tools</td></tr>
+<tr><td>SK hynix H9-series memory/eMMC</td><td>L2</td><td>🟢</td><td>SK hynix + distributor datasheets (one preserved in Library)</td></tr>
+<tr><td>Broadcom BCM43xx registers</td><td>L2</td><td>🟠 / 🔵</td><td>Linux b43/brcmfmac · OpenFWWF · community register wiki</td></tr>
+<tr><td>Apple 339S/338S PMICs</td><td>L1</td><td>🟠</td><td>Original identification guide in Library</td></tr>
+<tr><td>TI / Maxim-ADI / Dialog-Renesas power ICs</td><td>L1</td><td>🟢</td><td>ti.com · analog.com · renesas.com</td></tr>
+</table>
+
+<h2>Bounty rules</h2>
+<ol>
+<li>✅ Bounties for <strong>devices</strong> to teardown and document.</li>
+<li>✅ Bounties for rare <strong>public</strong> documents — collect and preserve.</li>
+<li>✅ Bounties for <strong>original documentation</strong> written from public research.</li>
+<li>❌ No bounties for sealed documents — that is a market for stolen trade secrets.</li>
+<li>❌ Never list circumvention material.</li>
+</ol>
+
+<p class="small">Full registry: <a href="/library/original-docs/bareboard-registry-draft.md">bareboard-registry-draft.md</a> ·
+Tracker (CSV): <a href="/library/trackers/most-wanted-tracker.csv">most-wanted-tracker.csv</a> ·
+Entry template: <a href="/templates/registry-entry.md">templates/registry-entry.md</a></p>
+
+  <footer>&mdash; Alan Moore, <em>Watchmen</em> (1986&ndash;1987). The phrase appears as graffiti throughout the graphic novel, adapted from Juvenal&rsquo;s Latin <em>&ldquo;Quis custodiet ipsos custodes?&rdquo;</em> (<em>Satires</em> VI, circa 100 AD).</footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+</body>
+</html>
