@@ -913,7 +913,7 @@ pre.term a { color: #8ab4f8; }
 .watchmen-quote p{font-size:1.6rem;font-weight:800;letter-spacing:0.06em;margin:0 0 0.75rem;color:#0a2a5c;}
 .watchmen-quote footer{font-size:0.9rem;color:#555;line-height:1.5;}
 
-/* ---------- W3 Round 2 (watchmen-round-2.html) ---------- */
+/* ---------- W3 — The Amassed Bench (watchmen.html) ---------- */
 .small { font-size: .9rem; color: var(--secondary); }
 .w3r2 table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
 .w3r2 th, .w3r2 td { border: 1px solid var(--line); padding: .45rem .6rem; text-align: left; vertical-align: top; }
@@ -921,3 +921,5 @@ pre.term a { color: #8ab4f8; }
 .w3r2 blockquote { margin: 1rem 0; padding: .5rem 1rem; border-left: 4px solid var(--line); color: var(--secondary); }
 
 .notice { border-left: 4px solid var(--accent); background: #f4f8ff; padding: .8rem 1rem; margin: 1rem 0; }
+
+.w3r2 img { max-width: 100%; height: auto; border-radius: 6px; }
