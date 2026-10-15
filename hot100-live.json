@@ -1,8 +1,8 @@
 {
-  "version": "v3.0",
+  "version": "v3.1",
   "updated": "2026-10-15",
-  "methodology": "The BareBoard Top 100 ranks devices by real-world use in 2026: active installed base and devices still in use today first, lifetime units sold second, from published figures only (company disclosures, official console sales, analyst reporting). Fact-checked 2026-10-15. Where no model-level figure is published, placement rests on category scale, distribution channel, production model, and longevity, and the entry's usage_evidence field says so — no figure is invented. The previous Hot 150 (v2.0) ranked by editorial hacker relevance; its bottom 50 under this usage ranking were removed on 2026-10-15 and preserved in Dropbox (/BareBoard-Site-Archive/hot-150-removed-bottom-50.json), with the full v2.0 file kept as hot150-original-v2.json.",
-  "ranking_basis": "Real-world use in 2026 (installed base / units in use), from published figures. Higher rank = more devices in use today.",
+  "methodology": "The BareBoard Top 100 lists DEVICES — finished products end users use, like an Amazon Echo or a Ring doorbell. Chips, dev boards, and components (ESP32, STM32 boards, Raspberry Pi boards, Arduino) are not devices and are excluded. Ranking is by real-world use in 2026: active installed base and devices still in use today first, lifetime units sold second, from published figures only (company disclosures, official console sales, analyst reporting). Fact-checked 2026-10-15. Where no model-level figure is published, placement rests on category scale, distribution channel, production model, and longevity, and the entry's usage_evidence field says so — no figure is invented. Removed entries (the non-devices plus the bottom of the list by use) are preserved in Dropbox (/BareBoard-Site-Archive/hot-150-removed-bottom-50.json); the full previous Hot 150 (v2.0) is kept as hot150-original-v2.json.",
+  "ranking_basis": "Devices only (finished end-user products), ranked by real-world use in 2026 (installed base / units in use), from published figures.",
   "evidence_labels": {
     "confirmed": "Multiple corroborating sources, including a published teardown.",
     "likely": "At least one solid verifiable source (reference article or official product page).",
@@ -18,67 +18,6 @@
   "devices": [
     {
       "rank": 1,
-      "name": "STM32 Nucleo-64",
-      "category": "SBCs & Dev Boards",
-      "manufacturer": "STMicroelectronics",
-      "sources": [
-        {
-          "type": "reference",
-          "url": "https://en.wikipedia.org/wiki/STM32",
-          "note": "Wikipedia MCU family overview"
-        },
-        {
-          "type": "manufacturer",
-          "url": "https://www.st.com/en/evaluation-tools/nucleo-f401re.html",
-          "note": "Secondary reference"
-        }
-      ],
-      "evidence": "likely",
-      "why": "The professional Cortex-M dev platform; ST-Link debugger onboard.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/STM32H7B0.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-      "usage_evidence": "STM32 family: over 6 billion parts shipped (ST, 2020). Caveat: Nucleo-64 boards are a small dev-kit subset of that family; ranked #1 only under the mission's family rule for STM32"
-    },
-    {
-      "rank": 2,
-      "name": "ESP32",
-      "category": "SBCs & Dev Boards",
-      "manufacturer": "Espressif",
-      "sources": [
-        {
-          "type": "reference",
-          "url": "https://en.wikipedia.org/wiki/ESP32",
-          "note": "Wikipedia chip overview"
-        },
-        {
-          "type": "manufacturer",
-          "url": "https://www.espressif.com/en/products/socs/esp32",
-          "note": "Secondary reference"
-        }
-      ],
-      "evidence": "likely",
-      "why": "Dual-core Wi-Fi/BT SoC powering most DIY IoT; huge firmware ecosystem.",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Espressif_ESP-WROOM-32_Wi-Fi_%26_Bluetooth_Module.jpg/500px-Espressif_ESP-WROOM-32_Wi-Fi_%26_Bluetooth_Module.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "usage_evidence": "Espressif: over 1 billion IoT chips shipped by Sep 2023; ESP32 is its flagship/successor family, embedded in smart plugs, lights, appliances worldwide"
-    },
-    {
-      "rank": 3,
-      "name": "ESP8266",
-      "category": "SBCs & Dev Boards",
-      "manufacturer": "Espressif",
-      "sources": [
-        {
-          "type": "reference",
-          "url": "https://en.wikipedia.org/wiki/ESP8266",
-          "note": "Wikipedia chip overview"
-        }
-      ],
-      "evidence": "likely",
-      "why": "The chip that started the cheap Wi-Fi revolution; still everywhere.",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/ESP8266_IC.jpg/500px-ESP8266_IC.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "usage_evidence": "Part of the same >1 billion Espressif total; launched 2014, ubiquitous in first-generation smart-home products, many still in service; superseded by ESP32"
-    },
-    {
-      "rank": 4,
       "name": "Nintendo Switch",
       "category": "Game Consoles & Handhelds",
       "manufacturer": "Nintendo",
@@ -100,7 +39,7 @@
       "usage_evidence": "97.59M — model split of 155.92M Switch family to Mar 2026; family 155.37M at 31 Dec 2025"
     },
     {
-      "rank": 5,
+      "rank": 2,
       "name": "PlayStation 5",
       "category": "Game Consoles & Handhelds",
       "manufacturer": "Sony",
@@ -122,7 +61,7 @@
       "usage_evidence": "84.2M sold to 30 Sep 2025 (Sony); 93.7M shipped reported for FY2025"
     },
     {
-      "rank": 6,
+      "rank": 3,
       "name": "iPhone 12",
       "category": "Smartphones",
       "manufacturer": "Apple",
@@ -144,7 +83,7 @@
       "usage_evidence": "No model split published by Apple (~220M iPhones/yr across models). 2020 flagship, sold for years, large still-active base due to long iOS support"
     },
     {
-      "rank": 7,
+      "rank": 4,
       "name": "iPhone 14",
       "category": "Smartphones",
       "manufacturer": "Apple",
@@ -166,7 +105,7 @@
       "usage_evidence": "No model split published. 2022 flagship, still on sale/support in 2026, tens of millions in use by category scale"
     },
     {
-      "rank": 8,
+      "rank": 5,
       "name": "iPhone 15 Pro",
       "category": "Smartphones",
       "manufacturer": "Apple",
@@ -188,24 +127,7 @@
       "usage_evidence": "iPhone 15 series production ~80M, Pro models ~60% of production (TrendForce); Pro (excl. Max) is a large share of that"
     },
     {
-      "rank": 9,
-      "name": "Raspberry Pi 4 Model B",
-      "category": "SBCs & Dev Boards",
-      "manufacturer": "Raspberry Pi",
-      "sources": [
-        {
-          "type": "reference",
-          "url": "https://en.wikipedia.org/wiki/Raspberry_Pi_4",
-          "note": "Wikipedia device overview"
-        }
-      ],
-      "evidence": "likely",
-      "why": "BCM2711 workhorse; still the most-deployed Pi in projects.",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Raspberry_Pi_4_Model_B_-_Top.jpg/500px-Raspberry_Pi_4_Model_B_-_Top.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "usage_evidence": "Raspberry Pi all products over 75M units to FY2025 (77M by H1 2026); Pi 4 was the flagship 2019–2023 and the volume model of that era"
-    },
-    {
-      "rank": 10,
+      "rank": 6,
       "name": "Amazon Echo Dot (5th gen)",
       "category": "IoT & Smart Home",
       "manufacturer": "Amazon",
@@ -222,7 +144,7 @@
       "usage_evidence": "Over 600M Alexa devices purchased (Amazon, Jan 2026); Echo ≈ two-thirds of US smart-speaker installed base; Dot is the best-selling Echo form factor. No per-generation figure"
     },
     {
-      "rank": 11,
+      "rank": 7,
       "name": "Nintendo Switch OLED",
       "category": "Game Consoles & Handhelds",
       "manufacturer": "Nintendo",
@@ -239,7 +161,7 @@
       "usage_evidence": "31.91M to Mar 2026 (model split, as rank 4)"
     },
     {
-      "rank": 12,
+      "rank": 8,
       "name": "Nintendo Switch Lite",
       "category": "Game Consoles & Handhelds",
       "manufacturer": "Nintendo",
@@ -256,7 +178,7 @@
       "usage_evidence": "26.43M to Mar 2026 (model split, as rank 4)"
     },
     {
-      "rank": 13,
+      "rank": 9,
       "name": "Xbox Series X",
       "category": "Game Consoles & Handhelds",
       "manufacturer": "Microsoft",
@@ -278,7 +200,7 @@
       "usage_evidence": "Series X|S ~34.1M combined to late 2025 (VGChartz; Microsoft publishes no figure); X calculated ~21.1M from reported splits"
     },
     {
-      "rank": 14,
+      "rank": 10,
       "name": "Meta Quest 2",
       "category": "VR/AR",
       "manufacturer": "Meta",
@@ -295,7 +217,7 @@
       "usage_evidence": "20M lifetime (Treeview, to Q4 2025), discontinued but still the joint-most-connected SteamVR headset in 2026 reporting"
     },
     {
-      "rank": 15,
+      "rank": 11,
       "name": "AirPods Pro (2nd gen)",
       "category": "Audio",
       "manufacturer": "Apple",
@@ -312,7 +234,7 @@
       "usage_evidence": "4.2M shipped in Q3 2022 alone, in ~8 days from launch (Canalys) — implies tens of millions cumulative for Apple's flagship earbuds"
     },
     {
-      "rank": 16,
+      "rank": 12,
       "name": "Samsung Galaxy S24",
       "category": "Smartphones",
       "manufacturer": "Samsung",
@@ -329,7 +251,7 @@
       "usage_evidence": "13.2M base-model units in 2024 (37M series total; a second report puts base at 12.1M Jan–Nov) — Hana Securities via Canalys reporting"
     },
     {
-      "rank": 17,
+      "rank": 13,
       "name": "Xbox Series S",
       "category": "Game Consoles & Handhelds",
       "manufacturer": "Microsoft",
@@ -346,7 +268,7 @@
       "usage_evidence": "Calculated ~12.96M — 38% of the ~34.1M Series X|S total (VGChartz-based estimate, not Microsoft data)"
     },
     {
-      "rank": 18,
+      "rank": 14,
       "name": "MacBook Air (M2, 2022)",
       "category": "Laptops & Computers",
       "manufacturer": "Apple",
@@ -363,7 +285,7 @@
       "usage_evidence": "No model figure. Air is Apple's best-selling Mac; Apple shipped ~9.9M Macs in the US alone in 2022 (Canalys) and M2 Air sold from 2022 as the volume model"
     },
     {
-      "rank": 19,
+      "rank": 15,
       "name": "Google Nest Mini (2nd gen)",
       "category": "IoT & Smart Home",
       "manufacturer": "Google",
@@ -380,29 +302,7 @@
       "usage_evidence": "No model figure. Google's volume smart speaker for 2019–2025, sold/bundled globally at low price; Google Home ecosystem is hundreds of millions of devices"
     },
     {
-      "rank": 20,
-      "name": "Raspberry Pi 5",
-      "category": "SBCs & Dev Boards",
-      "manufacturer": "Raspberry Pi",
-      "sources": [
-        {
-          "type": "reference",
-          "url": "https://en.wikipedia.org/wiki/Raspberry_Pi_5",
-          "note": "Wikipedia device overview"
-        },
-        {
-          "type": "manufacturer",
-          "url": "https://www.raspberrypi.com/products/raspberry-pi-5/",
-          "note": "Secondary reference"
-        }
-      ],
-      "evidence": "likely",
-      "why": "The default hacker SBC; Broadcom BCM2712, PCIe, active community.",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Raspberry_Pi_1%2C_Pi_5%2C_Pi_400%2C_Pico_and_Zero_2_%28cropped%29.jpg/500px-Raspberry_Pi_1%2C_Pi_5%2C_Pi_400%2C_Pico_and_Zero_2_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "usage_evidence": "Pi unit sales 7.0M (2024) and 7.6M (2025) across all products; Pi 5 is the current flagship and the largest share of current board sales"
-    },
-    {
-      "rank": 21,
+      "rank": 16,
       "name": "iPhone SE (2022)",
       "category": "Smartphones",
       "manufacturer": "Apple",
@@ -419,7 +319,7 @@
       "usage_evidence": "No model figure. Apple's budget model sold through carriers globally for 3+ years; SE generations historically sell in the tens of millions"
     },
     {
-      "rank": 22,
+      "rank": 17,
       "name": "Google Pixel 7",
       "category": "Smartphones",
       "manufacturer": "Google",
@@ -436,7 +336,7 @@
       "usage_evidence": "No model split. Pixel line sells roughly 10M units/yr in this era; Pixel 7 was the volume flagship of its year"
     },
     {
-      "rank": 23,
+      "rank": 18,
       "name": "DJI Mini 4 Pro",
       "category": "Drones",
       "manufacturer": "DJI",
@@ -453,7 +353,7 @@
       "usage_evidence": "No model figure published by DJI. DJI holds ~70% of the global drone market; the sub-249g Mini line is its consumer volume line"
     },
     {
-      "rank": 24,
+      "rank": 19,
       "name": "Ring Video Doorbell",
       "category": "IoT & Smart Home",
       "manufacturer": "Ring",
@@ -470,7 +370,7 @@
       "usage_evidence": "No model figure. Category-defining Amazon product, mass retail in US/EU for a decade; named \"Ring Video Doorbell\" spans the volume wired/battery models"
     },
     {
-      "rank": 25,
+      "rank": 20,
       "name": "Philips Hue Bridge v2",
       "category": "IoT & Smart Home",
       "manufacturer": "Philips Hue",
@@ -487,7 +387,7 @@
       "usage_evidence": "Hue estimated at 10M smart lights sold in its first 4 years to 2016 (educated estimate, The Ambient); one bridge per Hue home, so bridges = millions of homes, fewer than bulbs"
     },
     {
-      "rank": 26,
+      "rank": 21,
       "name": "Kindle Paperwhite (5th gen)",
       "category": "Tablets & E-Readers",
       "manufacturer": "Amazon",
@@ -504,7 +404,7 @@
       "usage_evidence": "Amazon publishes no Kindle figures. Paperwhite is the volume Kindle; the 2021 5th-gen model sold globally for 3+ years as the default e-reader"
     },
     {
-      "rank": 27,
+      "rank": 22,
       "name": "Sony WH-1000X series",
       "category": "Audio",
       "manufacturer": "Sony",
@@ -521,7 +421,7 @@
       "usage_evidence": "No figure published by Sony. The WH-1000X line has been the default premium ANC headphone recommendation across five generations since 2016"
     },
     {
-      "rank": 28,
+      "rank": 23,
       "name": "iPad Pro (M4, 2024)",
       "category": "Tablets & E-Readers",
       "manufacturer": "Apple",
@@ -538,7 +438,7 @@
       "usage_evidence": "No model figure. iPad sells ~50M units/yr category-wide (Apple was 41.8% of the tablet market, 18.8M US shipments in 2022, Canalys); Pro is the premium tier of that base"
     },
     {
-      "rank": 29,
+      "rank": 24,
       "name": "Steam Deck",
       "category": "Game Consoles & Handhelds",
       "manufacturer": "Valve",
@@ -560,7 +460,7 @@
       "usage_evidence": "IDC: ~3.7M through 2024, ~5.6M by mid-2025 (estimate, LCD+OLED combined — Valve publishes no split; OLED is broken out at rank 45 on post-2023 share)"
     },
     {
-      "rank": 30,
+      "rank": 25,
       "name": "Apple Watch Ultra 2",
       "category": "Wearables",
       "manufacturer": "Apple",
@@ -582,7 +482,7 @@
       "usage_evidence": "No model figure. Apple Watch sells tens of millions/yr; Ultra is the premium minority share of that base, still millions of units"
     },
     {
-      "rank": 31,
+      "rank": 26,
       "name": "Samsung Galaxy Watch 6",
       "category": "Wearables",
       "manufacturer": "Samsung",
@@ -599,7 +499,7 @@
       "usage_evidence": "No model figure. Samsung is a top-3 global smartwatch vendor; Watch 6 was its volume Wear OS model for 2023–24"
     },
     {
-      "rank": 32,
+      "rank": 27,
       "name": "Fitbit Charge 6",
       "category": "Wearables",
       "manufacturer": "Fitbit",
@@ -615,7 +515,7 @@
       "usage_evidence": "No model figure. Charge is Fitbit's volume tracker line, sold through Google/retail globally; Fitbit's installed base is in the tens of millions"
     },
     {
-      "rank": 33,
+      "rank": 28,
       "name": "Garmin Fenix 7",
       "category": "Wearables",
       "manufacturer": "Garmin",
@@ -632,7 +532,7 @@
       "usage_evidence": "No model figure. Fenix is Garmin's flagship outdoor line, sold 2022–2025 at premium prices through global sports retail"
     },
     {
-      "rank": 34,
+      "rank": 29,
       "name": "Google Pixel 8 Pro",
       "category": "Smartphones",
       "manufacturer": "Google",
@@ -648,7 +548,7 @@
       "usage_evidence": "No model split. Pro is the smaller share of the ~10M/yr Pixel line (base Pixel 8 excluded from this list)"
     },
     {
-      "rank": 35,
+      "rank": 30,
       "name": "DJI Mavic 3",
       "category": "Drones",
       "manufacturer": "DJI",
@@ -665,7 +565,7 @@
       "usage_evidence": "No model figure. DJI's flagship prosumer drone (see rank 23 for DJI share); higher price than Mini, so lower volume"
     },
     {
-      "rank": 36,
+      "rank": 31,
       "name": "DJI Avata 2",
       "category": "Drones",
       "manufacturer": "DJI",
@@ -682,7 +582,7 @@
       "usage_evidence": "No model figure. DJI's volume FPV cinewhoop, mass retail since 2024 (see rank 23)"
     },
     {
-      "rank": 37,
+      "rank": 32,
       "name": "HomePod mini",
       "category": "Audio",
       "manufacturer": "Apple",
@@ -699,7 +599,7 @@
       "usage_evidence": "No model figure. Apple's volume smart speaker since 2020, frequently discounted/bundled; millions-scale by category position"
     },
     {
-      "rank": 38,
+      "rank": 33,
       "name": "Sonos Era 100",
       "category": "Audio",
       "manufacturer": "Sonos",
@@ -716,7 +616,7 @@
       "usage_evidence": "No model figure. Entry model of Sonos, whose speakers are installed in millions of households; Era 100 is its current volume seller"
     },
     {
-      "rank": 39,
+      "rank": 34,
       "name": "JBL Flip 6",
       "category": "Audio",
       "manufacturer": "JBL",
@@ -732,7 +632,7 @@
       "usage_evidence": "No model figure. Flip is the volume line of the best-selling portable Bluetooth speaker brand globally, mass retail since 2021"
     },
     {
-      "rank": 40,
+      "rank": 35,
       "name": "MacBook Pro 14 (M3, 2023)",
       "category": "Laptops & Computers",
       "manufacturer": "Apple",
@@ -749,7 +649,7 @@
       "usage_evidence": "No model figure. Apple's volume professional laptop; smaller share than Air (rank 18) but a standard enterprise/creator machine"
     },
     {
-      "rank": 41,
+      "rank": 36,
       "name": "ThinkPad X1 Carbon Gen 11",
       "category": "Laptops & Computers",
       "manufacturer": "Lenovo",
@@ -766,7 +666,7 @@
       "usage_evidence": "No model figure. X1 Carbon is Lenovo's flagship enterprise ultrabook, deployed in corporate fleets globally, generation after generation"
     },
     {
-      "rank": 42,
+      "rank": 37,
       "name": "Samsung Galaxy Tab S9",
       "category": "Tablets & E-Readers",
       "manufacturer": "Samsung",
@@ -783,7 +683,7 @@
       "usage_evidence": "No model figure. Samsung's flagship Android tablet; Samsung is #2 globally in tablets"
     },
     {
-      "rank": 43,
+      "rank": 38,
       "name": "Meta Quest 3",
       "category": "VR/AR",
       "manufacturer": "Meta",
@@ -800,7 +700,7 @@
       "usage_evidence": "3.26M to Q3 2025 (Treeview estimate; Meta publishes no break-out)"
     },
     {
-      "rank": 44,
+      "rank": 39,
       "name": "PlayStation VR2",
       "category": "VR/AR",
       "manufacturer": "Sony",
@@ -817,7 +717,7 @@
       "usage_evidence": "~3.7M estimated to Q4 2025 (Treeview; Sony has never published a total)"
     },
     {
-      "rank": 45,
+      "rank": 40,
       "name": "Steam Deck OLED",
       "category": "Game Consoles & Handhelds",
       "manufacturer": "Valve",
@@ -839,63 +739,7 @@
       "usage_evidence": "No split published; OLED (Nov 2023– ) is the majority of Steam Deck sales since its launch, of the ~5.6M combined total at rank 29"
     },
     {
-      "rank": 46,
-      "name": "Raspberry Pi Pico",
-      "category": "SBCs & Dev Boards",
-      "manufacturer": "Raspberry Pi",
-      "sources": [
-        {
-          "type": "reference",
-          "url": "https://en.wikipedia.org/wiki/Raspberry_Pi_Pico",
-          "note": "Wikipedia board overview"
-        }
-      ],
-      "evidence": "likely",
-      "why": "RP2040 dual Cortex-M0+; Raspberry Pi's own silicon, PIO state machines.",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Raspberry_Pi_1%2C_Pi_5%2C_Pi_400%2C_Pico_and_Zero_2_%28cropped%29.jpg/500px-Raspberry_Pi_1%2C_Pi_5%2C_Pi_400%2C_Pico_and_Zero_2_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "usage_evidence": "Pico family ~4M units by Feb 2024 (Pico/Pico W/H/WH combined; RP2040 chip sales extra)"
-    },
-    {
-      "rank": 47,
-      "name": "Raspberry Pi Pico W",
-      "category": "SBCs & Dev Boards",
-      "manufacturer": "Raspberry Pi",
-      "sources": [
-        {
-          "type": "reference",
-          "url": "https://en.wikipedia.org/wiki/Raspberry_Pi_Pico",
-          "note": "Wikipedia board overview (W variant)"
-        }
-      ],
-      "evidence": "likely",
-      "why": "RP2040 + Infineon CYW43439 Wi-Fi; the $6 wireless workhorse.",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Raspberry_Pi_1%2C_Pi_5%2C_Pi_400%2C_Pico_and_Zero_2_%28cropped%29.jpg/500px-Raspberry_Pi_1%2C_Pi_5%2C_Pi_400%2C_Pico_and_Zero_2_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "usage_evidence": "Share of the ~4M Pico family at rank 46; the wireless variant is the most-used for IoT projects, but no W-only figure is published — ranked just below the wired original on launch order/volume"
-    },
-    {
-      "rank": 48,
-      "name": "BBC micro:bit v2",
-      "category": "SBCs & Dev Boards",
-      "manufacturer": "Micro:bit Educational Foundation",
-      "sources": [
-        {
-          "type": "reference",
-          "url": "https://en.wikipedia.org/wiki/Micro_Bit",
-          "note": "Wikipedia board overview"
-        },
-        {
-          "type": "manufacturer",
-          "url": "https://microbit.org",
-          "note": "Secondary reference"
-        }
-      ],
-      "evidence": "likely",
-      "why": "nRF52833 education board; millions deployed, great BLE hacking target.",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/Microbit-logo-stacked.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-      "usage_evidence": "micro:bit (all versions) 5M units shifted by 2020; v2 (2020– ) is the current education board distributed through schools in 85+ countries. Foundation \"reach\" figures (73.5M young people) are people, not units, and were not used"
-    },
-    {
-      "rank": 49,
+      "rank": 41,
       "name": "Wyze Cam v3",
       "category": "IoT & Smart Home",
       "manufacturer": "Wyze",
@@ -911,7 +755,7 @@
       "usage_evidence": "Wyze sold 1.5M Wyze Cam/Pan units by early 2019 (v1/v2); v3 (2020) was its best-selling successor for years at ~$20–35, so v3 alone is plausibly in the millions — no v3 figure published"
     },
     {
-      "rank": 50,
+      "rank": 42,
       "name": "Google Nest Thermostat",
       "category": "IoT & Smart Home",
       "manufacturer": "Google",
@@ -928,7 +772,7 @@
       "usage_evidence": "No model figure. Nest is a leading smart-thermostat brand in North America since 2011; the 2020 model is its volume/utility-programme model"
     },
     {
-      "rank": 51,
+      "rank": 43,
       "name": "Amazon Echo Show 15",
       "category": "IoT & Smart Home",
       "manufacturer": "Amazon",
@@ -945,7 +789,7 @@
       "usage_evidence": "No model figure. Largest Echo Show, a niche premium smart display — far below Echo Dot volume, but Amazon mass retail since 2021"
     },
     {
-      "rank": 52,
+      "rank": 44,
       "name": "Sonoff Basic R4",
       "category": "IoT & Smart Home",
       "manufacturer": "ITEAD",
@@ -961,7 +805,7 @@
       "usage_evidence": "No model figure. Sonoff Basic is one of the world's highest-volume DIY smart switches (Itead, global distribution since 2016); R4 is the current iteration"
     },
     {
-      "rank": 53,
+      "rank": 45,
       "name": "Shelly 1",
       "category": "IoT & Smart Home",
       "manufacturer": "Shelly",
@@ -978,7 +822,7 @@
       "usage_evidence": "Shelly Group: 28.8M devices installed globally, Q3 2025; Shelly 1 was the original flagship relay and a large early share of that base"
     },
     {
-      "rank": 54,
+      "rank": 46,
       "name": "Ubiquiti UniFi Dream Machine",
       "category": "Networking",
       "manufacturer": "Ubiquiti",
@@ -1000,7 +844,7 @@
       "usage_evidence": "No model figure. Default prosumer/SMB router-console since 2019, sold globally through UniFi's large installed ecosystem"
     },
     {
-      "rank": 55,
+      "rank": 47,
       "name": "GL.iNet GL-MT6000",
       "category": "Networking",
       "manufacturer": "GL.iNet",
@@ -1016,7 +860,7 @@
       "usage_evidence": "No model figure. GL.iNet's flagship OpenWrt router (\"Flint 2\"), a best-seller in its category since 2023 — see also rank 59"
     },
     {
-      "rank": 56,
+      "rank": 48,
       "name": "Netgear Nighthawk RAX50",
       "category": "Networking",
       "manufacturer": "Netgear",
@@ -1032,7 +876,7 @@
       "usage_evidence": "No model figure. Mass-retail Wi-Fi 6 router from a top-3 consumer networking brand"
     },
     {
-      "rank": 57,
+      "rank": 49,
       "name": "Linksys WRT3200ACM",
       "category": "Networking",
       "manufacturer": "Linksys",
@@ -1048,7 +892,7 @@
       "usage_evidence": "No model figure. Mass-retail flagship router 2016–c.2021, long retail run; discounted for age — many have been replaced"
     },
     {
-      "rank": 58,
+      "rank": 50,
       "name": "Nintendo Game Boy Advance",
       "category": "Game Consoles & Handhelds",
       "manufacturer": "Nintendo",
@@ -1077,11 +921,11 @@
         }
       ],
       "evidence": "likely",
-      "rank": 59,
+      "rank": 51,
       "usage_evidence": "Duplicate listing of rank 55's hardware, treated as its own entry as instructed; identical basis"
     },
     {
-      "rank": 60,
+      "rank": 52,
       "name": "Nintendo Game Boy",
       "category": "Game Consoles & Handhelds",
       "manufacturer": "Nintendo",
@@ -1098,7 +942,7 @@
       "usage_evidence": "Lifetime 118.69M incl. Game Boy Color (Nintendo) — not the ranking basis: discontinued 2003, still-in-use today is collector/retro use, below GBA on usability (no backlight, older library hardware attrition)"
     },
     {
-      "rank": 61,
+      "rank": 53,
       "name": "Flipper Zero",
       "category": "Hacker Tools",
       "manufacturer": "Flipper Devices",
@@ -1120,7 +964,7 @@
       "usage_evidence": "Over 1M units sold, over $150M in sales (Flipper Devices, May 2026)"
     },
     {
-      "rank": 62,
+      "rank": 54,
       "name": "reMarkable 2",
       "category": "Tablets & E-Readers",
       "manufacturer": "reMarkable",
@@ -1142,7 +986,7 @@
       "usage_evidence": "reMarkable over 1M units total by May 2022 (both generations; RM2 was the volume model 2020–2024, so most of that total and of later growth)"
     },
     {
-      "rank": 63,
+      "rank": 55,
       "name": "Valve Index",
       "category": "VR/AR",
       "manufacturer": "Valve",
@@ -1159,7 +1003,7 @@
       "usage_evidence": "103,000 sold in the weeks after the Half-Life: Alyx reveal alone (SuperData, 2019); still ~11% of SteamVR headsets in 2026 reporting — cumulative high hundreds of thousands, no total published"
     },
     {
-      "rank": 64,
+      "rank": 56,
       "name": "Apple Vision Pro",
       "category": "VR/AR",
       "manufacturer": "Apple",
@@ -1176,7 +1020,7 @@
       "usage_evidence": "475K lifetime: 390K in 2024 + 85K in 2025 (Treeview; IDC reported the 390K 2024 figure); production halted 2025"
     },
     {
-      "rank": 65,
+      "rank": 57,
       "name": "ASUS ROG Ally",
       "category": "Game Consoles & Handhelds",
       "manufacturer": "ASUS",
@@ -1193,7 +1037,7 @@
       "usage_evidence": "No model figure. All handheld gaming PCs combined were ~5.97M units to end-2024 (IDC); Ally is the leading Windows handheld of that set"
     },
     {
-      "rank": 66,
+      "rank": 58,
       "name": "Lenovo Legion Go",
       "category": "Game Consoles & Handhelds",
       "manufacturer": "Lenovo",
@@ -1210,7 +1054,7 @@
       "usage_evidence": "No model figure. #2–3 Windows gaming handheld, a minority share of the same ~5.97M all-handheld-PC total at rank 65"
     },
     {
-      "rank": 67,
+      "rank": 59,
       "name": "OnePlus 11",
       "category": "Smartphones",
       "manufacturer": "OnePlus",
@@ -1226,7 +1070,7 @@
       "usage_evidence": "No model figure. OnePlus flagship sold globally through carriers/retail in 2023; OnePlus ships millions of phones/yr, flagships a minority share"
     },
     {
-      "rank": 68,
+      "rank": 60,
       "name": "Nothing Phone (2)",
       "category": "Smartphones",
       "manufacturer": "Nothing",
@@ -1265,7 +1109,7 @@
         }
       ],
       "evidence": "confirmed",
-      "rank": 69,
+      "rank": 61,
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Nothing_phone%281%29_White_%28back%29.svg/500px-Nothing_phone%281%29_White_%28back%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "usage_evidence": "Share of the same Nothing total at rank 68; the 2022 debut phone, sold for 2+ years"
     },
@@ -1287,7 +1131,7 @@
         }
       ],
       "evidence": "likely",
-      "rank": 70,
+      "rank": 62,
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Kobo_Aura.jpg/500px-Kobo_Aura.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "usage_evidence": "No model figure. Kobo (Rakuten) is the #2 e-reader ecosystem globally; Clara was its volume model 2022–2024 through mass book retail"
     },
@@ -1309,160 +1153,12 @@
         }
       ],
       "evidence": "likely",
-      "rank": 71,
+      "rank": 63,
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/OnyxBooxM92.jpg/500px-OnyxBooxM92.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "usage_evidence": "No model figure. Boox is the leading Android e-note brand; Note Air is its flagship line, sold globally since 2020 across sub-generations"
     },
     {
-      "rank": 72,
-      "name": "Raspberry Pi Zero 2 W",
-      "category": "SBCs & Dev Boards",
-      "manufacturer": "Raspberry Pi",
-      "sources": [
-        {
-          "type": "reference",
-          "url": "https://en.wikipedia.org/wiki/Raspberry_Pi_Zero",
-          "note": "Wikipedia device overview"
-        }
-      ],
-      "evidence": "likely",
-      "why": "RP3A0 quad-core in $15; the tiny Pi for embedded projects.",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Raspberry_Pi_1%2C_Pi_5%2C_Pi_400%2C_Pico_and_Zero_2_%28cropped%29.jpg/500px-Raspberry_Pi_1%2C_Pi_5%2C_Pi_400%2C_Pico_and_Zero_2_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "usage_evidence": "No model split published. $15 Pi Zero successor — high-volume within the 75M+ Pi total, but a minority model vs Pi 4/5"
-    },
-    {
-      "rank": 73,
-      "name": "Arduino Uno R4",
-      "category": "SBCs & Dev Boards",
-      "manufacturer": "Arduino",
-      "sources": [
-        {
-          "type": "reference",
-          "url": "https://en.wikipedia.org/wiki/Arduino_Uno",
-          "note": "Wikipedia board overview"
-        },
-        {
-          "type": "manufacturer",
-          "url": "https://www.arduino.cc",
-          "note": "Secondary reference"
-        }
-      ],
-      "evidence": "likely",
-      "why": "The classic entry dev board; Renesas RA4M1 on the R4.",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Arduino_Logo.svg/500px-Arduino_Logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "usage_evidence": "Uno family: 10M Uno boards shipped by Nov 2021 — almost all Uno R3, before R4 existed. R4 (2023– ) is the successor and inherits that channel, but its own cumulative total is unpublished and far below 10M"
-    },
-    {
-      "name": "Arduino UNO R4 WiFi",
-      "manufacturer": "Arduino",
-      "category": "SBCs & Dev Boards",
-      "why": "Pairs a Renesas RA4M1 Cortex-M4 with an ESP32-S3 coprocessor on one board, giving learners a two-chip system to trace cross-MCU communication, power architecture, and wireless integration.",
-      "sources": [
-        {
-          "type": "reference",
-          "url": "https://en.wikipedia.org/wiki/Arduino_Uno",
-          "note": "Covers both R4 variants, MCUs, and board changes"
-        },
-        {
-          "type": "manufacturer",
-          "url": "https://docs.arduino.cc/hardware/uno-r4-wifi",
-          "note": "Official Arduino R4 WiFi documentation"
-        }
-      ],
-      "evidence": "likely",
-      "rank": 74,
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Arduino_Logo.svg/500px-Arduino_Logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "usage_evidence": "Wi-Fi variant share of the R4 total at rank 73; no variant split published"
-    },
-    {
-      "rank": 75,
-      "name": "NVIDIA Jetson Orin Nano",
-      "category": "SBCs & Dev Boards",
-      "manufacturer": "NVIDIA",
-      "sources": [
-        {
-          "type": "reference",
-          "url": "https://en.wikipedia.org/wiki/Jetson",
-          "note": "Wikipedia platform overview"
-        },
-        {
-          "type": "manufacturer",
-          "url": "https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/",
-          "note": "Secondary reference"
-        }
-      ],
-      "evidence": "likely",
-      "why": "Ampere GPU edge-AI module; 40 TOPS in a tiny form factor.",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/NVIDIA_T20_and_T30_chips.jpg/500px-NVIDIA_T20_and_T30_chips.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "usage_evidence": "No model figure. Jetson is the default edge-AI dev platform; Orin Nano dev kit is its volume education/robotics entry since 2023"
-    },
-    {
-      "rank": 76,
-      "name": "Orange Pi 5",
-      "category": "SBCs & Dev Boards",
-      "manufacturer": "Orange Pi",
-      "sources": [
-        {
-          "type": "reference",
-          "url": "https://en.wikipedia.org/wiki/Orange_Pi",
-          "note": "Wikipedia brand overview"
-        },
-        {
-          "type": "manufacturer",
-          "url": "http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/details/Orange-Pi-5.html",
-          "note": "Secondary reference"
-        }
-      ],
-      "evidence": "likely",
-      "why": "RK3588S 8-core; the Pi alternative with real PCIe and 8K.",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Orange_Pi_2G-IoT_%2834028942535%29.png/500px-Orange_Pi_2G-IoT_%2834028942535%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "usage_evidence": "No figure published. High-volume Shenzhen SBC, sold in quantity via AliExpress/Amazon and into Chinese embedded/education channels since 2022"
-    },
-    {
-      "rank": 77,
-      "name": "Teensy 4.1",
-      "category": "SBCs & Dev Boards",
-      "manufacturer": "PJRC",
-      "sources": [
-        {
-          "type": "reference",
-          "url": "https://en.wikipedia.org/wiki/Teensy",
-          "note": "Wikipedia board overview"
-        },
-        {
-          "type": "manufacturer",
-          "url": "https://www.pjrc.com/store/teensy41.html",
-          "note": "Secondary reference"
-        }
-      ],
-      "evidence": "likely",
-      "why": "600 MHz Cortex-M7; the performance microcontroller for serious embedded work.",
-      "usage_evidence": "No figure published by PJRC. The standard high-performance maker/embedded dev board since 2020, sold continuously for 6 years"
-    },
-    {
-      "rank": 78,
-      "name": "BeagleBone Black",
-      "category": "SBCs & Dev Boards",
-      "manufacturer": "BeagleBoard.org",
-      "sources": [
-        {
-          "type": "reference",
-          "url": "https://en.wikipedia.org/wiki/BeagleBone",
-          "note": "Wikipedia board overview"
-        },
-        {
-          "type": "manufacturer",
-          "url": "https://www.beagleboard.org/boards/beaglebone-black",
-          "note": "Secondary reference"
-        }
-      ],
-      "evidence": "likely",
-      "why": "AM3358 with PRUs; the industrial maker's SBC.",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Beagle_Board_big.jpg/500px-Beagle_Board_big.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "usage_evidence": "No figure published. Mainstream open SBC/industrial prototyping board continuously since 2013 — long tail of industrial use"
-    },
-    {
-      "rank": 79,
+      "rank": 64,
       "name": "RTL-SDR Blog V3",
       "category": "Hacker Tools",
       "manufacturer": "RTL-SDR Blog",
@@ -1476,27 +1172,6 @@
       "evidence": "likely",
       "why": "$30 software-defined radio; RTL2832U, the RF gateway drug.",
       "usage_evidence": "No figure published. The default $30 SDR receiver since 2016, sold globally for a decade to hobbyists, researchers and educators"
-    },
-    {
-      "rank": 80,
-      "name": "ODROID-N2+",
-      "category": "SBCs & Dev Boards",
-      "manufacturer": "Hardkernel",
-      "sources": [
-        {
-          "type": "reference",
-          "url": "https://en.wikipedia.org/wiki/ODROID",
-          "note": "Wikipedia brand overview"
-        },
-        {
-          "type": "manufacturer",
-          "url": "https://www.hardkernel.com/shop/odroid-n2plus/",
-          "note": "Secondary reference"
-        }
-      ],
-      "evidence": "likely",
-      "why": "S922X SBC with passive cooling; emulation favorite.",
-      "usage_evidence": "No figure published. Hardkernel's flagship SBC 2020–2024, a mainstream Pi alternative via global resellers"
     },
     {
       "name": "SONOFF Zigbee 3.0 USB Dongle Plus",
@@ -1516,7 +1191,7 @@
         }
       ],
       "evidence": "likely",
-      "rank": 81,
+      "rank": 65,
       "usage_evidence": "No model figure. The de-facto Zigbee coordinator for Home Assistant / Zigbee2MQTT, sold globally by Itead at low price since 2021"
     },
     {
@@ -1537,11 +1212,11 @@
         }
       ],
       "evidence": "likely",
-      "rank": 82,
+      "rank": 66,
       "usage_evidence": "Share of Shelly's 28.8M installed devices (rank 53); a current high-volume mini relay, but one SKU among dozens and Gen3 is recent"
     },
     {
-      "rank": 83,
+      "rank": 67,
       "name": "IKEA Dirigera",
       "category": "IoT & Smart Home",
       "manufacturer": "IKEA",
@@ -1558,7 +1233,7 @@
       "usage_evidence": "No figure published. IKEA's smart-home hub since 2022, sold through IKEA stores worldwide to a mass customer base"
     },
     {
-      "rank": 84,
+      "rank": 68,
       "name": "Parrot Anafi",
       "category": "Drones",
       "manufacturer": "Parrot",
@@ -1587,7 +1262,7 @@
         }
       ],
       "evidence": "likely",
-      "rank": 85,
+      "rank": 69,
       "usage_evidence": "No figure published. $35–60 retro handheld sold in volume via AliExpress/Amazon since 2022; high search demand (26k global searches/mo, Ahrefs) relative to other retro handhelds"
     },
     {
@@ -1603,7 +1278,7 @@
         }
       ],
       "evidence": "likely",
-      "rank": 86,
+      "rank": 70,
       "usage_evidence": "No figure published. As rank 85 — 28k global searches/mo (Ahrefs), the highest of the pocket retro handhelds, at a ~$70 price"
     },
     {
@@ -1624,7 +1299,7 @@
         }
       ],
       "evidence": "likely",
-      "rank": 87,
+      "rank": 71,
       "usage_evidence": "No model figure. XREAL is the leading consumer AR-glasses maker and Air 2 its volume model through global retail — category itself is still sub-million/yr"
     },
     {
@@ -1645,12 +1320,12 @@
         }
       ],
       "evidence": "confirmed",
-      "rank": 88,
+      "rank": 72,
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/DeadAir_Records_logo.svg/500px-DeadAir_Records_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "usage_evidence": "No figure published. $100 build-it-yourself synth sold through global music retail since 2019 — unusually mass distribution for a synth"
     },
     {
-      "rank": 89,
+      "rank": 73,
       "name": "HackRF One",
       "category": "Hacker Tools",
       "manufacturer": "Great Scott Gadgets",
@@ -1667,7 +1342,7 @@
       "usage_evidence": "No figure published. The standard open SDR transceiver since 2014 (Great Scott Gadgets), sold continuously for 12 years — long cumulative tail, small annual volume"
     },
     {
-      "rank": 90,
+      "rank": 74,
       "name": "Fairphone 5",
       "category": "Smartphones",
       "manufacturer": "Fairphone",
@@ -1689,7 +1364,7 @@
       "usage_evidence": "Fairphone sells ~100–145K devices/yr across ALL models (100,107 in 2023; 103,053 in 2024; 145,259 in 2025 — company Impact Reports). FP5's own share of 2023–25 sales puts it in the low hundreds of thousands at most. A Wikipedia infobox claim of \"150,000+\" for FP5 alone is not corroborated by those totals and was not used as a standalone figure"
     },
     {
-      "rank": 91,
+      "rank": 75,
       "name": "Fairphone 4",
       "category": "Smartphones",
       "manufacturer": "Fairphone",
@@ -1711,7 +1386,7 @@
       "usage_evidence": "Share of the same Fairphone annual totals at rank 90; FP4 was the main model in 2021–2023 (~88–116K devices/yr all models)"
     },
     {
-      "rank": 92,
+      "rank": 76,
       "name": "Analogue Pocket",
       "category": "Game Consoles & Handhelds",
       "manufacturer": "Analogue",
@@ -1750,12 +1425,12 @@
         }
       ],
       "evidence": "likely",
-      "rank": 93,
+      "rank": 77,
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/OP-1_Sequencer_Concept.png/500px-OP-1_Sequencer_Concept.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "usage_evidence": "No figure published. $849–1,399 cult synth produced (with interruptions) since 2011; longevity lifts it above most boutique audio gear, price caps volume"
     },
     {
-      "rank": 94,
+      "rank": 78,
       "name": "Framework Laptop 13",
       "category": "Laptops & Computers",
       "manufacturer": "Framework",
@@ -1777,7 +1452,7 @@
       "usage_evidence": "No figure published by Framework. The best-known repairable-laptop maker, selling globally since 2021 at a scale clearly above boutique Linux-laptop rivals — but orders of magnitude below MacBook/ThinkPad"
     },
     {
-      "rank": 95,
+      "rank": 79,
       "name": "Framework Laptop 16",
       "category": "Laptops & Computers",
       "manufacturer": "Framework",
@@ -1799,7 +1474,7 @@
       "usage_evidence": "No figure published. Newer (2024), larger and pricier than the 13 — the minority share of Framework's total. Close call — see flags"
     },
     {
-      "rank": 96,
+      "rank": 80,
       "name": "Playdate",
       "category": "Game Consoles & Handhelds",
       "manufacturer": "Panic",
@@ -1821,65 +1496,6 @@
       "usage_evidence": "Over 70,000 units sold (Panic; 53,142 by Apr 2023)"
     },
     {
-      "name": "Seeed XIAO ESP32S3",
-      "manufacturer": "Seeed Studio",
-      "category": "SBCs & Dev Boards",
-      "why": "A thumb-sized ESP32-S3 development board with an official manufacturer wiki covering pinout, power, and firmware, widely used as a teaching platform for embedded Wi-Fi and Bluetooth development.",
-      "sources": [
-        {
-          "type": "manufacturer",
-          "url": "https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/",
-          "note": "Official Seeed Studio getting-started wiki with hardware preparation and pinout documentation"
-        },
-        {
-          "type": "reference",
-          "url": "https://github.com/pat104471/xiao-esp32s3-getting-started",
-          "note": "Community getting-started guide with PlatformIO configuration and troubleshooting"
-        }
-      ],
-      "evidence": "likely",
-      "rank": 97,
-      "usage_evidence": "No figure published. $5–8 board from Seeed's popular XIAO line, global distributor sales since 2023; cheap price drives volume, form factor limits it"
-    },
-    {
-      "name": "Arduino Nano ESP32",
-      "manufacturer": "Arduino",
-      "category": "SBCs & Dev Boards",
-      "why": "The classic Nano form factor paired with an ESP32-S3 (u-blox NORA-W106), bridging the Arduino ecosystem with dual-core wireless silicon and serving as an accessible entry point to IoT hardware education.",
-      "sources": [
-        {
-          "type": "reference",
-          "url": "https://www.cnx-software.com/2023/07/18/esp32-s3-based-arduino-nano-esp32-board-supports-arduino-and-micropython-programming/",
-          "note": "Technical report with full specifications of the NORA-W106 module, memory, and I/O"
-        },
-        {
-          "type": "reference",
-          "url": "https://www.etechnophiles.com/arduino-nano-esp32-pinout-specs/",
-          "note": "Pinout guide with tabulated specifications covering processor, memory, and power"
-        }
-      ],
-      "evidence": "likely",
-      "rank": 98,
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Arduino_nano.jpg/500px-Arduino_nano.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "usage_evidence": "No figure published. Arduino's official ESP32 board (2023), sold through Arduino's global education/retail channel — newer and pricier than clone ESP32 boards"
-    },
-    {
-      "name": "nRF52840 Dongle",
-      "manufacturer": "Nordic Semiconductor",
-      "category": "Hacker Tools",
-      "why": "A low-cost Nordic USB reference design with castellated GPIOs that lets students inspect a real shipping BLE SoC implementation and program custom firmware onto it.",
-      "sources": [
-        {
-          "type": "reference",
-          "url": "https://electropeak.com/nordic-semiconductor-nrf52840-usb-dongle",
-          "note": "PCA10059 specifications: SoC, protocols, GPIOs, antenna"
-        }
-      ],
-      "evidence": "likely",
-      "rank": 99,
-      "usage_evidence": "No figure published. Nordic's low-cost official BLE dev dongle, a standard tool sold by all major electronics distributors since 2018"
-    },
-    {
       "name": "Aqara Hub M3",
       "manufacturer": "Aqara",
       "category": "IoT & Smart Home",
@@ -1897,9 +1513,405 @@
         }
       ],
       "evidence": "likely",
-      "rank": 100,
+      "rank": 81,
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Xiaomi_YU7_Emerald_Green_Metallic_01.jpg/500px-Xiaomi_YU7_Emerald_Green_Metallic_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "usage_evidence": "No model figure. Aqara is a mass-market smart-home brand (Xiaomi ecosystem, Apple/Amazon retail); M3 is its 2024 flagship hub — a hub is one-per-home, capping units. Close call — see flags"
+    },
+    {
+      "name": "AYN Odin 2",
+      "manufacturer": "AYN",
+      "category": "Game Consoles & Handhelds",
+      "why": "A flagship Snapdragon 8 Gen 2 Android handheld with an open bootloader culture, now supported by community LineageOS and Linux builds for studying modern mobile SoCs.",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://github.com/lineageos/android_device_ayn_odin2",
+          "note": "Official LineageOS device tree for the Odin 2"
+        },
+        {
+          "type": "reference",
+          "url": "https://www.gsmgotech.com/2026/01/ayn-odin-2-reaches-end-of-life.html",
+          "note": "Product history: 2023 launch specs, Snapdragon 8 Gen 2, 8000mAh battery"
+        }
+      ],
+      "evidence": "likely",
+      "rank": 82,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/40/US_v._Raniere_GovtExhibit_GX46.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+      "usage_evidence": "Premium ($299+) Android handheld sold direct-only by a small Shenzhen maker since 2023; enthusiast niche, no retail distribution. Close call — see flags"
+    },
+    {
+      "name": "GL-AXT1800 (Slate AX)",
+      "manufacturer": "GL.iNet",
+      "category": "Networking",
+      "why": "A pocket Wi-Fi 6 travel router with upstream OpenWrt support, USB storage, and microSD expansion, ideal for studying compact embedded design and portable power management.",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://openwrt.org/toh/hwdata/gl.inet/gl.inet_gl-axt1800",
+          "note": "OpenWrt hardware data: IPQ6000, U-Boot, supported since OpenWrt 25.12"
+        }
+      ],
+      "evidence": "likely",
+      "rank": 83,
+      "usage_evidence": "GL.iNet travel router — real retail sales, but a single travel-router SKU is far below the flagship MT6000 (rank 55). Close call"
+    },
+    {
+      "name": "EMAX Tinyhawk III",
+      "manufacturer": "EMAX",
+      "category": "Drones",
+      "why": "A micro FPV racing quad built around an STM32 F4 all-in-one board, with EMAX selling every spare part individually — frames, motors, cameras — encouraging hands-on repair and rebuilds.",
+      "sources": [
+        {
+          "type": "manufacturer",
+          "url": "https://emaxmodel.com/collections/tinyhawk-iii-series",
+          "note": "Official EMAX Tinyhawk III page with F4 5A stack specs and full spare-parts catalog"
+        },
+        {
+          "type": "reference",
+          "url": "https://shop.emax-usa.com/collections/tinyhawk-iii",
+          "note": "EMAX USA store listing with TH0802 II motors and STM32 flight-controller details"
+        }
+      ],
+      "evidence": "likely",
+      "rank": 84,
+      "usage_evidence": "Ready-to-fly FPV trainer from a hobby-only brand; RC-hobby retail only, small category"
+    },
+    {
+      "rank": 85,
+      "name": "BetaFPV Cetus X",
+      "category": "Drones",
+      "manufacturer": "BetaFPV",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/First-person_view_(radio_control)",
+          "note": "Wikipedia FPV overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://betafpv.com",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "unconfirmed",
+      "why": "Brushless FPV starter kit; ELRS radio link.",
+      "usage_evidence": "FPV whoop kit for beginners; hobby-channel only, small category volumes"
+    },
+    {
+      "rank": 86,
+      "name": "Home Assistant Yellow",
+      "category": "IoT & Smart Home",
+      "manufacturer": "Nabu Casa",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Home_Assistant",
+          "note": "Wikipedia platform overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://www.home-assistant.io/yellow/",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "CM4-powered home automation hub with Zigbee/Thread radios.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Tech2026logo.png/500px-Tech2026logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "usage_evidence": "Crowdfunded (2021) then limited retail; most Home Assistant users run on Pi/mini-PCs/VMs, not Yellow hardware. Close call — HA's user base is large, Yellow's is not"
+    },
+    {
+      "name": "PinePhone",
+      "manufacturer": "PINE64",
+      "category": "Smartphones",
+      "why": "Published iFixit repair guides and complete manufacturer documentation make it a practical platform for learning mobile hardware, from modem and battery swaps to serial console debugging.",
+      "sources": [
+        {
+          "type": "teardown",
+          "url": "https://www.ifixit.com/Guide/Pine64+PinePhone+Motherboard+Replacement/154150",
+          "note": "iFixit motherboard replacement guide for the PinePhone"
+        },
+        {
+          "type": "reference",
+          "url": "https://PINE64.org/documentation/PinePhone/_full/",
+          "note": "PINE64's official PinePhone documentation, including mainboard and component details"
+        }
+      ],
+      "evidence": "confirmed",
+      "rank": 87,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Pinephone-final.jpg/500px-Pinephone-final.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "usage_evidence": "Pine64's Linux phone, sold in small named batches (\"editions\") since 2019; developer toy, not a daily-driver market. Close call"
+    },
+    {
+      "rank": 88,
+      "name": "PineTime",
+      "category": "Wearables",
+      "manufacturer": "Pine64",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/PineTime",
+          "note": "Wikipedia device overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://www.pine64.org/pinetime/",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Open-source smartwatch; nRF52832, InfiniTime firmware, $30.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Samsung_Galaxy_Watch.jpg/500px-Samsung_Galaxy_Watch.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "usage_evidence": "$25–30 open smartwatch from Pine64; batch sales to Linux enthusiasts, no published total"
+    },
+    {
+      "name": "SHIFTphone 8",
+      "manufacturer": "SHIFT GmbH",
+      "category": "Smartphones",
+      "why": "A modular smartphone with over a dozen screwdriver-replaceable modules, hardware privacy switches, and pending mainline Linux kernel support, built by a German sustainable-electronics company.",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://www.phoronix.com/news/SHIFTphone-8-Linux-Patches",
+          "note": "Phoronix coverage of mainline Linux kernel patches for the SHIFTphone 8's Qualcomm QCM6490"
+        },
+        {
+          "type": "reference",
+          "url": "https://www.talkandroid.com/515858-murena-e-os-shiftphone-8/",
+          "note": "Overview of the SHIFTphone 8's modular design and hardware privacy switches"
+        }
+      ],
+      "evidence": "likely",
+      "rank": 89,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/SHIFT_6mq_front.jpg/500px-SHIFT_6mq_front.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "usage_evidence": "Small German modular-phone maker; pre-order/small-batch model, minimal distribution outside Germany"
+    },
+    {
+      "name": "Turris Omnia",
+      "manufacturer": "CZ.NIC",
+      "category": "Networking",
+      "why": "A crowdfunded open-hardware router with published schematics and an OpenWrt-derived OS, demonstrating how repairable, long-supported networking hardware is designed.",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Turris_Omnia",
+          "note": "Wikipedia: open-source software, published schematics, Armada 385 design"
+        }
+      ],
+      "evidence": "likely",
+      "rank": 90,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Turris_Omnia.png/500px-Turris_Omnia.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "usage_evidence": "Czech open router that began as an Indiegogo campaign; respected but small production, sold mainly in EU"
+    },
+    {
+      "name": "BetaFPV Cetus Pro",
+      "manufacturer": "BetaFPV",
+      "category": "Drones",
+      "why": "A beginner FPV starter kit built around the Lite 1-2S Pro brushless flight controller with optical-flow positioning, well suited to teaching all-in-one board architecture and brushed-versus-brushless motor tradeoffs.",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://www.techradar.com/reviews/betafpv-cetus-pro-kit-review",
+          "note": "Review covering build robustness, included electronics, and spare-part availability"
+        },
+        {
+          "type": "reference",
+          "url": "https://www.unmannedtechshop.co.uk/products/betafpv-cetus-pro-fpv-drone-starter-kit?fpv=70920",
+          "note": "Full specifications including flight controller, motors, VTX, and camera details"
+        }
+      ],
+      "evidence": "likely",
+      "rank": 91,
+      "usage_evidence": "Earlier/smaller Cetus FPV kit; hobby-channel only, superseded by Cetus X"
+    },
+    {
+      "name": "iFlight Nazgul Evoque F5 V3",
+      "manufacturer": "iFlight",
+      "category": "Drones",
+      "why": "A full-size freestyle FPV platform with extensive published frame-to-flight build documentation covering the electronics stack, ESC soldering, and flight controller wiring, ideal for studying modular drone avionics.",
+      "sources": [
+        {
+          "type": "teardown",
+          "url": "https://www.youtube.com/watch?v=FaIm7AzJyDY",
+          "note": "Build series episode covering electronics layout, ESC soldering, flight controller wiring, and smoke testing"
+        },
+        {
+          "type": "reference",
+          "url": "https://loyaltydrones.com/comprehensive-review-iflight-nazgul-evoque-f5-v3-the-ultimate-fpv-drone-experience/",
+          "note": "Comprehensive review of the frame, BLITZ F7 flight controller, ESC stack, and cooling design"
+        }
+      ],
+      "evidence": "likely",
+      "rank": 92,
+      "usage_evidence": "Pre-built 5-inch FPV freestyle drone at enthusiast prices; tiny category, hobby-channel only"
+    },
+    {
+      "name": "Bangle.js 2",
+      "manufacturer": "Espruino",
+      "category": "Wearables",
+      "why": "An open smartwatch based on the Nordic nRF52840 with a full SWD debug port on its back, designed to run JavaScript applications and study wearable sensor hardware.",
+      "sources": [
+        {
+          "type": "manufacturer",
+          "url": "https://shop.espruino.com/espruino/banglejs2",
+          "note": "Espruino shop page with Bangle.js 2 specifications, including the SWD debug port"
+        },
+        {
+          "type": "reference",
+          "url": "https://circuitpython.org/board/espruino_banglejs2/",
+          "note": "CircuitPython board reference for the Bangle.js 2"
+        }
+      ],
+      "evidence": "likely",
+      "rank": 93,
+      "usage_evidence": "Open smartwatch sold via crowdfunding/Espruino shop in small batches"
+    },
+    {
+      "name": "Teenage Engineering OP-Z",
+      "manufacturer": "Teenage Engineering",
+      "category": "Audio",
+      "why": "A dense multimedia sequencer with published iFixit repair guides covering battery, potentiometer, and module replacement, illustrating repairable compact electronics design and flex-cable interconnects.",
+      "sources": [
+        {
+          "type": "teardown",
+          "url": "https://www.ifixit.com/Guide/Teenage+Engineering+OP-Z+Expansion+Module+Replacement/129167",
+          "note": "iFixit step-by-step guide removing the expansion module and bottom plate"
+        },
+        {
+          "type": "teardown",
+          "url": "https://www.Ifixit.Com/Guide/Teenage+Engineering+OP-Z+Volume+Potentiometer+Replacement/129171",
+          "note": "iFixit guide documenting deeper disassembly to the volume potentiometer and flex cables"
+        }
+      ],
+      "evidence": "confirmed",
+      "rank": 94,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Chief_Master_Sgt._Mark_Umfleet%2C_317th_Airlift_Wing_command_chief%2C_tests_HaptX_Gloves_Development_Kit_2_at_Dyess_Air_Force_Base%2C_Texas%2C_May_10%2C_2021.jpg/500px-Chief_Master_Sgt._Mark_Umfleet%2C_317th_Airlift_Wing_command_chief%2C_tests_HaptX_Gloves_Development_Kit_2_at_Dyess_Air_Force_Base%2C_Texas%2C_May_10%2C_2021.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "usage_evidence": "$600+ niche synth/sequencer; Teenage Engineering publishes no figures and OP-Z volumes are a fraction of the OP-1's (rank 93)"
+    },
+    {
+      "name": "Supernote A5 X2 Manta",
+      "manufacturer": "Supernote",
+      "category": "Tablets & E-Readers",
+      "why": "A modular E Ink e-note whose back panel pops off for user-replaceable motherboard, battery, and storage, making it one of the clearest examples of repair-friendly design in modern tablets.",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://newatlas.com/mobile-technology/supernote-manta-eink-enote-tablet/",
+          "note": "Report on the modular design with replaceable motherboard, battery, and expandable storage"
+        },
+        {
+          "type": "reference",
+          "url": "https://www.fccpdf.com/2BE5Y/2BE5Y-A5X2-J/8650447.pdf",
+          "note": "Regulatory filing documenting device internals, battery model, and specifications"
+        }
+      ],
+      "evidence": "likely",
+      "rank": 95,
+      "usage_evidence": "Premium e-note tablet (Dec 2024) sold direct-only by a small maker (Ratta); far below reMarkable/Boox scale"
+    },
+    {
+      "rank": 96,
+      "name": "Pinebook Pro",
+      "category": "Laptops & Computers",
+      "manufacturer": "Pine64",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/Pinebook_Pro",
+          "note": "Wikipedia device overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://www.pine64.org/pinebook-pro/",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "likely",
+      "why": "RK3399 Linux laptop for $220; open firmware efforts.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Pinebook_11_Inch.jpg/500px-Pinebook_11_Inch.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "usage_evidence": "Pine64's $219 Linux laptop, sold in periodic batches since 2019 and frequently out of stock; production-batch scale"
+    },
+    {
+      "name": "StarLabTop Mk IV",
+      "manufacturer": "Star Labs",
+      "category": "Laptops & Computers",
+      "why": "Star Labs publishes a complete disassembly guide and sells individual replacement parts like fans and daughter boards, an exemplary vendor-led repair ecosystem for a Linux laptop.",
+      "sources": [
+        {
+          "type": "teardown",
+          "url": "https://support.starlabs.systems/hc/star-labs/articles/star-labtop-mk-iv-complete-disassembly-guide",
+          "note": "Star Labs' official complete disassembly guide for the StarLabTop Mk IV"
+        },
+        {
+          "type": "reference",
+          "url": "https://www.gamingonlinux.com/2020/06/star-labs-reveal-their-new-linux-powered-star-labtop-mk-iv/",
+          "note": "Overview of the Star LabTop Mk IV's Linux-first design and coreboot firmware option"
+        }
+      ],
+      "evidence": "confirmed",
+      "rank": 97,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Avro_Canada_C-102_Jetliner.jpg/500px-Avro_Canada_C-102_Jetliner.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "usage_evidence": "Boutique UK Linux laptop from Star Labs; small-batch, direct-only sales"
+    },
+    {
+      "name": "Librem 14",
+      "manufacturer": "Purism",
+      "category": "Laptops & Computers",
+      "why": "Ships with coreboot firmware, hardware kill switches, and a neutralized Intel Management Engine, giving students a current example of firmware-level repairability and hardware trust.",
+      "sources": [
+        {
+          "type": "manufacturer",
+          "url": "https://puri.sm/products/librem-14/",
+          "note": "Purism product page with Librem 14 hardware specifications"
+        },
+        {
+          "type": "reference",
+          "url": "http://en.wikipedia.org/wiki/Librem",
+          "note": "Wikipedia overview of the Librem laptop line, coreboot adoption, and kill-switch design"
+        }
+      ],
+      "evidence": "likely",
+      "rank": 98,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/All_librem_devices-2021-header.png/500px-All_librem_devices-2021-header.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "usage_evidence": "Purism's privacy laptop; small-batch, direct-only, premium-priced — Purism's total scale is crowdfunding-sized (see rank 150)"
+    },
+    {
+      "rank": 99,
+      "name": "ClockworkPi uConsole",
+      "category": "Hacker Tools",
+      "manufacturer": "ClockworkPi",
+      "sources": [
+        {
+          "type": "reference",
+          "url": "https://en.wikipedia.org/wiki/UConsole",
+          "note": "Wikipedia device overview"
+        },
+        {
+          "type": "manufacturer",
+          "url": "https://www.clockworkpi.com/uconsole",
+          "note": "Secondary reference"
+        }
+      ],
+      "evidence": "confirmed",
+      "why": "Modular cyberdeck handheld; CM4/A-06/R-01 swappable cores.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Black_uConsole_by_ClockworkPi_%28transparent_background%29.png/500px-Black_uConsole_by_ClockworkPi_%28transparent_background%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "usage_evidence": "Modular hacker handheld sold in batches with long lead times since 2023; enthusiast niche"
+    },
+    {
+      "rank": 100,
+      "name": "ClockworkPi DevTerm",
+      "category": "Laptops & Computers",
+      "manufacturer": "ClockworkPi",
+      "sources": [
+        {
+          "type": "manufacturer",
+          "url": "https://www.clockworkpi.com/devterm",
+          "note": "Official product page"
+        }
+      ],
+      "evidence": "likely",
+      "why": "Modular retro terminal with thermal printer; CM3/CM4/R-01 cores.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Librem5_phone_convergence_-_screen_keyboard_mouse.jpg/500px-Librem5_phone_convergence_-_screen_keyboard_mouse.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "usage_evidence": "Kit portable terminal (2021); batch sales to hackers/hobbyists, largely superseded by uConsole"
     }
   ]
 }
