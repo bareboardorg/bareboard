@@ -37,8 +37,23 @@
     }).join(' ');
   }
 
+  function guideUrl(d) {
+    var rg = d.repair_guide;
+    if (!rg || rg.type === 'none' || !rg.verified) return null;
+    return rg.archive_url || rg.source_url || null;
+  }
+
+  function guideLine(d) {
+    var rg = d.repair_guide;
+    var url = guideUrl(d);
+    if (!url) return '<p class="hot-guide hot-guide--none">No verified repair guide found</p>';
+    var who = rg.type === 'ifixit' ? 'iFixit' : 'the maker';
+    return '<p class="hot-guide"><a class="guide-btn" href="' + esc(url) + '" target="_blank" rel="noopener">Repair guide &mdash; ' + esc(who) + '</a></p>';
+  }
+
   function card(d) {
-    var firstUrl = (d.sources && d.sources[0] && d.sources[0].url) ? d.sources[0].url : null;
+    var gUrl = guideUrl(d);
+    var firstUrl = gUrl || ((d.sources && d.sources[0] && d.sources[0].url) ? d.sources[0].url : null);
     var name = firstUrl
       ? '<a href="' + esc(firstUrl) + '" target="_blank" rel="noopener">' + esc(d.name) + '</a>'
       : esc(d.name);
@@ -51,6 +66,7 @@
       '<div class="hot-body">' +
         '<h2>' + name + '</h2>' +
         '<p class="hot-meta">' + esc(d.manufacturer) + ' &middot; ' + esc(d.category) + ' &middot; ' + evidenceBadge(d.evidence) + '</p>' +
+        guideLine(d) +
         '<p class="hot-sources">' + sourceLinks(d.sources) + '</p>' +
       '</div>' +
     '</article>';
@@ -59,7 +75,7 @@
   function matches(d) {
     if (activeCategory !== 'all' && d.category !== activeCategory) return false;
     if (query) {
-      var hay = (d.name + ' ' + d.manufacturer + ' ' + d.category + ' ' + (d.why || '')).toLowerCase();
+      var hay = (d.name + ' ' + d.manufacturer + ' ' + d.category + ' ' + (d.why || '') + ' ' + ((d.aliases || []).join(' '))).toLowerCase();
       if (hay.indexOf(query) === -1) return false;
     }
     return true;
@@ -103,7 +119,7 @@
     });
   }
 
-  fetch('/hot100-live.json')
+  fetch(grid.getAttribute('data-json') || '/hot100-live.json')
     .then(function(r) { return r.json(); })
     .then(function(data) {
       allDevices = (data.devices || []).slice().sort(function(a, b) { return a.rank - b.rank; });

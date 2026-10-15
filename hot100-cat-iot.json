@@ -1,0 +1,1027 @@
+{
+ "version": "cat-iot-1.0",
+ "category": "IoT & Smart Home",
+ "updated": "2026-10-15",
+ "methodology": "The BareBoard Top 100 lists DEVICES — finished products end users use, like an Amazon Echo or a Ring doorbell. Chips, dev boards, and components (ESP32, STM32 boards, Raspberry Pi boards, Arduino) are not devices and are excluded. Ranking is by real-world use in 2026: active installed base and devices still in use today first, lifetime units sold second, from published figures only (company disclosures, official console sales, analyst reporting). Fact-checked 2026-10-15. Where no model-level figure is published, placement rests on category scale, distribution channel, production model, and longevity, and the entry's usage_evidence field says so — no figure is invented. Removed entries (the non-devices plus the bottom of the list by use) are preserved in Dropbox (/BareBoard-Site-Archive/hot-150-removed-bottom-50.json); the full previous Hot 150 (v2.0) is kept as hot150-original-v2.json.",
+ "ranking_basis": "Devices only (finished end-user products), ranked by real-world use in 2026 (installed base / units in use), from published figures.",
+ "evidence_labels": {
+  "confirmed": "Multiple corroborating sources, including a published teardown.",
+  "likely": "At least one solid verifiable source (reference article or official product page).",
+  "unconfirmed": "Limited sourcing; official page unverified or thin corroboration."
+ },
+ "selection_criteria": [
+  "Device must have genuine hardware-hacker relevance (teardown interest, chip curiosity, repairability, or modding scene).",
+  "Device must have at least one verifiable public source URL.",
+  "No invented specifications, sales figures, or rankings.",
+  "Preference for devices with published teardowns or open hardware documentation.",
+  "Categories cover phones, SBCs, consoles, laptops, IoT, drones, VR, wearables, audio, tablets, networking, and hacker tools."
+ ],
+ "repair_guide_policy": "A repair guide is the device's iFixit page (device page, teardown, or repair guide) or the manufacturer's official repair/service/support documentation. Not YouTube, not blogs, not review sites. Every link verified live (HTTP 200, correct device AND model) before shipping. Where neither exists, the card says so honestly. Per the owner's link rule, the site links to preserved copies in archive.org/bareboardorg — fill archive_url after saving page copies (Dropbox /BareBoard-Site-Archive/).",
+ "release_note": "First release of the IoT & Smart Home category: 28 devices (14 carried from the main Top 100 with v3.3-verified repair guides, 14 new with published-figure-backed usage_evidence and verified device-level repair guides). The main Top 100 rolls up from the categories; this category is not yet at 100 — the honest count is shipped, never padded.",
+ "changelog": [
+  "cat-iot-1.0 (2026-10-15): first release, 28 devices. Every repair guide verified live (HTTP 200 + the page is about that device) except Lutron Caseta (bot protection — verified=false, browser-check before shipping)."
+ ],
+ "devices": [
+  {
+   "rank": 1,
+   "name": "Amazon Echo Dot (5th gen)",
+   "category": "IoT & Smart Home",
+   "manufacturer": "Amazon",
+   "sources": [
+    {
+     "type": "reference",
+     "url": "https://en.wikipedia.org/wiki/Amazon_Echo",
+     "note": "Wikipedia device overview"
+    }
+   ],
+   "evidence": "likely",
+   "why": "AZ2 Neural Edge chip; the most-torn-down smart speaker.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Amazon_Alexa_Logo_2024.svg/500px-Amazon_Alexa_Logo_2024.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "usage_evidence": "Over 600M Alexa devices purchased (Amazon, Jan 2026); Echo ≈ two-thirds of US smart-speaker installed base; Dot is the best-selling Echo form factor. No per-generation figure",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "none",
+    "source_url": null,
+    "archive_url": null,
+    "verified": false,
+    "verified_on": null,
+    "note": "iFixit carries only older-generation Echo Dot pages (no 5th-gen / 2024 content on the device page — checked 2026-10-15). Linking a 2nd-gen page to a 5th-gen card is model-wrong. Card must say no repair guide found."
+   },
+   "aliases": [
+    "Alexa",
+    "Echo Dot",
+    "Amazon Alexa",
+    "smart speaker",
+    "Amazon speaker"
+   ]
+  },
+  {
+   "rank": 2,
+   "name": "Google Nest Mini (2nd gen)",
+   "category": "IoT & Smart Home",
+   "manufacturer": "Google",
+   "sources": [
+    {
+     "type": "reference",
+     "url": "https://en.wikipedia.org/wiki/Google_Nest_(smart_speakers)",
+     "note": "Wikipedia device overview"
+    }
+   ],
+   "evidence": "likely",
+   "why": "Low-cost smart speaker; common UART-debug target.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Google_Nest_Logo_%282025%29.png/500px-Google_Nest_Logo_%282025%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "usage_evidence": "No model figure. Google's volume smart speaker for 2019–2025, sold/bundled globally at low price; Google Home ecosystem is hundreds of millions of devices",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "ifixit",
+    "source_url": "https://www.ifixit.com/Teardown/Google+Nest+Mini+(2nd+generation)+Teardown/130974",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "iFixit teardown guide for the exact model (2nd generation) — verified live."
+   },
+   "aliases": [
+    "Nest Mini",
+    "Google speaker",
+    "smart speaker",
+    "Google Home"
+   ]
+  },
+  {
+   "rank": 3,
+   "name": "Ring Video Doorbell",
+   "category": "IoT & Smart Home",
+   "manufacturer": "Ring",
+   "sources": [
+    {
+     "type": "reference",
+     "url": "https://en.wikipedia.org/wiki/Ring_(company)",
+     "note": "Wikipedia company overview"
+    }
+   ],
+   "evidence": "likely",
+   "why": "Battery doorbell cam; privacy debates drive teardown interest.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Ring_logo.svg/500px-Ring_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "usage_evidence": "No model figure. Category-defining Amazon product, mass retail in US/EU for a decade; named \"Ring Video Doorbell\" spans the volume wired/battery models",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "ifixit",
+    "source_url": "https://www.ifixit.com/Device/Ring_Video_Doorbell",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "iFixit device page verified: “Ring Video Doorbell Repair Help: Learn How to Fix It Yourself.”"
+   },
+   "aliases": [
+    "Ring doorbell",
+    "doorbell",
+    "video doorbell",
+    "Ring"
+   ]
+  },
+  {
+   "rank": 4,
+   "name": "Philips Hue Bridge v2",
+   "category": "IoT & Smart Home",
+   "manufacturer": "Philips Hue",
+   "sources": [
+    {
+     "type": "reference",
+     "url": "https://en.wikipedia.org/wiki/Philips_Hue",
+     "note": "Wikipedia system overview"
+    }
+   ],
+   "evidence": "likely",
+   "why": "Zigbee coordinator; the hub every smart-home hacker has opened.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Members_of_the_Maquis_in_La_Tresorerie.jpg/500px-Members_of_the_Maquis_in_La_Tresorerie.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "usage_evidence": "Hue estimated at 10M smart lights sold in its first 4 years to 2016 (educated estimate, The Ambient); one bridge per Hue home, so bridges = millions of homes, fewer than bulbs",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "official",
+    "source_url": "https://www.philips-hue.com/en-us/support/release-notes/bridge",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "Signify's device-level Hue Bridge support page (Bridge V2 firmware release notes). Signify publishes no repair manual for the Bridge (product page states 'No manual available'). Verified live."
+   },
+   "aliases": [
+    "Hue Bridge",
+    "Philips Hue",
+    "smart home hub",
+    "lighting hub"
+   ]
+  },
+  {
+   "rank": 5,
+   "name": "Wyze Cam v3",
+   "category": "IoT & Smart Home",
+   "manufacturer": "Wyze",
+   "sources": [
+    {
+     "type": "reference",
+     "url": "https://en.wikipedia.org/wiki/Wyze",
+     "note": "Wikipedia company overview"
+    }
+   ],
+   "evidence": "likely",
+   "why": "$35 cam with Ingenic T31; huge custom-firmware scene.",
+   "image": null,
+   "usage_evidence": "Wyze sold 1.5M Wyze Cam/Pan units by early 2019 (v1/v2); v3 (2020) was its best-selling successor for years at ~$20–35, so v3 alone is plausibly in the millions — no v3 figure published",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "official",
+    "source_url": "https://support.wyze.com/hc/en-us/articles/7821737941275-More-Wyze-Cam-v3-Troubleshooting",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "Official Wyze support article (device-correct). Verified in a browser by the site owner, 2026-10-15 (bot protection had blocked automated verification)."
+   },
+   "aliases": [
+    "Wyze Cam",
+    "security camera",
+    "camera",
+    "indoor camera"
+   ]
+  },
+  {
+   "rank": 6,
+   "name": "Google Nest Thermostat",
+   "category": "IoT & Smart Home",
+   "manufacturer": "Google",
+   "sources": [
+    {
+     "type": "reference",
+     "url": "https://en.wikipedia.org/wiki/Google_Nest",
+     "note": "Wikipedia brand overview"
+    }
+   ],
+   "evidence": "likely",
+   "why": "Learning thermostat; early IoT teardown classic.",
+   "image": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/41/Nest_front_official.png/500px-Nest_front_official.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "usage_evidence": "No model figure. Nest is a leading smart-thermostat brand in North America since 2011; the 2020 model is its volume/utility-programme model",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "official",
+    "source_url": "https://support.google.com/googlenest/answer/9248184",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "Google's official Nest thermostat help — device-level support covering the Nest Thermostat (2020) and the line. Verified live."
+   },
+   "aliases": [
+    "Nest Thermostat",
+    "thermostat",
+    "smart thermostat",
+    "Google thermostat"
+   ]
+  },
+  {
+   "rank": 7,
+   "name": "Amazon Echo Show 15",
+   "category": "IoT & Smart Home",
+   "manufacturer": "Amazon",
+   "sources": [
+    {
+     "type": "reference",
+     "url": "https://en.wikipedia.org/wiki/Amazon_Echo_Show",
+     "note": "Wikipedia device overview"
+    }
+   ],
+   "evidence": "likely",
+   "why": "15-inch smart display; AZ2 + wall-mount teardown curiosity.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Amazon_Echo_Show_in_white.jpg/500px-Amazon_Echo_Show_in_white.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "usage_evidence": "No model figure. Largest Echo Show, a niche premium smart display — far below Echo Dot volume, but Amazon mass retail since 2021",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "ifixit",
+    "source_url": "https://www.ifixit.com/Device/Amazon_Echo_Show_15",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "iFixit device page verified: “Amazon Echo Show 15 Repair Help: Learn How to Fix It Yourself.”"
+   },
+   "aliases": [
+    "Echo Show",
+    "Alexa",
+    "smart display",
+    "Amazon display"
+   ]
+  },
+  {
+   "rank": 8,
+   "name": "Sonoff Basic R4",
+   "category": "IoT & Smart Home",
+   "manufacturer": "ITEAD",
+   "sources": [
+    {
+     "type": "manufacturer",
+     "url": "https://sonoff.tech/product/diy-smart-switch/basicr4/",
+     "note": "Official product page (path unverified)"
+    }
+   ],
+   "evidence": "unconfirmed",
+   "why": "ESP32-C3 smart switch; Tasmota/ESPHome favorite.",
+   "image": null,
+   "usage_evidence": "No model figure. Sonoff Basic is one of the world's highest-volume DIY smart switches (Itead, global distribution since 2016); R4 is the current iteration",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "official",
+    "source_url": "https://sonoff.tech/product/diy-smart-switches/basicr4/",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "SONOFF's official BASICR4 product page with the user manual (PDF) and knowledge center. Verified live."
+   },
+   "aliases": [
+    "Sonoff",
+    "smart switch",
+    "Basic R4",
+    "ITEAD",
+    "wifi switch"
+   ]
+  },
+  {
+   "rank": 9,
+   "name": "Shelly 1",
+   "category": "IoT & Smart Home",
+   "manufacturer": "Shelly",
+   "sources": [
+    {
+     "type": "manufacturer",
+     "url": "https://www.shelly.com/products/shelly-1-smart-home-automation-relay",
+     "note": "Official product page (rate-limited during verification)"
+    }
+   ],
+   "evidence": "unconfirmed",
+   "why": "ESP8266 relay; the open-firmware smart-home staple.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Adrienne_Shelly_as_Dannie.jpg/500px-Adrienne_Shelly_as_Dannie.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "usage_evidence": "Shelly Group: 28.8M devices installed globally, Q3 2025; Shelly 1 was the original flagship relay and a large early share of that base",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "official",
+    "source_url": "https://kb.shelly.cloud/knowledge-base/shelly-1",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "Shelly's official knowledge-base article for the Shelly 1 (device identification, specs, wiring). Verified live."
+   },
+   "aliases": [
+    "Shelly",
+    "smart relay",
+    "WiFi switch",
+    "Shelly 1"
+   ]
+  },
+  {
+   "rank": 10,
+   "name": "SONOFF Zigbee 3.0 USB Dongle Plus",
+   "category": "IoT & Smart Home",
+   "manufacturer": "Sonoff",
+   "sources": [
+    {
+     "type": "manufacturer",
+     "url": "https://help.sonoff.tech/docs/zbbridge-p",
+     "note": "Official Sonoff documentation for the ZBDongle-P Zigbee 3.0 USB coordinator"
+    },
+    {
+     "type": "reference",
+     "url": "https://github.com/Koenkk/zigbee2mqtt/discussions/8840",
+     "note": "Zigbee2MQTT community documentation of the CC2652P radio design"
+    }
+   ],
+   "evidence": "likely",
+   "why": "A Texas Instruments CC2652P Zigbee coordinator that can be flashed as a router, central to local-control setups with Home Assistant and Zigbee2MQTT and a staple of wireless protocol education.",
+   "image": null,
+   "usage_evidence": "No model figure. The de-facto Zigbee coordinator for Home Assistant / Zigbee2MQTT, sold globally by Itead at low price since 2021",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "official",
+    "source_url": "https://sonoff.tech/products/sonoff-zigbee-3-0-usb-dongle-plus-zbdongle-p",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "SONOFF's official ZBDongle-P product page with the user manual (PDF) and knowledge center. Verified live."
+   },
+   "aliases": [
+    "Sonoff dongle",
+    "Zigbee dongle",
+    "USB dongle",
+    "Zigbee",
+    "smart home dongle"
+   ]
+  },
+  {
+   "rank": 11,
+   "name": "Shelly 1PM Mini Gen3",
+   "category": "IoT & Smart Home",
+   "manufacturer": "Shelly",
+   "sources": [
+    {
+     "type": "manufacturer",
+     "url": "https://www.shelly.com/collections/all-products?page=2",
+     "note": "Shelly product listing: ESP-based Gen3 relay with power metering"
+    },
+    {
+     "type": "reference",
+     "url": "https://manualspro.net/639360-shelly-591537-wlan-switching-actuator-1pm-mini-gen-3-user-guide",
+     "note": "User guide documenting ESP-Shelly-C38F chip, 8MB flash, MQTT and scripting"
+    }
+   ],
+   "evidence": "likely",
+   "why": "An ESP-based Wi-Fi relay with power metering that ships with local MQTT, scripting and webhook support, making it the reference device for teaching smart-home protocol internals.",
+   "image": null,
+   "usage_evidence": "Share of Shelly's 28.8M installed devices (rank 53); a current high-volume mini relay, but one SKU among dozens and Gen3 is recent",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "official",
+    "source_url": "https://kb.shelly.cloud/knowledge-base/shelly-1pm-mini-gen3",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "Shelly's official knowledge-base article for the Shelly 1PM Mini Gen3. Verified live."
+   },
+   "aliases": [
+    "Shelly",
+    "1PM Mini",
+    "smart relay",
+    "power meter switch"
+   ]
+  },
+  {
+   "rank": 12,
+   "name": "IKEA Dirigera",
+   "category": "IoT & Smart Home",
+   "manufacturer": "IKEA",
+   "sources": [
+    {
+     "type": "reference",
+     "url": "https://en.wikipedia.org/wiki/IKEA",
+     "note": "Wikipedia company overview"
+    }
+   ],
+   "evidence": "unconfirmed",
+   "why": "Matter/Thread/Zigbee hub; IKEA's smart-home play.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Ikea_Hubhult.jpg/500px-Ikea_Hubhult.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "usage_evidence": "No figure published. IKEA's smart-home hub since 2022, sold through IKEA stores worldwide to a mass customer base",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "official",
+    "source_url": "https://www.ikea.com/us/en/customer-service/product-support/smart-home-dirigera-hub/",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "IKEA's official DIRIGERA product-support page (setup, FAQ, factory reset). Verified live."
+   },
+   "aliases": [
+    "Dirigera",
+    "IKEA hub",
+    "smart home hub",
+    "Zigbee hub",
+    "IKEA smart home"
+   ]
+  },
+  {
+   "rank": 13,
+   "name": "Aqara Hub M3",
+   "category": "IoT & Smart Home",
+   "manufacturer": "Aqara",
+   "sources": [
+    {
+     "type": "manufacturer",
+     "url": "https://partner.aqara.com/products/inner-aqara-hub-m3",
+     "note": "Official Aqara specs: Zigbee/Thread, PoE, IR blaster, Wi-Fi 802.11 a/b/g/n/ac"
+    },
+    {
+     "type": "reference",
+     "url": "https://eu.aqara.com/blogs/news/whats-the-difference-between-aqara-hub-m2-and-m3",
+     "note": "Official Aqara comparison of Zigbee 3.0, Thread and Matter protocol support"
+    }
+   ],
+   "evidence": "likely",
+   "why": "A multi-protocol Matter controller combining Zigbee, Thread border routing, Bluetooth, Wi-Fi and an IR blaster, ideal for teaching how one gateway arbitrates several radio protocols.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Xiaomi_YU7_Emerald_Green_Metallic_01.jpg/500px-Xiaomi_YU7_Emerald_Green_Metallic_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "usage_evidence": "No model figure. Aqara is a mass-market smart-home brand (Xiaomi ecosystem, Apple/Amazon retail); M3 is its 2024 flagship hub — a hub is one-per-home, capping units. Close call — see flags",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "official",
+    "source_url": "https://www.aqara.com/en/product/hub-m3-user-manual/",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "Aqara's official Hub M3 user-manual page. Verified live."
+   },
+   "aliases": [
+    "Aqara",
+    "Hub M3",
+    "smart home hub",
+    "Zigbee hub",
+    "home automation hub"
+   ]
+  },
+  {
+   "rank": 14,
+   "name": "Home Assistant Yellow",
+   "category": "IoT & Smart Home",
+   "manufacturer": "Nabu Casa",
+   "sources": [
+    {
+     "type": "reference",
+     "url": "https://en.wikipedia.org/wiki/Home_Assistant",
+     "note": "Wikipedia platform overview"
+    },
+    {
+     "type": "manufacturer",
+     "url": "https://www.home-assistant.io/yellow/",
+     "note": "Secondary reference"
+    }
+   ],
+   "evidence": "likely",
+   "why": "CM4-powered home automation hub with Zigbee/Thread radios.",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Tech2026logo.png/500px-Tech2026logo.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "usage_evidence": "Crowdfunded (2021) then limited retail; most Home Assistant users run on Pi/mini-PCs/VMs, not Yellow hardware. Close call — HA's user base is large, Yellow's is not",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "official",
+    "source_url": "https://support.nabucasa.com/hc/en-us/articles/25298668266269-Home-Assistant-Yellow-Kit-with-CM4-and-optional-NVMe",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "Browser-verified 2026-10-15: loads for a human visitor; Nabu Casa device-level article."
+   },
+   "aliases": [
+    "Home Assistant",
+    "Yellow",
+    "home automation",
+    "hub",
+    "Nabu Casa",
+    "smart home server"
+   ]
+  },
+  {
+   "rank": 15,
+   "name": "iRobot Roomba j7+",
+   "category": "IoT & Smart Home",
+   "manufacturer": "iRobot",
+   "sources": [
+    {
+     "type": "teardown",
+     "url": "https://www.ifixit.com/Device/iRobot_Roomba_j7",
+     "note": "iFixit device page with teardown"
+    },
+    {
+     "type": "reference",
+     "url": "https://en.wikipedia.org/wiki/Roomba",
+     "note": "Secondary reference"
+    }
+   ],
+   "evidence": "confirmed",
+   "why": "The robot vacuum that made the category; wheels, brushes, battery and bin are user-replaceable.",
+   "image": null,
+   "usage_evidence": "50M+ Roomba robots sold worldwide since the 2002 launch (company disclosures via press, 2025); ~19M app users as of 2023 — many units remain in use.",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "ifixit",
+    "source_url": "https://www.ifixit.com/Device/iRobot_Roomba_j7",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "iFixit device page for the Roomba J7 (the j7+ uses the same robot with the self-emptying Clean Base). iRobot also publishes official part-replacement video guides (homesupport.irobot.com). Verified live."
+   },
+   "aliases": [
+    "Roomba",
+    "robot vacuum",
+    "iRobot",
+    "Roomba j7"
+   ]
+  },
+  {
+   "rank": 16,
+   "name": "Google Chromecast",
+   "category": "IoT & Smart Home",
+   "manufacturer": "Google",
+   "sources": [
+    {
+     "type": "teardown",
+     "url": "https://www.ifixit.com/Device/Chromecast",
+     "note": "iFixit device page with teardown"
+    },
+    {
+     "type": "reference",
+     "url": "https://en.wikipedia.org/wiki/Chromecast",
+     "note": "Secondary reference"
+    }
+   ],
+   "evidence": "confirmed",
+   "why": "The streaming dongle that defined casting; cheap enough that a dead one is usually replaced, not repaired.",
+   "image": null,
+   "usage_evidence": "100M+ Chromecast devices sold over 11 years (Google, Aug 2024); the line was discontinued in 2024 and replaced by the Google TV Streamer — a large still-in-use base.",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "ifixit",
+    "source_url": "https://www.ifixit.com/Device/Chromecast",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "iFixit's Chromecast device page (1st generation; the line's teardowns). iFixit notes the Chromecast is 'a board in a box' with very little to repair. Verified live."
+   },
+   "aliases": [
+    "Chromecast",
+    "streaming stick",
+    "Google Cast",
+    "cast dongle"
+   ]
+  },
+  {
+   "rank": 17,
+   "name": "Sonos One",
+   "category": "IoT & Smart Home",
+   "manufacturer": "Sonos",
+   "sources": [
+    {
+     "type": "teardown",
+     "url": "https://www.ifixit.com/Device/Sonos_One",
+     "note": "iFixit device page with teardown"
+    },
+    {
+     "type": "reference",
+     "url": "https://en.wikipedia.org/wiki/Sonos_One",
+     "note": "Secondary reference"
+    }
+   ],
+   "evidence": "confirmed",
+   "why": "The Alexa-ready smart speaker; control panel, microphone board and power inlet are replaceable.",
+   "image": null,
+   "usage_evidence": "53.4M registered Sonos products across 17.1M households (Sonos FY2025 reporting, quarter ended 27 Sep 2025); the One is a core speaker model in the lineup.",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "ifixit",
+    "source_url": "https://www.ifixit.com/Device/Sonos_One",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "iFixit device page for the Sonos One — control panel & microphone and power adapter replacement guides. Verified live."
+   },
+   "aliases": [
+    "Sonos speaker",
+    "smart speaker",
+    "Alexa speaker",
+    "Sonos"
+   ]
+  },
+  {
+   "rank": 18,
+   "name": "Arlo Pro 5",
+   "category": "IoT & Smart Home",
+   "manufacturer": "Arlo",
+   "sources": [
+    {
+     "type": "manufacturer",
+     "url": "https://kb.arlo.com/000063735/Arlo-Pro-5-Spec-Sheet-VMC4060P",
+     "note": "Arlo official knowledge-base article"
+    },
+    {
+     "type": "reference",
+     "url": "https://en.wikipedia.org/wiki/Arlo_(company)",
+     "note": "Secondary reference"
+    }
+   ],
+   "evidence": "likely",
+   "why": "Battery-powered outdoor security camera; the rechargeable battery is user-removable and replaceable.",
+   "image": null,
+   "usage_evidence": "45.6M+ smart security devices shipped since 2014 (Arlo Technologies disclosures, 2026); 7.2M registered accounts (Dec 2022).",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "official",
+    "source_url": "https://kb.arlo.com/000063735/Arlo-Pro-5-Spec-Sheet-VMC4060P",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "Arlo's official knowledge-base article for the Pro 5 (VMC4060P) — specs, removable rechargeable battery, power and mounting. Verified live."
+   },
+   "aliases": [
+    "Arlo camera",
+    "security camera",
+    "wireless camera",
+    "Arlo Pro"
+   ]
+  },
+  {
+   "rank": 19,
+   "name": "Roborock S7",
+   "category": "IoT & Smart Home",
+   "manufacturer": "Roborock",
+   "sources": [
+    {
+     "type": "teardown",
+     "url": "https://www.ifixit.com/Device/Roborock_S7",
+     "note": "iFixit device page with teardown"
+    },
+    {
+     "type": "reference",
+     "url": "https://en.wikipedia.org/wiki/Roborock",
+     "note": "Secondary reference"
+    }
+   ],
+   "evidence": "confirmed",
+   "why": "The robot vacuum-mop that leads the global market; brushes, battery, water tank and dock are serviceable.",
+   "image": null,
+   "usage_evidence": "25M+ robot vacuums shipped globally by Nov 2025; #1 global seller by shipments in 2025 with 5.8M units (IDC via company results, 2025).",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "ifixit",
+    "source_url": "https://www.ifixit.com/Device/Roborock_S7",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "iFixit device page for the Roborock S7. Roborock's official help center (help.roborock.com) carries device-level FAQs and the user manual. Verified live."
+   },
+   "aliases": [
+    "Roborock",
+    "robot vacuum",
+    "vacuum mop",
+    "S7"
+   ]
+  },
+  {
+   "rank": 20,
+   "name": "Chamberlain myQ Smart Garage Hub",
+   "category": "IoT & Smart Home",
+   "manufacturer": "Chamberlain",
+   "sources": [
+    {
+     "type": "manufacturer",
+     "url": "https://www.chamberlain.com/catalogresourcesv3/en-us/ccv3/support/myq/3_4/content/garagedooropener/MyQGarage/MyQGarage.htm",
+     "note": "Chamberlain official MyQ support content"
+    },
+    {
+     "type": "reference",
+     "url": "https://en.wikipedia.org/wiki/Chamberlain_Group",
+     "note": "Secondary reference"
+    }
+   ],
+   "evidence": "likely",
+   "why": "The hub that makes a garage door opener smart; the door sensor and hub are replaceable parts.",
+   "image": null,
+   "usage_evidence": "15M+ people rely on the myQ app daily; Chamberlain/LiftMaster brands are found in 50M+ homes (Chamberlain Group disclosures, 2023–2025).",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "official",
+    "source_url": "https://www.chamberlain.com/catalogresourcesv3/en-us/ccv3/support/myq/3_4/content/garagedooropener/MyQGarage/MyQGarage.htm",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "Chamberlain's official MyQ Garage support — compatible openers, accessories, pairing and error codes. Verified live."
+   },
+   "aliases": [
+    "myQ",
+    "garage door opener",
+    "smart garage",
+    "Chamberlain",
+    "LiftMaster"
+   ]
+  },
+  {
+   "rank": 21,
+   "name": "TP-Link Kasa Smart Plug (HS103)",
+   "category": "IoT & Smart Home",
+   "manufacturer": "TP-Link",
+   "sources": [
+    {
+     "type": "manufacturer",
+     "url": "https://www.tp-link.com/us/document/79770/",
+     "note": "TP-Link official HS103 user guide"
+    },
+    {
+     "type": "reference",
+     "url": "https://en.wikipedia.org/wiki/Kasa_Smart",
+     "note": "Secondary reference"
+    }
+   ],
+   "evidence": "likely",
+   "why": "The classic smart plug that turns any outlet into a controllable one; dead in the wall, it's replaced, not repaired.",
+   "image": null,
+   "usage_evidence": "9M+ active Kasa customers (Kasa Smart press release, Dec 2021); TP-Link smart home (Kasa + Tapo) serves 50M+ users (TP-Link, 2025).",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "official",
+    "source_url": "https://www.tp-link.com/us/document/79770/",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "TP-Link's official HS103 user guide (safety information, setup, app control). Verified live."
+   },
+   "aliases": [
+    "Kasa plug",
+    "smart plug",
+    "TP-Link plug",
+    "wifi plug",
+    "HS103"
+   ]
+  },
+  {
+   "rank": 22,
+   "name": "Anker Eufy Indoor Cam 2K",
+   "category": "IoT & Smart Home",
+   "manufacturer": "Anker",
+   "sources": [
+    {
+     "type": "manufacturer",
+     "url": "https://service.eufy.com/article-description/eufy-Indoor-Cam-2K-FAQ",
+     "note": "eufy official support FAQ"
+    },
+    {
+     "type": "reference",
+     "url": "https://en.wikipedia.org/wiki/Eufy",
+     "note": "Secondary reference"
+    }
+   ],
+   "evidence": "likely",
+   "why": "The no-fee indoor security camera; microSD card and power adapter are the usual fixes.",
+   "image": null,
+   "usage_evidence": "10M+ users globally with eufy security products (Anker/eufy disclosures via security.org, 2026).",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "official",
+    "source_url": "https://service.eufy.com/article-description/eufy-Indoor-Cam-2K-FAQ",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "eufy's official Indoor Cam 2K FAQ — microSD insertion, mounting, storage, connectivity troubleshooting. Verified live."
+   },
+   "aliases": [
+    "Eufy camera",
+    "indoor camera",
+    "security camera",
+    "2K camera",
+    "eufy"
+   ]
+  },
+  {
+   "rank": 23,
+   "name": "Aqara Smart Lock U100",
+   "category": "IoT & Smart Home",
+   "manufacturer": "Aqara",
+   "sources": [
+    {
+     "type": "manufacturer",
+     "url": "https://www.aqara.com/wp-content/uploads/2023/06/Smart-Door-Lock-U100_User-Manual-1.pdf",
+     "note": "Aqara official U100 user manual (PDF)"
+    },
+    {
+     "type": "reference",
+     "url": "https://en.wikipedia.org/wiki/Aqara",
+     "note": "Secondary reference"
+    }
+   ],
+   "evidence": "likely",
+   "why": "Fingerprint smart door lock; the battery compartment (4 AA) and emergency USB-C power are the service points.",
+   "image": null,
+   "usage_evidence": "56M+ activated Aqara devices globally as of 31 Dec 2025 (Aqara brand disclosures); 12M+ Aqara users (company introduction). Category-scale for this model.",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "official",
+    "source_url": "https://www.aqara.com/wp-content/uploads/2023/06/Smart-Door-Lock-U100_User-Manual-1.pdf",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "Aqara's official Smart Lock U100 user manual (installation, battery, reset, HomeKit binding). Verified live (PDF)."
+   },
+   "aliases": [
+    "Aqara lock",
+    "smart lock",
+    "fingerprint lock",
+    "door lock",
+    "U100"
+   ]
+  },
+  {
+   "rank": 24,
+   "name": "August Wi-Fi Smart Lock",
+   "category": "IoT & Smart Home",
+   "manufacturer": "August",
+   "sources": [
+    {
+     "type": "manufacturer",
+     "url": "https://support.august.com/august-wi-fi-smart-lock-faq-rk6RzQ5YI",
+     "note": "August official Wi-Fi Smart Lock FAQ"
+    },
+    {
+     "type": "reference",
+     "url": "https://en.wikipedia.org/wiki/August_Home",
+     "note": "Secondary reference"
+    }
+   ],
+   "evidence": "likely",
+   "why": "The retrofit smart lock that keeps your deadbolt; batteries (2x CR123A) are the routine fix.",
+   "image": null,
+   "usage_evidence": "1M+ smart locks and cameras sold as of July 2018 (August Home disclosures); the August/Access platform had 2M+ users (Assa Abloy, 2020).",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "official",
+    "source_url": "https://support.august.com/august-wi-fi-smart-lock-faq-rk6RzQ5YI",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "August's official Wi-Fi Smart Lock FAQ — serial number, battery type and life, factory reset, connectivity. Verified live."
+   },
+   "aliases": [
+    "August lock",
+    "smart lock",
+    "door lock",
+    "wifi lock",
+    "August"
+   ]
+  },
+  {
+   "rank": 25,
+   "name": "Ecobee Smart Thermostat Premium",
+   "category": "IoT & Smart Home",
+   "manufacturer": "Ecobee",
+   "sources": [
+    {
+     "type": "manufacturer",
+     "url": "https://support.ecobee.com/s/topics/0TO6S000000chiZWAQ/getting-started?language=en_US",
+     "note": "ecobee official support center"
+    },
+    {
+     "type": "reference",
+     "url": "https://en.wikipedia.org/wiki/Ecobee",
+     "note": "Secondary reference"
+    }
+   ],
+   "evidence": "likely",
+   "why": "The thermostat with room sensors; the trim plate and wiring are the service points.",
+   "image": null,
+   "usage_evidence": "No lifetime figure published. No.2 US smart-thermostat maker (NPD: 13% dollar share 2017; ~24% unit share 2015); 'sells millions of home thermostats annually' (company, 2018); acquired by Generac (2021).",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "official",
+    "source_url": "https://support.ecobee.com/s/topics/0TO6S000000chiZWAQ/getting-started?language=en_US",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "ecobee's official support center — Getting Started topic with per-model articles including Smart Thermostat Premium (firmware versions, registration, settings). Verified live."
+   },
+   "aliases": [
+    "Ecobee",
+    "smart thermostat",
+    "thermostat",
+    "Premium"
+   ]
+  },
+  {
+   "rank": 26,
+   "name": "Philips Hue White Ambiance A19",
+   "category": "IoT & Smart Home",
+   "manufacturer": "Philips Hue",
+   "sources": [
+    {
+     "type": "manufacturer",
+     "url": "https://www.philips-hue.com/en-us/p/hue-white-ambiance-a19---e26-smart-bulb---75-w/046677563233",
+     "note": "Signify official product page"
+    },
+    {
+     "type": "reference",
+     "url": "https://en.wikipedia.org/wiki/Philips_Hue",
+     "note": "Secondary reference"
+    }
+   ],
+   "evidence": "likely",
+   "why": "The smart bulb everyone starts with; a dead bulb is swapped, and the Bridge pairing is the usual fix.",
+   "image": null,
+   "usage_evidence": "No model-level figure published by Signify for Hue consumer bulbs; Hue is the leading smart-lighting brand (Signify Consumer segment). Placed on category scale (smart lighting is a multi-billion-dollar category with hundreds of millions of smart bulbs in use globally).",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "official",
+    "source_url": "https://www.philips-hue.com/en-us/p/hue-white-ambiance-a19---e26-smart-bulb---75-w/046677563233",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "Signify's official product page for the Hue White Ambiance A19 E26 bulb — specs, support period, and the product-manual link. Verified live."
+   },
+   "aliases": [
+    "Hue bulb",
+    "smart bulb",
+    "Philips Hue",
+    "light bulb",
+    "A19"
+   ]
+  },
+  {
+   "rank": 27,
+   "name": "Lutron Caseta Wireless Smart Switch",
+   "category": "IoT & Smart Home",
+   "manufacturer": "Lutron",
+   "sources": [
+    {
+     "type": "manufacturer",
+     "url": "https://support.lutron.com/us/en/product/casetawireless/article/product-selection/Programming-a-Lutron-Caseta",
+     "note": "Lutron official Caseta support"
+    },
+    {
+     "type": "reference",
+     "url": "https://en.wikipedia.org/wiki/Lutron",
+     "note": "Secondary reference"
+    }
+   ],
+   "evidence": "likely",
+   "why": "The in-wall smart switch that works without a neutral wire; the FASS pull-tab and factory reset are the service points.",
+   "image": null,
+   "usage_evidence": "No published figure found; Caseta is the leading smart-lighting switch brand (sold at Home Depot). Placed on category scale (smart switches are a multi-million-unit annual category in North America).",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "official",
+    "source_url": "https://support.lutron.com/us/en/product/casetawireless/article/product-selection/Programming-a-Lutron-Caseta",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "Browser-verified 2026-10-15: loads for a human visitor; official Lutron Caseta device article (programming, pairing, trim, troubleshooting)."
+   },
+   "aliases": [
+    "Caseta",
+    "smart switch",
+    "Lutron",
+    "light switch",
+    "dimmer"
+   ]
+  },
+  {
+   "rank": 28,
+   "name": "Google Nest Hub (2nd Gen)",
+   "category": "IoT & Smart Home",
+   "manufacturer": "Google",
+   "sources": [
+    {
+     "type": "manufacturer",
+     "url": "https://support.google.com/googlenest/answer/7072284",
+     "note": "Google official device specifications"
+    },
+    {
+     "type": "reference",
+     "url": "https://en.wikipedia.org/wiki/Google_Nest_Hub",
+     "note": "Secondary reference"
+    }
+   ],
+   "evidence": "likely",
+   "why": "The kitchen smart display; a factory reset and firmware update fix most software problems.",
+   "image": null,
+   "usage_evidence": "'Millions of other Nest Hub buyers still use these devices' (9to5Google, Oct 2026); no model-level figure published by Google.",
+   "repair_guide": {
+    "label": "Repair guide",
+    "type": "official",
+    "source_url": "https://support.google.com/googlenest/answer/7072284",
+    "archive_url": null,
+    "verified": true,
+    "verified_on": "2026-10-15",
+    "note": "Google's official device-specifications page — per-model specs for the Nest Hub (2nd gen) and the line. Verified live."
+   },
+   "aliases": [
+    "Nest Hub",
+    "smart display",
+    "Google display",
+    "kitchen display",
+    "Hub 2nd gen"
+   ]
+  }
+ ]
+}

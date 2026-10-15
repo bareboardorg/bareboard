@@ -867,6 +867,18 @@ pre.term a { color: #8ab4f8; }
 .hot-meta { font-size: 0.85rem; color: var(--secondary, #555); margin: 0 0 0.5rem; }
 .hot-why { font-size: 0.95rem; margin: 0 0 0.6rem; }
 .hot-sources { font-size: 0.8rem; margin: 0; }
+.hot-guide { margin: 0 0 0.5rem; }
+.guide-btn {
+  display: inline-block;
+  padding: 0.32rem 0.8rem;
+  border: 1px solid var(--accent, #0066cc);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent, #0066cc);
+}
+.guide-btn:hover { text-decoration: none; background: rgba(0, 102, 204, 0.08); }
+.hot-guide--none { font-size: 0.85rem; color: var(--secondary, #555); font-style: italic; }
 .pill--active { background: #1d1d1f; color: #fff; border-color: #1d1d1f; }
 #hot100-filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.8rem 0; }
 #hot100-count { font-size: 0.9rem; color: var(--secondary, #555); }
