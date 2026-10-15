@@ -520,6 +520,13 @@ Option A &mdash; Solder: Insert a 4-pin 2.54 mm breakaway male header strip into
 
 <p>In minicom (Linux): <code>minicom -D /dev/ttyUSB0 -b 115200</code></p>
 
+<p>What you type &mdash; connect with screen:</p>
+<pre class="term"><code>$ screen /dev/ttyUSB0 115200</code></pre>
+
+<p>What you type &mdash; connect with minicom (install it first if your system does not have it):</p>
+<pre class="term"><code>$ apt install minicom
+$ minicom -D /dev/ttyUSB0 -b 115200</code></pre>
+
 <p><strong>Step 6 &mdash; Power on the XB3 and capture</strong></p>
 
 <p>Plug in the XB3's power cable. The terminal window will immediately begin displaying text. The full boot sequence &mdash; from Boot ROM through U-Boot through Linux kernel initialization &mdash; takes approximately 30&ndash;60 seconds. No console access is obtained. U-Boot is configured with a 0-second autoboot delay, and the UART never drops to a shell &mdash; capture is strictly receive-only.</p>
@@ -536,6 +543,15 @@ Option A &mdash; Solder: Insert a 4-pin 2.54 mm breakaway male header strip into
 <li>Linux boot messages: kernel version, driver initialization, filesystem mount</li>
 <li>Final: application software initialization. The console goes quiet. No login prompt appears.</li>
 </ol>
+
+<p>Expected output &mdash; the same boot sequence as it appears in the terminal, in order (the whole sequence takes about 30&ndash;60 seconds, then the console goes quiet):</p>
+<pre class="term"><code>Boot ROM initialization messages from the Puma 6
+U-Boot banner: version, build date, board identification ("harborpark-mg")
+Memory initialization and DRAM size report ("DRAM: 256 MB")
+eMMC detection and partition table scan
+Kernel load and decompression
+Linux boot messages (Linux 3.12.14): kernel version, driver initialization, filesystem mount
+Application software initialization. The console goes quiet. No login prompt appears.</code></pre>
 
 <p><strong>Step 7 &mdash; Disconnect cleanly</strong><br>
 Power down the XB3 (unplug power). Remove the jumper wires. Remove the adapter. Replace the enclosure cover.</p>
