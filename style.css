@@ -158,6 +158,32 @@ html:not(.js) .site-nav .has-children:focus-within > .col-panel {
     visibility 0s;
 }
 
+/* Apple-style curtain: while a dropdown is open, the page behind it
+   blurs and dims under a top-to-bottom gradient. The panel itself is
+   the glass — frosted, translucent, page showing through blurred. */
+.nav-curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.34));
+  -webkit-backdrop-filter: blur(7px) saturate(140%);
+  backdrop-filter: blur(7px) saturate(140%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.24s ease,
+    visibility 0s linear 0.24s;
+}
+.nav-curtain.on {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition:
+    opacity 0.24s ease,
+    visibility 0s;
+}
+
 /* Finder column strip */
 .finder {
   display: flex;

@@ -20,6 +20,18 @@
   var BAR_ITEM = '.site-nav nav > ul > li.has-children';
   var HOVER_DELAY = 120; // ms before a hover opens a panel (avoids flicker)
 
+  /* Apple-style curtain behind an open panel: page blurs and dims.
+   * Injected here so no page markup is needed. */
+  var curtain = document.createElement('div');
+  curtain.className = 'nav-curtain';
+  curtain.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(curtain);
+  curtain.addEventListener('click', function () { closeAll(null); });
+
+  function syncCurtain() {
+    curtain.classList.toggle('on', anyOpen());
+  }
+
   function barLink(li) {
     return li.querySelector(':scope > a');
   }
@@ -36,6 +48,7 @@
     li.classList.remove('open');
     var a = barLink(li);
     if (a) a.setAttribute('aria-expanded', 'false');
+    syncCurtain();
   }
 
   function closeAll(except) {
@@ -47,6 +60,7 @@
     if (sp && sp.classList.contains('open') && window.BareBoardSearch) {
       window.BareBoardSearch.close();
     }
+    syncCurtain();
   }
 
   /* Per-trigger alignment: the dropdown column's text lines up under the
@@ -82,6 +96,7 @@
     li.classList.add('open');
     var a = barLink(li);
     if (a) a.setAttribute('aria-expanded', 'true');
+    syncCurtain();
   }
 
   function anyOpen() {
