@@ -874,6 +874,7 @@ pre.term a { color: #8ab4f8; }
 .hot-why { font-size: 0.95rem; margin: 0 0 0.6rem; }
 .hot-sources { font-size: 0.8rem; margin: 0; }
 .hot-guide { margin: 0 0 0.5rem; }
+.hot-uds { font-size: 0.85rem; font-weight: 600; margin: 0 0 0.5rem; }
 .guide-btn {
   display: inline-block;
   padding: 0.32rem 0.8rem;

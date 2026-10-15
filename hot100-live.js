@@ -66,6 +66,7 @@
       '<div class="hot-body">' +
         '<h2>' + name + '</h2>' +
         '<p class="hot-meta">' + esc(d.manufacturer) + ' &middot; ' + esc(d.category) + ' &middot; ' + evidenceBadge(d.evidence) + '</p>' +
+        (d.user_demand_score ? '<p class="hot-uds">User demand score: ' + esc(d.user_demand_score.score) + ' / 10</p>' : '') +
         guideLine(d) +
         '<p class="hot-sources">' + sourceLinks(d.sources) + '</p>' +
       '</div>' +
