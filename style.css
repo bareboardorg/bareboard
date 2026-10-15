@@ -968,3 +968,7 @@ pre.term a { color: #8ab4f8; }
 .notice { border-left: 4px solid var(--accent); background: #f4f8ff; padding: .8rem 1rem; margin: 1rem 0; }
 
 .w3r2 img { max-width: 100%; height: auto; border-radius: 6px; }
+
+.bb-quote { margin: 2.2em 0 1.2em; padding: .2em 0 .2em 1em; border-left: 3px solid #ddd; color: #555; font-style: italic; }
+.bb-quote p { margin: .25em 0; }
+.bb-quote .bb-quote-by { font-style: normal; font-size: .85em; color: #888; }

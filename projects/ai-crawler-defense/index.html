@@ -36,6 +36,10 @@
     clip: rect(0, 0, 0, 0) !important; clip-path: inset(50%) !important;
     white-space: nowrap !important; border: 0 !important; pointer-events: none !important;
   }
+
+.bb-quote { margin: 2.2em 0 1.2em; padding: .2em 0 .2em 1em; border-left: 3px solid #ddd; color: #555; font-style: italic; }
+.bb-quote p { margin: .25em 0; }
+.bb-quote .bb-quote-by { font-style: normal; font-size: .85em; color: #888; }
 </style>
 </head>
 <body>
@@ -160,6 +164,7 @@ base-uri 'self'; form-action 'none'</pre>
 
 <p>The traps are strictly defensive and strictly quarantined. Honeypot links are invisible to humans. The tarpit is unlinked from visible navigation, <code>noindex</code>&rsquo;d, and labeled in its own source as junk. The poison never touches a page a reader might see. Nothing here attacks anyone&rsquo;s infrastructure, exfiltrates anything, or harms a legitimate visitor. It wastes a trespasser&rsquo;s time and corrupts a trespasser&rsquo;s dataset — which is exactly what trespassers signed up for when they ignored the signs at the gate.</p>
 
+<blockquote class="bb-quote"><p>&ldquo;As a rule, software systems do not work well until they have been used, and have failed repeatedly, in real applications.&rdquo;</p><p class="bb-quote-by">&mdash; Dave Parnas</p></blockquote>
 <footer>
 <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
   <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
