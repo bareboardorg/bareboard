@@ -972,3 +972,7 @@ pre.term a { color: #8ab4f8; }
 .bb-quote { margin: 2.2em 0 1.2em; padding: .2em 0 .2em 1em; border-left: 3px solid #ddd; color: #555; font-style: italic; }
 .bb-quote p { margin: .25em 0; }
 .bb-quote .bb-quote-by { font-style: normal; font-size: .85em; color: #888; }
+
+/* Safety net (added with the mobile layer): a bare content image can
+   never be wider than the column it sits in, on any screen size. */
+main img { max-width: 100%; height: auto; }
