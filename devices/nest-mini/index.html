@@ -113,18 +113,18 @@
   </div>
 </header>
 <main>
-  <aside class="legal-notice" style="background:#fff8e1;border:1px solid #e6d690;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.88rem;color:#5a4e1a;">
+  <aside class="legal-notice bb-notice-amber">
     <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
   </aside>
-  <aside class="purpose-note" style="background:#eef6ee;border:1px solid #b9d8b9;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.92rem;color:#1e4620;">
+  <aside class="purpose-note bb-notice-green">
     <strong>Your device, your rules.</strong> You bought it &mdash; you have the right to update its firmware, patch its security issues, and remove software you don&rsquo;t want on it. Every method on this page is non-destructive: it uses the device&rsquo;s existing ports, buttons, or software features. Nothing here requires breaking the enclosure.
   </aside>
   <h1>Google Nest Mini (2nd Gen)</h1>
   <p class="lede">Google&rsquo;s puck-shaped smart speaker &mdash; nearly identical outside to the 2017 Home Mini, but with a dedicated machine-learning chip inside that runs speech recognition locally at up to 1 TOPS.</p>
 
-  <figure style="margin:1.5em 0;">
-    <img src="img/nest-mini.jpg" srcset="img/nest-mini-480.jpg 480w, img/nest-mini.jpg 1200w" sizes="(max-width: 820px) 92vw, 704px" width="1200" height="628" alt="Google Nest Mini smart speaker" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;">
-    <figcaption style="font-size:0.85rem;color:#666;margin-top:0.5em;">Google Nest Mini (2nd gen). Photo: 9to5Google.</figcaption>
+  <figure class="bb-figure">
+    <img src="img/nest-mini.jpg" srcset="img/nest-mini-480.jpg 480w, img/nest-mini.jpg 1200w" sizes="(max-width: 820px) 92vw, 704px" width="1200" height="628" alt="Google Nest Mini smart speaker" loading="lazy" class="bb-img-fluid-r8">
+    <figcaption class="bb-figcaption">Google Nest Mini (2nd gen). Photo: 9to5Google.</figcaption>
   </figure>
 
   <section>
@@ -181,7 +181,7 @@
       <li>The device runs a locked bootloader; community research focuses on the documented Cast and Assistant APIs rather than hardware debug.</li>
       <li>For local control without Google&rsquo;s cloud, the documented path is the open-source Home Assistant integration, which uses the official local APIs.</li>
     </ol>
-<pre class="term" style="background:#1d1d1f;color:#e8e8e8;padding:1em;border-radius:8px;overflow-x:auto;"><code>$ # Check what the device exposes on your local network
+<pre class="term bb-term-dark"><code>$ # Check what the device exposes on your local network
 $ nmap -p 8008,8009 192.168.1.50
 PORT     STATE SERVICE
 8008/tcp open  http

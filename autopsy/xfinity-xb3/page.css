@@ -38,3 +38,9 @@
 nav[aria-label="On this page"] { background: #fafafa; border: 1px solid #e6e6e6; border-radius: 8px; padding: 1.2em 1.5em; margin: 1.5em 0; }
 nav[aria-label="On this page"] > p { margin: 0 0 0.6em; font-weight: 600; }
 nav[aria-label="On this page"] ol { margin: 0; columns: 2; column-gap: 2em; font-size: 0.92rem; }
+
+/* Same CSP fix, for this page's remaining inline styles that had
+   no rule yet (the nav styles above were already moved here). */
+.bb-pre-diagram { background:#fafafa; border:1px solid #e6e6e6; border-radius:6px; padding:1.2em; overflow-x:auto; font-size:0.82rem; line-height:1.5; }
+.bb-footer-note { margin-top:3rem; padding-top:1.5rem; border-top:1px solid #e6e6e6; font-size:0.9rem; color:#555; }
+.bb-colophon { opacity:0.5; font-size:0.8rem; margin-top:1.2rem; }

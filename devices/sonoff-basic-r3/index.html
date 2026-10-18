@@ -113,15 +113,15 @@
   </div>
 </header>
 <main>
-  <aside class="legal-notice" style="background:#fff8e1;border:1px solid #e6d690;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.88rem;color:#5a4e1a;">
+  <aside class="legal-notice bb-notice-amber">
     <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
   </aside>
   <h1>Sonoff Basic R3</h1>
   <p class="lede">ITEAD&rsquo;s in-line Wi-Fi switch &mdash; the device that taught a generation about ESP8266-family hardware. The R3 revision uses the ESP8285 (flash built into the chip), keeps the famous flash-mode button, and even ships a documented DIY mode.</p>
 
-  <figure style="margin:1.5em 0;">
-    <img src="img/sonoff-r3.webp" srcset="img/sonoff-r3-480.webp 480w, img/sonoff-r3.webp 800w" sizes="(max-width: 820px) 92vw, 704px" width="800" height="800" alt="Sonoff Basic R3 Wi-Fi smart switch" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;">
-    <figcaption style="font-size:0.85rem;color:#666;margin-top:0.5em;">Sonoff Basic R3. Product photo via retailer.</figcaption>
+  <figure class="bb-figure">
+    <img src="img/sonoff-r3.webp" srcset="img/sonoff-r3-480.webp 480w, img/sonoff-r3.webp 800w" sizes="(max-width: 820px) 92vw, 704px" width="800" height="800" alt="Sonoff Basic R3 Wi-Fi smart switch" loading="lazy" class="bb-img-fluid-r8">
+    <figcaption class="bb-figcaption">Sonoff Basic R3. Product photo via retailer.</figcaption>
   </figure>
 
   <section>
@@ -170,7 +170,7 @@
       <li>Press and hold the case button (GPIO0 low), then apply 3.3 V power. Release the button &mdash; the ESP8285 is now in UART download mode.</li>
       <li>Back up the original firmware first, then write your replacement firmware with esptool.</li>
     </ol>
-<pre class="term" style="background:#1d1d1f;color:#e8e8e8;padding:1em;border-radius:8px;overflow-x:auto;"><code>$ esptool.py --port /dev/ttyUSB0 read_flash 0x00000 0x100000 backup.bin
+<pre class="term bb-term-dark"><code>$ esptool.py --port /dev/ttyUSB0 read_flash 0x00000 0x100000 backup.bin
 esptool.py v4.0
 Detected ESP8285 — 1 MB flash
 1048576 bytes read successfully

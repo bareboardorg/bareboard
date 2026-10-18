@@ -23,9 +23,11 @@
   }
 
   function evidenceBadge(ev) {
-    var colors = { confirmed: '#0a0', likely: '#a80', unconfirmed: '#888' };
-    var c = colors[ev] || '#888';
-    return '<span class="ev" style="color:' + c + ';font-weight:bold;">' + esc(ev) + '</span>';
+    // Colors live in style.css (.ev-* classes): the page CSP blocks
+    // style attributes, including ones set via innerHTML.
+    var kinds = { confirmed: 'ev-confirmed', likely: 'ev-likely', unconfirmed: 'ev-unconfirmed' };
+    var cls = kinds[ev] || 'ev-unconfirmed';
+    return '<span class="ev ' + cls + '">' + esc(ev) + '</span>';
   }
 
   function sourceLinks(sources) {

@@ -113,15 +113,15 @@
   </div>
 </header>
 <main>
-  <aside class="legal-notice" style="background:#fff8e1;border:1px solid #e6d690;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.88rem;color:#5a4e1a;">
+  <aside class="legal-notice bb-notice-amber">
     <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
   </aside>
   <h1>TP-Link Kasa HS103</h1>
   <p class="lede">TP-Link&rsquo;s mini smart plug &mdash; 15 A switching in a package barely larger than the outlet it occupies. Inside: a Realtek RTL8710 running the whole show, and one of the more repairable plug designs in its class.</p>
 
-  <figure style="margin:1.5em 0;">
-    <img src="img/kasa-hs103.jpg" srcset="img/kasa-hs103-480.jpg 480w, img/kasa-hs103.jpg 805w" sizes="(max-width: 820px) 92vw, 704px" width="805" height="423" alt="TP-Link Kasa HS103 smart plug" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;">
-    <figcaption style="font-size:0.85rem;color:#666;margin-top:0.5em;">TP-Link Kasa HS103. Product photo via B&amp;H Photo.</figcaption>
+  <figure class="bb-figure">
+    <img src="img/kasa-hs103.jpg" srcset="img/kasa-hs103-480.jpg 480w, img/kasa-hs103.jpg 805w" sizes="(max-width: 820px) 92vw, 704px" width="805" height="423" alt="TP-Link Kasa HS103 smart plug" loading="lazy" class="bb-img-fluid-r8">
+    <figcaption class="bb-figcaption">TP-Link Kasa HS103. Product photo via B&amp;H Photo.</figcaption>
   </figure>
 
   <section>
@@ -177,7 +177,7 @@
       <li>The RTL8710 exposes UART TX/RX; Realtek&rsquo;s Ameba SDK documents the serial boot protocol for this family.</li>
       <li>Because the RTL8710 integrates its flash, firmware is read and written through the chip&rsquo;s own serial bootloader rather than a separate flash chip.</li>
     </ol>
-<pre class="term" style="background:#1d1d1f;color:#e8e8e8;padding:1em;border-radius:8px;overflow-x:auto;"><code>$ # Realtek Ameba-style serial upload (chip-family documented flow)
+<pre class="term bb-term-dark"><code>$ # Realtek Ameba-style serial upload (chip-family documented flow)
 $ screen /dev/ttyUSB0 115200
 # (bootloader banner appears on reset)</code></pre>
     <p><em>Work on mains-connected devices demands proper isolation and safety practice; if you are unsure, do not open it while it can be plugged in.</em></p>

@@ -113,15 +113,15 @@
   </div>
 </header>
 <main>
-  <aside class="legal-notice" style="background:#fff8e1;border:1px solid #e6d690;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.88rem;color:#5a4e1a;">
+  <aside class="legal-notice bb-notice-amber">
     <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
   </aside>
   <h1>Amazon Echo Dot (5th Gen)</h1>
   <p class="lede">Amazon&rsquo;s spherical smart speaker, rebuilt around the in-house AZ2 Neural Edge processor for on-device speech processing. The best-documented Echo Dot teardown target to date &mdash; including a debug header hiding under the rubber base.</p>
 
-  <figure style="margin:1.5em 0;">
-    <img src="img/echo-dot.jpg" srcset="img/echo-dot-480.jpg 480w, img/echo-dot.jpg 1200w" sizes="(max-width: 820px) 92vw, 704px" width="1200" height="800" alt="Amazon Echo Dot smart speaker" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;">
-    <figcaption style="font-size:0.85rem;color:#666;margin-top:0.5em;">Amazon Echo Dot. Photo: Wikimedia Commons (CC BY-SA).</figcaption>
+  <figure class="bb-figure">
+    <img src="img/echo-dot.jpg" srcset="img/echo-dot-480.jpg 480w, img/echo-dot.jpg 1200w" sizes="(max-width: 820px) 92vw, 704px" width="1200" height="800" alt="Amazon Echo Dot smart speaker" loading="lazy" class="bb-img-fluid-r8">
+    <figcaption class="bb-figcaption">Amazon Echo Dot. Photo: Wikimedia Commons (CC BY-SA).</figcaption>
   </figure>
 
   <section>
@@ -182,7 +182,7 @@
       <li>With the device powered off, connect GND first, then try each remaining pin as TX at 115200 baud while watching for boot output. Never connect VCC from your adapter &mdash; let the Echo Dot power itself.</li>
       <li>A serial console here would show the bootloader and kernel messages, which identify the firmware layout and available recovery options.</li>
     </ol>
-<pre class="term" style="background:#1d1d1f;color:#e8e8e8;padding:1em;border-radius:8px;overflow-x:auto;"><code>$ ls /dev/ttyUSB*
+<pre class="term bb-term-dark"><code>$ ls /dev/ttyUSB*
 /dev/ttyUSB0
 $ screen /dev/ttyUSB0 115200
 # (boot log appears here if the header carries a console)</code></pre>

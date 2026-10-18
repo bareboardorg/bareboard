@@ -113,15 +113,15 @@
   </div>
 </header>
 <main>
-  <aside class="legal-notice" style="background:#fff8e1;border:1px solid #e6d690;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.88rem;color:#5a4e1a;">
+  <aside class="legal-notice bb-notice-amber">
     <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
   </aside>
   <h1>Wyze Cam v3</h1>
   <p class="lede">The $30 camera that proved good hardware doesn&rsquo;t need a luxury price. An Ingenic T31 video SoC, color night vision, and &mdash; unusually for a budget camera &mdash; serial pads the community has already mapped.</p>
 
-  <figure style="margin:1.5em 0;">
-    <img src="img/wyze-v3.jpg" srcset="img/wyze-v3-480.jpg 480w, img/wyze-v3.jpg 500w" sizes="(max-width: 820px) 92vw, 704px" width="500" height="500" alt="Wyze Cam v3 security camera" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;">
-    <figcaption style="font-size:0.85rem;color:#666;margin-top:0.5em;">Wyze Cam v3. Product photo via retailer.</figcaption>
+  <figure class="bb-figure">
+    <img src="img/wyze-v3.jpg" srcset="img/wyze-v3-480.jpg 480w, img/wyze-v3.jpg 500w" sizes="(max-width: 820px) 92vw, 704px" width="500" height="500" alt="Wyze Cam v3 security camera" loading="lazy" class="bb-img-fluid-r8">
+    <figcaption class="bb-figcaption">Wyze Cam v3. Product photo via retailer.</figcaption>
   </figure>
 
   <section>
@@ -177,7 +177,7 @@
       <li>Identify GND with a multimeter (continuity to the USB shield), then probe the remaining pads at 115200 baud for boot output to find TX.</li>
       <li>A serial console typically drops into the bootloader, where you can inspect the firmware layout and boot parameters.</li>
     </ol>
-<pre class="term" style="background:#1d1d1f;color:#e8e8e8;padding:1em;border-radius:8px;overflow-x:auto;"><code>$ screen /dev/ttyUSB0 115200
+<pre class="term bb-term-dark"><code>$ screen /dev/ttyUSB0 115200
 U-Boot 2013.07 (Nov 04 2020 - 14:22:10)
 DRAM:  128 MiB
 SF: Detected MX25L12805D with page size 256 Bytes

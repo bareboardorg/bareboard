@@ -111,33 +111,33 @@
   <p class="lede">Short observations from the workbench. No fluff, no filler &mdash; just things worth knowing.</p>
 
   <section>
-    <article style="margin-bottom:2em;">
-      <h2 id="uart-baud-115200" style="font-size:1.2rem;">115200 is almost always the answer</h2>
+    <article class="bb-mb-2em">
+      <h2 id="uart-baud-115200" class="bb-fs-1p2">115200 is almost always the answer</h2>
       <p>If you&rsquo;re hunting for a serial console and getting garbage, try 115200 first. It&rsquo;s the default baud rate on the overwhelming majority of embedded Linux devices, routers, and IoT gadgets. The runner-ups are 57600 and 9600, but 115200 hits more often than everything else combined.</p>
     </article>
 
-    <article style="margin-bottom:2em;">
-      <h2 id="tx-idles-high" style="font-size:1.2rem;">TX idles high &mdash; use it</h2>
+    <article class="bb-mb-2em">
+      <h2 id="tx-idles-high" class="bb-fs-1p2">TX idles high &mdash; use it</h2>
       <p>Not sure which pad is TX? Power the board and probe with a multimeter. UART TX idles at logic HIGH (3.3V or 1.8V). The pin sitting at a steady rail voltage while the board boots is almost certainly TX. RX idles high too but won&rsquo;t show boot chatter on a scope.</p>
     </article>
 
-    <article style="margin-bottom:2em;">
-      <h2 id="dont-connect-vcc" style="font-size:1.2rem;">Don&rsquo;t connect VCC on your serial adapter</h2>
+    <article class="bb-mb-2em">
+      <h2 id="dont-connect-vcc" class="bb-fs-1p2">Don&rsquo;t connect VCC on your serial adapter</h2>
       <p>The board powers itself. Your USB-to-serial adapter powers itself. Connecting VCC between them joins two power supplies that were never meant to meet. You only need three wires: TX, RX, GND. Leave VCC unconnected.</p>
     </article>
 
-    <article style="margin-bottom:2em;">
-      <h2 id="fcc-id-gold" style="font-size:1.2rem;">The FCC ID is a cheat code</h2>
+    <article class="bb-mb-2em">
+      <h2 id="fcc-id-gold" class="bb-fs-1p2">The FCC ID is a cheat code</h2>
       <p>Every wireless device sold in the US has an FCC ID printed on it. Look it up at fccid.io and you&rsquo;ll find internal photos, test reports, block diagrams, and sometimes full schematics &mdash; all legally public. It&rsquo;s the single best free intelligence source in hardware hacking.</p>
     </article>
 
-    <article style="margin-bottom:2em;">
-      <h2 id="esd-mat" style="font-size:1.2rem;">Your boards are tougher than you think (but ground yourself anyway)</h2>
+    <article class="bb-mb-2em">
+      <h2 id="esd-mat" class="bb-fs-1p2">Your boards are tougher than you think (but ground yourself anyway)</h2>
       <p>Modern chips have decent ESD protection. You&rsquo;re unlikely to kill a board by touching it. But &ldquo;unlikely&rdquo; isn&rsquo;t &ldquo;never&rdquo; &mdash; a $5 grounding strap is cheaper than a dead SoC. Ground yourself, especially in dry environments.</p>
     </article>
 
-    <article style="margin-bottom:2em;">
-      <h2 id="read-datasheet-first" style="font-size:1.2rem;">Read the datasheet before you probe</h2>
+    <article class="bb-mb-2em">
+      <h2 id="read-datasheet-first" class="bb-fs-1p2">Read the datasheet before you probe</h2>
       <p>Five minutes with the pinout diagram saves an hour of guessing. The datasheet tells you which pins are power, which are ground, and which ones will release magic smoke if you short them. Our <a href="/datasheets.html">datasheet index</a> is a good place to start.</p>
     </article>
   </section>

@@ -976,3 +976,46 @@ pre.term a { color: #8ab4f8; }
 /* Safety net (added with the mobile layer): a bare content image can
    never be wider than the column it sits in, on any screen size. */
 main img { max-width: 100%; height: auto; }
+
+/* ---------- moved inline styles (CSP fix) ----------
+   The classes below replace style="..." attributes, which each
+   page's CSP (style-src 'self') silently blocks. Declaration
+   values are copied verbatim from the attributes they replace.
+   Compound selectors are used where an existing rule (e.g.
+   p.lede, pre.term, p.kicker) would otherwise outrank a lone
+   class and change the rendering the inline style produced. */
+.bb-notice-amber { background:#fff8e1; border:1px solid #e6d690; border-radius:8px; padding:1em 1.2em; margin:0 0 1.5em; font-size:0.88rem; color:#5a4e1a; }
+.bb-notice-green { background:#eef6ee; border:1px solid #b9d8b9; border-radius:8px; padding:1em 1.2em; margin:0 0 1.5em; font-size:0.92rem; color:#1e4620; }
+.bb-mb-2em { margin-bottom:2em; }
+.bb-mt-2p5em { margin-top:2.5em; }
+.bb-figure { margin:1.5em 0; }
+.bb-img-fluid-r8 { max-width:100%; height:auto; border-radius:8px; }
+.bb-img-fluid { max-width:100%; height:auto; }
+.bb-figcaption { font-size:0.85rem; color:#666; margin-top:0.5em; }
+.term.bb-term-dark { background:#1d1d1f; color:#e8e8e8; padding:1em; border-radius:8px; overflow-x:auto; }
+.bb-fs-1p1 { font-size:1.1rem; }
+.bb-fs-1p2 { font-size:1.2rem; }
+.bb-fs-1p3 { font-size:1.3rem; }
+.bb-mt-0 { margin-top:0; }
+.bb-mt-0p4rem { margin-top:0.4rem; }
+.bb-mt-1rem { margin-top:1rem; }
+.bb-mt-1p5em { margin-top:1.5em; }
+.bb-mt-2rem { margin-top:2rem; }
+.bb-mt-2p5rem { margin-top:2.5rem; }
+.bb-mb-0p6rem { margin-bottom:0.6rem; }
+.bb-pad-1rem { padding:1rem; }
+.lede.bb-lede-meta { margin-top:2em; font-size:0.92rem; color:#555; }
+.lede.bb-lede-1p15 { font-size:1.15rem; }
+.lede.bb-lede-0p92 { font-size:0.92rem; color:#555; }
+.tagline.bb-tagline-display { font-size:1.1rem; font-weight:bold; margin:0.5em 0 1.5em; }
+.bb-summary-toggle { cursor:pointer; font-weight:600; color:var(--text); }
+.bb-epigraph { margin:1.5em 0; padding:0 0 0 1em; border-left:3px solid #c00; font-style:italic; color:#555; }
+.bb-cite { font-style:normal; font-size:0.85em; }
+.bb-mission-box { background:#f6f6f7; border:1px solid #e6e6e6; border-radius:12px; padding:1.8em 2em; margin:1.5em 0 2.5em; }
+.kicker.bb-kicker-hero { font-size:2.5rem; font-weight:800; letter-spacing:0.05em; margin-bottom:0; }
+/* Hot 100 evidence badges (hot100-live.js): same colors and bold
+   the script used to emit as a blocked style attribute. */
+.ev { font-weight:bold; }
+.ev-confirmed { color:#0a0; }
+.ev-likely { color:#a80; }
+.ev-unconfirmed { color:#888; }

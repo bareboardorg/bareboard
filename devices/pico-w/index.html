@@ -113,15 +113,15 @@
   </div>
 </header>
 <main>
-  <aside class="legal-notice" style="background:#fff8e1;border:1px solid #e6d690;border-radius:8px;padding:1em 1.2em;margin:0 0 1.5em;font-size:0.88rem;color:#5a4e1a;">
+  <aside class="legal-notice bb-notice-amber">
     <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
   </aside>
   <h1>Raspberry Pi Pico W</h1>
   <p class="lede">Raspberry Pi&rsquo;s $6 microcontroller board: a dual-core Cortex-M0+ RP2040 with Infineon Wi-Fi, castellated edges for soldering, and the friendliest firmware workflow in the industry &mdash; hold a button, plug in USB, drag a file.</p>
 
-  <figure style="margin:1.5em 0;">
-    <img src="img/pico-w.jpg" srcset="img/pico-w-480.jpg 480w, img/pico-w.jpg 750w" sizes="(max-width: 820px) 92vw, 704px" width="750" height="500" alt="Raspberry Pi Pico W microcontroller board" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;">
-    <figcaption style="font-size:0.85rem;color:#666;margin-top:0.5em;">Raspberry Pi Pico W. Photo: Components101.</figcaption>
+  <figure class="bb-figure">
+    <img src="img/pico-w.jpg" srcset="img/pico-w-480.jpg 480w, img/pico-w.jpg 750w" sizes="(max-width: 820px) 92vw, 704px" width="750" height="500" alt="Raspberry Pi Pico W microcontroller board" loading="lazy" class="bb-img-fluid-r8">
+    <figcaption class="bb-figcaption">Raspberry Pi Pico W. Photo: Components101.</figcaption>
   </figure>
 
   <section>
@@ -176,7 +176,7 @@
       <li>Drag a .uf2 firmware file onto the drive. The board reboots running your code.</li>
       <li>For debugging, flash Picoprobe onto a second Pico and connect its GP2/GP3 to the target&rsquo;s SWD pins &mdash; a complete debug probe for $4.</li>
     </ol>
-<pre class="term" style="background:#1d1d1f;color:#e8e8e8;padding:1em;border-radius:8px;overflow-x:auto;"><code>$ ls /media/$USER/
+<pre class="term bb-term-dark"><code>$ ls /media/$USER/
 RPI-RP2
 $ cp firmware.uf2 /media/$USER/RPI-RP2/
 $ # board reboots and runs firmware.uf2</code></pre>
