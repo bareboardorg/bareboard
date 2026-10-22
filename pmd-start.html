@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Chair Stopped: Start Here &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="Your power wheelchair just stopped and you have never fixed anything? Start here: no tools, no experience. Read what the chair is telling you, do the four checks that fix most strandings, and know what to say to the dealer.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Your Chair Stopped: Start Here">
+<meta property="og:description" content="Zero experience, zero tools. The first page a stranded owner should read.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-start.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Your Chair Stopped: Start Here</h1>
+    <p class="lede">Your power wheelchair just stopped, and you have never fixed anything in your life. Good &mdash; this page was written for you. No tools. No experience. Nothing here can damage your chair, and most strandings end at Step 2.</p>
+    <p>Work down the steps in order. Every word is explained where it is used. Where a step names a part, the picture and the full procedure are one click away.</p>
+  </section>
+
+  <section>
+    <h2>Step 0 &mdash; Be safe</h2>
+    <p>If you are somewhere unsafe &mdash; a road, a slope, weather &mdash; get yourself safe first; the chair can wait. If the chair is on a slope, do not do any step that asks you to release a brake or flip a lever until someone is with you.</p>
+  </section>
+
+  <section>
+    <h2>Step 1 &mdash; Read what the chair is telling you</h2>
+    <p>Your chair knows what is wrong, and it is already saying so. Find which of these three yours does:</p>
+    <ul>
+      <li><strong>A row of battery lights is flashing.</strong> Count how many lights flash together. That count is the message.</li>
+      <li><strong>A color screen shows words and a number.</strong> The number is a 4-digit <strong>trip code</strong> &mdash; the chair&rsquo;s name for the exact fault. Photograph the screen with your phone before you switch anything off.</li>
+      <li><strong>The light inside the round power button flashes red.</strong> Count the flashes between pauses. Take a 10-second video on your phone &mdash; you can count from the video as many times as you need.</li>
+    </ul>
+    <p>Write down the count or the code, and the date. Then look it up in <a href="/pmd-fault-codes.html">Fault Codes, Translated</a> &mdash; every code, in plain language, with what to check first. If your code&rsquo;s first check is one of the Step 2 items below, do that now.</p>
+  </section>
+
+  <section>
+    <h2>Step 2 &mdash; The four checks that fix most strandings</h2>
+    <p>No tools. Do them in this order, and try the chair after each one.</p>
+    <ol>
+      <li><strong>The freewheel levers.</strong> On each drive motor (the unit each big wheel attaches to) is a small lever. One position is DRIVE; the other is PUSH, which releases the motor so someone can push the chair by hand. If a lever is in PUSH &mdash; or stuck halfway &mdash; the chair reads it as a brake fault and refuses to drive. Push both levers firmly all the way to DRIVE until they click. (<a href="/pmd-fixes.html">Procedure 1</a>, with the safety steps.)</li>
+      <li><strong>The charger.</strong> Is the charger plugged into the chair? The chair will not drive while it is &mdash; that is a safety feature, not a fault. Unplug it. If it is already unplugged but the chair still acts plugged-in, the socket may be dirty: that check is <a href="/pmd-fixes.html">Procedure 2</a> &mdash; read its safety step first.</li>
+      <li><strong>The thick cable.</strong> A round cable runs from the back of the joystick down to the base. Its plugs work loose. Grip each plug by its hard outer body &mdash; never pull the wire &mdash; push it firmly back in until it seats. (Full version, with power off first: <a href="/pmd-fixes.html">Procedure 4</a>.)</li>
+      <li><strong>The battery plugs and the breaker.</strong> If your chair has a main plug or a circuit breaker (a small switch that cuts power, like the breakers in a house), check the plug is fully in and the breaker has not tripped. If it tripped, push it back once. If it trips again right away, stop &mdash; that is a real fault, and Step 4 is yours.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Step 3 &mdash; If it moves again, prove it before you trust it</h2>
+    <p>Drive slowly in an open space. Stop. Switch off and try to push the chair by hand &mdash; it must not roll. You just cleared a fault; a short, slow test is how you know the fix is real and the brakes hold. Then write down what the code was and which check fixed it. That note is gold the next time &mdash; and there is usually a next time.</p>
+  </section>
+
+  <section>
+    <h2>Step 4 &mdash; If it still won&rsquo;t move: what to say to the dealer</h2>
+    <p>You have already done the most valuable thing: you know the code. When you call, you are not &ldquo;a broken chair&rdquo; &mdash; you are a specific fault with a date. Say these, in this order:</p>
+    <ul>
+      <li>&ldquo;The chair shows code <em>[your code]</em>. Read me the trip text that goes with it.&rdquo;</li>
+      <li>&ldquo;Before you replace any module, back up my configuration &mdash; and give me a copy.&rdquo; (A <strong>module</strong> is one of the chair&rsquo;s electronic boxes. Your settings live inside them; a swap without a backup erases how your chair was set up for your body.)</li>
+      <li>&ldquo;What is the <strong>part number</strong> of the part you say failed?&rdquo; (Write it down. Parts have names and prices outside the dealer too &mdash; see <a href="/pmd-parts.html">Parts, Not Assemblies</a>.)</li>
+      <li>&ldquo;Is this covered under the electronics warranty?&rdquo; (The clocks are on the parts page. Ask before you agree to pay.)</li>
+    </ul>
+    <p>Nothing here is an argument. It is an owner reading their own chair&rsquo;s message out loud &mdash; which is the whole of taking control back, at its most basic.</p>
+  </section>
+
+  <section>
+    <h2>Words we use, defined</h2>
+    <ul>
+      <li><strong>Module</strong> &mdash; one of the chair&rsquo;s electronic boxes (joystick module, power module, seating module). Each does one job.</li>
+      <li><strong>Configuration</strong> &mdash; the list of settings stored inside the modules: how fast, how hard it launches, how it filters your hand&rsquo;s tremor. Your chair&rsquo;s setup, in numbers.</li>
+      <li><strong>Trip code</strong> &mdash; the number or light pattern the chair shows when something is wrong. Its name for the fault.</li>
+      <li><strong>Freewheel lever</strong> &mdash; the small lever on each motor: DRIVE to drive, PUSH to be pushed by hand.</li>
+      <li><strong>Inhibit</strong> &mdash; the chair&rsquo;s &ldquo;do not drive&rdquo; signal, sent while the charger is plugged in.</li>
+      <li><strong>Bus</strong> &mdash; the wiring network the modules use to talk to each other.</li>
+      <li><strong>Dongle</strong> &mdash; a small plug-in device. The dealer&rsquo;s programming dongle is the physical key their software demands.</li>
+      <li><strong>Firmware</strong> &mdash; the software built into a module, the instructions it runs.</li>
+      <li><strong>Actuator</strong> &mdash; a small electric pusher that moves part of the seat (tilt, recline, legrest).</li>
+      <li><strong>Endstop</strong> &mdash; the point where an actuator&rsquo;s travel ends; some systems sense it by motor current instead of a switch.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Where to go next</h2>
+    <ul>
+      <li><a href="/pmd-fault-codes.html"><strong>Fault Codes, Translated</strong></a> &mdash; every code, what it means, what to check first.</li>
+      <li><a href="/pmd-fixes.html"><strong>The Cheap Fixes</strong></a> &mdash; the five repairs, step by step, with the safety steps in.</li>
+      <li><a href="/pmd-settings.html"><strong>The Settings, in Plain Language</strong></a> &mdash; what the dealer&rsquo;s numbers mean for your body.</li>
+      <li><a href="/pmd-parts.html"><strong>Parts, Not Assemblies</strong></a> &mdash; the real parts, named and priced, and the warranty clocks.</li>
+      <li><a href="/pmd-reading.html"><strong>Reading the Chair</strong></a> &mdash; for when you want to go further: how to listen to the chair&rsquo;s own wiring with a computer, and how every finding here was made.</li>
+      <li><a href="/pmd.html"><strong>PMD, the whole picture</strong></a> &mdash; why the lock exists, the numbers behind it, and the law catching up.</li>
+    </ul>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+</body>
+</html>
