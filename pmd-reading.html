@@ -169,23 +169,25 @@
   </section>
 
   <section>
-    <h2>What you need</h2>
+    <h2>The parts you need &mdash; and how they connect</h2>
+    <p>Three things. Each one is defined here, in the order you will touch them.</p>
     <ul>
-      <li><strong>A computer running Linux.</strong> Linux has CAN support built in (called SocketCAN) &mdash; the adapter appears as a network-style interface named <code>can0</code>.</li>
-      <li><strong>An isolated USB-to-CAN adapter</strong> (the gs_usb / CANable class of device), for the reason above.</li>
-      <li><strong>Your own chair, and time.</strong> Nothing here is done to anyone else&rsquo;s chair, and nothing here changes yours.</li>
+      <li><strong>A computer running Linux.</strong> Linux is a free operating system (the software that runs the computer, like Windows or macOS). It has CAN support built in, called <strong>SocketCAN</strong>: once the adapter below is plugged in, the computer treats it as an interface named <strong>can0</strong> &mdash; <em>can</em> for the network, <em>0</em> because it is the first one.</li>
+      <li><strong>An isolated USB-to-CAN adapter</strong> (the gs_usb / CANable class of device). This small box translates between the computer&rsquo;s USB port and the chair&rsquo;s wiring. <strong>Isolated</strong> means it has a built-in electrical barrier between its two sides, so a fault on the chair&rsquo;s 24 volts cannot travel into the computer. One end of the adapter is a USB plug, for the computer. The other end is where the chair&rsquo;s wires land.</li>
+      <li><strong>The chair&rsquo;s bus cable.</strong> The <strong>bus</strong> is the chair&rsquo;s internal wiring network &mdash; the cables the joystick, the power module, and the seating module use to talk to each other. Its plugs are round, with 4 pins. The cable runs from the back of the joystick down to the power module in the base.</li>
     </ul>
-    <p><em>Open question, marked honestly: the R-net bus uses fault-tolerant CAN transceivers. Which adapter transceivers are fully compatible with that bus must be confirmed on the bench before anything is connected to a live chair &mdash; the project&rsquo;s own first bench session is pending hardware, and its results will be recorded here from the real session. Terminal output is never written in advance on this site.</em></p>
+    <p><strong>How they connect, in plain words:</strong> computer &rarr; (USB cable) &rarr; adapter &rarr; (the adapter&rsquo;s chair-side wires) &rarr; the chair&rsquo;s bus cable. The adapter sits between the computer and the chair and only listens. Procedure B1 below connects only the computer half, first. Procedure B2 makes the chair connection, in listen-only mode.</p>
+    <p><em>Open question, marked honestly: the R-net bus uses fault-tolerant CAN transceivers (a transceiver is the chip that speaks onto the wires). Which adapter transceivers are fully compatible with that bus must be confirmed on the bench before anything is connected to a live chair &mdash; the project&rsquo;s own first bench session is pending hardware, and its results will be recorded here from the real session. Terminal output is never written in advance on this site.</em></p>
   </section>
 
   <section>
     <h2>Procedure B1 &mdash; See what is plugged in</h2>
     <ol>
       <li>Plug the isolated adapter into the computer. Nothing is connected to the chair yet.</li>
-      <li>Ask the computer what it sees. The first command lists every USB device; the second asks whether the CAN interface exists yet:</li>
+      <li>Ask the computer what it sees. You type commands into a <strong>terminal</strong> &mdash; a plain window that takes typed instructions and prints text answers. In the boxes on this page, lines starting with <strong>$</strong> are lines you type exactly as shown (the $ itself is the computer&rsquo;s prompt &mdash; do not type it), and you press Enter after each line. The first command lists every USB device; the second asks whether the CAN interface exists yet:</li>
     </ol>
-    <pre><code>lsusb -v | grep -E "idVendor|idProduct|iManufacturer|iProduct"
-ip -details link show can0</code></pre>
+    <pre class="term"><code><span class="p">$</span> lsusb -v | grep -E "idVendor|idProduct|iManufacturer|iProduct"
+<span class="p">$</span> ip -details link show can0</code></pre>
     <p><strong>How you know it worked:</strong> the USB list shows the adapter as a named device, and the second command prints details for <code>can0</code> instead of an error.</p>
   </section>
 
@@ -195,14 +197,31 @@ ip -details link show can0</code></pre>
       <li>Connect the adapter to the chair&rsquo;s bus cable &mdash; isolated adapter only, battery line never bridged to a data line.</li>
       <li>Set the interface to the bus speed, listen-only, and bring it up. Every device on a CAN bus must agree on the speed or nothing can be read; we measured this bus at <strong>125000</strong> (125 kbps) on the bench:</li>
     </ol>
-    <pre><code>sudo ip link set can0 down
-sudo ip link set can0 type can bitrate 125000 listen-only on
-sudo ip link set can0 up</code></pre>
+    <pre class="term"><code><span class="p">$</span> sudo ip link set can0 down
+<span class="p">$</span> sudo ip link set can0 type can bitrate 125000 listen-only on
+<span class="p">$</span> sudo ip link set can0 up</code></pre>
     <ol start="3">
       <li>Record the traffic while you trigger a fault you already understand &mdash; flip a freewheel lever, or unplug the charger (see <a href="/pmd-fixes.html">the cheap fixes</a>). The log then contains a fault you can recognize, timestamped, next to the traffic that carried it:</li>
     </ol>
-    <pre><code>candump -tz -l can0</code></pre>
+    <pre class="term"><code><span class="p">$</span> candump -tz -l can0</code></pre>
     <p><strong>How you know it worked:</strong> the log fills with timestamped frames, including new traffic at the moment you triggered the fault &mdash; and the chair behaves completely normally the whole time, because the computer only listened.</p>
+  </section>
+
+  <section>
+    <h2>Your phone: what it can and cannot do</h2>
+    <p>Your phone is a documentation tool in this work &mdash; a camera, a light, and a notebook. It is not a bus tool. Here is the honest split, phone by phone, with every step spelled out.</p>
+    <h3>Both phones</h3>
+    <ul>
+      <li><strong>Photograph the fault before you touch anything.</strong> Open the Camera app, point it at the joystick screen or the flashing lights, tap the screen once to focus, and take the photo. On R-net chairs, photograph the screen showing the code. On VR2 and LiNX chairs, take a short video instead &mdash; a 10-second clip captures the flash count exactly, and you can count it as many times as you need.</li>
+      <li><strong>Use the flashlight to inspect.</strong> The charger-socket cleaning (<a href="/pmd-fixes.html">Procedure 2</a>) and the connector inspection (Procedure 4) both start with looking closely. iPhone: swipe down from the top of the screen to open Control Center, then tap the flashlight icon. Samsung: swipe down from the top to open Quick Settings, then tap the flashlight tile. Swipe or press Home to leave it on while you work.</li>
+      <li><strong>Photograph wiring before you disconnect it.</strong> Procedure 3 (batteries) depends on this: the photo is what you rewire from. Take it before the first bolt moves.</li>
+      <li><strong>Keep the record on the phone.</strong> The photos, the codes you wrote down, and a copy of your chair&rsquo;s backup file belong together. iPhone: the Files app. Samsung: the My Files app. Name the folder with your chair&rsquo;s model and the date.</li>
+      <li><strong>LiNX chairs: the manufacturer&rsquo;s app does not open the lock either.</strong> Dynamic Controls publishes a free app, <strong>LiNX Access</strong> (App Store for iPhone, Google Play for Samsung). Without the dealer&rsquo;s <strong>Access Key</strong> &mdash; a small Bluetooth key the dealer plugs in &mdash; the app cannot show you the detailed fault log or the settings. The lock reaches the phone too. That is the point of this whole section of the site.</li>
+    </ul>
+    <h3>iPhone: what it cannot do</h3>
+    <p>An iPhone cannot listen to the bus. There is no way to connect the CAN adapter to it that iOS will allow an app to use &mdash; this is a limit of the phone&rsquo;s system, not a missing app. Reading the bus takes the computer.</p>
+    <h3>Samsung (Android): what it cannot do</h3>
+    <p>Android has a free terminal app called <strong>Termux</strong> that gives you the same kind of type-a-command window as the computer. But on a normal, unmodified Samsung phone, plugging the adapter in does not create the <strong>can0</strong> interface &mdash; the phone&rsquo;s system does not ship with that support turned on, and no app can add it. Any guide that tells you otherwise is skipping the part where it does not work. The phone documents; the computer listens.</p>
   </section>
 
   <section>
