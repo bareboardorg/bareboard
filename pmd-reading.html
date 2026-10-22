@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading the Chair: The Bench Method &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="How to read your own power wheelchair&rsquo;s control bus safely: an isolated CAN adapter, listen-only mode, and how the configuration protocol was decoded from captured sessions. Educational, step by step.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Reading the Chair: The Bench Method">
+<meta property="og:description" content="The method behind the findings &mdash; and how an owner listens to their own chair without transmitting a single bit.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-reading.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Reading the Chair: The Bench Method</h1>
+    <p class="lede">Everything in this section was learned by listening. This page teaches the listening: how the parts of a power chair talk to each other on its control bus, how to hear that traffic with an ordinary computer, and how the chair&rsquo;s configuration protocol was decoded from captured dealer-tool sessions. Education, step by step &mdash; the same way every finding on this site is made.</p>
+    <p><strong>The rule of the bench: listen first, transmit never.</strong> Every procedure on this page is read-only. The computer sends nothing onto the chair&rsquo;s bus &mdash; not even the tiny acknowledgement bits a CAN device normally sends. The chair never knows you are there.</p>
+  </section>
+
+  <section>
+    <h2>The safety fact, first</h2>
+    <p>The chair&rsquo;s 4-pin bus cable carries <strong>unregulated 24-volt battery power on the same connector as the data wires</strong>. That is the one way this work can hurt your equipment: bridge the battery line into a data line, or plug in a non-isolated adapter, and a wiring fault can travel straight up the USB cable into your computer.</p>
+    <p>So: only ever connect through a <strong>galvanically isolated</strong> USB-to-CAN adapter (isolation rated 2500V or better) &mdash; an adapter with a built-in electrical barrier between the chair side and the computer side &mdash; and only in listen-only mode. No exceptions, including &ldquo;just for a second.&rdquo;</p>
+  </section>
+
+  <section>
+    <h2>What you need</h2>
+    <ul>
+      <li><strong>A computer running Linux.</strong> Linux has CAN support built in (called SocketCAN) &mdash; the adapter appears as a network-style interface named <code>can0</code>.</li>
+      <li><strong>An isolated USB-to-CAN adapter</strong> (the gs_usb / CANable class of device), for the reason above.</li>
+      <li><strong>Your own chair, and time.</strong> Nothing here is done to anyone else&rsquo;s chair, and nothing here changes yours.</li>
+    </ul>
+    <p><em>Open question, marked honestly: the R-net bus uses fault-tolerant CAN transceivers. Which adapter transceivers are fully compatible with that bus must be confirmed on the bench before anything is connected to a live chair &mdash; the project&rsquo;s own first bench session is pending hardware, and its results will be recorded here from the real session. Terminal output is never written in advance on this site.</em></p>
+  </section>
+
+  <section>
+    <h2>Procedure B1 &mdash; See what is plugged in</h2>
+    <ol>
+      <li>Plug the isolated adapter into the computer. Nothing is connected to the chair yet.</li>
+      <li>Ask the computer what it sees. The first command lists every USB device; the second asks whether the CAN interface exists yet:</li>
+    </ol>
+    <pre><code>lsusb -v | grep -E "idVendor|idProduct|iManufacturer|iProduct"
+ip -details link show can0</code></pre>
+    <p><strong>How you know it worked:</strong> the USB list shows the adapter as a named device, and the second command prints details for <code>can0</code> instead of an error.</p>
+  </section>
+
+  <section>
+    <h2>Procedure B2 &mdash; Listen without saying anything</h2>
+    <ol>
+      <li>Connect the adapter to the chair&rsquo;s bus cable &mdash; isolated adapter only, battery line never bridged to a data line.</li>
+      <li>Set the interface to the bus speed, listen-only, and bring it up. Every device on a CAN bus must agree on the speed or nothing can be read; we measured this bus at <strong>125000</strong> (125 kbps) on the bench:</li>
+    </ol>
+    <pre><code>sudo ip link set can0 down
+sudo ip link set can0 type can bitrate 125000 listen-only on
+sudo ip link set can0 up</code></pre>
+    <ol start="3">
+      <li>Record the traffic while you trigger a fault you already understand &mdash; flip a freewheel lever, or unplug the charger (see <a href="/pmd-fixes.html">the cheap fixes</a>). The log then contains a fault you can recognize, timestamped, next to the traffic that carried it:</li>
+    </ol>
+    <pre><code>candump -tz -l can0</code></pre>
+    <p><strong>How you know it worked:</strong> the log fills with timestamped frames, including new traffic at the moment you triggered the fault &mdash; and the chair behaves completely normally the whole time, because the computer only listened.</p>
+  </section>
+
+  <section>
+    <h2>What the traffic taught us</h2>
+    <p>This is how the findings on the PMD page were made. Dealer programming sessions were captured on the bus and decoded offline. The chair&rsquo;s configuration moves as <strong>data objects</strong>, each protected by a <strong>checksum</strong> &mdash; a number that proves the data arrived unchanged. Sixteen configuration objects were read straight off the bus in those captures. Decoding the read path showed there is no encryption and no cryptographic authentication on the bus: the barrier is that the manufacturer&rsquo;s software will not open its dealer settings unless its own dongle is plugged in &mdash; and the dongle itself is a plain FTDI FT232 USB-to-serial bridge, an ordinary adapter chip.</p>
+    <p><strong>What this page does not teach, because it is not proven:</strong> writing a configuration back. The shortcut the community assumes &mdash; that a configuration file&rsquo;s layout maps directly onto live bus addresses &mdash; is contradicted by the project&rsquo;s own captures. A restore procedure will be published here when it has been proven on a live power module on the bench, and not before. That is this site&rsquo;s standard, and it is not negotiable: <a href="/pmd.html#honest-limits">proven today is read, backup, and understanding</a>.</p>
+    <p><a href="/pmd.html">&larr; Back to PMD</a> &middot; <a href="/pmd-fault-codes.html">Fault codes &rarr;</a></p>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+</body>
+</html>

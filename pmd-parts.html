@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parts, Not Assemblies &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="The real parts inside power wheelchairs, identified: caster bearings, battery groups, the telematics board and Bluetooth module from FCC photos, and the warranty clock vs. the Medicare clock.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Parts, Not Assemblies">
+<meta property="og:description" content="Under every assembly is a part with a name and a price. This page names them.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-parts.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Parts, Not Assemblies</h1>
+    <p class="lede">Dealers sell assemblies: the whole wheel, the whole module, the whole unit. Underneath every assembly is a part &mdash; a standard, buyable, nameable part. This page names them.</p>
+    <p>A $6 inner tube became a $300 charge to Medicaid to replace both wheels, with a six-to-eight-week wait. The tube was the part. The wheels were the assembly. That gap is the business model.</p>
+  </section>
+
+  <section>
+    <h2>Inside the telematics box</h2>
+    <figure>
+      <img src="/img/pmd-connectme-board.jpg" alt="The circuit board inside a Permobil ConnectMe telematics unit, shield removed" loading="lazy">
+      <figcaption><strong>Fig. 1.</strong> The board inside a <strong>ConnectMe</strong> telematics unit (Permobil) &mdash; the box that reports a chair&rsquo;s data back to the dealer cloud. Nothing exotic: a standard Sierra Wireless cellular module does the talking, on an ordinary circuit board (marked ETRON 843000-01). Photo from the manufacturer&rsquo;s own FCC internal-photos exhibit, FCC ID 2AKPO331495.</figcaption>
+    </figure>
+    <figure>
+      <img src="/img/pmd-btm805-chip.jpg" alt="Close view of the main chip on an FLC-BTM805 Bluetooth module" loading="lazy">
+      <figcaption><strong>Fig. 2.</strong> The <strong>FLC-BTM805 Bluetooth module</strong>, from its FCC test-report photos (FCC ID P4IBTM805). The large chip is a CSR Bluetooth radio &mdash; the same family of radio sold for a few dollars as a component. The wireless inside chair electronics is standard parts, all the way down.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>The parts that actually wear out</h2>
+    <ul>
+      <li><strong>Caster bearings &mdash; 608RS or 6001RS sealed bearings, about $3&ndash;$8 each.</strong> Standard industrial bearings, sold everywhere bearings are sold. The size is printed on the old bearing&rsquo;s seal. Replacing them is <a href="/pmd-fixes.html">Procedure 5</a>.</li>
+      <li><strong>Batteries &mdash; sold in matched pairs, by group size.</strong> U1, 22NF, Group 34, Group 24. The chair does not care about the dealer&rsquo;s brand; it cares about size, voltage, and a pair that matches. Testing them is <a href="/pmd-fixes.html">Procedure 3</a>.</li>
+      <li><strong>Inner tubes and tires</strong> &mdash; sized like bicycle parts, because they are bicycle-class parts. A flat is a tube, not two wheels.</li>
+      <li><strong>Contact cleaner</strong> &mdash; one can covers the charger socket and every bus connector on the chair (<a href="/pmd-fixes.html">Procedures 2 and 4</a>).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>The warranty clock vs. the repair clock</h2>
+    <p>Manufacturers warranty the electronics for a year or two. Medicare will not replace the chair for five. <em>(Table compiled from each maker&rsquo;s own published warranty insert.)</em> The electronics&rsquo; real-world median life &mdash; 32.2 months, from 1,268 chairs in the Wheelchair Repair Registry (Kim et al., 2025) &mdash; lands in the gap. Knowing which clock covers your failed part is the difference between a warranty repair and a bill.</p>
+<table>
+<thead><tr><th>Maker</th><th>Frame</th><th>Electronics</th><th>Motors / actuators</th><th>Batteries</th></tr></thead>
+<tbody>
+<tr><td>Medicare&rsquo;s clock (for comparison)</td><td>&mdash;</td><td>Electronics die at a 32.2-month median</td><td>&mdash;</td><td>Chair replacement locked for 5 years</td></tr>
+<tr><td>Permobil (Corpus line)</td><td>5-year frame</td><td>1&ndash;2 years</td><td>Motors 2&ndash;3 years</td><td>Batteries 12 months</td></tr>
+<tr><td>Quantum Rehab / Pride</td><td>Lifetime limited (frame)</td><td>1 year (harnesses 6 months)</td><td>6&ndash;12 months</td><td>Batteries 12 months</td></tr>
+<tr><td>Sunrise Medical (Quickie)</td><td>5-year frame</td><td>1 year, all electronics</td><td>1 year</td><td>Batteries 6&ndash;12 months</td></tr>
+<tr><td>Invacare</td><td>5-year frame (seat frame 3)</td><td>1&ndash;2 years</td><td>1&ndash;2 years</td><td>Batteries 6&ndash;12 months</td></tr>
+</tbody>
+</table>
+    <p>Full warranty terms are in each maker&rsquo;s own published warranty insert &mdash; ask for it by name, and keep yours.</p>
+    <p><a href="/pmd.html">&larr; Back to PMD</a> &middot; <a href="/pmd-settings.html">The settings &rarr;</a></p>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+</body>
+</html>

@@ -139,10 +139,11 @@
                 <ul class="finder-col">
                 <li class="finder-col-head">PMD</li>
                 <li><a href="/pmd.html">Power Mobility Devices</a></li>
-                <li><a href="/pmd.html#the-lock">The Dealer Lock</a></li>
-                <li><a href="/pmd.html#the-numbers">The Numbers</a></li>
-                <li><a href="/pmd.html#what-we-publish">What We Publish</a></li>
-                <li><a href="/pmd.html#findings">Our Findings</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
                 <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
                 <li><a href="/pmd.html#the-law">The Law</a></li>
                 </ul>
@@ -156,9 +157,8 @@
 
 <main>
   <section class="hero">
-    <span class="kicker">New section</span>
     <h1>PMD &mdash; Power Mobility Devices</h1>
-    <p class="lede"><strong>PMD</strong> is the official Medicare name for a power wheelchair or a power scooter. This section teaches the people who ride them how to take back their own chairs.</p>
+    <p class="lede"><strong>PMD</strong> is the official Medicare name for a power wheelchair or a power scooter. This section teaches you how to take back your own chair.</p>
     <p>Your chair&rsquo;s settings, its fault logs, and a backup of the fit that took your clinician years to build all sit behind a programming tool that only dealers may buy &mdash; at any price. The industry&rsquo;s power is that it holds the knowledge. We publish it, in plain language, free.</p>
     <p><strong>Your legs shouldn&rsquo;t need a dealer&rsquo;s permission.</strong></p>
   </section>
@@ -189,25 +189,26 @@
   <section id="what-we-publish">
     <h2>What we publish</h2>
     <ol>
-      <li><strong>Fault codes, translated.</strong> Every code the chair already displays, in owner English: what it means, what to check first, and in what order.</li>
-      <li><strong>The settings, in owner English.</strong> Every dealer-menu setting rewritten for the person who rides the chair &mdash; what it changes, what symptom it fixes, the safe ranges. The few genuinely dangerous ones are flagged, not hidden: for example, seating actuator acceleration/deceleration must stay at 100% on current-sensing endstops, or the actuator destroys itself. The dealer&rsquo;s safety argument is real for a handful of settings. The lock covers all of them &mdash; including just reading and backing up your own, which can hurt no one.</li>
-      <li><strong>The cheap fixes.</strong> Step-by-step repairs for the failures that strand people: freewheel/brake reset, charger-inhibit pin cleaning, battery-pair load testing, bus-cable contact restoration, caster bearing replacement.</li>
-      <li><strong>Parts, not assemblies.</strong> Every part identified and published &mdash; what it is, what it does, where to get it &mdash; so you buy the $6 tube, not the $300 assembly.</li>
+      <li><strong><a href="/pmd-fault-codes.html">Fault codes, translated</a>.</strong> Every code the chair already displays, in plain language: what it means, what to check first, and in what order.</li>
+      <li><strong><a href="/pmd-settings.html">The settings, in plain language</a>.</strong> Every dealer-menu setting rewritten for the person who rides the chair &mdash; what it changes, what symptom it fixes, the safe ranges. The few genuinely dangerous ones are flagged, not hidden: for example, seating actuator acceleration/deceleration must stay at 100% on current-sensing endstops, or the actuator destroys itself. The dealer&rsquo;s safety argument is real for a handful of settings. The lock covers all of them &mdash; including just reading and backing up your own.</li>
+      <li><strong><a href="/pmd-fixes.html">The cheap fixes</a>.</strong> Step-by-step repairs for the failures that strand people: freewheel/brake reset, charger-inhibit pin cleaning, battery-pair load testing, bus-cable contact restoration, caster bearing replacement.</li>
+      <li><strong><a href="/pmd-parts.html">Parts, not assemblies</a>.</strong> Every part identified and published &mdash; what it is, what it does, where to get it &mdash; so you buy the $6 tube, not the $300 assembly.</li>
     </ol>
   </section>
 
   <section id="findings">
     <h2>Why the lock can be beaten &mdash; our findings</h2>
     <ul>
-      <li><strong>There is no cryptography to break.</strong> The chair&rsquo;s bus is standard CAN &mdash; we measured it at 125 kbps on the bench &mdash; with no encryption and no cryptographic authentication. The lock was never a cipher. It is a tool they won&rsquo;t sell you.</li>
+      <li><strong>There is no cryptography to break.</strong> The chair&rsquo;s bus &mdash; the cable network its parts use to talk to each other &mdash; is standard CAN &mdash; we measured it at 125 kbps on the bench &mdash; with no encryption and no cryptographic authentication. The lock was never a cipher. It is a tool they won&rsquo;t sell you.</li>
       <li><strong>The &ldquo;security dongle&rdquo; is a plain FTDI FT232 USB-to-serial bridge</strong> &mdash; an ordinary adapter chip. The gate is dealer software and access tiers: commercial, not technical.</li>
-      <li><strong>We decoded the configuration protocol.</strong> A chair&rsquo;s full configuration moves as objects keyed by 32-bit pointers, CRC-verified. We read 16 configuration objects straight off the bus in captured dealer-tool sessions. Reading and backing up your own settings needs no dealer tool.</li>
+      <li><strong>We decoded the configuration protocol.</strong> A chair&rsquo;s full configuration moves as data objects, each with a checksum (a number that proves the data arrived unchanged). We read 16 configuration objects straight off the bus in captured dealer-tool sessions. Reading and backing up your own settings needs no dealer tool.</li>
     </ul>
+    <p>How these findings were made &mdash; and how to listen to your own chair the same way &mdash; is published as a bench procedure: <a href="/pmd-reading.html">Reading the Chair</a>.</p>
   </section>
 
   <section id="the-tool">
     <h2>The owner tool</h2>
-    <p>A physical adapter you assemble from under $25 in parts. It plugs into your chair&rsquo;s own control bus and connects it to this website. On connect &mdash; before anything changes &mdash; it silently backs up your chair&rsquo;s configuration. Then it reads your fault codes and walks you through the repair for your model, step by step.</p>
+    <p>A physical adapter you assemble from under $25 in parts. It plugs into your chair&rsquo;s own control bus and connects it to this website. On connect, the first thing it does is back up your chair&rsquo;s configuration, and it shows you the backup. Then it reads your fault codes and walks you through the repair for your model, step by step. Read and backup are what is proven today &mdash; see Honest Limits below. Nothing is written to your chair.</p>
     <p>The adapter is deliberately dumb hardware. Everything intelligent lives here on the website, so the adapter never needs updating when a new model is supported.</p>
   </section>
 
@@ -215,7 +216,7 @@
     <h2>Honest limits</h2>
     <ul>
       <li><strong>Proven today: read, backup, and understanding.</strong> The write/restore path is <strong>not proven</strong>. The shortcut the community assumes &mdash; that configuration-file byte offsets equal live bus addresses &mdash; is one our own captures contradict, so we do not ship a restore claim. It settles only with a live power module on the bench.</li>
-      <li>The roughly-$10 figure covers the lockout-and-maintenance class of failures. Battery pairs, motors, and power modules are real money.</li>
+      <li>The cheap fixes on this site run on a few dollars in parts &mdash; the $10 class of failures: lockouts, dirty contacts, worn bearings. Battery pairs, motors, and power modules are real money.</li>
       <li>Education does not fix Medicare&rsquo;s replacement clock or suppliers&rsquo; repair economics. Those are policy fights. Ours works without permission: the knowledge stops being theirs alone.</li>
     </ul>
   </section>

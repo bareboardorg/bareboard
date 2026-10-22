@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Cheap Fixes &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="Five power wheelchair repairs an owner can do today with no dealer tool: freewheel brake reset, charger inhibit pin cleaning, battery load test, bus cable contacts, caster bearings.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="The Cheap Fixes">
+<meta property="og:description" content="The failures that strand people, fixed in minutes for a few dollars.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-fixes.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>The Cheap Fixes</h1>
+    <p class="lede">Five repairs that strand more power chairs than any broken part &mdash; and every one of them is yours to do today, with no dealer tool and no computer. Chair off, wheels blocked, steps in order.</p>
+    <p>Words in <strong>bold</strong> are defined where they first appear. Every procedure ends with how you know it worked.</p>
+    <p><em>Provenance: these procedures are compiled from the manufacturers&rsquo; published service documentation. The project&rsquo;s bench phase will run each one on real hardware and mark it here. Until a procedure carries that mark: if a step disagrees with your chair, your chair wins &mdash; stop, and write down what you found.</em></p>
+  </section>
+
+  <section>
+    <h2>Procedure 1 &mdash; Freewheel lever &amp; brake switch reset</h2>
+    <p><strong>Fixes:</strong> VR2 9 bars &middot; R-net codes 1505/1506 &middot; LiNX 5 or 6 flashes.<br><strong>You need:</strong> A small brush or rag. Nothing else.</p>
+    <p>The <strong>freewheel lever</strong> is a small lever on each drive motor. In DRIVE, the chair drives normally. In PUSH (freewheel), the motor is released so someone can push the chair by hand. The <strong>solenoid brake</strong> is an electric brake inside each motor that holds the chair still when power is off, and a small switch in the lever reports which position it is in.</p>
+    <ol><li>Turn the chair OFF at the joystick. Block the drive wheels so the chair cannot roll. Find the freewheel lever on each drive motor &mdash; one per motor; check both.</li><li>Brush or wipe the dirt, road salt, and grit away from the base of each lever, where it pivots. Packed dirt can stop the lever traveling all the way &mdash; and a lever that stops halfway causes this fault.</li><li>Push each lever firmly all the way to DRIVE. You should feel or hear a small click as it seats. A lever left in PUSH &mdash; or stuck halfway &mdash; opens the brake switch on purpose, and the controller reads that as a brake fault and refuses to drive.</li><li>Behind each motor is a small plug with two wires. Push it in with your fingers until it is fully seated. A loose plug causes the same fault as a lever left in freewheel.</li><li><strong>Prove the brakes hold before you ride.</strong> Turn the chair ON, then OFF, and try to push it by hand &mdash; it must not roll. Then drive at low speed in an open area and confirm it stops and holds. You cleared a brake fault; do not trust it until the brakes have proven themselves.</li></ol>
+    <p><strong>How you know it worked:</strong> Turn the chair back ON. The brake fault is gone and the chair drives when you push the joystick.</p>
+  </section>
+  <section>
+    <h2>Procedure 2 &mdash; Charger socket &amp; inhibit pin cleaning</h2>
+    <p><strong>Fixes:</strong> VR2 6 bars &mdash; the chair acts as if the charger is plugged in when it is not.<br><strong>You need:</strong> A flashlight, a can of electrical contact cleaner, and a small <strong>non-metal</strong> flat tool (a plastic spudger) for the last step.</p>
+    <p>The <strong>charger socket</strong> is a round socket with three pins (a 3-pin XLR socket &mdash; the same connector family as a stage microphone). Pin 3 is the <strong>inhibit pin</strong>: while the charger is plugged in, it tells the chair &ldquo;do not drive,&rdquo; so you cannot drive off plugged into the wall. Dirt, moisture, or a bent contact can fake that signal permanently.</p>
+    <ol><li><strong>Make it safe first.</strong> Turn the chair OFF <strong>and disconnect the battery</strong> &mdash; unplug the main battery harness or trip the main circuit breaker. The socket&rsquo;s pins carry battery voltage (Pin 1 is +24V) even with the chair switched off, and they sit millimetres apart: a metal tool bridging them is a direct short. Nothing goes into the socket until the battery is disconnected. Then unplug the charger and find the 3-pin socket &mdash; usually on the front of the joystick unit or on the power base.</li><li>Shine the flashlight into the socket. Look for dirt, grit, moisture, or a bent piece of metal around Pin 3.</li><li>Spray a short burst of electrical contact cleaner into the socket. It washes out grit and moisture, then evaporates. Let it dry a minute before testing.</li><li>If you saw a bent contact, ease it gently back into line with the non-metal tool (battery still disconnected). It only needs to line up with the plug pin again &mdash; bending it too far or too often can snap it.</li></ol>
+    <p><strong>How you know it worked:</strong> With the charger unplugged, turn the chair ON: the inhibit fault is gone and the chair drives. It still refuses to drive with the charger plugged in &mdash; that is the safety feature working as designed.</p>
+  </section>
+  <section>
+    <h2>Procedure 3 &mdash; Battery pair load test &amp; matched replacement</h2>
+    <p><strong>Fixes:</strong> VR2 1 bar &middot; R-net code 2C00 &middot; LiNX 2 flashes.<br><strong>You need:</strong> A digital multimeter, a 100A battery load tester, and a wrench that fits your terminal bolts (M6 or M8). If a battery fails: a new matched pair in the same group size.</p>
+    <p>Your chair runs on <strong>two 12V deep-cycle batteries wired in series</strong> (one after the other, so they add up to 24V). They are sealed VRLA batteries &mdash; AGM or Gel &mdash; in common group sizes: U1 (34&ndash;35 Ah), 22NF (55 Ah), Group 34 (60&ndash;65 Ah), Group 24 (75&ndash;85 Ah). A <strong>load tester</strong> pulls heavy current for a few seconds so you can watch whether the voltage holds up under real work. A worn-out (<strong>sulfated</strong>) battery can look fine at rest and still collapse under load.</p>
+    <ol><li>Turn the chair OFF. Disconnect the main battery harness, or trip the main circuit breaker if your chair has one. Block the drive wheels. Open the battery compartment so you can reach both batteries and their terminals. <strong>Before you disconnect anything else, take a photo of the wiring</strong> &mdash; which cable lands on which terminal. You will rewire from the photo, not from memory.</li><li>Resting check, one battery at a time: multimeter on DC volts, one probe on each terminal, write the number down. A healthy, charged battery reads <strong>12.7V or more</strong>, and the two should be within <strong>0.1V of each other</strong>. Resting voltage alone can lie &mdash; do Step 3 before condemning either battery.</li><li><strong>Separate the pair first:</strong> disconnect the cable that joins the two batteries, so each battery stands completely alone. Then load-test each battery, following the tester&rsquo;s own instructions. Clamp firmly onto clean posts before you start the test &mdash; a loose clamp can spark, and a battery that has failed internally deserves respect: no sparks near battery terminals. Watch the voltage while it pulls. A battery that reads 12.6&ndash;12.8V idle and then <strong>plummets below 9.0V under load</strong> has failed &mdash; and that collapse is exactly what triggers the chair&rsquo;s sudden low-voltage cutout on a threshold or curb cut.</li><li>If either battery failed, replace <strong>both</strong> with a new matched pair of the same group size &mdash; never just one; an old battery drags a new one down. Before bolting the cables back on, clean the cable ends until the metal is bright.</li><li>Wire the new pair in series exactly as the old pair was wired, and tighten every terminal bolt securely &mdash; never finger-tight. Loose terminals cause over-voltage spikes and can melt the harness. Keep the inline fuse that was in the main cable.</li></ol>
+    <p><strong>How you know it worked:</strong> Both batteries read 12.7V or more at rest, match within 0.1V, and hold under the load tester. The low-battery faults stop, and the chair climbs a threshold without cutting out.</p>
+  </section>
+  <section>
+    <h2>Procedure 4 &mdash; Bus cable inspection &amp; contact restoration</h2>
+    <p><strong>Fixes:</strong> VR2 7 bars + S light &middot; R-net communication trips &middot; LiNX 1 or 2 flashes.<br><strong>You need:</strong> Electrical contact cleaner/restorer (the source procedure specifies DeoxIT D5) and spiral cable wrap for Step 5.</p>
+    <p>The <strong>bus cable</strong> is the round 4-pin cable running from the joystick on your armrest down to the power module in the base. It carries your driving instructions to the motors. Every time the armrest flips up or the seat tilts, this cable bends &mdash; thousands of bends over the chair&rsquo;s life &mdash; and its connectors are where it fails first.</p>
+    <ol><li><strong>Power down first.</strong> Turn the chair OFF and disconnect the battery harness or trip the main breaker. This cable carries battery voltage alongside its data wires &mdash; you do not unplug or clean it live. Then trace the cable from the back of the joystick down to the power base. There is a round connector at each end. Inspect both ends, one at a time.</li><li>Grip the connector by its <strong>collar</strong> (the hard outer body) and pull it straight out. Never pull by the wire &mdash; that tears the conductors inside where you cannot see the damage.</li><li>Look at the pins inside. Look for <strong>green oxidation</strong> (green crusty corrosion) and for any pin sitting <strong>pushed back</strong> lower than the others. Either one breaks the connection and shows up as a communication fault.</li><li>Put <strong>one tiny drop</strong> of contact restorer on the pins. A drop is enough &mdash; this restores the contact surface; it is not a wash.</li><li>Push the connector back in until the locking ring clicks. Repeat the inspection at the other end. Then wrap the cable in spiral wrap where it crosses a hinge, and leave a loose <strong>slack loop</strong> at every hinge, so the cable is never pulled tight when the seat moves. That is what stops the fault coming back.</li></ol>
+    <p><strong>How you know it worked:</strong> The communication faults are gone and the chair answers the joystick normally in every direction.</p>
+  </section>
+  <section>
+    <h2>Procedure 5 &mdash; Caster bearing replacement</h2>
+    <p><strong>Fixes:</strong> Mechanical drag &mdash; seized caster bearings that overheat the power module and kill batteries early.<br><strong>You need:</strong> Two sockets and a bench vise, and new sealed bearings in the size printed on the old ones.</p>
+    <p><strong>Casters</strong> are the small swivel wheels at the front (and sometimes the rear). Each spins on a <strong>bearing</strong> &mdash; a steel ring of small balls that lets it turn almost without friction. Chair casters use <strong>sealed bearings</strong> in size <strong>608RS</strong> or <strong>6001RS</strong> &mdash; standard industrial bearings, sold everywhere for about <strong>$3&ndash;$8 each</strong>. Hair and carpet fiber wind around the axle and destroy them; a seized bearing makes the motors pull far more current in every turn. Chair makers warranty these bearings for only 6 months.</p>
+    <ol><li><strong>Set up safely.</strong> Chair OFF, on a level surface. The chair stays resting on its drive wheels while a caster comes off. If you need to lift a corner to free the wheel, lift only enough, and block the frame solidly on a stand or blocks &mdash; never work on a chair held up by a jack alone, and never put any part of yourself under an unsupported chair. Then take the caster wheel off its fork so you can work at a bench. Pull off all the hair and carpet fiber wound around the axle &mdash; that fiber is what works into the bearing and wrecks it.</li><li>Put the wheel in the vise between two sockets: one supports the hub around the bearing, the other pushes on the bearing itself. Close the vise slowly; the bearing presses out. <strong>Read the size printed on the old bearing&rsquo;s seal</strong> (608RS or 6001RS) before ordering the new one.</li><li>Set the new bearing in place. Arrange the sockets so the vise pushes only on the bearing&rsquo;s <strong>outer ring</strong>, and close slowly until it sits fully seated, level with where the old one sat.</li><li>Bolt the caster back into its fork the way it came off. Spin it by hand before you sit in the chair.</li></ol>
+    <p><strong>How you know it worked:</strong> The caster spins freely and quietly &mdash; no grinding, no roughness, no wobble &mdash; and the chair turns without the motors straining.</p>
+  </section>
+  <section>
+    <p><a href="/pmd.html">&larr; Back to PMD</a> &middot; <a href="/pmd-fault-codes.html">Fault codes &rarr;</a></p>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+</body>
+</html>

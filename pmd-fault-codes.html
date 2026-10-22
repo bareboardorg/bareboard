@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fault Codes, Translated &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="Every power wheelchair fault code in plain language: VR2 flashing bars, R-net screen codes, LiNX red flashes &mdash; what each means and what an owner checks first.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Fault Codes, Translated">
+<meta property="og:description" content="Your chair already tells you what is wrong. This is the list nobody gave you.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-fault-codes.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Fault Codes, Translated</h1>
+    <p class="lede">Your chair already tells you what is wrong. It shows a flashing light or a code on the screen &mdash; and nobody ever gave you the list that explains it. This is the list.</p>
+    <p>Three control systems cover most power chairs. Find yours, read the code the way the chair shows it, and start with the owner checks. Write the code down before you call anyone: a code you can name is a repair you can argue about.</p>
+    <p><em>Provenance: these tables are compiled from the manufacturers&rsquo; own published manuals &mdash; the PG Drives VR2 and R-net technical manuals and the Dynamic Controls LiNX manuals &mdash; and checked line by line against them (R-net Technical Manual SK77981-14; PP1A Programmer Guide SK73747). Codes that could not be confirmed in the manuals are not listed. Documentation, not bench measurement: if your chair disagrees with this page, the chair wins &mdash; write down what yours actually does.</em></p>
+  </section>
+
+  <section id="vr2">
+    <h2>Curtiss-Wright VR2 &amp; VSI &mdash; count the flashing bars</h2>
+    <p>When a VR2 or VSI chair trips, the battery gauge lights flash. Count how many bars are flashing.</p>
+<table>
+<thead><tr><th>Flashing bars</th><th>What it means</th><th>What you check first</th></tr></thead>
+<tbody>
+<tr><td>1 bar</td><td>Low battery voltage</td><td>Charge the batteries overnight. Check the main battery plugs and the circuit breaker/fuse. If it keeps happening, load-test each 12V battery for a dead cell (see <a href="/pmd-fixes.html">Cheap Fixes, Procedure 3</a>).</td></tr>
+<tr><td>2 bars</td><td>Left motor disconnected</td><td>The controller cannot see the left drive motor. Check the heavy motor plug at the power module, look for a pinched or cut cable under the seat, and check the motor brushes.</td></tr>
+<tr><td>3 bars</td><td>Left motor wiring trip (short)</td><td>A left motor wire is shorting to battery power. Inspect the cable where it passes frame hinges. Unplug the left motor: if the fault clears, the short is in the motor or its cable.</td></tr>
+<tr><td>4 bars</td><td>Right motor disconnected</td><td>Same checks as 2 bars, on the right motor: plug, cable, brushes.</td></tr>
+<tr><td>5 bars</td><td>Right motor wiring trip (short)</td><td>Same checks as 3 bars, on the right motor cable.</td></tr>
+<tr><td>6 bars</td><td>Inhibit active (charger connected)</td><td>The chair thinks it must not drive &mdash; usually because the charger is plugged in. <strong>Unplug the charger.</strong> If it is already unplugged, check the charger socket for a bent pin or dirt (Procedure 2), and check for a stuck seating lockout switch.</td></tr>
+<tr><td>7 bars</td><td>Joystick fault at power-up</td><td>Usually your own hand: something was resting on the joystick when you switched on. Switch off, take everything off the stick, let it center, switch on without touching it.</td></tr>
+<tr><td>7 bars + S light</td><td>Bus communication fault</td><td>The joystick and the power module lost contact. Unplug the round bus cable between them, check the pins for corrosion or bends, and plug it firmly back in (Procedure 4).</td></tr>
+<tr><td>8 bars</td><td>Control system / power module trip</td><td>The power module failed its own self-check. Check every heavy power and bus connection, switch off for 30 seconds, and try again. If it persists, the fault is inside the power module.</td></tr>
+<tr><td>8 bars + A light</td><td>Actuator / seating trip</td><td>A fault in a power seating actuator (tilt, recline, elevate, legrest). Inspect the 2-pin actuator plugs; unplug actuators one at a time to find the bad one.</td></tr>
+<tr><td>9 bars</td><td>Parking brake fault</td><td><strong>The most owner-fixable code on this page.</strong> One or both freewheel levers are in the PUSH position, or a brake plug is loose. Flip both levers firmly to DRIVE and power-cycle (Procedure 1).</td></tr>
+<tr><td>10 bars (all flashing)</td><td>High battery voltage</td><td>Too much voltage reached the controller &mdash; a faulty charger, or loose battery terminals spiking on a downhill. Tighten the terminal bolts and check battery health.</td></tr>
+</tbody>
+</table>
+  </section>
+
+  <section id="rnet">
+    <h2>Curtiss-Wright R-net &mdash; read the screen</h2>
+    <p>On R-net chairs with a color screen (CJSM, CJSM2, Omni), a trip shows three things: the module that complained (PM = power module, JSM = joystick module, ISM = seating module), a short text, and a 4-digit code. The code is the exact sub-circuit. Here are the ones an owner can act on.</p>
+<table>
+<thead><tr><th>Code</th><th>Module</th><th>What it means</th><th>What you check first</th></tr></thead>
+<tbody>
+<tr><td>1505 / 1506</td><td>PM</td><td>Parking brake error (left / right brake)</td><td>Check both freewheel levers are in DRIVE; inspect the small 2-pin brake wires at the back of each motor (Procedure 1).</td></tr>
+<tr><td>1D05</td><td>JSM</td><td>Joystick stationary time exceeded</td><td>The joystick was held in one position too long. Power-cycle the chair &mdash; this code clears on restart. If it returns at once, check that the stick springs back freely to center; a binding boot or gaiter can hold it off-center.</td></tr>
+<tr><td>2C00</td><td>PM</td><td>Low battery voltage</td><td>Charge; check the main disconnect plug and terminal bolts for looseness or corrosion.</td></tr>
+<tr><td>2F00</td><td>JSM</td><td>Joystick deflected at power-up</td><td>The stick was pushed during boot. Center it; if it will not clear, power off and on, hands free.</td></tr>
+<tr><td>3B00</td><td>PM</td><td>Left motor disconnected</td><td>Check the left motor plug and brushes.</td></tr>
+<tr><td>3C00</td><td>PM</td><td>Right motor disconnected</td><td>Check the right motor plug and brushes.</td></tr>
+<tr><td>3D00 / 3D01</td><td>PM</td><td>Left motor short circuit</td><td>Short in the left motor cable or winding. Inspect the cable run.</td></tr>
+<tr><td>3E00 / 3E01</td><td>PM</td><td>Right motor short circuit</td><td>Short in the right motor cable or winding. Inspect the cable run.</td></tr>
+<tr><td>4401</td><td>PM</td><td>Internal controller trip</td><td>Power-cycle after 30 seconds off. If it persists, the power module needs replacement.</td></tr>
+<tr><td>Trip text: Over-current</td><td>PM / ISM</td><td>Actuator channel over-current</td><td>Unplug seating actuators one by one to isolate the shorted cable.</td></tr>
+</tbody>
+</table>
+  </section>
+
+  <section id="linx">
+    <h2>Dynamic Controls LiNX &mdash; count the red flashes</h2>
+    <p>On LiNX chairs, the light inside the round on/off button flashes red: a number of flashes, a pause, then it repeats. Count the flashes.</p>
+<table>
+<thead><tr><th>Red flashes</th><th>What it means</th><th>What you check first</th></tr></thead>
+<tbody>
+<tr><td>All speed LEDs ripple</td><td>Out of neutral at power-up</td><td>The joystick was held off-center at switch-on. Let it center &mdash; the fault clears by itself.</td></tr>
+<tr><td>1 flash</td><td>Remote / joystick error</td><td>Check the bus cable into the joystick: unplug, inspect the pins, reconnect.</td></tr>
+<tr><td>2 flashes</td><td>Network or configuration error</td><td>Check every bus plug; charge the batteries (low voltage below cut-off triggers this too). A replacement module fitted without configuration also causes it.</td></tr>
+<tr><td>3 flashes</td><td>Left motor fault</td><td>Open or short circuit on the left motor, its cable, or its connector.</td></tr>
+<tr><td>4 flashes</td><td>Right motor fault</td><td>Open or short circuit on the right motor, its cable, or its connector.</td></tr>
+<tr><td>5 flashes</td><td>Left park brake fault</td><td>Left brake open/short &mdash; or the <strong>left freewheel lever is in push mode</strong>. Flip it to DRIVE; check the 2-pin brake plug.</td></tr>
+<tr><td>6 flashes</td><td>Right park brake fault</td><td>Right brake open/short &mdash; or the <strong>right freewheel lever is in push mode</strong>. Flip it to DRIVE; check the 2-pin brake plug.</td></tr>
+<tr><td>7 flashes</td><td>Module error</td><td>Includes: chair stalled against an obstacle (reverse away, cycle power), or <strong>the chair was pushed while switched off</strong> (cycle power to clear), or a power module fault.</td></tr>
+</tbody>
+</table>
+  </section>
+
+  <section>
+    <h2>Before you call anyone</h2>
+    <p>Read the code. Write it down with the date. Try the owner check in the table &mdash; the most common codes on this page (brake levers, charger inhibit, a loose bus plug, a dying battery) are fixed in minutes with no tools or a $10 meter. If the fault is inside a module, you now know which module, and you can say so.</p>
+    <p><a href="/pmd.html">&larr; Back to PMD</a> &middot; <a href="/pmd-fixes.html">The cheap fixes &rarr;</a></p>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+</body>
+</html>
