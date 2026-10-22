@@ -13,3 +13,5 @@ force GitHub's own crawlers — or any third party — to honor it.
 ## License
 
 Unless a file states otherwise, everything here is MIT-licensed (see LICENSE).
+
+Third-party images and other third-party material identified in captions or file notices are not MIT-licensed; they remain under the licenses stated for them. That includes the CC BY-SA 3.0 Wikimedia Commons images used on the PMD pages.
