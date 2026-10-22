@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PMD &mdash; Power Mobility Devices &mdash; BareBoard</title>
+<meta name="description" content="PMD: BareBoard&rsquo;s power wheelchair section. Fault codes in plain English, dealer settings explained for owners, cheap fixes, and the parts &mdash; so owners take back their own chairs.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="PMD &mdash; Power Mobility Devices">
+<meta property="og:description" content="Your legs shouldn&rsquo;t need a dealer&rsquo;s permission. Fault codes translated, settings explained, cheap fixes, real parts &mdash; free, in plain English.">
+<meta property="og:url" content="https://www.bareboard.org/pmd.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd.html#the-lock">The Dealer Lock</a></li>
+                <li><a href="/pmd.html#the-numbers">The Numbers</a></li>
+                <li><a href="/pmd.html#what-we-publish">What We Publish</a></li>
+                <li><a href="/pmd.html#findings">Our Findings</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <span class="kicker">New section</span>
+    <h1>PMD &mdash; Power Mobility Devices</h1>
+    <p class="lede"><strong>PMD</strong> is the official Medicare name for a power wheelchair or a power scooter. This section teaches the people who ride them how to take back their own chairs.</p>
+    <p>Your chair&rsquo;s settings, its fault logs, and a backup of the fit that took your clinician years to build all sit behind a programming tool that only dealers may buy &mdash; at any price. The industry&rsquo;s power is that it holds the knowledge. We publish it, in plain language, free.</p>
+    <p><strong>Your legs shouldn&rsquo;t need a dealer&rsquo;s permission.</strong></p>
+  </section>
+
+  <section id="the-lock">
+    <h2>The dealer lock</h2>
+    <p>Almost everything that makes your chair <em>yours</em> lives behind that lock:</p>
+    <ul>
+      <li>How fast the chair goes, and how hard it launches and stops.</li>
+      <li>Whether your hand tremor is filtered out &mdash; or fed straight into the motors.</li>
+      <li>Whether the seat still works after a part is swapped.</li>
+      <li>The fault codes your chair already displays on its own screen &mdash; shown to you, explained to no one.</li>
+    </ul>
+    <p>And when a dealer swaps a module, your configuration goes with the old one. The clinical fit built over years reverts to factory defaults, and you were never given a backup. Settings like tremor dampening can vanish silently &mdash; and a chair set up for somebody else&rsquo;s hands can be uncontrollable in yours.</p>
+  </section>
+
+  <section id="the-numbers">
+    <h2>The numbers</h2>
+    <ul>
+      <li><strong>63.8%</strong> of full-time wheelchair users need at least one repair within six months. (Toro 2016, spinal-cord-injury users, manual and power chairs.)</li>
+      <li>The median repair takes <strong>14 days</strong> &mdash; and <strong>14% of users who needed repairs got none of them completed at all</strong>. (Worobey 2025.)</li>
+      <li><strong>62%</strong> of users in U.S. PIRG&rsquo;s &ldquo;Stranded&rdquo; survey estimated their average repair wait at <strong>four weeks or more</strong>; <strong>40%</strong> said seven weeks or more.</li>
+      <li>A <strong>$6 inner tube</strong> became a <strong>$300 charge to Medicaid</strong> to replace both wheels &mdash; with a six-to-eight-week wait. (PIRG Colorado storybank.)</li>
+      <li>A chair&rsquo;s electronics have a <strong>median survival of 32.2 months</strong> (Kim 2025) &mdash; against Medicare&rsquo;s replacement clock, which will not replace a chair inside its five-year reasonable useful lifetime except for loss, theft, or irreparable damage (42 CFR &sect;414.210(f)). The electronics die, on median, with more than two years left on the clock.</li>
+    </ul>
+  </section>
+
+  <section id="what-we-publish">
+    <h2>What we publish</h2>
+    <ol>
+      <li><strong>Fault codes, translated.</strong> Every code the chair already displays, in owner English: what it means, what to check first, and in what order.</li>
+      <li><strong>The settings, in owner English.</strong> Every dealer-menu setting rewritten for the person who rides the chair &mdash; what it changes, what symptom it fixes, the safe ranges. The few genuinely dangerous ones are flagged, not hidden: for example, seating actuator acceleration/deceleration must stay at 100% on current-sensing endstops, or the actuator destroys itself. The dealer&rsquo;s safety argument is real for a handful of settings. The lock covers all of them &mdash; including just reading and backing up your own, which can hurt no one.</li>
+      <li><strong>The cheap fixes.</strong> Step-by-step repairs for the failures that strand people: freewheel/brake reset, charger-inhibit pin cleaning, battery-pair load testing, bus-cable contact restoration, caster bearing replacement.</li>
+      <li><strong>Parts, not assemblies.</strong> Every part identified and published &mdash; what it is, what it does, where to get it &mdash; so you buy the $6 tube, not the $300 assembly.</li>
+    </ol>
+  </section>
+
+  <section id="findings">
+    <h2>Why the lock can be beaten &mdash; our findings</h2>
+    <ul>
+      <li><strong>There is no cryptography to break.</strong> The chair&rsquo;s bus is standard CAN at 125 kbps, with no encryption and no cryptographic authentication. The lock was never a cipher. It is a tool they won&rsquo;t sell you.</li>
+      <li><strong>The &ldquo;security dongle&rdquo; is a plain FTDI FT232 USB-to-serial bridge</strong> &mdash; an ordinary adapter chip. The gate is dealer software and access tiers: commercial, not technical.</li>
+      <li><strong>We decoded the configuration protocol.</strong> A chair&rsquo;s full configuration moves as objects keyed by 32-bit pointers, CRC-verified. We dumped 16 objects off the bus; 14 were byte-identical to the chair&rsquo;s own configuration file. Reading and backing up your own settings needs no dealer tool.</li>
+    </ul>
+  </section>
+
+  <section id="the-tool">
+    <h2>The owner tool</h2>
+    <p>A physical adapter you assemble from under $25 in parts. It plugs into your chair&rsquo;s own control bus and connects it to this website. On connect &mdash; before anything changes &mdash; it silently backs up your chair&rsquo;s configuration. Then it reads your fault codes and walks you through the repair for your model, step by step.</p>
+    <p>The adapter is deliberately dumb hardware. Everything intelligent lives here on the website, so the adapter never needs updating when a new model is supported.</p>
+  </section>
+
+  <section id="honest-limits">
+    <h2>Honest limits</h2>
+    <ul>
+      <li><strong>Proven today: read, backup, and understanding.</strong> The write/restore path is <strong>not proven</strong>. The shortcut the community assumes &mdash; that configuration-file byte offsets equal live bus addresses &mdash; is one our own captures contradict, so we do not ship a restore claim. It settles only with a live power module on the bench.</li>
+      <li>The roughly-$10 figure covers the lockout-and-maintenance class of failures. Battery pairs, motors, and power modules are real money.</li>
+      <li>Education does not fix Medicare&rsquo;s replacement clock or suppliers&rsquo; repair economics. Those are policy fights. Ours works without permission: the knowledge stops being theirs alone.</li>
+    </ul>
+  </section>
+
+  <section id="the-law">
+    <h2>The law</h2>
+    <ul>
+      <li><strong>Colorado got it right.</strong> Its powered-wheelchair right-to-repair law (HB22-1031) expressly requires manufacturers to provide the firmware, the program access, and the tools to reset security functions. The only carve-out is trade secrets. Washington, Oregon, and Nevada followed the same pattern.</li>
+      <li><strong>Texas owners are carved out.</strong> Texas has no wheelchair right-to-repair law &mdash; and its consumer-electronics repair law (HB 2963, effective September 1, 2026) expressly excludes medical devices.</li>
+      <li><strong>The remaining federal gap is the DMCA.</strong> Section 1201&rsquo;s ban on circumvention tools is what still stands between owners and third-party tools, even where state law grants the right to repair.</li>
+    </ul>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+</body>
+</html>
