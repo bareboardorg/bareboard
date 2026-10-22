@@ -199,9 +199,9 @@
   <section id="findings">
     <h2>Why the lock can be beaten &mdash; our findings</h2>
     <ul>
-      <li><strong>There is no cryptography to break.</strong> The chair&rsquo;s bus is standard CAN at 125 kbps, with no encryption and no cryptographic authentication. The lock was never a cipher. It is a tool they won&rsquo;t sell you.</li>
+      <li><strong>There is no cryptography to break.</strong> The chair&rsquo;s bus is standard CAN &mdash; we measured it at 125 kbps on the bench &mdash; with no encryption and no cryptographic authentication. The lock was never a cipher. It is a tool they won&rsquo;t sell you.</li>
       <li><strong>The &ldquo;security dongle&rdquo; is a plain FTDI FT232 USB-to-serial bridge</strong> &mdash; an ordinary adapter chip. The gate is dealer software and access tiers: commercial, not technical.</li>
-      <li><strong>We decoded the configuration protocol.</strong> A chair&rsquo;s full configuration moves as objects keyed by 32-bit pointers, CRC-verified. We dumped 16 objects off the bus; 14 were byte-identical to the chair&rsquo;s own configuration file. Reading and backing up your own settings needs no dealer tool.</li>
+      <li><strong>We decoded the configuration protocol.</strong> A chair&rsquo;s full configuration moves as objects keyed by 32-bit pointers, CRC-verified. We read 16 configuration objects straight off the bus in captured dealer-tool sessions. Reading and backing up your own settings needs no dealer tool.</li>
     </ul>
   </section>
 
