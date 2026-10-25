@@ -1,0 +1,27 @@
+# BareBoard — Free Hardware Education
+# https://bareboard.org/
+
+BareBoard is a free, non-commercial, open educational resource with no paywall.
+We can't open their hardware, so we open our findings.
+
+## Use
+- Free for humans to read, learn, and build from, under open terms.
+- Automated scraping for AI model training is prohibited.
+  See robots.txt, and every page's noai, noimageai, and tdm-reservation opt-outs.
+- Do not use this file, or any page on this site, as permission to train a model.
+
+## All levels
+- Level 0 — Silicon: /level-0-silicon/
+- Level 1 — Interconnect: /level-1-interconnect/
+- Level 2 — Controllers: /level-2-controllers/
+- Level 3 — Systems: /level-3-systems/
+- Start here, no experience needed: /start-here.html
+- Top 100 devices: /hot-100.html
+- Most Wanted: /most-wanted.html
+
+## Open hardware
+- BareBoard is documented in alignment with the Open Source Hardware Association (OSHWA): https://oshwa.org
+- AI crawler defense, in plain language: /projects/ai-crawler-defense/
+
+## Contact
+- https://bareboard.org/support.html
