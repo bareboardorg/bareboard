@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flipper Zero — BareBoard — Free Hardware Education</title>
+<meta name="description" content="Flipper Zero: FCC ID, components, manuals, news, regulatory actions, and how to fix it.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Flipper Zero">
+<meta property="og:description" content="Flipper Zero pocket multi-tool: FCC, components, manuals, and fixes.">
+<meta property="og:url" content="https://bareboard.org/devices/flipper-zero/">
+<meta property="og:image" content="https://bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/devices/">Devices</a></li>
+        <li class="has-children">
+          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/about.html#how-we-work">How we work</a></li>
+                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/notes/">Bench Notes</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                <li><a href="/protocols.html">Protocol RE</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
+                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
+                <li><a href="/hot-100.html">Game Consoles</a></li>
+                <li><a href="/hot-100.html">Media Streamers</a></li>
+                <li><a href="/hot-100.html">Networking Gear</a></li>
+                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
+                <li><a href="/hot-100.html">Other</a></li>
+                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
+                <li><a href="/hot-100.html">Phones</a></li>
+                <li><a href="/hot-100.html">Printers</a></li>
+                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
+                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
+                <li><a href="/hot-100.html">Wearables</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/most-wanted.html#board">The board</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+                <li><a href="/watchmen.html#corrections">Corrections</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+
+  <aside class="legal-notice bb-notice-amber">
+    <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits, regulatory actions, and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you are responsible for complying with the laws where you live. This is not legal advice — it is a workbench.
+  </aside>
+  <h1>Flipper Zero</h1>
+  <p class="lede">A $169 pocket multi-tool for RFID, NFC, sub-GHz, infrared, iButton, Bluetooth, and GPIO — with open firmware and schematics. Use it on your own systems, or with written authorization.</p>
+
+  <section>
+    <h2 id="overview">What it is</h2>
+    <p>A handheld, microcontroller-based multi-tool, not a phone and not a computer. It reads, stores, and replays low-power radio and contactless signals, and it can act as a USB HID device, a serial terminal, and a GPIO tool. Its strength is also its warning: the same tool that shows a weak access system can be misused on a system you do not own. Use it only on your own equipment or with written authorization.</p>
+    <ul>
+      <li><strong>Price, official store:</strong> $169, microSD card not included in the basic pack.</li>
+      <li><strong>Screen:</strong> 128x64, 1.4-inch monochrome LCD, backlit.</li>
+      <li><strong>Battery:</strong> LiPo 2000mAh, USB-C charging.</li>
+      <li><strong>Size / weight:</strong> 100 x 40 x 25 mm, 102g.</li>
+      <li><strong>Official docs:</strong> docs.flipper.net, flipperzero.one, and open firmware on GitHub (flipperdevices).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 id="fcc">FCC filing</h2>
+    <p><strong>FCC ID: 2A2V6-FZ</strong>, IC 27624-FZ, applicant Flipper Devices Inc, model FZ.1. The radio test report is public record, tested under FCC Part 15 Subpart C.</p>
+    <ul>
+      <li><strong>What the filing includes:</strong> external photos, internal photos, test setup photos, RF test reports, and the user manual — public record at fccid.io.</li>
+      <li><strong>What it does not include:</strong> schematics (usually withheld under confidentiality), firmware, bill of materials, or debug documentation. For those, use the official open schematics and firmware below, not the FCC filing.</li>
+    </ul>
+    <p>Source: FCC test report for 2A2V6-FZ, and the Flipper Zero filing summary on fccid.io.</p>
+  </section>
+
+  <section>
+    <h2 id="components">Every major component — with a datasheet link per part</h2>
+    <p>Major ICs are listed here, verified from published specs. A complete passive-component bill of materials (every resistor and capacitor, with values) is not yet transcribed from the official schematic — that list is marked in progress below, not invented.</p>
+    <table>
+      <tr><th>Part</th><th>Role</th><th>Datasheet / source</th></tr>
+      <tr><td>STM32WB55RG</td><td>Main MCU + Bluetooth LE 5.0. ARM Cortex-M4 at 64 MHz + Cortex-M0+ at 32 MHz, 1024KB Flash, 256KB SRAM.</td><td>ST Microelectronics STM32WB55 datasheet — search the manufacturer site for STM32WB55RG.</td></tr>
+      <tr><td>TI CC1101</td><td>Sub-GHz transceiver. 315 / 433 / 868 / 915 MHz.</td><td>Texas Instruments CC1101 datasheet — search the manufacturer site for CC1101.</td></tr>
+      <tr><td>ST25R3916 family</td><td>NFC front end, 13.56 MHz, ISO-14443A/B, MIFARE, FeliCa, NFC Forum protocols.</td><td>ST Microelectronics ST25R3916 datasheet — search the manufacturer site for ST25R3916.</td></tr>
+      <tr><td>125 kHz RFID coil</td><td>Low-frequency RFID. EM400x, EM410x, EM420x, HIDProx, Indala, T5577.</td><td>See official schematic and docs.flipper.net RFID section.</td></tr>
+      <tr><td>Infrared RX / TX</td><td>Infrared capture and replay, 800-950nm.</td><td>See official docs, infrared section.</td></tr>
+      <tr><td>128x64 LCD</td><td>1.4-inch monochrome display, backlit.</td><td>See official schematic for the display controller and part number.</td></tr>
+      <tr><td>microSD slot</td><td>Storage, up to 64GB, FAT32 guidance in official docs.</td><td>See official docs, storage section.</td></tr>
+      <tr><td>LiPo battery, 2000mAh</td><td>Internal battery, USB-C charging.</td><td>See official docs, power section.</td></tr>
+    </table>
+    <p><strong>In progress, not yet published:</strong> full passive BOM, exploded view with every part labelled, and verified SWD pinout. Those will be added only from the official schematic and FCC internal photos, with sources, not from a guessed list.</p>
+  </section>
+
+  <section>
+    <h2 id="exploded-view">Exploded view — in progress</h2>
+    <p>No original BareBoard exploded view exists yet for this device. The view to be added here will be a labelled diagram built from FCC internal photos and the official schematic, with full alt text, in plain HTML, so it works on mobile, on old browsers, and without JavaScript. It will not copy a copyrighted teardown image. Until then, use the Wikimedia CC BY-SA photo of Flipper Zero used in Watchmen §16, and the FCC internal photos linked above, to see the board layout.</p>
+  </section>
+
+  <section>
+    <h2 id="manuals">Manuals and official docs</h2>
+    <ul>
+      <li>Official documentation: docs.flipper.net — start with the Flipper Zero user guide, then the sub-GHz frequencies page for your region.</li>
+      <li>Official product site: flipperzero.one</li>
+      <li>Open firmware and schematics: github.com/flipperdevices — build from source, or update from the official app, never from a random download.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 id="news">News articles</h2>
+    <ul>
+      <li>BleepingComputer — Canada to ban the Flipper Zero to stop surge in car thefts (February 2024 announcement, with Flipper Devices response on rolling codes).</li>
+      <li>BleepingComputer / Techmeme — Brazil seizing Flipper Zero shipments (ANATEL, March 2023).</li>
+      <li>Electronic Frontier Foundation — Flipper Zero devices being seized by Brazil's telecom agency.</li>
+      <li>Watchmen §16 sources — BleepingComputer Brazil seizure, and XDA on where Flipper Zero is banned, including CBP seizure and Canada / US stance.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 id="lawsuits">Lawsuits and discovery</h2>
+    <p><strong>No court lawsuit against Flipper Devices was found</strong> in Watchmen's check on 2026-10-08, and no court case was found in the public reporting reviewed for this page. The record below is regulatory and marketplace action, not a lawsuit. If a verified court case exists, it belongs here with a citation — do not add one without it.</p>
+    <ul>
+      <li><strong>US CBP, late 2022:</strong> about 15,000 units seized, later released after review.</li>
+      <li><strong>Brazil ANATEL, from March 2023:</strong> shipments seized and certification blocked, with EFF intervention.</li>
+      <li><strong>Amazon, April 2023:</strong> sale banned as a card-skimming device, following the Brazil seizures.</li>
+      <li><strong>Gatwick Airport, September 2023:</strong> confiscation reported in Watchmen.</li>
+      <li><strong>Canada, February 8, 2024:</strong> government announcement proposing to examine a ban on devices associated with copying vehicle-entry signals, explicitly naming Flipper Zero. An announcement and a consultation are not the same as an enacted prohibition.</li>
+    </ul>
+    <p>Flipper Devices' response, as reported: the device cannot hijack cars built after the 1990s, because those use rolling codes, and it cannot actively block the owner's signal to catch the original — a point to check against the specific vehicle and system, not as a blanket rule for every car.</p>
+  </section>
+
+  <section>
+    <h2 id="generation">Newer generation — Flipper One is not a successor</h2>
+    <p>Flipper One, announced in May 2026, is <strong>not</strong> a newer generation of Flipper Zero. It is a parallel product, marketed in addition to Flipper Zero, focused on networks rather than local protocols.</p>
+    <table>
+      <tr><th></th><th>Flipper Zero (this page)</th><th>Flipper One (parallel, in development)</th></tr>
+      <tr><td>Focus</td><td>Offline protocols: NFC, RFID, sub-GHz, IR, iButton, GPIO</td><td>IP networking: Ethernet, Wi-Fi, routing, VPN, Linux</td></tr>
+      <tr><td>Core</td><td>STM32WB55RG microcontroller, CC1101, ST25R3916</td><td>Rockchip RK3576 ARM computer + Raspberry Pi RP2350B co-processor</td></tr>
+      <tr><td>Connectivity</td><td>Sub-GHz, NFC, RFID, IR, BLE 5.0, USB-C</td><td>Wi-Fi 6E, dual Gigabit Ethernet, M.2 for 5G modem, USB, HDMI</td></tr>
+      <tr><td>System</td><td>Flipper firmware + apps</td><td>Linux / Flipper OS, in development</td></tr>
+      <tr><td>Status</td><td>Available product, $169</td><td>Not yet a finished product for sale; price target around $350, not an official final price; crowdfunding planned later in 2026</td></tr>
+    </table>
+    <p><strong>Parts taken out / put in, in focus terms:</strong> One does not swap Zero's CC1101/NFC/IR core for a faster version of the same core — it puts in a full ARM Linux computer, Ethernet, and Wi-Fi 6E, and moves away from Zero's offline-protocol focus. A true Zero successor, if one appears, will get its own exploded view here, with parts taken out and parts put in, part by part.</p>
+  </section>
+
+  <section>
+    <h2 id="hardware-guide">Simple hardware guide — Flipper Zero</h2>
+    <p>Connect by USB-C cable to your computer. That is the first, official path. Do not open the device, do not solder, and do not guess a debug pinout to start. If you need a debug probe later, use the Basic Bash Box below, after you have identified the device over USB.</p>
+  </section>
+<p><strong>Flipper Zero first:</strong> connect by USB-C cable first. The official path to speak to it is its USB serial CLI and the official Flipper app / qFlipper. Use the Bash Box below to find your port, then use the USB serial path. SWD pin numbers for this board are not published in this draft until they are verified from the official schematic — do not guess them.</p>
+<section>
+  <h2>Basic Bash Box — talk to this device</h2>
+  <p>You have followed the hardware guide above and the device is physically connected.
+  Now, in order: (1) open a terminal, (2) find the port, (3) speak to the device.
+  Do not flash, erase, or write anything until step 3 identifies the device correctly.</p>
+
+  <h3>Step 0 — Open a terminal</h3>
+  <ul>
+    <li><strong>macOS:</strong> Cmd + Space, type <code>Terminal</code>, press Enter.</li>
+    <li><strong>Linux:</strong> Ctrl + Alt + T.</li>
+    <li><strong>Windows:</strong> Windows key, type <code>PowerShell</code>, press Enter. For serial, you may also use PuTTY, or WSL for the Linux commands below.</li>
+  </ul>
+
+  <h3>Step 1 — Find the port (connect first, then type)</h3>
+  <p><strong>macOS:</strong></p>
+  <pre class="term"><code><span class="p">$</span> ls /dev/tty.usb* /dev/ttyACM*
+/dev/tty.usbmodem1234567</code></pre>
+  <p><strong>Linux:</strong></p>
+  <pre class="term"><code><span class="p">$</span> ls /dev/ttyUSB* /dev/ttyACM*
+/dev/ttyACM0</code></pre>
+  <p><strong>Windows (PowerShell):</strong></p>
+  <pre class="term"><code>PS&gt; Get-PnpDevice -Class Ports | Select-Object FriendlyName, InstanceId
+# Look for a COM number, for example COM4</code></pre>
+  <p>Your port name is the <code>[PORT]</code> in every command below. If nothing appears, unplug, replug, and try again — do not guess a port.</p>
+
+  <h3>Step 2A — Speak over UART / serial (most devices, first)</h3>
+  <p>UART is a text conversation. <code>115200</code> is the speed (baud) unless the device page says otherwise.</p>
+  <p><strong>macOS / Linux:</strong></p>
+  <pre class="term"><code><span class="p">$</span> screen [PORT] 115200
+# Type, and watch for a prompt. To quit screen later: Ctrl-A, then K.</code></pre>
+  <p><strong>Windows (PuTTY):</strong> Open PuTTY, choose Serial, enter <code>COM4</code> (your COM number), set Speed to <code>115200</code>, click Open.</p>
+  <p><strong>Windows (WSL):</strong> Use the Linux <code>screen</code> command above with your WSL serial port, after confirming it in Windows Device Manager.</p>
+
+  <h3>Step 2B — Speak over SWD / JTAG / debug (when the device page names a debug probe)</h3>
+  <p>Replace <code>[PROBE]</code> with your probe (for example <code>stlink</code>, <code>cmsis-dap</code>, or <code>picoprobe</code>) and <code>[TARGET]</code> with the chip named on the device page. Identification only — no writing yet.</p>
+  <p><strong>OpenOCD, all operating systems (same command, once OpenOCD is installed):</strong></p>
+  <pre class="term"><code><span class="p">$</span> openocd -f interface/[PROBE].cfg -f target/[TARGET].cfg -c "init; dap info; shutdown"
+# Look for the chip ID / TAP ID. If it does not match the device page, STOP.</code></pre>
+  <p><strong>Black Magic Probe (GDB, as used on BareBoard's Watchmen bench):</strong></p>
+  <pre class="term"><code><span class="p">$</span> arm-none-eabi-gdb
+(gdb) target extended-remote [PORT]
+(gdb) monitor swdp_scan
+# Your target appears here. Then, and only then, attach with: monitor attach</code></pre>
+  <p><strong>JTAG chain check (OpenOCD):</strong></p>
+  <pre class="term"><code><span class="p">$</span> openocd -f interface/[PROBE].cfg -f target/[TARGET].cfg -c "init; scan_chain; shutdown"
+# This lists the JTAG chain. It writes nothing to flash.</code></pre>
+
+  <h3>Step 3 — Verify, then stop safely</h3>
+  <ul>
+    <li>Does the prompt, chip ID, or version string match the device page? If not, stop — you may be talking to the wrong device or the wrong port.</li>
+    <li>Use only your own device, or a device you have written authorization to test. This is not legal advice — it is a workbench rule.</li>
+    <li>To disconnect: quit the terminal program first (<code>screen</code>: Ctrl-A, then K; GDB: <code>quit</code>), then unplug.</li>
+  </ul>
+  <p class="small">Device-specific fill-in: the device page above this box must name its [PORT] pattern, baud rate, [PROBE], and [TARGET]. If a page does not name them, that interface is not yet verified for that device — do not guess it.</p>
+</section>
+
+<section>
+  <h2>Fix it — choose what you want this device to do</h2>
+  <p>Find your problem below, follow that branch only, then leave. You do not need to read the whole page.</p>
+  <ul>
+    <li><a href="#action-update">Update it safely</a> — official firmware only</li>
+    <li><a href="#action-stop-spying">Tell it to quit spying / transmitting</a> — turn off what you do not want</li>
+    <li><a href="#action-remove-malware">Remove unwanted apps / malware</a> — clean it, then verify</li>
+    <li><a href="#action-check">Check what it is doing</a> — see what it runs and what it sends</li>
+    <li><a href="#action-reset">Start clean and leave</a> — reset, verify, disconnect</li>
+  </ul>
+
+  <h3 id="action-update">Update it safely</h3>
+  <p><strong>Beginner:</strong> Use only the official update path named on this page (official app, official site, or official firmware file). Do not use a random download, a forum file, or a third-party firmware unless this page names it and says why.</p>
+  <p><strong>Advanced:</strong> Use the Basic Bash Box above to identify the device first, then follow the official update command for this device. After updating, check the version string — it must match the official release for this device.</p>
+
+  <h3 id="action-stop-spying">Tell it to quit spying / transmitting</h3>
+  <p>First, what this device actually does — do not assume every device spies the same way:</p>
+  <ul>
+    <li>If this page lists cloud, telemetry, microphone, camera, location, or Bluetooth/Wi-Fi transmission for this device, the steps below turn that specific thing off, in the device's own settings.</li>
+    <li>If this page does not list such transmission for this device, there is nothing to turn off here — and this branch will say so, rather than inventing a spy feature.</li>
+  </ul>
+  <p><strong>Beginner:</strong> In the device's own menu/settings, turn off Bluetooth, Wi-Fi, cloud sync, voice, camera, and location — only the ones this device actually has. Then power it off and on, and check that the setting stayed off.</p>
+  <p><strong>Advanced:</strong> Use the Bash Box to list what is running and what radios are on, then disable the specific radio/service named on this page. Do not block a radio you need for the fix itself.</p>
+
+  <h3 id="action-remove-malware">Remove unwanted apps / malware</h3>
+  <p><strong>Beginner:</strong> Delete any app, skill, or add-on you did not install, from the device's own app list. Then update from the official path above — an update often replaces tampered files with clean official ones.</p>
+  <p><strong>Advanced:</strong> Identify the device with the Bash Box, list installed apps/files, remove only the named unwanted item, then re-check the list. If you cannot identify what a file is, do not delete system files — ask for a verified correction on this page instead.</p>
+  <p>If malware persists after an official update and a clean reset, that fact belongs in the device page's controversies section, with a source — not as a guess in this branch.</p>
+
+  <h3 id="action-check">Check what it is doing</h3>
+  <p>Ask the device what it runs: version string, installed apps, and — where the device page names it — radio/network status. Compare each answer to this page. A mismatch is the signal to use the update or remove branch above.</p>
+
+  <h3 id="action-reset">Start clean and leave</h3>
+  <p><strong>Beginner:</strong> Use the device's own factory reset, then set it up again from the official path, then check the version string once more.</p>
+  <p><strong>Advanced:</strong> After reset, use the Bash Box to confirm the clean version, then disconnect: quit the terminal program first, then unplug.</p>
+  <p>Done. You found your device, fixed it, and left — no account was needed.</p>
+
+  
+</section>
+<blockquote class="bb-quote"><p>&ldquo;Any program that tries to be so generalized and configurable that it could handle any kind of task will either fall short of this goal, or will be horribly broken.&rdquo;</p><p class="bb-quote-by">&mdash; Chris Wenham</p></blockquote>
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association (OSHWA)</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+</body>
+</html>
