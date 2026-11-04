@@ -7,12 +7,42 @@
 
   var LANGS = [
     { code: "en", name: "English", dir: "ltr" },
-    { code: "es", name: "Español", dir: "ltr" },
-    { code: "fr", name: "Français", dir: "ltr" },
+    { code: "af", name: "Afrikaans", dir: "ltr" },
+    { code: "ar", name: "العربية", dir: "rtl" },
+    { code: "bg", name: "Български", dir: "ltr" },
+    { code: "bn", name: "বাংলা", dir: "ltr" },
+    { code: "ca", name: "Català", dir: "ltr" },
+    { code: "cs", name: "Čeština", dir: "ltr" },
+    { code: "da", name: "Dansk", dir: "ltr" },
     { code: "de", name: "Deutsch", dir: "ltr" },
+    { code: "es", name: "Español", dir: "ltr" },
+    { code: "fi", name: "Suomi", dir: "ltr" },
+    { code: "fil", name: "Filipino", dir: "ltr" },
+    { code: "fr", name: "Français", dir: "ltr" },
+    { code: "hi", name: "हिन्दी", dir: "ltr" },
+    { code: "hr", name: "Hrvatski", dir: "ltr" },
+    { code: "hu", name: "Magyar", dir: "ltr" },
+    { code: "it", name: "Italiano", dir: "ltr" },
+    { code: "ja", name: "日本語", dir: "ltr" },
+    { code: "kk", name: "Қазақша", dir: "ltr" },
+    { code: "ko", name: "한국어", dir: "ltr" },
+    { code: "nl", name: "Nederlands", dir: "ltr" },
+    { code: "no", name: "Norsk", dir: "ltr" },
+    { code: "pl", name: "Polski", dir: "ltr" },
     { code: "pt", name: "Português", dir: "ltr" },
-    { code: "zh", name: "中文", dir: "ltr" },
-    { code: "ar", name: "العربية", dir: "rtl" }
+    { code: "ro", name: "Română", dir: "ltr" },
+    { code: "ru", name: "Русский", dir: "ltr" },
+    { code: "sk", name: "Slovenčina", dir: "ltr" },
+    { code: "sq", name: "Shqip", dir: "ltr" },
+    { code: "sr", name: "Српски", dir: "ltr" },
+    { code: "sv", name: "Svenska", dir: "ltr" },
+    { code: "sw", name: "Kiswahili", dir: "ltr" },
+    { code: "ta", name: "தமிழ்", dir: "ltr" },
+    { code: "th", name: "ไทย", dir: "ltr" },
+    { code: "uk", name: "Українська", dir: "ltr" },
+    { code: "ur", name: "اردو", dir: "rtl" },
+    { code: "vi", name: "Tiếng Việt", dir: "ltr" },
+    { code: "zh", name: "中文", dir: "ltr" }
   ];
   var SKIP_TAGS = { SCRIPT: 1, STYLE: 1, CODE: 1, PRE: 1, TEXTAREA: 1, NOSCRIPT: 1 };
   var originals = []; // {node, text} or {el, attr, text}
@@ -126,8 +156,10 @@
     buildSelector();
     var saved = null;
     try { saved = localStorage.getItem("bb-lang"); } catch (e) {}
-    var auto = (navigator.language || "en").slice(0, 2).toLowerCase();
-    var initial = saved || auto || "en";
+    var rawTag = (navigator.language || "en").toLowerCase();
+    var auto = rawTag.split("-")[0];
+    // Filipino browsers may report a 3-letter tag; check the full tag first.
+    var initial = saved || (LANGS.some(function (l) { return l.code === rawTag; }) ? rawTag : auto) || "en";
     var known = LANGS.some(function (l) { return l.code === initial; });
     setLang(known ? initial : "en", false);
     // Late-inserted content (nav/search scripts) gets a second pass.
