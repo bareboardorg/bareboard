@@ -1,0 +1,23 @@
+/* BareBoard language switcher styling */
+.bb-lang {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: auto;
+  padding: 0.25rem 0;
+}
+.bb-lang-label {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+.bb-lang-select {
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+html[dir="rtl"] .bb-lang { margin-left: 0; margin-right: auto; }
