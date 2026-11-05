@@ -189,3 +189,40 @@ html[dir="rtl"] .bb-lang-panel { transform-origin: top left; }
   }
   .bb-lang.bb-anim .bb-lang-item { animation: none; }
 }
+
+/* Footer placement, situated the Apple way: the language control sits in
+   a quiet end bar at the very bottom of the footer, as plain text. */
+.bb-footer-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-top: 1px solid var(--line, #e8e8ea);
+  margin-top: 1.4rem;
+  padding-top: 0.7rem;
+}
+.bb-lang.bb-foot { margin: 0; padding: 0; }
+.bb-lang.bb-foot .bb-lang-btn {
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  padding: 0.25rem 0.3rem;
+  font-size: 0.82rem;
+  color: var(--secondary, #6e6e73);
+}
+.bb-lang.bb-foot .bb-lang-btn:hover {
+  background: transparent;
+  color: var(--text, #1d1d1f);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.bb-lang.bb-foot .bb-lang-btn:active { transform: none; }
+
+/* In the footer the panel opens upward. */
+.bb-lang.bb-foot .bb-lang-panel {
+  top: auto;
+  bottom: calc(100% + 10px);
+  transform-origin: bottom right;
+  transform: translateY(8px) scale(0.97);
+}
+html[dir="rtl"] .bb-lang.bb-foot .bb-lang-panel { transform-origin: bottom left; }
+.bb-lang.bb-foot.open .bb-lang-panel { transform: translateY(0) scale(1); }

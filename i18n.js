@@ -424,9 +424,21 @@
   }
 
   function buildSelector() {
-    var host = document.querySelector(".nav-inner") || document.querySelector("header") || document.body;
     var wrap = document.createElement("div");
     wrap.className = "bb-lang";
+    /* Situated the Apple way: language choice lives in the footer, in its
+       own end bar, as a quiet text control - never in the top nav. */
+    var footerEl = document.querySelector("footer");
+    if (footerEl) {
+      var bar = document.createElement("div");
+      bar.className = "bb-footer-bar";
+      wrap.classList.add("bb-foot");
+      bar.appendChild(wrap);
+      footerEl.appendChild(bar);
+    } else {
+      var host = document.querySelector(".nav-inner") || document.querySelector("header") || document.body;
+      host.appendChild(wrap);
+    }
 
     var btn = document.createElement("button");
     btn.type = "button";
@@ -549,7 +561,6 @@
 
     wrap.appendChild(btn);
     wrap.appendChild(panel);
-    host.appendChild(wrap);
     updatePicker();
   }
 
