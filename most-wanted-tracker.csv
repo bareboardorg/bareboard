@@ -1,0 +1,11 @@
+rank,id,name,category,priority,status,rarity,darkness,reach,score,claimed_by,autopsy
+1,humane-ai-pin,Humane AI Pin,wearable,HIGH PRIORITY,wanted,,,,,,
+2,rabbit-r1,Rabbit R1,handheld,HIGH PRIORITY,wanted,,,,,,
+3,apple-vision-pro,Apple Vision Pro,headset,HIGH PRIORITY,wanted,,,,,,
+4,nintendo-switch-2,Nintendo Switch 2,console,HIGH PRIORITY,wanted,,,,,,
+5,meta-quest-pro,Meta Quest Pro,headset,ELEVATED,wanted,,,,,,
+6,dji-avata-2,DJI Avata 2,drone,ELEVATED,wanted,,,,,,
+7,amazon-astro,Amazon Astro,home-robot,ELEVATED,wanted,,,,,,
+8,oura-ring-4,Oura Ring 4,wearable,ELEVATED,wanted,,,,,,
+9,peloton-bike-plus,Peloton Bike+,fitness,STANDARD,wanted,,,,,,
+10,steam-deck-oled,Steam Deck OLED,handheld,STANDARD,wanted,,,,,,
