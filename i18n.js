@@ -1,9 +1,12 @@
-/* BareBoard multilingual switcher.
-   External file on purpose: the site CSP is script-src 'self', so no inline
-   code is needed and no CSP change is required. Dictionaries live in
-   /i18n/<lang>.json (same origin, allowed by default-src 'self').
+/* BareBoard multilingual switcher - runtime translation edition.
+   No dictionary files: when a visitor picks a language, the page's own
+   strings are translated live in their browser (Google Translate endpoint,
+   allowed by the pages' CSP connect-src) and cached in their localStorage,
+   so new or edited content translates itself and nothing on the server
+   needs updating. If translation is unreachable, the page stays in English.
    Picker UI: frosted-glass panel with live search and keyboard navigation,
-   matching the site's own glass nav. Translation engine unchanged. */
+   matching the site's own glass nav. Language is chosen by the visitor
+   (browser setting + manual menu), never by IP or location. */
 (function () {
   "use strict";
 
@@ -263,7 +266,7 @@
   var SKIP_TAGS = { SCRIPT: 1, STYLE: 1, CODE: 1, PRE: 1, TEXTAREA: 1, NOSCRIPT: 1 };
   var originals = []; // {node, text} or {el, attr, text}
   var current = "en";
-  var dict = null;
+  var origTitle = null;
   var picker = null;
 
   function norm(s) { return s.replace(/\s+/g, " ").trim(); }
@@ -283,19 +286,53 @@
     }
   }
 
-  function translateTextNode(node) {
-    var raw = node.nodeValue;
-    if (!raw) return;
-    var key = norm(raw);
-    if (!key || !dict[key]) return;
-    remember(node, null);
-    var lead = raw.match(/^\s*/)[0];
-    var trail = raw.match(/\s*$/)[0];
-    node.nodeValue = lead + dict[key] + trail;
+
+  /* ---- Runtime translation engine ------------------------------------
+     Strings are collected exactly the way the old dictionary engine did
+     (same walker, same skips, same attributes), deduplicated, served from
+     the visitor's localStorage cache when possible, and otherwise fetched
+     in batches from the translation endpoint. Results are applied as each
+     batch lands and written back to the cache. */
+  var ENDPOINT = window.BB_TRANSLATE_ENDPOINT ||
+    "https://translate.googleapis.com/translate_a/single";
+  var cache = {};       // norm key -> translation for cacheLang
+  var cacheLang = null; // language the in-memory cache belongs to
+  var jobSeq = 0;       // bumped on every setLang; stale batches check it
+  var saveTimer = null;
+
+  function cacheLoad(code) {
+    cache = {};
+    cacheLang = code;
+    try {
+      var raw = localStorage.getItem("bb-tcache-v1-" + code);
+      if (raw) cache = JSON.parse(raw) || {};
+    } catch (e) {}
   }
 
-  function applyDict() {
-    if (!dict) return;
+  function cacheSave() {
+    if (!cacheLang || saveTimer) return;
+    saveTimer = setTimeout(function () {
+      saveTimer = null;
+      try {
+        var raw = JSON.stringify(cache);
+        if (raw.length < 4500000) {
+          localStorage.setItem("bb-tcache-v1-" + cacheLang, raw);
+        }
+      } catch (e) { /* quota or privacy mode: in-memory cache still works */ }
+    }, 400);
+  }
+
+  function sourceText(node, attr) {
+    for (var i = 0; i < originals.length; i++) {
+      if (originals[i].node === node && originals[i].attr === attr) {
+        return originals[i].text;
+      }
+    }
+    return attr ? node.getAttribute(attr) : node.nodeValue;
+  }
+
+  function collectTargets() {
+    var targets = [];
     var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
       acceptNode: function (node) {
         var p = node.parentNode;
@@ -307,26 +344,156 @@
         return norm(node.nodeValue || "") ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
       }
     });
-    var nodes = [];
     var n;
-    while ((n = walker.nextNode())) nodes.push(n);
-    nodes.forEach(translateTextNode);
-
-    // Attributes: alt / title / aria-label / placeholder
+    while ((n = walker.nextNode())) {
+      targets.push({ kind: "text", node: n, key: norm(sourceText(n, null) || "") });
+    }
     var attrs = ["alt", "title", "aria-label", "placeholder"];
     var els = document.body.querySelectorAll("[alt],[title],[aria-label],[placeholder]");
     els.forEach(function (el) {
       if (el.closest && el.closest(".bb-lang")) return;
       attrs.forEach(function (a) {
         if (!el.hasAttribute(a)) return;
-        var key = norm(el.getAttribute(a) || "");
-        if (key && dict[key]) { remember(el, a); el.setAttribute(a, dict[key]); }
+        var key = norm(sourceText(el, a) || "");
+        if (key) targets.push({ kind: "attr", el: el, attr: a, key: key });
       });
     });
+    if (origTitle === null) origTitle = document.title || "";
+    var tKey = norm(origTitle);
+    if (tKey) targets.push({ kind: "title", key: tKey });
+    return targets;
+  }
 
-    // Page <title>
-    var tKey = norm(document.title || "");
-    if (tKey && dict[tKey]) document.title = dict[tKey];
+  function applyOne(t, translated) {
+    if (t.kind === "text") {
+      var raw = t.node.nodeValue;
+      var lead = raw.match(/^\s*/)[0];
+      var trail = raw.match(/\s*$/)[0];
+      remember(t.node, null);
+      t.node.nodeValue = lead + translated + trail;
+    } else if (t.kind === "attr") {
+      remember(t.el, t.attr);
+      t.el.setAttribute(t.attr, translated);
+    } else if (t.kind === "title") {
+      document.title = translated;
+    }
+  }
+
+  /* The endpoint splits its answer into segments at sentence and line
+     boundaries; the segment sources concatenate back into exactly the
+     text that was sent. Walking the segments and matching their sources
+     against each input line recovers every line's translation even when
+     a translation itself contains line breaks. Any line that cannot be
+     matched this way is reported as failed and retried on its own. */
+  function assignSegments(segs, texts) {
+    var parts = {}, failed = [];
+    var li = 0, accSrc = "", accTr = "", broken = false;
+    for (var s = 0; s < segs.length && li < texts.length && !broken; s++) {
+      accSrc += segs[s][1];
+      accTr += segs[s][0];
+      while (li < texts.length) {
+        var exp = texts[li] + (li < texts.length - 1 ? "\n" : "");
+        if (accSrc === exp) {
+          parts[li] = (li < texts.length - 1) ? accTr.replace(/\n$/, "") : accTr;
+          accSrc = ""; accTr = ""; li++;
+        } else if (accSrc.length < exp.length && exp.indexOf(accSrc) === 0) {
+          break; // segment boundary has not reached the line end yet
+        } else { broken = true; break; }
+      }
+    }
+    for (var i = li; i < texts.length; i++) failed.push(i);
+    return { parts: parts, failed: failed };
+  }
+
+  function fetchBatch(texts, code) {
+    var url = ENDPOINT + "?client=gtx&sl=en&tl=" + encodeURIComponent(code) +
+      "&dt=t&q=" + encodeURIComponent(texts.join("\n"));
+    return fetch(url).then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      return r.json();
+    }).then(function (data) {
+      var segs = [];
+      (data[0] || []).forEach(function (seg) {
+        if (seg && seg[0] != null && seg[1] != null) segs.push([seg[0], seg[1]]);
+      });
+      if (!segs.length && texts.length) throw new Error("empty response");
+      return assignSegments(segs, texts);
+    });
+  }
+
+  function fetchOne(k, code, seq) {
+    return fetchBatch([k], code).then(function (res) {
+      if (res.parts[0]) { cache[k] = res.parts[0]; cacheSave(); }
+    }).catch(function () { /* unreachable: string stays English */ });
+  }
+
+  function applyReady(byKey) {
+    Object.keys(byKey).forEach(function (k) {
+      if (!cache[k]) return;
+      byKey[k].forEach(function (t) { applyOne(t, cache[k]); });
+      delete byKey[k];
+    });
+  }
+
+  function translateMissing(missing, code, seq, byKey) {
+    var chunks = [];
+    var cur = [], curLen = 0;
+    missing.forEach(function (k) {
+      if (cur.length && (cur.length >= 40 || curLen + k.length > 4000)) {
+        chunks.push(cur); cur = []; curLen = 0;
+      }
+      cur.push(k); curLen += k.length + 1;
+    });
+    if (cur.length) chunks.push(cur);
+    var chain = Promise.resolve();
+    chunks.forEach(function (chunk) {
+      chain = chain.then(function () {
+        if (seq !== jobSeq) return;
+        return fetchBatch(chunk, code).then(function (res) {
+          Object.keys(res.parts).forEach(function (i) {
+            if (res.parts[i]) cache[chunk[i]] = res.parts[i];
+          });
+          cacheSave();
+          var inner = Promise.resolve();
+          res.failed.forEach(function (i) {
+            inner = inner.then(function () {
+              if (seq !== jobSeq) return;
+              return fetchOne(chunk[i], code, seq);
+            });
+          });
+          return inner;
+        }).catch(function () {
+          var inner = Promise.resolve();
+          chunk.forEach(function (k) {
+            inner = inner.then(function () {
+              if (seq !== jobSeq) return;
+              return fetchOne(k, code, seq);
+            });
+          });
+          return inner;
+        }).then(function () {
+          if (seq === jobSeq && current === code) applyReady(byKey);
+        });
+      });
+    });
+    return chain;
+  }
+
+  function runTranslation(code, seq) {
+    var targets = collectTargets();
+    var byKey = {};
+    targets.forEach(function (t) {
+      if (!t.key) return;
+      if (cache[t.key]) applyOne(t, cache[t.key]);
+      else (byKey[t.key] = byKey[t.key] || []).push(t);
+    });
+    var missing = Object.keys(byKey);
+    if (!missing.length) return;
+    translateMissing(missing, code, seq, byKey);
+  }
+
+  function retranslatePass() {
+    if (current !== "en") runTranslation(current, jobSeq);
   }
 
   function setLang(code, save) {
@@ -334,16 +501,16 @@
     LANGS.forEach(function (l) { if (l.code === code) meta = l; });
     if (!meta) { code = "en"; meta = LANGS[0]; }
     current = code;
+    jobSeq++;
     if (save) { try { localStorage.setItem("bb-lang", code); } catch (e) {} }
     document.documentElement.setAttribute("lang", code === "zh" ? "zh-CN" : code);
     document.documentElement.setAttribute("dir", meta.dir);
     if (picker) updatePicker();
     restore();
-    if (code === "en") { dict = null; return; }
-    fetch("/i18n/" + code + ".json", { credentials: "same-origin" })
-      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(function (json) { if (current === code) { dict = json; applyDict(); } })
-      .catch(function () { /* dictionary missing: page stays in English */ });
+    if (origTitle !== null) document.title = origTitle;
+    if (code === "en") { cache = {}; cacheLang = null; return; }
+    cacheLoad(code);
+    runTranslation(code, jobSeq);
   }
 
   var GLOBE = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg>';
@@ -575,7 +742,7 @@
     var known = LANGS.some(function (l) { return l.code === initial; });
     setLang(known ? initial : "en", false);
     // Late-inserted content (nav/search scripts) gets a second pass.
-    setTimeout(function () { if (dict) applyDict(); }, 600);
+    setTimeout(function () { retranslatePass(); }, 600);
   }
 
   if (document.readyState === "loading") {
