@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kindle &amp; Kobo E-Readers — BareBoard — Free Hardware Education</title>
+<meta name="description" content="Kindle and Kobo e-readers: how E Ink works, batteries and screens, Kobo’s official repair program with iFixit, and why Amazon offers nothing like it.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Kindle &amp; Kobo E-Readers">
+<meta property="og:description" content="Kindle and Kobo: E Ink, batteries, screens, and two opposite answers to repair.">
+<meta property="og:url" content="https://bareboard.org/devices/e-readers/">
+<meta property="og:image" content="https://bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/devices/">Devices</a></li>
+        <li class="has-children">
+          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/about.html#how-we-work">How we work</a></li>
+                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/notes/">Bench Notes</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                <li><a href="/protocols.html">Protocol RE</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
+                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
+                <li><a href="/hot-100.html">Game Consoles</a></li>
+                <li><a href="/hot-100.html">Media Streamers</a></li>
+                <li><a href="/hot-100.html">Networking Gear</a></li>
+                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
+                <li><a href="/hot-100.html">Other</a></li>
+                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
+                <li><a href="/hot-100.html">Phones</a></li>
+                <li><a href="/hot-100.html">Printers</a></li>
+                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
+                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
+                <li><a href="/hot-100.html">Wearables</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/most-wanted.html#board">The board</a></li>
+              </ul>
+            </div>
+          </div></li>
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+                <li><a href="/watchmen.html#corrections">Corrections</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+  <aside class="legal-notice bb-notice-amber">
+    <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
+  </aside>
+  <h1>Kindle &amp; Kobo E-Readers</h1>
+  <p class="lede">Two e-readers that look almost identical &mdash; and give opposite answers to the most basic question an owner can ask: when it breaks, can I fix it? Kobo sells you the parts and the instructions. Amazon sells you a new Kindle.</p>
+
+  <section>
+    <h2 id="fcc">FCC ID</h2>
+    <p>Every radio device sold in the United States needs an FCC ID &mdash; the code that ties a product to its test filings with the Federal Communications Commission (FCC, the U.S. radio regulator). The first part is the <strong>grantee code</strong>: the company that filed. The rest identifies the product. <strong>FCC IDs vary by model and revision</strong>, so the label on your own reader is the one that counts.</p>
+    <table>
+      <tr><th>Device</th><th>Maker model</th><th>FCC ID</th><th>How verified</th></tr>
+      <tr><td>Kindle Paperwhite (2024)</td><td>SA568B</td><td>2A4DH-5688</td><td>Amazon&rsquo;s grantee code is 2A4DH (Amazon.com Services LLC). The ID is printed in the FCC test reports for this model &mdash; see the <a href="https://fccpdf.com/2A4DH/2A4DH-5688/7489349.pdf">FCC SAR test report for SA568B</a> (SAR: specific absorption rate, a measure of radio energy absorbed by the body).</td></tr>
+      <tr><td>Kindle Paperwhite Signature Edition (2024)</td><td>SA569P</td><td>2A4DH-5698</td><td>The same test report names SA569P as the reference model under this ID, and notes the main difference between the two is wireless power transfer (wireless charging).</td></tr>
+      <tr><td>Kobo Clara Colour</td><td>N367</td><td>NOIKBN367</td><td>Rakuten Kobo&rsquo;s grantee code is NOI. The ID is stated in Kobo&rsquo;s own <a href="https://cdn.kobo.com/downloads/magento/userguides/legalAndSafety/N367-Legal-and-Safety/n367regandsafetyinfo-english20240430.pdf">regulatory and safety document for the Clara Colour (PDF)</a>.</td></tr>
+      <tr><td>Kobo Clara BW (one hardware variant)</td><td>P365</td><td>ARS-P365</td><td>This variant was filed under a different grantee code, ARS &mdash; a reminder that the same shop product can be built and filed by different manufacturers. See the <a href="https://fccpdf.com/ARS/ARS-P365/7906169.pdf">filed regulatory document for P365 (PDF)</a>. Kobo also sells a Clara BW as model N365, so check your own label.</td></tr>
+      <tr><td>Kobo Libra Colour</td><td>N428</td><td>NOIKBN428</td><td>Model number N428 is confirmed on <a href="https://help.kobo.com/hc/en-us/articles/17971574287895-Kobo-Libra-Colour">Kobo&rsquo;s own help page for the Libra Colour</a>; the FCC ID follows the same NOI grantee pattern and is printed on the device label.</td></tr>
+    </table>
+    <p><strong>How to look yours up:</strong> on a Kindle, the FCC ID is printed on the back of the device. On a Kobo, Kobo&rsquo;s regulatory document says the certification marks are in <strong>Settings &gt; About</strong> on the device itself. Type the ID into <a href="https://fccid.io">fccid.io</a> and you get the full filing: photos, test reports, and the manual the maker submitted.</p>
+  </section>
+
+  <section>
+    <h2 id="fcc-revealed">What the FCC filing revealed</h2>
+    <p>The FCC filing for a device includes the documents manufacturers are required to submit: external photos, internal photos, test setup photos, RF test reports, and the user manual. These are public record at <a href="https://fccid.io/">fccid.io</a>.</p>
+    <p>What you can typically find:</p>
+    <ul>
+      <li><strong>Internal photos</strong> &mdash; board layout, chip placement, shielding, antenna design. On an e-reader they also show the three things that matter most: how big the battery is, where the mainboard (the one circuit board that runs the device) sits, and how the screen assembly fills the front of the case.</li>
+      <li><strong>Block diagrams</strong> &mdash; sometimes included, showing the RF chain architecture (RF: radio frequency, the wireless part).</li>
+      <li><strong>Test reports</strong> &mdash; conducted and radiated emissions data, which can reveal operating frequencies and power levels.</li>
+      <li><strong>Label placement</strong> &mdash; where the FCC ID lives on the device.</li>
+    </ul>
+    <p>What the FCC filing does <em>not</em> include: schematics (usually withheld under confidentiality requests), firmware, bill of materials, or debug interface documentation.</p>
+    <p>One honest limit, specific to these devices: makers can ask the FCC to keep the photos secret for a time after launch. Reporting on the 2024 Paperwhite filing noted that almost everything of note &mdash; test photos, external photos, internal photos, and the user manual &mdash; was under a 180-day embargo when the filing appeared (<a href="https://goodereader.com/blog/kindle/amazon-kindle-paperwhite-12th-generation-is-coming-out-soon">Good e-Reader, September 2024</a>). The filing is a teardown on a delay, not on launch day.</p>
+    <p>That delay matters more on an e-reader than on most devices. These readers are thin, sealed slabs with no screws on the outside. For a glued- or clipped-shut reader that the maker will not document, the internal photos in the FCC filing are, for most owners, the only teardown they will ever see.</p>
+  </section>
+
+  <section>
+    <h2 id="exploded">Exploded view</h2>
+    <p><strong>Coverage: Partial &mdash; no public parts book.</strong> A parts book (also called an illustrated parts breakdown) is the manufacturer&rsquo;s own diagram that names every assembly and its part number. Neither Amazon nor Kobo publishes one for these readers. What follows is the next best thing, and it is labeled by source: for Kobo, the walkthrough follows the manufacturer&rsquo;s own repair guides, published with iFixit. For Kindle, the same stack is described from the internal photos in Amazon&rsquo;s FCC filings, because no Amazon guide exists. Nothing below is a fabricated diagram; it is the layer order, in words.</p>
+
+    <h3>Kobo (Libra Colour, model N428) &mdash; front to back, from the manufacturer&rsquo;s guide</h3>
+    <p>Source for every step: Kobo&rsquo;s OEM guide (OEM: original equipment manufacturer &mdash; the maker itself), <a href="https://www.iFixit.com/Guide/Kobo+Libra+Colour+Screen+Replacement/170326?revisionid=2452950">Kobo Libra Colour Screen Replacement, on iFixit</a>, which iFixit labels &ldquo;OEM Guide &mdash; iFixit collaborated with the manufacturer to make this guide.&rdquo; Read front to back, the reader is five layers:</p>
+    <ol>
+      <li><strong>Front cover</strong> &mdash; the bezel (the frame around the screen) you see and hold. It keeps dust out and gives the thin screen its stiffness. In the guide it is held by clips and adhesive, and it comes off last, after everything behind it is out.</li>
+      <li><strong>Display assembly</strong> &mdash; the E Ink screen, sold pre-installed in its frame. This is the page itself: the part that shows text, and the part the touch layer reads your taps through. A screen replacement means moving <em>all</em> the internals into a new display assembly &mdash; on an e-reader, the screen is not one part among many; the rest of the device is built into it.</li>
+      <li><strong>Mainboard</strong> (the guide&rsquo;s word is motherboard) &mdash; the single circuit board carrying the processor, memory, storage, Wi-Fi, and the USB-C port. It thinks, remembers, and connects. In the guide it is held by seven screws, and connects to the screen through flat ribbon cables with ZIF connectors (zero insertion force: a tiny locking flap holds the cable, no soldering).</li>
+      <li><strong>Battery</strong> &mdash; a flat lithium pouch cell that powers everything. E Ink uses so little power (see Key Chips) that this one cell runs the reader for weeks. In the guide the battery is disconnected first, before any other work, and is held by stretch-release adhesive &mdash; pull a tab, and it releases without prying.</li>
+      <li><strong>Back cover</strong> &mdash; the rear shell. It protects the board and battery and gives the reader its grip. In the guide it is clipped, not glued: an opening pick releases the clips, and it is the first part off and the last part back on.</li>
+    </ol>
+    <p>Two smaller boards ride along in the same guide: a power-button board and a page-turn button board, each connected by the same kind of ribbon cable. Everything inside is coated in a thin, plastic-like waterproof coating, which the guide warns is brittle, flakes as you work, and must be picked off connectors before they will open.</p>
+    <blockquote>
+      <p>&ldquo;Following this guide will remove your eReader&rsquo;s IP (Ingress Protection) rating, making it susceptible to water damage.&rdquo;</p>
+      <p>&mdash; Warning printed at the top of Kobo&rsquo;s own iFixit guide, quoted verbatim. In plain words: the reader is waterproof when you buy it; opening it ends that, even if you put it back together perfectly.</p>
+    </blockquote>
+    <p><strong>Safety, in plain words:</strong> the guide tells you to drain the battery as much as you can before starting, to unplug everything, and never to use sharp metal tools on or near the battery &mdash; a punctured pouch battery can leak dangerous chemicals and catch fire. Do not bend or crease the battery, and never reuse a removed pouch battery. Those are the maker&rsquo;s own precautions, and they are the right ones.</p>
+
+    <h3>Kindle (Paperwhite, 2024) &mdash; the same stack, from FCC internal photos</h3>
+    <p><strong>Source label: this walkthrough is built from the internal photos in Amazon&rsquo;s FCC filing for the device (see FCC ID, above), not from any Amazon repair document &mdash; none exists.</strong> The photos show the same five-layer sandwich, because physics leaves few other ways to build a thin reader:</p>
+    <ol>
+      <li><strong>Front bezel and display assembly</strong> &mdash; the E Ink screen fills the front, as on the Kobo. It is the largest, most expensive, and most fragile layer.</li>
+      <li><strong>Mainboard</strong> &mdash; one board with the processor, storage, radios, and the USB-C port, sitting behind the screen.</li>
+      <li><strong>Battery</strong> &mdash; a flat pouch cell behind or beside the board, taking much of the inside area.</li>
+      <li><strong>Back cover</strong> &mdash; the sealed rear shell. There are no owner-facing screws and no published opening procedure.</li>
+    </ol>
+    <p><strong>Kindle maker warnings:</strong> there are none to quote. Amazon publishes no repair guide for any Kindle, so it publishes no repair warnings either &mdash; the safety notes above, from Kobo&rsquo;s guide, are the closest thing to manufacturer guidance that exists for opening a current e-reader, and the battery precautions apply to any pouch cell in any reader.</p>
+  </section>
+
+  <section>
+    <h2 id="diagnosis">Diagnosis &amp; faults</h2>
+    <p>An e-reader fails in fewer ways than a phone, and the most common scare is not a failure at all. Work through these in order before you open anything.</p>
+
+    <h3>First, understand the screen: a &ldquo;frozen&rdquo; page may be a dead device</h3>
+    <p>E Ink is <strong>bistable</strong>: the image is made of physical pigment particles that stay where they were put (see Key Chips). The screen uses power to <em>change</em> the picture, not to <em>hold</em> it. So a reader that has crashed, or even run completely flat, keeps showing its last page, looking for all the world like it has merely frozen. Kobo&rsquo;s guide makes the same point from inside the machine: even after the battery is disconnected, the screen goes on saying <em>Powered off</em> &mdash; &ldquo;this is normal.&rdquo; A still page tells you nothing about whether the device behind it is alive.</p>
+
+    <h3>Frozen screen, device alive underneath</h3>
+    <p><strong>Signs:</strong> the page never changes, taps do nothing, but the power light may still respond. <strong>Test:</strong> the maker&rsquo;s restart, below. If the screen flashes and redraws, the panel is fine and the software had hung.</p>
+    <ul>
+      <li><strong>Kindle restart (Amazon&rsquo;s documented procedure):</strong> press and hold the power button until a power dialog appears or the screen goes blank; keep holding for a full 40 seconds, then release and let it restart. Charge first if it may be flat, then repeat. (Procedure as summarized from Amazon&rsquo;s instructions by <a href="https://www.technobezz.com/how-to-fix-an-amazon-kindle-touch-screen-not-working">Technobezz</a>.)</li>
+      <li><strong>Kobo restart and reset (Kobo&rsquo;s documented procedure):</strong> Kobo&rsquo;s help centre tells you to charge the reader for at least an hour first, then use its model-specific manual reset &mdash; for the current Clara models, hold the power button until you see <em>Powered off</em> and the power light goes out, release, then hold again until the light behaves as the article describes and the Restore screen appears. Full steps: <a href="https://help.kobo.com/hc/en-us/articles/360017605314-Manual-reset-your-Kobo-Clara-Colour-Kobo-Clara-BW-Kobo-Clara-HD-Kobo-Nia-Kobo-Elipsa-Kobo-Clara-2E-Kobo-Elipsa-2E">Kobo&rsquo;s manual reset guide for Clara Colour, Clara BW and related models</a>. Button models use a page-turn button plus the power button, held about 30 seconds until the screen flashes: <a href="https://help.kobo.com/hc/en-us/articles/360017765853-Manual-reset-your-Kobo-Sage-Kobo-Libra-2-Kobo-Forma-and-Kobo-Libra-H2O">Kobo&rsquo;s manual reset guide for its button models</a>. Warning, in Kobo&rsquo;s own framing: a factory reset removes all books from the reader and returns it to its original settings &mdash; it is the last step, not the first.</li>
+    </ul>
+
+    <h3>Dead or dying battery</h3>
+    <p><strong>Signs:</strong> the reader only works plugged in, charge drops in hours instead of weeks, or it shows the last page and never responds even after a long charge. <strong>Tests:</strong> charge it for at least an hour on a known-good cable and charger (Kobo&rsquo;s own first instruction), then try the restart. A battery icon with an exclamation mark, where the model shows one, means charge before anything else. If a full charge buys only a day or two, the pouch cell is worn out. On a current Kobo that is a documented, parts-available repair (see Repair reality). On a Kindle it is not an Amazon-supported repair at all.</p>
+
+    <h3>Failed E Ink panel &mdash; the fractured picture</h3>
+    <p><strong>Signs:</strong> part of the screen shows a broken, fractured image &mdash; a corner still displaying a piece of an old page, sharp-edged patches that never update, lines frozen across the text &mdash; and no restart changes those areas, ever. <strong>Why it looks like that:</strong> the picture is pigment in millions of tiny capsules over a thin, brittle backing. Crack that backing &mdash; a drop, a bag crushed against the screen &mdash; and the capsules and their wiring in the cracked zone can no longer be driven. Those pixels are stuck at whatever they last showed, while the un-cracked area around them keeps working. The result is a page that looks fractured, because it physically is. No reset can fix it; the display assembly has to be replaced. This is the repair Kobo sells parts for and Amazon does not.</p>
+
+    <h3>Charge-port wear</h3>
+    <p><strong>Signs:</strong> charging only works at one cable angle, the plug feels loose, or the reader connects and disconnects as it sits. <strong>Tests:</strong> try a second cable first &mdash; cables fail far more often than ports &mdash; and look into the port for packed lint, which stops the plug seating fully. The hard fact behind this fault: on the current Kobos, iFixit notes the USB-C port is <strong>soldered to the motherboard</strong>, so a worn port is a board-level soldering job or a motherboard replacement, not a plug-in part (<a href="https://www.ifixit.com/repairability/e-reader-repairability-scores">iFixit e-reader repairability scores</a>). iFixit records the same soldered-port design on recent Kindles. Budget for that before assuming a dead reader is a dead battery.</p>
+  </section>
+
+  <section>
+    <h2 id="we-reveal">What we reveal</h2>
+    <p>The FCC tells you what a device emits. We tell you what&rsquo;s inside and how it works.</p>
+    <ul>
+      <li><strong>Chip-level identification</strong> &mdash; every major IC named, with documentation links where public documentation exists, and an honest note where it does not (IC: integrated circuit, a chip).</li>
+      <li><strong>Board mapping</strong> &mdash; what connects to what, which cables and connectors matter, and where the one board in the device does every job.</li>
+      <li><strong>What the manufacturer won&rsquo;t tell you</strong> &mdash; in this category, the sharpest example on the site: two near-identical slabs, one sold with a parts list and a repair manual, the other sold with neither. The difference is not engineering. It is a business decision, and it is documented in Repair reality, below.</li>
+    </ul>
+    <p>Start from the <a href="/devices/">device index</a> for the other hubs built to this same standard.</p>
+  </section>
+
+  <section>
+    <h2 id="variants">Models</h2>
+    <p>The current lines, with display size and type only where verified from the sources cited under the table.</p>
+    <table>
+      <tr><th>Model</th><th>Year</th><th>Display size</th><th>Display type</th></tr>
+      <tr><td>Kindle</td><td>2024</td><td>6-inch</td><td>Black-and-white E Ink, recessed screen</td></tr>
+      <tr><td>Kindle Paperwhite</td><td>2024</td><td>7-inch</td><td>Black-and-white E Ink Carta 1300, flush front</td></tr>
+      <tr><td>Kindle Scribe</td><td>2024</td><td>10.2-inch</td><td>Black-and-white Paperwhite display, 300 ppi, with pen input (ppi: pixels per inch, sharpness)</td></tr>
+      <tr><td>Kobo Clara BW</td><td>2024</td><td>6-inch</td><td>Black-and-white E Ink Carta 1300 HD</td></tr>
+      <tr><td>Kobo Clara Colour</td><td>2024</td><td>6-inch</td><td>Colour E Ink Kaleido 3</td></tr>
+      <tr><td>Kobo Libra Colour</td><td>2024</td><td>7-inch</td><td>Colour E Ink Kaleido 3, with page-turn buttons and pen support</td></tr>
+    </table>
+    <p>Sources: Kindle sizes and types from <a href="https://liliputing.com/amazon-kindle-2024-specs-compared/">Liliputing&rsquo;s comparison of Amazon&rsquo;s published 2024 Kindle specifications</a>; Scribe size and display from its <a href="https://ke.microless.com/product/amazon-kindle-scribe-ebook-reader-2024-10-2-paperwhite-300-ppi-display-1st-gen-64gb-storage-ai-note-book-tools-wi-fi-12-weeks-of-battery-life-premium-pen-included-tungsten-b0cz9t2c6b/?offer_id=363073">2024 retail specification listing</a>; Kobo sizes and panel types from Kobo&rsquo;s published specifications, compared at <a href="https://inkframe.net/en/guides/kobo-libra-clara-chooser-2026-guide">Inkframe&rsquo;s Kobo chooser</a> and on <a href="https://ereader.kobo.com/en-us/products/kobo-libra-colour">Kobo&rsquo;s Libra Colour product page</a>.</p>
+  </section>
+<section>
+    <h2 id="chips">Key Chips</h2>
+    <ul>
+      <li><strong>The E Ink panel itself &mdash; the part that <em>is</em> the device.</strong> An <strong>electrophoretic display</strong> (electrophoresis: charged particles moving through a fluid under an electric field) is a sheet of millions of microcapsules, each about the width of a human hair, filled with clear fluid holding black and white pigment particles carrying opposite electric charges. A grid of tiny transistors behind the capsules applies a field pixel by pixel: one polarity pulls white particles to the viewing surface, the reverse pulls black. Because the particles physically stay put when the field is removed &mdash; bistability &mdash; the page costs no power to hold, only to change. That one fact explains the weeks of battery life, the frozen-page diagnosis problem, and why a cracked panel shows a fractured picture. The black-and-white panels here are E Ink&rsquo;s <strong>Carta 1300</strong> generation; the colour panels are <strong>Kaleido 3</strong>, which is the same monochrome ink under a colour filter layer, giving 4,096 colours at 150 ppi for colour content against 300 ppi for black-and-white. Maker documentation: <a href="https://www.eink.com/brand/detail/Kaleido3?ref=bttr.reviews">E Ink&rsquo;s Kaleido 3 brand page</a> and <a href="https://www.eink.com/showcase?cate=ereader">E Ink&rsquo;s e-reader showcase</a>, which lists the current Kindle and Kobo models against the panels they use. Full panel datasheets are not public &mdash; see the targets note below.</li>
+      <li><strong>MediaTek MT8113 family</strong> (the SoC &mdash; system on a chip: the processor and most support circuitry on one die). Recent e-readers from <em>both</em> makers run on this one e-reader chip family. The colour Kobos (Clara Colour, Libra Colour) use the <a href="https://www.notebookcheck.net/MediaTek-MTK-8113T-Processor-Benchmarks-and-Specs.865473.0.html">MT8113T</a> &mdash; two ARM Cortex-A53 cores at up to 2.0 GHz, made on a 12&nbsp;nm process (nanometres: the size scale of the transistors; smaller generally means less power per operation). The Clara BW uses the <a href="https://www.notebookcheck.net/MediaTek-MTK-8113L-Processor-Benchmarks-and-Specs.888706.0.html">MT8113L</a> &mdash; a single Cortex-A53 at up to 1.0 GHz, which is plenty when the screen only moves when a page turns. Third-party specification compilations list the base MT8113 in recent Kindles (the 2022 Kindle and the Scribe among them): see <a href="https://en.bookfere.com/post/all-kindle-device-spec.html">BookFere&rsquo;s Kindle hardware specification table</a>. Be precise about the sourcing: Amazon publishes no processor specification for current Kindles, and MediaTek publishes no public datasheet for this family &mdash; the part numbers come from teardowns and spec databases, not from either maker&rsquo;s documentation.</li>
+      <li><strong>Storage &mdash; soldered flash, sized in books.</strong> Books and the operating system live on flash memory soldered to the mainboard (on the Libra Colour, Kobo confirmed to reviewers that the storage is eMMC &mdash; embedded MultiMediaCard, flash with its own controller in one soldered package: <a href="https://goodereader.com/blog/electronic-readers/hands-on-review-of-the-kobo-libra-colour-e-reader">Good e-Reader&rsquo;s hands-on</a>). Current models carry 16&nbsp;GB on the 6-inch readers and 32&nbsp;GB on the Libra Colour and Paperwhite Signature class (GB: gigabytes). There is no memory-card slot on any current model in the table above, so the storage you buy is the storage you keep &mdash; which was not always true, as Repair reality notes. The flash maker and part number are not published by either device maker.</li>
+      <li><strong>Memory (RAM)</strong> &mdash; the working memory the processor thinks in (RAM: random-access memory). The Libra Colour carries 1&nbsp;GB alongside its 32&nbsp;GB of storage, per the same hands-on reporting. An e-reader needs little: it renders one page at a time.</li>
+    </ul>
+    <p>Local check first, as always: our <a href="/datasheets.html">datasheet index</a> and <a href="/chips.html">chip database</a> carry what this site has collected. Panel and SoC datasheets that no maker publishes are logged as collection targets, not silently skipped.</p>
+  </section>
+
+  <section>
+    <h2 id="repair">Repair reality</h2>
+    <p>This is the section where the two product lines stop resembling each other.</p>
+
+    <h3>Kobo: parts and manuals, sold on purpose (2024)</h3>
+    <p>In April&ndash;May 2024, alongside its three new readers, Rakuten Kobo launched a repair program with iFixit. The verified facts:</p>
+    <ul>
+      <li><strong>Genuine parts, sold to owners.</strong> For the Kobo Clara BW, Clara Colour, and Libra Colour, iFixit sells genuine (maker-supplied) replacements for the <strong>display, battery, motherboard, front cover, and back cover</strong> &mdash; the whole device, in effect, part by part.</li>
+      <li><strong>Manufacturer guides, not guesswork.</strong> The repair guides are OEM guides, made with the manufacturer (the screen guide walked through in Exploded view is one). Reporting at launch put Clara screens at $90, the Libra Colour screen at $130, and batteries, motherboards, and covers in the $30&ndash;$45 range &mdash; less than a new reader, which is the point.</li>
+      <li><strong>Scored 6 out of 10.</strong> iFixit&rsquo;s repairability scoring gives all three 2024 Kobos 6/10, crediting quick opening, an easily reached battery on stretch-release adhesive, and official parts and instructions &mdash; and marking down the waterproof coating that coats everything inside and the USB-C port soldered to the motherboard.</li>
+      <li><strong>Opening ends the waterproofing.</strong> The maker&rsquo;s own warning, quoted verbatim in Exploded view, is part of the deal and is printed in the guide, not buried.</li>
+      <li><strong>One exception:</strong> launch reporting noted Kobo&rsquo;s statement that owners in Japan could not self-repair due to local laws; the program covered North and South America, the European Union, the Middle East, and most of Asia-Pacific.</li>
+    </ul>
+    <p>Sources: <a href="https://liliputing.com/kobos-2024-ereaders-are-user-repairable/">Liliputing, &ldquo;Kobo&rsquo;s 2024 eReaders are user-repairable&rdquo;</a>; <a href="https://www.iFixit.com/Guide/Kobo+Libra+Colour+Screen+Replacement/170326?revisionid=2452950">Kobo&rsquo;s OEM screen guide on iFixit</a>; <a href="https://www.notebookcheck.net/Kobo-E-readers-can-be-repaired-manufacturer-and-iFixit-offer-instructions-and-spare-parts.833532.0.html">Notebookcheck&rsquo;s launch report</a>; <a href="https://www.ifixit.com/repairability/e-reader-repairability-scores">iFixit&rsquo;s e-reader repairability scores</a>.</p>
+
+    <h3>Amazon: no parts, no manuals</h3>
+    <p>Amazon&rsquo;s position is the absence of one. Amazon sells no Kindle replacement parts to owners, and publishes no Kindle repair documentation &mdash; no guides, no parts list, no opening procedure. iFixit&rsquo;s scoring states it flatly for the recent Kindles it examined (Kindle 11th generation, Paperwhite 11th generation): <strong>&ldquo;No official replacement parts or repair instructions are available.&rdquo;</strong> (<a href="https://www.ifixit.com/repairability/e-reader-repairability-scores">iFixit repairability scores</a>.) A cracked screen or worn battery on a Kindle is, under the maker&rsquo;s model, a new Kindle. Independent shops do replace Kindle batteries and screens with third-party parts, working from community teardowns and the FCC photos &mdash; but they do it without any help, or permission structure, from Amazon.</p>
+
+    <h3>The older Kobos were more open still</h3>
+    <p><em>Community-documented:</em> owners report that many older Kobo models stored their firmware and books on a removable internal microSD card (a thumbnail-sized memory card, inside the case) &mdash; open the reader, swap or image the card, and you could back up, restore, or enlarge the device&rsquo;s storage with your own hands (<a href="http://lemmy.world/post/45862976">community discussion, Lemmy</a>). That is reported by the owner community, not published by Kobo, and it is labeled as such. Current models have moved to soldered storage. The direction of the current Kobo line is not &ldquo;more open every year&rdquo; &mdash; it is that the <em>repair</em> openness of 2024 replaced an earlier, quieter <em>storage</em> openness.</p>
+  </section>
+
+  <section>
+    <h2 id="controversies">Controversies &amp; Legal</h2>
+
+    <h3>Repairability is now a buying difference, not a footnote</h3>
+    <p>For a decade, every e-reader was equally sealed and equally undocumented, so repair never entered the buying decision. Kobo&rsquo;s 2024 program changed the comparison itself: at the same screen sizes and similar prices, one maker sells you the screen, battery, board, and covers with its own instructions, and the other sells none of it. The full dated record of how each company has treated owners is in The Full Record, below. The state laws shifting this balance &mdash; and what they currently require for electronics &mdash; are tracked at <a href="/repair-rights.html#electronics-states">repair rights, state by state</a>.</p>
+
+    <h3>Kindle software modification: a community, not a feature</h3>
+    <p><em>Community:</em> a long-running modification community around the Kindle &mdash; centred on the MobileRead forums and wiki &mdash; documents &ldquo;jailbreaking&rdquo; Kindles (removing Amazon&rsquo;s software restrictions so owners can install their own software, custom screensavers, and alternative readers). Start at the <a href="https://wiki.mobileread.com/wiki/Kindle_Hacks_Information">MobileRead wiki&rsquo;s Kindle hacks index</a>. This is owner-community work, not an Amazon feature: the wiki itself warns that Amazon does not support third-party hacks and may void your warranty, and that you proceed at your own risk. Amazon&rsquo;s updates have repeatedly closed the openings these modifications use, which is why the community&rsquo;s guides are pinned to specific firmware versions.</p>
+
+    <h3>The library door that closed</h3>
+    <p>In February 2025 Amazon removed the website option to download a purchased Kindle book to a computer for transfer over USB &mdash; for many owners, the only way they kept a local copy of books they had paid for. It is verified and dated in The Full Record, directly below, because it belongs on the record, not in a rumour.</p>
+  </section>
+
+  <section>
+    <h2 id="record">The Full Record</h2>
+    <p>Everything documented, in order, with the source for each entry. What is alleged but not proven is labeled; what is proven is stated plainly. This is the standard this site applies to every device: the record is part of the device.</p>
+    <table>
+      <tr><th>Date</th><th>What happened</th><th>Source</th></tr>
+      <tr><td>July 16&ndash;17, 2009</td><td><strong>Amazon remotely deleted purchased books from customers&rsquo; Kindles.</strong> Copies of George Orwell&rsquo;s <em>1984</em> and <em>Animal Farm</em> vanished from devices, accounts, and digital lockers, and the purchase price was refunded. The copies had been placed in the Kindle Store by a third-party seller that did not hold the U.S. rights to the books. Settlement documents later put the number of affected Kindles at fewer than 2,000. One owner, a Michigan high-school student, lost the notes he had made in his copy along with the book.</td><td><a href="https://www.pcworld.com/article/519855/amazon_kindle_1984_lawsuit.html">PCWorld</a>; <a href="https://www.networkworld.com/article/777537/saas-amazon-com-to-pay-150-000-to-settle-suit-challenging-take-back-of-i-1984-i.html">Network World</a></td></tr>
+      <tr><td>July 23, 2009</td><td><strong>Amazon apologised.</strong> Founder Jeff Bezos posted an apology to the Kindle customer forum for the way the company had handled the illegally sold copies.</td><td><a href="https://en.wikinews.org/wiki/Plaintiffs_and_Amazon_propose_settlement_to_Kindle_deletion_lawsuit">Wikinews, Oct 2, 2009</a></td></tr>
+      <tr><td>July 30, 2009</td><td><strong>Owners sued.</strong> Justin Gawronski, the Michigan student, and Antoine Bruguier, a California engineer, filed suit in U.S. federal court in Seattle, arguing among other claims that the deletion breached Amazon&rsquo;s own terms and violated the Computer Fraud and Abuse Act (the U.S. federal computer-intrusion law) and Washington consumer-protection law.</td><td><a href="https://en.wikinews.org/wiki/Plaintiffs_and_Amazon_propose_settlement_to_Kindle_deletion_lawsuit">Wikinews</a>; <a href="https://www.findlaw.com/legalblogs/technologist/amazon-settles-kindle-book-deletion-for-150k/">FindLaw</a></td></tr>
+      <tr><td>September 25, 2009 (filed)</td><td><strong>Settlement: Amazon committed not to do it again.</strong> Amazon paid $150,000 to the plaintiffs&rsquo; lawyers, who directed their share to charity, and affected customers were offered the deleted book back or $30. The binding term, quoted from the settlement: Amazon will not &ldquo;remotely delete or modify&rdquo; purchased Kindle books except where (a) the user consents, (b) the user requests a refund or fails to pay, (c) a judicial or regulatory order requires it, or (d) deletion is reasonably necessary to protect the consumer or the device or network (for example, to remove harmful code). Note what the promise does not cover: it is about deleting books. It says nothing about closing stores, ending download options, or retiring services &mdash; which is why the later entries in this table breached no settlement.</td><td><a href="https://gizmodo.com/kid-who-sued-amazon-wins-kindle-now-safer-place-for-yo-5372522">Gizmodo, quoting the settlement text</a>; <a href="https://www.pcworld.com/article/519855/amazon_kindle_1984_lawsuit.html">PCWorld</a></td></tr>
+      <tr><td>June 2, 2022</td><td><strong>Amazon announced the end of the Kindle Store in China.</strong> Amazon said it had stopped supplying Kindle devices to retailers in China, and that the Chinese Kindle e-bookstore would stop operating on June 30, 2023. Amazon told reporters the decision was not due to censorship or government pressure, and gave no specific reason beyond periodic adjustment of its offerings.</td><td><a href="https://techxplore.com/news/2022-06-amazon-kindle-e-bookstore-china.html">TechXplore (Associated Press)</a>; <a href="https://www.engadget.com/amazon-kindle-china-shutdown-132935052.html?src=rss">Engadget</a></td></tr>
+      <tr><td>June 30, 2023 &ndash; June 30, 2024</td><td><strong>The China store closed on schedule.</strong> From June 30, 2023, customers in China could no longer buy new e-books. Books already purchased could still be downloaded until June 30, 2024, and remained readable on devices after that &mdash; a store closure with a one-year download window, handled very differently from the 2009 deletion: nothing was taken off anyone&rsquo;s device.</td><td><a href="https://www.theregister.com/on-prem/2022/06/03/amazons-kindle-bookstore-to-quit-china/1004287">The Register</a>; <a href="https://www.caixinglobal.com/2024-09-05/kindles-china-e-book-business-ends-why-amazon-struggled-to-adapt-102233605.html">Caixin Global</a></td></tr>
+      <tr><td>April&ndash;May 2024</td><td><strong>The positive entry: Kobo opened its readers up.</strong> With the Clara BW, Clara Colour, and Libra Colour, Rakuten Kobo launched genuine spare parts and manufacturer repair guides with iFixit &mdash; the first time a major e-reader maker sold owners the screen, battery, board, and covers for its current models, with its own instructions. Full detail in Repair reality, above.</td><td><a href="https://liliputing.com/kobos-2024-ereaders-are-user-repairable/">Liliputing</a></td></tr>
+      <tr><td>February 26, 2025</td><td><strong>Amazon ended &ldquo;Download &amp; Transfer via USB&rdquo; for Kindle books.</strong> The option on Amazon&rsquo;s Manage Your Content and Devices page &mdash; download a purchased Kindle book to a computer, then copy it to a reader over USB &mdash; was removed. Purchased books now reach a Kindle by Wi-Fi delivery. The change did not stop owners copying their <em>own</em> files (personal documents and unprotected files) over USB, and books already downloaded stayed readable; what closed was the website route to a local copy of a purchased book. This was the last simple way many owners backed up books they had paid for, which is why it is on this record.</td><td><a href="http://umatechnology.org/amazon-removes-download-and-transfer-via-usb-for-kindle-books/">UMA Technology, reporting Amazon&rsquo;s notice and confirmation</a></td></tr>
+    </table>
+    <p><strong>For Kobo, the record is short &mdash; and that is itself the finding:</strong> this research found no comparable documented record for Rakuten Kobo of remotely deleted purchases, a store closure stranding a country&rsquo;s libraries, or repair-hostility incidents; the one headline entry for Kobo in this period is the 2024 repair program above.</p>
+    <p><em>Unverified:</em> claims circulate in owner forums that later Amazon firmware updates were designed to target modified (&ldquo;jailbroken&rdquo;) Kindles specifically. What is documented is narrower: updates have repeatedly closed the software openings the modifications use, and the community&rsquo;s own guides are version-specific for that reason. A deliberate targeting campaign is alleged by the community and not admitted or documented by Amazon; this page records it as unverified, with both sides stated, and will upgrade it only on evidence.</p>
+  </section>
+
+  <section>
+    <h2 id="did-you-know">Did you know</h2>
+    <ul>
+      <li><strong>A dead e-reader is not a blank one.</strong> Because E Ink is bistable &mdash; power is needed to change the image, not to hold it &mdash; a reader with a completely flat battery can go on displaying its last page indefinitely. The screen is the last thing to admit the device has died, which is why Kobo&rsquo;s repair guide warns technicians that the screen will keep saying <em>Powered off</em> even after the battery is unplugged: &ldquo;this is normal.&rdquo; (<a href="http://umatechnology.org/how-do-electrophoretic-e-ink-displays-work-without-a-backlight/">How electrophoretic displays work</a>; <a href="https://www.iFixit.com/Guide/Kobo+Libra+Colour+Screen+Replacement/170326?revisionid=2452950">Kobo&rsquo;s iFixit guide</a>.)</li>
+      <li><strong>The book Amazon deleted cost ninety-nine cents.</strong> The <em>1984</em> copies removed in 2009 had sold for $0.99, and Amazon refunded the price. The refund could not cover the student plaintiff&rsquo;s six weeks of notes &mdash; his annotations were stored in a separate file from the book, so the deletion left them intact and useless, notes pointing at a book that was no longer there. (<a href="https://www.makeuseof.com/amazon-remotely-deleted-a-book-from-kindles-it-was-1984/">MakeUseOf&rsquo;s account of the case</a>; <a href="https://www.pcworld.com/article/519855/amazon_kindle_1984_lawsuit.html">PCWorld</a>.)</li>
+      <li><strong>Colour E Ink is black-and-white E Ink wearing a filter.</strong> A Kaleido 3 panel is a monochrome electrophoretic layer with a colour filter array over it &mdash; which is why the same screen is rated 300 ppi for text and only 150 ppi for colour, and why its palette is 4,096 colours rather than millions. The colour costs sharpness, not a second screen. (<a href="https://www.eink.com/brand/detail/Kaleido3?ref=bttr.reviews">E Ink, Kaleido 3</a>.)</li>
+      <li><strong>China was once the Kindle&rsquo;s biggest market.</strong> Amazon began selling Kindles in China in 2013, and by 2016 China was its largest regional market for the device, with a Chinese Kindle store of nearly 700,000 books &mdash; the same store Amazon announced it would close in 2022, less than a decade later. (<a href="https://www.caixinglobal.com/2024-09-05/kindles-china-e-book-business-ends-why-amazon-struggled-to-adapt-102233605.html">Caixin Global</a>.)</li>
+      <li><strong>The waterproof Kobo is waterproofed with a coating you have to destroy to repair it.</strong> Every internal surface of the Libra Colour &mdash; board, cables, connectors &mdash; is covered in a thin, brittle, plastic-like waterproof coating. Kobo&rsquo;s own guide tells you to heat it and pick it off connector by connector, warns that it flakes into small pieces, and states up front that following the guide removes the reader&rsquo;s water protection. The 6/10 repairability score and the IP rating are, literally, the same material pulling in opposite directions. (<a href="https://www.iFixit.com/Guide/Kobo+Libra+Colour+Screen+Replacement/170326?revisionid=2452950">Kobo&rsquo;s iFixit guide</a>; <a href="https://www.ifixit.com/repairability/e-reader-repairability-scores">iFixit scores</a>.)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 id="reading">Further Reading</h2>
+    <ul>
+      <li><a href="https://www.iFixit.com/Guide/Kobo+Libra+Colour+Screen+Replacement/170326?revisionid=2452950">Kobo Libra Colour Screen Replacement</a> &mdash; Kobo&rsquo;s OEM repair guide on iFixit, the primary source for the exploded view above</li>
+      <li><a href="https://liliputing.com/kobos-2024-ereaders-are-user-repairable/">Kobo&rsquo;s 2024 eReaders are user-repairable</a> &mdash; Liliputing, on the Kobo&ndash;iFixit parts and guides launch</li>
+      <li><a href="https://www.ifixit.com/repairability/e-reader-repairability-scores">iFixit e-reader repairability scores</a> &mdash; the 2024 Kobos at 6/10, and the &ldquo;no official parts&rdquo; verdict on recent Kindles</li>
+      <li><a href="https://help.kobo.com/hc/en-us/articles/360017605314-Manual-reset-your-Kobo-Clara-Colour-Kobo-Clara-BW-Kobo-Clara-HD-Kobo-Nia-Kobo-Elipsa-Kobo-Clara-2E-Kobo-Elipsa-2E">Kobo&rsquo;s manual reset guide</a> &mdash; the maker&rsquo;s own recovery procedure for the current Clara models</li>
+      <li><a href="https://www.pcworld.com/article/519855/amazon_kindle_1984_lawsuit.html">Amazon settles the Kindle &ldquo;1984&rdquo; lawsuit</a> &mdash; PCWorld, on the 2009 deletion and settlement</li>
+      <li><a href="/repair-rights.html">Repair rights</a> &mdash; the federal and state law behind every repair claim on this page</li>
+      <li><a href="/library-hub.html">The library hub</a> &mdash; every manual, filing, and record this site has collected, in one place</li>
+      <li>Wave-1 siblings, built to the same standard: <a href="/devices/iphone/">iPhone</a>, <a href="/devices/xbox/">Xbox</a>, <a href="/devices/windows-pcs/">Windows PCs</a>, <a href="/devices/smart-tv/">Smart TVs</a> &mdash; or the full <a href="/devices/">device index</a></li>
+      <li><a href="/obsolescence.html">Planned obsolescence</a> and the <a href="/hot-100.html">Hot 100</a> &mdash; where reader-class devices sit in the wider record</li>
+    </ul>
+  </section>
+  <blockquote class="bb-quote"><p>&ldquo;One of the big lessons of a big project is you don’t want people that aren’t really programmers programming, you’ll suffer for it!&rdquo;</p><p class="bb-quote-by">&mdash; John Carmack</p></blockquote>
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

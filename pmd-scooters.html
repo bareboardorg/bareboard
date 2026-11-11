@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scooters Are PMDs Too &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="Mobility scooters are power mobility devices too: tiller, wig-wag and transaxle in plain language, the Shark, S-Drive and VSI controllers, and the failures that strand scooters, with owner checks.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Scooters Are PMDs Too">
+<meta property="og:description" content="Tiller, wig-wag and transaxle explained; Shark, S-Drive and VSI controllers; and the failures that strand scooters, with owner checks.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-scooters.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Scooters Are PMDs Too</h1>
+    <p class="lede"><strong>PMD</strong> stands for <strong>power mobility device</strong> &mdash; Medicare&rsquo;s name for the whole family. It covers power wheelchairs <em>and</em> mobility scooters. Medicare&rsquo;s own words for a scooter are <strong>power-operated vehicle</strong>, shortened to <strong>POV</strong>. This section of the site has taught chairs so far. This page teaches the other half of the family: the scooter &mdash; how it steers, how it drives, what its electronics are, and what strands it.</p>
+    <p>If you already know the chair pages, almost everything transfers. The batteries, the brakes, the controllers and the dealer lock are the same ideas in a different shape. What changes is the shape: a scooter is steered like a bicycle and driven by one motor through one axle, where a chair is steered by a joystick and driven by two motors. Read the differences once and the rest of this section is yours too.</p>
+    <p><em>Provenance: this page is compiled from the manufacturers&rsquo; own published documents &mdash; Dynamic Controls&rsquo; <a href="/library/collected-public-docs/pmd/dynamic-controls_shark-power-module_technical.pdf">SHARK Power Module Installation Manual (GBK80262, Issue 7)</a>, PG Drives Technology&rsquo;s <a href="/library/collected-public-docs/pmd/pg-drives_vsi_technical.pdf">newVSI Technical Manual (SK80151-1)</a> and <a href="/library/collected-public-docs/pmd/pg-drives_mobility-diagnostics_fault-codes.pdf">Mobility Diagnostics guide</a>, Pride Mobility&rsquo;s Go-Go owner&rsquo;s manuals and its <a href="/library/collected-public-docs/pmd/pride_celebrity-2000_parts.pdf">Celebrity 2000 Illustrated Parts Breakdown</a>, Drive Medical&rsquo;s Scout owner&rsquo;s manual, and Curtiss-Wright&rsquo;s published <a href="https://industrial.curtisswright.com/en-gb/pgdt/Online-Diagnostics/Flash-Code-List/S-Drive-Flash-Codes">S-Drive flash-code list</a> &mdash; and checked against them. Where a manual named in this page is not yet in the site library, its name is left unlinked and it is listed as a collection target. Documentation, not bench measurement: if your scooter disagrees with this page, the scooter wins &mdash; write down what yours actually does.</em></p>
+  </section>
+
+  <section id="safety">
+    <p><strong>Before any check on this page that touches a plug, cable, motor, brake, or battery terminal:</strong> put the scooter on level ground, switch it OFF and take the key out, and disconnect the battery pack or trip the main circuit breaker (the resettable switch that cuts all power when the electrics are overloaded). Do not do the check while seated on the scooter. Never change the freewheel lever (defined below) on a slope, and never sit on a scooter that is in freewheel mode &mdash; in freewheel the brake is off and the scooter can roll. If you cannot disconnect power, inspect visually only and stop.</p>
+    <p>The manufacturers&rsquo; own warnings, carried word for word. Pride Mobility, from the Go-Go ES2 owner&rsquo;s manual:</p>
+    <blockquote>
+      <p>&ldquo;Before placing your Travel Scooter into or taking it out of freewheel mode, turn the power switch to the &ldquo;OFF&rdquo; (center) position. Never sit on a Travel Scooter when it is in freewheel mode. Never put a Travel Scooter in freewheel mode on any incline.&rdquo;</p>
+      <p>&ldquo;When your Travel Scooter is in freewheel mode, the braking system is disengaged. &bull; Disengage the drive motors only on a level surface. &bull; Ensure the power switch is in the &ldquo;OFF&rdquo; (center) position. &bull; Stand to the side of the scooter to engage or disengage freewheel mode. Never sit on a scooter to do this. &bull; After you have finished pushing your Travel Scooter, always return it to the drive mode to lock the brakes.&rdquo;</p>
+      <p>&ldquo;Do not pull on electrical harness wires directly to detach them from the Travel Scooter. Always grasp the connector itself when disconnecting the harness to prevent wire damage.&rdquo;</p>
+    </blockquote>
+    <p>Drive Medical, from the Scout owner&rsquo;s manual: <em>&ldquo;Always make sure freewheel levers are in the drive position before getting in or out&rdquo;</em> and <em>&ldquo;Do not put the scooter in freewheel when on an incline or decline.&rdquo;</em> Dynamic Controls, from the <a href="/library/collected-public-docs/pmd/dynamic-controls_shark-power-module_technical.pdf">SHARK manual</a>&rsquo;s safety list: <em>&ldquo;Do not try to open or disassemble any case - there are no user-serviceable parts inside&rdquo;</em> and <em>&ldquo;Do not use the park brake release on a slope.&rdquo;</em> True &mdash; for repairs inside the cases. Everything on this page stays outside them: levers, plugs, batteries, and the codes the scooter shows you for free.</p>
+  </section>
+
+  <section id="what-counts">
+    <h2>One category, two machines</h2>
+    <p><a href="https://www.medicare.gov/coverage/wheelchairs-scooters?ref=dealsbysearch.com">Medicare Part B covers &ldquo;wheelchairs and power-operated vehicles (scooters)&rdquo;</a> under the same benefit, on the same terms: medically necessary, a face-to-face examination and a written prescription first, and a supplier enrolled in Medicare. The site&rsquo;s hub page says the same thing in one line: <a href="/pmd.html">PMD</a> is the official Medicare name for a power wheelchair or a power scooter. The repair rights are shared too &mdash; the state laws tracked on <a href="/repair-rights.html">Repair Rights</a> name mobility scooters alongside wheelchairs.</p>
+    <p>So why did the chairs get eleven pages first? Because the gatekeeping is identical and the chairs were documented first. A scooter has the same lock in a simpler box: one controller, one motor, one brake, and a fault code standing between you and a dealer visit. Here is the whole difference, side by side:</p>
+<table>
+<thead><tr><th></th><th>Power chair</th><th>Mobility scooter</th></tr></thead>
+<tbody>
+<tr><td><strong>You steer with</strong></td><td>A joystick. Push it left and the chair turns left.</td><td>A <strong>tiller</strong> (defined below): handlebars on a steering column. Turn the bars and the front wheel turns, like a bicycle.</td></tr>
+<tr><td><strong>How it turns</strong></td><td><strong>Skid steering</strong>: two drive motors, one per side. To turn, the controller runs one side slower or backwards. The chair can spin in its own length.</td><td>The front wheel steers mechanically. The scooter turns like a bicycle or a car, in an arc, and cannot spin on the spot.</td></tr>
+<tr><td><strong>Drive motors</strong></td><td>Two &mdash; one on each drive wheel.</td><td>One &mdash; inside the transaxle (defined below), driving both rear wheels through it on almost every model.</td></tr>
+<tr><td><strong>Speed control</strong></td><td>How far you push the joystick.</td><td>A <strong>wig-wag</strong> lever (defined below): one side for forward, one side for reverse.</td></tr>
+<tr><td><strong>Brakes</strong></td><td>Two electric park brakes, one in each motor.</td><td>Usually one electromagnetic brake on the transaxle.</td></tr>
+<tr><td><strong>Seat</strong></td><td>Fixed to the chair; seating is part of the prescription.</td><td>Usually lifts off its post, and swivels to help you get on and off.</td></tr>
+<tr><td><strong>Taken apart for a car boot</strong></td><td>Rarely; chairs travel whole or by lift.</td><td>Often by design &mdash; travel scooters split into sections with no tools (see <a href="#travel">Travel scooters</a> below).</td></tr>
+</tbody>
+</table>
+    <p>Three wheels or four? Both exist in both sizes. A <strong>3-wheel</strong> scooter has one front wheel: it turns tighter indoors and is easier to manoeuvre, and less steady on slopes and rough ground. A <strong>4-wheel</strong> scooter has two front wheels: steadier, with a wider turning circle. Pride&rsquo;s parts book for the Celebrity 2000 &mdash; a full-size scooter of the same era as the Jazzy chairs &mdash; lists both front ends for the same machine: &ldquo;Front 3-Wheel&rdquo; and &ldquo;Front 4-Wheel&rdquo; assemblies in one <a href="/library/collected-public-docs/pmd/pride_celebrity-2000_parts.pdf">Illustrated Parts Breakdown</a>.</p>
+  </section>
+
+  <section id="anatomy">
+    <h2>The parts, in the order your hands meet them</h2>
+    <p>Every term is defined where it first appears. Once you can name these parts, every other PMD page makes sense on a scooter too.</p>
+<table>
+<thead><tr><th>Part</th><th>What it is, in one line</th></tr></thead>
+<tbody>
+<tr><td><strong>Tiller</strong></td><td>The steering column and handlebars in front of the seat. You turn it to steer, and it carries the controls. On many models it folds or tilts toward you, locked by a <strong>tiller adjustment knob</strong>.</td></tr>
+<tr><td><strong>Delta tiller</strong></td><td>A tiller whose bar is a wraparound loop, roughly the shape of the Greek letter delta. You can rest your wrists on it and work the throttle with either hand &mdash; the standard bar on most full-size scooters, including Golden Technologies&rsquo; Buzzaround line.</td></tr>
+<tr><td><strong>Tiller pod</strong> (also called the tiller console, or dash)</td><td>The control box on top of the tiller: key switch, battery gauge, speed dial, horn, lights, and the throttle. Pride&rsquo;s words: &ldquo;The tiller console houses all controls needed to drive your Travel Scooter including the horn, the power switch, the battery condition meter and the throttle control lever.&rdquo;</td></tr>
+<tr><td><strong>Wig-wag</strong> (throttle control lever)</td><td>One rocker lever across the tiller. Press or pull one side and the scooter goes forward; the other side reverses. Let go and it springs back to the middle &mdash; neutral &mdash; and the scooter stops. Either thumb or fingers can work it, from either side.</td></tr>
+<tr><td><strong>Throttle potentiometer</strong> (throttle pot)</td><td>The electrical part under the wig-wag. A <strong>potentiometer</strong> is a variable resistor &mdash; a knob or lever that turns a position into a voltage. The wig-wag turns this one: middle position means stop, and the further it moves each way, the faster the controller is told to go in that direction. It is a wear part, and its wear is the scooter fault chairs do not have (see <a href="#failures">Failures</a>).</td></tr>
+<tr><td><strong>Speed potentiometer</strong> (speed pot, speed dial)</td><td>A second, smaller potentiometer: the dial that caps your top speed before you set off. The wig-wag then controls speed up to that cap.</td></tr>
+<tr><td><strong>Key switch</strong></td><td>The scooter&rsquo;s ignition. Many scooters have no power button beyond this: key in and on, or off and out.</td></tr>
+<tr><td><strong>Controller</strong></td><td>The sealed electronics box, usually under the seat or in the rear section, that takes the tiller&rsquo;s signals and meters battery power to the motor. The scooter&rsquo;s equivalent of a chair&rsquo;s power module. The families are named in <a href="#electronics">The electronics chain</a>.</td></tr>
+<tr><td><strong>Transaxle</strong></td><td>The combined gearbox and axle unit between the rear wheels: one sealed unit containing the gears and the axle the wheels bolt to. The motor mounts on it. Pride&rsquo;s specification line for the Go-Go Ultra is the whole drive in nine words: &ldquo;Rear-wheel drive, sealed transaxle, 24 volt DC motor.&rdquo;</td></tr>
+<tr><td><strong>Motor</strong></td><td>A 24-volt DC motor bolted to the transaxle. It drives both rear wheels through the transaxle&rsquo;s gears and its built-in <strong>differential</strong> &mdash; the gear arrangement that lets the two rear wheels turn at different speeds in a corner, as on a car.</td></tr>
+<tr><td><strong>Electromagnetic brake</strong> (park brake)</td><td>A brake on the motor/transaxle that is <em>held on by a spring and released by electricity</em>. Power flows, the brake releases, the scooter can drive. Power stops &mdash; you let go of the wig-wag, switch off, or a fault trips &mdash; and the spring clamps the brake on. That is why a dead scooter will not roll, and why releasing it is a deliberate act (the freewheel lever, next).</td></tr>
+<tr><td><strong>Freewheel lever</strong> (manual freewheel lever)</td><td>A small lever on the transaxle, usually at the top right of the rear section. In <strong>DRIVE</strong> the transaxle is engaged and the brake works. In <strong>freewheel</strong> (also marked PUSH or N) the drive and brake are disengaged so a helper can push the scooter by hand for a short distance. Pride&rsquo;s words: &ldquo;Push forward on the manual freewheel lever to disable the drive system and the brake system. Push the manual freewheel lever rearward to reengage the drive and the brake systems.&rdquo; Positions and markings vary by model &mdash; your manual&rsquo;s picture is the authority for yours.</td></tr>
+<tr><td><strong>Battery pack</strong></td><td>Two 12-volt deep-cycle batteries wired in series to make 24 volts, under the seat. On travel scooters they live in one lift-off <strong>battery pack</strong> (a box with a handle, containing the pair and its harness); on larger scooters they are two separate batteries in wells under the seat or shroud. Either way it is a <em>pair</em>, and it is replaced as a pair (see <a href="#failures">Failures</a>).</td></tr>
+<tr><td><strong>Anti-tip wheels</strong></td><td>Two small wheels on stalks at the very back, there to catch the scooter if it tips rearward on a slope or a kerb. Pride: &ldquo;The anti-tip wheels are an integral and important safety feature of your Travel Scooter.&rdquo;</td></tr>
+<tr><td><strong>Front-to-rear harness</strong></td><td>On a scooter that splits for transport, the cable that joins the tiller and front section to the controller and rear section. It unplugs at the split &mdash; which makes its connector a prime suspect after every reassembly (see <a href="#travel">Travel scooters</a>).</td></tr>
+<tr><td><strong>Inhibit</strong></td><td>A controller input that forbids driving when something is unsafe &mdash; above all, while the charger is plugged in. A scooter that will not move with the charger connected is not broken; it is inhibited, on purpose.</td></tr>
+</tbody>
+</table>
+  </section>
+
+  <section id="electronics">
+    <h2>The electronics chain: tiller pod &rarr; controller &rarr; transaxle</h2>
+    <p>A chair&rsquo;s chain is joystick &rarr; power module &rarr; two motors. A scooter&rsquo;s is the same shape with one motor at the end:</p>
+    <ol>
+      <li><strong>Your hands</strong> turn the tiller (steering is mechanical &mdash; no electronics steer a standard scooter) and work the wig-wag.</li>
+      <li><strong>The tiller pod</strong> turns wig-wag movement into a voltage from the throttle pot, adds the speed pot&rsquo;s cap, the key switch, and the battery gauge display.</li>
+      <li><strong>One cable run</strong> down the tiller and along the frame carries those signals to the controller &mdash; on a travel scooter, across the front-to-rear harness connector.</li>
+      <li><strong>The controller</strong> reads the throttle, checks its inhibits and its brake circuit, and meters 24-volt battery power to the motor: more for more wig-wag, reversed polarity to reverse.</li>
+      <li><strong>The transaxle</strong> turns that power into motion at both rear wheels, and its electromagnetic brake releases while power flows and clamps when it stops.</li>
+    </ol>
+    <p>Three controller families cover most scooters you will meet. The first two are scooter-first designs; the third is a chair system that also appears on scooters and small chairs.</p>
+    <h3>Dynamic Controls Shark &mdash; the scooter system this site already translates</h3>
+    <p>Shark is Dynamic Controls&rsquo; integrated system: a remote (the tiller unit, on a scooter) talking to a power module over the <strong>SHARK Communications Bus</strong> (the cable the two units talk on). The <a href="/library/collected-public-docs/pmd/dynamic-controls_shark-power-module_technical.pdf">SHARK Power Module Installation Manual</a> specifies the family: modules rated from 40 A to 75 A peak with a 15 A boost on some variants, fed by &ldquo;24V supply, 2 x 12V in series,&rdquo; driving a &ldquo;24V DC permanent magnet&rdquo; motor. One detail in that manual is pure scooter: the park brake can be configured <strong>Single</strong> &mdash; one 24 V brake driven from the M1 output only &mdash; because a transaxle has one brake where a chair has two. (Set a single-brake machine to &ldquo;Dual&rdquo; by mistake and it reports a right park brake fault for a brake that does not exist.)</p>
+    <p>Shark shows its faults as flash counts on the tiller unit&rsquo;s information gauge, and the full translated table is already on this site: <a href="/pmd-fault-codes-2.html">Fault Codes, Translated: The Other Systems</a>. It applies to a Shark scooter word for word, with one translation: where the table says &ldquo;left motor&rdquo; or &ldquo;right motor,&rdquo; a scooter has only the one transaxle motor &mdash; read it as <em>the</em> motor, and its one brake. Do not re-learn the table here; use it there.</p>
+    <h3>PG Drives S-Drive &mdash; the scooter-only controller family</h3>
+    <p>S-Drive is PG Drives Technology&rsquo;s (now Curtiss-Wright&rsquo;s) controller range built for scooters and nothing else: one box driving one transaxle motor. The maker&rsquo;s brochure rates the range from the S45 (45 A) for small transportable scooters up through S70, S90, S120 and S140 to the S200 (200 A) for the largest models, with a tiller module carrying the <strong>TruCharge</strong> display &mdash; the battery gauge whose bars also speak the fault codes. S-Drive fault codes are counted in flashing bars on that display, summarised in <a href="#fault-codes">How the fault tables apply</a> below from Curtiss-Wright&rsquo;s own published list, and covered in depth in PG Drives&rsquo; <a href="/library/collected-public-docs/pmd/pg-drives_mobility-diagnostics_fault-codes.pdf">Mobility Diagnostics guide</a>, which this library holds.</p>
+    <h3>PG Drives VSI &mdash; the chair system that crosses over</h3>
+    <p>The VSI is an integrated chair controller &mdash; joystick unit and power stage in one box &mdash; fitted to a large share of small power chairs and to some scooters and scooter-style machines. Its manual is the <a href="/library/collected-public-docs/pmd/pg-drives_vsi_technical.pdf">newVSI Technical Manual (SK80151-1)</a>, and its one-page code sheet is held separately as the <a href="/library/collected-public-docs/pmd/pg-drives_vsi_fault-codes.pdf">VSI flash-code list</a>. The translated VR2 &amp; VSI table is in <a href="/pmd-fault-codes.html">Fault Codes, Translated (part one)</a>. On a scooter the same translation as Shark applies: the VSI expects two motors, a single-motor machine uses one channel, and &ldquo;left/right motor&rdquo; codes point at the one transaxle motor and its plugs.</p>
+    <p>All three families are programmed, not just repaired: top speed, acceleration, braking rates and throttle behaviour live in settings a programmer changes. That is the same dealer-tier lock as on chairs &mdash; see <a href="/pmd-programmers.html">The Keys</a> for who holds which programmer, and <a href="/pmd-settings.html">The Settings</a> for what the settings do. A scooter is not a lesser lock. It is the same lock with fewer parts behind it.</p>
+  </section>
+
+  <section id="failures">
+    <h2>The failures that strand scooters &mdash; and the owner checks</h2>
+    <p>Work down this table in order before you call anyone. The first four need no tools and open nothing. The safety block at the top of this page applies to every check that touches a plug or a terminal.</p>
+<table>
+<thead><tr><th>What strands you</th><th>Why it happens</th><th>Owner check, in order</th></tr></thead>
+<tbody>
+<tr><td><strong>The battery pair is done</strong> &mdash; the commonest stranding, on scooters as on chairs</td><td>Two 12 V batteries in series are only as strong as the weaker one. One tired battery drags the pair down: the gauge falls fast under load, range shrinks, then the controller refuses to drive at all (a low-battery fault). Travel scooters suffer most: small batteries, deep discharges, long storage in a car boot.</td><td>Charge fully first &mdash; Pride specifies 8 to 14 hours for the Go-Go class &mdash; then judge range, not the gauge at rest. If it still dies fast, load-test each battery separately (the chair procedure is <a href="/pmd-fixes.html">Cheap Fixes, Procedure 3</a>). Replace as a matched pair, never one: Pride, verbatim: &ldquo;Always use two batteries of the exact same type, chemistry, and amp-hour (Ah) capacity&rdquo; and &ldquo;Do not mix old and new batteries. Always replace both batteries at the same time.&rdquo;</td></tr>
+<tr><td><strong>Freewheel left disengaged</strong> &mdash; the scooter beeps or flashes a brake fault and will not move, though the motor may hum</td><td>The lever was flipped to push the scooter, bumped in a car boot, or left halfway. The controller sees the brake circuit open (or the freewheel switch made) and refuses to drive. S-Drive names it plainly: its 4-bar code is the freewheel switch trip.</td><td>Level ground, key out. Find the lever on the transaxle and move it firmly all the way to DRIVE until it seats. Key in and try again. The full reset procedure, shared with chairs, is <a href="/pmd-fixes.html">Cheap Fixes, Procedure 1</a>.</td></tr>
+<tr><td><strong>Tiller pot wear</strong> &mdash; jerky starts, a dead spot, drive that cuts out, lost reverse, or a throttle fault at switch-on. The scooter-only failure.</td><td>The wig-wag&rsquo;s potentiometer is a moving contact wiped across a track thousands of times. The track wears, worst at the neutral centre where it sits. The controller then reads a throttle voltage it does not trust &mdash; out of range, or present at power-up &mdash; and trips instead of driving. The speed pot wears the same way, more slowly.</td><td>Hands off the wig-wag, switch off, switch on touching nothing: if the fault clears, the pot was displaced or is drifting. Note which symptom you have (forward only? reverse only? one dead spot?) and the code it gives &mdash; that note is the difference between &ldquo;replace the throttle pot&rdquo; (a tiller-pod part) and a dealer&rsquo;s &ldquo;new controller.&rdquo; Pot replacement itself is inside the tiller pod: a parts job, listed in <a href="/pmd-parts.html">Parts, Not Assemblies</a>&rsquo; terms &mdash; the pot, not the pod, not the scooter.</td></tr>
+<tr><td><strong>Brake faults</strong> &mdash; a brake code, a scooter that will not release its brake, or one that rolls when it should hold</td><td>The electromagnetic brake is a coil and a friction disc on the transaxle. Its small plug corrodes, its coil fails open, or the freewheel mechanism leaves it disengaged. On Shark that is flash code 5 (single brake: the M1 brake); on S-Drive, 9 bars; on VSI, 9 flashes.</td><td>Freewheel lever firmly to DRIVE first (above). Then, power off and battery disconnected, check the brake&rsquo;s small plug at the transaxle: seated, pins clean and straight. If the code stays with a sound plug, the fault is the coil or the brake itself &mdash; name the code when you call. Never ride with a brake that does not hold: the push test in <a href="/pmd-start.html">Start Here</a> (switched off, the machine must not roll) applies to scooters word for word.</td></tr>
+<tr><td><strong>Charger still connected</strong> &mdash; scooter alive, will not drive</td><td>Not a fault: the inhibit doing its job. Some scooters also inhibit if the charger socket&rsquo;s inhibit pin is dirty after the charger is removed.</td><td>Unplug the charger. If it still will not drive, the socket check is <a href="/pmd-fixes.html">Cheap Fixes, Procedure 2</a> &mdash; read its safety step first.</td></tr>
+<tr><td><strong>Tripped breaker or blown tiller fuse</strong> &mdash; totally dead, no gauge, no horn</td><td>The main circuit breaker trips on overload or a dying battery&rsquo;s voltage sag under strain; Pride notes it may also mean the batteries need charging more often. Some models add a fuse protecting the tiller console electronics, under the battery pack on the Go-Go class.</td><td>Find the breaker&rsquo;s reset button (it pops out when tripped, on the battery pack or rear section). Let the electrics rest a minute, push it in once. If it trips again straight away, stop &mdash; that is a real fault, and the code or the symptom is what you report.</td></tr>
+<tr><td><strong>Harness and connector trouble after transport</strong> &mdash; faults that began the day the scooter went in a car</td><td>Travel scooters unplug by design. A front-to-rear harness left half-seated, a bent pin, or dirt in the connector reads to the controller as a motor, brake or throttle fault.</td><td>Power off, battery pack off. Unplug and re-seat each connector by its body &mdash; never by the wires (Pride&rsquo;s warning is in the safety block above). Inspect pins: straight, clean, none pushed back. Reassemble fully before testing (see <a href="#travel">Travel scooters</a>).</td></tr>
+</tbody>
+</table>
+    <p>What to write down before any call: the code (flashes, bars or beeps &mdash; counted twice), what the scooter was doing when it started, and whether it began after charging, transport, or reassembly. That note, plus <a href="/pmd-reading.html">Reading the Chair</a>&rsquo;s approach &mdash; it reads scooters too &mdash; is how a $40 potentiometer stays a $40 potentiometer. For the repairs themselves, <a href="/pmd-repairs.html">Repairs</a> and <a href="/pmd-fixes.html">The Cheap Fixes</a> were written for chairs and apply here wherever the part is shared: batteries, brakes, bus cables, casters.</p>
+  </section>
+
+  <section id="travel">
+    <h2>Travel scooters: the ones that come apart</h2>
+    <p>A whole class of scooters &mdash; Pride&rsquo;s Go-Go line is the best known, and Drive&rsquo;s Scout and Golden&rsquo;s Buzzaround travel models follow the same pattern &mdash; is designed to <strong>disassemble</strong> (split into sections for lifting into a car) with no tools at all. Pride&rsquo;s manuals put it plainly: &ldquo;No tools are required to disassemble or assemble your scooter. Always disassemble or assemble your scooter on a level, dry surface.&rdquo; Depending on the model, the result is four to six pieces:</p>
+    <ul>
+      <li><strong>The seat</strong> &mdash; lifts straight off its post after the rotation lever is released.</li>
+      <li><strong>The battery pack</strong> &mdash; lifts off by its handle once its harness and tie-down strap are disconnected. This is the heaviest single piece on most models, and the one to lift with help: Pride, verbatim: &ldquo;Do not lift beyond your physical capability. Ask for assistance when necessary while disassembling or assembling your scooter.&rdquo;</li>
+      <li><strong>The rear shroud</strong> (the plastic body cover over the rear section) on models that have one &mdash; lifts off.</li>
+      <li><strong>The basket</strong> &mdash; lifts off the tiller.</li>
+      <li><strong>The front section</strong> &mdash; frame, floorboard, front wheel(s) and tiller, with the tiller folded down and locked straight by the <strong>tiller lock knob</strong> (the knob that pins the tiller in the straight-ahead position for lifting).</li>
+      <li><strong>The rear section</strong> &mdash; transaxle, motor, brake, controller and rear wheels: the heavy, valuable end, and the end that must not be dragged by its cables.</li>
+    </ul>
+    <p>The split is electrical as well as mechanical, and the connectors are the whole game:</p>
+    <ul>
+      <li><strong>Battery harness:</strong> pack to scooter. Off first when splitting, on last when rebuilding is Pride&rsquo;s order in reverse &mdash; follow your manual&rsquo;s order, not habit.</li>
+      <li><strong>Front-to-rear harness:</strong> the multi-pin connector joining tiller to controller. It is unplugged to split the frame and is the first suspect for any fault that starts after a trip (see <a href="#failures">Failures</a>). Grasp the connector body, never the wires.</li>
+      <li><strong>Frame hooks and the lock-up pin:</strong> the front and rear frames hook together and are pinned. If the hooks are not fully seated on the frame tube, the sections flex, the harness strains, and intermittent faults follow.</li>
+    </ul>
+    <p>Reassembly checks, in order: frame hooks seated and pin in; front-to-rear harness clicked home; battery harness connected and strap on; freewheel lever in DRIVE before anyone sits down; tiller lock released before riding &mdash; Pride, verbatim, from the Go-Go manual: &ldquo;After assembling the Go-Go, make absolutely certain the tiller lock knob is in the unlocked position before attempting to ride your scooter.&rdquo; Then the same proof as any repair: slow drive on level ground, stop, switch off, and confirm it will not roll by hand.</p>
+    <p>Larger scooters mostly do not split. They travel whole, by lift or ramp, and their owner checks are the same minus the harness split: battery pair under the seat, one transaxle at the back, one tiller at the front. The exploded parts books show the layout for both kinds &mdash; the Celebrity 2000&rsquo;s <a href="/library/collected-public-docs/pmd/pride_celebrity-2000_parts.pdf">parts breakdown</a> in this library separates Tiller, Drive, Electronics and Wheel assemblies exactly as the machine comes apart. More in <a href="/pmd-exploded.html">Exploded Views</a> and the <a href="/library-hub.html">Library</a>.</p>
+  </section>
+
+  <section id="fault-codes">
+    <h2>How the site&rsquo;s fault tables apply to scooters</h2>
+    <p>Do not learn a second set of tables. Learn where your scooter&rsquo;s codes already live:</p>
+    <ul>
+      <li><strong>Shark scooter:</strong> the full flash-code table is <a href="/pmd-fault-codes-2.html">Fault Codes, Translated: The Other Systems</a>. Read &ldquo;left motor&rdquo; as the one transaxle motor, &ldquo;left park brake&rdquo; (5 flashes) as the one brake, and ignore the right-side codes (4 and 6 flashes) unless your machine genuinely has two motors &mdash; on a single-brake machine, a 6-flash code usually means the controller was configured &ldquo;Dual&rdquo; by mistake.</li>
+      <li><strong>VSI scooter:</strong> the VR2 &amp; VSI bar table is <a href="/pmd-fault-codes.html">Fault Codes, Translated (part one)</a>, backed by the <a href="/library/collected-public-docs/pmd/pg-drives_vsi_fault-codes.pdf">maker&rsquo;s own one-page list</a>. Same single-motor translation.</li>
+      <li><strong>S-Drive scooter:</strong> the full table lives on <a href="/pmd-legacy-pg.html">The Older PG Systems</a>; here is the maker&rsquo;s list in short, from Curtiss-Wright&rsquo;s published <a href="https://industrial.curtisswright.com/en-gb/pgdt/Online-Diagnostics/Flash-Code-List/S-Drive-Flash-Codes">S-Drive flash codes</a> &mdash; count the flashing bars on the TruCharge display: <strong>1</strong> low battery voltage (charge; check battery connections); <strong>2</strong> motor disconnected (check motor-to-controller leads and the freewheel switch position); <strong>3</strong> motor wiring trip (a motor wire shorting to battery &mdash; inspect the leads); <strong>4</strong> freewheel switch trip (lever to DRIVE; check its connections); <strong>5</strong> not used; <strong>6</strong> charger connected / inhibit active (unplug the charger; check the seat is in the driving position where a seat switch is fitted); <strong>7</strong> throttle trip (hands off the wig-wag; switch off and on with it at neutral); <strong>8</strong> possible control system trip (check every connection is secure); <strong>9</strong> solenoid brake trip (check brake and motor connections; confirm the scooter is not in freewheel); <strong>10</strong> high battery voltage (usually a poor battery connection &mdash; check the terminals). Three more displays are information, not faults: sleep mode (switch off and on), charge step (the batteries are charging), and throttle displaced at switch-on (centre the wig-wag; off and on again).</li>
+      <li><strong>Beeps instead of flashes:</strong> many Pride scooters speak in beeps &mdash; a run of fast beeps, a pause, then a counted run of slower beeps that is the code; the scooter will not run until the condition is fixed and it has been switched off and back on. The Go-Go pattern maps onto the same faults as above: 2 beeps, battery voltage too low; 3, battery voltage too high; 5, solenoid brake trip &mdash; check the freewheel lever; 6, throttle pressed while the key was inserted; 7, throttle or speed potentiometer fault; 8, motor disconnected (after transport, suspect the front-to-rear connector first); 9, possible controller trip. Your own model&rsquo;s manual is the authority for its beep list &mdash; counts differ between ranges.</li>
+    </ul>
+    <p>Whichever language yours speaks &mdash; flashes, bars or beeps &mdash; the discipline is identical, and it is the discipline of <a href="/pmd-start.html">Start Here</a>: count it twice, write it down with the date, do the owner check, and only then call anyone. The phone in your pocket that photographs a gauge and videos a flash pattern is also the beginning of the owner tool this section is building &mdash; see <a href="/pmd-control.html">Owner Control</a>.</p>
+  </section>
+
+  <section id="sources">
+    <h2>Sources</h2>
+    <ul>
+      <li>Dynamic Controls, <a href="/library/collected-public-docs/pmd/dynamic-controls_shark-power-module_technical.pdf"><em>SHARK DK-PMA, DK-PMB &amp; DK-PMC Series Power Modules Installation Manual</em></a>, GBK80262 Issue 7, August 2014 &mdash; site library copy. Ratings, battery and motor specification, Single/Dual park-brake configurations, and the &sect;7.6 safety and misuse warnings quoted above.</li>
+      <li>PG Drives Technology, <a href="/library/collected-public-docs/pmd/pg-drives_vsi_technical.pdf"><em>newVSI Technical Manual</em></a>, SK80151-1, 2011 &mdash; site library copy. VSI operation, self-help guide and diagnostics.</li>
+      <li>PG Drives Technology, <a href="/library/collected-public-docs/pmd/pg-drives_vsi_fault-codes.pdf"><em>VSI Controller Flash Codes</em></a> &mdash; site library copy. The one-page bar list behind part one&rsquo;s VSI table.</li>
+      <li>PG Drives Technology, <a href="/library/collected-public-docs/pmd/pg-drives_mobility-diagnostics_fault-codes.pdf"><em>Mobility Diagnostics Guide</em> (newVSI, VSI, VR2, Pilot+, S-Drive, Egis &amp; Solo)</a> &mdash; site library copy. S-Drive trip types, including throttle and solenoid-brake trips.</li>
+      <li>Curtiss-Wright / PG Drives Technology, <a href="https://industrial.curtisswright.com/en-gb/pgdt/Online-Diagnostics/Flash-Code-List/S-Drive-Flash-Codes">S-Drive Flash Codes</a> (publisher&rsquo;s online diagnostics) &mdash; the 1&ndash;10 bar list summarised above, and the S-Drive brochure&rsquo;s range ratings (S45&ndash;S200).</li>
+      <li>Pride Mobility Products, <a href="/library/collected-public-docs/pmd/pride_celebrity-2000_parts.pdf"><em>Celebrity 2000 / Jazzy 1100 Illustrated Parts Breakdown</em></a>, INFMANU1475 Rev. R, 2008 &mdash; site library copy. Tiller, drive, electronics and wheel assembly structure; 3-wheel and 4-wheel front ends.</li>
+      <li>Pride Mobility Products, Go-Go ES2 Owner&rsquo;s Manual, INFMANU4467 Rev. A, April 2013; Go-Go Ultra Owner&rsquo;s Manual, INFMANU2713 Rev. D, 2005; Go-Go Owner&rsquo;s Manual, INFMANU2080 Rev. D, 2004; Go-Go Elite Traveller Owner&rsquo;s Manual, INFMANU3107 &mdash; tiller console, freewheel lever, motor/transaxle, batteries, disassembly and beep-code wording quoted above. (Public manuals, consulted in full; not yet in the site library &mdash; see the collection note in the provenance paragraph.)</li>
+      <li>Drive Medical, Scout / Spitfire Scout Owner&rsquo;s Manual (Rev. 6.3.20.17) and Scout DST Owner&rsquo;s Manual &mdash; freewheel warnings quoted above; electromagnetic brake specification; diagnostic flash guidance.</li>
+      <li>Golden Technologies, Buzzaround XL Owner&rsquo;s Manual (GB116 / GB121B / GB124A series) &mdash; delta tiller and travel-scooter layout across a second maker&rsquo;s line.</li>
+      <li>Medicare, <a href="https://www.medicare.gov/coverage/wheelchairs-scooters?ref=dealsbysearch.com">Wheelchairs &amp; scooters</a> (Medicare.gov) &mdash; Part B coverage of power-operated vehicles (scooters) and power wheelchairs on the same terms.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Keep going</h2>
+    <p><a href="/pmd.html">&larr; Back to PMD</a> &middot; <a href="/pmd-start.html">Your chair stopped &mdash; start here (works for scooters)</a> &middot; <a href="/pmd-fault-codes-2.html">Shark fault codes</a> &middot; <a href="/pmd-fault-codes.html">VR2 &amp; VSI fault codes</a> &middot; <a href="/pmd-fixes.html">The cheap fixes</a> &middot; <a href="/pmd-exploded.html">Exploded views</a> &middot; <a href="/library-hub.html">The library</a></p>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

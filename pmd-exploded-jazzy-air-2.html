@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exploded View: Pride Jazzy Air 2 &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="Every assembly of the Pride Jazzy Air 2 exploded to the component level, from Pride&amp;rsquo;s own Illustrated Parts Breakdown (INFMANU4980): diagrams, callouts, part numbers, and a plain-language line for every part.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Exploded View: Pride Jazzy Air 2">
+<meta property="og:description" content="Every assembly of the Pride Jazzy Air 2 exploded to the component level, from Pride&amp;rsquo;s own Illustrated Parts Breakdown (INFMANU4980): diagrams, callouts, part numbers, and a plain-language line for every part.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-exploded-jazzy-air-2.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Exploded View: Pride Jazzy Air 2</h1>
+    <p class="lede">The whole Jazzy Air 2, taken apart by the people who built it. Pride Mobility publishes an <strong>Illustrated Parts Breakdown (IPB)</strong> for this chair &mdash; the dealer document that shows every assembly exploded into its parts, each part numbered. This page reproduces all 18 assemblies in build order, with Pride&rsquo;s own part numbers and a plain-language line for every part.</p>
+    <p><strong>Coverage: full IPB.</strong> Every assembly in the guide is here, down to the decal package. The prices printed in this export are Australian list prices, so they are not reproduced &mdash; the part numbers are the point. With a part number, you order the $6 part, not the $300 assembly.</p>
+  </section>
+
+  <section>
+    <h2>The source</h2>
+    <p><strong>Guide:</strong> Illustrated Parts Breakdown (IPB) &mdash; Jazzy Air 2<br>
+    <strong>Document:</strong> INFMANU4980, Rev. A / 100218 &mdash; Pride Mobility Products Corporation<br>
+    <strong>Full guide (PDF, in this site&rsquo;s library):</strong> <a href="/library/collected-public-docs/pmd/pride_jazzy-air-2_ipb.pdf">pride_jazzy-air-2_ipb.pdf</a></p>
+    <p>Pride posts its IPBs openly; this copy was retrieved from a dealer-posted public copy (Allied Medical, New Zealand). The owner&rsquo;s manual quoted below is also in the library: <a href="/library/collected-public-docs/pmd/pride_jazzy-air-2_owner.pdf">pride_jazzy-air-2_owner.pdf</a> (INFMANU4922, Rev. D).</p>
+  </section>
+  <section>
+    <h2>The maker&rsquo;s own warnings, word for word</h2>
+    <p>Pride prints these in the owner&rsquo;s manual. They are reproduced exactly &mdash; including the parts that tell you a technician must do the work. Read them, then decide for yourself:</p>
+    <blockquote><p>WARNING! An authorized Pride Provider or a qualified technician must perform the initial setup of this power chair and must perform all of the procedures in this manual.</p></blockquote>
+    <blockquote><p>WARNING! Do not use the power chair while the drive motors are disengaged! Do not disengage the drive motors when the power chair is on an incline or decline, as the unit could roll on its own. Only engage the freewheel mode when on a level surface.</p></blockquote>
+    <blockquote><p>WARNING! It is important to remember that when your power chair is in freewheel mode, the braking system is disengaged.</p></blockquote>
+    <blockquote><p>WARNING! Avoid applying excessive force to the manual freewheel levers.</p></blockquote>
+    <blockquote><p>WARNING! When faced with an emergency situation, the batteries can be quickly disconnected by pressing the manual shut-off button on the circuit breaker. See figure 2. Use caution. Be advised that turning off power to the power chair may cause the power chair to stop abruptly. To release the emergency stop and restore driving capability to the power chair, follow the circuit breaker reset instructions.</p></blockquote>
+    <p><em>Verbatim from the Jazzy Air 2 Owner&rsquo;s Manual, INFMANU4922, Rev. D &mdash; also in the library below.</em></p>
+  </section>
+
+  <section>
+    <h2>Build order</h2>
+    <p>The assemblies are laid out in the order you would build the chair: frame first, batteries last. Every step is one exploded view from the maker&rsquo;s guide, followed by its parts table. The <strong>Callout</strong> column is the label printed on the diagram. The <strong>Part number</strong> column is the maker&rsquo;s own number &mdash; the number a parts desk cannot argue with.</p>
+    <ul>
+      <li><strong>Frame:</strong> <a href="#step-1">Step 1: Frame Assembly — Main Frame Assembly</a> &middot; <a href="#step-2">Step 2: Frame Assembly — Rear Articulating Beam</a></li>
+      <li><strong>Motors and gearboxes:</strong> <a href="#step-3">Step 3: Frame Assembly — Front Caster Arm with Motor</a></li>
+      <li><strong>Wheels and casters:</strong> <a href="#step-4">Step 4: Drive Wheel Assembly</a></li>
+      <li><strong>Seating:</strong> <a href="#step-5">Step 5: Foot Platform, Seat Interface &amp; Under Seat Storage</a> &middot; <a href="#step-6">Step 6: Mounting Plate for Foot Riggings</a> &middot; <a href="#step-7">Step 7: Seat Assembly</a></li>
+      <li><strong>Electronics and controller:</strong> <a href="#step-8">Step 8: Electronics Assembly</a> &middot; <a href="#step-9">Step 9: Joystick, Actuator Switch &amp; Light Switch</a></li>
+      <li><strong>Batteries and charger:</strong> <a href="#step-10">Step 10: Charger</a></li>
+      <li><strong>Covers, decals and accessories:</strong> <a href="#step-11">Step 11: Shroud Assembly</a> &middot; <a href="#step-12">Step 12: Accessories — Cane/Crutch Holder</a> &middot; <a href="#step-13">Step 13: Accessories — Oxygen Holder</a> &middot; <a href="#step-14">Step 14: Accessories — Rear Basket</a> &middot; <a href="#step-15">Step 15: Accessories — Walker Holder</a> &middot; <a href="#step-16">Step 16: Accessories — Docking Device Assembly</a> &middot; <a href="#step-17">Step 17: Owner’s Package</a> &middot; <a href="#step-18">Step 18: Decal Package</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Stage 1 — Frame</h2>
+    <p>Start with the skeleton. Every other system bolts to the frame, so it goes together first.</p>
+    <h3 id="step-1">Step 1 &mdash; Frame Assembly — Main Frame Assembly</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p4.jpg" alt="Frame Assembly — Main Frame Assembly — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 1.</strong> Frame Assembly — Main Frame Assembly &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker&rsquo;s description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>MEC1701394</td><td>12 INCH REAC LIFT, JAZZY AIR</td><td>1</td><td>Raises or lowers the seat.</td></tr>
+        <tr><td>B1</td><td>MEC1706140</td><td>FRAME WELDMENT, JAZZY AIR 2.0</td><td>1</td><td>Part of the chair&#x27;s skeleton — everything else bolts to it.</td></tr>
+        <tr><td>*C1</td><td>MEC154624</td><td>BATTERY STRAP</td><td>2</td><td>Holds the batteries in place on the frame.</td></tr>
+        <tr><td>*D1</td><td>MEC154626</td><td>BACK STRAP,SMALL BATTERY</td><td>2</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+      </tbody>
+    </table>
+    <p><em>Maker&rsquo;s note, from the guide: *C1 Not Shown.</em></p>
+    <p><em>Maker&rsquo;s note, from the guide: *D1 Not Shown.</em></p>
+    <h3 id="step-2">Step 2 &mdash; Frame Assembly — Rear Articulating Beam</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p8.jpg" alt="Frame Assembly — Rear Articulating Beam — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 2.</strong> Frame Assembly — Rear Articulating Beam &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker&rsquo;s description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>MEC1706052</td><td>CASTER BEAM ASSEMBLY,6-INCH, JAZZY AIR 2.0</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>B1</td><td>HDWASMB1078</td><td>ANTI-FLUTTER KIT,ASSY,JAZZYSELECT,B-1060-050 2 68.4</td><td></td><td>Part of the frame — the structure everything else bolts to.</td></tr>
+        <tr><td>C1</td><td>MEC1706033</td><td>CASTER ASSY, 6&quot;, SINGLE-SIDED FORK, RIGHT</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>D1</td><td>MEC1706032</td><td>CASTER ASSY, 6&quot;, SINGLE-SIDED FORK, LEFT</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>E1</td><td>WHL1706146</td><td>6IN CASTER WHEEL ASSEMBLY</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>F1</td><td>DWR1060B016</td><td>COVER,CAP,PLASTIC,CASTER BARREL,B-1060-016</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section>
+    <h2>Stage 2 — Motors and gearboxes</h2>
+    <p>The motor and gearbox on each side are the muscles of the chair. One pair per side.</p>
+    <h3 id="step-3">Step 3 &mdash; Frame Assembly — Front Caster Arm with Motor</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p6.jpg" alt="Frame Assembly — Front Caster Arm with Motor — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 3.</strong> Frame Assembly — Front Caster Arm with Motor &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker&rsquo;s description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>MEC1706671</td><td>FRAME,ASSY,FRONT ARM W/CASTER &amp; MOTORS,RIGHT,JAZZY AIR 2.0</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>B1</td><td>MEC1706670</td><td>FRAME,ASSY,FRONT ARM W/CASTER &amp; MOTORS,LEFT,JAZZY AIR 2.0</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>C1</td><td>HDWASMB1078</td><td>ANTI-FLUTTER KIT,ASSY,JAZZYSELECT,B-1060-050 1 68.4</td><td></td><td>Part of the motor and gearbox set that pushes the chair.</td></tr>
+        <tr><td>D1</td><td>MEC1706033</td><td>CASTER ASSY, 6&quot;, SINGLE-SIDED FORK, RIGHT</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>E1</td><td>MEC1706032</td><td>CASTER ASSY, 6&quot;, SINGLE-SIDED FORK, LEFT</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>F1</td><td>WHL1706146</td><td>6IN CASTER WHEEL ASSEMBLY</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>G1</td><td>MEC154375</td><td>FREEWHEEL LEVER, RIGHT</td><td>1</td><td>The lever that disconnects the motor so the chair can be pushed by hand.</td></tr>
+        <tr><td>H1</td><td>MEC154374</td><td>FREEWHEEL LEVER, LEFT</td><td>1</td><td>The lever that disconnects the motor so the chair can be pushed by hand.</td></tr>
+        <tr><td>I1</td><td>DWR1060B016</td><td>COVER,CAP,PLASTIC,CASTER BARREL,B-1060-016</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>J1</td><td>KEYSTL1009</td><td>KEYWAY,STEEL,6MM X 6MM X 30MM</td><td>1</td><td>Part of the motor and gearbox set that pushes the chair.</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section>
+    <h2>Stage 3 — Wheels and casters</h2>
+    <p>Wheels next: the big drive wheels in the middle, the small swiveling casters at the corners.</p>
+    <h3 id="step-4">Step 4 &mdash; Drive Wheel Assembly</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p25.jpg" alt="Drive Wheel Assembly — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 4.</strong> Drive Wheel Assembly &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker&rsquo;s description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>WHL1705995</td><td>10&quot; WHEEL, ASSEMBLY</td><td>1</td><td>Rolls on the ground and carries the chair&#x27;s weight.</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section>
+    <h2>Stage 4 — Seating</h2>
+    <p>Seating goes on once the base rolls. This is the system that holds the rider — fit is safety here.</p>
+    <h3 id="step-5">Step 5 &mdash; Foot Platform, Seat Interface &amp; Under Seat Storage</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p14.jpg" alt="Foot Platform, Seat Interface &amp; Under Seat Storage — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 5.</strong> Foot Platform, Seat Interface &amp; Under Seat Storage &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker&rsquo;s description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>MEC1713981</td><td>FOOTREST ASSEMBLY,COMPLETE</td><td>1</td><td>Supports your legs and feet.</td></tr>
+        <tr><td>B1</td><td>MEC1713046</td><td>SEAT INTERFACE ASSY,JAZZY AIR 2.0</td><td>1</td><td>The platform the seat sits on and bolts to.</td></tr>
+        <tr><td>C1</td><td>HDW125250</td><td>SCREW,SOCKET HEAD,M8X1.25 X 20,ISO 4762,CL 12.9,BZ,PVTP</td><td>4</td><td>Where a cable joins. Corrosion here causes many &#x27;dead chair&#x27; faults.</td></tr>
+        <tr><td>D1</td><td>DGN1806840</td><td>STORAGE ASSEMBLY,JAZZY AIR 2</td><td>1</td><td>Part of the seating — the system that holds the rider.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-6">Step 6 &mdash; Mounting Plate for Foot Riggings</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p15.jpg" alt="Mounting Plate for Foot Riggings — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 6.</strong> Mounting Plate for Foot Riggings &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker&rsquo;s description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>KIT1801691</td><td>KIT ASSEMBLY,MOUNTING,SWING A WAY LEGRESTS,JAZZY AIR 1 775.2</td><td></td><td>Supports your legs and feet.</td></tr>
+        <tr><td>B1</td><td>KIT1801692</td><td>KIT ASSEMBLY,MOUNTING,ELEVATING LEGRESTS,JAZZY AIR 1 563.6</td><td></td><td>Supports your legs and feet.</td></tr>
+        <tr><td>C1</td><td>HDW125250</td><td>SCREW, SOCKET HEAD, M8X1.25 X 20, ISO 4762, CL 12.9, BZ, PVTP</td><td>4</td><td>Where a cable joins. Corrosion here causes many &#x27;dead chair&#x27; faults.</td></tr>
+        <tr><td>D1</td><td>WASLOCK1059</td><td>WASHER,LOCK,BLACK ZINC,M8</td><td>4</td><td>Sits under a bolt head or nut to spread the clamping force.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-7">Step 7 &mdash; Seat Assembly</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p16.jpg" alt="Seat Assembly — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 7.</strong> Seat Assembly &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker&rsquo;s description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>SET1701577</td><td>SEAT,ASSY,FOLD FLAT CAPTAIN SEAT,BLACK VINYL,16 X 16-18 W/PRIDE LOGO,60&quot; LAP BELT,(VISCOUNT: PR-102)</td><td>1</td><td>Holds the rider&#x27;s pelvis in position on the seat.</td></tr>
+        <tr><td>B1</td><td>SET1701578</td><td>SEAT,ASSY,FOLD FLAT CAPTAIN SEAT,BLACK VINYL,18 X 18-20 W/PRIDE LOGO,60&quot; LAP BELT,(VISCOUNT: PR-103)</td><td>1</td><td>Holds the rider&#x27;s pelvis in position on the seat.</td></tr>
+        <tr><td>C1</td><td>SET1701579</td><td>SEAT,ASSY,FOLD FLAT CAPTAIN SEAT,BLACK VINYL,20 X 20-22 1 1466.6 W/PRIDE LOGO,60&quot; LAP BELT,(VISCOUNT: PR-104)</td><td></td><td>Holds the rider&#x27;s pelvis in position on the seat.</td></tr>
+        <tr><td>D1</td><td>SET1701580</td><td>SEAT,ASSY,FOLD FLAT SOLID SEAT PAN,BLACK VINYL,16 X 16-18 W/PRIDE LOGO,60&quot; LAP BELT,(VISCOUNT: PR-105)</td><td>1</td><td>Holds the rider&#x27;s pelvis in position on the seat.</td></tr>
+        <tr><td>E1</td><td>SET1701581</td><td>SEAT,ASSY,FOLD FLAT SOLID SEAT PAN,BLACK VINYL,18 X 18-20 W/PRIDE LOGO,60&quot; LAP BELT,(VISCOUNT: PR-106)</td><td>1</td><td>Holds the rider&#x27;s pelvis in position on the seat.</td></tr>
+        <tr><td>F1</td><td>SET1701582</td><td>SEAT,ASSY,FOLD FLAT SOLID SEAT PAN,BLACK VINYL,20 X 20-22 W/PRIDE LOGO,60&quot; LAP BELT,(VISCOUNT: PR-107)</td><td>1</td><td>Holds the rider&#x27;s pelvis in position on the seat.</td></tr>
+        <tr><td>G1</td><td>ARM156696</td><td>ARMREST ASSEMBLY,LEFT/RIGHT,(VISCOUNT PR-15) 2 463.3</td><td></td><td>Supports your arms and helps with transfers.</td></tr>
+        <tr><td>H1</td><td>SET160081</td><td>HEADREST ASSEMBLY,(VISCOUNT:H-PR15)</td><td>1</td><td>Supports your head.</td></tr>
+        <tr><td>*I1</td><td>ACCBELT1002</td><td>LAP BELT,60&quot;,C-1010-336</td><td>1</td><td>Holds the rider&#x27;s pelvis in position on the seat.</td></tr>
+        <tr><td>*J1</td><td>HDW160283</td><td>HARDWARE,ASSY,VISCOUNT SEAT,JAZZY AIR</td><td>1</td><td>Part of the seating — the system that holds the rider.</td></tr>
+        <tr><td>*K1</td><td>HDW125250</td><td>SCREW,SOCKET HEAD,M8X1.25 X 20,ISO 4762,CL 12.9,BZ,PVTP</td><td>4</td><td>Where a cable joins. Corrosion here causes many &#x27;dead chair&#x27; faults.</td></tr>
+      </tbody>
+    </table>
+    <p><em>Maker&rsquo;s note, from the guide: Items marked with &quot;*&quot; are not shown.</em></p>
+    <p><em>Maker&rsquo;s note, from the guide: *K1 Please refer to Section V. Foot Platform and Seat Interface for illustration and part list.</em></p>
+  </section>
+  <section>
+    <h2>Stage 5 — Electronics and controller</h2>
+    <p>The electronics wire the chair together: controller, joystick, and the cables between them.</p>
+    <h3 id="step-8">Step 8 &mdash; Electronics Assembly</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p10.jpg" alt="Electronics Assembly — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 8.</strong> Electronics Assembly &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker&rsquo;s description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>*A1</td><td>ELE1706632</td><td>ELECTRONIC,ASSY,VR2,OFFBOARD CHARGER,JAZZY AIR 2.0</td><td>1</td><td>Refills the batteries from a wall outlet.</td></tr>
+        <tr><td>B1</td><td>ELE1800022</td><td>VR2 EXTENSION CABLE 2M (P&amp;G: SA81797)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>C1</td><td>ELE154541</td><td>HARNESS,SUSPENSION LOCK,JAZZY AIR</td><td>1</td><td>Lets the wheels ride over bumps while the seat stays level.</td></tr>
+        <tr><td>D1</td><td>ELE154823</td><td>HARNESS,LEFT SUSPENSION SWITCH,JAZZY AIR 1 32.1</td><td></td><td>Lets the wheels ride over bumps while the seat stays level.</td></tr>
+        <tr><td>E1</td><td>ELE154824</td><td>HARNESS,RIGHT SUSPENSION SWITCH,JAZZY AIR 1 32.1</td><td></td><td>Lets the wheels ride over bumps while the seat stays level.</td></tr>
+        <tr><td>F1</td><td>ELE155078</td><td>JAZZY AIR LIGHTING HARNESS</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>G1</td><td>ELE155079</td><td>HARNESS,JAZZY AIR,BUDDY BUTTON EXTENSION HARNESS</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>H1</td><td>ELE1804439</td><td>ACTUATOR SWITCH,ASSEMBLY,JAZZY AIR 2.0</td><td>1</td><td>A small electric pusher that tilts, reclines, lifts, or moves part of the seat.</td></tr>
+        <tr><td>I1</td><td>ELE1804438</td><td>LIGHT SWITCH,ASSEMBLY,JAZZY AIR 2.0</td><td>1</td><td>Turns a function on or off.</td></tr>
+        <tr><td>J1</td><td>DWR1060H001</td><td>ELECTRONIC,HARNESS,BATTERY CABLE,GC,JAZZYSELECT,H-1060-</td><td>2</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+        <tr><td>K1</td><td>ELECBRK1001</td><td>ELECTRONIC,CIRCUIT BREAKER,25AMP,SC150</td><td>1</td><td>A sacrificial link: it blows or trips to protect the wiring if too much current flows.</td></tr>
+        <tr><td>L1</td><td>ELE155648</td><td>HARNESS, LIFT ACTUATOR SWITCH, JAZZY AIR 1 38.8</td><td></td><td>A small electric pusher that tilts, reclines, lifts, or moves part of the seat.</td></tr>
+        <tr><td>M1</td><td>ELE1706596</td><td>JAZZY AIR 2.0 POWER HARNESS</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>N1</td><td>CTL1807519</td><td>CONTROLLER,VR2,ASSY,40 AMP,1 ACTUATOR,JAZZY AIR 2</td><td>1</td><td>The chair&#x27;s brain: takes the joystick&#x27;s commands and drives the motors.</td></tr>
+        <tr><td>O1</td><td>ELE154790</td><td>JAZZY AIR LED BOARD</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+      </tbody>
+    </table>
+    <p><em>Maker&rsquo;s note, from the guide: *A1 Includes all components.</em></p>
+    <h3 id="step-9">Step 9 &mdash; Joystick, Actuator Switch &amp; Light Switch</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p12.jpg" alt="Joystick, Actuator Switch &amp; Light Switch — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 9.</strong> Joystick, Actuator Switch &amp; Light Switch &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker&rsquo;s description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>CTLDC1498</td><td>CONTROLLER,JOYSTICK MODULE,6 KEY,VR2,H-1111-063,(P&amp;G: D50680)</td><td>1</td><td>The chair&#x27;s brain: takes the joystick&#x27;s commands and drives the motors.</td></tr>
+        <tr><td>B1</td><td>MEC156107</td><td>JOYSTICK MOUNTING BRACKET,ASSY,GC/VR2 CONTROLLER,INLINE,JAZZY AIR</td><td>1</td><td>The chair&#x27;s brain: takes the joystick&#x27;s commands and drives the motors.</td></tr>
+        <tr><td>C1</td><td>ELE1804439</td><td>ACTUATOR SWITCH,ASSEMBLY,JAZZY AIR 2.0</td><td>1</td><td>A small electric pusher that tilts, reclines, lifts, or moves part of the seat.</td></tr>
+        <tr><td>D1</td><td>MEC1804143</td><td>MOUNT TUBE WELDMENT</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>E1</td><td>ELE1804438</td><td>LIGHT SWITCH,ASSEMBLY,JAZZY AIR 2.0</td><td>1</td><td>Turns a function on or off.</td></tr>
+        <tr><td>F1</td><td>MEC168060</td><td>RETRACT 4 SWING AWAY JOYSTICK ASSY,JAZZY AIR 1</td><td>1100</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section>
+    <h2>Stage 6 — Batteries and charger</h2>
+    <p>Batteries last — they are the heaviest parts, and everything electrical depends on them.</p>
+    <h3 id="step-10">Step 10 &mdash; Charger</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p13.jpg" alt="Charger — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 10.</strong> Charger &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker&rsquo;s description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ELE1803473</td><td>CHARGER, OFFBOARD, LOW INHIBIT, AC 100V-240V, DC 28.6-29.6V @5A, AGM/GEL SELECTABLE. WITH AUSTRALIA CORDSET</td><td>1</td><td>Refills the batteries from a wall outlet.</td></tr>
+        <tr><td>B1</td><td>ELE1803466</td><td>CHARGER, OFFBOARD, LOW INHIBIT, AC 100V-240V, DC 28.6-29.6V @5A, AGM/GEL SELECTABLE. WITHOUT CORDSET</td><td>1</td><td>Refills the batteries from a wall outlet.</td></tr>
+        <tr><td>C1</td><td>DWR1000H174</td><td>ELECTRONIC,HARNESS,AC POWER CORD,INSULATED BLADES,AUSTRALIA,H-1000-174</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section>
+    <h2>Stage 7 — Covers, decals and accessories</h2>
+    <p>Covers, decals, and accessories finish the chair.</p>
+    <h3 id="step-11">Step 11 &mdash; Shroud Assembly</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p18.jpg" alt="Shroud Assembly — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 11.</strong> Shroud Assembly &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker&rsquo;s description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>DGN1803732</td><td>MAIN SHROUD,ASSY,COMPLETE,RUBY RED,JAZZY AIR 2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B1</td><td>DGN1803733</td><td>MAIN SHROUD,ASSY,COMPLETE,GARNET RED,JAZZY AIR 2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>C1</td><td>DGN1803734</td><td>MAIN SHROUD,ASSY,COMPLETE,SAPPHIRE BLUE,JAZZY AIR 2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>D1</td><td>DGN1803735</td><td>MAIN SHROUD,ASSY,COMPLETE,OCEAN BLUE,JAZZY AIR 2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>E1</td><td>DGN1803736</td><td>MAIN SHROUD,ASSY,COMPLETE,PEARL WHITE,JAZZY AIR 2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>F1</td><td>DGN1803737</td><td>MAIN SHROUD,ASSY,COMPLETE,ONYX BLACK,JAZZY AIR 2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>G1</td><td>DGN1803738</td><td>MAIN SHROUD,ASSY,COMPLETE,NIGHT TRAIN,JAZZY AIR 2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>H1</td><td>DGN1803739</td><td>MAIN SHROUD,ASSY,COMPLETE,SILVER,JAZZY AIR 2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>I1</td><td>DGN1803740</td><td>MAIN SHROUD,ASSY,COMPLETE,CITRINE YELLOW,JAZZY AIR 2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>J1</td><td>DGN1803741</td><td>MAIN SHROUD,ASSY,COMPLETE,PINK TOPAZ,JAZZY AIR 2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>K1</td><td>DGN1706619</td><td>SHROUD ASSY,REAR,W/LIGHTS,JAZZY AIR 2.0</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>L1</td><td>DGN1706620</td><td>SHROUD ASSY,FRONT,W/LIGHTS,JAZZY AIR 2.0</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>M1</td><td>DGN160108</td><td>SHROUD,ASSY,BATTERY COVER,LEFT,JAZZY AIR 1 41.7</td><td></td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+        <tr><td>N1</td><td>DGN160109</td><td>SHROUD,ASSY,BATTERY COVER,RIGHT,JAZZY AIR 1 41.7</td><td></td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+        <tr><td>O1</td><td>PLSKNCP1070</td><td>THUMB SCREW,YELLOW,PLASTIC,M8-1.25 X 30MM,CUSTOM,C-1502-</td><td>1</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-12">Step 12 &mdash; Accessories — Cane/Crutch Holder</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p20.jpg" alt="Accessories — Cane/Crutch Holder — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 12.</strong> Accessories — Cane/Crutch Holder &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker&rsquo;s description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ACC1610775</td><td>CANE/CRUTCH HOLDER ASSY,W/ACCESSORY TUBE AND HEADREST BRACKET,JAZZY AIR</td><td>1</td><td>Supports your head.</td></tr>
+        <tr><td>B1</td><td>MEC165273</td><td>ACCESSORY TUBE WELDMENT, JAZZY AIR</td><td>1</td><td>A finishing part or accessory from the maker&#x27;s catalog.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-13">Step 13 &mdash; Accessories — Oxygen Holder</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p21.jpg" alt="Accessories — Oxygen Holder — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 13.</strong> Accessories — Oxygen Holder &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker&rsquo;s description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ACC1610773</td><td>OXYGEN HOLDER ASSY,W/ACCESSORY TUBE AND HEADREST BRACKET,JAZZY AIR</td><td>1</td><td>Supports your head.</td></tr>
+        <tr><td>B1</td><td>MEC165273</td><td>ACCESSORY TUBE WELDMENT, JAZZY AIR</td><td>1</td><td>A finishing part or accessory from the maker&#x27;s catalog.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-14">Step 14 &mdash; Accessories — Rear Basket</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p22.jpg" alt="Accessories — Rear Basket — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 14.</strong> Accessories — Rear Basket &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker&rsquo;s description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ACC1610772</td><td>REAR BASKET ASSY,W/ACCESSORY TUBE,JAZZY AIR 1 696.6</td><td></td><td>A finishing part or accessory from the maker&#x27;s catalog.</td></tr>
+        <tr><td>B1</td><td>PINCOTD1006</td><td>PIN,COTTERLESS DETENT W/RING,.375&quot; DIA X 2.00&quot; GRIP LENGTH,B-1005-169</td><td>1</td><td>A metal pin that locates or locks two parts together.</td></tr>
+        <tr><td>C1</td><td>MEC165273</td><td>ACCESSORY TUBE WELDMENT, JAZZY AIR</td><td>1</td><td>A finishing part or accessory from the maker&#x27;s catalog.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-15">Step 15 &mdash; Accessories — Walker Holder</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p23.jpg" alt="Accessories — Walker Holder — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 15.</strong> Accessories — Walker Holder &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker&rsquo;s description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ACC1610776</td><td>WALKER HOLDER ASSY,W/ACCESSORY TUBE,JAZZY AIR</td><td>1</td><td>A finishing part or accessory from the maker&#x27;s catalog.</td></tr>
+        <tr><td>B1</td><td>MEC165273</td><td>ACCESSORY TUBE WELDMENT, JAZZY AIR</td><td>1</td><td>A finishing part or accessory from the maker&#x27;s catalog.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-16">Step 16 &mdash; Accessories — Docking Device Assembly</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p24.jpg" alt="Accessories — Docking Device Assembly — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 16.</strong> Accessories — Docking Device Assembly &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker&rsquo;s description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>MEC1611900</td><td>JAZZY AIR DOCKING ASSY,COMPLETE</td><td>1</td><td>A finishing part or accessory from the maker&#x27;s catalog.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-17">Step 17 &mdash; Owner’s Package</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p26.jpg" alt="Owner’s Package — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 17.</strong> Owner’s Package &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker&rsquo;s description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>*N/A</td><td>INFMANU3992</td><td>MANUAL,CONSUMER SAFETY GUIDE,POWERCHAIR</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>*N/A</td><td>INFINFB3072</td><td>MANUAL,PRODUCT INSERT SHEET,POWER CHAIR WARRANTY,AUSTRALIA</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>*N/A</td><td>INFMANU4922</td><td>MANUAL,OWNER&#x27;S,JAZZY AIR 2,ENGLISH</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>*N/A</td><td>INFINFB3842</td><td>MANUAL,PRODUCT INSERT SHEET, SPECIFICATIONS SHEET,JAZZY AIR 2,ENGLISH</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>*N/A</td><td>INFINFB3503</td><td>MANUAL,PRODUCT INSERT SHEET,VR2,ENGLISH</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>*N/A</td><td>HDWINDV1080</td><td>HEX KEY,BLACK,6MM</td><td>1</td><td>A hand tool included with the chair.</td></tr>
+        <tr><td>*N/A</td><td>HDWINDV1058</td><td>HEX KEY,BLACK,4MM</td><td>1</td><td>A hand tool included with the chair.</td></tr>
+        <tr><td>*N/A</td><td>HDW155440</td><td>3M DUAL LOCK, BUDDY BUTTON</td><td>2</td><td>A finishing part or accessory from the maker&#x27;s catalog.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-18">Step 18 &mdash; Decal Package</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p27.jpg" alt="Decal Package — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 18.</strong> Decal Package &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker&rsquo;s description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>*N/A</td><td>DWR1234L799</td><td>DECAL,ICON,1&#x27;&#x27; X 2.5&#x27;&#x27;,WEATHER/MANUAL/LOOSE GARMENT,L- 1234-799</td><td>1</td><td>The maker&#x27;s printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*N/A</td><td>LAB146442</td><td>DECAL,AESTHETIC,PRIDE WEBSITE/PHONE NUMBER REAR</td><td>1</td><td>The maker&#x27;s printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*N/A</td><td>DWR1235L116</td><td>DECAL,ICON,TIE DOWN HOOK,L-1235-116</td><td>4</td><td>The maker&#x27;s printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*N/A</td><td>DWR1235L515</td><td>DECAL,WARNING,BATTERY WARNINGS,L-1235-515</td><td>1</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+        <tr><td>*N/A</td><td>DWR1235L520</td><td>DECAL,CAUTION,EXTENSION CORD/GROUNDING PRONG,L-1235-</td><td>1</td><td>The maker&#x27;s printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*N/A</td><td>DWR1235L521</td><td>DECAL,WARNING,CONTROLLER CORD PLACEMENT,L-1235-521 1 6.6</td><td></td><td>The chair&#x27;s brain: takes the joystick&#x27;s commands and drives the motors.</td></tr>
+        <tr><td>*N/A</td><td>DEC8120018</td><td>DECAL,NOT RATED FOR OCCUPIED TRANSPORT,POWER CHAIR</td><td>2</td><td>The maker&#x27;s printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*N/A</td><td>LAB148325</td><td>DECAL,READ OWNERS MANUAL, 19.1 DIAMETER</td><td>1</td><td>The maker&#x27;s printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*N/A</td><td>LAB155762</td><td>DECAL,FREEWHEEL, JAZZY AIR</td><td>2</td><td>The lever that disconnects the motor so the chair can be pushed by hand.</td></tr>
+        <tr><td>*N/A</td><td>LAB155754</td><td>DECAL,AESTHETIC, JAZZY AIR</td><td>2</td><td>The maker&#x27;s printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*N/A</td><td>LAB155867</td><td>DECAL,BATTERY/CONTOLLER CONNECTION,JAZZY AIR</td><td>1</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>What this page is</h2>
+    <p>Every diagram and every part number above comes from Pride&rsquo;s own IPB &mdash; nothing is redrawn and nothing is guessed. The &ldquo;What this part does&rdquo; column is ours, written in plain language. If a row ever disagrees with the diagram, the guide wins &mdash; and the guide is one click away in the source block.</p>
+    <p><a href="/pmd-exploded.html">&larr; All exploded views</a> &middot; <a href="/pmd.html">PMD section</a></p>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

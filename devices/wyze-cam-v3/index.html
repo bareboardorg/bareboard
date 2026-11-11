@@ -76,7 +76,19 @@
               </ul>
             </div>
           </div></li>
-        <li class="has-children">
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
           <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
           <div class="col-panel">
             <div class="dropdown-inner">
@@ -198,12 +210,40 @@
       <li>Identify GND with a multimeter (continuity to the USB shield), then probe the remaining pads at 115200 baud for boot output to find TX.</li>
       <li>A serial console typically drops into the bootloader, where you can inspect the firmware layout and boot parameters.</li>
     </ol>
+<p><em>Illustrative example only — the log below shows the shape of the U-Boot output to expect on these pads; it is a reconstruction from the documented bootloader version, not a captured transcript from a specific unit.</em></p>
 <pre class="term bb-term-dark"><code>$ screen /dev/ttyUSB0 115200
 U-Boot 2013.07 (Nov 04 2020 - 14:22:10)
 DRAM:  128 MiB
 SF: Detected MX25L12805D with page size 256 Bytes
 # (bootloader prompt — firmware layout visible here)</code></pre>
     <p><em>Pad functions are community-identified, not manufacturer-documented; verify with a multimeter before connecting anything.</em></p>
+  </section>
+
+  <section>
+    <h2 id="record">The Full Record</h2>
+    <p>Everything in this timeline is documented &mdash; a court outcome, a regulator&rsquo;s action, a published security analysis, or Wyze&rsquo;s own statements &mdash; and each entry links its source. Where a popular claim about the Wyze Cam v3 is <em>not</em> proven, it is labeled Unverified at the end, with the evidence on both sides.</p>
+    <p><em>Scope note: the Cam v3 went on sale in October 2020. The 2019 database exposure below is company-level and predates the v3; the 2023 and 2024 mix-ups happened in Wyze&rsquo;s cloud services and affected the camera line as a whole. Entries are labeled accordingly.</em></p>
+    <table>
+      <tr><th>Year</th><th>What happened</th><th>Source</th></tr>
+      <tr><td>2019</td><td><strong>Database of about 2.4 million users left open to the internet (company-level; predates the v3).</strong> Security firm Twelve Security found a Wyze database copy exposed online, and Wyze confirmed that user data &ldquo;was not properly secured and left exposed from December 4th to December 26th&rdquo; after an employee removed the database&rsquo;s security protocols while working with it. Wyze confirmed the exposed data included customer emails, camera nicknames, Wi-Fi network names (SSIDs), device information, about 24,000 tokens for Alexa integrations, and body metrics (height, weight, gender) for 140 external beta testers of a new scale. Wyze said the database held no user passwords and no financial or government-regulated personal information. While investigating, Wyze logged all users out and unlinked third-party integrations to refresh tokens.</td><td><a href="https://www.bleepingcomputer.com/news/security/wyze-exposes-user-data-via-unsecured-elasticsearch-cluster/">BleepingComputer &mdash; Wyze exposes user data via unsecured database (Wyze confirmation)</a></td></tr>
+      <tr><td>2019&ndash;2022</td><td><strong>Serious camera flaws reported in 2019, publicly disclosed in 2022 (v3 affected).</strong> Bitdefender told Wyze in March 2019 about three flaws across the Cam line: an authentication bypass (CVE-2019-9564) that could give an attacker control of the camera, a stack-based buffer overflow allowing remote code execution (CVE-2019-12266) that, chained with the bypass, exposed the live feed, and unauthenticated access to the contents of the camera&rsquo;s SD card through a web server on port 80. Wyze patched the first two in September 2019 and November 2020 and the SD-card flaw on January 29, 2022; the Cam v3 was affected before firmware 4.36.8.32. Bitdefender published the full research only on March 29, 2022 &mdash; three years after its first report. The discontinued Cam v1 never received the SD-card fix; Wyze told v1 owners that continued use after February 1, 2022 was at their own risk, and later said the v1&rsquo;s limited memory prevented patching.</td><td><a href="https://www.bitdefender.com/en-gb/blog/labs/vulnerabilities-identified-in-wyze-cam-iot-device">Bitdefender &mdash; vulnerabilities identified in Wyze Cam</a></td></tr>
+      <tr><td>2023</td><td><strong>Web viewer showed some users other customers&rsquo; cameras (platform-level).</strong> On September 8, 2023, a Wyze engineer fixing a bug on the web viewing portal view.wyze.com deployed the wrong CloudFront caching setting. In Wyze&rsquo;s own words, for about 40 minutes up to 2,300 users who logged in to the portal may have seen cameras from one of the 10 affected users who had also logged in during that time. Wyze took the portal down to investigate, brought it back hours later, and stated the incident did not affect the Wyze app or customers who only use the app.</td><td><a href="https://forums.wyze.com/t/wyze-web-view-service-advisory-9-8-2023/275448/15">Wyze &mdash; Web View Service Advisory, 9/8/2023 (Wyze forum)</a></td></tr>
+      <tr><td>2024</td><td><strong>Outage recovery mixed up about 13,000 users&rsquo; camera images (platform-level).</strong> After an AWS outage on the morning of February 16, 2024 took Wyze devices offline for hours, cameras reconnecting all at once overloaded a recently integrated third-party caching client library, which crossed device and user ID mappings. Wyze&rsquo;s own final update confirms about 13,000 users received thumbnails from cameras that were not their own and 1,504 tapped on them; most taps only enlarged the thumbnail, but in a few cases an event video from another user&rsquo;s camera was viewed. Live streams were not affected, and Wyze put the total impact at a little less than 0.25% of its users. Wyze said it removed the caching library, stopped using caching for user-device checks, and added a new layer of verification before users are connected to event videos.</td><td><a href="https://forums.wyze.com/t/wyze-outage-and-investigation-of-security-issue/290462?page=8">Wyze &mdash; outage and investigation of security issue, update 2/19/24 (Wyze forum)</a></td></tr>
+    </table>
+    <aside class="bb-notice-amber">
+      <p><strong>Unverified: &ldquo;Wyze sends user data back to Alibaba Cloud in China.&rdquo;</strong> Twelve Security, the firm that found the 2019 exposure, said there were &ldquo;clear indications&rdquo; that data was being sent back to the Alibaba Cloud in China, and gave that as one reason it published without notifying Wyze first (<a href="https://www.androidpolice.com/2019/12/30/privacy-scare-leads-wyze-to-unpair-all-devices-from-google-assistant-and-alexa-youll-need-to-add-them-back/">Twelve Security&rsquo;s claims, via Android Police</a>). Evidence for the claim: Twelve Security&rsquo;s assertion alone; it published no proof that other researchers could check, and no regulator or second research team has corroborated transfers to Alibaba Cloud. Evidence against: Wyze co-founder Dongsheng Song denied it directly &mdash; &ldquo;We do not send data to Alibaba Cloud&rdquo; &mdash; and said Wyze does not share user data with any government; Wyze also showed that other Twelve Security claims in the same report were wrong, including that Wyze collected bone-density and daily protein-intake data (<a href="https://www.bleepingcomputer.com/news/security/wyze-exposes-user-data-via-unsecured-elasticsearch-cluster/">Wyze&rsquo;s response, via BleepingComputer</a>). The 2019 exposure itself is documented; the China-transfer claim is one firm&rsquo;s unverified assertion against the company&rsquo;s denial.</p>
+    </aside>
+  </section>
+
+  <section>
+    <h2 id="did-you-know">Did you know</h2>
+    <ul>
+      <li><strong>Its night vision is in color, down to near-darkness.</strong> The v3&rsquo;s Starlight Sensor and wide f/1.6 aperture record full-color video at night in environments up to 25 times darker than traditional cameras can manage, gathering twice the light. Source: <a href="https://manuals.plus/asin/B0DGPS647H">Wyze Cam v3 user manual &mdash; Color Night Vision</a>.</li>
+      <li><strong>Waterproofing arrived with the v3.</strong> The v3 carries an IP65 weather-resistance rating &mdash; sealed against dust and water jets &mdash; which made outdoor installation a headline feature of this generation; earlier Wyze Cams were indoor cameras. Source: <a href="https://manuals.plus/asin/B0DGPS647H">Wyze Cam v3 user manual &mdash; specifications</a>.</li>
+      <li><strong>It records around the clock with no subscription.</strong> With a microSD card (up to 256 GB), the v3 records continuously to local storage; the subscription Wyze sells is for cloud features, not for the camera to keep its own recordings. Source: <a href="https://www.homecamcafe.com/wyze-cam-v3-review/">HomeCamCafe &mdash; Wyze Cam v3 review</a>.</li>
+      <li><strong>Wyze was founded by former Amazon employees.</strong> The Seattle startup behind this $30-class camera was started by people who came from Amazon &mdash; the same company whose cloud (AWS) outage set up the February 2024 mix-up above. Source: <a href="https://www.techspot.com/news/101938-wyze-cameras-once-again-peeking-other-people-homes.html">TechSpot &mdash; Wyze cameras letting users see other homes</a>.</li>
+      <li><strong>The 2019 exposure forced a company-wide logout.</strong> In response to the December 2019 database exposure, Wyze logged every user out of their account and unlinked Alexa, Google Assistant, and IFTTT integrations so compromised tokens could be refreshed &mdash; owners had to sign in and reconnect everything. Source: <a href="https://www.pocket-lint.com/smart-home/news/150527-wyze-smart-camera-data-breach-what-happened-and-how-it-affects-you/">Pocket-lint &mdash; Wyze smart camera data breach explained</a>.</li>
+    </ul>
   </section>
 
   <section>

@@ -78,6 +78,20 @@
               </div>
             </div>
           </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
         <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
           <div class="col-panel">
             <div class="dropdown-inner">
@@ -148,11 +162,13 @@
 <p class="lede">How this site is made &mdash; and why it&rsquo;s made this way.</p>
 
 <h2>Hand-built</h2>
-<p>Every page on BareBoard is written by hand as plain HTML, styled by a single
-shared stylesheet, with a little vanilla JavaScript only where a page needs it.
+<p>Every page on BareBoard is written by hand as plain HTML, styled by three
+shared stylesheets (<code>/style.css</code>, <code>/mobile.css</code>, and
+<code>/i18n.css</code>), with a little vanilla JavaScript only where a page needs it.
 There is no framework, no build step, no content management system, and no
-third-party scripts, fonts, or trackers. Outbound links go to cited sources
-(datasheets, filings, reference material) &mdash; nothing phones home.</p>
+third-party scripts, fonts, or trackers load by default. Outbound links go to cited sources
+(datasheets, filings, reference material). Translation calls Google only when you pick a
+language, and some images are hotlinked from their sources.</p>
 
 <h2>Defensive by default</h2>
 <p>Each page carries a strict Content Security Policy, a no-referrer policy,
@@ -166,7 +182,9 @@ humans learning hardware.</p>
 <p>BareBoard is a non-commercial, open educational resource. It is hosted on
 GitHub Pages at no cost, which is exactly why it can afford to be free:
 there is nothing to sell and no one to sell it to. Text and original findings
-are published under open terms.</p>
+are published under open terms. How the name, hosting, and preserved library
+are arranged so no single provider can switch it off:
+<a href="/staying-up.html">How BareBoard stays up</a>.</p>
 
 <h2>How it&rsquo;s built</h2>
 <p>This site was assembled and published on September 30, 2026. Every claim is

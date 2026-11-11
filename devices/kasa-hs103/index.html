@@ -8,7 +8,7 @@
   <meta name="tdm-reservation" content="1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TP-Link Kasa HS103 Smart Plug &mdash; BareBoard &mdash; Free Hardware Education</title>
-<meta name="description" content="TP-Link Kasa HS103: Realtek RTL8710, FCC ID 2AXJ4KP115, teardown and firmware access.">
+<meta name="description" content="TP-Link Kasa HS103: Realtek RTL8710, teardown and firmware access.">
 <meta name="theme-color" content="#fbfbfc">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BareBoard">
@@ -76,7 +76,19 @@
               </ul>
             </div>
           </div></li>
-        <li class="has-children">
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
           <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
           <div class="col-panel">
             <div class="dropdown-inner">
@@ -147,7 +159,7 @@
 
   <section>
     <h2 id="fcc">FCC ID</h2>
-    <p><strong>FCC ID: <a href="https://fccid.io/2AXJ4KP115">2AXJ4KP115</a></strong> (Grantee: 2AXJ4 = TP-Link). The EDN teardown confirmed this ID printed on the unit.</p>
+    <p><strong>FCC ID:</strong> read it off the label on your unit. Caution: the ID 2AXJ4KP115 is quoted for this plug in some coverage (including the EDN teardown) &mdash; that grant actually belongs to TP-Link&rsquo;s KP115, a different model, so we do not repeat it here as this plug&rsquo;s ID.</p>
   </section>
   <section>
     <h2 id="fcc-revealed">What the FCC filing revealed</h2>
@@ -174,7 +186,7 @@
   <section>
     <h2 id="chips">Key Chips</h2>
     <ul>
-      <li><strong>Realtek RTL8710</strong> &mdash; the entire digital subsystem: 166 MHz ARM Cortex-M3, 512 KB RAM, 1 MB built-in flash, and 2.4 GHz Wi-Fi with a complete TCP/IP stack &mdash; all in one chip.</li>
+      <li><strong>Realtek RTL8710</strong> &mdash; the entire digital subsystem: ARM Cortex-M3 running at up to 83 MHz, 512 KB RAM, 1 MB built-in flash, and 2.4 GHz Wi-Fi with a complete TCP/IP stack &mdash; all in one chip.</li>
       <li><strong>Hongfa HF32FV-16</strong> &mdash; the mains relay doing the actual switching.</li>
     </ul>
   </section>
@@ -199,9 +211,41 @@
       <li>Because the RTL8710 integrates its flash, firmware is read and written through the chip&rsquo;s own serial bootloader rather than a separate flash chip.</li>
     </ol>
 <pre class="term bb-term-dark"><code>$ # Realtek Ameba-style serial upload (chip-family documented flow)
-$ screen /dev/ttyUSB0 115200
-# (bootloader banner appears on reset)</code></pre>
+$ screen /dev/ttyUSB0 38400
+# (the RTL8710 console runs at 38400 8N1; the bootloader banner appears on reset)</code></pre>
     <p><em>Work on mains-connected devices demands proper isolation and safety practice; if you are unsure, do not open it while it can be plugged in.</em></p>
+  </section>
+
+  <section>
+    <h2 id="record">The Full Record</h2>
+    <p>Everything in this timeline is documented &mdash; a court outcome, a regulator&rsquo;s action, a published security analysis, or TP-Link&rsquo;s own statements &mdash; and each entry links its source. Where a popular claim about the HS103 is <em>not</em> proven, it is labeled Unverified at the end, with the evidence on both sides.</p>
+    <table>
+      <tr><th>Year</th><th>What happened</th><th>Source</th></tr>
+      <tr><td>2020</td><td><strong>Critical flaw in Kasa plugs, found by consumer testing.</strong> Which? (the UK consumer group), working with security consultants NCC Group, tested 10 smart plugs and found a critical flaw in TP-Link&rsquo;s Kasa plug: weak encryption let an attacker on the same Wi-Fi network seize total control of the plug and of the power going to the connected device, and the plug shared the email address used to set it up unencrypted. Which? did not name the HS103 specifically &mdash; this was the Kasa plug line. TP-Link developed a fix that Which? said would roll out in October 2020.</td><td><a href="https://www.which.co.uk/news/article/cheap-smart-plugs-could-expose-you-to-hackers-or-even-cause-a-fire-aMuck9K2OSYx">Which? &mdash; smart plug investigation, September 2020</a></td></tr>
+      <tr><td>2020</td><td><strong>Firmware removed local control; a rollback was offered by ticket, then stopped.</strong> In November 2020 a firmware update for Kasa HS100/HS110 plugs (UK hardware version 4.1) removed the local API &mdash; the on-network control path that Home Assistant and other third-party tools used &mdash; leaving the Kasa cloud as the only control route. After a week of complaints, TP-Link offered affected users a special firmware to restore local access, requested per device by support ticket and MAC address. By early 2021, users reported TP-Link had stopped offering it. Kasa-line, not HS103-specific &mdash; but it is the clearest documented case of this plug family losing a local feature to a firmware push.</td><td><a href="https://community.home-assistant.io/t/tp-link-offers-way-to-add-local-api-back/248333">Home Assistant community &mdash; TP-Link offers way to add local API back, November 2020</a></td></tr>
+      <tr><td>2022</td><td><strong>Kasa cloud outage, November 15, 2022.</strong> TP-Link apologized in its own forum for an &ldquo;unexpected cloud service outage&rdquo; on November 15 that left Kasa devices offline in the app and broke Alexa and Google control until the service was restored and devices were rebooted. The plugs themselves had not failed &mdash; remote control had, because remote control runs through TP-Link&rsquo;s cloud.</td><td><a href="https://community.tp-link.com/us/smart-home/forum/topic/588644?replyId=1152422">TP-Link community &mdash; cloud outage apology</a></td></tr>
+      <tr><td>2024</td><td><strong>The company split in two (company-level, not this plug).</strong> On May 11, 2024, TP-Link Corporation Group announced it had completed the restructuring begun in early 2022, formally separating from TP-LINK Technologies Co., Ltd. in China across shareholdings, workforce, research and development, production, marketing, and customer service. On October 9, 2024, TP-Link Global and TP-Link USA merged to form TP-Link Systems Inc., headquartered in Irvine, California, as the parent company for the group&rsquo;s worldwide operations. How complete that separation really is became the central dispute in the U.S. actions below.</td><td><a href="https://www.tp-link.com/lk/press/news/21130/">TP-Link &mdash; restructuring completion, May 2024</a>; <a href="https://www.tp-link.com/ph/press/news/21413/">TP-Link &mdash; TP-Link Systems Inc. headquarters, October 2024</a></td></tr>
+      <tr><td>2024&ndash;2025</td><td><strong>U.S. investigations and a proposed router ban (company-level, routers only &mdash; not this plug).</strong> In December 2024, The Wall Street Journal reported that the Commerce, Defense, and Justice departments had opened separate investigations into TP-Link, that the Commerce Department had subpoenaed the company, and that a ban on U.S. sales of TP-Link routers was possible. In October 2025, The Washington Post reported that the Commerce Department had proposed banning new TP-Link sales, with backing from several other agencies. No ban on Kasa plugs was proposed, and no finding about the HS103 came out of these probes.</td><td><a href="https://www.tomsguide.com/computing/routers/tp-link-ban">Tom&rsquo;s Guide &mdash; TP-Link ban timeline</a></td></tr>
+      <tr><td>2025</td><td><strong>An AWS outage took Kasa cloud services down with it, October 20, 2025.</strong> When Amazon Web Services failed on October 20, 2025, TP-Link told users that Tapo/Kasa Care subscribers had no video clips stored on its cloud server that day and that other cloud-based services were affected. TP-Link&rsquo;s same notice states what does <em>not</em> need the cloud: schedules and Away Mode are stored on the plug and continue without an internet connection.</td><td><a href="https://community.tp-link.com/us/smart-home/forum/topic/845502">TP-Link community &mdash; AWS outage notice, October 20, 2025</a></td></tr>
+      <tr><td>2026</td><td><strong>Texas sued TP-Link Systems (company-level &mdash; allegations, not findings).</strong> On February 17, 2026, Attorney General Ken Paxton sued TP-Link Systems Inc. in Collin County under the Texas Deceptive Trade Practices Act, alleging the company deceptively marketed its networking devices and allowed the Chinese Communist Party to access American consumers&rsquo; devices in their homes. A lawsuit is an allegation until a court rules: TP-Link disputed the claims, and no court had ruled when this page was written. The governor had added TP-Link to Texas&rsquo;s prohibited-technologies list the month before.</td><td><a href="https://www.texasattorneygeneral.gov/news/releases/attorney-general-paxton-sues-tp-link-allowing-ccp-access-americans-devices-first-several-lawsuits?utm_content=&amp;utm_medium=email&amp;utm_name=&amp;utm_source=govdelivery&amp;utm_term=">Texas Attorney General &mdash; press release, February 17, 2026</a></td></tr>
+      <tr><td>2026</td><td><strong>The FCC blocked new foreign-made routers generally (company-level context, routers only).</strong> On March 23, 2026, the FCC added <em>all</em> consumer routers produced in a foreign country &mdash; every brand, not TP-Link alone &mdash; to its Covered List, after a White House-convened Executive Branch body determined that foreign-produced routers pose unacceptable national-security risks. New foreign-made router models now need a Conditional Approval from the Department of War or the Department of Homeland Security to receive FCC authorization. Routers already authorized may keep being sold, used, and updated &mdash; and no Kasa plug was banned.</td><td><a href="https://www.fcc.gov/faqs-recent-updates-fcc-covered-list-regarding-routers-produced-foreign-countries">FCC &mdash; Covered List router FAQs</a></td></tr>
+      <tr><td>2026</td><td><strong>CVE-2026-76784: the HS103&rsquo;s local control messages could be forged.</strong> TP-Link&rsquo;s own advisory, published August 26, 2026, lists the HS103P3/HS103P4 by name: insufficient cryptographic protections in the local device communication protocol let an attacker on the same network intercept, replay, or forge control messages, potentially taking unauthorized control of the plug (CVSS v4.0 score 8.7, High). TP-Link released fixed firmware &mdash; version 1.1.3 Build 250908 Rel.112508 for the HS103 packs. No confirmed exploitation was reported in the advisory coverage.</td><td><a href="https://www.tp-link.com/us/support/faq/5267/">TP-Link security advisory &mdash; CVE-2026-76784</a></td></tr>
+      <tr><td>2026</td><td><strong>CVE-2026-108473: improper authentication and credential exposure, HS103 V5 named.</strong> TP-Link&rsquo;s advisory of October 14, 2026 lists the HS103 V5 by name: an unauthenticated attacker on the same network could send management instructions to the plug without adequate authentication or authorization, changing its state or management settings, and under certain conditions involving the app and the device-cloud service, account information could also be exposed toward compromise of the associated cloud account (CVSS v4.0 score 8.7, High). The fix for the HS103 V5 is the same firmware build, 1.1.3 Build 250908 Rel.112508.</td><td><a href="https://www.tp-link.com/uk/support/faq/5342/">TP-Link security advisory &mdash; CVE-2026-108473</a></td></tr>
+    </table>
+    <p><strong>The empty part of the record, stated plainly:</strong> No CPSC recall or lawsuit naming the HS103 was found in the public record as of November 2026. The plug&rsquo;s own documented record is the two 2026 protocol vulnerabilities above, the Kasa-line findings of 2020, and its dependence on TP-Link&rsquo;s cloud for remote control &mdash; everything else on this timeline is company-level and is labeled as such.</p>
+    <aside class="bb-notice-amber">
+      <p><strong>Unverified: &ldquo;TP-Link devices have a built-in backdoor for the Chinese government.&rdquo;</strong> No court, regulator, or published security analysis has established a built-in backdoor in TP-Link products, and this page does not claim one. Evidence offered for the allegation: U.S. agencies investigated the company, its routers were exploited in botnet campaigns through ordinary vulnerabilities, and the Texas complaint alleges CCP access. Evidence against treating that as proof: reporting on the 2024 investigations noted that officials had yet to provide evidence linking the firm to Chinese state-backed attacks; TP-Link denies the allegations; the FCC&rsquo;s 2026 router action rested on foreign production in general, not on a TP-Link backdoor finding; and the HS103 flaws documented above are local-network protocol weaknesses &mdash; serious, patchable, and not evidence of a deliberate backdoor.</p>
+    </aside>
+  </section>
+
+  <section>
+    <h2 id="did-you-know">Did you know</h2>
+    <ul>
+      <li><strong>The HS103&rsquo;s current rating changed mid-life.</strong> TP-Link&rsquo;s current HS103 (US) 5.0 datasheet rates the plug at 15 A max and 1,800 W resistive &mdash; but EDN&rsquo;s teardown noted that Amazon&rsquo;s four-pack graphic still listed 12 A max after the specification had moved to 15 A, and its three-pack graphic dropped the current figure entirely. Check the datasheet for your hardware version, not the store graphic. Source: <a href="https://www.edn.com/tp-links-kasa-hs103-a-smart-plug-with-solid-network-connectivity/">EDN &mdash; HS103 teardown</a>.</li>
+      <li><strong>Its local protocol was an XOR cipher on port 9999, with no login at all.</strong> The original Kasa protocol &mdash; the one this plug&rsquo;s generation speaks &mdash; used a static XOR-type obfuscation over TCP port 9999 for discovery and control, with no authentication. That is exactly why the community python-kasa library, and through it Home Assistant, could control the plugs locally without TP-Link&rsquo;s cloud &mdash; and why TP-Link began moving Kasa devices to the authenticated KLAP transport in 2021. Source: <a href="https://python-kasa.readthedocs.io/en/latest/topics.html">python-kasa documentation &mdash; protocol design</a>.</li>
+      <li><strong>Schedules live on the plug, not in the cloud.</strong> TP-Link&rsquo;s own October 2025 outage notice says schedules and Away Mode are stored on the plug and will continue without an internet connection. It is remote control through the app that dies when the cloud does &mdash; not the timer you already set. Source: <a href="https://community.tp-link.com/us/smart-home/forum/topic/845502">TP-Link community &mdash; AWS outage notice, October 20, 2025</a>.</li>
+      <li><strong>TP-Link has already retired early HS103 hardware revisions.</strong> TP-Link&rsquo;s U.S. end-of-sale list marks HS103 hardware versions 1.0, 2.8, 3.0, 3.8, and 5.8 as &ldquo;contact us for a replacement,&rdquo; with end-of-sale dates running from 2020 to 2024. The model name stayed on sale while the hardware underneath it kept changing &mdash; which is why every advisory above names a hardware version, not just &ldquo;HS103.&rdquo; Source: <a href="https://static.tp-link.com/upload/manual/2025/202511/20251112/US%20EOL%20List_Smart%20Home-V3.pdf">TP-Link &mdash; U.S. end-of-sale list (PDF)</a>.</li>
+    </ul>
   </section>
 
   <section>

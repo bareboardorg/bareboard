@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Older PG Systems: Pilot+, Egis and S-Drive &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="Pilot+, Egis and S-Drive flash codes translated: what each flashing bar means on the older PG Drives chairs and scooters, and what an owner checks first.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="The Older PG Systems: Pilot+, Egis and S-Drive">
+<meta property="og:description" content="The older PG Drives bar codes in plain language &mdash; what each count means, what to check first.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-legacy-pg.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>The Older PG Systems: Pilot+, Egis and S-Drive</h1>
+    <p class="lede">Before <a href="/pmd-fault-codes.html">VR2 and R-net</a>, PG Drives Technology &mdash; now part of Curtiss-Wright &mdash; put three other control systems on millions of chairs and scooters: <strong>Pilot+</strong> on power chairs, and <strong>S-Drive</strong> and <strong>Egis</strong> on scooters. They are older, simpler, and still in daily use. When one stops, it already tells you why &mdash; in flashing bars on its battery gauge. This page translates those bars.</p>
+    <p>A <strong>control system</strong> is the electronics that turn your joystick or throttle movement into motor power, apply the brakes, and watch for faults. A <strong>trip</strong> is the system stopping drive on purpose because it detected a fault. Counting the trip display costs nothing and needs no tools.</p>
+    <p><em>Provenance: the bar tables below are Curtiss-Wright&rsquo;s own published flash-code lists for Pilot+, S-Drive and Egis, checked against PG Drives Technology&rsquo;s <a href="/library/collected-public-docs/pmd/pg-drives_mobility-diagnostics_fault-codes.pdf">Mobility Diagnostic Guide</a> and the S-Drive Technical Manual (SK76745/10) &mdash; whose Self-Help Guide Curtiss-Wright publishes as its <a href="https://industrial.curtisswright.com/en-gb/pgdt/Online-Diagnostics/Flash-Code-List/S-Drive-Flash-Codes">S-Drive Flash Codes</a> page. The four-digit trip codes are from that same Diagnostic Guide. Codes that could not be confirmed for the named system are not listed. Documentation, not bench measurement: if your vehicle disagrees with this page, the vehicle wins &mdash; write down what yours actually does.</em></p>
+  </section>
+
+  <section id="safety">
+    <p><strong>Before any check in these tables that touches a plug, cable, motor, brake, actuator, or battery terminal:</strong> put the chair on level ground, switch it OFF, and disconnect the main battery harness or trip the main circuit breaker. Do not do the check while seated in the chair. Connector pins can remain live after switch-off. Keep a disconnected cable from touching skin, jewelry, tools, or metal, and cover or restrain it so the pins cannot short. At a battery terminal, work on one terminal at a time with an insulated tool. If you cannot disconnect power, inspect visually only and stop.</p>
+    <p>The manufacturer&rsquo;s own warning, carried word for word from PG Drives Technology&rsquo;s <a href="/library/collected-public-docs/pmd/pg-drives_mobility-diagnostics_fault-codes.pdf">Mobility Diagnostic Guide</a>: <em>&ldquo;Diagnostics should only be conducted by electronic service professionals with in-depth knowledge of PG Drives Technology electronic controllers. An incorrect or badly effected repair could result in an unsafe set-up of a vehicle.&rdquo;</em> And, from the same guide: <em>&ldquo;There are no serviceable parts in any of the PG Drives Technology control systems. Consequently, any defective units must be returned to PG Drives Technology or a PG Drives Technology approved service organization for repair.&rdquo;</em> True &mdash; for repairs inside the units. Reading a bar count needs no tools at all: the vehicle displays it for free, on purpose, where you can see it. That is the part this page uses.</p>
+    <p>One more, word for word from the PG Drives <a href="/library/collected-public-docs/pmd/pg-drives_vsi_technical.pdf">VSI Technical Manual</a> in the library &mdash; the sibling manual for this same gauge family: <em>&ldquo;Do not operate the controller if the battery is nearly discharged. Failure to comply with this condition may leave the user stranded in an unsafe position, such as in the middle of a road. PGDT accepts no liability for losses of any kind arising from failure to comply with this condition.&rdquo;</em></p>
+  </section>
+
+  <section id="which">
+    <h2>Which system do you have?</h2>
+    <p>Look at what you drive with, and how many motors the vehicle has. That separates the three faster than any label hunt &mdash; then confirm it on the controller&rsquo;s own label in the base.</p>
+<table>
+<thead><tr><th>System</th><th>What it is</th><th>Where it was fitted</th><th>How it shows a fault</th></tr></thead>
+<tbody>
+<tr><td><strong>Pilot+</strong></td><td>A modular power-chair system: a separate <strong>Joystick Module</strong> (the unit in your hand) wired by a bus cable to a <strong>Power Module</strong> in the base that drives two motors, left and right. Some chairs add an actuator and lighting module (PG calls it the <strong>ALM</strong>) for powered seating. The chair&rsquo;s settings live in the Power Module.</td><td>Power chairs of the generation before VR2. If your chair has two drive motors and a joystick with a 10-bar battery gauge, and it is not VR2 or R-net, Pilot+ is a likely fit &mdash; the label decides.</td><td>Flashing bars on the <strong>TruCharge display</strong> &mdash; the 10-segment, red-yellow-green battery gauge. Count the flashing bars, 1 to 10.</td></tr>
+<tr><td><strong>S-Drive</strong></td><td>A scooter controller family: one controller box driving a single motor through a transaxle (a combined gearbox and axle unit). You drive it from the <strong>tiller</strong> &mdash; the steering column &mdash; with a throttle lever (often called a <strong>wig-wag</strong>: push one way for forward, the other for reverse). The family covers several current ratings; the rating is printed on the controller label.</td><td>Mobility scooters, across many makers. The S-Drive Technical Manual (SK76745/10) covers the Mark 2 range, identified by part number D51270 onwards.</td><td>Flashing bars on the TruCharge gauge on the tiller, or flashes of the <strong>status indicator</strong> light. Count the bars or flashes, 1 to 10.</td></tr>
+<tr><td><strong>Egis</strong></td><td>A compact single-motor scooter controller, in the same tiller-and-throttle layout as S-Drive. Curtiss-Wright&rsquo;s own <a href="https://industrial.curtisswright.com/en-gb/pgdt/Online-Diagnostics/Flash-Code-List/Egis-Flash-Codes">Egis Flash Codes</a> support page gives its common ratings by the number in the square box on its label: <strong>70 or 110</strong> (amps &mdash; the most current it can deliver to the motor).</td><td>Larger and heavier-duty scooters. Documented factory fits include the Handicare Trophy scooter and, in its owner&rsquo;s manual specifications, the Golden Avenger (listed there as a 110 amp programmable PG Egis controller).</td><td>Flashing bars on the battery gauge, 1 to 10 &mdash; the same pattern as S-Drive, because both drive one motor. Its deeper codes need a programmer: see the trip-code section below.</td></tr>
+</tbody>
+</table>
+    <p>One family habit explains all three tables: PG built them on the same 1-to-10 idea. Bars 1 and 10 are always the battery (too low, too high), the middle bars are the motor, brake and throttle wiring the system can see, and 5 is deliberately empty on the single-motor systems &mdash; on a two-motor chair that slot belongs to the second motor. Do not carry a Pilot+ meaning onto a scooter, or the other way round: same count, different vehicle.</p>
+    <p>Not your system? <a href="/pmd-fault-codes.html">Part one</a> covers VR2, VSI (PG&rsquo;s own <a href="/library/collected-public-docs/pmd/pg-drives_vsi_fault-codes.pdf">VSI flash-code sheet</a>) and R-net, <a href="/pmd-fault-codes-2.html">part two</a> covers Shark, DX and MK6i, and <a href="/pmd-reading.html">Reading the Chair</a> shows how to identify a system from its plugs and labels.</p>
+  </section>
+
+  <section id="reading">
+    <h2>How to read the gauge before you count</h2>
+    <p>The <strong>TruCharge display</strong> is PG&rsquo;s name for the 10-bar battery gauge. Steady, it is just a fuel gauge: red, yellow and green bars lit means charged; just red and yellow means charge soon; just red means charge now. When something is wrong, the display changes its behaviour &mdash; and some behaviours are not faults at all:</p>
+    <ul>
+      <li><strong>Flashing slowly:</strong> low battery. The controller is working correctly; charge as soon as you can.</li>
+      <li><strong>Stepping up</strong> (bars lighting one after another, upward): the batteries are charging &mdash; a charger is connected, and the vehicle will not drive until it is disconnected and you switch off and on again.</li>
+      <li><strong>Blinking on once every few seconds:</strong> sleep mode. The system has gone to sleep after a programmed idle time. It is not a trip. Switch off and on again to wake it. The Diagnostic Guide gives the Pilot+ family figure as once every 2.5 seconds; the S-Drive manual gives its figure as every 3.5 seconds.</li>
+      <li><strong>Rippling</strong> (the gauge pattern running up and down, or the speed indicator rippling): on chair systems this is the joystick having been pushed while switching on, or the system being locked. Centre the stick, or unlock the system, before you suspect a fault.</li>
+      <li><strong>Flashing rapidly, in a repeated count:</strong> this is the trip. Count how many bars flash before the pattern repeats. That count is your code &mdash; find it in your system&rsquo;s table below.</li>
+    </ul>
+    <p>Count twice. The pattern repeats, so take your time, and write the number down with the date and what you were doing when it appeared.</p>
+  </section>
+
+  <section id="pilot-plus">
+    <h2>Pilot+ &mdash; count the flashing bars</h2>
+    <p>The manufacturer&rsquo;s own list for this system is Curtiss-Wright&rsquo;s <a href="https://industrial.curtisswright.com/en-gb/pgdt/Online-Diagnostics/Flash-Code-List/Pilot-Flash-Codes">Pilot+ Flash Codes</a> page. Pilot+ drives two motors, so its table names a side. One warning from PG itself, carried in its flash-code list: if the programmable setting <strong>Motor Swap</strong> has been enabled on your chair, left and right swap places in this table &mdash; identify a motor by its plug at the Power Module, not only by side.</p>
+<table>
+<thead><tr><th>Flashing bars</th><th>What it means</th><th>What you check first</th></tr></thead>
+<tbody>
+<tr><td>1 bar</td><td>Low battery voltage</td><td>Charge the batteries overnight. Check the main battery plugs, terminal bolts and circuit breaker. If it keeps happening, load-test the pair (see <a href="/pmd-fixes.html">Cheap Fixes</a>). The Diagnostic Guide puts the trip point plainly: the system trips when battery voltage has fallen below 16V (trip code 2C00).</td></tr>
+<tr><td>2 bars</td><td>Left motor disconnected</td><td>The Power Module cannot see the left motor. Check its heavy plug at the Power Module and the cable run for pinches or cuts.</td></tr>
+<tr><td>3 bars</td><td>Left motor wiring trip (short)</td><td>A left motor wire is shorting to a battery connection. Inspect the cable where it passes frame hinges and the battery box. This is a stop-and-inspect fault, not a keep-driving one.</td></tr>
+<tr><td>4 bars</td><td>Right motor disconnected</td><td>Same checks as 2 bars, on the right motor: plug, then cable.</td></tr>
+<tr><td>5 bars</td><td>Right motor wiring trip (short)</td><td>Same checks as 3 bars, on the right motor cable.</td></tr>
+<tr><td>6 bars</td><td>Charger connected / inhibit active</td><td>The chair is being prevented from driving by an external signal. First: <strong>unplug the charger</strong> from the charging socket in the Joystick Module. If no charger is connected, an on-board charger or a seat-height switch can send the same inhibit signal &mdash; check what your chair&rsquo;s manual lists for it.</td></tr>
+<tr><td>7 bars</td><td>Possible joystick trip</td><td>Usually your own hand: the joystick was off centre at switch-on. Switch off, take everything off the stick, let it centre, switch on without touching it. If it returns with the stick centred, the Joystick Module itself is suspect. One Pilot+ tell the Diagnostic Guide adds: a communications fault between Joystick Module and Power Module is shown by the green lights below the TruCharge display flashing &mdash; check that bus cable first.</td></tr>
+<tr><td>8 bars</td><td>Possible control system trip</td><td>The system failed its own check. Make sure every connection is secure, switch off for 30 seconds, and try again. If the code stays, the fault is inside a module.</td></tr>
+<tr><td>9 bars</td><td>Solenoid brake trip</td><td>The electric parking brakes (one in each motor) have a bad connection. First: both <strong>freewheel levers</strong> firmly to DRIVE &mdash; a lever in PUSH gives this code. Then the small brake plugs and motor connections at the back of each motor. The Diagnostic Guide splits this further for a programmer: 1505 is the left brake, 1506 is the right.</td></tr>
+<tr><td>10 bars</td><td>High battery voltage</td><td>Too much voltage reached the system &mdash; the Diagnostic Guide gives the trip as voltage risen above 35V, most commonly overcharging or bad battery connections. Tighten the terminal bolts and suspect the charger if this follows charging.</td></tr>
+</tbody>
+</table>
+    <p>Informational displays on Pilot+, from the same Curtiss-Wright list: sleep mode (switch off and on), joystick displaced at switch-on (centre it, power-cycle), and control system locked (unlock it &mdash; a lock is a mode you or a carer set, not a failure).</p>
+  </section>
+
+  <section id="s-drive">
+    <h2>S-Drive &mdash; count the bars on the tiller</h2>
+    <p>S-Drive drives one motor, so there is no left and right in this table &mdash; and bar 4 changes meaning completely: on a scooter it is the freewheel switch, the lever that disconnects the drive so the scooter can be pushed by hand. This table is the Self-Help Guide in the S-Drive Technical Manual (SK76745/10), and it is the same list Curtiss-Wright publishes today.</p>
+<table>
+<thead><tr><th>Flashing bars</th><th>What it means</th><th>What you check first</th></tr></thead>
+<tbody>
+<tr><td>1 bar</td><td>Low battery voltage</td><td>The battery needs charging, or there is a bad connection to it. Check the battery connections first; if they are good, charge. Load-test a pair that keeps doing this (<a href="/pmd-fixes.html">Cheap Fixes</a>).</td></tr>
+<tr><td>2 bars</td><td>Motor disconnected</td><td>Check every connection and lead between the motor and the S-Drive, and check the position of the freewheel switch.</td></tr>
+<tr><td>3 bars</td><td>Motor wiring trip (short)</td><td>The motor has a short circuit to a battery connection. Check the connections and leads between motor and battery. PG&rsquo;s manual action for this bar is to contact your service agent if the wiring checks out &mdash; do not keep resetting it.</td></tr>
+<tr><td>4 bars</td><td>Freewheel switch trip</td><td>The freewheel switch is activated, or the manual brake disengagement lever has been operated. Put the lever firmly back to DRIVE and check the switch wiring to the S-Drive.</td></tr>
+<tr><td>5 bars</td><td>Not used</td><td>PG assigns no fault to 5 bars on S-Drive. If you counted 5, count again slowly &mdash; a miscount here sends you to the wrong repair.</td></tr>
+<tr><td>6 bars</td><td>Charger connected / inhibit active (Inhibit 2)</td><td>The S-Drive is being stopped from driving. Usually the battery charger is still connected &mdash; unplug it. The other common cause in PG&rsquo;s list: the seat is not in the driving position.</td></tr>
+<tr><td>7 bars</td><td>Throttle trip</td><td>Make sure the throttle is in its rest (neutral) position before switching on, hands off the wig-wag. If it returns with the throttle untouched and centred, the throttle or its tiller wiring is suspect &mdash; the Diagnostic Guide&rsquo;s S-Drive throttle codes are in the trip-code section below.</td></tr>
+<tr><td>8 bars</td><td>Possible control system trip</td><td>Make sure all connections are secure, switch off and on. If it stays, the fault is inside the controller.</td></tr>
+<tr><td>9 bars</td><td>Solenoid brake trip</td><td>The parking brake has a bad connection. Check the parking brake and motor connections, and make sure the controller connections are secure.</td></tr>
+<tr><td>10 bars</td><td>High battery voltage</td><td>Excessive voltage applied to the S-Drive, usually caused by a poor battery connection. Check and tighten the battery connections; suspect the charger if it follows a charge.</td></tr>
+</tbody>
+</table>
+    <p>Informational displays on S-Drive, from the same list: sleep mode (switch off and on), charge step (the batteries are charging), and throttle displaced at switch-on (centre the throttle, power-cycle).</p>
+  </section>
+
+  <section id="egis">
+    <h2>Egis &mdash; the same bars, and a hidden second layer</h2>
+    <p>Egis is a single-motor scooter controller like S-Drive, and Curtiss-Wright publishes the same 1-to-10 bar list for it, word for word in the meanings. If you ride an Egis scooter, read the bars exactly as in the S-Drive table above: 1 is low battery, 2 is motor disconnected, 3 is a motor short, 4 is the freewheel switch, 5 is not used, 6 is charger or seat inhibit, 7 is throttle, 8 is a possible control system trip, 9 is the solenoid (parking) brake connection, and 10 is high battery voltage. The checks are the same too &mdash; connections and leads between motor and controller, freewheel lever to DRIVE, charger unplugged, throttle centred at switch-on.</p>
+    <p>Where Egis differs is what sits underneath. Handicare&rsquo;s <a href="https://cdn3.guidespdf.com/view/1067/1067860-trophy.pdf">Trophy Service Manual</a> &mdash; a scooter built on Egis &mdash; states it plainly: the Egis bar count is only the heading, and its full <strong>trip codes</strong> (the four-digit codes in the next section) <em>can only be read with the manual programming unit, the SP1</em>. Its table pairs the two: for example, 1 bar can be trip 2C00 or 2C01 (low battery), 2 bars is 3B01 (motor disconnected), 3 bars is 1400 (motor wiring fault), 4 bars is 7000 or 7001 (parking brake off &mdash; started with push selected, or push activated in drive mode), 6 bars is 1E03 (inhibit activated), and 7 bars is 0810 or 0814 (throttle trip). At 8 bars the list opens out into the internal controller trips &mdash; which is why 8 bars on Egis, more than on the other two, means: record the bar count, and get the SP1 code read before anyone quotes you a controller.</p>
+    <p>That is the honest limit of this section: Egis gets the full published bar table above, because Curtiss-Wright publishes it. It does not get a fabricated SP1 table here &mdash; the deeper code list lives in service manuals like Handicare&rsquo;s, and the examples above are the ones that manual prints.</p>
+  </section>
+
+  <section id="trip-codes">
+    <h2>Trip codes: the number behind the bars</h2>
+    <p>Every bar count on this page is a summary. Underneath it, the system records a precise four-digit <strong>trip code</strong> &mdash; a code in hexadecimal (digits 0&ndash;9 and letters A&ndash;F) that names the exact sub-fault &mdash; and keeps it in a <strong>system log</strong>, a stored history of trips. PG&rsquo;s Mobility Diagnostic Guide is organised entirely by these codes, and it covers all three systems on this page by name.</p>
+    <p><strong>What you can see without a programmer:</strong> the bar count, which is enough to do every owner check in the tables above and to name the fault area when you call. <strong>What you cannot see:</strong> which of several trip codes sits behind one bar count, and the log behind it. That takes a programmer plugged into the system &mdash; the hand-held <strong>PP1</strong> family for Pilot+ chairs (the family&rsquo;s PC-side programming is documented in PG&rsquo;s <a href="/library/collected-public-docs/pmd/pg-drives_pc-programmer_programming.pdf">PC Programmer programming guide</a>, in the library), and the <strong>SP1</strong> hand unit for Egis, per Handicare. How those tools and their access tiers work is covered in full on <a href="/pmd-programmers.html">The Keys</a> &mdash; this page does not duplicate it, it just tells you what to ask for: <em>the trip code and the log, read out loud and written down, before anything is cleared.</em></p>
+    <p>A few trip codes worth knowing by name, all from the Diagnostic Guide, because a dealer may quote them at you:</p>
+<table>
+<thead><tr><th>Trip code</th><th>System</th><th>What it means</th><th>What you check first</th></tr></thead>
+<tbody>
+<tr><td>2C00</td><td>Pilot+, S-Drive, Egis family</td><td>Low battery voltage &mdash; the Guide states the trip as voltage fallen below 16V</td><td>Batteries and their connections, as at 1 bar.</td></tr>
+<tr><td>1600 / 1601</td><td>All three</td><td>High battery voltage &mdash; the Guide states the trip as voltage risen above 35V; most common reasons are overcharging or bad battery connections</td><td>Terminal bolts first, charger second, as at 10 bars.</td></tr>
+<tr><td>1505 / 1506</td><td>Pilot+</td><td>Left brake trip / right brake trip &mdash; the two halves of the 9-bar display</td><td>Freewheel levers to DRIVE, then the brake plug on the side named.</td></tr>
+<tr><td>1500 / 1501 / 1502</td><td>Egis</td><td>Solenoid brake circuit: open circuit / short circuit / over-current, in that order</td><td>Brake wiring and plug. Note the order differs from S-Drive &mdash; see the next row.</td></tr>
+<tr><td>1500 / 1502</td><td>S-Drive</td><td>Solenoid brake circuit: short circuit (1500) / open circuit (1502) &mdash; the reverse assignment from Egis at 1500</td><td>Brake wiring and plug. This pair is the clearest proof on the page that codes must be read per system, never from memory of another one.</td></tr>
+<tr><td>0814 / 0815 / 0816 / 0817</td><td>Egis</td><td>Throttle wiring, wire by wire: high reference disconnected (pin 12) / high or low reference disconnected / wiper shorted to high reference (pins 7 &amp; 12) / wiper shorted to low reference (pins 7 &amp; 5)</td><td>The tiller throttle plug and loom. Pin numbers are a technician&rsquo;s check &mdash; your job is to name the code, not to probe the pins live.</td></tr>
+<tr><td>7000 / 7001</td><td>Egis and S-Drive family</td><td>Freewheel mode engaged &mdash; the switch was already operated at switch-on (7000 in Handicare&rsquo;s Egis table), or operated while driving</td><td>Freewheel lever position, then its switch and cables.</td></tr>
+<tr><td>0A00</td><td>All three</td><td>Control system in sleep mode &mdash; the Guide is explicit: this is not a trip condition</td><td>Nothing is broken. Switch off and on again.</td></tr>
+</tbody>
+</table>
+    <p>And the Guide&rsquo;s catch-all, in its own framing: any other trip code can indicate a problem internal to the control system itself &mdash; but before returning a unit, check that all connections to motors, brakes, battery and control system are sound, because poor battery connections cause intermittent trips that look internal. That order &mdash; connections first, module last &mdash; is the whole method of this page.</p>
+  </section>
+
+  <section id="owner-checks">
+    <h2>Owner checks first, whichever system you have</h2>
+    <p>Across all three tables, the codes that strand people most are not module failures. Work this order before you pay for anything &mdash; each step is a full procedure on <a href="/pmd-fixes.html">The Cheap Fixes</a>:</p>
+    <ol>
+      <li><strong>Freewheel levers to DRIVE.</strong> A lever left in PUSH is 9 bars on Pilot+, 4 bars on S-Drive and Egis, and the single most owner-fixable code here.</li>
+      <li><strong>Charger unplugged.</strong> A connected charger is 6 bars on all three systems, by design.</li>
+      <li><strong>Hands off at switch-on.</strong> A joystick or throttle held off centre is 7 bars, and it clears itself when you centre the control and power-cycle.</li>
+      <li><strong>Batteries and their plugs.</strong> 1 bar and 10 bars are both, most often, connections: clean, tight terminals before a load test, and a load test before new batteries.</li>
+      <li><strong>The bus and motor plugs.</strong> Unplug, look at the pins, reconnect firmly. Corrosion and a half-seated plug imitate dead modules on every system on this page.</li>
+    </ol>
+    <p>If the code survives those five, it is probably inside a module &mdash; and you now know which module, on which system, with a bar count and a date to prove it. For what the settings behind these systems do, see <a href="/pmd-settings.html">The Settings</a>; for what a repair should cost in parts, see <a href="/pmd-parts.html">Parts, Not Assemblies</a> and <a href="/pmd-repairs.html">Repairs</a>; for taking control of the chair yourself, see <a href="/pmd-control.html">Owner Control</a> and the <a href="/pmd-exploded.html">exploded views</a>. Your right to this information at all is laid out on <a href="/repair-rights.html">Repair Rights</a>.</p>
+  </section>
+
+  <section id="sources">
+    <h2>Sources</h2>
+    <p>Primary sources only. The library copies are this site&rsquo;s preserved copies of the manufacturers&rsquo; own published documents; the Curtiss-Wright pages are the manufacturer&rsquo;s live diagnostic lists, checked against them.</p>
+    <ul>
+      <li>PG Drives Technology, <em>Mobility Diagnostic Guide</em> (newVSI, VSI, VR2, Pilot+, S-Drive, Egis &amp; Solo) &mdash; trip codes, Diagnostic Warning, and the per-system details on this page: <a href="/library/collected-public-docs/pmd/pg-drives_mobility-diagnostics_fault-codes.pdf">library copy (PDF)</a>.</li>
+      <li>PG Drives Technology, <em>VSI Controller Flash Codes</em> &mdash; the sibling system&rsquo;s published bar list, showing the family pattern: <a href="/library/collected-public-docs/pmd/pg-drives_vsi_fault-codes.pdf">library copy (PDF)</a>.</li>
+      <li>PG Drives Technology, <em>VSI Technical Manual</em> &mdash; TruCharge behaviour and the verbatim battery warning above: <a href="/library/collected-public-docs/pmd/pg-drives_vsi_technical.pdf">library copy (PDF)</a>.</li>
+      <li>Curtiss-Wright / PG Drives Technology, <a href="https://industrial.curtisswright.com/en-gb/pgdt/Online-Diagnostics/Flash-Code-List/Pilot-Flash-Codes">Pilot+ Flash Codes</a> &mdash; the 1-to-10 bar list and the Motor Swap note.</li>
+      <li>Curtiss-Wright / PG Drives Technology, <a href="https://industrial.curtisswright.com/en-gb/pgdt/Online-Diagnostics/Flash-Code-List/S-Drive-Flash-Codes">S-Drive Flash Codes</a> &mdash; the 1-to-10 bar list; the same Self-Help Guide is section 8.3 of the S-Drive Technical Manual, SK76745/10.</li>
+      <li>Curtiss-Wright / PG Drives Technology, <a href="https://industrial.curtisswright.com/en-gb/pgdt/Online-Diagnostics/Flash-Code-List/Egis-Flash-Codes">Egis Flash Codes</a> &mdash; the 1-to-10 bar list for Egis.</li>
+      <li>Handicare, <em>Trophy Service Manual</em> &mdash; the Egis LED-to-trip-code table and the statement that Egis trip codes can only be read with the SP1: <a href="https://cdn3.guidespdf.com/view/1067/1067860-trophy.pdf">publisher copy (PDF)</a>.</li>
+    </ul>
+    <p>More documents live in the <a href="/library-hub.html">Library Hub</a>. If your chair is not running yet, start at <a href="/pmd-start.html">Start Here: Your Chair Stopped</a>.</p>
+  </section>
+
+  <section>
+    <h2>Before you call anyone</h2>
+    <p>Read the bars. Count them twice. Write the count down with the date &mdash; and if a programmer is plugged in, get the four-digit trip code written down too, before the log is cleared. Try the owner checks: on these three older systems, as on the newer ones, the codes that strand people most are freewheel levers, a charger left plugged in, and a dying battery connection. If the fault is inside a module, you now know which system and which area &mdash; and you can say so.</p>
+    <p><a href="/pmd.html">&larr; Back to PMD</a> &middot; <a href="/pmd-fault-codes.html">Fault codes, translated (part one)</a> &middot; <a href="/pmd-fault-codes-2.html">Fault codes: the other systems</a> &middot; <a href="/pmd-programmers.html">The Keys: programmers and tiers &rarr;</a></p>
+  </section>
+
+</main>
+
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

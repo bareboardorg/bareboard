@@ -85,6 +85,20 @@
               </div>
             </div>
           </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
         <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
           <div class="col-panel">
             <div class="dropdown-inner">
@@ -273,7 +287,7 @@
       <tr><td><a href="https://www.ti.com/lit/ds/symlink/lm317.pdf" target="_blank" rel="noopener">LM317</a></td><td>Texas Instruments</td><td>3-pin adjustable positive voltage regulator, 1.25–37V, up to 1.5A.</td></tr>
       <tr><td><a href="http://datasheet.octopart.com/LM2596T-ADJ/NOPB-National-Semiconductor-datasheet-9696987.pdf" target="_blank" rel="noopener">LM2596</a></td><td>TI (National Semiconductor)</td><td>SIMPLE SWITCHER 150 kHz 3A step-down regulator, adjustable + 3.3/5/12V (National-published original, via Octopart).</td></tr>
       <tr><td><a href="http://datasheet.octopart.com/MP2307DN-LF-Monolithic-Power-Systems-datasheet-163718840.pdf" target="_blank" rel="noopener">MP2307</a></td><td>Monolithic Power Systems</td><td>3A, 23V, 340 kHz synchronous step-down converter (MPS-published, via Octopart).</td></tr>
-      <tr><td><a href="https://assets.ebee.com/datasheet/MT3608/664082.pdf" target="_blank" rel="noopener">MT3608</a></td><td>Aerosemi</td><td>1.2 MHz step-up converter, 2–24V in, 4A switch, SOT-23-6 (Aerosemi Rev 1.1, via distributor).</td></tr>
+      <tr><td><a href="https://assets.ebee.com/datasheet/MT3608/664082.pdf" target="_blank" rel="noopener">MT3608</a></td><td>Aerosemi</td><td>1.2 MHz step-up converter, 2–24V in, SOT-23-6 (Aerosemi Rev 1.1, via distributor). Note: the headline "4 A" is the internal switch current limit, not output current — usable output is roughly 2 A at favorable in/out ratios.</td></tr>
       <tr><td><a href="https://cdn.ozdisan.com/public/product/assets/XL6009.pdf" target="_blank" rel="noopener">XL6009</a></td><td>XLSEMI</td><td>400 kHz boost/buck-boost/inverting DC-DC converter, up to 60V switch / 4A (XLSEMI Rev 1.1, via distributor).</td></tr>
       <tr><td><a href="https://datasheet4u.com/pdf/786208/XL4015.pdf" target="_blank" rel="noopener">XL4015</a></td><td>XLSEMI</td><td>5A, 180 kHz, 36V buck DC/DC converter, TO-263-5L (XLSEMI Rev 2.0).</td></tr>
       <tr><td><a href="https://github.com/jharvey/ESP32_LORA_Chat/raw/refs/heads/master/docs/1809261820_TOPPOWER-Nanjing-Extension-Microelectronics-TP4056-42-ESOP8_C16581_Google_translated.pdf" target="_blank" rel="noopener">TP4056</a></td><td>NanJing Top Power</td><td>1A standalone linear Li-ion battery charger, CC/CV, SOP-8 (Google-translated manufacturer doc, via GitHub).</td></tr>
@@ -364,6 +378,7 @@
       <tr><td><a href="https://arxiv.org/pdf/2304.01433v1" target="_blank" rel="noopener">Google TPU v4</a></td><td>Google</td><td>Architecture paper: "TPU v4: An Optically Reconfigurable Supercomputer for Machine Learning" (Jouppi et al., ISCA 2023) — not a datasheet; describes pod architecture, SparseCore, 4096-chip 3D torus.</td></tr>
       </tbody>
     </table>
+    <p><strong>Repairing one?</strong> The datasheets above are nearly all that manufacturers publish — board-level documentation is not public. <a href="/gpu-repair.html">GPU Repair</a> covers what owners and independent shops can actually do: diagnosis, fans, thermal paste and pads, the documented 12VHPWR connector record, board-level repair, and counterfeits.</p>
   </section>
   <section id="game-console-chips">
     <h2>Game console chips (1)</h2>
@@ -463,8 +478,8 @@
 <ul class="ds-list">
 <li>
 <strong>K4B2G1646B</strong> &mdash; Samsung<br>
-<span class="ds-func">LPDDR3 DRAM</span><br>
-<span class="ds-links"><a href="https://www.samsung.com/semiconductor/dram/lpddr3/">Samsung LPDDR3 family</a> &middot; <a href="https://web.archive.org/web/2018*/https://www.samsung.com/us/business/oem-solutions/pdfs/K4B2G1646B-HCH9.pdf">Archive.org datasheet copy</a></span><br>
+<span class="ds-func">DDR3 SDRAM, 2 Gb (256 MB per chip)</span><br>
+<span class="ds-links"><a href="https://www.samsung.com/semiconductor/dram/ddr3/">Samsung DDR3 family</a> &middot; <a href="https://web.archive.org/web/2018*/https://www.samsung.com/us/business/oem-solutions/pdfs/K4B2G1646B-HCH9.pdf">Archive.org datasheet copy</a></span><br>
 <span class="ds-device">Found in: <a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></span>
 </li>
 </ul>
@@ -524,7 +539,7 @@
 <ul class="ds-list">
 <li>
 <strong>CD4050</strong> &mdash; Texas Instruments<br>
-<span class="ds-func">Hex non-inverting buffer — the classic 3.3 V → 5 V level shifter</span><br>
+<span class="ds-func">Hex non-inverting buffer — the classic 5 V → 3.3 V level shifter. It converts down only: powered from 3.3 V it accepts higher-voltage inputs, but it cannot step a 3.3 V signal up to 5 V.</span><br>
 <span class="ds-links"><a href="https://www.ti.com/product/CD4050B">TI product page</a> &middot; <a href="https://www.ti.com/lit/ds/symlink/cd4050b.pdf">Datasheet (PDF)</a></span><br>
 </li>
 <li>
@@ -629,7 +644,7 @@
 </li>
 <li>
 <strong>LM7805</strong> &mdash; Texas Instruments<br>
-<span class="ds-func">5 V 1 A linear regulator — the workhorse</span><br>
+<span class="ds-func">5 V linear regulator — 1.5 A class part (rated current needs adequate heatsinking) — the workhorse</span><br>
 <span class="ds-links"><a href="https://www.ti.com/lit/gpn/LM7800">TI product page (datasheet via page)</a></span><br>
 </li>
 </ul>
@@ -647,7 +662,7 @@
 </li>
 <li>
 <strong>MT3608</strong> &mdash; Aerosemi<br>
-<span class="ds-func">2 A boost (step-up) converter</span><br>
+<span class="ds-func">Boost (step-up) converter — 4 A switch current limit; usable output current ≈2 A depending on input/output voltages (the "4 A" figure is the switch limit, not the output)</span><br>
 <span class="ds-links"><a href="https://web.archive.org/web/20220703000319/https://datasheet.lcsc.com/lcsc/2201121530_XI-AN-Aerosemi-Tech-MT3608L_C2932326.pdf">Archive.org copy (PDF)</a></span><br>
 </li>
 </ul>
@@ -751,9 +766,9 @@
 <ul class="ds-list">
 <li>
 <strong>Z80</strong> &mdash; Zilog<br>
-<span class="ds-func">8-bit microprocessor — powers the TI-84 calculator family, ZX Spectrum, Game Boy (LR35902 variant)</span><br>
+<span class="ds-func">8-bit microprocessor — powers the TI-84 Plus and ZX Spectrum. (The TI-84 Plus CE uses the faster eZ80 instead, and the Game Boy's CPU is the Sharp SM83 — a distinct part, not a Z80 variant, despite the persistent "LR35902" nickname.)</span><br>
 <span class="ds-links"><a href="https://web.archive.org/web/20201231164021/http://www.zilog.com/docs/z80/UM0080.pdf">Archive.org copy (PDF, User Manual)</a></span><br>
-<span class="ds-device">Found in: TI-84 Plus / Plus CE, ZX Spectrum, Game Boy</span>
+<span class="ds-device">Found in: TI-84 Plus, ZX Spectrum</span>
 </li>
 </ul>
 <h2 id="game-consoles" class="bb-mt-2p5em">Game console &amp; proprietary hardware</h2>
@@ -813,7 +828,7 @@
 </li>
 <li>
 <strong>Z80</strong> &mdash; Zilog<br>
-<span class="ds-func">8-bit CPU — powers all TI-84 variants (see Z section above for datasheet)</span><br>
+<span class="ds-func">8-bit CPU — powers the Z80-based TI-84 variants (the Plus CE uses an eZ80 instead; see Z section above for datasheet)</span><br>
 <span class="ds-links"><a href="#hc-Z">See Z80 entry above</a></span><br>
 </li>
 </ul>
@@ -947,7 +962,7 @@
     <span class="ds-links"><a href="https://www.usb.org/document-library/usb-32-specification-released-september-22-2017-and-ecns">USB-IF &mdash; USB 3.2 specification</a></span></li>
     <li><strong>USB-C</strong> &mdash; 24-pin reversible, up to 240W USB-PD. CC lines handle negotiation.<br>
     <span class="ds-links"><a href="https://www.usb.org/document-library/usb-type-cr-cable-and-connector-specification-release-23">USB-IF &mdash; Type-C specification</a> &middot; <a href="https://pinoutguide.com/Slots/usb-type-c_pinout.shtml">Pinout guide</a></span></li>
-    <li><strong>USB Power Delivery (USB-PD)</strong> &mdash; negotiates 5V/9V/15V/20V up to 240W over USB-C.<br>
+    <li><strong>USB Power Delivery (USB-PD)</strong> &mdash; the Standard Power Range (SPR) negotiates 5V/9V/15V/20V, up to 100W. The headline 240W requires PD 3.1 Extended Power Range (EPR) at 28V/36V/48V.<br>
     <span class="ds-links"><a href="https://www.usb.org/document-library/usb-power-delivery">USB-IF &mdash; USB-PD specification</a></span></li>
   </ul>
 

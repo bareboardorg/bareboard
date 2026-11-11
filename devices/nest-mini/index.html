@@ -8,12 +8,12 @@
   <meta name="tdm-reservation" content="1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Google Nest Mini (2nd Gen) &mdash; BareBoard &mdash; Free Hardware Education</title>
-<meta name="description" content="Google Nest Mini 2nd generation: Synaptics AS370, dedicated ML chip, FCC ID A4R-H2C, teardown and chip details.">
+<meta name="description" content="Google Nest Mini 2nd generation: Synaptics AS370 with integrated ML engine, FCC ID A4R-H2C, teardown and chip details.">
 <meta name="theme-color" content="#fbfbfc">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BareBoard">
 <meta property="og:title" content="Google Nest Mini (2nd Gen)">
-<meta property="og:description" content="Google Nest Mini 2nd generation: Synaptics AS370, dedicated ML chip, FCC ID, teardown and chip details.">
+<meta property="og:description" content="Google Nest Mini 2nd generation: Synaptics AS370 with integrated ML engine, FCC ID, teardown and chip details.">
 <meta property="og:url" content="https://bareboard.org/devices/nest-mini/">
 <meta property="og:image" content="https://bareboard.org/img/frank-clean.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -76,7 +76,19 @@
               </ul>
             </div>
           </div></li>
-        <li class="has-children">
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
           <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
           <div class="col-panel">
             <div class="dropdown-inner">
@@ -141,7 +153,7 @@
     <strong>Your device, your rules.</strong> You bought it &mdash; you have the right to update its firmware, patch its security issues, and remove software you don&rsquo;t want on it. Every method on this page is non-destructive: it uses the device&rsquo;s existing ports, buttons, or software features. Nothing here requires breaking the enclosure.
   </aside>
   <h1>Google Nest Mini (2nd Gen)</h1>
-  <p class="lede">Google&rsquo;s puck-shaped smart speaker &mdash; nearly identical outside to the 2017 Home Mini, but with a dedicated machine-learning chip inside that runs speech recognition locally at up to 1 TOPS.</p>
+  <p class="lede">Google&rsquo;s puck-shaped smart speaker &mdash; nearly identical outside to the 2017 Home Mini, but with a machine-learning engine integrated into its main processor, so speech recognition can run locally.</p>
 
   <figure class="bb-figure">
     <img src="img/nest-mini.jpg" srcset="img/nest-mini-480.jpg 480w, img/nest-mini.jpg 1200w" sizes="(max-width: 820px) 92vw, 704px" width="1200" height="628" alt="Google Nest Mini smart speaker" loading="lazy" class="bb-img-fluid-r8">
@@ -178,7 +190,7 @@
     <h2 id="chips">Key Chips</h2>
     <ul>
       <li><strong>Synaptics AS370 A1</strong> &mdash; the main application CPU.</li>
-      <li><strong>Dedicated ML chip (1 TOPS)</strong> &mdash; runs on-device speech recognition and natural-language understanding so common commands don&rsquo;t need a round trip to Google&rsquo;s servers.</li>
+      <li><strong>ML engine integrated in the AS370 SoC</strong> &mdash; not a separate chip; it runs on-device speech recognition and natural-language understanding so common commands don&rsquo;t need a round trip to Google&rsquo;s servers.</li>
       <li><strong>Toshiba TC58NVG2S0H</strong> &mdash; NAND flash.</li>
       <li><strong>Nanya NT5CC128M16JR-EK</strong> &mdash; DRAM.</li>
     </ul>
@@ -187,7 +199,7 @@
   <section>
     <h2 id="teardown">Teardown Notes</h2>
     <ul>
-      <li>The fabric top lifts away to reveal a compact circular PCB. Google added a wall-mount screw hole and a 3.5 mm auxiliary jack on the bottom &mdash; the two headline hardware changes over the Home Mini.</li>
+      <li>The fabric top lifts away to reveal a compact circular PCB. Google added a wall-mount screw hole on the bottom &mdash; the headline hardware change over the Home Mini. There is no 3.5 mm jack and no USB port on this device; the only connector is the proprietary DC power barrel.</li>
       <li>A third microphone was added (the Home Mini had two) to improve far-field voice pickup.</li>
       <li>The enclosure is fabric-over-plastic with adhesive; opening it is non-destructive if you work slowly with a thin spudger, but the fabric can stretch if forced.</li>
     </ul>
@@ -195,10 +207,10 @@
 
   <section>
     <h2 id="entry">Simple Entry Points</h2>
-    <h3>What the 3.5 mm jack and USB port offer</h3>
-    <p><strong>What do I need?</strong> A standard 3.5 mm audio cable and a USB power meter (optional).</p>
+    <h3>Ports: there are none to use</h3>
+    <p><strong>What do I need?</strong> Nothing &mdash; there is no port to plug into.</p>
     <ol>
-      <li>The 3.5 mm jack is documented as an audio output for external speakers &mdash; on some Android-family devices, similar jacks have carried serial consoles, but on the Nest Mini it is an audio port; verify against community documentation before assuming otherwise.</li>
+      <li>The Nest Mini has no 3.5 mm jack and no USB port. Its only connector is the proprietary DC power barrel, which carries power and nothing else. Any guide claiming a wired audio output or a USB data connection on this device is wrong.</li>
       <li>The device runs a locked bootloader; community research focuses on the documented Cast and Assistant APIs rather than hardware debug.</li>
       <li>For local control without Google&rsquo;s cloud, the documented path is the open-source Home Assistant integration, which uses the official local APIs.</li>
     </ol>
@@ -208,6 +220,32 @@ PORT     STATE SERVICE
 8008/tcp open  http
 8009/tcp open  ajp13</code></pre>
     <p><em>The Nest Mini&rsquo;s bootloader is locked and there is no documented hardware debug header; this page records what is verifiable rather than speculating.</em></p>
+  </section>
+
+  <section>
+    <h2 id="record">The Full Record</h2>
+    <p>Everything in this timeline is documented &mdash; a court outcome, a regulator&rsquo;s action, a published security analysis, or Google&rsquo;s own statements &mdash; and each entry links its source. Where a popular claim about the Nest Mini is <em>not</em> proven, it is labeled Unverified at the end, with the evidence on both sides.</p>
+    <p><em>Scope note: the 2017 entry is the Nest Mini&rsquo;s direct predecessor, the Google Home Mini, and is labeled as such. The other entries are the record of the Google Assistant platform this speaker runs on. No recalls, lawsuits, or regulator actions against the Nest Mini model itself were found in the public record as of November 2026 &mdash; the entries below are its platform&rsquo;s record, plus its predecessor&rsquo;s defining defect.</em></p>
+    <table>
+      <tr><th>Year</th><th>What happened</th><th>Source</th></tr>
+      <tr><td>2017</td><td><strong>Predecessor model: the Home Mini that recorded on its own.</strong> Android Police&rsquo;s Artem Russakovskii found that his Google Home Mini review unit had been recording and uploading audio from his home almost constantly. The cause was hardware: the touch sensor on top of the device registered &ldquo;phantom&rdquo; presses, repeatedly firing the long-press that was supposed to summon the Assistant only when a person held the top. Google first pushed an update on October 7, 2017 to stop the touch mechanism misbehaving, deleted the top-touch events from October 4&ndash;7 from users&rsquo; activity pages, and then made the stronger call: it permanently removed all top touch functionality from the Home Mini by software update, saying that although it had received only a few reports, it wanted people to have complete peace of mind. Some single-tap functions later returned as a long-press on the side of the device; the top long-press never did.</td><td><a href="https://techcrunch.com/2017/10/11/citing-a-few-malfunctions-google-nukes-touch-function-from-home-mini/">TechCrunch &mdash; Google removes Home Mini top touch function</a></td></tr>
+      <tr><td>2019</td><td><strong>Contractors listened to Assistant recordings; Google confirmed the program (platform-level).</strong> Belgian broadcaster VRT NWS obtained more than 1,000 Google Assistant recordings from a whistleblowing contractor and reported that 153 of them should never have been recorded because the wake phrase was not clearly said, and that some clips contained addresses and personal details enough to identify the speakers. Google answered in its own blog post: it partners with language experts who review and transcribe a small set of queries, only about 0.2 percent of all audio snippets, with snippets not associated with user accounts and reviewers directed not to transcribe background conversations. Google said the contractor who leaked the Dutch audio had violated its data security policies and that it was conducting a full review of its safeguards.</td><td><a href="https://www.blog.google/products/assistant/more-information-about-our-processes-safeguard-speech-data/?ref=davidimel.com">Google &mdash; more information about our processes to safeguard speech data (Google blog, July 11, 2019)</a></td></tr>
+      <tr><td>2019&ndash;2026</td><td><strong>$68 million Google Assistant privacy settlement (platform-level).</strong> A class action filed in July 2019 &mdash; Kumandan v. Google LLC, consolidated as In re Google Assistant Privacy Litigation, No. 5:19-cv-04286-BLF in the U.S. District Court for the Northern District of California &mdash; alleged that Google Assistant recorded and transmitted people&rsquo;s communications without intentional activation, in what the settlement calls &ldquo;false accepts&rdquo; (a hot word detected when none was spoken), and disclosed recordings to third-party review vendors. Google denied the allegations and admitted no wrongdoing. The settlement created a $68 million non-reversionary fund for two classes covering May 18, 2016 to March 19, 2026: purchasers of Google-made devices, and Assistant users and household members whose communications were recorded through a false accept or shared with a review vendor. The court&rsquo;s order names Google Home, Home Mini, Home Max, Nest Hub, Nest Hub Max, and Pixel phones as Google-made devices; the Nest Mini runs the same Assistant and was on sale throughout the class period, but is not named device by device. Judge Beth Labson Freeman granted final approval on October 13, 2026 (ECF No. 584), overruling all seven objections. The agreement provides no injunctive relief &mdash; Google&rsquo;s sole obligation under it is payment.</td><td><a href="https://www.recordinglaw.com/news/google-assistant-settlement-final-approval/">Recording Law &mdash; final approval of the $68M Google Assistant settlement (order ECF No. 584)</a></td></tr>
+    </table>
+    <aside class="bb-notice-amber">
+      <p><strong>Unverified: &ldquo;Google used those accidental recordings to target ads.&rdquo;</strong> The claim comes from the class action itself: the court&rsquo;s class certification order records the plaintiffs&rsquo; allegation that Google did not destroy false-accept recordings but kept using them to improve Assistant <em>and to target advertising</em>, and routed some to human reviewers (<a href="https://www.recordinglaw.com/news/google-assistant-settlement-final-approval/">the allegation as recorded in the court record</a>). Evidence for the allegation: it was pleaded in a case that produced a $68 million settlement, and human review of a small sample of recordings is independently documented (2019, above). Evidence against: no court ever found the advertising claim true &mdash; the only class the court certified for litigation was a purchaser class on contract and unfair-competition claims, Google denied all allegations throughout the case, and the settlement contains no admission and no finding about advertising. Human review is fact; ad targeting from these recordings is not proven.</p>
+    </aside>
+  </section>
+
+  <section>
+    <h2 id="did-you-know">Did you know</h2>
+    <ul>
+      <li><strong>One drinking bottle dresses more than two Nest Minis.</strong> The Nest Mini&rsquo;s fabric top is made from 100% recycled plastic bottles, and Google&rsquo;s product manager put the ratio plainly at launch: a single half-liter plastic bottle makes enough fabric to cover more than two Nest Mini devices. The enclosure underneath is 35% recycled plastic. Source: <a href="https://betanews.com/article/nest-mini-comes-with-an-upgraded-google-assistant/">BetaNews &mdash; Nest Mini comes with an upgraded Google Assistant (Google launch statements)</a>.</li>
+      <li><strong>It carries a machine-learning chip rated at up to one TeraOPS.</strong> That dedicated chip &mdash; a teraOPS is a trillion operations per second &mdash; lets the Nest Mini learn your most common commands and process them on the device instead of in Google&rsquo;s data centers, for a faster response. At launch this local processing applied in the US. Source: <a href="https://betanews.com/article/nest-mini-comes-with-an-upgraded-google-assistant/">BetaNews &mdash; Nest Mini comes with an upgraded Google Assistant</a>.</li>
+      <li><strong>It listens with sound you cannot hear to know you are near.</strong> The Nest Mini uses ultrasound sensing: it emits inaudible chirps, reads the reflections, and lights up its volume touch points as your hand approaches, so the controls are findable in the dark. Source: <a href="https://en.wikipedia.org/wiki/Google_Nest_(smart_speakers)">Wikipedia &mdash; Google Nest smart speakers (Nest Mini)</a>.</li>
+      <li><strong>Its FCC filing showed a headphone jack that does not exist.</strong> The pre-launch FCC filing sketch for model H2C showed a wall-mount hole and a 3.5 mm jack. The wall mount shipped; the jack did not &mdash; a retail Nest Mini&rsquo;s only connector is its proprietary DC power barrel, with no audio output and no USB port. Source: <a href="https://fccid.io/A4RH2C">FCC filing A4R-H2C</a> and <a href="https://www.ifixit.com/Teardown/Google+Nest+Mini+(2nd+generation)+Teardown/130974">iFixit &mdash; Nest Mini teardown</a>.</li>
+      <li><strong>Its predecessor partly got its touch controls back &mdash; on the side.</strong> Two months after Google permanently killed the Home Mini&rsquo;s top touch over the phantom-press defect, a December 2017 update (firmware 1.29) restored play/pause, alarm-silencing, and call-ending as a long-press on the side of the device. The top long-press that summoned the Assistant was never restored. Source: <a href="https://www.androidpolice.com/2017/12/15/new-google-home-mini-update-restores-touch-functionality-long-press-side/">Android Police &mdash; Home Mini update restores touch via side long-press</a>.</li>
+    </ul>
   </section>
 
   <section>

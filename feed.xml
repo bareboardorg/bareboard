@@ -5,7 +5,105 @@
     <link>https://bareboard.org/</link>
     <description>Recent additions to BareBoard, the free hardware education resource.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Quantum Q6 Edge 3, Opened — Every Part, Named</title>
+      <link>https://www.bareboard.org/pmd-q6-edge-3.html</link>
+      <guid>https://www.bareboard.org/pmd-q6-edge-3.html</guid>
+      <description>The Quantum Q6 Edge 3 taken apart on paper: every assembly from Quantum’s own parts breakdown, callout by callout, with part numbers and a plain-language line for every part.</description>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Exploded Views</title>
+      <link>https://www.bareboard.org/pmd-exploded.html</link>
+      <guid>https://www.bareboard.org/pmd-exploded.html</guid>
+      <description>Every power wheelchair on this page, broken down to the component level from the manufacturer&amp;rsquo;s own parts guide: exploded diagrams, callouts, part numbers, and plain language for every part.</description>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Chair Control — The Owner Tool</title>
+      <link>https://www.bareboard.org/pmd-control.html</link>
+      <guid>https://www.bareboard.org/pmd-control.html</guid>
+      <description>Chair Control: BareBoard’s original owner tool. Plug your phone into your own power wheelchair, read its fault codes in plain English, see its settings, and take back control. Starts with a practice chair — no hardware needed.</description>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Library Hub</title>
+      <link>https://www.bareboard.org/library-hub.html</link>
+      <guid>https://www.bareboard.org/library-hub.html</guid>
+      <description>Every document BareBoard has collected in one searchable index: manuals, schematics, documentation, datasheets, lawsuits, FDA records, and FCC filings — preserved here or linked to the public source.</description>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Shield: Right-to-Repair Law</title>
+      <link>https://www.bareboard.org/repair-rights.html</link>
+      <guid>https://www.bareboard.org/repair-rights.html</guid>
+      <description>The layered legal defense for owners and independent repairers: Magnuson-Moss, the DMCA &amp;sect;1201 repair exemptions, the eight powered-wheelchair state laws with citations, the electronics laws, and the escalation ladder for when they say no.</description>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Demand Letters That Cite the Law</title>
+      <link>https://www.bareboard.org/repair-demand-letter.html</link>
+      <guid>https://www.bareboard.org/repair-demand-letter.html</guid>
+      <description>Three fill-in-the-blank demand letters: wheelchair owner and independent repairer letters invoking the state powered-wheelchair statutes, and a Magnuson-Moss rebuttal to a voided-warranty threat.</description>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Access &amp; Control: PlayStation — PS1 to PS5</title>
+      <link>https://www.bareboard.org/playstation-access.html</link>
+      <guid>https://www.bareboard.org/playstation-access.html</guid>
+      <description>Every door into a PlayStation an owner can open: Safe Mode on PS3, PS4 and PS5, owner-swappable storage, the official Net Yaroze and PS2 Linux kits, the paired optical drives, and the board-level documentation that exists — and does not.</description>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Access &amp; Control: Nintendo — Switch RCM, Maintenance Mode and the Storage Board</title>
+      <link>https://www.bareboard.org/nintendo-access.html</link>
+      <guid>https://www.bareboard.org/nintendo-access.html</guid>
+      <description>The doors into Nintendo hardware an owner can open: Maintenance Mode on every Switch, recovery mode (RCM) on launch-era units and the full storage backup it unlocks, the plug-in eMMC board, the Joy-Con rail, and an honest map of what Nintendo has never documented.</description>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Keys: Programmers, Dongles and Access Tiers</title>
+      <link>https://www.bareboard.org/pmd-programmers.html</link>
+      <guid>https://www.bareboard.org/pmd-programmers.html</guid>
+      <description>The tools that read and write a power chair’s settings, named system by system: Curtiss-Wright, Curtis, Dynamic and Invacare programmers, their dongles and keys, and the access tiers that decide who may change what.</description>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Getting a Repair Paid For</title>
+      <link>https://www.bareboard.org/pmd-repairs.html</link>
+      <guid>https://www.bareboard.org/pmd-repairs.html</guid>
+      <description>Medicare’s repair rules in plain language: repairs to a chair you own are covered, no new prescription is required, prior authorization is for new chairs, and the K0462 loaner rule.</description>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Fault Codes, Translated: The Other Systems</title>
+      <link>https://www.bareboard.org/pmd-fault-codes-2.html</link>
+      <guid>https://www.bareboard.org/pmd-fault-codes-2.html</guid>
+      <description>Dynamic Shark and DX flash codes and Invacare MK6i E-codes, translated: what each code means and what an owner checks first.</description>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>How BareBoard Stays Up</title>
+      <link>https://www.bareboard.org/staying-up.html</link>
+      <guid>https://www.bareboard.org/staying-up.html</guid>
+      <description>No single company can switch BareBoard off: the name, the signpost, the host, and the preserved library are four separate layers, and every layer has a copy somewhere else.</description>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>GPU Repair</title>
+      <link>https://www.bareboard.org/gpu-repair.html</link>
+      <guid>https://www.bareboard.org/gpu-repair.html</guid>
+      <description>How to diagnose and repair a graphics card (GPU): the checks anyone can do, cleaning, fan, thermal paste and pad replacement, the documented 12VHPWR melting record and the CPSC recall, board-level repair, counterfeits, and the documentation NVIDIA does not publish.</description>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Batteries &amp; Chargers</title>
+      <link>https://www.bareboard.org/pmd-batteries.html</link>
+      <guid>https://www.bareboard.org/pmd-batteries.html</guid>
+      <description>Power wheelchair batteries and chargers in plain language: the matched 24V pair, gel and AGM chemistry, real MK Battery capacities, break-in, charging voltages, storage, replacement, and the lithium question.</description>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>W³ — The Amassed Bench</title>
       <link>https://bareboard.org/watchmen.html</link>

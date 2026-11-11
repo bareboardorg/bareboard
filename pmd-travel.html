@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flying With Your Chair &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="Flying with a power wheelchair or scooter in plain language: the battery split, what to tell the airline, gate-check, your right to your chair at the aircraft door, and what to do when an airline breaks it.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Flying With Your Chair">
+<meta property="og:description" content="Sealed batteries fly installed. Lithium follows different rules. The battery split, gate rights, and the damage claim path, from DOT and FAA sources.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-travel.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Flying With Your Chair</h1>
+    <p class="lede">A power wheelchair or scooter can fly. The chair itself is not luggage &mdash; the law treats it as an <strong>assistive device</strong> (a piece of equipment that helps you live with a disability). What decides how hard the trip is, almost every time, is one thing: the battery. This page is the battery split, the steps before and at the gate, and the claim path when an airline breaks the chair &mdash; in plain language, from the regulators&rsquo; own pages.</p>
+    <p><em>Provenance: compiled from the U.S. Department of Transportation (DOT) aviation consumer protection pages, the Federal Aviation Administration (FAA) PackSafe pages, which state they are &ldquo;Based on US DOT regulations (49 CFR, Sec. 175.10),&rdquo; DOT&rsquo;s Air Travel Consumer Report, and DOT&rsquo;s Federal Register notices on the 2024 wheelchair rule. Airline policies can be stricter than the federal floor &mdash; the FAA says so itself &mdash; so confirm with your airline for your flight. This is documentation, not legal advice.</em></p>
+  </section>
+
+  <section id="law">
+    <h2>The law in one paragraph</h2>
+    <p>The <strong>Air Carrier Access Act (ACAA)</strong> is the federal law that bans airlines from discriminating against passengers because of a disability. It is not the Americans with Disabilities Act &mdash; that law does not govern airlines. DOT enforces the ACAA through its rule at 14 CFR Part 382. DOT summarises the ACAA on its <a href="https://www.transportation.gov/individuals/aviation-consumer-protection/wheelchair-and-guided-assistance">Wheelchair and Guided Assistance</a> page this way: &ldquo;The Air Carrier Access Act (ACAA) prohibits U.S. and foreign carriers from discriminating against an otherwise qualified individual because the individual has a physical or mental impairment that substantially limits one or more major life activities.&rdquo; An assistive device does not count toward your baggage limit, and if it cannot be stowed in the cabin, DOT says airlines must stow it in the cargo compartment at no extra cost &mdash; see DOT&rsquo;s <a href="https://www.transportation.gov/resources/individuals/aviation-consumer-protection/assistive-device-guides/assistive-device-stowage">Assistive Device &mdash; Stowage, Damage, and Delay</a> page.</p>
+  </section>
+
+  <section id="batteries">
+    <h2>The battery split that decides everything</h2>
+    <p>Find your battery type first. It is printed on the battery label and in your owner manual. <strong>Watt-hours (Wh)</strong> measure how much energy a battery holds. The FAA explains how to work the number out when it is not printed: &ldquo;To determine Wh, multiply the volts (V) by the amp hours (Ah). Example: A 12-volt battery rated to 8 Ah is rated at 96 Wh (12 x 8 = 96).&rdquo; &mdash; FAA, <a href="https://www.faa.gov/hazmat/packsafe/airline-passengers-and-batteries">Airline Passengers and Batteries</a> (PackSafe, last updated October 2, 2026). For the battery types themselves &mdash; gel, AGM, lithium &mdash; and how each ages, see <a href="/pmd-batteries.html">Batteries &amp; Chargers</a>.</p>
+
+    <h3>Sealed gel and AGM: &ldquo;non-spillable&rdquo;</h3>
+    <p><strong>Non-spillable</strong> means the liquid inside the battery is absorbed or gelled, so it will not spill out if the case is cracked. Sealed gel and absorbed glass mat (AGM) wheelchair batteries are the common non-spillable types. For wheelchairs and mobility devices, the FAA PackSafe chart lists this row as checked only, with this instruction, verbatim: &ldquo;For complete passenger instructions contact your airline as advanced arrangements and extra check-in time may be necessary&rdquo; &mdash; FAA PackSafe, row &ldquo;Wheelchairs and Mobility Devices with Spillable, Non-Spillable, or Dry Batteries.&rdquo; The wheelchair-specific row sets <strong>no watt-hour limit</strong>. The battery flies with the chair in the cargo compartment, and DOT&rsquo;s assistive-device page states the handling rule for airlines: &ldquo;You must allow non-spillable batteries labeled as &lsquo;non-spillable&rsquo; by a manufacturer to remain installed on a device when stowed onboard the aircraft; and you must not require separate packaging.&rdquo; In plain words: a labelled non-spillable battery does not have to come off the chair. The separate FAA row for small non-spillable wet batteries used in portable electronic devices (12 volts and 100 watt hours) is a different row for a different thing &mdash; it is not the wheelchair row.</p>
+    <p>The underlying federal rule is <a href="https://law.lawstack.com/cfr/49/175.10/">49 CFR &sect;175.10</a>, at paragraph (a)(15) for a wheelchair or mobility aid with a non-spillable battery carried as checked baggage: the battery must meet the non-spillable test in the regulations, show no obvious defects on inspection, be disconnected with terminals protected against short circuit unless the chair&rsquo;s design prevents accidental starting, and be securely attached, or removed into strong, rigid packaging marked &ldquo;NONSPILLABLE BATTERY.&rdquo;</p>
+
+    <h3>Lithium-ion: different rules</h3>
+    <p><strong>Lithium-ion</strong> means the rechargeable lithium chemistry used in most folding travel chairs and many scooters. It is judged by watt-hours, by whether it stays on the chair, and by whether it is a spare. <strong>Lithium metal</strong> (non-rechargeable lithium) batteries are, in the FAA&rsquo;s words for these devices, forbidden with these devices &mdash; in every row below.</p>
+    <table>
+      <thead><tr><th>How the lithium battery travels</th><th>Where it goes</th><th>Watt-hour rule (FAA PackSafe)</th><th>What you must do</th></tr></thead>
+      <tbody>
+        <tr><td>Installed, and protected by the design of the chair</td><td>Checked with the chair; not carried on</td><td>No watt-hour figure is listed for this row in the FAA chart</td><td>Tell the airline where the battery is on the device, in the FAA&rsquo;s words: &ldquo;The passenger must advise the airline of the battery location on the device.&rdquo;</td></tr>
+        <tr><td>Removed, or not adequately protected on the chair</td><td>Carry-on baggage only; never checked</td><td>&ldquo;Lithium-ion battery size is limited to 300 watt hours (Wh).&rdquo;</td><td>Carry it in the cabin, protect its terminals, and advise the airline of the battery location</td></tr>
+        <tr><td>Spare battery (an extra, or a removed battery carried as a spare)</td><td>Carry-on only; never checked</td><td>&ldquo;A maximum of one spare battery not exceeding 300 watt hours (Wh) or two spare batteries not exceeding 160 Wh each carry-on only.&rdquo;</td><td>Carry it in the cabin and protect its terminals against short circuit</td></tr>
+      </tbody>
+    </table>
+    <p>That is the whole lithium table, exactly as the FAA publishes it. Note what it does <em>not</em> say: it does not cap a battery that stays installed and protected by the chair&rsquo;s design at 300 Wh. The 300 Wh cap is for a battery that comes off, and for a single spare. Two spares are capped at 160 Wh each. International flights also follow the <a href="https://iata06mstr1r4tgprep.dxcloud.episerver.net/contentassets/6fea26dd84d24b26a7a1fd5788561d6e/mobility-aid-guidance-document.pdf">IATA Battery-Powered Wheelchair and Mobility Aid Guidance Document</a> (revised for the 2026 regulations), which classifies chairs by the same three battery families &mdash; non-spillable, spillable, and lithium &mdash; and requires every chair to be prepared to prevent unintentional activation, with terminals protected from short circuits.</p>
+    <p><strong>Damaged batteries do not fly.</strong> FAA, verbatim: &ldquo;Damaged or recalled batteries and battery-powered devices, which are likely to create sparks or generate a dangerous evolution of heat, must not be carried aboard an aircraft (e.g. carry-on or checked baggage) unless the damaged or recalled battery has been removed or otherwise made safe.&rdquo; If a battery is swollen, cracked, hot, or recalled, do not take it to the airport as a surprise &mdash; contact the airline first, as the FAA advises.</p>
+  </section>
+
+  <section id="before">
+    <h2>Before the flight: tell the airline, and paper the chair</h2>
+    <ul>
+      <li><strong>Tell the airline in advance.</strong> DOT&rsquo;s tips say: &ldquo;Provide notice that you will be traveling with a personal wheelchair in advance whenever possible so that the airline can best accommodate you,&rdquo; and &ldquo;Share information about your wheelchair such as the device&rsquo;s size, weight, and battery type to help the airline safely and properly handle your assistive device.&rdquo; Confirm the chair will fit the cargo hold, especially on a small commuter or regional aircraft. DOT also notes airlines may require 48 hours&rsquo; advance notice to carry an electric wheelchair on an aircraft with fewer than 60 seats.</li>
+      <li><strong>Arrive early.</strong> DOT, verbatim: &ldquo;If you travel with a battery-powered wheelchair, you must arrive at the airport 1 hour prior to the normal check-in time.&rdquo;</li>
+      <li><strong>Make a chair information card and tape it to the chair.</strong> This is the one-page card owners attach where handlers will see it. Write: chair make and model; total weight and dimensions (length, width, height, and folded height if it folds); battery type in plain words (non-spillable gel/AGM, or lithium-ion) plus its watt-hours if lithium; where the battery is; how to put the chair in <strong>freewheel</strong> (the manual-push mode: a lever or switch that disengages the motors so the chair can be pushed by hand without driving it &mdash; and how to put it back); how to disconnect power or remove the joystick cable if handlers must, including any small clip or circlip (a C-shaped spring clip that holds a pin or connector) that must not be lost; how to prevent accidental starting (key out, joystick off, or battery disconnected); safe lifting points; and what not to lift by &mdash; the joystick, armrests, and push handles on most chairs. DOT&rsquo;s own instruction points the same way: &ldquo;Attach clear assembly and disassembly instructions to your wheelchair before you head to the airport.&rdquo;</li>
+      <li><strong>Read your own manual for the exact steps.</strong> The freewheel lever, battery disconnect, and folding steps are in the owner manual for your model &mdash; for example the <a href="/library/collected-public-docs/pmd/invacare_tdx-sp2_owner.pdf">Invacare TDX SP2 owner manual</a>, the <a href="/library/collected-public-docs/pmd/permobil_m3-corpus_owner.pdf">Permobil M3 Corpus owner manual</a>, and the <a href="/library/collected-public-docs/pmd/pride_jazzy-600-es_owner.pdf">Pride Jazzy 600 ES owner manual</a>, all in this site&rsquo;s library. Copy the exact wording for your chair onto the card; do not guess a lever position.</li>
+      <li><strong>Photograph the chair&rsquo;s condition.</strong> Before you leave home and again at the gate, take dated photos and a short video: all four sides, the joystick and screen lit and working, the wheels, armrests, footrests, and any existing scratches. Drive it in the video if you can. If the chair comes back damaged, those photos are the &ldquo;before&rdquo; that proves the airline received it working &mdash; see the damage section below.</li>
+      <li><strong>Keep what you can in the cabin.</strong> Removable cushions, headrests, and small detachable parts are less likely to be lost if they travel with you, and a removed lithium battery <em>must</em> travel with you (above). Protect battery terminals against short circuit &mdash; the battery&rsquo;s own case or pouch, or covering the terminals &mdash; as the FAA chart requires for spares.</li>
+    </ul>
+    <p>Battery health and replacement are covered in <a href="/pmd-parts.html">Parts, Not Assemblies</a> and fault behaviour in <a href="/pmd-fault-codes.html">Fault Codes, Translated</a>.</p>
+  </section>
+
+  <section id="gate">
+    <h2>At the gate: gate-check, the door, and the aisle chair</h2>
+    <p><strong>Gate-check</strong> means you hand the chair over at the departure gate, not at the ticket counter, and it is tagged there and loaded from the jet bridge. DOT is explicit: &ldquo;If you have a wheelchair or walker, you do not need to check them until you are at the gate,&rdquo; and &ldquo;You are entitled to stay in your own wheelchair until you get to the gate. At the gate, your wheelchair will be taken from you.&rdquo; You may also board early: if you self-identify as needing extra time or assistance to board, DOT says the airline must let you board before other passengers.</p>
+    <p>On arrival the duty runs the other way. DOT: your device &ldquo;must be returned to you promptly and as close as possible to the door of the aircraft, unless you ask to pick it up in baggage claim,&rdquo; and when a powered chair was stowed in cargo, &ldquo;the airline must return your assistive device to you promptly and as close as possible to the door of the aircraft.&rdquo; Wait at the door for your own chair &mdash; do not be rushed to baggage claim for it unless that is what you asked for.</p>
+    <p><strong>The aisle chair transfer, honestly.</strong> An <strong>aisle chair</strong> (also called an on-board or boarding wheelchair) is a very narrow, high-backed chair built to fit down an aircraft aisle, which your own chair cannot do. If you cannot walk to your seat, staff will bring the aisle chair alongside your chair at the gate or aircraft door, help you transfer across &mdash; usually with a slide or a lift by trained staff, using straps to secure you for the short ride &mdash; wheel you to your row, and transfer you again into the aircraft seat. It is intimate, it is done by strangers, and it can feel undignified even when done well; that is the truth of the current system, not a failure by you. You can and should direct it: say how you normally transfer, where staff may and may not hold you, and what must not be pulled. Your own chair is taken to the cargo hold while this happens, which is why the information card and the photos matter.</p>
+  </section>
+
+  <section id="damage">
+    <h2>When the airline breaks it</h2>
+    <p>This is not rare, and DOT counts it. In DOT&rsquo;s <a href="https://www.transportation.gov/sites/dot.gov/files/2026-05/April%202026%20ATCR.pdf?ref=theamericanquorum.com">Air Travel Consumer Report issued April 2026 (February 2026 data)</a>, reporting carriers enplaned 55,503 wheelchairs and scooters and mishandled 598 of them &mdash; 1.08 per 100 enplaned. <strong>Mishandled</strong> is DOT&rsquo;s reporting category for a device damaged, delayed, lost, or pilfered while in the airline&rsquo;s care. Roughly one chair in every hundred, every month, in DOT&rsquo;s own numbers.</p>
+    <p><strong>The duty.</strong> DOT, verbatim: &ldquo;Airlines must check and return your assistive device in the same condition as it was received.&rdquo; And: &ldquo;On domestic flights, U.S. carriers must fully compensate passengers for loss or damage to wheelchairs or other assistive devices, without regard to rules limiting liability for lost or damaged baggage.&rdquo; DOT&rsquo;s assistive-device page puts the domestic cap this way: airlines are liable &ldquo;up to the cost of the original purchase price of the device.&rdquo; On international flights, liability is governed by the applicable international treaty (the Montreal Convention) and may cover less than the full cost &mdash; DOT says so in the same place.</p>
+    <p><strong>What to do, in order:</strong></p>
+    <ol>
+      <li><strong>Inspect it at the door, before you leave.</strong> DOT&rsquo;s tip: &ldquo;Upon receiving your wheelchair, do a quick inspection before you use it. If there is any damage go immediately to the airline&rsquo;s customer service and file a claim.&rdquo; Photograph the damage next to your &ldquo;before&rdquo; photos. Do not leave the airport without a written claim reference if you can avoid it.</li>
+      <li><strong>Ask for the CRO.</strong> A <strong>Complaint Resolution Official (CRO)</strong> is, in DOT&rsquo;s words, &ldquo;the airline&rsquo;s expert on disability accommodation issues.&rdquo; DOT&rsquo;s complaint page adds that a CRO &ldquo;has the authority to resolve complaints on behalf of the airline,&rdquo; and airlines must make one available at no cost, in person at the airport or by telephone, during operating hours. Ask by the title &mdash; front-line staff must connect you.</li>
+      <li><strong>Then file with DOT if the airline does not fix it.</strong> DOT&rsquo;s <a href="https://www.transportation.gov/airconsumer/complaint-process">Air Travel Complaints</a> page and its <a href="https://www.transportation.gov/individuals/aviation-consumer-protection/what-do-if-you-have-problem">What to Do If You Have a Problem</a> page give the online complaint form and the toll-free disability hotline, 1-800-778-4838. DOT requires airlines to acknowledge a consumer complaint within 30 days and send a written response within 60 days (30 days for disability-related complaints, per DOT&rsquo;s complaint page). DOT forwards disability complaints to the airline, requires a response to you and to DOT, and reviews whether the laws it enforces were violated.</li>
+      <li><strong>Write it all down.</strong> Same rule as every page in this section: date, flight, names, claim number, photos, and the repair quote. Repairs and payment fights are in <a href="/pmd-repairs.html">Getting a Repair Paid For</a>; your wider rights are in <a href="/repair-rights.html">Repair Rights</a>.</li>
+    </ol>
+    <p><strong>Status note on the 2024 wheelchair rule &mdash; read this before quoting it.</strong> DOT published the final rule &ldquo;Ensuring Safe Accommodations for Air Travelers With Disabilities Using Wheelchairs&rdquo; on December 17, 2024 (89 FR 102398), effective January 16, 2025. It added, among other things, a rebuttable presumption (a starting assumption the airline must disprove) that an airline is liable when a chair is not timely returned in the condition received. DOT has since paused enforcement of four of the rule&rsquo;s provisions &mdash; that liability presumption, refresher-training frequency, pre-departure notifications, and fare-difference reimbursement &mdash; first until December 31, 2026 (<a href="https://www.federalregister.gov/documents/2025/09/30/2025-18980/ensuring-safe-accommodations-for-air-travelers-with-disabilities-using-wheelchairs">Federal Register notice, September 30, 2025</a>), then extended to April 30, 2027 (<a href="https://www.federalregister.gov/documents/2026/08/04/2026-15835/accessible-lavatories-on-single-aisle-aircraft-and-ensuring-safe-accommodations-for-air-travelers">Federal Register notice, August 4, 2026</a>; summarised on DOT&rsquo;s <a href="https://www.transportation.gov/airconsumer/latest-news">What&rsquo;s New</a> page, posted August 4, 2026). DOT says the pause &ldquo;does not affect the enforcement of requirements in the Wheelchair Rule beyond the four identified provisions,&rdquo; and its assistive-device page stresses the pause &ldquo;does not negate the airline&rsquo;s responsibility to care for a passenger&rsquo;s assistive device or the airline&rsquo;s responsibility to pay for damage when it is the airline&rsquo;s fault&rdquo; &mdash; DOT will enforce liability as it did before the 2024 revisions while the presumption itself is paused, deciding &ldquo;act of God&rdquo; claims case by case. The four paused provisions are being reconsidered in a new rulemaking DOT calls Wheelchair Rule II, whose outcome was not decided as of the August 2026 notice. <strong>Flagged as uncertain:</strong> whether those four provisions return, change, or disappear depends on that rulemaking &mdash; do not rely on the presumption, the pre-departure notice, or fare-difference reimbursement as enforceable today. The older duties above (return in the same condition, pay for damage up to the original purchase price on domestic flights, CRO, DOT complaint) are the ones DOT says it is enforcing now.</p>
+  </section>
+
+  <section id="trains">
+    <h2>Trains differ</h2>
+    <p>On Amtrak you do not gate-check the chair and you do not hand it to a cargo crew &mdash; you stay in it. Amtrak&rsquo;s <a href="https://aemqa.amtrak.com/planning-booking/accessible-travel-services/wheeled-mobility-device-services.html">Wheeled Mobility Device Services</a> page says Amtrak permits manual and battery-powered devices that fit its limits for all routes: not exceeding 27.5 inches wide and 48 inches long when occupied, at least 2 inches of ground clearance, and 600 pounds or less when occupied. It offers two on-board options &mdash; remain seated in a non-collapsible device for the trip, or, with a collapsible chair, transfer to an accessible seat and stow the chair nearby &mdash; and provides boarding help, including lift assistance and pre-boarding at originating stations. There is no watt-hour battery table and no cargo hold; the constraint is size, weight, and the specific train and station, so Amtrak tells you to contact it for your route. Cruise ships are not covered here: no primary cruise-line or regulator document for power-chair carriage was verified for this page, so no rule is stated for them &mdash; ask the line for its written policy before booking.</p>
+  </section>
+
+  <section id="sources">
+    <h2>Sources</h2>
+    <ul>
+      <li>U.S. Department of Transportation &mdash; <a href="https://www.transportation.gov/individuals/aviation-consumer-protection/wheelchair-and-guided-assistance">Wheelchair and Guided Assistance</a> (ACAA summary, stay in your own chair to the gate, aisle chair, CRO, pre-boarding, 30-minute unattended limit).</li>
+      <li>U.S. Department of Transportation &mdash; <a href="https://www.transportation.gov/resources/individuals/aviation-consumer-protection/assistive-device-guides/assistive-device-stowage">Assistive Device &mdash; Stowage, Damage, and Delay</a> (no baggage charge, return promptly at the aircraft door, same-condition duty, domestic liability up to original purchase price, non-spillable handling, 48-hour notice for electric chairs on aircraft under 60 seats, and the 2024-rule enforcement-pause explanation).</li>
+      <li>Federal Aviation Administration, PackSafe &mdash; <a href="https://www.faa.gov/hazmat/packsafe/airline-passengers-and-batteries">Airline Passengers and Batteries</a> (last updated October 2, 2026; chart based on 49 CFR &sect;175.10: non-spillable wheelchair row, lithium removed 300 Wh, installed-and-protected row with no Wh figure listed, spare one &times; 300 Wh or two &times; 160 Wh, lithium metal forbidden, watt-hour calculation, damaged-battery warning).</li>
+      <li>49 CFR &sect;175.10 &mdash; <a href="https://law.lawstack.com/cfr/49/175.10/">Exceptions for passengers, crewmembers, and air operators</a>, paragraph (a)(15) (non-spillable wheelchair batteries as checked baggage).</li>
+      <li>U.S. Department of Transportation &mdash; <a href="https://www.transportation.gov/sites/dot.gov/files/2026-05/April%202026%20ATCR.pdf?ref=theamericanquorum.com">Air Travel Consumer Report, issued April 2026</a> (February 2026: 55,503 wheelchairs and scooters enplaned, 598 mishandled, 1.08 per 100).</li>
+      <li>U.S. Department of Transportation &mdash; <a href="https://www.transportation.gov/airconsumer/complaint-process">Air Travel Complaints</a> and <a href="https://www.transportation.gov/individuals/aviation-consumer-protection/what-do-if-you-have-problem">What to Do If You Have a Problem</a> (CRO authority, DOT complaint form, disability hotline 1-800-778-4838, airline response timelines).</li>
+      <li>DOT enforcement-discretion notices &mdash; <a href="https://www.federalregister.gov/documents/2025/09/30/2025-18980/ensuring-safe-accommodations-for-air-travelers-with-disabilities-using-wheelchairs">September 30, 2025 (pause to December 31, 2026)</a>; <a href="https://www.federalregister.gov/documents/2026/08/04/2026-15835/accessible-lavatories-on-single-aisle-aircraft-and-ensuring-safe-accommodations-for-air-travelers">August 4, 2026 (extension to April 30, 2027)</a>; DOT summary on <a href="https://www.transportation.gov/airconsumer/latest-news">What&rsquo;s New</a> (posted August 4, 2026). Original rule: December 17, 2024, 89 FR 102398.</li>
+      <li>IATA &mdash; <a href="https://iata06mstr1r4tgprep.dxcloud.episerver.net/contentassets/6fea26dd84d24b26a7a1fd5788561d6e/mobility-aid-guidance-document.pdf">Battery-Powered Wheelchair and Mobility Aid Guidance Document</a> (revised for the 2026 regulations; based on the 2025&ndash;2026 ICAO Technical Instructions and the 67th edition (2026) IATA Dangerous Goods Regulations).</li>
+      <li>Amtrak &mdash; <a href="https://aemqa.amtrak.com/planning-booking/accessible-travel-services/wheeled-mobility-device-services.html">Wheeled Mobility Device Services</a> (27.5 &times; 48 inches, 2 inches clearance, 600 lb occupied, stay-in-device and transfer options).</li>
+      <li>Owner manuals in this site&rsquo;s library, for the information-card steps: <a href="/library/collected-public-docs/pmd/invacare_tdx-sp2_owner.pdf">Invacare TDX SP2</a>, <a href="/library/collected-public-docs/pmd/permobil_m3-corpus_owner.pdf">Permobil M3 Corpus</a>, <a href="/library/collected-public-docs/pmd/pride_jazzy-600-es_owner.pdf">Pride Jazzy 600 ES</a>.</li>
+    </ul>
+    <p><a href="/pmd.html">&larr; Back to PMD</a> &middot; <a href="/pmd-start.html">Your chair stopped: start here &rarr;</a> &middot; <a href="/pmd-repairs.html">Getting a repair paid for &rarr;</a> &middot; <a href="/library-hub.html">The Library &rarr;</a></p>
+  </section>
+
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

@@ -63,7 +63,7 @@
 
 <h2>Layer 1: robots.txt hardening</h2>
 
-<p>The perimeter. Our <code>robots.txt</code> names the known AI training user-agents one by one and denies them the whole site, while the wildcard rule leaves the door open for everyone else — including Google and Bing, which is how humans discover us.</p>
+<p>The perimeter. Our <code>robots.txt</code> names 53 known AI training and scraping user-agents one by one — 54 groups in all — and denies each of them the whole site. The one wildcard group leaves the door open for everyone else, including Google and Bing, which is how humans discover us; the only path it closes to them is <code>/tarpit/</code>.</p>
 
 <pre>User-agent: GPTBot
 Disallow: /
@@ -86,12 +86,12 @@ Disallow: /
 User-agent: PerplexityBot
 Disallow: /
 
-# ... ~25 training and scraping agents total ...
+# ... 53 named agents in total (54 groups with the wildcard) ...
 
 User-agent: *
-Disallow:</pre>
+Disallow: /tarpit/</pre>
 
-<p>The ordering is deliberate: specific denials for training agents first, then an empty <code>Disallow:</code> on the wildcard, which means "everything not named above is allowed." Search crawlers match the wildcard and are welcomed in. Training crawlers match their own named block and are shown the door.</p>
+<p>How the matching works (per RFC 9309): a crawler uses the most specific group that names it — the order of the groups in the file does not matter. A named training crawler matches its own group and is denied everything. Every other crawler falls to the wildcard group, which disallows only <code>/tarpit/</code>: search crawlers are welcomed in everywhere else.</p>
 
 <p>Note what this does <em>not</em> do: <code>robots.txt</code> is a voluntary protocol. Respectful crawlers obey it; bad actors ignore it. This layer stops the compliant majority — which includes every major lab's documented training crawler — and draws a clear line for the rest: a crawler that ignores <code>robots.txt</code> is trespassing, and our footer says so in plain language.</p>
 
@@ -107,14 +107,15 @@ Disallow:</pre>
 
 <h2>Layer 3: strict Content Security Policy</h2>
 
-<p>Every page ships a tight CSP:</p>
+<p>Every page ships a tight CSP in a meta tag. This page&rsquo;s reads:</p>
 
-<pre>default-src 'self'; img-src 'self' data:;
-style-src 'self'; script-src 'self';
-object-src 'none'; frame-src 'none';
+<pre>default-src 'self'; connect-src 'self'
+  https://translate.googleapis.com;
+img-src 'self' data:; style-src 'self' 'unsafe-inline';
+script-src 'none'; object-src 'none'; frame-src 'none';
 base-uri 'self'; form-action 'none'</pre>
 
-<p>No third-party scripts, no frames, no objects, no form submissions. This keeps the page exactly what we published — nothing injected, nothing exfiltrated — which shrinks the surface that scraping and injection tooling can work with.</p>
+<p>No scripts at all on this page (<code>script-src 'none'</code>; pages that run the site&rsquo;s own JavaScript use <code>script-src 'self'</code>), no frames, no objects, no form submissions — and exactly one permitted network endpoint beyond the site itself: Google Translate, which powers the in-browser language translation. This keeps the page exactly what we published — nothing injected, nothing exfiltrated — which shrinks the surface that scraping and injection tooling can work with.</p>
 
 <hr>
 
@@ -138,7 +139,7 @@ base-uri 'self'; form-action 'none'</pre>
 
 <h2>Layer 7: the tarpit</h2>
 
-<p><code>/tarpit/</code> is a five-level maze of junk device indexes — plausible-looking but entirely fabricated model numbers, circular links between levels, and no real content. Every page carries <code>&lt;meta name="robots" content="noindex, nofollow"&gt;</code> so legitimate search engines never index it, and <code>robots.txt</code> disallows it for all compliant crawlers. Only a bot that ignores <code>robots.txt</code> <em>and</em> follows invisible links ends up here — which is precisely the bot we want wasting its time instead of ours. A crawler that burns its crawl budget on five pages of nothing is a crawler not harvesting our teardowns.</p>
+<p><code>/tarpit/</code> is a five-level maze of junk device indexes — plausible-looking but entirely fabricated model numbers, circular links between levels, and no real content. Every tarpit page carries <code>&lt;meta name="robots" content="noindex, nofollow"&gt;</code> so legitimate search engines never index the maze — the site&rsquo;s normal pages carry only the <code>noai</code>/<code>noimageai</code> opt-out from Layer 2, never <code>noindex</code> — and <code>robots.txt</code> disallows it for all compliant crawlers. Only a bot that ignores <code>robots.txt</code> <em>and</em> follows invisible links ends up here — which is precisely the bot we want wasting its time instead of ours. A crawler that burns its crawl budget on five pages of nothing is a crawler not harvesting our teardowns.</p>
 
 <hr>
 

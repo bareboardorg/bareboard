@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GPU Repair — BareBoard</title>
+<meta name="description" content="How to diagnose and repair a graphics card (GPU): the checks anyone can do, cleaning, fan, thermal paste and pad replacement, the documented 12VHPWR melting record and the CPSC recall, board-level repair, counterfeits, and the documentation NVIDIA does not publish.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main class="content">
+<h1>Repairing a graphics card (GPU)</h1>
+<p class="lede">A graphics card — the board that draws everything on your
+screen, built around a GPU (graphics processing unit) chip — is two
+different repair problems in one box. At the service level it is one of
+the most repairable parts in a PC: fans, paste, pads, and connectors are
+all owner-serviceable with screwdrivers. At the board level it is
+repairable too, but the manufacturer keeps the circuit diagrams and the
+factory test software locked away, so the work is slower than it should
+be. This page covers both levels, the documented failure record of the
+current power connector, how to spot a counterfeit used card, and —
+stated plainly, with the record — exactly what is and is not published.</p>
+
+<h2>Safety first</h2>
+<aside class="bb-notice-amber">
+<p><strong>Read this before you open anything.</strong></p>
+<p><strong>The power supply can kill you; the card cannot.</strong> A
+PSU (power supply unit — the box that converts wall power for the PC)
+stores electrical charge in its capacitors even after it is unplugged,
+and that charge can be lethal. Work on the graphics card only, with the
+PC switched off and unplugged. <strong>Never open the PSU itself</strong>
+— no repair on this page needs it.</p>
+<p><strong>Mind static.</strong> ESD (electrostatic discharge — a static
+spark, often too small to feel) can kill a memory chip silently. Wear a
+grounding wrist strap, or touch a grounded metal object often, and work
+on a plain hard surface rather than carpet.</p>
+<p><strong>Burnt plastic means stop.</strong> If a power connector smells
+burnt or shows brown, softened, or melted plastic, stop using the card.
+That failure mode has a government recall attached to it (see the
+connector record below); it is a fire hazard, not a quirk.</p>
+<p><strong>The oven trick is a myth, and it is harmful.</strong> Baking a
+dead card in a kitchen oven does not repair it. A home oven cannot run
+the controlled temperature profile that solder needs, the heat warps the
+board and cooks plastic connectors and fan bearings, and flux fumes
+contaminate an oven that later cooks food. When a baked card
+&ldquo;revives,&rdquo; what usually happened is that heat temporarily
+closed a cracked solder joint — the crack is still there, and it fails
+again. Professionals rework boards with hot-air stations and controlled
+profiles. Skip the oven.</p>
+</aside>
+
+<h2>Step one: prove it is the card</h2>
+<p>Most &ldquo;dead GPU&rdquo; reports turn out to be something else.
+Work this order before you blame the card — each step rules out a whole
+family of causes, cheapest first.</p>
+<ol>
+<li><strong>Reseat everything.</strong> Power off, unplug. Pull the card
+and push it back into its PCIe slot (the long connector slot on the
+motherboard) until the latch clicks. Reconnect every power cable until
+each plug is fully home. On the 16-pin connector this matters most:
+NVIDIA&rsquo;s own guidance is to plug the power cable into the card
+<em>first</em>, firmly and evenly, before installing the card into the
+machine. A visible gap between plug and socket means it is not seated.</li>
+<li><strong>Swap the display path.</strong> Try a different cable, a
+different port on the card, and a different monitor or TV input. If one
+port is dead and the others work, you have a port problem (Level 1),
+not a dead card.</li>
+<li><strong>Rule out the slot and the motherboard.</strong> Try the card
+in a second PCIe slot or in another PC. Or put a known-good card in
+this PC. Whichever way the fault moves tells you which part owns it.</li>
+<li><strong>Rule out the power supply.</strong> A failing PSU imitates a
+failing GPU almost perfectly: black screens and crashes under load.
+Test with a known-good PSU of at least the wattage the card maker
+specifies. Test by swapping, never by opening the PSU (see the safety
+box).</li>
+<li><strong>Rule out software.</strong> Boot into safe mode, or boot the
+PC from a live USB operating system. If the picture is clean there, the
+card is fine and the driver is not: remove the graphics driver
+completely with a driver-cleaning tool in safe mode, then install a
+fresh copy from NVIDIA or AMD.</li>
+<li><strong>Watch heat and fans.</strong> Free monitoring tools — GPU-Z
+(from TechPowerUp) is the standard one — show the card&rsquo;s
+temperatures and fan speeds. Fans that never spin, or temperatures
+climbing steeply at light load, point at the cooling hardware (Level 1
+fixes), not at dead silicon.</li>
+</ol>
+<p>If the card still fails after all six, the fault is on the card
+itself. Start at Level 1 anyway — it is cheap — and treat Level 2 as
+the step after.</p>
+
+<h2>Level 1: service anyone can do</h2>
+<p>Tools for everything in this section: small Phillips screwdrivers, a
+soft brush, compressed air, isopropyl alcohol at 90% or stronger,
+lint-free wipes, new thermal paste, replacement thermal pads, and a
+cheap digital caliper (a measuring tool with a sliding jaw and a
+digital readout) for the pads. Work powered off, keep every screw with
+the part it came from, and take a photo before each step — the photo
+is your reassembly manual.</p>
+
+<h3>Cleaning</h3>
+<p>Dust mats itself into the heatsink fins (the stack of thin metal
+plates that carry heat away) and chokes the airflow; overheating that
+cures with a cleaning is common. Remove the card, hold each fan still
+with a finger — never let compressed air spin a fan freely, which can
+overspeed it — and blow the dust out from the back of the heatsink
+toward the front. Brush what stays. The gold contacts on the PCIe edge
+connector can be wiped gently with a lint-free cloth dampened with
+isopropyl alcohol.</p>
+
+<h3>Fan replacement</h3>
+<p>The fans are wear items and they are replaceable — as assemblies
+matched to your exact card model, not as universal parts. Remove the
+fan shroud (the plastic cover) screws, unplug the small fan connector
+(2 to 4 pins) from the board, and read the part number printed on the
+sticker in the center of the fan hub. Order that part number, refit,
+and route the cable so it cannot touch the blades. A fan that grinds,
+wobbles, clicks, or refuses to start is a fan to replace, not a card
+to bury.</p>
+
+<h3>Thermal paste replacement</h3>
+<p>Thermal paste is the heat-conducting compound between the GPU die
+(the silicon chip itself) and the cooler. Over years it dries out and
+pumps out from between the surfaces, and the die temperature climbs
+while everything else looks normal. The repair, in order:</p>
+<ol>
+<li>Remove the cooler: undo the screws around the die first — they are
+usually spring-loaded and arranged in a square — then the remaining
+shroud and backplate screws, keeping each set separate.</li>
+<li>Separate the cooler from the board with a gentle twist. Old thermal
+pads (next section) will resist; never pry against the die.</li>
+<li>Clean the die and the cooler&rsquo;s contact plate with isopropyl
+alcohol and a lint-free wipe until both are mirror-clean. Keep every
+thermal pad in place and note where each one sat — you need them for
+the pad step below.</li>
+<li>Apply a pea-sized dot of new paste in the center of the die (or a
+thin, even spread; either is fine — coverage is what matters).</li>
+<li>Refit the cooler, tightening the die screws a little at a time in
+an X pattern so pressure stays even, then the rest of the screws.</li>
+<li>Test under load and compare temperatures with before.</li>
+</ol>
+<p>Do not substitute liquid-metal compounds unless you fully understand
+them: they conduct electricity, they can short the small components
+around the die, and they corrode aluminum coolers.</p>
+
+<h3>Thermal pads: measure, then replace</h3>
+<p>Thermal pads are the soft, squishy squares that carry heat from the
+memory chips and the power circuitry into the cooler. The memory chips
+— VRAM (video RAM; on modern cards these are GDDR chips, arranged
+around the die) — have no other cooling path, so the pads are not
+optional. The classic self-inflicted injury in GPU service is fitting
+pads of the <em>wrong thickness</em>: too thick, and the cooler cannot
+sit flat on the die, so the core overheats and the board flexes; too
+thin, and the pad never touches, so the memory overheats. Measure
+first:</p>
+<ol>
+<li>As you lift the cooler, keep each pad with its location. Thickness
+often differs from spot to spot on the same card.</li>
+<li>Measure each removed pad with the caliper at an edge that sat
+<em>outside</em> the contact patch. Pads compress in service, so the
+squashed middle reads thinner than the pad really was.</li>
+<li>Replace like-for-like. Pads are sold in 0.5&nbsp;mm steps, commonly
+0.5 to 3.0&nbsp;mm. When you must choose between two sizes, a softer
+pad in the thicker size conforms better than a hard pad.</li>
+<li>If a pad crumbled and cannot be measured, measure the gap instead:
+with the cooler resting in place, use the caliper&rsquo;s depth rod or
+a feeler gauge (a set of thin metal blades of known thickness) to find
+the distance between the component&rsquo;s top and the cooler&rsquo;s
+raised landing above it. That distance is the pad thickness the card
+was built with.</li>
+</ol>
+
+<h3>Output ports</h3>
+<p>Work every port before condemning one: swap cables, swap the
+monitor input, and look into the port with a light. Pocket lint and
+dust pack into HDMI and DisplayPort sockets and can be teased out with
+a wooden toothpick and isopropyl alcohol, powered off. A port with
+bent pins or a cracked housing is a soldered component: replacing it
+is hot-air soldering work (Level 2 territory), and many repair shops
+will replace a single port for far less than a card costs.</p>
+
+<h2>The 16-pin connector: the documented record</h2>
+<p>The RTX 40-series and later high-end cards take power through one
+16-pin plug — 12VHPWR: twelve power pins and four sense pins, rated
+for up to 600 watts through a connector smaller than the plugs it
+replaced. Its failure record is not folklore; it is documented, and
+you should know it before you trust or blame one.</p>
+<p><strong>What NVIDIA said.</strong> After owners reported melted
+plugs on RTX 4090 cards in the autumn of 2022, NVIDIA published its
+findings on November 18, 2022: it was aware of &ldquo;about 50 cases
+globally,&rdquo; and &ldquo;a common issue is that connectors are not
+fully plugged into the graphics card.&rdquo; It recommended plugging
+the power cable into the card before installing the card, and promised
+an expedited replacement process regardless of which cable or card was
+used. That is the manufacturer&rsquo;s own statement, and the
+prevention advice in it is worth following — it is step 1 of the
+diagnosis order above.</p>
+<p><strong>What independent testing found.</strong> GamersNexus, an
+independent test lab and publication, ran a failure analysis and could
+reproduce melting with a partly inserted plug, made worse by debris
+inside the connector and by sideways load on the cable; they also
+criticized how little margin for error the design leaves the user.
+Treat their work as what it is — careful secondary analysis, not the
+manufacturer&rsquo;s word and not a regulator&rsquo;s finding.</p>
+<p><strong>The design was revised.</strong> The standards body (PCI-SIG)
+revised the socket in its PCIe CEM 5.1 specification: the revised
+connector, called 12V-2x6, shortens the sense pins so a partly seated
+plug should receive no power at all. Melted connectors have still been
+reported on newer cards. No manufacturer and no regulator has
+published an overall failure rate for the connector, so anyone who
+quotes you one is inventing it.</p>
+<p><strong>The recall.</strong> On February 8, 2024, the U.S. Consumer
+Product Safety Commission (CPSC — the federal product-safety
+regulator) announced recall 24-112: CableMod&rsquo;s angled 12VHPWR
+adapters, versions 1.0 and 1.1 in 90-degree and 180-degree forms,
+about 25,300 units. The firm had received 272 reports of the adapters
+becoming loose, overheating, and melting into the GPU, with at least
+$74,500 in property-damage claims in the United States. The CPSC
+classed them as fire and burn hazards and instructed consumers to stop
+using them and contact CableMod for removal instructions and a refund.
+If you own one of these adapters, that instruction still stands.</p>
+<p><strong>Prevention, in order:</strong> push the plug fully home —
+no visible gap, latch engaged — seating it into the card before the
+card goes into the case; do not bend the cable sharply right at the
+plug (give it a gentle run of cable first; cable makers commonly
+specify about 35&nbsp;mm before any bend); use the cable that came with
+your power supply or the card&rsquo;s own adapter, not third-party
+angled adapters; and re-check the plug after moving the PC.</p>
+<p><strong>If yours already melted:</strong> the connector on the card
+is a soldered part, and replacing it is routine work for a board-level
+repair shop — you do not automatically need a new card. One U.S. repair
+shop reported fixing on the order of a hundred melted-connector RTX
+4090s a month (a technician-reported figure, carried by Tom&rsquo;s
+Hardware); whatever the exact number, a melted plug is a repair, not
+an obituary.</p>
+
+<h2>Level 2: board-level repair — what it actually involves</h2>
+<p>This level uses a multimeter (a handheld meter that measures
+voltage, resistance, and continuity) and hot-air soldering equipment.
+It is learnable, and it is also exactly what a good independent shop
+does — so even if you never pick up the tools, this section tells you
+what you are paying for and what questions to ask.</p>
+<p><strong>Start with eyes and nose.</strong> A burnt smell, a
+discolored patch on the board, or a power component with a crater
+blown in it localizes the failure before any meter comes out.</p>
+<p><strong>Finding a short on the 12-volt rail.</strong> The card is fed
+12 volts from the slot and from the external plug. That power goes to
+the VRM (voltage regulator module — the circuitry that converts 12
+volts down to roughly the 1 volt the GPU die runs on). The VRM works
+in parallel slices called phases; each phase pairs a driver with power
+switches (MOSFETs — the switching transistors), often combined in one
+DrMOS chip. Our datasheet library carries the
+<a href="/datasheets.html#power">NCP302150 DrMOS</a>
+(<a href="/datasheets/NCP302150.pdf">datasheet, hosted copy</a>) as a
+worked example: eight of them feed the GPU core on one RTX 4080 model.
+With the card out of the PC and unpowered, measure resistance between
+the 12-volt input and ground: near-zero means something on that rail
+has failed short. The standard isolation method is to feed the shorted
+rail about 1 volt from a current-limited bench power supply and find
+what warms up — by fingertip, by a thermal camera, or by watching
+isopropyl alcohol evaporate off the hot part. The hot part is usually
+the failed phase&rsquo;s DrMOS. Replace it with a hot-air station,
+re-measure, and only then power the card.</p>
+<p><strong>Memory faults.</strong> The pattern to recognize: on-screen
+artifacts (wrong pixels, repeating patterns, garbage textures) that
+appear under load, worsen as memory speed rises, and ease when you
+deliberately <em>underclock</em> the memory in software — a free test
+in tools such as MSI Afterburner — point at the GDDR memory chips, or
+their solder joints and power, rather than at the die. Confirming
+<em>which</em> chip is the slow part of this repair (see the locked
+drawer, below). Replacing a memory chip is hot-air BGA work (BGA —
+ball grid array: the chip connects through a grid of tiny solder balls
+underneath it), done on a rework station with a controlled temperature
+profile.</p>
+<p><strong>Corrupted BIOS.</strong> The card&rsquo;s BIOS (its built-in
+start-up firmware, held on a small flash chip on the board — on the
+RTX 4080 example above, a Winbond W25Q16JW serial flash:
+<a href="/datasheets/W25Q16JW.pdf">datasheet, hosted copy</a>) can be corrupted
+by an interrupted flash or a failing chip, leaving a card that will
+not start. If your card has a dual-BIOS switch (a tiny switch near the
+top edge, fitted to some models), flip it to the backup and you are
+done. Otherwise: boot the PC using the motherboard&rsquo;s integrated
+graphics or a second card for picture, back up whatever BIOS is on the
+card (GPU-Z can save it), and re-flash the <em>exact stock BIOS for
+your card model</em> with the public flashing tool (NVFlash). Exact
+model matters — a file meant for a different card can brick yours —
+and the stock file works because it carries the manufacturer&rsquo;s
+valid signature (see the locked drawer).</p>
+<p><strong>Ports and small parts.</strong> Soldered output ports,
+fan headers, and the 16-pin power connector itself are all replaceable
+at this level, one component at a time — the opposite of the
+replace-the-whole-card answer you will get from the manufacturer.</p>
+
+<h2>The locked drawer: what NVIDIA does not publish</h2>
+<p>Everything above is doable today. It is slower and more expensive
+than it should be, for one documented reason: the manufacturer keeps
+the repair documentation and the factory diagnostics to itself.</p>
+<p>As of November 2026, NVIDIA publishes drivers, installation guides,
+and specification sheets for its cards. It does not publish, for any
+GeForce card: a schematic (the circuit diagram of the board), a
+boardview file (the component map a technician loads to find every
+part and test point), a service manual, or a spare-parts list — and it
+sells no parts, not even fans or power connectors, to owners or to
+independent repair shops. The data-center line is no more open: as our
+datasheet index records,
+<a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">the public datasheet for the H100</a>
+is a two-page specification
+table, and the detailed documentation sits behind non-disclosure
+agreements.</p>
+<p>The factory test software is in the same drawer. NVIDIA&rsquo;s own
+diagnostics — the platform repair technicians know as MODS, and its
+memory tester as MATS — can isolate a memory fault to a single chip
+in minutes. They circulate only inside NVIDIA&rsquo;s authorized
+service channel and are neither sold nor licensed to the public. That
+is the honest reason the memory diagnosis in Level 2 is slow:
+technicians work by comparison, by heating and cooling suspect chips,
+and by experience, doing in hours what the factory tool does in
+minutes.</p>
+<p>Leaked copies of the diagnostics, and leaked boardview and
+schematic files, exist in the wild. BareBoard does not link to or host
+leaked or confidential material — that is a standing rule of this site
+(<a href="/staying-up.html">what we post, and why we may</a>) — so this
+page names the gap instead of filling it with stolen goods. An
+unverifiable tool from an unknown source is also, on its own merits,
+not something to run against a customer&rsquo;s hardware.</p>
+<p>Firmware is signed. NVIDIA&rsquo;s GPUs check a cryptographic
+signature on their firmware, and the open-source driver project&rsquo;s
+documentation records that, since the Maxwell generation, the signed
+firmware images a card demands can only come from NVIDIA. The
+practical results for owners: modified firmware is effectively locked
+out, and the BIOS recovery in Level 2 works precisely because the
+manufacturer&rsquo;s stock file carries a valid signature.</p>
+<p>None of this makes repair impossible. It makes board repair slower,
+and it is why independent shops keep bins of <em>donor boards</em> —
+dead cards bought for their parts. When a shop quotes you real labor
+to find one bad memory chip, the locked drawer is what you are paying
+for.</p>
+
+<h2>Buying used: the counterfeit record</h2>
+<p>The used market works, and most used cards are honest. But the
+fraud patterns are documented well enough that you should know the
+three main ones before you buy.</p>
+<p><strong>Painted memory (2023).</strong> Investigators Iskandar Souza
+and Paulo Gomes of TecLab documented ex-mining cards — cards run hard
+around the clock in cryptocurrency mining rigs — being sold as new
+after their GDDR memory chips were painted to hide the yellowing that
+sustained heat leaves on used chips. Scraping and heating the coating
+in their tests revealed older, mismatched markings underneath.
+Tells: screws showing tool wear on a &ldquo;new&rdquo; card, broken or
+missing seals, and memory chips whose printing looks oddly uniform or
+wrong for the model.</p>
+<p><strong>Relabeled cards.</strong> In 2025 a repair technician
+documented cards sold as RTX 4090s that were actually modified RTX
+3080 and 3090 boards — dies re-marked to read as the newer chip, in
+one case fitted with fake memory. Separately, repair shops have
+received &ldquo;4090s&rdquo; whose GPU die and memory chips had been
+harvested off the board entirely and sold on, leaving a card that can
+never work. And workshops openly rebuild ex-mining cards into
+configurations the factory never sold — RTX 3080s rebuilt with 20 GB
+of memory, for instance — which is legitimate when disclosed and
+fraud when the card is sold as a factory product.</p>
+<p><strong>How to check a used card on arrival:</strong></p>
+<ol>
+<li>Buy through a channel with returns, and test the card immediately,
+inside the return window.</li>
+<li>Run GPU-Z (free, from TechPowerUp). Since version 2.12 it flags a
+known class of counterfeits — old chips whose BIOS lies about what
+they are — with a [FAKE] tag. It does not catch everything: it will
+not catch a harvested board or every re-marked die. So also compare
+the die name, memory type, and memory size it reports against the
+specification for your exact model.</li>
+<li>Run a sustained load test and watch for artifacts, crashes, and
+abnormal temperatures.</li>
+<li>If the card produces no picture at all, stop and return it.
+&ldquo;It just needs a driver&rdquo; is not an explanation for a card
+with no output — harvested boards exist, and the return window is
+shorter than the argument.</li>
+</ol>
+
+<h2>The supply-chain record: variants and smuggling cases</h2>
+<p>Some of the confusion in the GPU market is policy-made, and it is
+on the public record. Two threads matter to a buyer or repairer.</p>
+<p><strong>Export rules created the variants.</strong> In October 2022
+the U.S. Bureau of Industry and Security (BIS — the Commerce
+Department office that writes export rules) restricted exports of
+advanced GPUs to China. NVIDIA answered with cut-down China-market
+variants, <a href="https://registry.deploy.report/chips/nvidia-a800" target="_blank" rel="noopener">the A800 and H800</a>, with their chip-to-chip interconnect
+speed reduced to fit under the rule. On October 17, 2023, BIS rewrote
+the test — measuring performance density instead of interconnect
+speed — which brought the A800 and H800, and the RTX 4090, inside the
+controls; NVIDIA&rsquo;s own securities filing that day listed the
+covered products. The same pattern later repeated with the H20.
+For a repair reader the practical point is this: a China-market
+variant is not a counterfeit. It is a different product, with
+different firmware and a different warranty reality, and it should be
+bought and priced as one.</p>
+<p><strong>Smuggling is a court record, not a rumor.</strong> In
+<em>United States v. Greg Lui</em> (U.S. District Court for the
+Central District of California, No. 2:26-cr-00618), a federal
+indictment filed September 29, 2026 alleges that Lui&rsquo;s company,
+Earthmade Computer, moved more than $300 million worth of servers
+containing export-controlled GPUs — the indictment names
+<a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">A100 and H100</a>,
+RTX 4090, and RTX 5090 products — through Malaysia and Singapore to
+China on false paperwork. The Justice Department announced his arrest
+on October 1, 2026. The charges are conspiracy to violate the Export
+Control Reform Act, outbound smuggling, and conspiracy to commit
+money laundering. An indictment is an allegation, not a verdict: the
+defendant is presumed innocent, and nothing in that case has been
+proven in court. The case is recorded here because it is the
+documented end of the same supply chain that produces the gray-market
+cards described above — not because any individual card you meet
+came from it.</p>
+
+<h2>The backdoor question: what is and is not on the record</h2>
+<aside class="bb-notice-amber">
+<p><strong>Status: UNVERIFIED.</strong> Claims that NVIDIA GPUs contain
+a built-in backdoor or remote kill switch are widely repeated and are
+<strong>not supported by published evidence</strong>. Here is the whole
+of the actual record, both sides stated.</p>
+<p><strong>Documented:</strong> On July 31, 2025, the Cyberspace
+Administration of China (China&rsquo;s internet regulator) summoned
+NVIDIA and asked it to explain alleged backdoor security risks in its
+H20 chips and to submit supporting documents. That summons is a real
+regulatory act, reported at the time by Reuters and others; it is an
+allegation by a regulator, not a technical finding.</p>
+<p><strong>Documented:</strong> Separately, a U.S. legislative proposal
+(the Chip Security Act) would <em>require</em> location-verification
+technology in export-controlled chips — that is, it proposes adding a
+tracking mechanism by law, openly, in the future. A proposal to add a
+mechanism is evidence that the mechanism is not already there.</p>
+<p><strong>Documented:</strong> NVIDIA&rsquo;s answer is in writing.
+On August 5, 2025 its chief security officer published:
+&ldquo;There are no back doors in NVIDIA chips. No kill switches. No
+spyware,&rdquo; and &ldquo;NVIDIA GPUs do not and should not have kill
+switches and backdoors.&rdquo;</p>
+<p><strong>Not documented:</strong> As of this writing, no regulator,
+court filing, or independent laboratory has published physical or
+technical evidence of a backdoor or kill switch in an NVIDIA GPU.
+Claims that one exists — from any direction — remain unverified, and
+this page will say so until evidence, rather than statements, appears.</p>
+</aside>
+
+<h2>Your legal ground</h2>
+<p>Repairing your own card — opening it, renewing paste and pads,
+replacing fans, and board-level work — stands on the same federal
+ground as everything else on this site: the Magnuson-Moss Warranty Act
+limits a manufacturer&rsquo;s ability to void your warranty for
+servicing your own property, and the DMCA &sect;1201 repair exemptions
+cover the circumvention needed to diagnose and repair lawfully
+acquired devices. The full citations, state laws, and the escalation
+playbook for when a manufacturer says no are on
+<a href="/repair-rights.html">The Shield: right-to-repair law</a>; if a
+warranty claim is refused because you opened the card, the template
+letters are in the <a href="/repair-demand-letter.html">repair demand
+letter</a> page.</p>
+
+<h2>Sources</h2>
+<ul>
+<li>&ldquo;Power Connector Update — GeForce RTX 4090&rdquo; — NVIDIA
+support, November 18, 2022:
+<a href="https://nvidia.custhelp.com/app/answers/list/p/131/page/35" target="_blank" rel="noopener">NVIDIA customer support index</a>;
+full text reproduced by
+<a href="https://pcper.com/2022/11/nvidia-officially-responds-to-12vhpwr-situation-with-power-connector-update/" target="_blank" rel="noopener">PC Perspective</a>.</li>
+<li>Recall 24-112, &ldquo;GPU Angled Adapters Recalled Due to Fire and
+Burn Hazards; Manufactured by CableMod&rdquo; — U.S. Consumer Product
+Safety Commission, February 8, 2024:
+<a href="https://www.cpsc.gov/Recalls/2024/GPU-Angled-Adapters-Recalled-Due-to-Fire-and-Burn-Hazards-Manufactured-by-CableMod" target="_blank" rel="noopener">CPSC recall notice</a>;
+manufacturer&rsquo;s program:
+<a href="https://cablemod.com/adapterrecall/" target="_blank" rel="noopener">CableMod adapter recall</a>.</li>
+<li>&ldquo;12VHPWR Is a Dumpster Fire&rdquo; — GamersNexus failure
+analysis (independent, secondary):
+<a href="https://devtest.gamersnexus.net/gpus/12vhpwr-dumpster-fire-investigation-contradicting-specs-corner-cutting" target="_blank" rel="noopener">GamersNexus</a>.</li>
+<li>12VHPWR and the 12V-2x6 revision — reference summary:
+<a href="https://en.wikipedia.org/wiki/12VHPWR" target="_blank" rel="noopener">Wikipedia, &ldquo;12VHPWR&rdquo;</a>.</li>
+<li>Melted-connector repair volume — NorthridgeFix, reported by
+Tom&rsquo;s Hardware (technician-reported, secondary):
+<a href="https://www.tomshardware.com/news/technician-repairs-hundreds-rtx-4090-melted-connectors-every-month" target="_blank" rel="noopener">Tom&rsquo;s Hardware</a>.</li>
+<li>Painted GDDR memory investigation — Iskandar Souza and Paulo
+Gomes (TecLab), 2023:
+<a href="https://videocardz.com/newz/gamers-beware-miners-are-now-painting-gpu-memory-to-make-them-look-as-new" target="_blank" rel="noopener">VideoCardz</a>;
+<a href="https://www.igorslab.de/en/fraudulent-crypto-miners-use-color-to-deceive-buyers-into-buying-used-gpus-as-new/" target="_blank" rel="noopener">igor&rsquo;sLAB</a>.</li>
+<li>Relabeled RTX 3080/3090 boards sold as RTX 4090 — repair
+technician teardown, 2025:
+<a href="https://wccftech.com/modded-rtx-3090-and-3080s-sold-as-geforce-rtx-4090-gpus/" target="_blank" rel="noopener">Wccftech</a>.</li>
+<li>Rebuilt ex-mining cards (RTX 3080 20 GB, RX 580 16 GB) —
+ThinkComputers, 2023:
+<a href="https://thinkcomputers.org/chinese-companies-are-now-making-geforce-rtx-3080-20gb-and-rx-580-16gb-cards-from-used-cryptomining-gpus/" target="_blank" rel="noopener">ThinkComputers</a>.</li>
+<li>Export controls and the A800/H800 variants — index to the BIS
+rules of October 7, 2022 and October 17, 2023 and their Federal
+Register texts:
+<a href="https://registry.deploy.report/chips/nvidia-a800" target="_blank" rel="noopener">NVIDIA A800 record, deploy.report</a>.</li>
+<li><em>United States v. Greg Lui</em>, No. 2:26-cr-00618 (C.D. Cal.,
+indictment filed September 29, 2026) — U.S. Department of Justice
+announcement, October 1, 2026:
+<a href="https://www.narracomm.com/greg-lui-of-earthmade-computer-inc-arrested-on-indictment-for-smuggling-more-than-300-million-in-export-controlled-gpu-servers-to-china/" target="_blank" rel="noopener">DOJ release (republished)</a>;
+docket walk-through:
+<a href="https://eastfrontier.com/2026/10/03/a-california-indictment-traces-an-alleged-ai-server-pipeline-to-china/" target="_blank" rel="noopener">East Frontier</a>.</li>
+<li>&ldquo;No Backdoors. No Kill Switches. No Spyware.&rdquo; — David
+Reber Jr., Chief Security Officer, NVIDIA blog, August 5, 2025:
+<a href="https://blogs.nvidia.com/blog/no-backdoors-no-kill-switches-no-spyware/" target="_blank" rel="noopener">NVIDIA blog</a>.</li>
+<li>On this site: the
+<a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPU and AI accelerator datasheets</a>
+(what is actually public), the
+<a href="/datasheets.html#power">power-stage datasheets</a> including
+the NCP302150 DrMOS, and
+<a href="/repair-rights.html">The Shield</a> for the law.</li>
+</ul>
+
+<p class="signoff">BareBoard — free hardware education. If your card
+dies, you now know the order to check things in, what a repair actually
+involves, and exactly which drawer the missing manuals are locked
+in.</p>
+</main>
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the Open Source Hardware Association framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

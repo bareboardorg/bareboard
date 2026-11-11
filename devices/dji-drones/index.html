@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DJI Drones — BareBoard — Free Hardware Education</title>
+<meta name="description" content="DJI drones: FCC internal photos (grantee SS3), flight-stack anatomy, smart batteries, the Covered List record (DA 25-1086, NDAA §1709, 9th Cir. case), faults and safety.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="DJI Drones">
+<meta property="og:description" content="DJI drones: the industry's best public filings — and a live federal case file.">
+<meta property="og:url" content="https://bareboard.org/devices/dji-drones/">
+<meta property="og:image" content="https://bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/devices/">Devices</a></li>
+        <li class="has-children">
+          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/about.html#how-we-work">How we work</a></li>
+                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/notes/">Bench Notes</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                <li><a href="/protocols.html">Protocol RE</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
+                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
+                <li><a href="/hot-100.html">Game Consoles</a></li>
+                <li><a href="/hot-100.html">Media Streamers</a></li>
+                <li><a href="/hot-100.html">Networking Gear</a></li>
+                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
+                <li><a href="/hot-100.html">Other</a></li>
+                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
+                <li><a href="/hot-100.html">Phones</a></li>
+                <li><a href="/hot-100.html">Printers</a></li>
+                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
+                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
+                <li><a href="/hot-100.html">Wearables</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/most-wanted.html#board">The board</a></li>
+              </ul>
+            </div>
+          </div></li>
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+                <li><a href="/watchmen.html#corrections">Corrections</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+  <aside class="legal-notice bb-notice-amber">
+    <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
+  </aside>
+
+  <h1>DJI Drones</h1>
+  <p class="lede">The best-documented consumer aircraft ever sold &mdash; and the first product line on this site whose story is a live federal case file. DJI&rsquo;s FCC filings are a masterclass in public hardware records; as of December 2025, the FCC will not issue new ones.</p>
+  <section>
+    <h2 id="fcc">FCC ID</h2>
+    <p><strong>FCC ID pattern: SZ DJI Technology files under grantee code SS3.</strong> DJI&rsquo;s filings are famously complete: full internal photos of every board, antenna layouts, and RF reports for the control link (OcuSync-family, in the 2.4/5.8&nbsp;GHz bands), the Wi-Fi/Bluetooth radios, and the GNSS receiver. For any DJI model already authorized, its filing at <a href="https://fccid.io">fccid.io</a> is the finest public teardown in the industry. What changed on December 22, 2025 is that no <em>new</em> filings can be granted &mdash; see the record.</p>
+    <p>Every radio a device carries &mdash; Wi-Fi, Bluetooth, cellular, ultra-wideband, NFC &mdash; needs an FCC equipment authorization before the device can be sold in the United States. To get one, the manufacturer files photographs and test reports with the FCC, and those filings are <strong>public record</strong>. Check the label on your specific unit and look it up at <a href="https://fccid.io">fccid.io</a>.</p>
+    
+  </section>
+  <section>
+    <h2 id="fcc-revealed">What the FCC filing revealed</h2>
+    <p>The FCC filing for this device includes the documents manufacturers are required to submit: external photos, internal photos, test setup photos, RF test reports, and the user manual. These are public record at <a href="https://fccid.io/">fccid.io</a>.</p>
+    <ul>
+      <li><strong>Internal photos</strong> &mdash; the flight-controller board stack, the vision-sensor boards, the gimbal&rsquo;s three brushless motors, and the smart-battery&rsquo;s own electronics</li>
+      <li><strong>Antenna documentation</strong> &mdash; leg/antenna placement for the control link, which explains the range and the orientation sensitivity every pilot learns</li>
+      <li><strong>Test reports</strong> &mdash; output power per band and the band-edge behavior of a link designed to hold a video feed at kilometers of range</li>
+    </ul>
+    <p>What the FCC filing does <em>not</em> include: schematics (withheld under confidentiality requests where the maker files them), firmware, and the full bill of materials.</p>
+  </section>
+  <section>
+    <h2 id="exploded">Exploded view &mdash; the assemblies in build order</h2>
+    <p>This is the centerpiece of the page: the device taken apart into its assemblies, in the order they go together, every part named in plain language with what it does. An <em>exploded view</em> is the drawing a manufacturer makes showing every part separated along the path it assembles &mdash; the single most useful document in repair, and the one most often kept behind a dealer login.</p>
+    <h3>The source</h3>
+    <p><strong>Parts book:</strong> DJI does not publish one &mdash; but DJI is the rare maker that <em>sells</em> the parts anyway: arms, motors, gimbal assemblies, vision modules, and boards circulate through its service network and a large third-party market, and DJI&rsquo;s own repair program publishes per-model repair <em>pricing</em>. The stack below is rebuilt from FCC internal photos, in flight-assembly order. DJI&rsquo;s flyaway/coverage programs (DJI Care Refresh) are service contracts, not documentation &mdash; the distinction this page exists to teach.</p>
+    <p><strong>Coverage: PARTIAL &mdash; no public parts book or exploded diagram; FCC internal-photo basis (the richest of any platform in this wave). Parts availability is unusually good through service channels; documentation is not.</strong></p>
+    <h3>Build order</h3>
+        <h3>Step 1 &mdash; Airframe &amp; propulsion</h3>
+    <p>Four arms, four brushless motors, four propellers. The airframe is a set of replaceable arms on most models &mdash; the crash economy depends on it.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Brushless motors (4)</td><td>Outrunner motors, one per arm. A motor that feels gritty or notchy after a crash has a bent shaft or damaged bearing &mdash; replace the arm/motor unit, don&rsquo;t fly it &lsquo;to test.&rsquo;</td></tr>
+        <tr><td>Propellers (quick-release)</td><td>Matched CW/CCW pairs. A nicked prop is a vibration source that the flight controller will fight and the gimbal will show you. Props are consumables; treat them that way.</td></tr>
+        <tr><td>Arms &amp; landing gear</td><td>Designed break points. Carbon or plastic arms fold or snap to save the body &mdash; sacrificial structure, like a car&rsquo;s crumple zone.</td></tr>
+        <tr><td>ESCs (electronic speed controllers)</td><td>The motor drivers &mdash; on the main board or per-arm boards depending on model. A burned ESC presents as one dead motor with a good motor swapped in.</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 2 &mdash; Flight controller &amp; sensing</h3>
+    <p>The aircraft&rsquo;s brain and its eyes. This stack is why a DJI flies like it&rsquo;s on rails.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Flight controller (FC) + IMU</td><td>The autopilot and its inertial measurement unit (gyroscopes + accelerometers, usually redundant). IMU calibration errors after a crash are the board telling you the crash mattered.</td></tr>
+        <tr><td>GNSS module</td><td>GPS + Galileo/BeiDou/GLONASS positioning. Slow satellite lock after storage is normal; no lock in the open is an antenna/module fault.</td></tr>
+        <tr><td>Vision sensing system</td><td>Downward and omnidirectional cameras + infrared ToF (time-of-flight) sensors for obstacle avoidance and precision landing. These lenses are exposed: a scratched vision sensor is a blind spot the size of a wall.</td></tr>
+        <tr><td>Main processing board</td><td>Runs the vision pipeline and the video encoder for the downlink &mdash; the hottest, most compute-dense board in the aircraft.</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 3 &mdash; Gimbal &amp; camera</h3>
+    <p>A 3-axis brushless stabilizer carrying the camera &mdash; mechanically the most delicate assembly on the aircraft and the most crashed-into.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Gimbal motors (3 axes)</td><td>Yaw, pitch, and roll brushless motors that counter-rotate the camera against the aircraft&rsquo;s motion thousands of times a minute. A gimbal that buzzes, droops, or overheats has a damaged motor or a bent axis.</td></tr>
+        <tr><td>Camera + image sensor</td><td>1-inch or Micro-Four-Thirds-class sensors on flagships; the camera board and the gimbal are serviced as an assembly in DJI&rsquo;s network.</td></tr>
+        <tr><td>Ribbon cables</td><td>The gimbal&rsquo;s flex ribbons are the classic crash fatality &mdash; invisible damage, intermittent video. Connector seating is the first check.</td></tr>
+        <tr><td>Dampening plate</td><td>Rubber isolation balls between gimbal and frame. Aged/hardened dampers = jello in the footage.</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 4 &mdash; Smart battery &amp; downlink</h3>
+    <p>The battery is a computer with cells attached; the downlink is the radio the FCC filing is really about.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Intelligent Flight Battery</td><td>Cells + a management board that counts cycles, balances cells, enforces storage charge, and can refuse flight. A swollen DJI battery is retired by the manual&rsquo;s own rule (see the warnings in Faults) &mdash; and the board logs it.</td></tr>
+        <tr><td>OcuSync-family downlink</td><td>The proprietary control/video link (2.4/5.8&nbsp;GHz, adaptive). Remote ID broadcast (the FAA&rsquo;s drone license-plate signal) is part of this radio&rsquo;s job on current models.</td></tr>
+        <tr><td>Remote controller</td><td>Its own FCC-filed device: sticks (Hall-effect on newer models &mdash; the same drift physics as game controllers), its own battery, and the phone/tablet as display.</td></tr>
+      </tbody>
+    </table>
+
+        <p><strong>What is missing, in the open:</strong> schematics, boardviews, and any published exploded diagram. DJI&rsquo;s model is service-network repair with good parts logistics &mdash; genuinely better than most of this wave for getting a crashed drone fixed, and still a closed book at the board level. Both halves of that sentence are the finding.</p>
+  </section>
+  <section>
+    <h2 id="we-reveal">What we reveal</h2>
+    <p>The FCC tells you what a device emits. We tell you what&rsquo;s inside and how it works.</p>
+    <ul>
+      <li><strong>The filing is the teardown</strong> &mdash; DJI&rsquo;s FCC internal photos remain public for every authorized model; nothing in the December 2025 action removes them</li>
+      <li><strong>What the Covered List does and doesn&rsquo;t do</strong> &mdash; new authorizations stop; your authorized drone, its parts channel, and (by waiver) its firmware updates continue &mdash; dates in the record</li>
+    </ul>
+    <p>Check our <a href="/autopsy/">teardowns</a> for full board-level analysis.</p>
+  </section>
+  <section>
+    <h2 id="variants">Model families</h2>
+    <p>One architecture across the line; size and camera class are the variables.</p>
+    <table>
+      <tr><th>Family</th><th>Class</th><th>Defining hardware</th><th>Notes</th></tr>
+      <tr><td>Mini series</td><td>Sub-249&nbsp;g</td><td>Lightest airframe, 4K camera on current models</td><td>The 249&nbsp;g weight class exists to sit under registration thresholds in many jurisdictions (FAA registration still applies to commercial use).</td></tr>
+      <tr><td>Air series</td><td>Mid-size</td><td>Dual cameras (wide + medium tele) on current models</td><td>The prosumer middle.</td></tr>
+      <tr><td>Mavic series</td><td>Flagship folding</td><td>Hasselblad camera, omnidirectional sensing</td><td>The reference design the FCC photos document best.</td></tr>
+      <tr><td>Avata / FPV line</td><td>Cinewhoop / FPV</td><td>Ducted props, head-tracking goggles option</td><td>Most Wanted on this site (Avata 2) before this hub existed.</td></tr>
+      <tr><td>Agras / enterprise</td><td>Agriculture / industrial</td><td>Spraying, thermal, docks</td><td>The lines the tariff and component rules hit hardest; outside this page&rsquo;s consumer scope.</td></tr>
+    </table>
+  </section>
+  <section>
+    <h2 id="chips">Key chips &amp; components</h2>
+    <ul>
+      <li><strong>Flight-controller &amp; vision silicon</strong> &mdash; DJI designs its own boards around a mix of in-house and merchant silicon (image-signal and vision processing has used Ambarella-class parts historically; current models are identified per-board in FCC photos). No public datasheets for the integrated assemblies &mdash; collection targets logged.</li>
+      <li><strong>The radio layer is the documented layer:</strong> the OcuSync-family link&rsquo;s filed test reports (via <a href="https://fccid.io">fccid.io</a>, grantee SS3) are the public record of output power and band behavior &mdash; more RF documentation than any phone on this site ships with.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="faults">Faults &mdash; which part fails, and how you know</h2>
+    <p>Crash first, electronics second &mdash; the DJI fault tree is dominated by physics. DJI&rsquo;s own manuals carry the battery rules quoted in Safety.</p>
+    <ul>
+      <li><strong>Gimbal overload / gimbal motor overloaded error</strong> &mdash; a bent axis, a ribbon fault, or debris in a motor gap. Check for the shipping gimbal clamp left on (the classic), then ribbon seating, then assume mechanical damage.</li>
+      <li><strong>IMU / compass errors after a crash</strong> &mdash; recalibrate once. Errors that return are the aircraft reporting real sensor damage; DJI&rsquo;s own guidance is service, not more calibration.</li>
+      <li><strong>One motor stutters or won&rsquo;t spin up</strong> &mdash; swap-test the propeller, inspect for hair/debris in the bell, then it&rsquo;s motor vs. ESC: a known-good motor on the same arm separates them.</li>
+      <li><strong>Battery &lsquo;cell error&rsquo; / refusal to charge</strong> &mdash; the battery&rsquo;s own board has flagged a cell imbalance or damage. That flag is the product working as designed; the pack is done. Do not attempt to &lsquo;wake&rsquo; a flagged smart battery with a dumb charger.</li>
+      <li><strong>Video feed breakup at short range</strong> &mdash; antenna damage in a leg (crash history), a failing gimbal ribbon (for camera feed specifically), or genuine RF congestion. The FCC-filed antenna map tells you which leg holds which antenna.</li>
+      <li><strong>Flyaway</strong> &mdash; post-incident, the flight log is the black box: DJI keeps detailed onboard logs, and the log&rsquo;s GPS/IMU trace usually names the cause (compass interference at takeoff is the recurring villain &mdash; rebar and car roofs are compass poison).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="safety">Safety, before you open anything</h2>
+    <p>DJI prints this rule in its manuals and this page repeats it because it is the one that injures people: <strong>never use a swollen, leaking, or crash-damaged battery</strong>, and stop flying a pack that gets abnormally hot. A smart battery that has flagged itself is retired &mdash; the electronics are not being cautious on your behalf, they are reporting cell damage.</p>
+    <p>Propellers at flight RPM are blades. Motors get tested on the bench with props <em>off</em>, always &mdash; an armed drone on a bench is the hobby&rsquo;s most reliable source of stitches.</p>
+    <p>Regulatory safety is also safety: Remote ID, registration, and airspace authorization (LAANC in the US) are the legal layer of not hurting anyone. The record below is about market access; the airspace rules bind regardless of how the case law lands.</p>
+  </section>
+  <section>
+    <h2 id="record">The full record &mdash; dated, sourced, nothing smoothed over</h2>
+    <p>No platform in this wave has a record like this one: a decade of escalating federal action, all of it in public documents, ending (for now) in a market freeze and a federal appeal.</p>
+    <table>
+      <thead><tr><th>Date</th><th>Event</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>2017-08</td><td>A US Army memo directs units to discontinue DJI products over &lsquo;cyber vulnerabilities&rsquo; &mdash; the first formal US government action, reported from the memo itself.</td><td>U.S. Army memorandum, Aug. 2, 2017 (reported by sUAS News / Reuters)</td></tr>
+        <tr><td>2019-05-20</td><td>DHS/CISA issues an industry alert warning that Chinese-made drones may send sensitive flight data to manufacturers and beyond.</td><td>CISA Industry Alert, May 20, 2019</td></tr>
+        <tr><td>2020-01</td><td>The Department of the Interior grounds its fleet of ~800 DJI drones pending security review (non-emergency flights).</td><td>DOI statements, Jan. 2020</td></tr>
+        <tr><td>2020-12-18</td><td>The Commerce Department adds DJI to the Entity List, citing its role in enabling surveillance in Xinjiang &mdash; an export-control action, separate from the later FCC fight.</td><td>Bureau of Industry and Security, Entity List addition, Dec. 18, 2020</td></tr>
+        <tr><td>2024-12-23</td><td>The FY2025 National Defense Authorization Act is signed; Section 1709 orders a national-security review of DJI and Autel within one year, with FCC Covered List placement as the default if no agency clears them.</td><td>FY2025 NDAA, Pub. L. 118-159, &sect;1709</td></tr>
+        <tr><td>2025-12-22</td><td>No agency completes a clearance; a White House-convened interagency body issues an affirmative national-security determination (Dec. 21), and the FCC adds foreign-produced drones and critical components &mdash; naming DJI and Autel &mdash; to the Covered List (Public Notice DA 25-1086). Effect: no new FCC equipment authorizations; already-authorized models remain legal to sell, own, and fly.</td><td>FCC Public Notice DA 25-1086, Dec. 22, 2025</td></tr>
+        <tr><td>2026-02-20</td><td>DJI petitions the Ninth Circuit for review of the listing (No. 26-1029), arguing the agency process was unlawful. The case is pending as of this writing.</td><td>SZ DJI Technology Co. v. FCC, No. 26-1029 (9th Cir.)</td></tr>
+        <tr><td>2026-10-13</td><td>The FCC&rsquo;s component rule (FCC 26-50) takes effect: devices containing &lsquo;logic-bearing&rsquo; components (flight controllers, radios, camera/gimbal boards) from Covered List entities are themselves barred from new authorization. A waiver keeps firmware updates flowing to already-authorized DJI drones through January 1, 2029.</td><td>FCC Report and Order 26-50; waiver DA 26-454</td></tr>
+      </tbody>
+    </table>
+    <h3>Did you know</h3>
+    <ul>
+      <li>The drones you already own are not banned: the Covered List blocks <em>new authorizations</em>. Existing models keep their grants, their parts channels, and &mdash; by an FCC waiver &mdash; their firmware updates through January 1, 2029.</li>
+      <li>DJI&rsquo;s FCC filings (grantee SS3) are the deepest public hardware documentation of any consumer product line &mdash; the ban froze the product pipeline, not the public record; every authorized model&rsquo;s internal photos remain downloadable.</li>
+      <li>The gimbal is three brushless motors flying in formation: the camera is stabilized mechanically, not digitally &mdash; which is why a bent gimbal axis cannot be fixed by a software update.</li>
+    </ul>
+    <h3>Unverified &mdash; alleged, not proven</h3>
+    <p><strong>&ldquo;DJI drones covertly send your flight data to Beijing.&rdquo;</strong> For the claim: the US government&rsquo;s determinations are on the record above &mdash; the 2017 Army memo, the 2019 CISA alert, the 2025 interagency determination &mdash; and DJI&rsquo;s software historically included analytics and third-party SDK components that drew legitimate researcher criticism (a 2020 Synacktiv analysis of DJI&rsquo;s Android app documented aggressive data collection and an update mechanism that bypassed the Play store; DJI removed the flagged SDK and disputed the characterization). Against the claim as stated: multiple commissioned security audits (including FTI Consulting&rsquo;s 2020&ndash;2021 examinations) found no evidence of covert exfiltration, especially with Local Data Mode enabled, and no public evidence has shown flight data reaching Chinese government hands. The <em>regulator actions</em> are documented fact; the <em>covert-pipeline claim</em> remains unproven in public evidence. This page reports both, labeled.</p>
+  </section>
+  <section>
+    <h2 id="documents">Documents &amp; deep dive</h2>
+    <p>Every document this page rests on, linked. Site library copies first, then the public record at the source.</p>
+    <ul>
+      <li><strong>FCC Public Notice DA 25-1086</strong> (Dec. 22, 2025) &mdash; the Covered List addition; and <strong>FCC 26-50</strong> (2026) &mdash; the component rule. FCC public records.</li>
+      <li><strong>FY2025 NDAA &sect;1709</strong> &mdash; the statute that forced the review (public law).</li>
+      <li><strong>SZ DJI Technology Co. v. FCC, No. 26-1029</strong> &mdash; the pending Ninth Circuit petition (court docket).</li>
+      <li><strong>FCC filings</strong> for every authorized DJI model (grantee SS3) &mdash; internal photos and RF reports: <a href="https://fccid.io">fccid.io</a>. Status explainer: <a href="https://rotormagazine.org/is-dji-banned-in-the-us/">Rotor Magazine&rsquo;s Covered List explainer</a> (secondary, aggregates the FCC notices).</li>
+      <li><a href="/devices/gopro/">GoPro</a> &mdash; the American camera-drone story, including the Karma recall.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="reading">Further Reading</h2>
+    <ul>
+      <li><a href="/devices/gopro/">GoPro &mdash; cameras, and the drone that was recalled</a></li>
+      <li><a href="/devices/wyze-cam-v3/">Wyze Cam v3 &mdash; the other camera with a federal-adjacent record</a></li>
+      <li><a href="/repair-rights.html">Repair Rights</a></li>
+    </ul>
+  </section>
+
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

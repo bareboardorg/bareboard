@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Power Seating, Part by Part &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="Power seating in plain language: tilt, recline, elevate, power legrests and standing &mdash; how the actuators work, how they fail, how to test one with a meter, and what a like-for-like swap involves.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Power Seating, Part by Part">
+<meta property="og:description" content="Tilt, recline, elevate, legrests and standing &mdash; the actuators, the modules, the failures, the meter tests, and the swap rules.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-seating.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Power Seating, Part by Part</h1>
+    <p class="lede">Tilt, recline, elevate, power legrests and standing are not five different machines. They are one idea repeated: a small electric pusher &mdash; an <strong>actuator</strong> (a motor-driven unit that pushes or pulls in a straight line) &mdash; moves one part of the seat, a seating module switches its power, and something tells it when to stop. Learn that one chain and you can follow every seating fault on the chair.</p>
+    <p>This page names the parts, says how each one fails, gives the meter checks an owner can actually do, and sets out what has to match before one actuator can be swapped for another. It does not invent specifications: where a number appears, it comes from the manufacturer document named next to it. Where a check is a plain electrical check rather than a manufacturer procedure, it is labelled that way.</p>
+    <p><em>Provenance: compiled from the manufacturers&rsquo; own published documents &mdash; Curtiss-Wright&rsquo;s <a href="/library/collected-public-docs/pmd/pg-drives_r-net_programming.pdf">R-net On-Board Programming manual (SK78571)</a>, Dynamic Controls / Invacare&rsquo;s <a href="/library/collected-public-docs/pmd/invacare_linx_service.pdf">LiNX service manual (1605129-C)</a>, the <a href="/library/collected-public-docs/pmd/permobil_m3-corpus_owner.pdf">Permobil M3 Corpus owner&rsquo;s manual</a>, the <a href="/library/collected-public-docs/pmd/permobil_f5-corpus-vs_owner.pdf">Permobil F5 Corpus VS owner&rsquo;s manual</a>, the <a href="/library/collected-public-docs/pmd/invacare_tdx-sp2_owner.pdf">Invacare TDX SP2 owner&rsquo;s manual</a> and the <a href="/library/collected-public-docs/pmd/quantum_q6-edge-2_owner.pdf">Quantum Q6 Edge 2.0 owner&rsquo;s manual</a> &mdash; and checked against them. Warnings in quotation marks are carried word for word from those manuals.</em></p>
+  </section>
+
+  <section id="safety">
+    <h2>First: the manufacturers&rsquo; own safety warnings, word for word</h2>
+    <p><strong>Before any check on this page that touches a plug, cable, actuator or battery terminal:</strong> put the chair on level ground, switch it OFF, and disconnect the main battery harness or trip the main circuit breaker, unless the step says to power the chair to run a function. Do not test a seating function while seated in the chair unless the step is simply operating it normally. Support any seat, backrest or legrest you unbolt before you remove its actuator &mdash; once the actuator is off, nothing else holds it up. Keep fingers, clothing, cables and tools out of the moving linkage at all times.</p>
+    <p>Permobil, on pinch risk, in both the <a href="/library/collected-public-docs/pmd/permobil_m3-corpus_owner.pdf">M3 Corpus</a> and <a href="/library/collected-public-docs/pmd/permobil_f5-corpus-vs_owner.pdf">F5 Corpus VS</a> owner&rsquo;s manuals, under the heading &ldquo;WARNING! Do not get pinched&rdquo;:</p>
+    <blockquote><p>&ldquo;The wheelchair is heavy and contains many moving parts, which means that you can be pinched when you adjust the wheelchair or if you use the wheelchair incorrectly. When you see this warning, be mindful of your body location to avoid being pinched. Do not put any part of your body between moving parts.&rdquo;</p></blockquote>
+    <p>Permobil, on driving with the seat moved, under &ldquo;WARNING! Drive extra carefully when lifted or tilted&rdquo;:</p>
+    <blockquote><p>&ldquo;If the seat or backrest is lifted or tilted on flat ground, drive at a low speed. If the seat or backrest is lifted or tilted, do not drive the wheelchair on slopes or over obstacles. If you do, the wheelchair can become less stable and injure you.&rdquo;</p></blockquote>
+    <p>Permobil, on legrests, under &ldquo;WARNING! Use leg rest tilt cautiously&rdquo;:</p>
+    <blockquote><p>&ldquo;Do not use the leg rest tilt when a knee support is in place. If you do, it can lead to bodily injury.&rdquo;</p></blockquote>
+    <p>Permobil, on standing, in the F5 Corpus VS manual under &ldquo;WARNING! Only use the standing function on level ground&rdquo;:</p>
+    <blockquote><p>&ldquo;Only use the standing function on level ground. If you do not, the wheelchair can lose traction or become less stable and injure you.&rdquo;</p></blockquote>
+    <p>Invacare, on elevating legrests, in the <a href="/library/collected-public-docs/pmd/invacare_tdx-sp2_owner.pdf">TDX SP2 owner&rsquo;s manual</a>:</p>
+    <blockquote><p>&ldquo;Risk of injury &mdash; If your power wheelchair has been fitted with elevating legrests, there is a risk of personal injury and damage to the power wheelchair if you drive the power wheelchair with the legrests raised. &mdash; To avoid unwanted displacement of the power wheelchair centre of gravity to the front (especially when travelling downhill) and in order to avoid damage to the power wheelchair, elevating legrests must always be lowered during normal travelling.&rdquo;</p></blockquote>
+    <p>Quantum Rehab, on the power elevating seat, in the <a href="/library/collected-public-docs/pmd/quantum_q6-edge-2_owner.pdf">Q6 Edge 2.0 owner&rsquo;s manual</a>:</p>
+    <blockquote><p>&ldquo;Do not allow the motor to run more than a few seconds after the mechanism reaches the top or bottom limit.&rdquo;</p></blockquote>
+    <blockquote><p>&ldquo;The power elevating seat option is intended for use on a level surface only. Never raise the seat from its lowest position on an inclined surface. Failure to heed this warning can result in the power chair tipping over. Never raise the seat from its lowest position when operating your power chair on bumpy or uneven surfaces. Failure to heed this warning can result in the power chair tipping over. Never raise the power elevating seat while your power chair is in the freewheel mode. Always fasten the positioning belt when operating the power elevating seat.&rdquo;</p></blockquote>
+  </section>
+
+  <section id="functions">
+    <h2>The five functions, one line each</h2>
+    <p>A <strong>seating function</strong> is one named movement the rider can command. A <strong>seating motion</strong> is the programmed movement behind it &mdash; in the <a href="/library/collected-public-docs/pmd/invacare_linx_service.pdf">LiNX service manual&rsquo;s</a> words, a seating motion defines the icon shown, the overall speed, and the individual actuators and their speeds, and one motion can control one or more actuators at once.</p>
+<table>
+<thead><tr><th>Function</th><th>What moves, in one line</th></tr></thead>
+<tbody>
+<tr><td><strong>Tilt</strong> (also called seat tilt, or tilt-in-space)</td><td>The whole seat &mdash; seat, backrest and legrests together, at a fixed angle to each other &mdash; tips backwards and forwards as one unit.</td></tr>
+<tr><td><strong>Recline</strong> (backrest tilt)</td><td>Only the backrest leans back and returns upright, opening and closing the angle between backrest and seat.</td></tr>
+<tr><td><strong>Elevate</strong> (seat lift, lifter)</td><td>The whole seat rises straight up and lowers again, without changing any angle. Quantum calls its version with added stability control <strong>iLevel</strong> in the <a href="/library/collected-public-docs/pmd/quantum_q6-edge-2_owner.pdf">Q6 Edge 2.0 manual</a>.</td></tr>
+<tr><td><strong>Power legrests</strong> (leg rest tilt, elevating legrests, footplate lift)</td><td>The legrest swings up toward horizontal and back down; on some chairs each legrest has its own actuator, on others one actuator moves both, and a separate short movement lengthens or shortens the legrest to lift the footplates.</td></tr>
+<tr><td><strong>Standing</strong></td><td>A linked sequence &mdash; seat, backrest and legrests moving together through several actuators &mdash; brings the rider from seated to standing in the chair, as on the <a href="/library/collected-public-docs/pmd/permobil_f5-corpus-vs_owner.pdf">Permobil F5 Corpus VS</a>.</td></tr>
+<tr><td><strong>Anterior tilt</strong> (forward tilt)</td><td>The seat tips forward by a small programmed amount &mdash; Permobil gives typical positions of 5&deg;, 10&deg; and 20&deg; in the M3 Corpus manual &mdash; to extend reach; it is tilt in the other direction, not a sixth mechanism.</td></tr>
+</tbody>
+</table>
+    <p>Permobil&rsquo;s manuals make the shared consequence plain: the wheelchair&rsquo;s centre of gravity changes when you change the position of the seat or the backrest, and lifting, tilting or standing decreases the wheelchair&rsquo;s stability. That is why the safety interlocks further down this page exist.</p>
+  </section>
+
+  <section id="chain">
+    <h2>The hardware chain: command &rarr; module &rarr; actuator</h2>
+    <p>Every seating movement, on every system on this page, follows the same three-link chain:</p>
+    <ol>
+      <li><strong>You give a command.</strong> Through the joystick in seating mode, a separate switchbox or toggle, a button switch, or a special control. On LiNX, the manual separates this out as the <em>seating function</em>: the user input that defines how the motion is operated &mdash; proportional (it moves as far and as fast as you push), switched (it moves while you hold), latched (one push starts it, another stops it), or toggle.</li>
+      <li><strong>A seating module switches the power.</strong> The module is an electronic box that takes battery power and sends it, in the chosen direction and at the programmed speed, down one of its actuator channels (a channel is one actuator output). It also watches current, temperature and the safety inputs described below, and it is where the seating settings live.</li>
+      <li><strong>The actuator does the pushing.</strong> See the next section for what is inside one.</li>
+    </ol>
+    <p>The module names differ by maker. They are the same link in the chain:</p>
+<table>
+<thead><tr><th>System</th><th>Seating module(s)</th><th>What the manufacturer document says</th></tr></thead>
+<tbody>
+<tr><td><strong>R-net</strong> (Curtiss-Wright, formerly PG Drives Technology)</td><td><strong>ISM</strong> &mdash; Intelligent Seating/lighting Module</td><td>The <a href="/library/collected-public-docs/pmd/pg-drives_r-net_programming.pdf">R-net programming manual</a> covers ISM actuator channels 1 to 6, each set independently for up speed, down speed, acceleration and deceleration. Curtiss-Wright&rsquo;s own <a href="https://industrial.curtisswright.com/en-gb/medical-mobility/rnet/intelligent-seating-lighting-module">ISM product page</a> describes the current module as driving up to eight seat adjustment actuators, with up to twelve independent axes of motion (an <strong>axis</strong> is one named movement, which can combine several channels), at independently programmable speeds and with interlocking signals &mdash; and gives the maximum actuator current as 12A, increased to 15A at slower speeds.</td></tr>
+<tr><td><strong>LiNX</strong> (Dynamic Controls, fitted by Invacare)</td><td><strong>DLX-PM75AL / DLX-PM120AL</strong> power modules with built-in actuator ports, plus <strong>DLX-ACT200</strong> and <strong>DLX-ACT400</strong> add-on actuator modules</td><td>The <a href="/library/collected-public-docs/pmd/invacare_linx_service.pdf">LiNX service manual</a> states that the &ldquo;AL&rdquo; power modules that feature actuators and lights have two actuator ports, and that if required the system is completed with the DLX-ACT200 (2 actuator channels) or DLX-ACT400 (4 actuator channels), with actuator power provided through the bus. Its factory port set-up assigns channels in order to tilt, recline, right leg, both legs / left leg or centre-mounted legrest, and lifter.</td></tr>
+<tr><td><strong>Permobil</strong></td><td><strong>ICS</strong> &mdash; Intelligent Control System</td><td>Permobil&rsquo;s seating system on the Corpus chairs: a master module, a switchbox the rider presses, and standard and position-sensing (&ldquo;smart&rdquo;) actuators. It manages the powered seat functions and supplies drive-inhibit information to the driving system. No copy of Permobil&rsquo;s ICS technical manual is in this site&rsquo;s library yet &mdash; it is listed as a collection target in the report that produced this page, so the ICS is described here only at the level the Permobil owner&rsquo;s manuals in the library support.</td></tr>
+<tr><td><strong>Invacare (older, pre-LiNX)</strong></td><td><strong>ACS 2</strong> actuator modules <strong>ACT2</strong> and <strong>ACT4</strong></td><td>Invacare&rsquo;s <a href="https://www.invacare.ie/sites/ie/files/csv_migration/product_docs/sales_docs/DSAL002740_acs2epuk.pdf">ACS 2 sales document</a> lists ACT2 for 2 actuators and ACT4 for 4 actuators, combinations controlling up to 12 actuators, with actuator speed proportional to the joystick and simultaneous movement of several actuators.</td></tr>
+<tr><td><strong>Quantum Rehab / Pride</strong></td><td>Seating run through the chair&rsquo;s controller, a toggle, or a single switch; <strong>TRU-Balance 3</strong> power positioning on the Q6 Edge range</td><td>The <a href="/library/collected-public-docs/pmd/quantum_q6-edge-2_owner.pdf">Q6 Edge 2.0 owner&rsquo;s manual</a> shows the power elevating seat operated through the controller, a toggle, or an optional single switch, with the seat plate interface bracket bolted onto the actuator &mdash; and refers readers to a separate TRU-Balance 3 manual for the full positioning system, a document not yet in this site&rsquo;s library.</td></tr>
+</tbody>
+</table>
+    <p>Two practical consequences follow from the chain. First, a dead function can be dead at any link: a switch that never asks, a module that never sends, or an actuator that never moves &mdash; the meter tests below separate the three. Second, the module, not the actuator, holds the settings: swap an actuator and the settings stay; swap a module and they may not. See <a href="/pmd-parts.html">Parts, Not Assemblies</a> for what that means for repair quotes.</p>
+  </section>
+
+  <section id="actuator">
+    <h2>Inside one actuator</h2>
+    <p>A seating actuator is a <strong>linear actuator</strong> (linear means in a straight line): a small direct-current (DC) motor, a gearbox that trades the motor&rsquo;s speed for pushing force, and a screw. The motor turns the screw through the gearbox; a nut that cannot rotate travels along the screw; the rod attached to that nut pushes out (extends) or pulls in (retracts). Send the power one way round and it extends; reverse the polarity (swap which wire is positive) and it retracts. That is why a basic seating actuator has two wires, and why the R-net manual can define direction purely by pins: for an ISM channel, &ldquo;Up is defined as pin 2 positive with respect to pin 1&rdquo; and &ldquo;Down is defined as pin 1 positive with respect to pin 2.&rdquo;</p>
+    <p>Three words you need before anyone sells you one:</p>
+    <ul>
+      <li><strong>Stroke</strong> &mdash; how far the rod travels, from fully retracted to fully extended. Stroke decides how far the seat part can move.</li>
+      <li><strong>Force rating</strong> &mdash; how hard the actuator is built to push or pull. Too little and it stalls under load; too much and, if anything jams, it can bend what a weaker actuator would have stalled against.</li>
+      <li><strong>Endstop</strong> &mdash; whatever tells the system the actuator has reached the end of its travel, so power stops. There are two main kinds, and telling them apart matters more than anything else on this page:
+        <ul>
+          <li>A <strong>micro-switch endstop</strong> (also called a limit switch): a small physical switch at one or both ends of travel that is tripped by the mechanism and cuts or signals the stop.</li>
+          <li>An <strong>automatic, current-sensing endstop</strong>: there is no end switch. The module watches the motor&rsquo;s electrical current; when the rod reaches the mechanical end and the motor stalls, current rises sharply, the module reads that rise as &ldquo;end reached&rdquo; and cuts power. The R-net manual calls this &ldquo;automatic endstop detection, i.e. over-current measurement,&rdquo; and its set-up test requires that the mechanical end-stops &ldquo;stall the actuator motors, thus operating the ISM&rsquo;s automatic end-stop detection.&rdquo;</li>
+        </ul>
+        Some actuators add a <strong>position sensor</strong> (a variable resistor &mdash; a potentiometer &mdash; or a Permobil-style position strip) that reports where along the stroke the rod is, so the system can enforce angle limits and memory positions. The R-net technical material gives an example: a potentiometer of maximum value 10k&Omega; fitted to a recline mechanism, wired to an ISM inhibit input so recline can be limited by measured angle.</li>
+    </ul>
+    <p><strong>The settings warning that goes with current-sensing endstops lives on <a href="/pmd-settings.html">The Settings</a>, and it is not optional reading.</strong> On a system that finds its ends by sensing current, seating actuator acceleration and deceleration must stay at 100%, or the endstop detection does not work and the actuator drives through its own mechanical limit. Read that page&rsquo;s warning &mdash; in the manufacturer&rsquo;s own words &mdash; before anyone changes a seating setting on your chair, and again in the swap section below before any actuator or module is changed. This page links to it rather than softening it, because the wording there is the manufacturer&rsquo;s.</p>
+  </section>
+
+  <section id="failures">
+    <h2>How actuators fail</h2>
+<table>
+<thead><tr><th>Failure</th><th>What happens, and what you see</th><th>Source / first check</th></tr></thead>
+<tbody>
+<tr><td><strong>Endstop failure or drift</strong></td><td>A micro-switch that no longer trips, moves on its mount, or whose wire breaks leaves the motor driving into the mechanical end until something else stops it. On a current-sensing system, anything that prevents a clean stall &mdash; including the wrong acceleration setting; see <a href="/pmd-settings.html">The Settings</a> &mdash; defeats the detection the same way.</td><td>R-net over-current diagnosis, below. Check the endstop switches, if fitted, are terminating power to the actuator motor.</td></tr>
+<tr><td><strong>Current-sense / over-current trip</strong></td><td>The module cuts the channel to protect itself. R-net names this trip <em>Over-current</em>: &ldquo;This occurs when the control system detects an excessive amount of current in an Actuator Channel. This may be due to a faulty endstop switch, actuator motor, cables or connections.&rdquo; Its checks: &ldquo;Check the movement of the actuator is not obstructed&rdquo; and &ldquo;Check the endstop switches (if fitted) are terminating the power to the actuator motor.&rdquo; If the trip remains after those checks, the manual suspects the seating module itself.</td><td><a href="/library/collected-public-docs/pmd/pg-drives_r-net_programming.pdf">R-net programming manual, diagnostics &sect;3.12</a>. Read the code first &mdash; see <a href="/pmd-fault-codes.html">Fault Codes, Translated</a>.</td></tr>
+<tr><td><strong>Overheating trip</strong></td><td>Repeated or stalled running heats the module&rsquo;s actuator circuitry until it shuts the channel down. R-net names this <em>Overtemp (acts)</em>: the control system ceases drive to the actuator motor in question; the instruction is to allow the module to cool, and if it overheats frequently, to check the condition of the actuator motors and their connections.</td><td>R-net programming manual, diagnostics &sect;3.13. A channel that works cold and dies hot fits this pattern &mdash; write down that timing before you call.</td></tr>
+<tr><td><strong>Water and moisture</strong></td><td>Water in a connector, a cracked actuator housing or a damaged cable lets current leak, corrodes pins until a channel goes intermittent, and can kill a module. Permobil&rsquo;s warning is to keep the electronics dry and replace cracked shrouds or joystick boots immediately, because exposure to moisture can cause the wheelchair to short-circuit.</td><td>Visual check first: green or white corrosion on pins, water sitting in a connector, cracked housings. Do not run a wet function &ldquo;to dry it out.&rdquo;</td></tr>
+<tr><td><strong>Worn gearing / worn screw</strong></td><td>The motor runs but the rod moves slowly, unevenly, in jerks, only in one direction under load, or not at all while the motor sound continues. Play (loose movement) at the rod end grows as the nut and gear teeth wear. This is mechanical wear inside a sealed unit: it is the failure the meter tests below <em>cannot</em> clear, because the electrics may test perfect.</td><td>Listen and watch: motor sound with no rod movement, with voltage confirmed at the connector, is a mechanical verdict, not an electrical one.</td></tr>
+<tr><td><strong>Cable and connector damage</strong></td><td>Seating cables flex every time the function moves, and they run past the moving linkage they power &mdash; the pinch point in the warnings above is also a cable trap. Chafed insulation, a pinched loom, a half-seated plug or a bent pin gives an intermittent or dead channel that comes and goes with seat position.</td><td>Run the function slowly (unoccupied, supported, hands clear) and watch where the cable bends; then do the continuity check below, flexing the cable gently while you measure.</td></tr>
+<tr><td><strong>Obstruction</strong></td><td>A trapped strap, clothing, a misplaced cushion or debris in the linkage makes a healthy actuator behave like a failed one, and trips the over-current protection doing it.</td><td>R-net&rsquo;s first over-current check, above: check the movement is not obstructed, before any part is condemned.</td></tr>
+</tbody>
+</table>
+  </section>
+
+  <section id="testing">
+    <h2>Testing one with a meter</h2>
+    <p>A <strong>multimeter</strong> (meter for short) is the handheld tool that measures voltage (electrical pressure, in volts), resistance (opposition to current, in ohms, &Omega;) and continuity (whether a path is unbroken &mdash; the meter beeps). You need nothing else for the checks on this page, and every check is done at the actuator&rsquo;s own connector: the one place where &ldquo;the module sent it&rdquo; and &ldquo;the actuator received it&rdquo; can be separated.</p>
+    <p>Safety for all four procedures: chair on level ground, nobody seated in it, seat parts supported if a linkage bolt is loosened, power OFF and battery disconnected for the resistance and continuity checks (Procedures 3), power ON only where the procedure says to command a movement. If you cannot disconnect power, inspect visually only and stop.</p>
+
+    <h3>Procedure 1 &mdash; the manufacturer&rsquo;s own actuator test (R-net, no meter)</h3>
+    <p>Do this first on an R-net chair. It is the set-up test in the <a href="/library/collected-public-docs/pmd/pg-drives_r-net_programming.pdf">R-net programming manual (&sect;4.6, Actuator Test)</a>, word for word in substance:</p>
+    <ol>
+      <li>&ldquo;Check each motor for correct direction of movement.&rdquo; Command each function both ways: tilt should tilt, up should be up. Reversed movement after any recent work means reversed wiring or a reversed channel setting &mdash; record it, do not just live with it.</li>
+      <li>&ldquo;Ensure the mechanical end-stops are secure and that they stall the actuator motors, thus operating the ISM&rsquo;s automatic end-stop detection.&rdquo; Run each function to each end: it should stop cleanly at the end, with the endstop beep if that setting is on (the manual notes the beep occurs only on mechanisms using automatic endstop detection).</li>
+      <li>A function that does not stop at its end, stops mid-travel, or trips a code at the end has failed this test. Note which function, which direction, and which end &mdash; that note is what the next procedures explain.</li>
+    </ol>
+
+    <h3>Procedure 2 &mdash; voltage at the actuator connector (basic electrical check)</h3>
+    <p><em>Plainly labelled: this is a basic electrical check, not a manufacturer-published procedure. It uses one manufacturer-published fact &mdash; the R-net ISM pin definition quoted above &mdash; and otherwise measures only presence and direction of voltage, against no invented number.</em></p>
+    <ol>
+      <li>Find the two-pin actuator connector for the dead function, at the actuator or at the module end of its cable. Unplug it. Set the meter to DC volts, on a range above the chair&rsquo;s battery voltage.</li>
+      <li>Reconnect power, switch the chair on, select that seating function, and command it one way while a helper holds the meter probes on the two pins of the <em>module-side</em> connector (the side that comes from the seating module, not the side that goes to the actuator).</li>
+      <li><strong>What to expect:</strong> no voltage with no command; voltage when you command; and the polarity (which pin reads positive, shown by a minus sign on the meter when you have the probes the &ldquo;wrong&rdquo; way round) <em>reverses</em> when you command the opposite direction. On R-net ISM specifically, the manual defines Up as pin 2 positive with respect to pin 1, and Down as pin 1 positive with respect to pin 2.</li>
+      <li><strong>What the readings mean:</strong> voltage present, reversing correctly, but the actuator (reconnected) does not move &rarr; the module and cable up to that plug are doing their job; the fault is in the actuator or the cable beyond the plug. No voltage at the module&rsquo;s own output pins &rarr; the fault is upstream: module, its settings, an active inhibit (see below), or the command switch. Voltage in one direction only &rarr; the module channel or the command path for the other direction is suspect; swap nothing yet, record it.</li>
+    </ol>
+
+    <h3>Procedure 3 &mdash; continuity and resistance, power off (basic electrical check)</h3>
+    <p><em>Plainly labelled: a basic electrical check. The manufacturers&rsquo; documents used for this page publish no universal resistance value for a seating actuator motor, so this page gives you none &mdash; anyone who passes or fails your actuator against an unsourced ohm figure is guessing. What continuity can prove is a break or a short, and comparison can prove a difference.</em></p>
+    <ol>
+      <li>Power OFF, battery disconnected, actuator unplugged. Meter on continuity (or lowest ohms range).</li>
+      <li>Probes on the two pins of the <em>actuator-side</em> connector: a motor winding should show a complete path (continuity, a low resistance reading that settles). No continuity at all &mdash; the meter shows its open-circuit display and never beeps &mdash; means the path through the motor is broken: a broken wire in the actuator lead or an open motor winding. A reading of effectively zero across a cable run that should contain a motor is a short: look for crushed, chafed cable first.</li>
+      <li>Then check each wire of the actuator cable on its own, end to end: each should show continuity, and gently flexing the cable along its length while you watch should not make the reading drop out. A reading that comes and goes as the cable moves is a break inside intact-looking insulation &mdash; a classic seating fault, because these cables flex with every movement.</li>
+      <li>If the chair has two identical actuators (left and right legrests are the usual pair), measure both and compare. The readings should be close to each other. One wildly different reading names the odd one out &mdash; comparison is a valid test precisely because it needs no published figure.</li>
+    </ol>
+
+    <h3>Procedure 4 &mdash; endstop and inhibit check, before condemning anything</h3>
+    <ol>
+      <li>Clear the mechanism&rsquo;s whole path of travel and run the function again (Procedure 1). Obstruction removed, fault gone: done, and no part was needed.</li>
+      <li>If the chair shows an over-current trip, follow the manual&rsquo;s order: movement not obstructed first, then whether the endstop switches, if fitted, are terminating power to the motor.</li>
+      <li>If the function is dead in both directions with no code, check the interlocks in the next section before the module: an active drive or actuator inhibit looks exactly like a dead actuator from the rider&rsquo;s seat.</li>
+      <li>If a channel died hot and returned after cooling, treat it as the over-temperature pattern above: check the actuator motor and its connections, per the manual, and record how long it ran before cutting out.</li>
+    </ol>
+    <p>For the fault codes these tests produce on each control system, see <a href="/pmd-fault-codes.html">Fault Codes, Translated</a> and <a href="/pmd-fault-codes-2.html">Fault Codes, Translated: The Other Systems</a>. For the general method &mdash; read the chair before you open it &mdash; see <a href="/pmd-reading.html">Reading the Chair</a> and <a href="/pmd-fixes.html">The Cheap Fixes</a>.</p>
+  </section>
+
+  <section id="interlocks">
+    <h2>Drive inhibits, tilt limits and speed limits: the safety interlocks</h2>
+    <p>An <strong>inhibit</strong> is a safety input that stops something: stops driving, stops an actuator, or limits speed to a crawl. A switch or sensor wired to an inhibit input reports a seat position &mdash; seat raised, backrest reclined past a set angle, legrest up &mdash; and the electronics enforce a rule about it. The slowed mode is usually shown by a turtle symbol on the display and, on Permobil, a yellow light on the switchbox; a full stop shows as a drive inhibit. These are features working, until the switch or its wiring fails, at which point they imitate a seating or drive fault perfectly.</p>
+    <ul>
+      <li><strong>Speed reduction when raised or tilted.</strong> Permobil: when the seat is lifted, maximum speed can be reduced automatically or driving can be restricted completely; the same applies when the seat or backrest is tilted and when the leg rest is tilted. Its troubleshooting table gives the cause in plain words &mdash; &ldquo;A seat function has triggered the automatic drive inhibit&rdquo; / &ldquo;the automatic speed restriction&rdquo; &mdash; and the remedy: make sure the backrest and leg rest are not tilted and the seat is not tilted or lifted. Invacare says the same of the TDX SP2&rsquo;s lifter: inspect the lifter module regularly, make sure there are no foreign objects or visible damage and the electric plugs are firmly inserted, and make sure the automatic speed reduction function, which reduces speed when the lifter is raised, is working properly.</li>
+      <li><strong>Speed reduction when elevated, Quantum.</strong> The Q6 Edge 2.0&rsquo;s power elevating seat is equipped with a system that reduces the speed of the power chair to one quarter when the seat is elevated, and its iLevel feature reduces speed to 25% when elevated if iLevel is not engaged, with a warning display. The manual&rsquo;s instruction is to always check this system is operating properly before using the chair &mdash; a chair stuck at quarter speed with the seat fully down has a fault in this sensing, not in its drive motors.</li>
+      <li><strong>Tilt limits.</strong> A limit can stop one function because of another&rsquo;s position: the documented example in the LiNX material is a maximum tilt limit that prevents the backrest angle from extending beyond a pre-set maximum when the lifter is raised above a certain point, at which the drive electronics stops the movement automatically and the seat tilt or backrest symbol starts flashing. On R-net, inhibit inputs on the ISM can be programmed to limit speed, inhibit drive and/or inhibit actuator channels &mdash; including endstop switches on a reclining backrest wired to ISM inhibit inputs, and angle-sensing so further recline is prevented if the seat is already tilted beyond a certain point.</li>
+      <li><strong>Standing interlocks.</strong> Standing chairs add body supports to the chain: Permobil instructs that the chest support is always used when the standing function is used, and that a knee support is always used when the standing function is used, placed below the kneecap. A standing function that will not start is checked the same way as any inhibit: supports in place, seat functions in their start positions, level ground (see the verbatim standing warning above).</li>
+      <li><strong>Testing an inhibit (manufacturer procedure).</strong> The R-net manual&rsquo;s Inhibit Input Test is short: insert an appropriate battery charger, or equivalent inhibit connection, into the charger connector on the joystick module and ensure that drive is inhibited; and if the other inhibits are used for inhibit or speed-limiting purposes, suitable tests should be devised to ensure correct operation. In owner terms: deliberately put the chair into each limited state (seat up, seat down; tilted, upright) and confirm the limit appears and, just as importantly, clears.</li>
+    </ul>
+    <p>Rule of thumb for diagnosis: an inhibit fault follows <em>position</em>, not time. If the chair will not drive until you lower the seat a fraction, or a function stops at the same angle every time, suspect the sensor and its wiring before any actuator &mdash; and see <a href="/pmd-start.html">Start Here: Your Chair Stopped</a> for the order to check a chair that will not move at all.</p>
+  </section>
+
+  <section id="swap">
+    <h2>The like-for-like swap: what has to match</h2>
+    <p><strong>Like-for-like</strong> means the replacement is the same part in every way the chair can tell: same movement, same strength, same electrical behaviour, same way of knowing when to stop. A seating actuator is not a generic pusher with two wires, however similar it looks on a bench. Before a swap, match all of these &mdash; and if any one cannot be confirmed from the part number and the manufacturer&rsquo;s document for that part, the swap is not yet like-for-like:</p>
+<table>
+<thead><tr><th>Must match</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td><strong>Part number and maker</strong>, first of all</td><td>The part number is the only shortcut that carries every property below at once. Photograph the label on the old actuator before it comes off, and keep the photograph with the chair&rsquo;s records. See <a href="/pmd-parts.html">Parts, Not Assemblies</a> and <a href="/pmd-exploded.html">Exploded Views</a> for the part in its assembly.</td></tr>
+<tr><td><strong>Stroke</strong></td><td>A longer-stroke actuator drives the linkage past the angle the frame, the endstops and the tilt limits were set for. A shorter one silently takes movement away &mdash; recline or tilt the rider needs for pressure relief simply stops being reachable.</td></tr>
+<tr><td><strong>Retracted length and mounting points</strong></td><td>The closed length and the positions and sizes of the mounting holes decide whether the seat geometry starts from the same place. A unit that bolts on at a different closed length has changed the seat&rsquo;s neutral position before it ever moves.</td></tr>
+<tr><td><strong>Force rating</strong></td><td>Under-rated: stalls, overheats and trips over-current protection under a load the original carried. Over-rated: pushes through obstructions and endstop failures that should have stalled it, into the frame and the linkage.</td></tr>
+<tr><td><strong>Connector and pin order</strong></td><td>Same plug shape is not enough: which pin is which decides direction. A reversed pair gives a function that runs backwards (Procedure 1 catches this). A plug that fits but carries extra pins is telling you the original had sensing the replacement may not &mdash; stop and identify it.</td></tr>
+<tr><td><strong>Endstop type</strong> &mdash; the one never to substitute casually</td><td>Micro-switch, current-sensing, and position-sensing actuators are <em>not interchangeable</em>, even with identical stroke, force and plug. Fit a switch-type actuator where the module expects a current-sensing stall (or the reverse) and the stop the system relies on no longer exists. Fit a plain two-wire actuator where the system used position feedback for tilt limits or memory positions and those limits are gone with it. <strong>And before any replacement actuator or seating module is put into service, re-read the warning on <a href="/pmd-settings.html">The Settings</a>: on current-sensing endstop systems, actuator acceleration and deceleration must stay at 100%, or the endstop detection will not operate.</strong> A swap is exactly when settings get reset, copied from another chair, or &ldquo;tidied up&rdquo; &mdash; it is the moment this rule is most likely to be broken.</td></tr>
+<tr><td><strong>Electrical load the channel can supply</strong></td><td>The replacement must draw no more than the channel is built for. Curtiss-Wright gives the ISM&rsquo;s maximum actuator current as 12A, increased to 15A at slower speeds; an actuator that wants more will live on the over-current trip in the failures table.</td></tr>
+<tr><td><strong>Speed</strong></td><td>Actuator speeds are set per channel in the module (R-net ISM up and down speeds are programmable from 25% to 100%), but the actuator&rsquo;s own geared speed is built in. A much faster or slower unit changes how the function feels and how a multi-actuator motion &mdash; standing above all &mdash; stays in step with its partners.</td></tr>
+<tr><td><strong>Channel / axis assignment</strong></td><td>The replacement goes back on the <em>same</em> channel it came off, and any multi-actuator axis it belongs to is confirmed afterwards: on LiNX the factory set-up assigns channels to tilt, recline, legs and lifter in a fixed order, and a motion can drive several actuators at once, so two plugs swapped between channels cross two functions.</td></tr>
+</tbody>
+</table>
+
+    <h3>A swap, in order</h3>
+    <ol>
+      <li>Run Procedure 1 and Procedures 2&ndash;3 first. A swap is the answer only when voltage arrives correctly at the connector and the actuator itself has failed electrically or mechanically. Most &ldquo;dead actuators&rdquo; are cables, plugs, obstructions and inhibits.</li>
+      <li>Photograph everything before it moves: actuator label, plug and pin order, cable routing (including every cable tie position and every place the cable passes the linkage), mounting bolts and the holes they used.</li>
+      <li>Power OFF, battery disconnected. Move the function, if it still moves, to the position that unloads the actuator; then support the seat part with a person or a prop so it cannot fall or pinch when the actuator lets go. Permobil&rsquo;s service manual for the C300 &mdash; the <a href="/library/collected-public-docs/pmd/permobil_c300_service.pdf">Permobil C300 service manual</a> in the library &mdash; repeats the underlying facts throughout: the seat is heavy, it should be lifted by two people, and you must be careful with the cabling. The same manual gives the escape route when a lift actuator has failed outright on that chair: the seat lift can be raised and lowered manually with the seat lift crank supplied, with the warning, word for word, &ldquo;Drills must not be used in connection with manual operation of the seat lift. There is a risk of damage to materials.&rdquo; Check your own chair&rsquo;s manual for its manual-release method before you need it.</li>
+      <li>Unplug the actuator, unbolt the rod end first, then the body end, keeping the support in place. Compare old and replacement side by side on the bench against the table above &mdash; stroke (extend both fully by measurement, not by eye), closed length, mounts, plug, label.</li>
+      <li>Fit the replacement on the same mounts, route its cable exactly as photographed &mdash; clear of the pinch points and the linkage&rsquo;s travel &mdash; and plug it into the same channel.</li>
+      <li>Reconnect power and run Procedure 1 again, unoccupied, through the full travel in both directions: correct direction, clean stops at both ends, no trip codes, and the interlocks of the previous section appearing and clearing as they should (drive the chair with the seat down and upright; confirm speed reduction arrives when raised and leaves when lowered).</li>
+      <li>Only then sit in it. Test each function under load, and confirm the movement the rider depends on &mdash; full tilt, full recline, full elevate &mdash; is all still there. Record the new part number and the date with the chair&rsquo;s records; see <a href="/pmd-repairs.html">Repairs</a> for keeping that history.</li>
+    </ol>
+    <p>What must never be substituted casually, in one list: an actuator of a different endstop type; an actuator of a different stroke on a standing or tilt mechanism; a feedback (position-sensing) actuator with a plain one, or the reverse; a higher-force actuator to &ldquo;fix&rdquo; a function that is actually obstructed or inhibited; and any actuator whose current draw exceeds the channel rating above. Each of those changes a safety behaviour of the chair, not just a part. Owner control of the whole system, including who may make changes like these, is the subject of <a href="/pmd-control.html">Owner Control</a> and <a href="/pmd-programmers.html">The Keys</a>.</p>
+  </section>
+
+  <section id="sources">
+    <h2>Sources</h2>
+    <p>Primary sources, in the site&rsquo;s library where a copy is held (library first, per the site&rsquo;s archive rule), then the publisher&rsquo;s own page:</p>
+    <ul>
+      <li>Curtiss-Wright / PG Drives Technology, <em>R-net On-Board Programming manual SK78571</em> &mdash; ISM actuator parameters, pin definitions, endstop beep and automatic endstop detection, over-current and over-temperature diagnostics, Actuator Test and Inhibit Input Test: <a href="/library/collected-public-docs/pmd/pg-drives_r-net_programming.pdf">/library/collected-public-docs/pmd/pg-drives_r-net_programming.pdf</a></li>
+      <li>Curtiss-Wright, <em>Intelligent Seating/Lighting Module</em> (publisher&rsquo;s product page &mdash; channel and axis counts, 12A / 15A actuator current, interlocking signals): <a href="https://industrial.curtisswright.com/en-gb/medical-mobility/rnet/intelligent-seating-lighting-module">industrial.curtisswright.com/en-gb/medical-mobility/rnet/intelligent-seating-lighting-module</a></li>
+      <li>Dynamic Controls / Invacare, <em>LiNX Control System service manual 1605129-C</em> &mdash; AL power modules, DLX-ACT200 / DLX-ACT400, seating motion and seating function definitions, factory actuator port set-up: <a href="/library/collected-public-docs/pmd/invacare_linx_service.pdf">/library/collected-public-docs/pmd/invacare_linx_service.pdf</a></li>
+      <li>Permobil, <em>M3 Corpus owner&rsquo;s manual</em> &mdash; seating functions, pinch / lifted-or-tilted / legrest warnings, anterior tilt positions, drive inhibit and speed restriction troubleshooting: <a href="/library/collected-public-docs/pmd/permobil_m3-corpus_owner.pdf">/library/collected-public-docs/pmd/permobil_m3-corpus_owner.pdf</a></li>
+      <li>Permobil, <em>F5 Corpus VS owner&rsquo;s manual</em> &mdash; standing function, standing warning, chest and knee support instructions, pinch warning: <a href="/library/collected-public-docs/pmd/permobil_f5-corpus-vs_owner.pdf">/library/collected-public-docs/pmd/permobil_f5-corpus-vs_owner.pdf</a></li>
+      <li>Permobil, <em>C300 service manual</em> &mdash; manual raising/lowering of the seat elevator, seat weight and two-person handling, seat tilt removal: <a href="/library/collected-public-docs/pmd/permobil_c300_service.pdf">/library/collected-public-docs/pmd/permobil_c300_service.pdf</a></li>
+      <li>Invacare, <em>TDX SP2 owner&rsquo;s manual</em> &mdash; elevating legrest warning, lifter inspection and automatic speed reduction: <a href="/library/collected-public-docs/pmd/invacare_tdx-sp2_owner.pdf">/library/collected-public-docs/pmd/invacare_tdx-sp2_owner.pdf</a></li>
+      <li>Quantum Rehab / Pride Mobility, <em>Q6 Edge 2.0 owner&rsquo;s manual</em> &mdash; power elevating seat operation, its warnings verbatim above, speed reduction to one quarter when elevated, iLevel: <a href="/library/collected-public-docs/pmd/quantum_q6-edge-2_owner.pdf">/library/collected-public-docs/pmd/quantum_q6-edge-2_owner.pdf</a></li>
+      <li>Invacare, <em>ACS 2</em> sales document (publisher&rsquo;s site) &mdash; ACT2 / ACT4 actuator modules: <a href="https://www.invacare.ie/sites/ie/files/csv_migration/product_docs/sales_docs/DSAL002740_acs2epuk.pdf">invacare.ie &mdash; DSAL002740_acs2epuk.pdf</a></li>
+      <li>BareBoard, <a href="/pmd-settings.html">The Settings, in Plain Language</a> &mdash; the seating actuator acceleration/deceleration 100% rule for current-sensing endstops, with the manufacturer&rsquo;s warning: read it alongside this page, not instead of it.</li>
+    </ul>
+    <p>More of the library is at <a href="/library-hub.html">the Library Hub</a>. Documents named on this page for which no library, archive or publisher copy could be verified &mdash; Permobil&rsquo;s ICS technical manual and Quantum&rsquo;s separate TRU-Balance 3 manual among them &mdash; were deliberately left unlinked rather than linked to an unverified copy, and have been reported as collection targets.</p>
+    <p><a href="/pmd.html">&larr; Back to PMD</a> &middot; <a href="/pmd-settings.html">The Settings &rarr;</a> &middot; <a href="/pmd-parts.html">Parts, Not Assemblies</a> &middot; <a href="/pmd-exploded.html">Exploded Views</a> &middot; <a href="/repair-rights.html">Repair Rights</a></p>
+  </section>
+
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

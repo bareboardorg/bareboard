@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Driving Without a Standard Joystick &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="Alternative drive controls for power wheelchairs in plain language: sip-and-puff, head arrays, chin controls, switches and scanning, the input modules that connect them, what fails, and what an owner can check.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Driving Without a Standard Joystick">
+<meta property="og:description" content="Sip-and-puff, head arrays, chin controls, switches and scanning &mdash; how they work, what they plug into, how they fail, and what an owner can check without a programmer.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-alt-controls.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Driving Without a Standard Joystick</h1>
+    <p class="lede">A standard joystick needs a hand that can push it in every direction and hold it there. Plenty of riders do not have that hand &mdash; and they drive anyway. They breathe through a tube, press pads with their head, nudge a tiny stick with their chin, or tap one switch and let the chair offer the choices. This page explains each of those controls in plain language: how it works, what it plugs into, how it fails, and what you can check yourself before anyone quotes you a replacement.</p>
+    <p><em>Provenance: this page is compiled from the manufacturers&rsquo; own published documents &mdash; Curtiss-Wright / PG Drives Technology&rsquo;s <a href="/library/collected-public-docs/pmd/pg-drives_r-net_programming.pdf">R-net programming manual</a> and <a href="/library/collected-public-docs/pmd/pg-drives_r-net-pc-programmer_programming.pdf">R-net PC Programmer manual</a>, Invacare&rsquo;s <a href="/library/collected-public-docs/pmd/invacare_linx_service.pdf">LiNX service manual</a>, Permobil&rsquo;s <a href="/library/collected-public-docs/pmd/permobil_m3-corpus_owner.pdf">M3 Corpus</a> and <a href="/library/collected-public-docs/pmd/permobil_f5-corpus-vs_owner.pdf">F5 Corpus VS owner manuals</a>, and Quantum Rehab&rsquo;s <a href="/library/collected-public-docs/pmd/quantum_q6-edge-2_owner.pdf">Q6 Edge 2.0 owner manual</a> and public order-form documents &mdash; and checked against them. Where a manual could not confirm a claim, the claim is not on this page. Documentation, not bench measurement: if your chair disagrees with this page, the chair wins.</em></p>
+  </section>
+
+  <section id="safety">
+    <p><strong>Before any check on this page that touches a plug, cable, tube, switch, or battery terminal:</strong> put the chair on level ground, switch it OFF, and disconnect the main battery harness or trip the main circuit breaker. Do not do the check while seated in the chair. The Invacare <a href="/library/collected-public-docs/pmd/invacare_linx_service.pdf">LiNX service manual</a> warns, word for word: <em>&ldquo;Connector pins on cables connected to the power module can still be live even when the system is off.&rdquo;</em> Keep a disconnected cable from touching skin, jewelry, tools, or metal, and cover or restrain it so the pins cannot short. If you cannot disconnect power, inspect visually only and stop.</p>
+    <p>The same manual limits who does the deeper work, word for word: <em>&ldquo;The procedures in this service manual, must be performed by a specialized dealer or qualified service technician.&rdquo;</em> And: <em>&ldquo;Do not handle this product or any available optional equipment without first completely reading and understanding these instructions and any additional instructional material such as user manuals, installation manuals or instruction sheets supplied with this product or optional equipment.&rdquo;</em> True &mdash; for work inside the modules and for programming. Looking at a tube, a plug, or a switch pad, reading what the screen says, and reporting it exactly needs no one&rsquo;s permission. That is the part this page teaches.</p>
+  </section>
+
+  <section id="chain">
+    <h2>The chain, once, plainly</h2>
+    <p>Every alternative control on every system is the same five links in a row. Learn the chain once and you can locate any failure on any chair:</p>
+    <ol>
+      <li><strong>You.</strong> A movement you can make reliably &mdash; a breath, a head turn, a chin nudge, one finger tap, a tongue or foot press. The whole system is fitted to that one movement.</li>
+      <li><strong>The sensor or switch.</strong> The part that feels the movement: a pressure sensor in a breath tube, a pad in a headrest, a tiny joystick, a button. The manuals call the whole device at this link a <strong>Specialty Input Device</strong>, or <strong>SID</strong> &mdash; any control that is not the standard joystick.</li>
+      <li><strong>The input module.</strong> A small electronic box that translates the SID&rsquo;s signals into the language the rest of the chair speaks. This is the link that makes alternative controls possible at all: the chair&rsquo;s other parts never see breath or head movement, only ordinary drive commands that happen to have come from breath or head movement. Each system has its own input module &mdash; they are named in the next section.</li>
+      <li><strong>The bus.</strong> The cable network the chair&rsquo;s parts talk on. The input module puts the translated commands on the bus, the same way a standard joystick does.</li>
+      <li><strong>The power module.</strong> The heavy box in the base that takes commands off the bus and sends battery power to the motors, brakes, and seat actuators (the motors that move the seat). It does not know or care whether a command came from a hand, a chin, or a breath.</li>
+    </ol>
+    <p>Two kinds of signal travel that chain, and the difference matters everywhere below:</p>
+    <ul>
+      <li><strong>Proportional input</strong> &mdash; <em>how far is how fast.</em> Push a little, go slowly; push further, go faster, in any direction, like a standard joystick. Chin joysticks and some head controls are proportional.</li>
+      <li><strong>Switched input</strong> &mdash; <em>on or off, nothing between.</em> A switch is either pressed or not, so speed is not in the signal at all; the chair applies the programmed speed when it sees the press. Breath commands, head-array pads, and buttons are switched inputs. A switched chair is not broken when it feels step-like &mdash; that is what switched means.</li>
+    </ul>
+    <p>One more word used everywhere below: a <strong>quadrant</strong> is one drive direction treated as a slot &mdash; forward, reverse, left, right. A control that can offer all four at once runs in <strong>4-quadrant (4Q)</strong> mode. A control that can only offer three &mdash; a head array is the classic case, explained below &mdash; runs in a <strong>3-quadrant (3Q)</strong> mode, and the missing direction is reached by a toggle (a flip between two states, here forward and reverse) instead.</p>
+  </section>
+
+  <section id="modules">
+    <h2>The input modules &mdash; the boxes that translate</h2>
+    <p>These are the named boxes at link three of the chain. If your chair has an alternative control, one of these is fitted, and knowing which one is the first thing to write down.</p>
+<table>
+<thead><tr><th>System</th><th>Input module</th><th>What plugs into it</th><th>What the maker&rsquo;s documents say</th></tr></thead>
+<tbody>
+<tr><td>R-net (Curtiss-Wright / PG Drives Technology)</td><td><strong>Omni</strong> and <strong>Omni2</strong></td><td>SIDs plug into 9-way D-type connectors (a 9-pin plug, <strong>Port 1</strong> and <strong>Port 2</strong>); a separate <strong>user switch</strong> (your personal switch for menus and, on switched systems, stopping &mdash; see <a href="#stop">The stop switch</a>) plugs into a 3.5&nbsp;mm jack socket; a sip-and-puff tube plugs into a dedicated air (pneumatic) input</td><td>Permobil&rsquo;s <a href="/library/collected-public-docs/pmd/permobil_m3-corpus_owner.pdf">M3 Corpus owner manual</a> describes a fitted Omni2 in one sentence: <em>&ldquo;An Omni2 is a device that makes it possible to operate the wheelchair with something other than a standard joystick.&rdquo;</em> The Omni2 user manual (SK82613-01) describes the same ports and the SID types each port accepts. The <a href="/library/collected-public-docs/pmd/pg-drives_r-net_programming.pdf">R-net programming manual</a> lists the input-device types a profile can be set to, including Omni, and a separate Input/Output Module (IOM).</td></tr>
+<tr><td>LiNX (Dynamic Controls, fitted by Invacare)</td><td><strong>DLX-IN500</strong> &mdash; the manual shortens it to <strong>IN5xx</strong> &mdash; and the <strong>TPI</strong> route named in the service manual&rsquo;s connection table</td><td>IN500: a DB9 connector (the same 9-pin family as R-net&rsquo;s D-type) for proportional and switched inputs, a stereo jack input, and a built-in sip-and-puff nozzle &mdash; the breath sensor itself is inside this module. TPI: the route the manual&rsquo;s table assigns to head arrays, chin controls, and switch arrays</td><td>The <a href="/library/collected-public-docs/pmd/invacare_linx_service.pdf">LiNX service manual</a> lists the IN500&rsquo;s parts directly: DB9 connector for proportional and switched inputs, 12&nbsp;V (200&nbsp;mA) power supply for sensors, sip-and-puff nozzle, jack input, two LiNX bus connectors. Dynamic Controls&rsquo; public <a href="https://www.dynamiccontrols.com/our-products/linx/linx-500-series">LiNX 500 Series page</a> confirms the same module supports proportional and switch inputs, including sip-and-puff, through the DLX-IN500-A.</td></tr>
+<tr><td>Q-Logic 3 (Quantum Rehab / Pride Mobility)</td><td><strong>SCIM module</strong>, a dedicated <strong>Sip and Puff Module</strong>, and the Q-Logic 3 controller module with expandable harness</td><td>Specialty devices connect through the SCIM or the dedicated module; a standard Q-Logic joystick or an enhanced display provides the screen</td><td>Quantum&rsquo;s public <a href="https://www.quantumrehab.com/pdf/order-forms/electronics/us_alternative_controls_order_form.pdf">Alternative Controls and Electronics Order Form</a> states the SCIM <em>&ldquo;allows use of joystick display for specialty devices&rdquo;</em> with up to 5 profiles for drive, seat, and auxiliary functions, <em>excluding sip-and-puff and single switch functions</em> &mdash; those need their own path: the order form lists a separate Sip and Puff Module for Q-Logic 3, and Quantum&rsquo;s Q-Logic 2 electronics brochure states an enhanced display is still required for sip-and-puff and single-switch driving on that generation. Do not assume a SCIM alone covers breath or one-switch driving; on paper, it does not.</td></tr>
+</tbody>
+</table>
+    <p>Third-party SIDs &mdash; head arrays, chin sticks, and switch sets made by companies such as Stealth Products, Switch-It, and ASL (Adaptive Switch Laboratories), all named as SID makers in the Omni2 user manual &mdash; are built to plug into these modules. That is the design: the module is the standard socket, and the SID makers build to the socket. It is also why a fault can live in three different companies&rsquo; parts on one chair, and why naming the exact module and the exact SID when you call is not pedantry &mdash; it is the diagnosis.</p>
+  </section>
+
+  <section id="sip-puff">
+    <h2>Sip-and-puff &mdash; driving on breath</h2>
+    <p><strong>Sip-and-puff</strong> means exactly what it sounds like: you sip (draw air in) or puff (blow air out) through a tube held at your mouth, the way you would through a straw. A pressure sensor turns each breath into a command. It is a switched input: the chair reads <em>which</em> breath, not a continuous push.</p>
+    <p>The sensor sorts every breath two ways at once &mdash; direction (sip or puff) and strength (soft or hard). That gives four commands, and four commands are exactly the four quadrants. On an R-net Omni2, the user manual&rsquo;s own table maps them like this:</p>
+<table>
+<thead><tr><th>Breath command</th><th>Drive direction (Omni2 default mapping)</th></tr></thead>
+<tbody>
+<tr><td>Hard puff</td><td>Forward</td></tr>
+<tr><td>Hard sip</td><td>Reverse</td></tr>
+<tr><td>Soft sip</td><td>Left</td></tr>
+<tr><td>Soft puff</td><td>Right</td></tr>
+</tbody>
+</table>
+    <p>LiNX describes the same sorting as three pressure <strong>zones</strong> for each direction, in its <a href="/library/collected-public-docs/pmd/invacare_linx_service.pdf">service manual</a>: a <strong>neutral zone</strong> (too weak to count &mdash; ignored, so ordinary breathing does not drive the chair), a <strong>soft zone</strong>, and a <strong>hard zone</strong>. The manual&rsquo;s sentence, word for word: <em>&ldquo;A Sip and Puff module provides the user with the ability to activate four digital inputs with their breath via a tube depending on pressure level, hard or soft, and direction, sip or puff. These inputs can be used to control driving or seating actions.&rdquo;</em> On LiNX the module is inside the IN500 input module, and the tube connects to its nozzle. On R-net the tube connects to the Omni&rsquo;s or Omni2&rsquo;s dedicated pneumatic input. A combined <strong>sip-and-puff head array</strong> also exists on LiNX &mdash; breath for forward and reverse, head pads for turning &mdash; and it also routes through the IN500, per the same service manual&rsquo;s connection table.</p>
+    <h3>How it fails</h3>
+    <ul>
+      <li><strong>Tube off, kinked, or pinched</strong> &mdash; commands go weak or vanish. A tube trapped under a mount or a cushion is the breath version of a loose plug.</li>
+      <li><strong>Moisture in the tube</strong> &mdash; breath is wet. Condensation collects in a low-hanging loop of tube, and water in the line dulls or blocks the pressure signal: soft commands read as neutral, hard commands read as soft, or nothing reads at all.</li>
+      <li><strong>Mouthpiece moved</strong> &mdash; if the straw or mouthpiece has shifted, you are blowing past it, not through it. The sensor is fine; the delivery is not.</li>
+      <li><strong>Calibration drift</strong> &mdash; the line between soft and hard no longer matches your breath. The chair starts turning when you meant to go forward. That is a thresholds problem, and thresholds are gated &mdash; see <a href="#gated">What is gated</a>.</li>
+    </ul>
+    <h3>What you can check, no programmer needed</h3>
+    <ul>
+      <li>Follow the tube with your eyes and fingers from mouthpiece to module: seated fully on the nozzle at the module end, no kinks, no pinch points, no low loop holding visible moisture.</li>
+      <li>If you see moisture in the tube, note where it sits and how much. Clearing or replacing a breath tube and its mouthpiece is routine hygiene on these systems &mdash; follow the cleaning instructions in your own chair&rsquo;s user manual for your exact tube set, and do not put anything back wet.</li>
+      <li>Check the mouthpiece position against a photo or a mark from when it worked. A bent mount is an owner-visible fault.</li>
+      <li>Test in a safe, open space at the lowest speed setting your profile offers, and write down <em>which</em> of the four commands is wrong. &ldquo;Soft puff does nothing, the other three work&rdquo; is a diagnosis. &ldquo;Sip-and-puff is broken&rdquo; is a quote for a whole module.</li>
+    </ul>
+  </section>
+
+  <section id="head-arrays">
+    <h2>Head arrays &mdash; driving with head movement</h2>
+    <p>A <strong>head array</strong> is a set of pads built into or mounted on the headrest. You press a pad by moving your head into it &mdash; centre pad, left pad, right pad &mdash; and each pad is one command. When this page says pad, it means the sensing surface itself: some pads are mechanical switches you physically push; others are <strong>proximity sensors</strong> (sensors that trigger when your head comes close, with nothing to click and nothing moving to wear).</p>
+    <p>Three pads give three quadrants &mdash; left, right, and one shared forward/reverse pad &mdash; so a head array normally runs 3-quadrant: the shared pad drives in whichever direction is currently selected, and a press of the <strong>user switch</strong> (or a programmed double-press or auto-toggle pattern) flips forward to reverse and back. The <a href="/library/collected-public-docs/pmd/invacare_linx_service.pdf">LiNX service manual</a> says the same thing in its own terms: 4Q mode is chosen for inputs that provide 4 quadrants, and 3Q mode for inputs that provide 3 quadrants, <em>&ldquo;for example, a head array.&rdquo;</em> Head arrays come in both signal types: a <strong>switched head array</strong> treats each pad as on/off; a <strong>proportional head array</strong> reads how far or how hard you press and varies speed with it. Which one you have decides how the chair should feel &mdash; a switched array is not malfunctioning when it does not feather the speed.</p>
+    <p><strong>What it plugs into:</strong> on R-net, the array&rsquo;s cable lands on the Omni&rsquo;s or Omni2&rsquo;s 9-way Port 1 or Port 2, with the user switch on its jack. On LiNX, the service manual&rsquo;s table routes a head array through the TPI input, and a sip-and-puff head array through the IN500. On Q-Logic chairs, Quantum&rsquo;s <a href="https://www.quantumrehab.com/pdf/order-forms/electronics/us_alternative_controls_order_form.pdf">alternative controls order form</a> lists third-party tri-array head systems as the fitted option, connecting through the Q-Logic specialty path.</p>
+    <h3>How it fails</h3>
+    <ul>
+      <li><strong>Headrest or pad moved</strong> &mdash; the array only works in the geometry it was fitted in. A headrest adjusted for comfort, knocked in a transfer, or swapped in a seating change moves every pad away from your head&rsquo;s travel. The electronics are innocent; the aim is gone.</li>
+      <li><strong>One pad dead</strong> &mdash; one direction gone, the rest normal. That pattern points at that pad&rsquo;s sensor or its wire, not the module.</li>
+      <li><strong>Wrong-way toggle confusion</strong> &mdash; on a 3Q system, driving reverse when you expected forward usually means the direction toggle was flipped by an extra user-switch press. A mode state, not a fault.</li>
+    </ul>
+    <h3>What you can check</h3>
+    <ul>
+      <li>Pad seating: every pad firmly mounted, facing your head&rsquo;s resting travel, nothing &mdash; a hat, a cushion, a strap &mdash; sitting between your head and a proximity pad.</li>
+      <li>The cable from the array to the module: plugged in fully, locking screws on the 9-way connector done up (the Omni2 manual specifies gold contacts and a backshell with locking screws on that connector, and says the screws should be used to hold it in place), no cuts where the cable passes the headrest mount.</li>
+      <li>Whether the headrest position today matches the position when the chair drove correctly &mdash; ask anyone who adjusted seating.</li>
+      <li>Which pad, if any, fails &mdash; tested one at a time, in an open space, at low speed. Name the pad when you call.</li>
+    </ul>
+  </section>
+
+  <section id="chin">
+    <h2>Chin controls and small joysticks &mdash; proportional, just not by hand</h2>
+    <p>A <strong>chin control</strong> is a small proportional joystick mounted at chin height, moved by the chin or jaw. The idea generalises: the <a href="/library/collected-public-docs/pmd/invacare_linx_service.pdf">LiNX service manual</a>&rsquo;s connection table lists Pediatric Compact Joysticks through the IN500 and chin controls through TPI, all under its &ldquo;Proportional Joystick&rdquo; configuration, and the Omni2 user manual gives the same class in its own words: a joystick SID <em>&ldquo;offers a proportional input control,&rdquo;</em> with examples including chin control and foot control. Quantum&rsquo;s public material makes the same point from the rider&rsquo;s side: its <a href="https://www.quantumrehab.com/meeting-your-needs/living-with-spinal-cord-injury.asp">spinal cord injury page</a> lists <em>&ldquo;sip-and-puff controls, head arrays, switches, chin controls, minimal-force joysticks&rdquo;</em> among its Q-Logic 3 specialty access options.</p>
+    <p>Because these are proportional, they keep the one thing switched systems give up: speed in the signal. A small nudge is a slow move. That is also their failure style &mdash; they fail like joysticks, because they are joysticks:</p>
+    <ul>
+      <li><strong>Mount swung or slipped</strong> &mdash; many chin controls sit on a swing-away arm so you can eat and talk. An arm not swung fully back to its driving position, or a clamp that has crept, puts the stick where your chin is not.</li>
+      <li><strong>Off-centre at switch-on</strong> &mdash; if the stick is held off its centre when the chair powers up &mdash; by the mount, by positioning, by pressure from clothing or a tray &mdash; chairs treat that as an out-of-neutral fault and refuse to drive until it clears. Every system on this site does a version of this; see <a href="/pmd-fault-codes.html">Fault Codes, Translated</a>.</li>
+      <li><strong>Boot and cable</strong> &mdash; the small rubber boot around the stick tears, the thin cable at the mount flexes thousands of times and breaks inside its insulation. Both are visible or findable by gentle inspection with power off.</li>
+    </ul>
+    <p><strong>Owner checks:</strong> swing the mount to its driving stop and confirm it locks there; confirm the stick stands centred and springs back from every direction; inspect boot and cable; power-cycle with nothing touching the stick. Stick calibration &mdash; re-teaching the chair where centre is &mdash; is a programmer task, and it is named as such in <a href="#gated">What is gated</a>.</p>
+  </section>
+
+  <section id="switches">
+    <h2>Switches &mdash; one button, several buttons, no buttons to push</h2>
+    <p>A <strong>switch</strong> in this world is any single on/off control you operate with whatever movement you have: a large soft button you press with a fist, knee, or head turn (the egg switch and buddy-style buttons in the makers&rsquo; catalogues are this shape), a small switch worked by a finger or a twitch, or a proximity sensor you approach without touching. Switches are the atoms of switched driving: a head array is switches in a headrest; a four- or five-switch set gives each direction its own switch, worked by fingers, feet, or head turns depending on the fitting.</p>
+    <p>The <a href="/library/collected-public-docs/pmd/invacare_linx_service.pdf">LiNX service manual</a> lists the switch hardware its input modules accept: a momentary egg switch on a mono jack, stereo button and toggle switches carrying two switches on one plug, 4-way button and toggle switches on the DB9 connector, a Four Switch Proximity Array routed through TPI, and a 10-way switch box that gives direct access to powered seating functions. R-net&rsquo;s Omni2 manual describes the same shapes from its side: four-direction and three-direction switch SIDs on the 9-way port, each <em>plus</em> a user switch on the jack &mdash; the plus matters, and <a href="#stop">The stop switch</a> explains why.</p>
+    <h3>How switches fail</h3>
+    <ul>
+      <li><strong>Jack half-out</strong> &mdash; the 3.5&nbsp;mm jack plugs these switches use can sit one click short of home and still look plugged in. The switch then works intermittently or not at all.</li>
+      <li><strong>Switch seating</strong> &mdash; a switch that has rotated in its mount, sunk into foam, or had its bracket bent in a transfer now needs more travel than you have. It tests fine on a bench and fails under your head.</li>
+      <li><strong>Worn or sticking contact</strong> &mdash; a switch that stays electrically pressed after you release it. On a drive switch that means the chair keeps a command it should have dropped. Treat a sticking drive switch as a stop-and-call fault, not a quirk.</li>
+    </ul>
+    <p><strong>Owner checks:</strong> every jack pushed fully home (unplug, look at the pins, re-seat firmly, power off first); every switch solid in its mount and reachable through your full movement; every switch releasing cleanly &mdash; press, release, listen and feel for the return. A spare known-good switch, swapped in with power off, separates &ldquo;the switch died&rdquo; from &ldquo;the module died&rdquo; in one step, and that sentence is worth money on a service call.</p>
+  </section>
+
+  <section id="scanning">
+    <h2>Scanning &mdash; driving with a single switch</h2>
+    <p><strong>Scanning</strong> is how a rider with exactly one reliable switch drives a whole chair. The chair does the pointing; you do the choosing. Instead of you moving to each direction, the chair shows you the directions one after another, in a loop, and you press your one switch when the one you want is showing. The Omni2 user manual&rsquo;s name for the setup is the <strong>Single Switch Scanner</strong>, and its operation, step by step, is this:</p>
+    <ol>
+      <li>Switch the chair on. The drive screen appears.</li>
+      <li>The chair begins stepping through its scanner symbols on its own &mdash; the drive arrows, one at a time, in a repeating sequence, plus a menu symbol (shown as <strong>M</strong>).</li>
+      <li>Wait for the direction you want to be the one showing.</li>
+      <li>Press your switch while that arrow is showing. In <strong>momentary</strong> operation (the chair moves only while you command it), you keep the switch pressed and the chair drives that way until you release it. In <strong>latched</strong> operation (one command keeps the chair moving on its own until the next command or a timeout &mdash; see <a href="#stop">The stop switch</a>), one press starts the drive and the chair keeps going for the period set by the Latched Timeout setting.</li>
+      <li>To change direction, wait for the scan to come around to the new arrow and press again. While driving forward in latched mode, the Omni2 changes the scan order to put the choices you are most likely to want next &mdash; right, reverse, left &mdash; coming around more often.</li>
+      <li>Pressing the switch while the <strong>M</strong> symbol shows opens the user menu instead of driving. Seating works the same way, one level down: the scan steps through each seat movement (axis), you press to choose it, then a second scan offers up, down, and exit, and you press to choose again.</li>
+    </ol>
+    <p>LiNX reaches the same place from its menu side: its service manual&rsquo;s indirect-navigation settings include <strong>Menu Scan</strong> modes, a <strong>Menu Scan Rate</strong> (how fast the scan steps), a count of scan cycles before the system goes idle, and a setting for which quadrants of the primary input can make a selection. Dynamic Controls&rsquo; public <a href="https://www.dynamiccontrols.com/our-products/linx/linx-500-series">LiNX 500 Series page</a> names <em>&ldquo;switch scanning&rdquo;</em> outright among the inputs that system is built for.</p>
+    <p>Two honest consequences of scanning. First, it is slow by design &mdash; your speed is the scan&rsquo;s speed, and the scan rate is a programmed setting fitted to your reaction time, not a fault when it feels patient. Second, every press is a decision made inside a time window, so a switch that is badly seated, a jack half-out, or a scan rate set faster than you can use will strand you completely while the chair itself is perfectly healthy. Check the switch and its seating first; the scan rate itself is gated, below.</p>
+  </section>
+
+  <section id="stop">
+    <h2>The stop switch &mdash; the most important switch on the chair</h2>
+    <p><strong>Latched driving</strong> means the chair keeps driving after a single command, without you holding anything down. Sip-and-puff riders and scanning riders use it because holding a command continuously is exactly what they cannot do. It has an obvious price: something else has to be able to stop the chair. That something is a dedicated stop switch, and every maker&rsquo;s documents treat it as mandatory equipment, not an accessory.</p>
+    <ul>
+      <li><strong>R-net:</strong> the programming manual states that if either latched drive or latched actuator operation is selected, an Emergency Stop switch must be connected, through the External Profile Switch jack on the joystick module, and that <em>&ldquo;to ensure a fail-safe system at all times, a normally-closed switch must be used&rdquo;</em> &mdash; normally-closed meaning the circuit is complete while untouched, so a cut wire or a fallen-out plug reads as a stop, not as silence. On an Omni system the same role is played by the <strong>user switch</strong>: its diagnostics include a named <strong>Switch Detached</strong> trip, and the manual&rsquo;s warning is carried here word for word: <em>&ldquo;Because a disconnected User Switch means there is no emergency stop function, PG Drives Technology recommend that Switch Detect for this option is always set to On. PG Drives Technology will accept no liability for any losses resulting from any other setting of this parameter.&rdquo;</em></li>
+      <li><strong>LiNX:</strong> the service manual&rsquo;s latched-driving setup says an external stop switch must be fitted, that <em>&ldquo;ideally, the external stop switch should be highly visible and easily accessible,&rdquo;</em> that it connects to a control input &mdash; Invacare recommends the input module &mdash; and that in the common sip-and-puff fitting, the lip switch serves as the external stop switch. A separate <strong>Remote Stop Switch</strong> connects directly to the power module, and the manual notes programming is not necessary for that one: plug it in and it stops the chair.</li>
+      <li><strong>Omni2 user manual</strong>, on switch SIDs generally: the user switch on the jack is <em>required</em> &mdash; its word &mdash; to provide the fail-safe emergency-stop system, separate from any fifth switch built into the SID itself.</li>
+    </ul>
+    <p><strong>Owner checks:</strong> know where your stop switch is, today, without looking it up. Confirm it is plugged in (jack fully home, or its cable intact to the module), mounted where you can always reach it, and &mdash; in a safe open space, at the lowest speed &mdash; confirm it actually stops a latched drive. If your chair drives latched and you cannot find a stop switch, or the stop switch does not stop it, that is not a setting to live with: stop using latched driving and name exactly that when you call. The related screen messages are your evidence: R-net names them <strong>SID Disconnected</strong> (the input device&rsquo;s cable path) and <strong>Switch Detached</strong> (the user switch&rsquo;s) in its diagnostics, and both start with the same instruction &mdash; check all cables and connectors between the Omni and the device. The full code tables are on <a href="/pmd-fault-codes.html">Fault Codes, Translated</a> and <a href="/pmd-fault-codes-2.html">part two</a>.</p>
+  </section>
+
+  <section id="gated">
+    <h2>What is gated &mdash; said plainly</h2>
+    <p>Fitting an alternative control is clinical work: the control is matched to a body, and its settings decide how a machine that carries a person behaves. The manufacturers gate the setup behind their programmers and clinician tools, and on this one point the gate and the safety case point the same way. PG Drives Technology&rsquo;s warning, from the <a href="/library/collected-public-docs/pmd/pg-drives_r-net_programming.pdf">R-net programming manual</a>, word for word: <em>&ldquo;Programming should only be conducted by healthcare professionals with in-depth knowledge of PGDT control systems. Incorrect programming could result in an unsafe set-up of a wheelchair for a user. PGDT accepts no responsibility for losses of any kind if the programming of the control system is altered from the factory pre-set values.&rdquo;</em></p>
+<table>
+<thead><tr><th>Gated &mdash; clinician / programmer work</th><th>What it decides</th></tr></thead>
+<tbody>
+<tr><td>Sip-and-puff calibration</td><td>Where your soft and hard zones begin &mdash; the four pressure thresholds (soft sip, hard sip, soft puff, hard puff) recorded from your own breath samples, plus the ramp time a pressure must hold before it counts. LiNX does it with the calibration tool in LiNX Access; the manual notes driving is disabled while calibrating, word for word: <em>&ldquo;Primary input operations, such as driving, are disabled when using the calibration tool. This is for safety reasons to prevent unintended operation when calibrating.&rdquo;</em> R-net does the equivalent through Omni programming (thresholds and ramp settings).</td></tr>
+<tr><td>Assigning the input to the chair</td><td>Which SID type each Omni port expects, which input device type each R-net profile accepts, and on LiNX adding the profile or function and setting its user input to the IN500 or TPI and its configuration (proportional joystick, switches, switched head array, sip-and-puff). A chair can have every cable perfect and still ignore a SID it was never told to expect.</td></tr>
+<tr><td>Quadrant and direction setup</td><td>3Q versus 4Q operation, which quadrant means which direction, and the forward/reverse toggle method (double-click, auto-toggle, or switch-medium) on three-direction systems.</td></tr>
+<tr><td>Scanning setup</td><td>Scan rate, latched versus momentary scanning, latched timeout, and audible navigation options.</td></tr>
+<tr><td>Latched driving setup</td><td>Whether latching is on at all, latching in reverse, the timeout, and the emergency-stop requirement that comes with it.</td></tr>
+<tr><td>Drive tuning for switched inputs</td><td>Speeds, accelerations, and veer compensation (the correction for a switched chair&rsquo;s pull to one side) &mdash; the settings that decide how a switched command feels at the wheels. The plain-language tour of settings generally is <a href="/pmd-settings.html">The Settings</a>, and the programmer tiers themselves are named in <a href="/pmd-programmers.html">The Keys</a>.</td></tr>
+</tbody>
+</table>
+    <p>What is <strong>not</strong> gated, and never was: seeing that a tube holds moisture, a jack sits half-out, a pad has moved, a mount has not swung home, a switch sticks, or a cable is cut. Every check in the <a href="#checklist">checklist below</a> is observation and re-seating, with power off where a plug moves. If a dealer tells you diagnosis itself requires the programmer, that is half true &mdash; the <em>settings</em> do. The fault you found with your eyes is yours, and it goes in the work order in your words. <a href="/repair-rights.html">Your repair rights</a> back that up.</p>
+  </section>
+
+  <section id="checklist">
+    <h2>When it stops working &mdash; the ordered checklist</h2>
+    <p>Work this list in order. It runs from the link of the chain closest to you outward, which is also the order of how often each link is the actual fault. Stop at the step that fixes it, and write down which step it was.</p>
+    <ol>
+      <li><strong>Stop safely first.</strong> If the chair is moving when it should not, use the stop switch or switch the chair off &mdash; before any diagnosis. If the chair will not move, make sure you are somewhere safe and flat before troubleshooting in place.</li>
+      <li><strong>Read the chair.</strong> What is on the screen, right now? A message like SID Disconnected or Switch Detached, a fault code, a flashing light count. Photograph it. The translations are in <a href="/pmd-fault-codes.html">Fault Codes, Translated</a>; how to read a chair generally is <a href="/pmd-reading.html">Reading the Chair</a>.</li>
+      <li><strong>Check your mode, not a programmer setting.</strong> Are you in drive mode &mdash; not seating mode, not a menu, not a Bluetooth or auxiliary screen you entered with an extra user-switch press? On a 3Q system, are you toggled to the direction you think you are? Mode states reachable from your own controls explain a large share of &ldquo;dead&rdquo; alternative controls.</li>
+      <li><strong>Power-cycle with everything at rest.</strong> Switch off, let your breath out of the tube, your head off the pads, your chin off the stick, your switch released &mdash; nothing commanding anything &mdash; then switch on. An input held active at switch-on is refused by design.</li>
+      <li><strong>The stop / user switch.</strong> Jack fully home at the module; cable uncut; switch where you can reach it. A detached user switch is both a no-drive cause and, on a latched chair, a no-stop emergency.</li>
+      <li><strong>The SID cable.</strong> Power off. The 9-way connector between SID and input module: seated fully, locking screws done up, no bent pins visible, cable not pinched where it leaves the headrest, tray, or mount.</li>
+      <li><strong>Your specific link.</strong> Sip-and-puff: tube seated on the nozzle, unkinked, no visible moisture, mouthpiece where it belongs. Head array: pads seated, headrest unmoved, nothing over a proximity pad. Chin control: mount swung fully home and locked, stick centred and springing back. Switches: each switch solid in its mount, releasing cleanly, jack fully home.</li>
+      <li><strong>The bus cable and the module lights.</strong> Power off for plugs. The bus cable between input module and the rest of the chair, both ends. Then power on and look: the IN500 carries an activity indicator that displays input demands &mdash; if it shows your commands arriving, the fault is downstream of the module; if it shows nothing while you command, the fault is at or before the module. That one observation halves the repair.</li>
+      <li><strong>Battery and the basics.</strong> A chair with a dying battery faults in ways that imitate electronics failures. Charge state, main plugs, breaker &mdash; the same first checks as any chair in <a href="/pmd-start.html">Start Here: Your Chair Stopped</a> and <a href="/pmd-fixes.html">The Cheap Fixes</a>.</li>
+      <li><strong>Then call, with the list.</strong> Module name, SID name, screen message, which of the four commands or which pad fails, and which step above changed nothing. That is the difference between a targeted visit and a module swap on spec. What a repair visit should and should not involve is covered in <a href="/pmd-repairs.html">Repairs</a> and <a href="/pmd-parts.html">Parts, Not Assemblies</a>.</li>
+    </ol>
+  </section>
+
+  <section id="sources">
+    <h2>Sources</h2>
+    <p>Primary sources only &mdash; the manufacturers&rsquo; own published manuals, guides, and public pages. Library copies are this site&rsquo;s preserved copies of those public documents; everything cited on this page is hyperlinked to its copy so you never have to leave the site to check it.</p>
+    <ul>
+      <li>Curtiss-Wright / PG Drives Technology &mdash; <a href="/library/collected-public-docs/pmd/pg-drives_r-net_programming.pdf">R-net programming manual (OBP manual, SK78571)</a> &mdash; input-device types and profiles, latched operation and the Emergency Stop Switch requirement, SID Disconnected and Switch Detached diagnostics, and the programming warning quoted above. Library copy.</li>
+      <li>Curtiss-Wright / PG Drives Technology &mdash; <a href="/library/collected-public-docs/pmd/pg-drives_r-net-pc-programmer_programming.pdf">R-net PC Programmer programming manual</a> &mdash; module and input configuration through the PC programmer. Library copy.</li>
+      <li>Curtiss-Wright / PG Drives Technology &mdash; <a href="https://cdn4.guidespdf.com/view/2292/2292008-rnet_omni2.pdf">R-net Omni2 User Manual (SK82613-01)</a> &mdash; Omni2 ports (9-way D-type Port 1 and Port 2, user switch jacks, sip-and-puff input), SID types, the sip-and-puff command table, Single Switch Scanner operation, and the user-switch emergency-stop requirement. Public copy of the manufacturer&rsquo;s manual.</li>
+      <li>Invacare / Dynamic Controls &mdash; <a href="/library/collected-public-docs/pmd/invacare_linx_service.pdf">LiNX service manual (1605129-C)</a> &mdash; DLX-IN500 connections and components, the alternative-input connection table (IN5xx versus TPI), sip-and-puff installation and calibration, quadrant operation, latched driving and the external stop switch, menu scan settings, and the safety warnings quoted above. Library copy.</li>
+      <li>Dynamic Controls &mdash; <a href="/library/collected-public-docs/pmd/dynamic-controls_linx_technical-appnote.pdf">LiNX technical application note</a> &mdash; LiNX operating modes including latched operation. Library copy.</li>
+      <li>Dynamic Controls &mdash; <a href="https://www.dynamiccontrols.com/our-products/linx/linx-500-series">LiNX 500 Series product page</a> &mdash; REM500 specialty display and DLX-IN500-A support for proportional and switch inputs including sip-and-puff, head arrays, and switch scanning. Publisher&rsquo;s page.</li>
+      <li>Permobil &mdash; <a href="/library/collected-public-docs/pmd/permobil_m3-corpus_owner.pdf">M3 Corpus owner manual</a> and <a href="/library/collected-public-docs/pmd/permobil_f5-corpus-vs_owner.pdf">F5 Corpus VS owner manual</a> &mdash; the fitted Omni2 as Permobil presents it to owners, quoted above. Library copies.</li>
+      <li>Quantum Rehab &mdash; <a href="/library/collected-public-docs/pmd/quantum_q6-edge-2_owner.pdf">Q6 Edge 2.0 owner manual</a> &mdash; Q-Logic controller and single-switch operation as presented to owners. Library copy.</li>
+      <li>Quantum Rehab &mdash; <a href="https://www.quantumrehab.com/pdf/order-forms/electronics/us_alternative_controls_order_form.pdf">Alternative Controls and Electronics Order Form</a> &mdash; SCIM module scope and exclusions, the dedicated Q-Logic 3 Sip and Puff Module, and fitted head-array options. Publisher&rsquo;s public document.</li>
+      <li>Quantum Rehab &mdash; <a href="https://www.quantumrehab.com/meeting-your-needs/living-with-spinal-cord-injury.asp">Power Wheelchair Solutions for Spinal Cord Injury</a> &mdash; the Q-Logic 3 specialty access options listed for riders, quoted above. Publisher&rsquo;s page.</li>
+    </ul>
+    <p>The wider document collection behind this section &mdash; exploded views, parts catalogues, and the rest of the PMD library &mdash; is indexed at the <a href="/library-hub.html">Library Hub</a> and walked through model by model in <a href="/pmd-exploded.html">Exploded Views</a>. The owner control tool that reads these same systems is <a href="/pmd-control.html">Chair Control</a>.</p>
+  </section>
+
+  <section>
+    <p><a href="/pmd.html">&larr; Back to PMD</a> &middot; <a href="/pmd-start.html">Start Here: Your Chair Stopped</a> &middot; <a href="/pmd-fault-codes.html">Fault Codes, Translated</a> &middot; <a href="/pmd-settings.html">The Settings</a> &middot; <a href="/pmd-programmers.html">The Keys</a></p>
+  </section>
+
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

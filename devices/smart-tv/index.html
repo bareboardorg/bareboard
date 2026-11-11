@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart TVs &amp; Streaming — BareBoard — Free Hardware Education</title>
+<meta name="description" content="Smart TVs and streaming sticks: the three-board diagnosis that fixes most dead TVs, backlight failure, and the $30 computers plugged into the back.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Smart TVs &amp; Streaming">
+<meta property="og:description" content="Smart TVs and streaming sticks: three-board diagnosis, backlight failure, $30 computers.">
+<meta property="og:url" content="https://bareboard.org/devices/smart-tv/">
+<meta property="og:image" content="https://bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/devices/">Devices</a></li>
+        <li class="has-children">
+          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/about.html#how-we-work">How we work</a></li>
+                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/notes/">Bench Notes</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                <li><a href="/protocols.html">Protocol RE</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
+                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
+                <li><a href="/hot-100.html">Game Consoles</a></li>
+                <li><a href="/hot-100.html">Media Streamers</a></li>
+                <li><a href="/hot-100.html">Networking Gear</a></li>
+                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
+                <li><a href="/hot-100.html">Other</a></li>
+                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
+                <li><a href="/hot-100.html">Phones</a></li>
+                <li><a href="/hot-100.html">Printers</a></li>
+                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
+                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
+                <li><a href="/hot-100.html">Wearables</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/most-wanted.html#board">The board</a></li>
+              </ul>
+            </div>
+          </div></li>
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+                <li><a href="/watchmen.html#corrections">Corrections</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+  <aside class="legal-notice bb-notice-amber">
+    <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
+  </aside>
+  <h1>Smart TVs &amp; Streaming</h1>
+  <p class="lede">A modern TV is three circuit boards behind a sheet of glass &mdash; a power supply, a mainboard, and a small timing board &mdash; and most &ldquo;dead&rdquo; TVs have exactly one of the three at fault. Learn the three-board method and the flashlight test and you can name the bad board in minutes, with no parts cannon. Then look at the other end of the HDMI cable: the streaming stick, a complete computer that costs about $30 and hides a board smaller than its own remote&rsquo;s. This page covers both &mdash; what is inside, how each one fails, what the public record shows, and what the manufacturers do not publish.</p>
+
+  <section>
+    <h2 id="fcc">FCC ID</h2>
+    <p><strong>Every TV, stick, and box with a radio in it carries an FCC ID</strong> &mdash; the code the U.S. Federal Communications Commission (FCC, the federal radio regulator) assigns when a device passes its radio tests. The ID is printed on the label on the back of the TV, or on the body of the stick. It has two parts: a grantee code (who filed) and a product code (which model). Read yours off the label and look it up at <a href="https://fccid.io/TC2">fccid.io</a> &mdash; the filings include internal photos that are invaluable for hardware research.</p>
+    <p>Verified examples from the filings themselves:</p>
+    <ul>
+      <li><strong>Roku, Inc. &mdash; grantee code TC2.</strong> Roku&rsquo;s full filing list is public under that code, from a 2005 SoundBridge music system to current streaming players. One streaming player, <a href="https://fccid.io/TC2-R1042">FCC ID TC2-R1042</a>, was granted in September 2021; an earlier IP set-top box, <a href="https://fccid.io/tc2r1019">FCC ID TC2-R1019</a>, was granted on October 2, 2017. The label method is the same for all of them: the ID is on the unit, and the grant names the grantee, the equipment class, and the radio bands it was approved for.</li>
+      <li><strong>Samsung Electronics &mdash; grantee code A3L.</strong> A Samsung LED TV filing, <a href="https://fccid.io/A3LHG40ND478/Internal-Photos/Internal-photos-of-A3LHG40ND478-2545009">FCC ID A3LHG40ND478</a> (model HG40ND478, application dated March 10, 2015), includes an Internal Photos exhibit &mdash; the exhibit this page&rsquo;s exploded view is built from.</li>
+      <li><strong>Amazon files Fire TV under other company names.</strong> The Fire TV Stick 2nd generation (model LY73PR) carries <a href="https://techinfodepot.shoutwiki.com/wiki/Amazon_Fire_TV_Stick_(LY73PR)">FCC ID 2AE6S-0948</a>, approved September 14, 2017 &mdash; the grantee code 2AE6S belongs not to Amazon but to a filing company, Vlado L.L.C. The 3rd-generation Fire TV Stick and the Fire TV Stick Lite share one filing, <a href="https://www.aftvnews.com/fire-tv-stick-3-stick-lite-share-the-same-model-number-and-are-the-same-size-as-the-fire-tv-stick-2/">FCC ID 2AUQI-7436</a>, because they are the same hardware (see Did you know). So for Amazon devices the label still works &mdash; but expect the name on the grant to be a stranger&rsquo;s.</li>
+    </ul>
+    <p><em>FCC IDs vary by model and revision. Check the label on your specific unit.</em></p>
+  </section>
+
+  <section>
+    <h2 id="fcc-revealed">What the FCC filing revealed</h2>
+    <p>The FCC filing for a device includes the documents manufacturers are required to submit: external photos, internal photos, test setup photos, RF test reports, and the user manual. These are public record at <a href="https://fccid.io/TC2">fccid.io</a>.</p>
+    <p>What you can typically find:</p>
+    <ul>
+      <li><strong>Internal photos</strong> &mdash; board layout, chip placement, shielding, antenna design. For a TV, this is the three-board layout &mdash; power, main, and timing &mdash; photographed before the set ever went on sale, so you can see what is inside your model before you ever take the back off yours.</li>
+      <li><strong>Block diagrams</strong> &mdash; sometimes included, showing the RF chain architecture</li>
+      <li><strong>Test reports</strong> &mdash; conducted and radiated emissions data, which can reveal operating frequencies and power levels</li>
+      <li><strong>Label placement</strong> &mdash; where the FCC ID lives on the device</li>
+    </ul>
+    <p>What the FCC filing does <em>not</em> include: schematics (usually withheld under confidentiality requests), firmware, bill of materials, or debug interface documentation. For TVs it also does not include the service manual &mdash; see the exploded view below for what that means.</p>
+  </section>
+
+  <section>
+    <h2 id="exploded">Exploded view</h2>
+    <p><strong>Coverage: Partial &mdash; no public parts book.</strong> For most devices on this site the exploded view is keyed to the manufacturer&rsquo;s own parts catalog. TVs are the exception, and this page labels it honestly: full TV service manuals and illustrated parts breakdowns are not published for owners. Makers route them through authorized service, so there is no public parts book to key this view to. What exists in public is the FCC internal-photo exhibits. The walkthrough below is built from those exhibits &mdash; the Samsung LED TV internal-photos exhibit (<a href="https://fccid.io/A3LHG40ND478/Internal-Photos/Internal-photos-of-A3LHG40ND478-2545009">FCC ID A3LHG40ND478</a>, 3 pages) for the set, and the Roku streaming player exhibits for the stick &mdash; with every part named in plain language and its job in one line. Nothing here is a fabricated diagram: it is the order the parts sit in the set, front to back, which is also the order they come apart and go back together.</p>
+    <h3>The television, front to back</h3>
+    <ol>
+      <li><strong>Panel (the screen itself)</strong> &mdash; the glass sandwich that makes the picture, pixel by pixel. Everything behind it exists to feed and light this one part.</li>
+      <li><strong>Backlight LED strips</strong> &mdash; rows of light-emitting diodes (LEDs) on thin strips behind the panel. The backlight is the lamp of the TV: the panel only shutters light, it makes none of its own. (OLED sets are the exception &mdash; each pixel lights itself, and there are no strips.) One failed LED in a series string can darken the whole set, which is why backlight failure tops the fault list below.</li>
+      <li><strong>T-Con board (timing controller)</strong> &mdash; the small board, usually at the top or bottom center, that takes the finished picture from the mainboard and times it out to the panel row by row and column by column, at the panel&rsquo;s own speed. No T-Con signal, no coherent picture &mdash; even with a perfect mainboard and a perfect backlight.</li>
+      <li><strong>Mainboard</strong> &mdash; the computer: the TV&rsquo;s processor, tuner, HDMI and USB ports, Wi-Fi, sound, and the smart-TV operating system all live here. It decides what the picture is; the T-Con and panel only display it.</li>
+      <li><strong>PSU board (power supply unit)</strong> &mdash; the board the mains cord plugs into. It converts wall power into the several voltages the other boards and the backlight need, and it holds a standby voltage alive at all times so the set can hear its remote. This is the board that makes a set fully dead when it fails &mdash; and the dangerous one. Read the safety box before you touch it.</li>
+      <li><strong>Speakers</strong> &mdash; usually two small drivers at the bottom corners, wired to the mainboard&rsquo;s amplifier. Last in the stack, first to be blamed unfairly: most &ldquo;no sound&rdquo; faults are settings, sources, or the mainboard, not the speakers.</li>
+    </ol>
+    <aside class="bb-notice-amber">
+      <p><strong>Safety &mdash; the maker&rsquo;s own words first.</strong> Samsung&rsquo;s TV user manual (TU7000&ndash;8500 series, 2020) prints this panel verbatim:</p>
+      <blockquote><p>&ldquo;CAUTION: RISK OF ELECTRIC SHOCK. DO NOT OPEN. CAUTION: TO REDUCE THE RISK OF ELECTRIC SHOCK, DO NOT REMOVE COVER (OR BACK). THERE ARE NO USER SERVICEABLE PARTS INSIDE. REFER ALL SERVICING TO QUALIFIED PERSONNEL.&rdquo;</p></blockquote>
+      <p>Source: <a href="https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_BD&amp;OriginYN=N&amp;ModelType=N&amp;ModelName=UA55TU8200K&amp;CttFileID=7901441&amp;CDCttType=EM&amp;VPath=EM%2F202012%2F20201218031717001%2FBN68-11284A-01_UM_TU7000-8500+Q60-80_ASIA_ENG_200812.0.pdf">Samsung user manual BN68-11284A-01 (PDF)</a>. The same manual adds that to avoid electric shock you should never touch the inside of the set.</p>
+      <p><strong>Our plain rule, which the manual&rsquo;s warning is really about:</strong> unplugging the TV does <em>not</em> make the PSU board safe. The PSU&rsquo;s large capacitors hold a charge after the cord comes out &mdash; that stored charge is the shock the warning means. Do not touch the hot side of the PSU board (the half around the mains inlet, fuse, and big capacitor). The diagnosis steps below are written so you can name the bad board without handling a live or charged PSU.</p>
+    </aside>
+    <h3>The stick, in miniature</h3>
+    <p>The streaming stick is the same lesson at pocket scale. Its FCC exhibits show the whole computer on one small board: the Roku player&rsquo;s internal-photo exhibits list top and bottom views of the stick&rsquo;s board (<a href="https://reports.fccidlookup.com/fcc-id/TC2/-R1042/6112144.pdf">exhibit index for FCC ID TC2-R1042</a>), and a teardown of the earlier Roku Streaming Stick (model 3500) shows what those photos contain: one board carrying the system processor under a metal shield/frame, a Wi-Fi chip (a Broadcom BCM43236 in that model), memory, and flash storage &mdash; with the antenna as traces and small structures at the board&rsquo;s edge, and no fan, no heatsink tower, nothing else (<a href="https://www.edn.com/teardown-roku-streaming-stick/">EDN teardown</a>). Amazon&rsquo;s sticks are built the same way: one board, the SoC (system on a chip &mdash; the whole computer on one chip) under a shield, antenna at the end away from the HDMI plug. That is the whole exploded view of a stick, because a stick is one board. When one dies, there is no board to swap inside it &mdash; the diagnosis below is about proving the stick, not the TV, is at fault, and about the two fixable causes: power and heat.</p>
+  </section>
+
+  <section>
+    <h2 id="diagnosis">Diagnosis &amp; faults</h2>
+    <p>Work a TV as three boards plus a lamp. Each symptom below points at one of them; change one board at a time, and only the one the symptom names.</p>
+    <h3>Sound but no picture &mdash; do the flashlight test first</h3>
+    <p>The <strong>flashlight test</strong>: with the set on and playing something with sound, hold a flashlight flat against the screen and look closely at an angle. If you can faintly see the picture moving under the light, the mainboard and the T-Con board are alive and doing their jobs &mdash; the image exists, it is just unlit. That is backlight failure: a dead LED strip, or the backlight driver section of the PSU board that feeds the strips. It is the single most common &ldquo;dead TV&rdquo; that is not dead at all. If the flashlight shows nothing at all, the fault is upstream: mainboard, T-Con, or panel.</p>
+    <h3>Picture but no sound</h3>
+    <p>Rule out the free causes first: mute, volume, the TV&rsquo;s audio output setting (TV speakers vs. external), and a second source. Sound missing on every source with the settings right points at the mainboard, which holds the audio amplifier. A speaker itself failing is rare and usually announces itself with distortion first.</p>
+    <h3>No standby light, nothing at all</h3>
+    <p>The red standby light is fed by the PSU&rsquo;s always-on standby output. No light with a known-good outlet and cord points at the PSU board. A standby light that blinks in a repeating pattern is the set reporting a fault code &mdash; blink counts are model-specific and are listed in the (unpublished) service manual, so count the blinks and search the exact model number plus the count before opening anything.</p>
+    <h3>Substitution logic</h3>
+    <p>Boards are matched to the model and often to the panel size &mdash; order by the part number printed on the board itself, never by the TV&rsquo;s marketing name alone. Swap one board at a time, in this order of likelihood for the symptom you proved: backlight/PSU for a flashlight-test pass, PSU for no standby, mainboard for picture-with-no-sound or dead inputs, T-Con for a picture that is present but garbled, half-dark in clean vertical halves, or covered in lines while menus from another board path stay clean. Keep the old board until the set has run a full evening: an intermittent fault forgiven too early is how good boards end up in the bin.</p>
+    <h3>Sticks: heat, power, remote</h3>
+    <ul>
+      <li><strong>Overheating and throttling.</strong> Throttling means the chip slows itself down to cool off. A stick lives in the hot air behind the TV, often in an HDMI port inches from the panel&rsquo;s backlight heat. Stuttering, falling picture quality, and restarts that get worse the longer you watch are heat until proven otherwise. The fixes are placement, not parts: use the short HDMI extender in the box so the stick hangs in open air, and keep it out of enclosed cabinets.</li>
+      <li><strong>Failing micro-USB power.</strong> Many sticks are powered from the TV&rsquo;s USB port, which may supply less current than the stick wants at peak load &mdash; the result is random restarts and boot loops that look exactly like a dying stick. Test with the wall adapter that came with the stick before condemning it.</li>
+      <li><strong>Remote pairing.</strong> A stick that works from the phone app but not the remote has a pairing or battery problem, not a dead stick. Replace the batteries first, then re-pair per the maker&rsquo;s button sequence for your model. Voice remotes pair over Bluetooth or Wi-Fi Direct depending on model, so a remote from a different model may simply never pair.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="we-reveal">What we reveal</h2>
+    <p>The FCC tells you what a device emits. We tell you what&rsquo;s inside and how it works.</p>
+    <ul>
+      <li><strong>Chip-level identification</strong> &mdash; every major IC named, with datasheet links where public documentation exists, and an honest note where it does not</li>
+      <li><strong>Board mapping</strong> &mdash; the three boards, what connects to what, and which board owns which symptom</li>
+      <li><strong>What the manufacturer won&rsquo;t tell you</strong> &mdash; undocumented features, hidden radios, silent telemetry, repair blockers</li>
+    </ul>
+    <p>See the other <a href="/devices/">device hubs</a> for the same treatment, board by board.</p>
+  </section>
+
+  <section>
+    <h2 id="variants">Devices</h2>
+    <p>Operating systems verified from retailer and maker material: Samsung sets run Tizen, LG sets run webOS, and Sony sets run Google TV (<a href="https://www.brandsmartusa.com/collections/tv-home-theater-tvs-by-type-smart-tvs">BrandsMart platform guide</a>; <a href="https://blog.bestbuy.ca/tv-audio-home-theatre/televisions/smart-tv-operating-systems-guide">Best Buy Canada OS guide</a>). Streaming-device years and chips below are only what the linked sources state.</p>
+    <table>
+      <tr><th>Device</th><th>Released</th><th>System / SoC</th><th>Notes (as sourced)</th></tr>
+      <tr><td>Samsung smart TVs</td><td>&mdash;</td><td>Tizen</td><td>Samsung&rsquo;s in-house system, exclusive to Samsung sets</td></tr>
+      <tr><td>LG smart TVs</td><td>&mdash;</td><td>webOS</td><td>Exclusive to LG sets; Magic Remote pointer remote</td></tr>
+      <tr><td>Sony smart TVs (Bravia)</td><td>&mdash;</td><td>Google TV</td><td>Google&rsquo;s system, also used by TCL and others</td></tr>
+      <tr><td>Roku Streaming Stick / players</td><td>2021 (TC2-R1042 grant)</td><td>Roku OS</td><td>Streaming Player, <a href="https://fccid.io/TC2-R1042">FCC ID TC2-R1042</a></td></tr>
+      <tr><td>Roku Ultra (2020)</td><td>2020</td><td>Roku OS, quad-core</td><td>4K, Dolby Vision, Dolby Atmos; $99.99 at launch (<a href="https://www.tomsguide.com/news/new-roku-ultra-2020">Tom&rsquo;s Guide</a>)</td></tr>
+      <tr><td>Amazon Fire TV Stick (2nd gen, LY73PR)</td><td>2016</td><td>Fire OS; MediaTek MT8127D</td><td><a href="https://techinfodepot.shoutwiki.com/wiki/Amazon_Fire_TV_Stick_(LY73PR)">FCC ID 2AE6S-0948</a></td></tr>
+      <tr><td>Amazon Fire TV Stick 4K (1st gen)</td><td>2018</td><td>Fire OS; MediaTek MT8695, quad-core 1.7 GHz</td><td>1.5 GB RAM (<a href="https://www.aftvnews.com/comparison-of-specs-for-the-fire-tv-stick-4k-vs-the-new-fire-tv-stick-4k-max-plus-why-they-matter/">AFTVnews spec comparison</a>)</td></tr>
+      <tr><td>Amazon Fire TV Stick 4K Max (1st gen)</td><td>2021</td><td>Fire OS; MediaTek MT8696, quad-core 1.8 GHz</td><td>2 GB RAM, Wi-Fi 6 (same comparison)</td></tr>
+      <tr><td>Amazon Fire TV Stick 4K Max (2nd gen)</td><td>2023</td><td>Fire OS 8; MediaTek MT8696T, 4&times; Cortex-A55 up to 2.0 GHz</td><td>2 GB RAM, 16 GB storage (<a href="https://developer.amazon.com/docs/fire-tv/device-specifications-fire-tv-streaming-media-player.html?v=ftvstick4k_gen2_8">Amazon device specifications</a>)</td></tr>
+      <tr><td>Amazon Fire TV Cube (2nd gen)</td><td>2019</td><td>Fire OS 7; Amlogic S922X, hexa-core</td><td>2 GB RAM, 16 GB storage (<a href="https://developer.amazon.com/docs/fire-tv/device-specifications-fire-tv-cube.html">Amazon device specifications</a>)</td></tr>
+      <tr><td>Amazon Fire TV Cube (3rd gen)</td><td>2022</td><td>Fire OS 7; Amlogic POP1-G, octa-core</td><td>2 GB RAM, 16 GB storage, Wi-Fi 6E (same specifications)</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2 id="chips">Key Chips</h2>
+    <p>Every chip below links to its documentation &mdash; the maker&rsquo;s page or the device maker&rsquo;s own specifications. Where no full datasheet is public, the entry says so; those gaps are logged in this build&rsquo;s targets file for the datasheet library. The library&rsquo;s index is <a href="/datasheets.html">the datasheet index</a> and the <a href="/chips.html">chip database</a>.</p>
+    <ul>
+      <li><strong>TV SoCs &mdash; <a href="https://www.mediatek.com/products/pentonic/1000">MediaTek Pentonic 1000</a></strong> &mdash; flagship smart-TV SoC: quad Cortex-A73 at 2.0 GHz, Mali-G57 GPU, for 4K 120 Hz panels. MediaTek&rsquo;s Pentonic line powers a large share of current smart TVs, including Google TV models. Its sibling <a href="https://www.mediatek.com/products/pentonic/700">Pentonic 700</a> matters to repairers for one reason: it integrates the T-Con (see the exploded view) into the main chip &mdash; on sets built on it, the separate T-Con board disappears. The mainstream <a href="https://www.mediatek.com/products/pentonic/mt9612">MT9612</a> covers 4K60 sets. Samsung&rsquo;s, LG&rsquo;s, and Sony&rsquo;s house TV processors have no public datasheets &mdash; that absence is itself the documentation state, and it is logged in the targets file.</li>
+      <li><strong>Stick SoCs &mdash; MediaTek MT8695 and MT8696.</strong> The Fire TV Stick 4K (2018) runs the <a href="https://www.aftvnews.com/comparison-of-specs-for-the-fire-tv-stick-4k-vs-the-new-fire-tv-stick-4k-max-plus-why-they-matter/">MT8695</a> (quad-core 1.7 GHz); the 4K Max (2021) runs the MT8696 (quad-core 1.8 GHz). Amazon&rsquo;s own <a href="https://developer.amazon.com/docs/fire-tv/device-specifications-fire-tv-streaming-media-player.html?v=ftvstick4k_gen2_8">device specifications</a> document the later variants (MT8696D, MT8696T) model by model. MediaTek publishes no public datasheet for this family &mdash; the device specifications are the documentation that exists. The earlier Fire TV Stick 2nd generation used the <a href="https://techinfodepot.shoutwiki.com/wiki/Amazon_Fire_TV_Stick_(LY73PR)">MT8127D</a>.</li>
+      <li><strong>Box SoCs &mdash; Amlogic.</strong> The Fire TV Cube 2nd generation (2019) runs the Amlogic S922X and the 3rd generation (2022) the Amlogic POP1-G, both documented in Amazon&rsquo;s <a href="https://developer.amazon.com/docs/fire-tv/device-specifications-fire-tv-cube.html">Cube specifications</a>. No public Amlogic datasheet for either was found; logged in the targets file.</li>
+      <li><strong>Early stick SoC &mdash; <a href="/datasheets.html">Broadcom BCM2835</a></strong> &mdash; the processor the <a href="https://www.edn.com/teardown-roku-streaming-stick/">EDN teardown</a> found under the shield in Roku&rsquo;s Streaming Stick 3500, alongside a BCM43236 Wi-Fi chip. Its peripherals documentation is in our datasheet index &mdash; the same chip family that powered the first Raspberry Pi, doing TV duty.</li>
+      <li><strong>Backlight driver &mdash; <a href="https://datasheet.chipsmall.com/BD9285F-GE2/317694.pdf">ROHM BD9285F</a></strong> &mdash; a boost LED driver chip designed, in its maker&rsquo;s words, for &ldquo;TV, PC display and other LCD backlight system&rdquo; use: it takes 9&ndash;18 V in and produces the higher, tightly controlled voltage and current a string of backlight LEDs needs, with protection that shuts it down if a string opens. Whether the driver section lives on the PSU board or the mainboard varies by model &mdash; when it or its string fails, the flashlight test above is how you know.</li>
+      <li><strong>T-Con (timing controller) as a function</strong> &mdash; not one chip but a job: converting the mainboard&rsquo;s video stream into the row/column timing a specific panel needs. On most sets it is a small separate board; on Pentonic 700 sets it is inside the SoC. Either way it is not interchangeable between panel models &mdash; a T-Con is matched to its panel.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 id="repair">Repair reality</h2>
+    <p><strong>The panel is the TV.</strong> A replacement panel typically costs about as much as &mdash; often more than &mdash; a comparable new TV: one current repair-cost analysis puts the panel alone at roughly 80 to 90 percent of a new set&rsquo;s value before labor (<a href="https://techjunctions.com/cracked-tv-screen/">TechJunctions cost breakdown</a>), and a European repair guide puts replacement panels at 70 to 130 percent of the TV&rsquo;s replacement value while calling board-level faults &mdash; power board, mainboard, T-Con &mdash; frequently economic to repair (<a href="https://www.repairscore.eu/blog/repair-vs-replace-television-2026">RepairScore EU guide</a>). Makers do not sell panels as owner parts at sane prices, because at those prices there is no sane sale. So the real repair economy of TVs is board-level swap and backlight strips: three boards and a lamp, exactly the parts the diagnosis section works with. A cracked panel is the one fault that ends the arithmetic; almost nothing else does.</p>
+    <p><strong>Sticks are the opposite case: open software, sealed hardware.</strong> Amazon documents a real developer surface for Fire TV: its developer site explains how to enable ADB (Android Debug Bridge &mdash; the standard Android tool for connecting a computer to a device) debugging on the device and connect over the network to install, test, and debug apps (<a href="https://developer.amazon.com/docs/fire-tv/connecting-adb-to-device.html">Amazon developer documentation: Connect to Fire TV Through ADB</a>), with a documented <a href="https://developer.amazon.com/docs/fire-tv/developer-tools.html">Developer Tools menu</a> on the device itself. That is more owner access than most TV platforms publish. The hardware, though, is a single sealed board &mdash; there is nothing inside a stick to replace.</p>
+    <p><strong>Roku&rsquo;s position, as published:</strong> Roku&rsquo;s support site states that if a device is defective within the warranty period, Roku&rsquo;s remedy is, at its option, to repair or replace the unit with a new or rebuilt device (<a href="https://support.roku.com/article/roku-warranty-information">Roku warranty information</a>). In the Roku support and warranty pages we opened there is no owner parts program: no parts store, no service manual, no board sales &mdash; the published route back to a working Roku is Roku itself. That is a statement about what Roku publishes, and it is the whole of what we can cite.</p>
+  </section>
+  <section>
+    <h2 id="controversies">Controversies &amp; Legal</h2>
+    <h3>The TV that watches back: viewing-data collection</h3>
+    <p>The documented center of the smart-TV privacy record is Vizio. On February 6, 2017, the U.S. Federal Trade Commission (FTC) and the State of New Jersey settled charges that Vizio had installed software on its TVs to collect viewing data on 11 million consumer TVs without consumers&rsquo; knowledge or consent. Vizio agreed to pay $2.2 million, to disclose its collection and get affirmative express consent before collecting and sharing viewing information, and to delete data collected before March 1, 2016. The FTC&rsquo;s case page carries the complaint and the stipulated order themselves (<a href="https://www.ftc.gov/legal-library/browse/cases-proceedings/162-3024-vizio-inc-vizio-inscape-services-llc">FTC case 162-3024</a>). The full dated record &mdash; LG in 2013, Samsung in 2015, Vizio in 2017, Roku in 2024 &mdash; is laid out in <a href="#record">The Full Record</a> below, each entry sourced the same way.</p>
+    <h3>TVs and repair law</h3>
+    <p>Televisions are consumer electronics under the state electronics repair laws where those laws list covered devices &mdash; the state-by-state state of play is tracked on <a href="/repair-rights.html#electronics-states">the repair-rights page</a>, and the federal ground (warranty law and the DMCA repair exemptions) is on the same page at <a href="/repair-rights.html#federal">the federal section</a>. What no law currently hands the owner is the missing artifact from the exploded view above: the service manual. The boards are swappable today; the book that maps them is still dealer property in practice.</p>
+  </section>
+
+  <section>
+    <h2 id="record">The Full Record</h2>
+    <p>Every dated entry below is stated only as far as its linked source supports it. Settlements and statements are labeled as what they are &mdash; a settlement is not a court finding, and a company&rsquo;s denial is printed next to the finding it answers.</p>
+    <table>
+      <tr><th>Date</th><th>Event</th><th>Source</th></tr>
+      <tr>
+        <td>November 2013</td>
+        <td><strong>LG viewing data sent even when switched off.</strong> U.K. developer DoctorBeet published traffic captures showing his LG smart TV sending channel/viewing information &mdash; and the names of files on attached USB storage &mdash; to LG&rsquo;s servers, and continuing to transmit after he turned the &ldquo;collection of watching info&rdquo; setting off. LG confirmed the behavior: it said the collected information was viewing information, not personal data, and was not used for targeted advertising; it confirmed transmission continued when the feature was disabled but said the data was not retained, and said a firmware update was being prepared to correct it and to remove the file-name feature, which it said was never fully implemented.</td>
+        <td><a href="https://www.pcworld.com/article/448809/lg-smart-tvs-share-data-about-users-files-and-viewing-habits-with-the-company.html">PCWorld, Nov 22, 2013</a></td>
+      </tr>
+      <tr>
+        <td>February 10, 2015</td>
+        <td><strong>Samsung voice-recognition policy uproar.</strong> Samsung&rsquo;s smart-TV privacy policy had warned, in its own words: &ldquo;Please be aware that if your spoken words include personal or other sensitive information, that information will be among the data captured and transmitted to a third party through your use of Voice Recognition.&rdquo; After widespread reporting, Samsung published a statement titled &ldquo;Samsung Smart TVs Do Not Monitor Living Room Conversations,&rdquo; clarified the policy, and explained the mechanism: simple built-in commands are neither stored nor transmitted, while spoken search requests &mdash; made by pressing the remote&rsquo;s activation button &mdash; are sent to a third-party provider (named as Nuance Communications) to be converted to text.</td>
+        <td><a href="https://news.samsung.com/global/samsung-smart-tvs-do-not-monitor-living-room-conversations">Samsung Newsroom statement, Feb 10, 2015</a></td>
+      </tr>
+      <tr>
+        <td>February 6, 2017</td>
+        <td><strong>Vizio settles with the FTC and New Jersey: $2.2 million.</strong> The FTC and the New Jersey Attorney General charged that Vizio installed software that collected viewing histories on 11 million smart TVs without users&rsquo; consent, starting in February 2014 &mdash; second-by-second information about what was on screen. The stipulated order required Vizio to pay $2.2 million, to prominently disclose its practices and obtain affirmative express consent before collecting and sharing viewing data, and to delete data collected before March 1, 2016. A settlement resolves charges; it is not a trial verdict, and the terms above are the order&rsquo;s own.</td>
+        <td><a href="https://www.ftc.gov/legal-library/browse/cases-proceedings/162-3024-vizio-inc-vizio-inscape-services-llc">FTC case page 162-3024</a></td>
+      </tr>
+      <tr>
+        <td>April 12, 2024</td>
+        <td><strong>Roku discloses credential-stuffing takeovers: about 576,000 more accounts.</strong> Roku announced a second incident in which unauthorized actors used login credentials taken from other sources (credential stuffing &mdash; trying leaked username/password pairs against Roku sign-ins) to access approximately 576,000 additional accounts, after an earlier incident of about 15,000 accounts disclosed in March. Roku stated there was no indication Roku was the source of the credentials or that Roku&rsquo;s systems were compromised; in fewer than 400 cases the intruders made unauthorized purchases with stored payment methods, without gaining full credit-card numbers. Roku reset affected passwords, said it would refund or reverse the purchases, and enabled two-factor authentication for all accounts.</td>
+        <td><a href="https://securityaffairs.com/161765/data-breach/roku-second-data-breach.html">SecurityAffairs, Apr 12, 2024, quoting Roku&rsquo;s disclosure</a></td>
+      </tr>
+    </table>
+    <p><em>Unverified:</em> broader claims that smart TVs continuously record living-room audio, or that any maker sells identified individuals&rsquo; viewing histories by name, circulate widely. On the record opened for this page, none of them is established: the Samsung entry above documents a policy sentence and the maker&rsquo;s narrower explanation of the mechanism; the Vizio order concerns viewing data collected and shared as described in the FTC complaint, under a settlement. This page will upgrade a claim when evidence, rather than repetition, appears.</p>
+  </section>
+
+  <section>
+    <h2 id="did-you-know">Did you know</h2>
+    <ul>
+      <li><strong>The T-Con can live inside the TV&rsquo;s main chip.</strong> MediaTek&rsquo;s Pentonic 700 integrates a full 4K120 T-Con (timing controller) into the TV SoC itself &mdash; on a set built on it, one of the classic three boards simply is not there (<a href="https://www.mediatek.com/products/pentonic/700">MediaTek Pentonic 700</a>).</li>
+      <li><strong>100 billion data points a day.</strong> The FTC complaint&rsquo;s account of Vizio&rsquo;s collection, as summarized in legal reporting on the settlement, describes the system capturing pixel data matched against a content database and collecting more than one hundred billion data points per day across its installed base (<a href="https://www.lexology.com/library/detail.aspx?g=d41feccf-e294-42a4-935a-6bb6a2d5b952">Lexology settlement summary</a>).</li>
+      <li><strong>Roku&rsquo;s first FCC filing under TC2 was not a TV box at all.</strong> Roku&rsquo;s grantee listing runs back to 2005, and its earliest entries are the SoundBridge network music players &mdash; the streaming empire started as a radio for your stereo (<a href="https://fccid.io/TC2">Roku FCC applications, TC2</a>).</li>
+      <li><strong>Two different Fire TV Sticks are the same stick.</strong> The 3rd-generation Fire TV Stick and the Fire TV Stick Lite share the same model number (S3L46N) and the same FCC ID (2AUQI-7436) &mdash; physically indistinguishable hardware, separated by software and by the remote in the box (<a href="https://www.aftvnews.com/fire-tv-stick-3-stick-lite-share-the-same-model-number-and-are-the-same-size-as-the-fire-tv-stick-2/">AFTVnews</a>).</li>
+      <li><strong>Amazon&rsquo;s name is not on its own stick&rsquo;s FCC grant.</strong> The Fire TV Stick 2 was filed under a separate company name, Vlado L.L.C. &mdash; a filing practice AFTVnews notes is used for Amazon hardware generally, which is why the grantee on a Fire TV label is a name you have never heard of (<a href="https://www.aftvnews.com/tag/fire-tv-stick-2/page/2/">AFTVnews, Fire TV Stick 2 coverage</a>).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 id="reading">Further Reading</h2>
+    <ul>
+      <li><a href="https://www.ftc.gov/legal-library/browse/cases-proceedings/162-3024-vizio-inc-vizio-inscape-services-llc">FTC &mdash; VIZIO, Inc. case page</a> (complaint and stipulated order, 2017)</li>
+      <li><a href="https://news.samsung.com/global/samsung-smart-tvs-do-not-monitor-living-room-conversations">Samsung Newsroom &mdash; Smart TVs Do Not Monitor Living Room Conversations</a> (2015)</li>
+      <li><a href="https://www.pcworld.com/article/448809/lg-smart-tvs-share-data-about-users-files-and-viewing-habits-with-the-company.html">PCWorld &mdash; LG smart TVs send data about users&rsquo; files and viewing habits</a> (2013)</li>
+      <li><a href="https://securityaffairs.com/161765/data-breach/roku-second-data-breach.html">SecurityAffairs &mdash; Roku disclosed a new security breach impacting 576,000 accounts</a> (2024)</li>
+      <li><a href="https://fccid.io/TC2">fccid.io &mdash; Roku, Inc. FCC ID applications (grantee TC2)</a></li>
+      <li><a href="https://developer.amazon.com/docs/fire-tv/connecting-adb-to-device.html">Amazon Developer &mdash; Connect to Fire TV Through ADB</a></li>
+      <li><a href="https://developer.amazon.com/docs/fire-tv/device-specifications-fire-tv-streaming-media-player.html?v=ftvstick4k_gen2_8">Amazon Developer &mdash; Fire TV device specifications</a></li>
+      <li><a href="https://www.mediatek.com/products/pentonic/1000">MediaTek &mdash; Pentonic 1000 smart TV SoC</a></li>
+      <li>On this site: <a href="/devices/">all device hubs</a> &middot; <a href="/devices/iphone/">iPhone</a> &middot; <a href="/devices/xbox/">Xbox</a> &middot; <a href="/devices/e-readers/">E-Readers</a> &middot; <a href="/devices/windows-pcs/">Windows PCs</a></li>
+      <li>On this site: <a href="/datasheets.html">datasheet index</a> &middot; <a href="/chips.html">chip database</a> &middot; <a href="/library-hub.html">library hub</a> &middot; <a href="/hot-100.html">Hot 100</a> &middot; <a href="/obsolescence.html">planned obsolescence</a> &middot; <a href="/repair-rights.html#electronics-states">repair rights, state by state</a></li>
+    </ul>
+  </section>
+  <blockquote class="bb-quote"><p>&ldquo;This ‘users are idiots, and are confused by functionality’ mentality of Gnome is a disease. If you think your users are idiots, only idiots will use it.&rdquo;</p><p class="bb-quote-by">&mdash; Linus</p></blockquote>
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart Locks — BareBoard — Free Hardware Education</title>
+<meta name="description" content="Smart locks: deadbolt anatomy, gear motors, ANSI/BHMA grades, FCC photos, DEF CON Bluetooth research, egress safety, faults and the full record.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Smart Locks">
+<meta property="og:description" content="Smart locks: a motor bolted to an honest deadbolt — graded by its dumbest part.">
+<meta property="og:url" content="https://bareboard.org/devices/smart-locks/">
+<meta property="og:image" content="https://bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/devices/">Devices</a></li>
+        <li class="has-children">
+          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/about.html#how-we-work">How we work</a></li>
+                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/notes/">Bench Notes</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                <li><a href="/protocols.html">Protocol RE</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
+                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
+                <li><a href="/hot-100.html">Game Consoles</a></li>
+                <li><a href="/hot-100.html">Media Streamers</a></li>
+                <li><a href="/hot-100.html">Networking Gear</a></li>
+                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
+                <li><a href="/hot-100.html">Other</a></li>
+                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
+                <li><a href="/hot-100.html">Phones</a></li>
+                <li><a href="/hot-100.html">Printers</a></li>
+                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
+                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
+                <li><a href="/hot-100.html">Wearables</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/most-wanted.html#board">The board</a></li>
+              </ul>
+            </div>
+          </div></li>
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+                <li><a href="/watchmen.html#corrections">Corrections</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+  <aside class="legal-notice bb-notice-amber">
+    <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
+  </aside>
+
+  <h1>Smart Locks</h1>
+  <p class="lede">A motor, a radio, and the deadbolt you already own. A smart lock is the rare smart-home device whose failure mode is your front door &mdash; which is why its public record runs from FCC photos to DEF CON stage talks to fire codes.</p>
+  <section>
+    <h2 id="fcc">FCC ID</h2>
+    <p><strong>FCC IDs vary by brand and model</strong> &mdash; August/Yale, Schlage, Kwikset, and Ultraloq each file under their own grantee codes, per radio configuration (Bluetooth-only locks file once; Wi-Fi and Z-Wave/Zigbee variants file for each radio). The internal photos are unusually informative here: they show the gear train and motor that are the whole product.</p>
+    <p>Every radio a device carries &mdash; Wi-Fi, Bluetooth, cellular, ultra-wideband, NFC &mdash; needs an FCC equipment authorization before the device can be sold in the United States. To get one, the manufacturer files photographs and test reports with the FCC, and those filings are <strong>public record</strong>. Check the label on your specific unit and look it up at <a href="https://fccid.io">fccid.io</a>.</p>
+    
+  </section>
+  <section>
+    <h2 id="fcc-revealed">What the FCC filing revealed</h2>
+    <p>The FCC filing for this device includes the documents manufacturers are required to submit: external photos, internal photos, test setup photos, RF test reports, and the user manual. These are public record at <a href="https://fccid.io/">fccid.io</a>.</p>
+    <ul>
+      <li><strong>Internal photos</strong> &mdash; the gear motor, the tailpiece coupling, the battery pack (almost always 4&times;AA), and the radio board&rsquo;s antenna placement against a metal door&rsquo;s worst enemy: the metal door</li>
+      <li><strong>Test reports</strong> &mdash; Bluetooth/Z-Wave/Zigbee output power; explains why a lock on a steel door in a steel frame has the range it has</li>
+      <li><strong>The manual</strong> &mdash; filed publicly, and where the ANSI/BHMA grade claims and the handing (left/right door) setup are printed</li>
+    </ul>
+    <p>What the FCC filing does <em>not</em> include: schematics (withheld under confidentiality requests where the maker files them), firmware, and the full bill of materials.</p>
+  </section>
+  <section>
+    <h2 id="exploded">Exploded view &mdash; the assemblies in build order</h2>
+    <p>This is the centerpiece of the page: the device taken apart into its assemblies, in the order they go together, every part named in plain language with what it does. An <em>exploded view</em> is the drawing a manufacturer makes showing every part separated along the path it assembles &mdash; the single most useful document in repair, and the one most often kept behind a dealer login.</p>
+    <h3>The source</h3>
+    <p><strong>Parts book:</strong> none published by any major lock maker. <strong>FCC internal photos</strong> are the source. Two architectures exist and the split matters more than brand: <em>retrofit</em> locks (August-style) clamp over your existing deadbolt&rsquo;s thumb turn and keep your key; <em>full-replacement</em> locks (Schlage Encode, Yale Assure) replace the bolt and cylinder entirely. The stack below is the full-replacement form; the retrofit form deletes Step 1 and keeps Steps 2&ndash;3 in a single housing.</p>
+    <p><strong>Coverage: PARTIAL &mdash; no public parts book; FCC internal-photo basis.</strong></p>
+    <h3>Build order</h3>
+        <h3>Step 1 &mdash; Bolt &amp; cylinder &mdash; the part that is still just a lock</h3>
+    <p>Under the electronics sits a completely standard deadbolt. This is the page&rsquo;s most important fact: the security of a smart lock is the security of this hardware, and it is graded on the same ANSI/BHMA scale as a $20 lock.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Deadbolt (1-inch throw)</td><td>The bolt itself. A 1-inch throw into a reinforced strike is what resists force; no radio feature changes this.</td></tr>
+        <tr><td>Strike plate &amp; door frame</td><td>The part everyone skips. A long-screw reinforced strike does more against kick-in than any feature in the app.</td></tr>
+        <tr><td>Key cylinder &amp; tailpiece</td><td>The mechanical key path. The motor turns the tailpiece; so does your key; so does the thumb turn. Three inputs, one bolt.</td></tr>
+        <tr><td>ANSI/BHMA grade</td><td>Grade 1 (heaviest duty) to Grade 3, tested under ANSI/BHMA A156.36 for deadbolts &mdash; cycle counts, torque, and force. The grade is printed on the box; believe it over the marketing.</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 2 &mdash; Motor &amp; gear train &mdash; the &lsquo;smart&rsquo; muscle</h3>
+    <p>A small DC gear motor drives the tailpiece. It is deliberately weak: it must stall safely against a misaligned door rather than force the bolt.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>DC gear motor</td><td>Turns the tailpiece through a reduction gear train. Its current draw is the lock&rsquo;s health signal &mdash; a straining motor means a binding door, and the lock&rsquo;s &lsquo;jammed&rsquo; alert is a current measurement.</td></tr>
+        <tr><td>Position sensing</td><td>A magnet + Hall sensor (a magnetic-field switch) or an encoder tells the board whether the bolt is thrown. Door-position sensing (open vs. closed) is a second magnet in the frame on equipped models.</td></tr>
+        <tr><td>Clutch / manual override</td><td>The thumb turn must always work with dead batteries. Any lock whose inside turn doesn&rsquo;t mechanically drive the bolt is a lock to remove.</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 3 &mdash; Electronics housing &mdash; batteries, board, radios</h3>
+    <p>The inside escutcheon (the plate on the room side) holds everything electronic, because the outside of a door is weather and attack surface.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Battery pack (typically 4&times;AA)</td><td>Months of life because the motor sleeps between throws and the radio sips. Low-battery warnings start weeks early; a lock that dies silently has usually been warning an app nobody opened.</td></tr>
+        <tr><td>Main board &amp; radio(s)</td><td>Bluetooth for phone-range control; Wi-Fi (power-hungry, often via a plug-in bridge instead) or Z-Wave/Zigbee for hub-based control. The radio choice is the battery-life choice.</td></tr>
+        <tr><td>Keypad / fingerprint reader (outside unit)</td><td>The exterior half: PIN pad and, on newer models, a capacitive fingerprint sensor. It is a data entry terminal only &mdash; the bolt authority lives inside.</td></tr>
+        <tr><td>Speaker / status LED</td><td>The beeps are diagnostics: distinct chirps for jam, low battery, and tamper. The manual&rsquo;s chirp table is a fault-code table by another name.</td></tr>
+      </tbody>
+    </table>
+
+        <p><strong>What is missing, in the open:</strong> replacement gear trains, motors, and boards are not sold. When the motor dies, the maker&rsquo;s answer is a whole lock. The mechanical half, though, is standard hardware-store stock &mdash; bolts, strikes, and cylinders interchange across brands in a way the electronics never will.</p>
+  </section>
+  <section>
+    <h2 id="we-reveal">What we reveal</h2>
+    <p>The FCC tells you what a device emits. We tell you what&rsquo;s inside and how it works.</p>
+    <ul>
+      <li><strong>The bolt is the security</strong> &mdash; why the ANSI/BHMA grade on the dumb half of the product outranks every smart feature</li>
+      <li><strong>Jam alerts are current meters</strong> &mdash; the lock knows your door is sagging before you do, and the app buries the signal</li>
+    </ul>
+    <p>Check our <a href="/autopsy/">teardowns</a> for full board-level analysis.</p>
+  </section>
+  <section>
+    <h2 id="variants">Architectures</h2>
+    <p>Brand matters less than form. Know which of these is on your door:</p>
+    <table>
+      <tr><th>Architecture</th><th>Examples</th><th>Keeps your key?</th><th>Notes</th></tr>
+      <tr><td>Retrofit (interior-only)</td><td>August Wi-Fi Smart Lock</td><td>Yes</td><td>Clamps over the existing deadbolt&rsquo;s thumb turn; outside of the door is unchanged. Renters&rsquo; form factor.</td></tr>
+      <tr><td>Full replacement, keypad</td><td>Schlage Encode, Yale Assure</td><td>New key</td><td>Replaces bolt + cylinder; keypad outside, electronics inside.</td></tr>
+      <tr><td>Full replacement, fingerprint</td><td>Ultraloq U-Bolt Pro, Lockly</td><td>New key</td><td>Adds a biometric reader to the exterior unit.</td></tr>
+      <tr><td>Lever / commercial</td><td>Yale nexTouch, Schlage FE/FE-series</td><td>Varies</td><td>BHMA commercial grades; different code and durability world.</td></tr>
+    </table>
+  </section>
+  <section>
+    <h2 id="chips">Key chips &amp; components</h2>
+    <ul>
+      <li><strong>Bluetooth / Z-Wave / Zigbee radio SoCs</strong> &mdash; the locks are built on the same low-power radio families as the rest of the smart home (Nordic nRF52-class Bluetooth parts are common across the industry; this site&rsquo;s <a href="/datasheets.html">Datasheet Index</a> holds the <a href="/devices/esp32/">ESP32</a>-family and nRF52840 documentation the category&rsquo;s Wi-Fi bridges use). Model-specific radio identification comes from each lock&rsquo;s FCC internal photos.</li>
+      <li><strong>Hall-effect position sensors</strong> &mdash; commodity magnetic switches; the datasheet class is in the site&rsquo;s index under common ICs.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="faults">Faults &mdash; which part fails, and how you know</h2>
+    <p>A lock&rsquo;s faults announce themselves in sound and current before they strand you. In rough order of how often each is the real problem:</p>
+    <ul>
+      <li><strong>&lsquo;Jammed&rsquo; alerts, motor straining</strong> &mdash; the door, not the lock: seasonal swelling, a sagging hinge, a strike a millimeter off. Realign the strike before replacing anything electronic.</li>
+      <li><strong>Dead with no warning</strong> &mdash; batteries, almost always &mdash; and the warning usually existed in an app. The mechanical key (or the inside thumb turn) is the designed fallback; if you never tested your key, test it today.</li>
+      <li><strong>Keypad accepts the code, nothing turns</strong> &mdash; the motor or gear train (board alive, muscle dead) or a stripped tailpiece coupling. Listen: silence = motor/coupling; grinding = gears.</li>
+      <li><strong>Random relocking / phantom events</strong> &mdash; a failing door-position magnet alignment, or a hub automation doing exactly what it was told. Read the event log before suspecting the lock.</li>
+      <li><strong>Radio drops off the network</strong> &mdash; the metal door problem: range through a steel door and frame is a fraction of the open-air number in the test report. A hub or bridge on the room side fixes what a firmware update won&rsquo;t.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="safety">Safety, before you open anything</h2>
+    <p><strong>Free egress is not optional.</strong> Fire and building codes (NFPA 101 and the IBC family) require that an occupant can always exit without a key, a code, or power. The inside thumb turn must mechanically open the lock with dead batteries, a dead board, and a fire on the other side of the door. If any lock you install fails that test, it is not a smart lock; it is a trap with an app.</p>
+    <p>A smart lock is also an <em>access log with a battery</em>. Know who holds the codes, delete old ones, and understand that the lock&rsquo;s event history (who came home, when) is exactly the data police and litigants ask platforms for. Your deadbolt now has a memory; treat it that way.</p>
+  </section>
+  <section>
+    <h2 id="record">The full record &mdash; dated, sourced, nothing smoothed over</h2>
+    <p>The smart lock&rsquo;s record is a security-research record: the category&rsquo;s weaknesses were demonstrated on conference stages, in public, years before most buyers heard of them.</p>
+    <table>
+      <thead><tr><th>Date</th><th>Event</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>2016-08</td><td>At DEF CON 24, researchers Anthony Rose and Ben Ramsey present tests of 16 Bluetooth smart locks: 12 could be opened with inexpensive attacks (plaintext credentials, replay, and app-layer flaws). The locks&rsquo; mechanics were fine; their radios and apps were not.</td><td>DEF CON 24 presentation, &ldquo;Picking Bluetooth Low Energy Locks from a Quarter Mile Away&rdquo;</td></tr>
+        <tr><td>2017-10</td><td>ASSA ABLOY &mdash; the world&rsquo;s largest lock maker (Yale) &mdash; acquires August Home. The smart lock becomes a product line of the incumbent lock industry, not a startup category.</td><td>ASSA ABLOY acquisition announcement</td></tr>
+        <tr><td>2022-08</td><td>Amazon discontinues Cloud Cam and folds Key by Amazon in-home delivery down over the following period &mdash; a reminder that a lock&rsquo;s cloud features live at the platform&rsquo;s pleasure (see also this site&rsquo;s <a href="/obsolescence.html">Planned Obsolescence</a> record).</td><td>Amazon service notices</td></tr>
+      </tbody>
+    </table>
+    <h3>Did you know</h3>
+    <ul>
+      <li>The motor is <em>supposed</em> to be weak: a lock motor that could force a binding bolt would break doors and itself. &lsquo;Jammed&rsquo; is a measurement, not a malfunction.</li>
+      <li>Your smart lock&rsquo;s grade (ANSI/BHMA A156.36, Grades 1&ndash;3) is set by its dumbest part &mdash; the bolt and strike &mdash; and is printed on the box of every major brand.</li>
+      <li>The outside keypad has no authority: on every mainstream design, the electronics that decide to turn the bolt live on the <em>inside</em> of the door, precisely so the attackable half can be destroyed without opening anything.</li>
+    </ul>
+    <h3>Unverified &mdash; alleged, not proven</h3>
+    <p><strong>&ldquo;Smart locks are trivially hackable, full stop.&rdquo;</strong> The 2016 evidence was damning for the app/radio layer of that era&rsquo;s locks. The other side: the same research found the mechanical cores unremarkable (neither better nor worse than conventional locks), vendors patched the demonstrated flaws, and no credible dataset shows smart locks burgled at higher rates than the forced-entry baseline &mdash; most residential entry is still through force, not Bluetooth. Verdict: the radio layer earned its criticism in 2016; the blanket claim is a decade out of date.</p>
+  </section>
+  <section>
+    <h2 id="documents">Documents &amp; deep dive</h2>
+    <p>Every document this page rests on, linked. Site library copies first, then the public record at the source.</p>
+    <ul>
+      <li><strong>FCC filings</strong> per brand/model &mdash; internal photos of gear trains, boards, and antennas: <a href="https://fccid.io">fccid.io</a>.</li>
+      <li><strong>ANSI/BHMA A156.36</strong> &mdash; the deadbolt grading standard the record and the fault sections rely on (BHMA, paywalled standard; grade definitions are summarized in every major maker&rsquo;s listings).</li>
+      <li><strong>DEF CON 24 (2016)</strong> &mdash; Rose &amp; Ramsey, Bluetooth lock research, conference record.</li>
+      <li><a href="/devices/smart-thermostats/">Smart Thermostats</a> and <a href="/devices/mesh-wifi/">Mesh Wi-Fi</a> &mdash; the lock&rsquo;s smart-home neighbors on this bench.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="reading">Further Reading</h2>
+    <ul>
+      <li><a href="/devices/kasa-hs103/">Kasa HS103 &mdash; the other mains-adjacent smart-home teardown</a></li>
+      <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+      <li><a href="/repair-rights.html">Repair Rights</a></li>
+    </ul>
+  </section>
+
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

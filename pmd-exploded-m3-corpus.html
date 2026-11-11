@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exploded View: Permobil M3 Corpus &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="Permobil publishes no parts breakdown for the M3 Corpus. This page reproduces the one labeled diagram the maker gives owners, names the gap, and quotes the manual&amp;rsquo;s own spare-parts rule verbatim.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Exploded View: Permobil M3 Corpus">
+<meta property="og:description" content="Permobil publishes no parts breakdown for the M3 Corpus. This page reproduces the one labeled diagram the maker gives owners, names the gap, and quotes the manual&amp;rsquo;s own spare-parts rule verbatim.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-exploded-m3-corpus.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Exploded View: Permobil M3 Corpus</h1>
+    <p class="lede">This page is different, and the difference is the story. Permobil does <strong>not</strong> publish an Illustrated Parts Breakdown for the M3 Corpus &mdash; not for owners, not openly at all. Their user manual says it in one line: <em>&ldquo;Spare parts must be ordered through Permobil.&rdquo;</em> No exploded views, no part numbers, no way to order a caster bearing without a dealer in the middle.</p>
+    <p><strong>Coverage: manual-only.</strong> What Permobil does publish is the labeled overview below, from the user manual &mdash; the whole chair, eleven labeled parts. That is everything the maker gives the person who rides in it. We reproduce it exactly, and we name the gap exactly: every assembly-level breakdown for this chair is a source gap until Permobil publishes one.</p>
+  </section>
+
+  <section>
+    <h2>The source</h2>
+    <p><strong>Guide:</strong> User Manual &mdash; Permobil M3 Corpus<br>
+    <strong>Document:</strong> Permobil AB (edition held in this site&rsquo;s library)<br>
+    <strong>Full guide (PDF, in this site&rsquo;s library):</strong> <a href="/library/collected-public-docs/pmd/permobil_m3-corpus_owner.pdf">permobil_m3-corpus_owner.pdf</a></p>
+    <p>No IPB, parts catalogue, or service manual for the M3 Corpus is published openly by Permobil &mdash; their service manuals are written &ldquo;for technical personnel&rdquo; and distributed through dealers. If that changes, this page gets the full exploded treatment the same week.</p>
+  </section>
+  <section>
+    <h2>The maker&rsquo;s own warnings, word for word</h2>
+    <p>Permobil prints these in the M3 Corpus user manual. Word for word &mdash; including the one that explains why this page cannot give you part numbers:</p>
+    <blockquote><p>Spare parts must be ordered through Permobil. Only use spare parts that are authorized by Permobil.</p></blockquote>
+    <blockquote><p>IMPORTANT! Do not modify the wheelchair. Do not modify your wheelchair or any of its components. Your wheelchair has been configured specifically for your needs as prescribed by your healthcare provider. Special skills, training, and knowledge are needed to set up, modify, and repair the wheelchair.</p></blockquote>
+    <blockquote><p>WARNING! Do not overload the wheelchair. Do not use the wheelchair to pull any kind of object and never hang excessive weights on the wheelchair. If you do, the wheelchair can become less stable and injure you.</p></blockquote>
+    <blockquote><p>WARNING! Use freewheel mode cautiously. Freewheel mode should only be used on level ground and when an attendant is present to control the wheelchair. If you use freewheel mode on an incline or without an attendant, you can get injured or cause property damage.</p></blockquote>
+    <p><em>Verbatim from the Permobil M3 Corpus User Manual, sections 2.11 and 3.</em></p>
+  </section>
+
+  <section>
+    <h2>Build order</h2>
+    <p>The assemblies are laid out in the order you would build the chair: frame first, batteries last. Every step is one exploded view from the maker&rsquo;s guide, followed by its parts table. The <strong>Callout</strong> column is the label printed on the diagram. The <strong>Part number</strong> column is the maker&rsquo;s own number &mdash; the number a parts desk cannot argue with.</p>
+    <ul>
+      <li><strong>Frame:</strong> <a href="#step-1">Step 1: The whole chair, labeled by Permobil</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Stage 1 — Frame</h2>
+    <p>Start with the skeleton. Every other system bolts to the frame, so it goes together first.</p>
+    <h3 id="step-1">Step 1 &mdash; The whole chair, labeled by Permobil</h3>
+    <figure>
+      <img src="/img/pmd-exploded/m3-corpus/m3-corpus-p5.jpg" alt="The whole chair, labeled by Permobil — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 1.</strong> The whole chair, labeled by Permobil &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Part (maker&rsquo;s label)</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A. Headrest</td><td>Supports your head.</td></tr>
+        <tr><td>B. Backrest</td><td>Supports your back.</td></tr>
+        <tr><td>C. Control panel</td><td>The hand control: joystick, buttons, and the display that shows battery level and speed.</td></tr>
+        <tr><td>D. Seat</td><td>The seat you sit on, part of the Corpus seating system.</td></tr>
+        <tr><td>E. Leg rest</td><td>Supports your legs. Depending on the chair’s options it can swing away or power-lift.</td></tr>
+        <tr><td>F. Footplate</td><td>The plate your feet rest on.</td></tr>
+        <tr><td>G. Armrest</td><td>Supports your arms, and helps you transfer in and out of the chair.</td></tr>
+        <tr><td>H. Chassis</td><td>The frame of the chair. Everything else bolts to it.</td></tr>
+        <tr><td>I. Serial number label</td><td>The label with this chair’s serial number. Every parts and service conversation starts with this number &amp;mdash; photograph yours now.</td></tr>
+        <tr><td>J. Drive wheel</td><td>The big powered wheel in the middle of the chair. The motor turns this one.</td></tr>
+        <tr><td>K. Caster wheel</td><td>The small swivel wheel at the corner. It is not powered &amp;mdash; it follows where the chair turns.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>What is missing, in the open</h2>
+    <p>Frame, drive, seating, and electronics breakdowns for this chair: <strong>not published by the maker</strong>. That is not a gap in our research &mdash; it is the gate, documented. The serial number label (callout I) is the one key you hold: every part on this chair is orderable by a dealer using it. Until Permobil publishes the breakdown, a dealer&rsquo;s parts screen is the only copy &mdash; and anything a dealer can see for your chair, you are entitled to ask them to show you.</p>
+    <p><a href="/pmd-exploded.html">&larr; All exploded views</a> &middot; <a href="/pmd.html">PMD section</a></p>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

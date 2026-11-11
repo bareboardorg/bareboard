@@ -93,6 +93,20 @@
               </div>
             </div>
           </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
         <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
           <div class="col-panel">
             <div class="dropdown-inner">
@@ -179,28 +193,28 @@ When a device is acquired, it graduates off the board and the next one moves up.
 
 <section>
 <h2 id="board">The board</h2>
-<ol class="wanted-list">
+<ol class="wanted-list" id="mw-board">
     <li>
     <h3>Humane AI Pin</h3>
-    <p><strong>Sought for:</strong> Failed 2024 startup device, now disappearing from the market. Snapdragon-based wearable with almost no public board-level documentation.</p>
+    <p><strong>Sought for:</strong> Wearable from a startup founded in 2018. HP acquired the company in a $116M deal in February 2025 and shut the servers down, bricking every Pin. Snapdragon-based wearable with almost no public board-level documentation.</p>
     <p><strong>Why it matters:</strong> documents an entire product category's rise and fall at the silicon level.</p>
     <p><strong>Priority:</strong> HIGH PRIORITY</p>
   </li>
     <li>
     <h3>Rabbit R1</h3>
-    <p><strong>Sought for:</strong> MediaTek-powered AI handheld. Little verified teardown data exists on its internals, power design, or component choices.</p>
+    <p><strong>Sought for:</strong> MediaTek-powered AI handheld. iFixit&rsquo;s Chip ID teardown has identified the main silicon; board-level detail on its power design and component choices is still thin.</p>
     <p><strong>Why it matters:</strong> independent examination of heavily marketed AI hardware.</p>
     <p><strong>Priority:</strong> HIGH PRIORITY</p>
   </li>
     <li>
     <h3>Apple Vision Pro</h3>
-    <p><strong>Sought for:</strong> Dual-chip (M2 + R1) spatial computer. Apple publishes nothing about the board; independent analysis is scarce and the display stack is unique.</p>
-    <p><strong>Why it matters:</strong> the most complex consumer board of its generation, undocumented.</p>
+    <p><strong>Sought for:</strong> Dual-chip (M2 + R1) spatial computer. Apple publishes nothing about the board; iFixit&rsquo;s Chip ID guide (February 2024) identified the main silicon, but board-level documentation is still thin and the display stack is unique.</p>
+    <p><strong>Why it matters:</strong> the most complex consumer board of its generation, still barely documented beyond chip identification.</p>
     <p><strong>Priority:</strong> HIGH PRIORITY</p>
   </li>
     <li>
     <h3>Nintendo Switch 2</h3>
-    <p><strong>Sought for:</strong> New generation hardware with unknown silicon revisions, board layout, and repairability characteristics.</p>
+    <p><strong>Sought for:</strong> New generation hardware; its Tegra T239 silicon was identified in June 2025, but board layout and repairability characteristics are still undocumented.</p>
     <p><strong>Why it matters:</strong> baseline documentation before revisions and cost-downs change the design.</p>
     <p><strong>Priority:</strong> HIGH PRIORITY</p>
   </li>
@@ -224,7 +238,7 @@ When a device is acquired, it graduates off the board and the next one moves up.
   </li>
     <li>
     <h3>Oura Ring 4</h3>
-    <p><strong>Sought for:</strong> Extremely compact wearable; no public teardown of the current generation.</p>
+    <p><strong>Sought for:</strong> Extremely compact wearable; TechInsights has published a teardown of this generation, but no open board-level documentation exists.</p>
     <p><strong>Why it matters:</strong> miniaturization techniques worth studying and recording.</p>
     <p><strong>Priority:</strong> ELEVATED</p>
   </li>
@@ -268,6 +282,7 @@ When a device is acquired, it graduates off the board and the next one moves up.
 
 <script src="/nav.js" defer></script>
 <script src="/search.js" defer></script>
+<script src="/most-wanted.js" defer></script>
 <script src="/i18n.js" defer></script>
 </body>
 </html>

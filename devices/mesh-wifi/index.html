@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mesh Wi-Fi — BareBoard — Free Hardware Education</title>
+<meta name="description" content="Mesh Wi-Fi (Eero, Nest Wifi, Deco, Orbi): node anatomy, backhaul truth, FCC per-band reports, the eero Plus subscription record, faults and fixes.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Mesh Wi-Fi">
+<meta property="og:description" content="Mesh Wi-Fi: pretty towers, rented features, and the $10 cable that outperforms them.">
+<meta property="og:url" content="https://bareboard.org/devices/mesh-wifi/">
+<meta property="og:image" content="https://bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/devices/">Devices</a></li>
+        <li class="has-children">
+          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/about.html#how-we-work">How we work</a></li>
+                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/notes/">Bench Notes</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                <li><a href="/protocols.html">Protocol RE</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
+                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
+                <li><a href="/hot-100.html">Game Consoles</a></li>
+                <li><a href="/hot-100.html">Media Streamers</a></li>
+                <li><a href="/hot-100.html">Networking Gear</a></li>
+                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
+                <li><a href="/hot-100.html">Other</a></li>
+                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
+                <li><a href="/hot-100.html">Phones</a></li>
+                <li><a href="/hot-100.html">Printers</a></li>
+                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
+                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
+                <li><a href="/hot-100.html">Wearables</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/most-wanted.html#board">The board</a></li>
+              </ul>
+            </div>
+          </div></li>
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+                <li><a href="/watchmen.html#corrections">Corrections</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+  <aside class="legal-notice bb-notice-amber">
+    <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
+  </aside>
+
+  <h1>Mesh Wi-Fi</h1>
+  <p class="lede">One network name, many radios, and a business model hiding in the wiring closet: mesh systems replaced the router you owned with a fleet you subscribe to. The boards are simple. The record is about the paywall.</p>
+  <section>
+    <h2 id="fcc">FCC ID</h2>
+    <p><strong>FCC IDs vary by brand, model, and node.</strong> Each mesh node is a full radio system and files separately (Google&rsquo;s Nest Wifi files under grantee code <strong>A4R</strong>, the same code as the Nest Mini at A4R-H2C; Eero and TP-Link Deco file under their own codes). Mesh filings are a gift to the reader: to certify multi-node systems, makers file detailed internal photos and RF reports for every node variant.</p>
+    <p>Every radio a device carries &mdash; Wi-Fi, Bluetooth, cellular, ultra-wideband, NFC &mdash; needs an FCC equipment authorization before the device can be sold in the United States. To get one, the manufacturer files photographs and test reports with the FCC, and those filings are <strong>public record</strong>. Check the label on your specific unit and look it up at <a href="https://fccid.io">fccid.io</a>.</p>
+    
+  </section>
+  <section>
+    <h2 id="fcc-revealed">What the FCC filing revealed</h2>
+    <p>The FCC filing for this device includes the documents manufacturers are required to submit: external photos, internal photos, test setup photos, RF test reports, and the user manual. These are public record at <a href="https://fccid.io/">fccid.io</a>.</p>
+    <ul>
+      <li><strong>Internal photos</strong> &mdash; the antenna array (6&ndash;8 antennas on Wi-Fi 6E nodes), the heatsinking (these are passively cooled computers that run hot), and the board&rsquo;s radio sections under their shields</li>
+      <li><strong>Test reports per band</strong> &mdash; 2.4 / 5 / 6&nbsp;GHz output and DFS (radar-sharing) behavior &mdash; the paper trail that explains real-world throughput better than the box&rsquo;s &lsquo;AX5400&rsquo; arithmetic (the class number sums theoretical rates no client will ever see)</li>
+      <li><strong>Node variants documented</strong> &mdash; router vs. point/satellite hardware differences, which marketing renders invisible</li>
+    </ul>
+    <p>What the FCC filing does <em>not</em> include: schematics (withheld under confidentiality requests where the maker files them), firmware, and the full bill of materials.</p>
+  </section>
+  <section>
+    <h2 id="exploded">Exploded view &mdash; the assemblies in build order</h2>
+    <p>This is the centerpiece of the page: the device taken apart into its assemblies, in the order they go together, every part named in plain language with what it does. An <em>exploded view</em> is the drawing a manufacturer makes showing every part separated along the path it assembles &mdash; the single most useful document in repair, and the one most often kept behind a dealer login.</p>
+    <h3>The source</h3>
+    <p><strong>Parts book:</strong> none. No mesh maker sells parts or publishes a diagram. <strong>FCC internal photos</strong> are the source. A mesh node is a small passively-cooled computer: radio board, big passive heatsink, antennas around the shell, one or two Ethernet ports, and a power supply that is the most common failure in the whole system.</p>
+    <p><strong>Coverage: PARTIAL &mdash; no public parts book; FCC internal-photo basis.</strong></p>
+    <h3>Build order</h3>
+        <h3>Step 1 &mdash; Shell, antennas &amp; heatsink</h3>
+    <p>The pretty fabric or plastic tower is an antenna farm wearing a heatsink as a hat.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Antenna array</td><td>Multiple printed/flex antennas for each band, arranged around the shell for spatial diversity (MIMO &mdash; multiple-input/multiple-output, using several antennas to multiply throughput). Antenna placement is the product; the shell is shaped around it.</td></tr>
+        <tr><td>Heatsink &amp; thermal path</td><td>Fanless nodes dump SoC heat into a metal mass and the case. A node in a closed cabinet or direct sun is a node cooking itself &mdash; thermal throttling presents as &lsquo;the Wi-Fi got slow.&rsquo;</td></tr>
+        <tr><td>Status LED &amp; touch/button surface</td><td>The node&rsquo;s entire local interface. When the app is the only window, the LED&rsquo;s blink codes are the fault table.</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 2 &mdash; Radio board</h3>
+    <p>One board: SoC, radios, Ethernet, memory.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>SoC (Qualcomm / Broadcom / MediaTek)</td><td>The networking processor &mdash; the same families that power conventional routers, documented at family level in this site&rsquo;s <a href="/datasheets.html">Datasheet Index</a>; exact SKU per node from FCC photos.</td></tr>
+        <tr><td>Radio chains (2.4 / 5 / 6 GHz)</td><td>Separate power amplifiers and front ends per band. Tri-band nodes may dedicate one 5 or 6&nbsp;GHz radio to backhaul (the node-to-node link); dual-band nodes share client radios for backhaul and halve under load.</td></tr>
+        <tr><td>Ethernet switch &amp; ports</td><td>One WAN + one LAN on most nodes (more on gateway-class models). A node is also a small switch &mdash; wiring a node to the gateway (&lsquo; Ethernet backhaul&rsquo;) removes the wireless hop entirely.</td></tr>
+        <tr><td>Flash &amp; RAM</td><td>Soldered. Firmware and the config live here &mdash; and the config&rsquo;s real home is the maker&rsquo;s cloud account (see the record).</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 3 &mdash; Power supply</h3>
+    <p>The wall adapter is a part of the system, and its most mortal one.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>AC adapter (USB-C or barrel, model-specific)</td><td>Node adapters are not interchangeable across generations even within a brand. A weak/substitute adapter presents as random node reboots under load.</td></tr>
+        <tr><td>Internal regulators</td><td>Board-level power conversion of the classes indexed in the <a href="/datasheets.html">Datasheet Index</a>; a node that dies after a storm surge usually dies here.</td></tr>
+      </tbody>
+    </table>
+
+        <p><strong>What is missing, in the open:</strong> everything below the whole-node level. Mesh hardware service is: replace the node, replace the adapter. The repair that actually exists for mesh is <em>architectural</em> &mdash; placement, wired backhaul, and knowing which settings your subscription rents you (next sections).</p>
+  </section>
+  <section>
+    <h2 id="we-reveal">What we reveal</h2>
+    <p>The FCC tells you what a device emits. We tell you what&rsquo;s inside and how it works.</p>
+    <ul>
+      <li><strong>Backhaul is the whole ballgame</strong> &mdash; dedicated band vs. shared band vs. a $10 Ethernet cable, in that order of honesty</li>
+      <li><strong>The class-number lie</strong> &mdash; why &lsquo;AX5400&rsquo; sums radios no single client can combine, straight from the filed test reports</li>
+    </ul>
+    <p>Check our <a href="/autopsy/">teardowns</a> for full board-level analysis.</p>
+  </section>
+  <section>
+    <h2 id="variants">The main systems</h2>
+    <p>Three ecosystems, three philosophies of who owns the network:</p>
+    <table>
+      <tr><th>System</th><th>Maker</th><th>Hallmarks</th><th>Notes</th></tr>
+      <tr><td>Eero</td><td>Amazon (acquired 2019)</td><td>App-only management, eero Plus subscription for advanced features</td><td>The subscription record below is mostly Eero&rsquo;s.</td></tr>
+      <tr><td>Nest Wifi / Nest Wifi Pro</td><td>Google (grantee A4R)</td><td>Router + Points with speakers (original), Wi-Fi 6E Pro line</td><td>Managed in the Google Home app; the old Google Wifi app was retired into it.</td></tr>
+      <tr><td>Deco</td><td>TP-Link</td><td>Aggressive price/performance, wide model range</td><td>See the regulator entry in the record &mdash; dated and sourced.</td></tr>
+      <tr><td>Orbi / Velop / ZenWiFi</td><td>Netgear / Linksys / ASUS</td><td>High-end tri-band, some local web UI survives</td><td>The enthusiast tier &mdash; the closest thing to a router you still administer.</td></tr>
+    </table>
+  </section>
+  <section>
+    <h2 id="chips">Key chips &amp; components</h2>
+    <ul>
+      <li><strong>Networking SoCs (Qualcomm Networking Pro / Broadcom / MediaTek Filogic families)</strong> &mdash; family-level briefs public; full datasheets under NDA. This site&rsquo;s <a href="/datasheets.html">Datasheet Index</a> holds the support-component layer (regulators, Ethernet PHY class parts). Collection targets logged per family.</li>
+      <li><strong>The XB3 on this bench is the control case:</strong> the <a href="/devices/xfinity-xb3/">Xfinity XB3 gateway</a> shows what a fully-autopsied home-network board looks like when a site does the work &mdash; the mesh nodes deserve, and have not yet had, the same treatment.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="faults">Faults &mdash; which part fails, and how you know</h2>
+    <p>Mesh faults are mostly physics and arithmetic wearing app costumes:</p>
+    <ul>
+      <li><strong>One node always slow / always red</strong> &mdash; placement: it is too far, or behind the refrigerator/ductwork/mirror (metal and water are Wi-Fi poison). The fix is moving it a room closer, not a firmware update.</li>
+      <li><strong>Whole network degrades at busy hours</strong> &mdash; dual-band shared backhaul saturating. Wiring the busiest node (Ethernet backhaul) is the single highest-value mesh repair that exists.</li>
+      <li><strong>Random reboots of one node</strong> &mdash; its power adapter, heat, in that order. Swap adapters between nodes: if the fault follows the adapter, you have your answer and your cheapest fix.</li>
+      <li><strong>New device &lsquo;can&rsquo;t see&rsquo; the network</strong> &mdash; band steering: legacy 2.4&nbsp;GHz-only IoT gear confused by a unified SSID. The fix is a guest/IoT SSID or a setup mode &mdash; buried, on some systems, behind the subscription.</li>
+      <li><strong>Settings you set are gone</strong> &mdash; the config lives in the cloud account; a factory reset or an app migration re-homes it. Know which account your network belongs to before you need it.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="safety">Safety, before you open anything</h2>
+    <p>Nodes are low-voltage devices; the live risks are mundane and real: heat (don&rsquo;t seal a passively cooled node in an unventilated box), and the power adapter (replace like-for-like; a bargain adapter that sags under load creates faults that look like firmware bugs).</p>
+    <p>The bigger safety surface is administrative: your mesh admin app is the key to every device in the house. A strong account password and 2FA on the <em>network&rsquo;s</em> account matters as much as any router setting on this page.</p>
+  </section>
+  <section>
+    <h2 id="record">The full record &mdash; dated, sourced, nothing smoothed over</h2>
+    <p>Mesh Wi-Fi&rsquo;s record is the subscription record: hardware sold once, features rented forever &mdash; plus one regulator file that is still open.</p>
+    <table>
+      <thead><tr><th>Date</th><th>Event</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>2019-02-11</td><td>Amazon acquires Eero (reported price ~$97 million). The leading mesh brand becomes a platform subsidiary; its roadmap bends toward services.</td><td>Amazon/Eero announcements; NYT-reported price</td></tr>
+        <tr><td>2022</td><td>Eero moves established features &mdash; including detailed activity data and advanced network functions &mdash; behind the eero Plus subscription ($9.99/month), drawing sustained owner criticism that features shipped in the box became rent.</td><td>Eero Plus plan documentation; owner-press coverage, 2022</td></tr>
+        <tr><td>2021&ndash;2022</td><td>Google retires the Google Wifi app and migrates all management into Google Home; the standalone web/admin interfaces do not survive the migration. Configuration authority consolidates in the platform app.</td><td>Google support notices</td></tr>
+        <tr><td>2024-12</td><td>US agencies are reported to be investigating TP-Link routers over national-security concerns tied to China-linked exploitation of home routers; TP-Link (whose US business operates as TP-Link Systems Inc., Irvine, CA, after a 2024 reorganization) disputes the characterization. As of this writing the investigation is a matter of reporting, not an enacted ban &mdash; check current status before buying or condemning.</td><td>Reuters / WSJ reporting, Dec. 2024; TP-Link Systems statements</td></tr>
+      </tbody>
+    </table>
+    <h3>Did you know</h3>
+    <ul>
+      <li>An Ethernet cable is a mesh upgrade: wired backhaul removes the wireless hop that halves dual-band throughput &mdash; the best-performing &lsquo;node&rsquo; is a wire.</li>
+      <li>The speed on the box (e.g. AX5400) is a sum across radios and bands that no single device can use &mdash; the filed FCC test reports show the per-band reality.</li>
+      <li>Your mesh network&rsquo;s configuration lives in a cloud account. Selling the house&rsquo;s router now means transferring an account, not handing over a password card.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="documents">Documents &amp; deep dive</h2>
+    <p>Every document this page rests on, linked. Site library copies first, then the public record at the source.</p>
+    <ul>
+      <li><strong>FCC filings</strong> per system and node (Nest Wifi under A4R) &mdash; the internal photos and per-band test reports: <a href="https://fccid.io">fccid.io</a>.</li>
+      <li><a href="/devices/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a> &mdash; this site&rsquo;s full autopsy of a home-network board.</li>
+      <li><a href="/datasheets.html">BareBoard Datasheet Index</a> &mdash; support-component documentation.</li>
+      <li><a href="/devices/smart-thermostats/">Smart Thermostats</a> &mdash; the devices that suffer most when the mesh is wrong.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="reading">Further Reading</h2>
+    <ul>
+      <li><a href="/devices/xfinity-xb3/">XB3 Autopsy &mdash; what a gateway board really contains</a></li>
+      <li><a href="/obsolescence.html">Planned Obsolescence &mdash; subscriptions as a shutdown mechanism</a></li>
+      <li><a href="/protocols.html">Protocol RE &mdash; reading the radios yourself</a></li>
+    </ul>
+  </section>
+
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

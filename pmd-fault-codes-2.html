@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fault Codes, Translated: The Other Systems &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="Dynamic Shark and DX flash codes and Invacare MK6i E-codes, translated: what each code means and what an owner checks first.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Fault Codes, Translated: The Other Systems">
+<meta property="og:description" content="Shark, DX and MK6i codes in plain language &mdash; what it means, what to check first.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-fault-codes-2.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Fault Codes, Translated: The Other Systems</h1>
+    <p class="lede"><a href="/pmd-fault-codes.html">Part one</a> translated the codes for VR2, VSI, R-net and LiNX. Three more systems cover most of the chairs that were left: Dynamic Controls <strong>Shark</strong>, Dynamic Controls <strong>DX and DX2</strong>, and Invacare&rsquo;s <strong>MK6i</strong>. Same deal as part one: what the code means, what you check first, in what order.</p>
+    <p>Find your system, read the code the way the chair shows it, and write it down before you call anyone: a code you can name is a repair you can argue about.</p>
+    <p><em>Provenance: these tables are compiled from the manufacturers&rsquo; own published documents &mdash; Dynamic Controls&rsquo; Diagnostic Flash Code Listings and <a href="/library/collected-public-docs/pmd/dynamic-controls_shark-power-module_technical.pdf">SHARK manuals</a>, and Invacare&rsquo;s MK6i Field Reference Guide (part no. 1141471) and TDX service manuals &mdash; and checked against them. Codes that could not be confirmed in the manufacturers&rsquo; documents are not listed. Documentation, not bench measurement: if your chair disagrees with this page, the chair wins &mdash; write down what yours actually does.</em></p>
+  </section>
+
+  <section id="safety">
+    <p><strong>Before any check in these tables that touches a plug, cable, motor, brake, actuator, or battery terminal:</strong> put the chair on level ground, switch it OFF, and disconnect the main battery harness or trip the main circuit breaker. Do not do the check while seated in the chair. Connector pins can remain live after switch-off. Keep a disconnected cable from touching skin, jewelry, tools, or metal, and cover or restrain it so the pins cannot short. At a battery terminal, work on one terminal at a time with an insulated tool. If you cannot disconnect power, inspect visually only and stop.</p>
+    <p>The manufacturers&rsquo; own warning, carried word for word from a Shark owner&rsquo;s manual: <em>&ldquo;Note: SHARK is not user serviceable. Specialized tools are necessary for the repair of any SHARK component.&rdquo;</em> True &mdash; for repairs inside the components. Reading a flash code needs no tools at all: the chair displays it for free, on purpose, where you can see it. That is the part this page uses.</p>
+  </section>
+
+  <section id="shark">
+    <h2>Dynamic Controls Shark &mdash; count the flashes on the gauge</h2>
+    <p>Shark is the system on a large share of scooters and mid-range power chairs. Its joystick unit has a row of lights (the <strong>information gauge</strong>). The lights speak before any code appears:</p>
+    <ul>
+      <li><strong>Left red light flashing:</strong> battery charge is low. Charge as soon as you can.</li>
+      <li><strong>All lights flashing slowly:</strong> the joystick was out of neutral at power-up (Dynamic&rsquo;s name for it: <strong>OONAPU</strong> &mdash; something was pushing the stick when you switched on). Let go of the stick; it clears itself. This is not a fault.</li>
+      <li><strong>All lights flashing quickly:</strong> the chair has detected a fault. Count the flashes in the repeating pattern &mdash; that count is the code.</li>
+      <li><strong>Two amber lights flashing:</strong> a communication fault between the joystick unit and the power module. Check the power module for a fault, check the cable between them for damage, and make sure the battery is charged.</li>
+      <li><strong>Lights chasing right-to-left just after switch-on:</strong> the chair is coming out of lock mode. Press the horn twice within 10 seconds of switching on to unlock it.</li>
+      <li><strong>Right green light flashing:</strong> the chair is in speed-limit mode (often because the seat is raised) &mdash; a mode, not a fault.</li>
+    </ul>
+<table>
+<thead><tr><th>Flashes</th><th>What it means</th><th>What you check first</th></tr></thead>
+<tbody>
+<tr><td>1 flash</td><td>User fault</td><td>Dynamic lists this as a possible stall timeout or user error: the chair was driven against something it could not move, or held at stall. Reverse away, let the joystick return to center, and try again.</td></tr>
+<tr><td>2 flashes</td><td>Battery fault</td><td>Check the batteries and their cabling: main plugs, terminal bolts, breaker. Load-test the pair if it keeps happening (see <a href="/pmd-fixes.html">Cheap Fixes, Procedure 3</a>). Dynamic&rsquo;s note is blunt: the batteries may require replacing.</td></tr>
+<tr><td>3 flashes</td><td>Motor 1 fault (M1 is normally the left motor)</td><td>Check the motor, its heavy plug at the power module, and the cable run for pinches or cuts.</td></tr>
+<tr><td>4 flashes</td><td>Motor 2 fault (M2 is normally the right motor)</td><td>Same checks as 3 flashes, on the Motor 2 side.</td></tr>
+<tr><td>5 flashes</td><td>Left park brake fault</td><td>The electric brake in the left motor. First: the left freewheel lever &mdash; flip it firmly to DRIVE. Then the small 2-pin brake plug behind the motor (Procedure 1).</td></tr>
+<tr><td>6 flashes</td><td>Right park brake fault</td><td>Same checks as 5 flashes, on the right: freewheel lever to DRIVE, then the brake plug.</td></tr>
+<tr><td>7 flashes</td><td>Shark control unit (joystick unit) fault</td><td>The fault is inside the joystick unit itself. Check its cable and plug first &mdash; a bad connection can condemn a good unit. If the code stays, the unit is the fault.</td></tr>
+<tr><td>8 flashes</td><td>Shark power module fault</td><td>Check every connection and wire at the power module in the base. If all are sound and the code stays, the fault is inside the power module.</td></tr>
+<tr><td>9 flashes</td><td>Shark communications fault</td><td>The joystick unit and power module have lost contact. Unplug the bus cable between them, check the pins, reconnect firmly (Procedure 4).</td></tr>
+<tr><td>10 flashes</td><td>Unknown fault</td><td>The system knows something is wrong but cannot name it. Check all connections and wiring; photograph the gauge and note the code before calling &mdash; Dynamic&rsquo;s own action for this code is &ldquo;consult a service agent,&rdquo; and the code is your evidence.</td></tr>
+<tr><td>11 flashes</td><td>Incompatible control unit</td><td>A part that does not belong to this system has been fitted: Dynamic states the branding of the power module must match the control unit. This code appears after a wrong-part swap &mdash; ask what was changed.</td></tr>
+</tbody>
+</table>
+  </section>
+
+  <section id="dx">
+    <h2>Dynamic Controls DX &amp; DX2 &mdash; the status light codes</h2>
+    <p>DX is Dynamic&rsquo;s older modular system: separate power, seating and lighting modules on one bus (the <strong>DX Bus</strong> &mdash; the cable network the modules talk on). Faults show as flash codes on the remote&rsquo;s status light: count the flashes, pause, repeat. Dynamic names the drive channels <strong>M1</strong> and <strong>M2</strong> &mdash; M1 is normally the left motor, M2 normally the right; identify a motor by its plug, not only by side.</p>
+<table>
+<thead><tr><th>Flashes</th><th>What it means</th><th>What you check first</th></tr></thead>
+<tbody>
+<tr><td>1 flash</td><td>DX module fault</td><td>If the chair has just been reprogrammed this may not be a real fault: switch off and on to clear it. Otherwise check the DX Bus connectors and cables, look at the status lights on the other modules, and confirm every module that should be present is connected.</td></tr>
+<tr><td>2 flashes</td><td>DX accessory fault</td><td>An accessory device (anything connected to the system other than the power module) is sending a slow/stop signal or has a fault. Unplug accessories one at a time to find it.</td></tr>
+<tr><td>3 flashes</td><td>Motor 1 fault (normally left)</td><td>Check the motor, its connections and cabling.</td></tr>
+<tr><td>4 flashes</td><td>Motor 2 fault (normally right)</td><td>Check the motor, its connections and cabling.</td></tr>
+<tr><td>5 flashes</td><td>Left park brake fault</td><td>Freewheel lever firmly to DRIVE; then the brake&rsquo;s connections and cabling (Procedure 1).</td></tr>
+<tr><td>6 flashes</td><td>Right park brake fault</td><td>Same checks as 5 flashes, on the right brake.</td></tr>
+<tr><td>7 flashes</td><td>Low battery fault</td><td>Dynamic&rsquo;s own check: battery voltage must be <strong>above 17V</strong> for the pair. Check battery connections and terminals, then the batteries&rsquo; condition (Procedure 3).</td></tr>
+<tr><td>8 flashes</td><td>Over-voltage fault</td><td>Dynamic&rsquo;s check: battery voltage must be <strong>below 32V</strong>. Check the battery wiring and that every terminal is secure &mdash; and suspect the charger if this follows charging.</td></tr>
+<tr><td>9 flashes</td><td>CAN L fault</td><td>A fault on one wire of the DX Bus. Check the condition of the bus cables and connectors along their whole run.</td></tr>
+<tr><td>10 flashes</td><td>CAN H fault</td><td>The other bus wire. Same cable checks as 9 flashes; Dynamic also notes to check the hazard lights were not switched on at power-up.</td></tr>
+<tr><td>11 flashes</td><td>Stall timeout fault</td><td>The motors were held stalled too long (a wheel against a wall or a high threshold). Make sure both motors can turn freely, then switch off and on.</td></tr>
+<tr><td>12 flashes</td><td>Module mismatch</td><td>A module or its software does not belong with the rest of the system &mdash; Dynamic&rsquo;s action is reprogramming, which is a programmer job (see <a href="/pmd-programmers.html">The Keys</a>). This code after a part swap means the swap was never configured. Name the code when you call.</td></tr>
+</tbody>
+</table>
+  </section>
+
+  <section id="mk6i">
+    <h2>Invacare MK6i &mdash; read the E-code on the screen</h2>
+    <p>MK6i is Invacare&rsquo;s own electronics, fitted to the TDX line and other Invacare chairs. On chairs with the colour <strong>MPJ+</strong> joystick, faults appear on the screen as <strong>E-codes</strong>, and the chair keeps a <strong>fault log</strong> &mdash; a dated, time-stamped history of every code, which is evidence: do not let anyone clear it before it has been read. On the simpler <strong>SPJ+</strong> joystick (no screen), codes are shown on the joystick&rsquo;s information gauge and read in full with the Remote Programmer.</p>
+<table>
+<thead><tr><th>Code</th><th>What it means</th><th>What you check first</th></tr></thead>
+<tbody>
+<tr><td>E01 / E02 / E03 / E04</td><td>Joystick or input value out of range (one code per direction: forward, reverse, left, right)</td><td>Something is holding the stick or input off centre, or it was deflected at switch-on. Clear the stick, let it centre, power-cycle. If one direction&rsquo;s code returns, the input itself is suspect.</td></tr>
+<tr><td>E09 / E10</td><td>Bad motor connection</td><td>Invacare&rsquo;s service manual, word for word: &ldquo;Check all connections. Ohm out each brake coil.&rdquo; Start with the motor plugs at the controller; a brake-coil check is a multimeter job (a meter measures the coil&rsquo;s resistance &mdash; an open coil reads as no connection at all).</td></tr>
+<tr><td>E18</td><td>Joystick or input device failed</td><td>Check the input&rsquo;s cable and plug at both ends. If connections are sound, the input device itself has failed its self-check.</td></tr>
+<tr><td>E19</td><td>Joystick calibration values out of range</td><td>The chair no longer trusts where the stick&rsquo;s centre is. Recalibration is done through the programmer &mdash; name the code and ask for a calibration before anyone quotes a new joystick.</td></tr>
+<tr><td>E32</td><td>Joystick or input device disconnected</td><td>The controller cannot see its input at all. Follow the cable from the joystick down: unplugged, pinched, or cut are the usual causes.</td></tr>
+<tr><td>E41</td><td>Communications fault latched at switch-off</td><td>The controller recorded a fault during the previous shut-down. Power the chair off and back on; if E41 returns, write it down with the date &mdash; it points at an intermittent cable or module.</td></tr>
+<tr><td>E200</td><td>&ldquo;SPM NOT CONNECTED&rdquo; &mdash; the display/joystick module is not communicating with the control module</td><td>Check the connections between the joystick or display and the controller. Power off and back on. Invacare&rsquo;s manual: if it persists, the controller is the suspect &mdash; after the cable, not before.</td></tr>
+<tr><td>W05</td><td>Attendant control active</td><td>Not a fault. The attendant control (the second control some chairs carry for a carer) is switched in and is driving. The chair is doing what it was told.</td></tr>
+</tbody>
+</table>
+    <p>One lock remains on this system: Invacare&rsquo;s guide states that reading the fault log&rsquo;s <em>causes and troubleshooting steps</em> requires a <strong>professional memory card</strong> in the programmer. The codes above are what the chair shows you for free. The explanations behind them are tiered &mdash; which is why this page exists, and why <a href="/pmd-programmers.html">The Keys</a> names the card system in full.</p>
+  </section>
+
+  <section>
+    <h2>Before you call anyone</h2>
+    <p>Read the code. Count it twice. Write it down with the date &mdash; on MK6i, photograph the screen, because the fault log behind it is evidence. Try the owner check in the table: on these three systems, as on the first three, the codes that strand people most are brake levers, a dying battery, and a loose bus plug. If the fault is inside a module, you now know which module &mdash; and you can say so.</p>
+    <p><a href="/pmd.html">&larr; Back to PMD</a> &middot; <a href="/pmd-fault-codes.html">Fault codes, translated (part one) &rarr;</a></p>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

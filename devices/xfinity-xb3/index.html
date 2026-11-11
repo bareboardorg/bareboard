@@ -76,7 +76,19 @@
               </ul>
             </div>
           </div></li>
-        <li class="has-children">
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
           <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
           <div class="col-panel">
             <div class="dropdown-inner">
@@ -139,7 +151,7 @@
     <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
   </aside>
   <h1>Xfinity XB3 (Arris TG1682G)</h1>
-  <p class="lede">Comcast&rsquo;s workhorse DOCSIS 3.0 gateway &mdash; a 24&times;8 cable modem, dual-band Wi-Fi router, and telephone adapter in one rented box. Powered by Intel&rsquo;s controversial Puma 6 chipset.</p>
+  <p class="lede">Comcast&rsquo;s workhorse DOCSIS 3.0 gateway &mdash; a 24&times;8 cable modem, dual-band Wi-Fi router, and telephone adapter in one rented box. Powered by Intel&rsquo;s controversial Puma 6 chipset. One framing note: &ldquo;XB3&rdquo; was Comcast&rsquo;s tier name for boxes from several makers &mdash; this page documents the Arris TG1682G; Cisco&rsquo;s DPC3941T and a Technicolor model were also sold as XB3s, with different hardware inside.</p>
 
   <section>
     <h2 id="fcc">FCC ID</h2>
@@ -180,8 +192,9 @@
   <section>
     <h2 id="specs">Specifications</h2>
     <ul>
-      <li><strong>SoC:</strong> Intel DHCE2652 (Puma 6) &mdash; dual-core 1.2 GHz x86-64 + ARM Cortex-A9</li>
-      <li><strong>RAM:</strong> 512 MB (2&times; Samsung K4B2G1646B LPDDR3)</li>
+      <li><strong>SoC:</strong> Intel DHCE2652 (Puma 6) &mdash; Atom 652 (1 core / 2 threads) 1.2 GHz x86 + ARM1176-class ARMv6 (~450 MHz, DOCSIS side)</li>
+      <li><strong>RAM:</strong> 512 MB (2&times; Samsung K4B2G1646B DDR3)</li>
+      <li><strong>MoCA:</strong> 2.0</li>
       <li><strong>Flash:</strong> 128 MB (Spansion S34ML01G200TFI00)</li>
       <li><strong>DOCSIS:</strong> 3.0, 24 downstream &times; 8 upstream channels</li>
       <li><strong>Wi-Fi:</strong> 2.4 GHz (Qualcomm Atheros AR9381) + 5 GHz (Qualcomm Atheros QCA9880), 802.11ac</li>
@@ -206,6 +219,37 @@
 
     <h3>Default credentials</h3>
     <p>The TG1682G shipped with well-known default admin credentials (admin/password), documented in the FCC filing and widely published. While standard for ISP equipment of this era, default credentials on millions of deployed gateways represent a significant attack surface.</p>
+  </section>
+
+  <section>
+    <h2 id="record">The Full Record</h2>
+    <p>Everything in this timeline is documented &mdash; a court outcome, a regulator&rsquo;s action, a published security analysis, or Comcast&rsquo;s and Arris&rsquo;s own statements &mdash; and each entry links its source. Where a popular claim about the XB3 is <em>not</em> proven, it is labeled Unverified at the end, with the evidence on both sides.</p>
+    <table>
+      <tr><th>Year</th><th>What happened</th><th>Source</th></tr>
+      <tr><td>2014</td><td><strong>Default admin credentials.</strong> The TG1682G shipped with the well-known default admin login admin/password, documented in the filed manual and widely published. (Details in Controversies &amp; Legal above.)</td><td><a href="https://fccid.io/UIDTG1682">FCC filing UIDTG1682</a></td></tr>
+      <tr><td>2014&ndash;2015</td><td><strong>The home-hotspot lawsuit: Grear v. Comcast.</strong> In December 2014, San Francisco customers Toyer Grear and Joycelyn Harris sued Comcast (Case No. 4:14-cv-05333-JSW, N.D. Cal.), alleging Comcast turned the second radio in rented home gateways into the public &ldquo;xfinitywifi&rdquo; hotspot network without their authorization &mdash; shifting electricity and network costs onto subscribers and adding security risk. Comcast said it disagreed and that the program benefits customers. The case never reached the merits: on March 3, 2015, Judge Jeffrey White stayed the lawsuit and compelled arbitration, holding that the arbitration clause in the plaintiffs&rsquo; service agreement covered the claims.</td><td><a href="https://topclassactions.com/lawsuit-settlements/lawsuit-news/judge-stays-comcast-xfinity-public-wi-fi-class-action-compels-arbitration/">Top Class Actions &mdash; judge stays hotspot case, compels arbitration</a>; <a href="https://www.fastcompany.com/3039682/comcast-was-sued-for-quietly-making-your-homes-internet-part-of-the-sharing-economy?utm_source=postup&amp;utm_medium=email&amp;utm_campaign=wifi&amp;position=6&amp;partner=newsletter&amp;campaign_date=07022024">Fast Company &mdash; the original suit, December 2014</a></td></tr>
+      <tr><td>2016</td><td><strong>The Puma 6 latency defect is documented in public.</strong> Users on the DSLReports forums measured the spikes first; in December 2016 The Register reported the mechanism &mdash; the Puma 6&rsquo;s x86 processor stalls on a high-priority maintenance task every couple of seconds, adding at least 200 ms of latency and dropping about six per cent of packets over time &mdash; and Intel acknowledged a software issue affecting latency and said a fix was being prepared. Community testers later built a dedicated DSLReports Puma 6 test and maintained do-not-buy lists of Puma 6 models, this gateway&rsquo;s TG1682 family among them (community testing, not a regulator finding). (Details in Controversies &amp; Legal above.)</td><td><a href="https://www.theregister.com/on-prem/2016/12/03/why-your-gigabit-broadband-lags-like-hell-blame-intels-chipset/357829">The Register &mdash; Puma 6 latency, December 2016</a></td></tr>
+      <tr><td>2017</td><td><strong>Reyna v. ARRIS filed over the SB6190.</strong> On March 31, 2017, Carlos Reyna&rsquo;s class action was filed in the Northern District of California over the retail Arris SURFboard SB6190 &mdash; a different box from the XB3, built on the same Intel Puma 6 chip &mdash; alleging Arris sold the modem as fast and reliable without disclosing the latency defect. (Details in Controversies &amp; Legal above.)</td><td><a href="https://www.theregister.com/on-prem/2017/04/11/intels-buggy-puma-6-chipset-earns-arris-a-gigabit-modem-lawsuit/662674">The Register &mdash; the lawsuit, April 2017</a></td></tr>
+      <tr><td>2018</td><td><strong>Intel gives the flaw a CVE: CVE-2017-5693.</strong> In advisory INTEL-SA-00097, published with the CVE on July 31, 2018 &mdash; more than eighteen months after the latency reporting &mdash; Intel stated that firmware in the Puma 5, 6, and 7 series &ldquo;might experience resource depletion or timeout, which allows a network attacker to create a denial of service via crafted network traffic.&rdquo; In plain language: the same weakness that made these gateways lag under ordinary small-packet bursts could be triggered deliberately, with a relatively small packet payload, to knock a targeted modem offline or degrade it. Intel said it was working with ISPs and manufacturers to deliver mitigating firmware, which could only reach rented gateways like the XB3 through the ISP.</td><td><a href="https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-000097.html">Intel advisory INTEL-SA-00097</a></td></tr>
+      <tr><td>2018&ndash;2021</td><td><strong>How Reyna actually ended: Arris won.</strong> The case was not settled for a payout. On August 10, 2018, the district court certified a class of California SB6190 purchasers (buyers on or after October 1, 2015). On August 20, 2019, Judge Lucy Koh granted Arris summary judgment on the California class claims. The plaintiffs (by then led by Greg Knowles and Brian Alexander) appealed, and on May 14, 2021 the Ninth Circuit affirmed (Knowles v. ARRIS International plc, No. 19-17468): the panel held, among other things, that the plaintiffs had failed to raise a material issue of fact that the SB6190 failed to meet a minimum level of quality for the implied-warranty claim, and that summary judgment on the false-advertising and failure-to-disclose claims was also proper. The defect&rsquo;s existence and the lawsuit&rsquo;s failure are both part of the record.</td><td><a href="https://docs.justia.com/cases/federal/district-courts/california/candce/5:2017cv01834/309618/224">Order granting summary judgment, August 20, 2019 (Justia)</a>; <a href="https://caselaw.findlaw.com/court/us-9th-circuit/2127349.html">Knowles v. ARRIS, Ninth Circuit, May 14, 2021</a></td></tr>
+      <tr><td>2020</td><td><strong>Intel sold the Puma business.</strong> On July 31, 2020, MaxLinear completed its acquisition of Intel&rsquo;s Home Gateway Platform Division &mdash; the DOCSIS silicon line that includes Puma &mdash; for $150 million in cash, under an agreement dated April 5, 2020. The chip in this gateway has not been an Intel product since; its later descendants (Puma 8, and the ARM-based Puma 9 announced in 2026) are MaxLinear designs.</td><td><a href="https://investors.maxlinear.com/all-sec-filings/content/0001288469-20-000197/0001288469-20-000197.pdf">MaxLinear Form 8-K/A &mdash; SEC filing (PDF)</a></td></tr>
+      <tr><td>2023</td><td><strong>The CitrixBleed breach (company-level, not this gateway).</strong> Comcast disclosed in December 2023 that attackers exploited CVE-2023-4966 &mdash; the &ldquo;CitrixBleed&rdquo; flaw in Citrix NetScaler software Xfinity used internally &mdash; to access its internal systems between October 16 and 19, 2023, before Comcast&rsquo;s mitigation was in place. Comcast&rsquo;s filing with Maine&rsquo;s Attorney General put the number affected at 35,879,455 people; the data concluded to be involved included usernames and hashed passwords and, for some customers, names, contact information, last four digits of Social Security numbers, dates of birth, and secret questions and answers. The XB3 hardware was not the entry point &mdash; this is the record of the company that operates it, and it is labeled that way.</td><td><a href="https://www.theregister.com/security/2023/12/19/millions-of-xfinity-customers-hashed-passwords-info-stolen/1189853?td=readmore">The Register &mdash; Xfinity breach disclosure, December 2023</a></td></tr>
+      <tr><td>Ongoing</td><td><strong>Rental fees.</strong> The XB3 is rented, not sold: the monthly gateway fee has crept upward over the years (tracked at $14, then $15, per month in recent bills), so a long-held gateway costs its subscriber many times the hardware&rsquo;s value, and using your own modem for voice service has historically been difficult because voice requires a telephony gateway. (Details in Controversies &amp; Legal above.)</td><td><a href="https://20somethingfinance.com/comcast-xfinity-raises-modem-rental-fee-price/">20SomethingFinance &mdash; Xfinity rental fee history</a></td></tr>
+    </table>
+    <aside class="bb-notice-amber">
+      <p><strong>Unverified: &ldquo;The home hotspot costs you $20&ndash;30 a year and slows your own Wi-Fi.&rdquo;</strong> Those figures come from the Grear complaint (above), which cited a Speedify test alleging the second signal would cost a subscriber $20&ndash;30 a year in electricity if nobody used it, and 30&ndash;40% more power under heavy hotspot use. Evidence for the allegation: the complaint and the test it cited, and the undisputed fact that the hotspot ran on the subscriber&rsquo;s gateway and electricity by default. Evidence against treating the numbers as proven: Comcast publicly disputed the suit&rsquo;s allegations, the hotspot was provisioned as a separate network from the subscriber&rsquo;s private one, and &mdash; decisively &mdash; no court ever tested the figures, because the case was sent to private arbitration in 2015. The cost claim remains an allegation, recorded here as unverified.</p>
+    </aside>
+  </section>
+
+  <section>
+    <h2 id="did-you-know">Did you know</h2>
+    <ul>
+      <li><strong>Puma was Texas Instruments&rsquo; chip before it was Intel&rsquo;s.</strong> Intel bought the Puma family with Texas Instruments&rsquo; cable modem product line in 2010. The latency flaw&rsquo;s lineage runs through all three owners &mdash; TI, Intel, and (since 2020) MaxLinear. Source: <a href="https://www.theregister.com/on-prem/2016/12/03/why-your-gigabit-broadband-lags-like-hell-blame-intels-chipset/357829">The Register &mdash; Puma 6 latency, December 2016</a>.</li>
+      <li><strong>The lag had a rhythm: a stall every couple of seconds.</strong> The Register&rsquo;s reporting, from affected users&rsquo; measurements, put the mechanism plainly: every couple of seconds a high-priority maintenance task hogged the Puma 6&rsquo;s processor, pushing latency up by at least 200 ms and, over time, dropping about six per cent of packets &mdash; regular enough to graph, which is how gamers noticed it before any vendor admitted it. Source: <a href="https://www.theregister.com/on-prem/2016/12/03/why-your-gigabit-broadband-lags-like-hell-blame-intels-chipset/357829">The Register &mdash; Puma 6 latency, December 2016</a>.</li>
+      <li><strong>Arris&rsquo;s next gigabit modem quietly switched sides.</strong> For its DOCSIS 3.1 SB8200, Arris chose a Broadcom chip (the BCM3390) instead of Intel&rsquo;s successor Puma 7 &mdash; the modem maker at the center of the Puma 6 lawsuit sourced its flagship replacement from Intel&rsquo;s rival. Source: <a href="https://www.theregister.com/on-prem/2017/04/11/intels-buggy-puma-6-chipset-earns-arris-a-gigabit-modem-lawsuit/662674">The Register &mdash; the lawsuit, April 2017</a>.</li>
+      <li><strong>Your &ldquo;modem&rdquo; is also a two-line telephone system.</strong> Inside the TG1682G, alongside the cable modem and Wi-Fi radios, sits a dedicated voice processor (a DSP Group DCX81) driving two telephone jacks, plus MoCA 2.0 networking over the home&rsquo;s coax wiring &mdash; the box was Comcast&rsquo;s internet, TV-networking, and landline plant in a single rental unit. Source: <a href="https://techinfodepot.shoutwiki.com/wiki/Arris_TG1682G">TechInfoDepot &mdash; Arris TG1682G</a>.</li>
+      <li><strong>Puma&rsquo;s newest descendant abandoned Intel&rsquo;s architecture entirely.</strong> MaxLinear&rsquo;s Puma 9, announced in 2026, is built on ARM rather than the Intel x86 platform that ran every earlier Puma generation &mdash; the design line that began at Texas Instruments ends, architecturally, somewhere completely different. Source: <a href="https://www.lightreading.com/cable-technology/maxlinear-claims-new-puma-9-docsis-chip-is-a-big-cost-cutter">Light Reading &mdash; MaxLinear Puma 9, September 2026</a>.</li>
+    </ul>
   </section>
 
   <section>

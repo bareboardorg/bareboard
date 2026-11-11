@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chair Control &mdash; The Owner Tool &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="Chair Control: BareBoard&rsquo;s original owner tool. Plug your phone into your own power wheelchair, read its fault codes in plain English, see its settings, and take back control. Starts with a practice chair &mdash; no hardware needed.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="PMD &mdash; Power Mobility Devices">
+<meta property="og:description" content="Your legs shouldn&rsquo;t need a dealer&rsquo;s permission. Fault codes translated, settings explained, cheap fixes, real parts &mdash; free, in plain English.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-control.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+<link rel="stylesheet" href="/pmd-control.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Chair Control &mdash; the owner tool</h1>
+    <p class="lede">This is BareBoard&rsquo;s own software, written here, for the person who rides the chair. Plug your phone into your chair, read what it is saying in plain English, see the settings the dealer menu hides, and &mdash; where the manufacturer&rsquo;s own documents prove the path &mdash; change them yourself.</p>
+    <p><strong>New here? Start with the practice chair.</strong> It is a make-believe wheelchair inside this page. Every button works. Nothing real can break. Learn the whole tool on it first &mdash; that is what it is for.</p>
+    <p><em>Version 1. Original software, built from this site&rsquo;s own published research and the manufacturers&rsquo; public manuals. Not a copy of any dealer tool, and not affiliated with any manufacturer.</em></p>
+  </section>
+
+  <section id="app" aria-label="Chair Control app">
+    <div class="pc-statusbar">
+      <span id="pcStatus" class="pc-status pc-off">Not connected</span>
+      <span id="pcStatusDetail" class="pc-status-detail">Pick your chair below to begin.</span>
+    </div>
+
+    <div class="pc-card" id="pcConnectCard">
+      <h2>Step 1 &mdash; What chair are you connecting to?</h2>
+      <div class="pc-choices" role="radiogroup" aria-label="Chair type">
+        <label class="pc-choice">
+          <input type="radio" name="pcPlatform" value="simulator" checked>
+          <span class="pc-choice-title">Practice chair (recommended first)</span>
+          <span class="pc-choice-sub">A virtual R-net chair inside this page. No cables, no risk. Everything works.</span>
+        </label>
+        <label class="pc-choice">
+          <input type="radio" name="pcPlatform" value="rnet">
+          <span class="pc-choice-title">My real R-net chair</span>
+          <span class="pc-choice-sub">Curtiss-Wright / PG Drives R-net (CJSM, CJSM2, Omni screens). Read-only in version 1 &mdash; see why below.</span>
+        </label>
+        <label class="pc-choice">
+          <input type="radio" name="pcPlatform" value="vr2">
+          <span class="pc-choice-title">VR2 or VSI chair</span>
+          <span class="pc-choice-sub">Fault-code lookup in version 1: count the flashing bars, we translate them.</span>
+        </label>
+        <label class="pc-choice">
+          <input type="radio" name="pcPlatform" value="linx">
+          <span class="pc-choice-title">LiNX chair</span>
+          <span class="pc-choice-sub">Fault-code lookup in version 1: count the red flashes, we translate them.</span>
+        </label>
+        <label class="pc-choice">
+          <input type="radio" name="pcPlatform" value="curtis">
+          <span class="pc-choice-title">Curtis (enAble / P&amp;W) chair</span>
+          <span class="pc-choice-sub">Coming in a later version. The connection notes are written and waiting.</span>
+        </label>
+      </div>
+
+      <div id="pcTransportBlock" hidden>
+        <h3>How will your phone talk to the chair?</h3>
+        <div class="pc-choices" role="radiogroup" aria-label="Connection type">
+          <label class="pc-choice">
+            <input type="radio" name="pcTransport" value="serial" checked>
+            <span class="pc-choice-title">USB cable + CAN adapter (Web Serial)</span>
+            <span class="pc-choice-sub">Works in Chrome on Android phones and computers. The browser asks you to pick the adapter &mdash; nothing is installed.</span>
+          </label>
+          <label class="pc-choice">
+            <input type="radio" name="pcTransport" value="bluetooth">
+            <span class="pc-choice-title">Bluetooth CAN bridge</span>
+            <span class="pc-choice-sub">Wireless. Bridge protocols differ by maker &mdash; version 1 cannot pair yet. Listed honestly, not faked.</span>
+          </label>
+          <label class="pc-choice">
+            <input type="radio" name="pcTransport" value="usb">
+            <span class="pc-choice-title">USB CAN adapter (WebUSB / gs_usb)</span>
+            <span class="pc-choice-sub">In development for version 2. The adapter family is documented; the browser driver is not finished.</span>
+          </label>
+        </div>
+      </div>
+
+      <div id="pcHookup" class="pc-hookup"></div>
+
+      <p class="pc-actions">
+        <button id="pcConnectBtn" class="pc-btn pc-btn-primary" type="button">Connect</button>
+        <button id="pcDisconnectBtn" class="pc-btn" type="button" disabled>Disconnect</button>
+      </p>
+      <p id="pcConnectMsg" class="pc-msg" role="status"></p>
+    </div>
+
+    <div class="pc-tabs" role="tablist" aria-label="Tool sections">
+      <button class="pc-tab" role="tab" id="tab-monitor" aria-controls="panel-monitor" aria-selected="true" type="button">What the chair is saying</button>
+      <button class="pc-tab" role="tab" id="tab-faults" aria-controls="panel-faults" aria-selected="false" type="button">Fault codes</button>
+      <button class="pc-tab" role="tab" id="tab-settings" aria-controls="panel-settings" aria-selected="false" type="button">Settings</button>
+      <button class="pc-tab" role="tab" id="tab-help" aria-controls="panel-help" aria-selected="false" type="button">How to connect</button>
+    </div>
+
+    <section class="pc-panel" id="panel-monitor" role="tabpanel" aria-labelledby="tab-monitor">
+      <h2>What the chair is saying</h2>
+      <p>Every message your chair&rsquo;s parts send each other, translated as it happens. The chair&rsquo;s parts talk constantly &mdash; the joystick announcing itself, the power module reporting battery volts. Plain English first; the raw numbers are behind the details switch.</p>
+      <p class="pc-actions">
+        <label class="pc-toggle"><input type="checkbox" id="pcHexToggle"> Show the raw numbers (for the curious)</label>
+        <button id="pcPauseBtn" class="pc-btn" type="button">Pause</button>
+        <button id="pcClearBtn" class="pc-btn" type="button">Clear</button>
+      </p>
+      <ul id="pcBusLog" class="pc-buslog" aria-live="off"></ul>
+      <p id="pcBusEmpty" class="pc-msg">Nothing yet. Connect to a chair (or the practice chair) and its messages will appear here.</p>
+    </section>
+
+    <section class="pc-panel" id="panel-faults" role="tabpanel" aria-labelledby="tab-faults" hidden>
+      <h2>Fault codes, in plain English</h2>
+      <p>When a chair trips, it already tells you what is wrong &mdash; a code on the screen, or lights that flash a count. This reader uses the same tables published on <a href="/pmd-fault-codes.html">Fault Codes, Translated</a>, compiled from the manufacturers&rsquo; own manuals.</p>
+      <p class="pc-actions">
+        <button id="pcReadFaultsBtn" class="pc-btn pc-btn-primary" type="button" disabled>Read faults from the chair</button>
+      </p>
+      <div id="pcFaultResults"></div>
+      <div class="pc-card pc-inner">
+        <h3>No connection? Read the code off your chair yourself</h3>
+        <p id="pcManualPrompt">If your chair shows a code or flashes a count, pick your system and enter what you see:</p>
+        <div class="pc-manual">
+          <label>System
+            <select id="pcManualSystem">
+              <option value="rnet">R-net &mdash; 4-digit screen code</option>
+              <option value="vr2">VR2 / VSI &mdash; flashing bars</option>
+              <option value="linx">LiNX &mdash; red flashes</option>
+            </select>
+          </label>
+          <label>Code or count
+            <input id="pcManualCode" type="text" inputmode="text" placeholder="e.g. 3B00, or 9" autocomplete="off">
+          </label>
+          <button id="pcManualBtn" class="pc-btn" type="button">Translate it</button>
+        </div>
+        <div id="pcManualResult"></div>
+      </div>
+      <div class="pc-card pc-inner" id="pcSimFaultCard" hidden>
+        <h3>Practice chair: make something go wrong</h3>
+        <p>On a real chair, faults happen to you. On the practice chair, you order them &mdash; so you can learn what each one looks like before it strands you.</p>
+        <p class="pc-actions">
+          <button class="pc-btn pc-inject" data-fault="3B00" type="button">Motor unplugged (3B00)</button>
+          <button class="pc-btn pc-inject" data-fault="2C00" type="button">Low battery (2C00)</button>
+          <button class="pc-btn pc-inject" data-fault="1505" type="button">Brake / freewheel lever (1505)</button>
+          <button class="pc-btn pc-inject" data-fault="clear" type="button">Fix everything</button>
+        </p>
+      </div>
+    </section>
+
+    <section class="pc-panel" id="panel-settings" role="tabpanel" aria-labelledby="tab-settings" hidden>
+      <h2>Your chair&rsquo;s settings</h2>
+      <p>These numbers decide how your chair drives. They are <strong>shown, not changed</strong>, until you unlock them &mdash; and unlocking first saves a backup of every value, automatically. Full explanation of each setting: <a href="/pmd-settings.html">The Settings, in Plain Language</a>.</p>
+      <div id="pcSettingsLock">
+        <p class="pc-actions">
+          <button id="pcUnlockBtn" class="pc-btn" type="button" disabled>Unlock changing settings</button>
+        </p>
+        <p id="pcLockNote" class="pc-msg">Connect to a chair first. Reading is always allowed &mdash; it is your chair and your data.</p>
+      </div>
+      <div id="pcBackupBar" class="pc-backup" hidden>
+        <span id="pcBackupInfo">No backup yet.</span>
+        <span class="pc-actions">
+          <button id="pcDownloadBackupBtn" class="pc-btn" type="button">Download my backup</button>
+          <button id="pcRestoreBtn" class="pc-btn" type="button">Put everything back (restore)</button>
+        </span>
+      </div>
+      <div id="pcParamList"></div>
+      <p id="pcSettingsMsg" class="pc-msg" role="status"></p>
+    </section>
+
+    <section class="pc-panel" id="panel-help" role="tabpanel" aria-labelledby="tab-help" hidden>
+      <h2>How to connect &mdash; slowly, in order</h2>
+      <h3>The idea</h3>
+      <p>Your chair&rsquo;s parts talk to each other on a private little network inside the chair called its <strong>bus</strong> &mdash; one cable that runs from the joystick down to the power module in the base. This tool joins that conversation. Your phone cannot plug into the chair directly, so one small box sits in between: a <strong>CAN adapter</strong>. (CAN is the name of the network language cars and chairs both use.)</p>
+      <p class="pc-chain">Your phone &rarr; USB cable &rarr; CAN adapter &rarr; the chair&rsquo;s bus cable &rarr; your chair</p>
+      <h3>The one safety fact that matters</h3>
+      <p>The chair&rsquo;s bus cable carries <strong>24-volt battery power on the same plug as the data wires</strong>. So the adapter must be <strong>galvanically isolated</strong> &mdash; built with an electrical barrier between the chair side and the phone side, rated 2500 volts or better. Isolation is what stops a wiring fault from travelling up the cable into your phone. <strong>Only ever connect through an isolated adapter. No exceptions, including &ldquo;just for a second.&rdquo;</strong> (This is the same rule as <a href="/pmd-reading.html">Reading the Chair</a>.)</p>
+      <h3>What to buy (real products, named plainly)</h3>
+      <ul>
+        <li><strong>CANable (isolated model)</strong> &mdash; a small open-hardware USB-to-CAN adapter. Buy the <em>isolated</em> version specifically; not every CANable is isolated. It speaks a simple text protocol (called SLCAN) that this page can use directly through the browser &mdash; no software to install. Roughly the price of a pizza.</li>
+        <li><strong>PCAN-USB (PEAK)</strong> &mdash; the professional classic. Excellent hardware, but it uses its maker&rsquo;s own computer driver, which a web page cannot use. Fine with desktop tools; not for this page in version 1.</li>
+        <li><strong>Bluetooth CAN bridges</strong> (various makers) &mdash; a wireless adapter that plugs into the chair and talks to the phone by Bluetooth. Each maker uses its own wireless language, so version 1 lists them honestly as not-yet-pairing instead of pretending.</li>
+        <li><strong>The chair end:</strong> the adapter&rsquo;s chair-side wires land on the chair&rsquo;s round 4-pin bus cable &mdash; the cable between the joystick and the power module. Adapter makers sell short pigtail cables for this; the bench method for identifying the connector is on <a href="/pmd-reading.html">Reading the Chair</a>.</li>
+      </ul>
+      <h3>The steps</h3>
+      <ol>
+        <li>Park the chair on level ground. Switch it <strong>off</strong>. You do not need to be sitting in it &mdash; better if you are not.</li>
+        <li>Plug the adapter into the chair&rsquo;s bus cable first, while everything is off.</li>
+        <li>Plug the USB cable from the adapter into your phone (Android) or computer. Chrome browser open on this page.</li>
+        <li>Pick <strong>My real R-net chair</strong> above, pick the USB connection, and press <strong>Connect</strong>. The browser will show a list &mdash; choose your adapter.</li>
+        <li>Switch the chair on. Its messages appear under &ldquo;What the chair is saying.&rdquo; You are listening to your own chair.</li>
+      </ol>
+      <h3>What version 1 does on a real chair &mdash; honestly</h3>
+      <p>On a real chair, version 1 <strong>listens and reads only</strong>: messages, fault codes, and your settings, shown to you. It does not change settings on a real chair yet. Why: this site proved the <em>reading</em> path on captured dealer sessions, but the <em>writing</em> path has not yet been proven on a live power module on the bench &mdash; and this site does not guess at writes to a machine a person&rsquo;s body depends on. The full changing flow &mdash; unlock, automatic backup, change, one-tap restore &mdash; works today on the practice chair, and moves to real chairs when the bench proof lands. The whole story is on <a href="/pmd.html#honest-limits">Honest Limits</a>.</p>
+      <h3>Phones</h3>
+      <p>Works in <strong>Chrome on Android</strong> and on computers (Chrome/Edge). An iPhone cannot do this in a browser &mdash; Apple does not let web pages use USB accessories or Bluetooth the way this needs. That is a limit of the phone&rsquo;s system, not a missing feature here.</p>
+    </section>
+  </section>
+
+  <section>
+    <h2>Before you touch a real chair</h2>
+    <p><strong>Before any step that touches a plug, cable, motor, brake, actuator, or battery terminal:</strong> put the chair on level ground, switch it OFF, and disconnect the main battery harness or trip the main circuit breaker. Do not work while seated in the chair. Connector pins can remain live after switch-off. At a battery terminal, work on one terminal at a time with an insulated tool. If you cannot disconnect power, inspect visually only and stop. (The same rule heads the <a href="/pmd-fault-codes.html">fault-code tables</a>.)</p>
+    <p><a href="/pmd.html">&larr; Back to PMD</a> &middot; <a href="/pmd-settings.html">The Settings &rarr;</a></p>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/pmd-control.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

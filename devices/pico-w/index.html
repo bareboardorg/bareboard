@@ -76,7 +76,19 @@
               </ul>
             </div>
           </div></li>
-        <li class="has-children">
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
           <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
           <div class="col-panel">
             <div class="dropdown-inner">
@@ -202,6 +214,29 @@ RPI-RP2
 $ cp firmware.uf2 /media/$USER/RPI-RP2/
 $ # board reboots and runs firmware.uf2</code></pre>
     <p><em>The Pico W is also the cheapest practical debug probe in existence: one Pico programs and debugs another.</em></p>
+  </section>
+
+  <section>
+    <h2 id="record">The Full Record</h2>
+    <p>Everything in this timeline is documented &mdash; a court outcome, a regulator&rsquo;s action, a published security analysis, or Raspberry Pi&rsquo;s own statements &mdash; and each entry links its source. Where a popular claim about the Pico W is <em>not</em> proven, it is labeled Unverified at the end, with the evidence on both sides.</p>
+    <p>No recalls, lawsuits, or regulator actions against the Pico W appear in the public record as of November 2026. What is documented is quieter: the silicon errata Raspberry Pi publishes in its own datasheet, and &mdash; for the Pico line&rsquo;s successor chip &mdash; a public hacking challenge Raspberry Pi ran on purpose. Both are recorded below, because the full record includes the boring parts.</p>
+    <table>
+      <tr><th>Year</th><th>What happened</th><th>Source</th></tr>
+      <tr><td>2021</td><td><strong>RP2040-E11: the ADC is less accurate than designed.</strong> Raspberry Pi&rsquo;s own datasheet errata record that the RP2040&rsquo;s analogue-to-digital converter (ADC &mdash; the part that turns voltages into numbers) has differential non-linearity (DNL) error peaks at four values &mdash; 512, 1,536, 2,560, and 3,584 &mdash; caused by an error in the scaling of its internal capacitors. Measured effective resolution (ENOB) is 8.7 bits, not the 9 bits simulated. The erratum affects every RP2040 revision, has no workaround, and is marked &ldquo;Not fixed.&rdquo;</td><td><a href="https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf">RP2040 datasheet, Appendix B: Errata RP2040-E11 (PDF)</a></td></tr>
+      <tr><td>2021</td><td><strong>RP2040-E9: the boot ROM cannot boot straight into cache-as-SRAM.</strong> The datasheet&rsquo;s bootrom erratum records that a RAM-only UF2 program cannot boot directly into the XIP cache used as extra SRAM: the watchdog reboot that enters it re-enables the cache and causes an immediate bus fault. The documented workaround is code in main SRAM that re-disables caching first. Affects RP2040 B0, B1, and B2; resolution is documentation, not new silicon.</td><td><a href="https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf">RP2040 datasheet, Appendix B: Errata RP2040-E9 (PDF)</a></td></tr>
+      <tr><td>2024</td><td><strong>RP2350-E9: the successor chip&rsquo;s pins can latch (Pico 2, not Pico W).</strong> The RP2350 in the Pico 2 &mdash; the Pico W&rsquo;s successor line, not this board &mdash; shipped with erratum E9: a GPIO input can latch at about 2.15V instead of falling back to 0V, an effect first tied to the internal pull-down resistors and later confirmed to occur even without them. Raspberry Pi blamed third-party IP in the chip and documented workarounds, including external pull-down resistors of 8.2k&Omega; or less. It is recorded here because Pico W buyers are routinely offered the Pico 2 W as the upgrade.</td><td><a href="https://www.hackster.io/news/problems-with-the-raspberry-pi-pico-2-raspberry-pi-rp2350-deepen-as-projects-hit-by-erratum-e9-e2ed0c2f0810">Hackster &mdash; RP2350 erratum E9</a></td></tr>
+      <tr><td>2024&ndash;2025</td><td><strong>Raspberry Pi paid hackers to break its next chip &mdash; and they did.</strong> At DEF CON 32 (August 2024) Raspberry Pi launched the RP2350 Hacking Challenge: retrieve a 128-bit secret from one-time-programmable memory protected by secure boot, win $10,000. Nobody claimed it in a month, so the prize doubled to $20,000. In January 2025 Raspberry Pi confirmed four winning attacks (plus a fifth independent one) &mdash; most by voltage glitching &mdash; and published the results itself, saying hiding vulnerabilities would be &ldquo;grossly irresponsible.&rdquo; The RP2040 in the Pico W has no secure boot to break; this is the record of how its successor&rsquo;s security was tested in public.</td><td><a href="https://www.hackster.io/news/raspberry-pi-announces-the-winners-of-its-rp2350-capture-the-flag-contest-confirms-vulnerabilities-fcaa05053022.amp">Hackster &mdash; RP2350 challenge winners</a></td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2 id="did-you-know">Did you know</h2>
+    <ul>
+      <li><strong>RP2040 is a formula, not a model number.</strong> Raspberry Pi&rsquo;s own datasheet decodes it digit by digit: <strong>2</strong> processor cores, <strong>0</strong> for the Cortex-M0+ core type, <strong>4</strong> for the RAM size (floor(log2(256kB / 16kB))), and <strong>0</strong> because the chip carries no non-volatile storage of its own. Source: <a href="https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf">RP2040 datasheet, &sect;1.1 (PDF)</a>.</li>
+      <li><strong>The chip at the heart of the Pico W holds no program at all.</strong> That final 0 is literal: the RP2040 has zero on-chip flash. The Pico W&rsquo;s 2 MB of program storage is a separate external QSPI flash chip on the board, which the RP2040 executes from through its cache. Source: <a href="https://magazine.raspberrypi.com/articles/raspberry-pi-pico-microcontroller-specifications-features-and-rp2040">Raspberry Pi Magazine &mdash; behind the name 2040</a>.</li>
+      <li><strong>Its &ldquo;12-bit&rdquo; ADC honestly measures about 8.7 bits.</strong> The datasheet publishes the measurement against its own part: DNL error peaks at four codes cut the effective number of bits from a simulated 9 to a measured 8.7 (erratum RP2040-E11, in The Full Record above). Few vendors print that in the datasheet; Raspberry Pi does. Source: <a href="https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf">RP2040 datasheet, &sect;4.9 and Appendix B (PDF)</a>.</li>
+      <li><strong>The E9 pin-latching bug has since been fixed in silicon.</strong> Raspberry Pi&rsquo;s RP2350 A4 stepping fixes erratum E9 and the glitching attacks found by its own hacking challenge, and adds 5V tolerance on all GPIO pins while powered &mdash; though the company cautioned it may be a while before A4 chips appear on Pico 2 boards. Source: <a href="https://www.hackster.io/news/raspberry-pi-squashes-security-bugs-fixes-e9-erratum-with-the-rp2350-a4-stepping-cff097536171">Hackster &mdash; RP2350 A4 stepping</a>.</li>
+    </ul>
   </section>
 
   <section>

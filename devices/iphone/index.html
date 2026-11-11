@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iPhone Family — BareBoard — Free Hardware Education</title>
+<meta name="description" content="iPhone repair, honestly: diagnosis first, battery and screen service as Apple actually allows it, parts pairing and calibration locks, and where board-level repair stops.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="iPhone Family">
+<meta property="og:description" content="iPhone: diagnosis, battery and screen service, parts pairing and calibration, board-level limits.">
+<meta property="og:url" content="https://bareboard.org/devices/iphone/">
+<meta property="og:image" content="https://bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/devices/">Devices</a></li>
+        <li class="has-children">
+          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/about.html#how-we-work">How we work</a></li>
+                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/notes/">Bench Notes</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                <li><a href="/protocols.html">Protocol RE</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
+                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
+                <li><a href="/hot-100.html">Game Consoles</a></li>
+                <li><a href="/hot-100.html">Media Streamers</a></li>
+                <li><a href="/hot-100.html">Networking Gear</a></li>
+                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
+                <li><a href="/hot-100.html">Other</a></li>
+                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
+                <li><a href="/hot-100.html">Phones</a></li>
+                <li><a href="/hot-100.html">Printers</a></li>
+                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
+                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
+                <li><a href="/hot-100.html">Wearables</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/most-wanted.html#board">The board</a></li>
+              </ul>
+            </div>
+          </div></li>
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+                <li><a href="/watchmen.html#corrections">Corrections</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+  <aside class="legal-notice bb-notice-amber">
+    <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
+  </aside>
+  <h1>iPhone Family</h1>
+  <p class="lede">The iPhone is a sealed glass phone you can still open, diagnose, and partly repair yourself &mdash; if you know where Apple allows it, where calibration software finishes the job, and where board-level repair honestly stops.</p>
+
+  <section>
+    <h2 id="fcc">FCC ID</h2>
+    <p><strong>FCC IDs vary by model and region.</strong> Apple&rsquo;s FCC grantee code is <strong>BCG</strong> &mdash; the first three letters of every Apple FCC ID. An FCC ID is the identifier the Federal Communications Commission (the U.S. radio regulator) assigns to a device approved to transmit radio signals. Modern iPhones do not print it on the case; you find it on the phone itself under Settings &rarr; General &rarr; Legal &amp; Regulatory, or on the box label. Take that exact ID and look it up at <a href="https://fccid.io">fccid.io</a> &mdash; the filings include internal photos that are invaluable for hardware research.</p>
+    <p>One filing verified for this page: <a href="https://fccid.io/bcge4030a">FCC ID BCG-E4030A</a> &mdash; an Apple Inc. smartphone filing granted September 14, 2021, covering the phone&rsquo;s Wi-Fi, Bluetooth, cellular, and ultra-wideband radios. It is listed here as a worked example of the lookup method, not as a claim about which retail model name it was sold under.</p>
+    <p><em>Specific model-to-FCC-ID mappings for the full iPhone 12&ndash;16 range are being verified against the filings and will be listed here. Until then, trust the ID on your own phone&rsquo;s label over any list on the internet &mdash; including this one.</em></p>
+  </section>
+
+  <section>
+    <h2 id="fcc-revealed">What the FCC filing revealed</h2>
+    <p>The FCC filing for this device includes the documents manufacturers are required to submit: external photos, internal photos, test setup photos, RF test reports, and the user manual. These are public record at <a href="https://fccid.io/">fccid.io</a>.</p>
+    <p>For a sealed phone like the iPhone, the filing matters more than it does for a console: Apple does not publish a parts book (see the exploded view below), so the filing&rsquo;s internal photos are often the only public, manufacturer-supplied look inside the phone &mdash; board layout, shielding, and antenna placement, photographed before the model went on sale.</p>
+    <p>What you can typically find:</p>
+    <ul>
+      <li><strong>Internal photos</strong> &mdash; board layout, chip placement, shielding, antenna design</li>
+      <li><strong>Block diagrams</strong> &mdash; sometimes included, showing the RF chain architecture</li>
+      <li><strong>Test reports</strong> &mdash; conducted and radiated emissions data, which can reveal operating frequencies and power levels</li>
+      <li><strong>Label placement</strong> &mdash; where the FCC ID lives on the device</li>
+    </ul>
+    <p>What the FCC filing does <em>not</em> include: schematics (usually withheld under confidentiality requests), firmware, bill of materials, or debug interface documentation.</p>
+  </section>
+
+  <section>
+    <h2 id="exploded">Exploded view</h2>
+    <p><strong>Partial &mdash; no public parts book.</strong> That label is the honest starting point. Apple publishes repair manuals with step-by-step disassembly procedures through Self Service Repair, but it does <em>not</em> publish an exploded parts diagram with a parts list &mdash; the one drawing that shows every assembly in space, keyed to part numbers, the way wheelchair and appliance makers publish an Illustrated Parts Breakdown. So the exploded view on this page is a walk in build order, assembled from two public sources: Apple&rsquo;s own repair-manual disassembly order and parts lists, and the FCC filing&rsquo;s internal photos. Every assembly below names its source. Where a number exists in Apple&rsquo;s manual, it is Apple&rsquo;s number; nothing here is drawn or numbered by us.</p>
+    <p>The worked example is the iPhone SE (3rd generation, 2022), because its full manual is publicly archived: <a href="https://archive.org/stream/appleservicemanuals/iphone-se-3gen-07300333A-repair_djvu.txt">Apple Repair Manual 073-00333-A (archived full text)</a>. Its internal view names the layout every iPhone in this hub shares: display on the front, battery in the middle, logic board (the main circuit board) along one side, Taptic Engine and speaker at the bottom, cameras at the top. The current manuals for iPhone 12 and later live at Apple: <a href="https://support.apple.com/en-us/125146">iPhone repair manuals &mdash; Apple Support</a>.</p>
+
+    <h3>Before any of it: Apple&rsquo;s battery warning, verbatim</h3>
+    <p>Every iPhone battery is a soft lithium-ion pouch glued into the phone. Apple&rsquo;s own manual puts its Battery Safety warning like this &mdash; quoted exactly, from the iPhone SE (3rd generation) Repair Manual, document 073-00333-A:</p>
+    <blockquote>
+      <p>&ldquo;This device contains a built-in lithium-ion rechargeable battery with soft battery cells. Battery safety is the number one concern when repairing a device with a built-in lithium-ion battery.&rdquo;</p>
+      <p>&ldquo;Only technicians with the knowledge, experience, and tools required to repair electronic devices should replace a battery.&rdquo;</p>
+      <p>&ldquo;Improper battery replacement, improper handling of parts, failure to discharge the battery before repair, or failure to follow the provided instructions could cause battery overheating, swelling, venting, leaking, or a battery thermal event. These events could result in fire, injury, death, data loss, or damage to the device, parts, or other property.&rdquo;</p>
+    </blockquote>
+    <p>In plain language: fully discharge the battery before you open the phone, never puncture or bend the pouch, and keep clean dry sand within reach &mdash; the same manual&rsquo;s thermal-event procedure is to smother the device in sand, not water. Source: <a href="https://archive.org/stream/appleservicemanuals/iphone-se-3gen-07300333A-repair_djvu.txt">the manual itself</a>.</p>
+
+    <h3>The phone, in build order</h3>
+    <ol>
+      <li><strong>Display assembly</strong> &mdash; the screen unit: OLED panel (the light-emitting display), touch layer, front glass, and its flex cables (the flat ribbon cables that plug into the board). It is what you see and touch, and it is the door: nearly every repair starts by heating and lifting it. Apple orderable part on the SE (3rd generation): display 661-26353, plus fresh display adhesive 923-02012 &mdash; the adhesive is single-use and is part of the water seal. Source: <a href="https://archive.org/stream/appleservicemanuals/iphone-se-3gen-07300333A-repair_djvu.txt">Apple manual 073-00333-A, Orderable Parts and Display procedure</a>.</li>
+      <li><strong>Back glass</strong> &mdash; the rear glass panel, carrying the wireless charging coil area and, on newer models, the MagSafe magnet ring (the circle of magnets that snap chargers and accessories into alignment). It protects the back and completes the radio window the antennas need. On iPhone 14 and later it is a separately replaceable part; on earlier models a cracked back glass effectively meant a new enclosure. Source: <a href="https://support.apple.com/en-au/120579">Apple Support &mdash; Repair Assistant (back glass listed as a finishable repair)</a>.</li>
+      <li><strong>Battery</strong> &mdash; the glued-in lithium-ion pouch with its connector and pull-tab adhesive strips. It powers everything, and its health decides how long the phone lasts in a day. Apple orderable part on the SE (3rd generation): battery 661-25890. Source: <a href="https://archive.org/stream/appleservicemanuals/iphone-se-3gen-07300333A-repair_djvu.txt">Apple manual 073-00333-A, Battery procedure</a>.</li>
+      <li><strong>Taptic Engine</strong> &mdash; the vibration motor: a small moving mass that makes the phone&rsquo;s taps and buzzes feel precise. It sits at the bottom of the phone next to the speaker. Apple orderable part on the SE (3rd generation): 923-07176. Source: <a href="https://archive.org/stream/appleservicemanuals/iphone-se-3gen-07300333A-repair_djvu.txt">Apple manual 073-00333-A, Taptic Engine procedure</a>.</li>
+      <li><strong>Main logic board</strong> &mdash; the phone&rsquo;s main circuit board: the A-series processor, memory, storage, power circuitry, and the radio chips all live on it. It is the computer; everything else on this list is a peripheral plugged into it. Apple does <em>not</em> sell the logic board through Self Service Repair (see Repair reality, below). Its layout inside the phone is documented in the <a href="https://fccid.io/bcge4030a">FCC filing&rsquo;s internal photos (BCG-E4030A)</a> and in the manual&rsquo;s Internal View: <a href="https://archive.org/stream/appleservicemanuals/iphone-se-3gen-07300333A-repair_djvu.txt">Apple manual 073-00333-A</a>.</li>
+      <li><strong>Camera modules</strong> &mdash; the rear camera unit (one, two, or three lenses depending on model) and the front camera. Each module is a sealed lens-and-sensor unit that plugs into the logic board; you replace the module, not the sensor inside it. Apple orderable part on the SE (3rd generation): camera 661-25683. Source: <a href="https://archive.org/stream/appleservicemanuals/iphone-se-3gen-07300333A-repair_djvu.txt">Apple manual 073-00333-A, Camera procedure</a>.</li>
+      <li><strong>Face ID / Touch ID components</strong> &mdash; the biometric parts: on Face ID models, the TrueDepth camera system in the front (an infrared camera and dot projector that map your face); on the SE, the Home button with its Touch ID fingerprint sensor. These parts prove who you are, which is why they are cryptographically linked to the logic board and why calibration (below) gates them. Source: <a href="https://support.apple.com/en-us/125146">Apple&rsquo;s manual introduction &mdash; biometric parts must be linked to the Secure Enclave after repair</a>.</li>
+      <li><strong>Speakers</strong> &mdash; the bottom loudspeaker and the earpiece speaker at the top, which doubles as the second channel for stereo sound. Small sealed boxes with flex-cable connectors. Apple orderable part on the SE (3rd generation): speaker 923-07174. Source: <a href="https://archive.org/stream/appleservicemanuals/iphone-se-3gen-07300333A-repair_djvu.txt">Apple manual 073-00333-A, Speaker procedure</a>.</li>
+      <li><strong>Lightning / USB-C port assembly</strong> &mdash; the charging-and-data socket at the bottom edge, on a flex assembly with the lower microphones. Lightning is Apple&rsquo;s own plug, used through iPhone 14; USB-C is the universal plug, used from iPhone 15 on. A worn or lint-packed port is one of the most common &ldquo;won&rsquo;t charge&rdquo; causes &mdash; clean it before you replace it. Source for the connector change: the Models table below; internal layout in the <a href="https://fccid.io/bcge4030a">FCC internal photos</a>.</li>
+    </ol>
+    <p>What this walk cannot give you, because Apple does not publish it: a dimensioned diagram, torque values outside the manuals, or a board-level parts list. That gap is stated, not filled in.</p>
+  </section>
+
+  <section>
+    <h2 id="diagnosis">Diagnosis &amp; faults</h2>
+    <p>The exploded view above shows <em>what</em> things are. This section is the other half: <em>which</em> one failed, and how you know before you open anything. Work in this order &mdash; software first, screwdriver last.</p>
+    <ul>
+      <li><strong>Short battery life, shutdowns, slowdowns &rarr; battery.</strong> Open Settings &rarr; Battery &rarr; Battery Health &amp; Charging and read <strong>Maximum Capacity</strong>: the battery&rsquo;s current full-charge capacity as a percentage of when it was new. Apple designs iPhone 14 and earlier batteries to retain 80% of capacity at 500 complete charge cycles, and iPhone 15 and later at 1,000 cycles; near or below 80%, budget for the battery in the exploded view above. Source: <a href="https://support.apple.com/en-us/104999">Apple Support &mdash; battery health and parts history</a>.</li>
+      <li><strong>&ldquo;Has this phone been repaired, and with what?&rdquo; &rarr; Parts and Service History.</strong> Settings &rarr; General &rarr; About shows a Parts and Service History section on repaired phones (iOS 15.2 and later), labeling each replaced part <strong>Genuine</strong>, <strong>Used</strong>, <strong>Unknown</strong>, or <strong>Finish Repair</strong>. &ldquo;Unknown&rdquo; means the part is non-genuine, was previously used in another iPhone, was installed incompletely, or is not working as expected &mdash; it is a statement about the part, not a punishment screen. Source: <a href="https://support.apple.com/en-us/104999">Apple Support</a> and <a href="https://support.apple.com/en-au/120579">Repair Assistant</a>.</li>
+      <li><strong>Phone boots to the Apple logo and stops, or loops &rarr; software vs. board.</strong> Connect the phone to a computer and put it in DFU mode (Device Firmware Update &mdash; a hardware-level mode that lets a computer reload the phone&rsquo;s firmware from scratch) and restore it. A restore that completes points to software or storage corruption, now fixed. A restore that fails with the same error every time, on a known-good cable and computer, points at the logic board or storage hardware. Write the error down before you conclude anything.</li>
+      <li><strong>No power vs. no boot &mdash; two different faults.</strong> <em>No power</em>: nothing on screen, no vibration, no heat, computer does not see it. Suspects in order: the port assembly (lint, wear), the battery (dead or disconnected), then the board&rsquo;s power circuitry. <em>No boot</em>: the phone shows signs of life &mdash; logo, vibration, it appears on USB &mdash; but never reaches the Home screen. That is the DFU/restore path above. Confusing the two sends people shopping for the wrong assembly.</li>
+      <li><strong>Face ID or Touch ID stopped after a screen or camera job &rarr; unfinished calibration, not a dead part.</strong> Until Repair Assistant completes calibration for those parts, Face ID / Touch ID cannot be used at all (see Repair reality). Check Parts and Service History for &ldquo;Finish Repair&rdquo; before condemning the module.</li>
+      <li><strong>One dead function &rarr; its assembly.</strong> No vibration: Taptic Engine. Muffled or silent loudspeaker: speaker assembly. Blurry or black camera: that camera module. Each maps to exactly one entry in the exploded view &mdash; that pairing, fault to assembly, is the point of building the view in the first place.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 id="we-reveal">What we reveal</h2>
+    <p>The FCC tells you what a device emits. We tell you what&rsquo;s inside and how it works.</p>
+    <ul>
+      <li><strong>Chip-level identification</strong> &mdash; every major IC named, with datasheet links where public documentation exists</li>
+      <li><strong>Board mapping</strong> &mdash; what connects to what, which test pads matter, where the debug interfaces hide</li>
+      <li><strong>What the manufacturer won&rsquo;t tell you</strong> &mdash; undocumented features, hidden radios, silent telemetry, repair blockers</li>
+    </ul>
+    <p>Check our <a href="/autopsy/">teardowns</a> for full board-level analysis.</p>
+  </section>
+
+  <section>
+    <h2 id="variants">Models</h2>
+    <table>
+      <tr><th>Model</th><th>Released</th><th>Chip</th><th>Port</th><th>Notes</th></tr>
+      <tr><td>iPhone 12</td><td>2020</td><td>A14</td><td>Lightning</td><td>First 5G iPhone; MagSafe introduced</td></tr>
+      <tr><td>iPhone 13</td><td>2021</td><td>A15</td><td>Lightning</td><td>&mdash;</td></tr>
+      <tr><td>iPhone 14</td><td>2022</td><td>A15 (base) / A16 (Pro)</td><td>Lightning</td><td>Back glass separately replaceable</td></tr>
+      <tr><td>iPhone SE (3rd generation)</td><td>2022</td><td>A15</td><td>Lightning</td><td>Touch ID Home button design</td></tr>
+      <tr><td>iPhone 15</td><td>2023</td><td>A16 (base) / A17 Pro (Pro)</td><td>USB-C</td><td>First USB-C iPhone</td></tr>
+      <tr><td>iPhone 16</td><td>2024</td><td>A18</td><td>USB-C</td><td>&mdash;</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2 id="chips">Key Chips</h2>
+    <p>Apple does not publish datasheets for its own silicon &mdash; there is no A-series datasheet to link, for anyone, anywhere. What exists publicly is Apple&rsquo;s system-level documentation, linked below. Every chip we could not link to documentation is listed in our collection targets instead of being left silent.</p>
+    <ul>
+      <li><strong>A-series SoCs</strong> (A14&ndash;A18 in the models above) &mdash; the SoC (system on a chip: the processor, graphics, memory controller, and more on one piece of silicon) that runs the phone. Apple documents the family&rsquo;s security architecture, not its registers: <a href="https://help.apple.com/pdf/security/en_US/apple-platform-security-guide.pdf">Apple Platform Security Guide (PDF)</a>.</li>
+      <li><strong>Secure Enclave</strong> &mdash; a separate, isolated security processor inside the SoC. In plain language: a small safe inside the main chip. It holds the keys that encrypt your data and checks your face or fingerprint, and it keeps working safely even if the main processor is compromised. It is also why biometric parts must be re-linked to it after repair. Apple&rsquo;s own documentation: <a href="https://support.apple.com/en-gb/guide/security/sec59b0b31ff/web">The Secure Enclave &mdash; Apple Support</a>.</li>
+      <li><strong>Ultra-wideband: U1 and the second-generation chip (U2)</strong> &mdash; UWB (ultra-wideband) is a radio that measures distance precisely by timing its own pulses, which is how Precision Finding points you at an AirTag. The U1 arrived with iPhone 11; the second-generation chip arrived with iPhone 15. Apple covers the U1 in the <a href="https://help.apple.com/pdf/security/en_US/apple-platform-security-guide.pdf">Platform Security Guide</a>; it publishes no datasheet for either chip.</li>
+      <li><strong>Cellular modem &mdash; Qualcomm Snapdragon X-series</strong> &mdash; the modem is the chip that talks to the phone network. Current iPhones use Qualcomm modems, not Apple ones: Snapdragon X55 (iPhone 12), X60 (13), X65 (14), X70 (15), per teardown reporting. Documentation: <a href="https://en.wikipedia.org/wiki/List_of_Qualcomm_Snapdragon_modems">List of Qualcomm Snapdragon modems</a>; model-by-model use: <a href="https://appleinsider.com/articles/26/07/08/all-the-qualcomm-parts-used-in-the-iphone-ipad-apple-watch-and-more">AppleInsider &mdash; Qualcomm parts in iPhone</a>. See also the <a href="/chips.html">chip database</a> and <a href="/datasheets.html">datasheet index</a>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 id="repair">Repair reality</h2>
+    <h3>Self Service Repair: what Apple actually allows</h3>
+    <p>Apple launched Self Service Repair in 2022: anyone can order genuine Apple parts, read the same repair manuals Apple&rsquo;s technicians use, and rent the professional tool kits. That is real, and it is the source of the manuals this page is built on: <a href="https://support.apple.com/en-us/125146">iPhone repair manuals &mdash; Apple Support</a>. Batteries, displays, cameras, speakers, and Taptic Engines are orderable. The honest limits are in the next sections.</p>
+    <h3>Repair Assistant: the repair is not finished when the screws are in</h3>
+    <p>After a part is replaced, <strong>Repair Assistant</strong> &mdash; a software tool built into iOS &mdash; installs calibration data to finish the repair. Calibration means teaching the phone the exact measured characteristics of the specific new part, so it behaves like the one the phone was built with. The verified facts, from Apple&rsquo;s own support page (<a href="https://support.apple.com/en-au/120579">Apple Support &mdash; Use Repair Assistant</a>):</p>
+    <ul>
+      <li>On iPhone 15 and later with iOS 18 and later, a genuine part taken from another unit of the same model can be calibrated, and then shows in Parts and Service History as <strong>Used</strong> &mdash; a used genuine part is a legitimate repair, not a rejected one.</li>
+      <li>You cannot use Face ID or Touch ID to unlock the device, pay, or sign in until calibration completes for those parts.</li>
+      <li>A part can be Activation-Locked to another person&rsquo;s account (Activation Lock is Apple&rsquo;s theft-deterrent link between a device or part and its owner&rsquo;s account). A locked part restricts calibration until its owner unlocks it.</li>
+      <li>Until you finish, Parts and Service History displays <strong>Finish Repair</strong> next to the part. The full label set is: <strong>Genuine</strong> / <strong>Used</strong> / <strong>Unknown</strong> / <strong>Finish Repair</strong>.</li>
+    </ul>
+    <p>iFixit&rsquo;s assessment of what this changed is here: <a href="https://www.ifixit.com/News/100266/the-end-of-parts-pairing-almost">&ldquo;The end of parts pairing &mdash; almost&rdquo;</a>. The &ldquo;almost&rdquo; is doing work in that title; read the Controversies section below.</p>
+    <h3>Board-level limits, stated plainly</h3>
+    <ul>
+      <li><strong>No public schematics.</strong> Apple publishes no circuit diagrams or boardview files for any iPhone. There is no legal way for an independent shop to buy them.</li>
+      <li><strong>Logic boards are not sold</strong> through Self Service Repair. A board-level fault is not an orderable-part repair.</li>
+      <li><strong>Independent microsoldering exists anyway.</strong> Skilled shops diagnose and repair board faults &mdash; failed power chips, shorts, damaged connectors &mdash; with microscopes, hot air, and experience, working <em>without</em> Apple&rsquo;s documentation. It works, and it is slower and more expensive than it should be, for exactly one reason: the documentation is withheld, not because the work is impossible.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 id="controversies">Controversies &amp; Legal</h2>
+    <h3>Parts pairing is the fight</h3>
+    <p><strong>Parts pairing</strong> means software that ties a part to one specific phone, so a working part from another phone is rejected, degraded, or flagged until the manufacturer&rsquo;s software blesses it. On the iPhone it grew piece by piece: battery warnings, display warnings, camera warnings, then calibration requirements. Repair Assistant (above) softened it &mdash; used genuine parts can now be calibrated on newer models &mdash; but the structure remains: the part is not fully repaired until Apple&rsquo;s software says so. The full dated record, including the cases where pairing bricked phones outright, is in The Full Record below.</p>
+    <h3>The law is starting to answer</h3>
+    <p>Oregon&rsquo;s SB 1596 (2024) is the first-in-the-nation ban on parts pairing for covered equipment manufactured and sold after January 1, 2025 &mdash; the wording this site&rsquo;s own law page uses, and the standard other states are measured against. The state-by-state picture is at <a href="/repair-rights.html#electronics-states">repair rights &mdash; electronics states</a>, and the federal picture at <a href="/repair-rights.html#federal">repair rights &mdash; federal</a>. Start with our <a href="/repair.html">repair guides</a> for the practical side.</p>
+    <h3>Apple&rsquo;s own position, in Apple&rsquo;s own paper</h3>
+    <p>Apple&rsquo;s June 2024 white paper <em>Longevity, by Design</em> is the company&rsquo;s citable statement of its side: it argues Apple designs for durability first, balances repairability against safety, security, and privacy, and points to falling service rates and long software support as the result. Read it and judge the record below against it: <a href="https://www.apple.com/tr/environment/pdf/Longevity_by_Design-June_2024-Apple.pdf">Longevity, by Design (PDF, Apple, June 2024)</a>.</p>
+  </section>
+
+  <section>
+    <h2 id="record">The Full Record</h2>
+    <p>Everything in this timeline is documented &mdash; a court outcome, a regulator&rsquo;s action, a published security analysis, or Apple&rsquo;s own statements &mdash; and each entry links its source. Where a popular claim about the iPhone is <em>not</em> proven, it is labeled Unverified at the end, with the evidence on both sides.</p>
+    <table>
+      <tr><th>Year</th><th>What happened</th><th>Source</th></tr>
+      <tr><td>2016</td><td><strong>Error 53.</strong> iPhones whose Touch ID Home button had been replaced by an independent shop were disabled &mdash; bricked (rendered unusable) &mdash; by an iOS update&rsquo;s security check on the fingerprint sensor pairing. Apple first called it a security measure, then reversed course with an iOS update that restored the phones, describing the check as a factory test that should not have reached customers. In 2018 Australia&rsquo;s Federal Court, in an action by the ACCC (the competition and consumer regulator), ordered Apple to pay AU$9 million in penalties: Apple had admitted telling at least 275 Australian customers affected by Error 53 that they were no longer eligible for a remedy because a third party had repaired their device, and the court declared that third-party repair alone cannot extinguish consumer guarantees.</td><td><a href="https://appleinsider.com/articles/18/06/19/australia-fines-apple-67-million-over-misleading-error-53-repair-practices">AppleInsider &mdash; ACCC fine</a></td></tr>
+      <tr><td>2017&ndash;2020</td><td><strong>&ldquo;Batterygate.&rdquo;</strong> Benchmarks showed iOS was throttling (deliberately slowing) iPhones with aged batteries; Apple confirmed it, saying the slowdown prevented unexpected shutdowns, and apologized for not disclosing it. The settlements that followed are the record: up to $500 million to settle the U.S. class action (2020), $113 million to settle with 34 state attorneys general (2020), and a &euro;25 million fine from France&rsquo;s consumer authority (2020). Apple also cut battery replacement prices for a year and added the Battery Health screen this page&rsquo;s diagnosis section uses.</td><td><a href="https://en.wikipedia.org/wiki/Batterygate">Wikipedia &mdash; Batterygate (settlement record)</a></td></tr>
+      <tr><td>2021</td><td><strong>FORCEDENTRY (CVE-2021-30860).</strong> Citizen Lab, the University of Toronto research group, documented a zero-click exploit &mdash; an attack needing no tap or click from the victim &mdash; built by NSO Group to install its Pegasus spyware. A fake GIF sent by iMessage smuggled a PDF whose JBIG2 image data triggered an integer overflow in Apple&rsquo;s CoreGraphics, escaping the iMessage sandbox; Citizen Lab found it on activists&rsquo; iPhones. Apple patched it in iOS 14.8 (September 2021) and later sued NSO Group. Google&rsquo;s Project Zero, working with Apple&rsquo;s security team, called the technique one of the most sophisticated exploits they had seen.</td><td><a href="https://en.wikipedia.org/wiki/FORCEDENTRY">Wikipedia &mdash; FORCEDENTRY</a></td></tr>
+      <tr><td>2021&ndash;2022</td><td><strong>Client-side CSAM scanning, proposed and shelved.</strong> In August 2021 Apple announced NeuralHash: on-device matching of photos headed to iCloud Photos against a database of known child sexual abuse material (CSAM). Cryptographers and civil-liberties groups objected that scanning on the user&rsquo;s own phone, however narrow its stated purpose, builds infrastructure that can be pointed at other content. Apple postponed the rollout in September 2021, and in December 2022 said it had decided not to proceed with the proposed detection tool. It never shipped.</td><td><a href="http://umatechnology.org/apples-2021-iphone-csam-scanning-plan-was-cancelled-what-it-actually-proposed/">Timeline of the proposal and cancellation</a></td></tr>
+      <tr><td>2023</td><td><strong>iPhone 12 radio emissions, France.</strong> ANFR, France&rsquo;s radio-frequency regulator, tested the iPhone 12 and found its limb SAR (specific absorption rate &mdash; how much radio energy the body absorbs, measured here for a phone held in the hand or carried in a pocket) above the European limit, and ordered sales halted in France in September 2023. Apple disputed the test protocol but shipped a software update that changed the phone&rsquo;s power behavior; regulators approved the fix and the sales halt was lifted. No hardware was recalled or changed.</td><td><a href="https://techxplore.com/news/2023-09-apple-iphone-france.html">Associated Press via TechXplore</a></td></tr>
+    </table>
+    <aside class="bb-notice-amber">
+      <p><strong>Unverified: &ldquo;Apple slowed old iPhones to force upgrades.&rdquo;</strong> The throttling itself is documented (above) and is not in dispute. The <em>motive</em> commonly attached to it &mdash; planned obsolescence, slowing phones so people would buy new ones &mdash; has never been established by a court or regulator. Evidence for the allegation: the throttling was undisclosed, owners did buy new phones believing theirs were worn out, and the lawsuits alleged exactly that motive. Evidence against: Apple&rsquo;s stated reason &mdash; aged batteries causing unexpected shutdowns at peak power draw &mdash; is a real, documented failure mode, and the settlements were paid without any finding that upgrades were the purpose. This page records the allegation as unverified and the throttling as fact; do not let anyone merge the two.</p>
+    </aside>
+  </section>
+
+  <section>
+    <h2 id="did-you-know">Did you know</h2>
+    <ul>
+      <li><strong>The iPhone 12 was three firsts in one box.</strong> Apple&rsquo;s launch release describes it as the first iPhone with 5G, the first with MagSafe, and the first with the Ceramic Shield front cover &mdash; which Apple called the biggest jump in durability ever on iPhone. Source: <a href="https://www.apple.com/newsroom/2020/10/apple-announces-iphone-12-and-iphone-12-mini-a-new-era-for-iphone-with-5g/">Apple Newsroom, October 13, 2020</a>.</li>
+      <li><strong>Newer iPhone batteries are designed to last twice as many cycles.</strong> Apple designs iPhone 15 and later batteries to retain 80% of their original capacity at 1,000 complete charge cycles, double the 500 cycles of iPhone 14 and earlier &mdash; under ideal conditions, in Apple&rsquo;s own wording. Source: <a href="https://support.apple.com/en-us/104999">Apple Support &mdash; battery health</a>.</li>
+      <li><strong>The FORCEDENTRY exploit built a tiny computer out of image data.</strong> With no usable scripting environment inside the sandbox it landed in, the exploit chained JBIG2 image operations together to emulate logic gates &mdash; in effect, constructing a small virtual processor out of a document format &mdash; before escaping. Source: <a href="https://en.wikipedia.org/wiki/FORCEDENTRY">FORCEDENTRY analysis summary</a>.</li>
+      <li><strong>France&rsquo;s iPhone 12 measurement was a pocket test, not a head test.</strong> The phone passed the head SAR test; the exceedance ANFR acted on was the limb measurement &mdash; about 5.74 W/kg against a 4 W/kg limit &mdash; for a phone held in the hand or kept in a pocket. The fix brought the same test to about 3.94 W/kg, in software alone. Source: <a href="http://umatechnology.org/how-to-fix-the-iphone-12-radiation-issue/">ANFR case summary</a>.</li>
+      <li><strong>Your phone already keeps its own repair diary.</strong> Since iOS 15.2, a repaired iPhone records what was replaced and how the part is labeled &mdash; Genuine, Used, Unknown, or Finish Repair &mdash; in Settings &rarr; General &rarr; About. On an unrepaired phone the section simply does not appear. Source: <a href="https://support.apple.com/en-us/104999">Apple Support &mdash; parts and service history</a>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 id="reading">Further Reading</h2>
+    <ul>
+      <li><a href="/repair.html">BareBoard repair guides</a></li>
+      <li><a href="/repair-rights.html">The Shield &mdash; right-to-repair law</a>, including <a href="/repair-rights.html#electronics-states">electronics by state</a> and <a href="/repair-rights.html#federal">federal law</a></li>
+      <li><a href="/devices/">All device hubs</a> &mdash; wave-1 siblings: <a href="/devices/playstation/">PlayStation</a>, <a href="/devices/nintendo-switch/">Nintendo Switch</a>, <a href="/devices/xbox/">Xbox</a>, <a href="/devices/e-readers/">E-readers</a>, <a href="/devices/windows-pcs/">Windows PCs</a>, <a href="/devices/smart-tv/">Smart TVs &amp; streaming</a></li>
+      <li><a href="/datasheets.html">BareBoard datasheet index</a> &middot; <a href="/chips.html">chip database</a> &middot; <a href="/hot-100.html">Hot 100</a> &middot; <a href="/library-hub.html">library hub</a> &middot; <a href="/obsolescence.html">planned obsolescence</a></li>
+      <li><a href="https://support.apple.com/en-us/125146">Apple &mdash; iPhone repair manuals</a> &middot; <a href="https://support.apple.com/en-au/120579">Apple &mdash; Repair Assistant</a> &middot; <a href="https://archive.org/stream/appleservicemanuals/iphone-se-3gen-07300333A-repair_djvu.txt">Apple &mdash; iPhone SE (3rd generation) Repair Manual, archived</a></li>
+      <li><a href="https://www.ifixit.com/News/100266/the-end-of-parts-pairing-almost">iFixit &mdash; The end of parts pairing, almost</a> &middot; <a href="https://www.apple.com/tr/environment/pdf/Longevity_by_Design-June_2024-Apple.pdf">Apple &mdash; Longevity, by Design (June 2024)</a></li>
+    </ul>
+  </section>
+
+  <blockquote class="bb-quote"><p>&ldquo;Program testing can be a very effective way to show the presence of bugs, but is hopelessly inadequate for showing their absence.&rdquo;</p><p class="bb-quote-by">&mdash; Edsger W. Dijkstra</p></blockquote>
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

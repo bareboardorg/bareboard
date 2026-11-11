@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EV Chargers — BareBoard — Free Hardware Education</title>
+<meta name="description" content="EV chargers (EVSE): J1772/J3400 pilot protocol, contactor and CCID anatomy, OpenEVSE open design, NEC 625 safety, JuiceBox shutdown record, faults and the full record.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="EV Chargers">
+<meta property="og:description" content="EV chargers: not a charger — a careful switch, a public standard, and a cloud that already died once.">
+<meta property="og:url" content="https://bareboard.org/devices/ev-chargers/">
+<meta property="og:image" content="https://bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/devices/">Devices</a></li>
+        <li class="has-children">
+          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/about.html#how-we-work">How we work</a></li>
+                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/notes/">Bench Notes</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                <li><a href="/protocols.html">Protocol RE</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
+                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
+                <li><a href="/hot-100.html">Game Consoles</a></li>
+                <li><a href="/hot-100.html">Media Streamers</a></li>
+                <li><a href="/hot-100.html">Networking Gear</a></li>
+                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
+                <li><a href="/hot-100.html">Other</a></li>
+                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
+                <li><a href="/hot-100.html">Phones</a></li>
+                <li><a href="/hot-100.html">Printers</a></li>
+                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
+                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
+                <li><a href="/hot-100.html">Wearables</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/most-wanted.html#board">The board</a></li>
+              </ul>
+            </div>
+          </div></li>
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+                <li><a href="/watchmen.html#corrections">Corrections</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+  <aside class="legal-notice bb-notice-amber">
+    <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
+  </aside>
+
+  <aside class="legal-notice bb-notice-amber">
+    <strong>Lethal voltage &mdash; read this before anything else on this page.</strong> An EV charger (EVSE) connects your car to a 240&nbsp;V, 40&ndash;80&nbsp;A circuit &mdash; the most powerful circuit in a normal house, running for hours at a time. Installation and any work inside the unit belong to a licensed electrician under NEC Article 625 in the US. This page teaches how the device works and what the record shows. It is not an installation guide, and the fault section is a <em>diagnosis</em> list for conversations with that electrician &mdash; not a set of home procedures.
+  </aside>
+  <h1>EV Chargers</h1>
+  <p class="lede">The box on the garage wall is not a charger. The charger is in the car; the box is a very careful switch &mdash; a switch that negotiates with a one-kilohertz signal, watches for ground faults 20 times more sensitively than your bathroom outlet, and only then closes a relay onto 240 volts. Everything about it is knowable. Some of it is documented in an open-source design you can buy.</p>
+  <section>
+    <h2 id="fcc">FCC ID</h2>
+    <p><strong>FCC IDs apply to the connected models.</strong> Wi-Fi/Bluetooth-equipped EVSEs (ChargePoint Home Flex, Tesla Wall Connector, Emporia, Grizzl-E Smart, JuiceBox when it lived) file under their makers&rsquo; grantee codes; dumb EVSEs (the relay-and-pilot boxes with no radio) may have no filing at all &mdash; their public record is their UL/ETL listing and the NEC instead. The smart models&rsquo; internal photos show the pilot/control board and the contactor plainly.</p>
+    <p>Every radio a device carries &mdash; Wi-Fi, Bluetooth, cellular, ultra-wideband, NFC &mdash; needs an FCC equipment authorization before the device can be sold in the United States. To get one, the manufacturer files photographs and test reports with the FCC, and those filings are <strong>public record</strong>. Check the label on your specific unit and look it up at <a href="https://fccid.io">fccid.io</a>.</p>
+    
+  </section>
+  <section>
+    <h2 id="fcc-revealed">What the FCC filing revealed</h2>
+    <p>The FCC filing for this device includes the documents manufacturers are required to submit: external photos, internal photos, test setup photos, RF test reports, and the user manual. These are public record at <a href="https://fccid.io/">fccid.io</a>.</p>
+    <ul>
+      <li><strong>Internal photos (smart models)</strong> &mdash; the contactor (the big relay), the control board, the current transformers that meter the session, and the radio module</li>
+      <li><strong>UL/ETL listing records</strong> &mdash; EVSEs are listed to UL 2594 (and the personal-protection system to UL 2231): the listing, not the FCC, is this category&rsquo;s safety constitution</li>
+      <li><strong>The standards themselves</strong> &mdash; SAE J1772 (the connector and pilot protocol) and SAE J3400 (the NACS standard, published December 2023) are the public specifications the whole category implements</li>
+    </ul>
+    <p>What the FCC filing does <em>not</em> include: schematics (withheld under confidentiality requests where the maker files them), firmware, and the full bill of materials.</p>
+  </section>
+  <section>
+    <h2 id="exploded">Exploded view &mdash; the assemblies in build order</h2>
+    <p>This is the centerpiece of the page: the device taken apart into its assemblies, in the order they go together, every part named in plain language with what it does. An <em>exploded view</em> is the drawing a manufacturer makes showing every part separated along the path it assembles &mdash; the single most useful document in repair, and the one most often kept behind a dealer login.</p>
+    <h3>The source</h3>
+    <p><strong>Parts book:</strong> for commercial sealed units, none. For one branch of the family, everything: <strong>OpenEVSE</strong> is an open-source EVSE project whose schematics, board files, firmware, and parts lists are published &mdash; a complete, buildable, standards-compliant charger design that anyone may read. The stack below follows the architecture every J1772/J3400 EVSE shares (and that OpenEVSE documents openly). Sources: the SAE standards&rsquo; documented pilot protocol, FCC internal photos for smart units, UL 2594&rsquo;s requirements, and OpenEVSE&rsquo;s published design.</p>
+    <p><strong>Coverage: FULL for the open design (OpenEVSE: published schematics and parts); PARTIAL for sealed commercial units &mdash; no public parts book, FCC-photo basis. The shared architecture below is standard-defined, not reverse-engineered guesswork.</strong></p>
+    <h3>Build order</h3>
+        <h3>Step 1 &mdash; The connector &amp; cable &mdash; J1772 / J3400 (NACS)</h3>
+    <p>Two connector standards, one protocol family. The connector is a safety device first: no power flows until the car and the box have agreed, in analog, that everything is connected and vented/latched.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Power pins (L1/L2 or L/N)</td><td>Carry the AC. On J1772 these are the two big blades; the connector is rated 80&nbsp;A in the standard and passively cooled in most home units.</td></tr>
+        <tr><td>Proximity pin &amp; latch switch</td><td>Tells the car the connector is seated and, when you press the release, tells it to stop drawing <em>before</em> the pins separate &mdash; so the connector never breaks a live arc. The little switch in the handle is a safety system.</td></tr>
+        <tr><td>Pilot pin</td><td>Carries the 1&nbsp;kHz square wave described in Step 3 &mdash; the negotiation wire.</td></tr>
+        <tr><td>Ground pin</td><td>Longest pin: first to connect, last to break. The whole safety design hangs off this ordering.</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 2 &mdash; The contactor &amp; protection &mdash; the switch and its conscience</h3>
+    <p>Inside the box: a heavy relay and the protection circuits the standards require before that relay may close.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Contactor (main relay)</td><td>The electromechanical switch that connects mains to the car. It closes only when the pilot negotiation succeeds and the protection checks pass. A welded contactor (stuck closed) is the unit&rsquo;s most dangerous failure &mdash; good designs monitor for it (the car-side voltage check) and refuse to start.</td></tr>
+        <tr><td>CCID / ground-fault protection</td><td>Charge Circuit Interrupting Device: a ground-fault sensor (per UL 2231) tripping at ~20&nbsp;mA &mdash; and EVSEs do not auto-reclose blindly the way a bathroom GFCI might; they latch out per the standard&rsquo;s rules.</td></tr>
+        <tr><td>Current transformers / metering</td><td>Smart units meter energy for the app and for load-sharing between multiple EVSEs on one circuit (a J1772 feature: the pilot&rsquo;s advertised current can be adjusted live).</td></tr>
+        <tr><td>Surge &amp; temperature sensing</td><td>Plug-face and internal temperature sensors derate or stop a session when a receptacle overheats &mdash; the failure that actually starts garage fires is usually a tired 240&nbsp;V receptacle, not the EVSE.</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 3 &mdash; The pilot &amp; control board &mdash; a $0.10 negotiation</h3>
+    <p>The control board generates the pilot signal and reads the car&rsquo;s answer. This is the part of the standard anyone can verify with an oscilloscope, and OpenEVSE documents it completely.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Pilot generator (1&nbsp;kHz, &plusmn;12&nbsp;V PWM)</td><td>A square wave whose <em>duty cycle announces the maximum current</em> the car may draw (roughly: 10% &asymp; 6&nbsp;A, scaling linearly through the home range). The car reads the duty cycle and obeys it &mdash; the entire &lsquo;smart charging&rsquo; of AC charging is this one wire.</td></tr>
+        <tr><td>State detection (12&nbsp;V &rarr; 9&nbsp;V &rarr; 6&nbsp;V)</td><td>The car answers by loading the pilot through resistors/diode: 12&nbsp;V = no car, 9&nbsp;V = connected, 6&nbsp;V = ready/charging. The diode check proves it&rsquo;s a car and not a short or a child with a paperclip &mdash; the box will not energize for anything that can&rsquo;t answer correctly.</td></tr>
+        <tr><td>Control processor &amp; radio (smart models)</td><td>Schedules, apps, utility programs, and load management live here &mdash; and die here, when a vendor&rsquo;s cloud dies (see the record). The pilot layer underneath keeps working dumb, which is the saving grace of the standard&rsquo;s design.</td></tr>
+      </tbody>
+    </table>
+
+        <p><strong>What is missing, in the open:</strong> for sealed commercial units, boards and contactors are not sold and the exchange is whole-unit. The category&rsquo;s defense is structural, and it is real: the protocol is a public standard, the safety layer is analog and verifiable, and a complete open design (OpenEVSE) exists as the reference implementation. When a vendor bricks its cloud (below), the standard is why the box still charges.</p>
+  </section>
+  <section>
+    <h2 id="we-reveal">What we reveal</h2>
+    <p>The FCC tells you what a device emits. We tell you what&rsquo;s inside and how it works.</p>
+    <ul>
+      <li><strong>The charger is in the car</strong> &mdash; AC &lsquo;charging&rsquo; is negotiated delivery; the car&rsquo;s onboard charger does the conversion, which is why the same box serves every brand</li>
+      <li><strong>Duty cycle is destiny</strong> &mdash; read the pilot and you can read any session&rsquo;s current limit, with a scope, on any EVSE ever made</li>
+    </ul>
+    <p>Check our <a href="/autopsy/">teardowns</a> for full board-level analysis.</p>
+  </section>
+  <section>
+    <h2 id="variants">Levels &amp; connectors</h2>
+    <p>The vocabulary the whole category shares:</p>
+    <table>
+      <tr><th>Thing</th><th>What it is</th><th>Power</th><th>Notes</th></tr>
+      <tr><td>Level 1</td><td>EVSE on a 120&nbsp;V outlet (the cord in the trunk)</td><td>1.4&ndash;1.9&nbsp;kW</td><td>Slow, universal, and the pilot protocol is identical &mdash; only the numbers change.</td></tr>
+      <tr><td>Level 2</td><td>Hardwired or 240&nbsp;V plug EVSE (this page)</td><td>7.7&ndash;19.2&nbsp;kW</td><td>NEC Article 625 territory: dedicated circuit, continuous-load sizing (125%), licensed install.</td></tr>
+      <tr><td>DC fast charging</td><td>The charger really is in the cabinet (off-board DC)</td><td>50&ndash;350+&nbsp;kW</td><td>A different device class (CCS/J3400 DC) &mdash; named here so the boundary is explicit; not this page&rsquo;s subject.</td></tr>
+      <tr><td>J1772 (SAE)</td><td>The pre-2024 North American AC standard connector</td><td>&mdash;</td><td>Still the installed base; adapters to J3400 are passive for AC.</td></tr>
+      <tr><td>NACS &rarr; SAE J3400</td><td>Tesla&rsquo;s connector, opened as a spec Nov. 2022, standardized as J3400 in Dec. 2023</td><td>&mdash;</td><td>The industry&rsquo;s migration target; the pilot protocol carried over.</td></tr>
+    </table>
+  </section>
+  <section>
+    <h2 id="chips">Key chips &amp; components</h2>
+    <ul>
+      <li><strong>Pilot/control implementation</strong> &mdash; in OpenEVSE, a documented ATmega-class design with published firmware; in commercial units, an MCU of the families indexed in this site&rsquo;s <a href="/datasheets.html">Datasheet Index</a> doing the same documented job. The standard makes the chip boring, which is the highest compliment a standard can earn.</li>
+      <li><strong>Current-sense &amp; metering ICs</strong> &mdash; commodity energy-metering parts of the classes in the <a href="/datasheets.html">Datasheet Index</a>; in the open design, every one is named in the published BOM.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="faults">Faults &mdash; which part fails, and how you know</h2>
+    <p>Diagnosis only &mdash; the interventions belong to a licensed electrician. What each symptom <em>means</em>, so the conversation is informed:</p>
+    <ul>
+      <li><strong>Session stops overnight / breaker warm</strong> &mdash; continuous-load physics: an EVSE is a 3+ hour full-load draw, the harshest duty in a home. Warm breakers, tired receptacles, and undersized terminations announce themselves here first. This symptom is an electrician call, promptly, not a retry.</li>
+      <li><strong>EVSE clicks, car never starts</strong> &mdash; the pilot negotiation failing: a damaged pilot pin, a connector latch switch fault, or the car rejecting the advertised state. A second EVSE (or a public charger) separates car from box in one test.</li>
+      <li><strong>Ground-fault trips that reset and recur</strong> &mdash; moisture in the connector, a nicked cable, or a genuinely leaking appliance (the car). The CCID is a witness, not a nuisance: recurring trips are data.</li>
+      <li><strong>App dead, charging fine</strong> &mdash; the cloud layer&rsquo;s obituary (see JuiceBox, below). The standard&rsquo;s dumb layer keeps charging; what&rsquo;s lost is scheduling, metering history, and load-sharing smarts.</li>
+      <li><strong>Charge rate far below the box&rsquo;s rating</strong> &mdash; read the pilot&rsquo;s promise vs. the car&rsquo;s acceptance: the car&rsquo;s onboard charger limit, a configured amp limit in the EVSE (often set at install for the circuit), or temperature derating. Three different &lsquo;faults,&rsquo; two of which are correct behavior.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="safety">Safety &mdash; the section this page leads with, on purpose</h2>
+    <p><strong>Lethal voltage, stated plainly:</strong> 240&nbsp;V at 40&ndash;80&nbsp;A is the most dangerous energy in a home, delivered for hours. EVSE installation is licensed-electrician work under NEC Article 625 (US) and its equivalents elsewhere &mdash; permit, dedicated circuit, continuous-duty sizing, torque-checked terminations. The makers&rsquo; manuals say the same, and for once the gatekeeping and the safety point in the same direction: this page documents the device; it does not invite you inside it.</p>
+    <p>The receptacle is the weak point in the installed base: a consumer-grade 14-50 outlet cycled daily at 40&nbsp;A wears, heats, and is the documented origin of most EVSE-adjacent garage fires. Industrial-grade receptacles, or hardwiring, are the trade&rsquo;s answer &mdash; raise it with your electrician by name.</p>
+    <p>Never use an EVSE with a damaged cable or connector, never charge through an extension cord or a cheater adapter stack, and treat a contactor-weld or ground-fault latch-out as a retirement event for the unit, not a reset opportunity.</p>
+  </section>
+  <section>
+    <h2 id="record">The full record &mdash; dated, sourced, nothing smoothed over</h2>
+    <p>The EV charging record is short but pointed: a standard that outlived its vendors, and a cloud shutdown that proved why standards matter.</p>
+    <table>
+      <thead><tr><th>Date</th><th>Event</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>2010s</td><td>SAE J1772 settles as North America&rsquo;s AC connector and pilot standard. Every EVSE and every car implements the same &plusmn;12&nbsp;V, 1&nbsp;kHz negotiation &mdash; the interoperability the category still runs on.</td><td>SAE J1772 standard (rev. history)</td></tr>
+        <tr><td>2022-11-11</td><td>Tesla publishes its connector specification and renames it the North American Charging Standard (NACS) &mdash; an act of standards diplomacy that works: through 2023, Ford, GM, Rivian, Volvo/Polestar, and effectively the whole industry announce adoption.</td><td>Tesla specification release, Nov. 11, 2022; OEM announcements, May&ndash;Dec. 2023</td></tr>
+        <tr><td>2023-12</td><td>SAE standardizes the connector as J3400 &mdash; the proprietary plug becomes a public standard, completing the J1772 pattern: whatever survives is what&rsquo;s published.</td><td>SAE J3400, Dec. 2023</td></tr>
+        <tr><td>2024-10-02 / 2024-10-11</td><td>Enel X Way North America announces it is exiting the market; days later its JuiceBox app and connected services shut down. Thousands of installed smart chargers lose scheduling, history, and app control overnight. The units keep charging &mdash; the J1772 dumb layer doesn&rsquo;t need the cloud &mdash; and owners&rsquo; fury is precisely over the layer that died. (Volunteer and third-party efforts to re-home the orphaned units&rsquo; smarts followed.)</td><td>Enel X Way North America shutdown notice, Oct. 2024</td></tr>
+      </tbody>
+    </table>
+    <h3>Did you know</h3>
+    <ul>
+      <li>The negotiation that runs every AC charge in North America is one analog wire: a 1&nbsp;kHz square wave whose width is an offer and a resistor whose value is an answer. It cannot be bricked by a bankruptcy.</li>
+      <li>DC fast charging puts the charger in the cabinet; AC charging puts it in the car. The wall box&rsquo;s name is a lie the whole industry agreed to &mdash; &lsquo;EVSE&rsquo; (Electric Vehicle Supply Equipment) is the honest term, and it means &lsquo;a switch with manners.&rsquo;</li>
+      <li>A ground-fault trip level of ~20&nbsp;mA and a car that must prove itself with a diode before the relay closes: the safety design predates the smart features and will outlast them.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="documents">Documents &amp; deep dive</h2>
+    <p>Every document this page rests on, linked. Site library copies first, then the public record at the source.</p>
+    <ul>
+      <li><strong>SAE J1772 &amp; SAE J3400</strong> &mdash; the connector/pilot standards (SAE, paywalled standards; the pilot protocol is documented openly in the OpenEVSE design and the standard&rsquo;s public summaries).</li>
+      <li><strong>OpenEVSE project documentation</strong> &mdash; published schematics, BOM, and firmware for a complete EVSE: the category&rsquo;s reference open design.</li>
+      <li><strong>UL 2594 / UL 2231</strong> &mdash; the EVSE and personnel-protection listing standards; <strong>NEC Article 625</strong> &mdash; the installation law (US).</li>
+      <li><strong>FCC filings</strong> for smart EVSEs &mdash; internal photos: <a href="https://fccid.io">fccid.io</a>.</li>
+      <li><a href="/devices/solar-basics/">Solar Basics</a> &mdash; the other side of the garage wall: making the power this box delivers.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="reading">Further Reading</h2>
+    <ul>
+      <li><a href="/devices/solar-basics/">Solar Basics &mdash; panels, inverters, and the same NEC</a></li>
+      <li><a href="/devices/ebike-controllers/">E-Bike Controllers &mdash; smaller batteries, bigger fire record</a></li>
+      <li><a href="/obsolescence.html">Planned Obsolescence &mdash; the JuiceBox entry&rsquo;s family</a></li>
+    </ul>
+  </section>
+
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

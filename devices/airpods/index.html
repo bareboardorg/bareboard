@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AirPods — BareBoard — Free Hardware Education</title>
+<meta name="description" content="AirPods and AirPods Pro: the welded shell, stem battery, H1/H2 chips, FCC photos, iFixit 0/10, the FDA hearing-aid authorization, faults and the full record.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="AirPods">
+<meta property="og:description" content="AirPods: a battery with a radio attached — and an FDA-authorized hearing aid in the same shell.">
+<meta property="og:url" content="https://bareboard.org/devices/airpods/">
+<meta property="og:image" content="https://bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/devices/">Devices</a></li>
+        <li class="has-children">
+          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/about.html#how-we-work">How we work</a></li>
+                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/notes/">Bench Notes</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                <li><a href="/protocols.html">Protocol RE</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
+                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
+                <li><a href="/hot-100.html">Game Consoles</a></li>
+                <li><a href="/hot-100.html">Media Streamers</a></li>
+                <li><a href="/hot-100.html">Networking Gear</a></li>
+                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
+                <li><a href="/hot-100.html">Other</a></li>
+                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
+                <li><a href="/hot-100.html">Phones</a></li>
+                <li><a href="/hot-100.html">Printers</a></li>
+                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
+                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
+                <li><a href="/hot-100.html">Wearables</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/most-wanted.html#board">The board</a></li>
+              </ul>
+            </div>
+          </div></li>
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+                <li><a href="/watchmen.html#corrections">Corrections</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+  <aside class="legal-notice bb-notice-amber">
+    <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
+  </aside>
+
+  <h1>AirPods</h1>
+  <p class="lede">A battery with a radio attached, twice, in a box with a third battery. The AirPods are the end-state of anti-repair design: ultrasonically welded, glued, zero screws &mdash; and, in the Pro 2, an FDA-authorized hearing aid hiding inside the same sealed shell.</p>
+  <section>
+    <h2 id="fcc">FCC ID</h2>
+    <p><strong>FCC IDs vary by model; the buds and the case file separately.</strong> Apple&rsquo;s grantee code is <strong>BCG</strong>. Each earbud is its own radio device (Bluetooth, and ultra-wideband in the case on Pro 2), so each files its own internal photos &mdash; the only sanctioned look inside a product Apple never intends to be opened.</p>
+    <p>Every radio a device carries &mdash; Wi-Fi, Bluetooth, cellular, ultra-wideband, NFC &mdash; needs an FCC equipment authorization before the device can be sold in the United States. To get one, the manufacturer files photographs and test reports with the FCC, and those filings are <strong>public record</strong>. Check the label on your specific unit and look it up at <a href="https://fccid.io">fccid.io</a>.</p>
+    
+  </section>
+  <section>
+    <h2 id="fcc-revealed">What the FCC filing revealed</h2>
+    <p>The FCC filing for this device includes the documents manufacturers are required to submit: external photos, internal photos, test setup photos, RF test reports, and the user manual. These are public record at <a href="https://fccid.io/">fccid.io</a>.</p>
+    <ul>
+      <li><strong>Internal photos</strong> &mdash; the folded flex board in each bud, the button cell in the stem, the driver, and the case&rsquo;s own board and coil</li>
+      <li><strong>Test reports</strong> &mdash; SAR and RF exposure for a transmitter worn in the ear canal&rsquo;s entrance</li>
+      <li><strong>Label photos</strong> &mdash; which show the model splits (left and right buds are different models with different FCC IDs)</li>
+    </ul>
+    <p>What the FCC filing does <em>not</em> include: schematics (withheld under confidentiality requests where the maker files them), firmware, and the full bill of materials.</p>
+  </section>
+  <section>
+    <h2 id="exploded">Exploded view &mdash; the assemblies in build order</h2>
+    <p>This is the centerpiece of the page: the device taken apart into its assemblies, in the order they go together, every part named in plain language with what it does. An <em>exploded view</em> is the drawing a manufacturer makes showing every part separated along the path it assembles &mdash; the single most useful document in repair, and the one most often kept behind a dealer login.</p>
+    <h3>The source</h3>
+    <p><strong>Parts book:</strong> none, and none is possible &mdash; there is no published procedure because there is no non-destructive way in. <strong>FCC internal photos</strong> are the source: they show the stack below. The shell is ultrasonically welded (the plastic is melted together at a seam), the battery is glued, and every teardown on record destroys the unit it opens. This exploded view is therefore a map of a device you can understand completely and service almost not at all &mdash; which is the lesson.</p>
+    <p><strong>Coverage: PARTIAL &mdash; no public parts book; FCC internal-photo basis. Exploded coverage of a sealed unit: complete as documentation, near-zero as a repair path, and the page says so rather than pretending otherwise.</strong></p>
+    <h3>Build order</h3>
+        <h3>Step 1 &mdash; The earbud shell &amp; acoustics</h3>
+    <p>One welded plastic shell per ear. Inside it, everything is folded into the space behind the speaker.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Shell (ultrasonically welded)</td><td>Two plastic halves melted into one. There is no seam to split that closes again.</td></tr>
+        <tr><td>Dynamic driver</td><td>The speaker &mdash; an 11&nbsp;mm custom driver on Pro models. It is the largest single part in the bud.</td></tr>
+        <tr><td>Microphones (beamforming + inward-facing)</td><td>Pro models add an inward-facing mic that listens to what you hear, feeding the adaptive audio and the hearing-test feature.</td></tr>
+        <tr><td>Optical / skin-detect sensors</td><td>Detect that the bud is in an ear, to play and pause.</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 2 &mdash; The stem &mdash; battery and brains</h3>
+    <p>The stem is not a handle. It is the battery tube and the antenna.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Button cell (in the stem)</td><td>A small cylindrical lithium cell, glued in place. It is the part that wears out in 2&ndash;4 years and cannot be replaced without destroying the bud.</td></tr>
+        <tr><td>H1 / H2 chip</td><td>Apple&rsquo;s headphone SoC &mdash; Bluetooth radio, audio DSP (digital signal processing), and the neural engine cores that run computational audio. No public datasheet.</td></tr>
+        <tr><td>Bluetooth antenna</td><td>Runs the length of the stem &mdash; which is why the stem exists.</td></tr>
+        <tr><td>Force sensor / touch surface</td><td>The squeeze and swipe input on the stem&rsquo;s flat face.</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 3 &mdash; The case &mdash; a third device</h3>
+    <p>The case is not packaging. It is a battery pack, a charger, and on Pro 2 a radio beacon of its own.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Case battery</td><td>A larger lithium cell that recharges the buds ~4 times. Also glued; also not sold as a part.</td></tr>
+        <tr><td>Charging coil &amp; port</td><td>Inductive charging (Qi/MagSafe/Watch-puck on Pro 2) plus USB-C or Lightning on the port models.</td></tr>
+        <tr><td>U1 ultra-wideband chip (Pro 2 case)</td><td>Lets Find My point at the case with an arrow; the case also gains a speaker for Find My sounds and a lanyard loop.</td></tr>
+        <tr><td>Pairing button &amp; status LED</td><td>The case&rsquo;s only control and display.</td></tr>
+      </tbody>
+    </table>
+
+        <p><strong>What is missing, in the open:</strong> any legitimate repair path for the buds themselves. Apple&rsquo;s service answer for a dead bud is a replacement bud at a set fee. The honest repair content for AirPods is preventive: keep the cells cycling, store them in the case, and know that the product&rsquo;s lifespan is the life of its smallest glued battery.</p>
+  </section>
+  <section>
+    <h2 id="we-reveal">What we reveal</h2>
+    <p>The FCC tells you what a device emits. We tell you what&rsquo;s inside and how it works.</p>
+    <ul>
+      <li><strong>Why the stem exists</strong> &mdash; battery tube + antenna, the two things that would not fit behind the driver</li>
+      <li><strong>The hearing aid inside</strong> &mdash; how the Pro 2&rsquo;s FDA-authorized Hearing Aid Feature turns the same microphones and driver into a regulated medical function</li>
+    </ul>
+    <p>Check our <a href="/autopsy/">teardowns</a> for full board-level analysis.</p>
+  </section>
+  <section>
+    <h2 id="variants">Models</h2>
+    <p>Four generations of the standard bud and two of the Pro; one architecture throughout.</p>
+    <table>
+      <tr><th>Line</th><th>Years</th><th>Chip</th><th>Notes</th></tr>
+      <tr><td>AirPods (1st&ndash;4th gen)</td><td>2016&ndash;</td><td>W1 &rarr; H1 &rarr; H2</td><td>4th gen (2024) adds an ANC (active noise cancelling) variant without silicone tips.</td></tr>
+      <tr><td>AirPods Pro (1st&ndash;2nd gen)</td><td>2019&ndash;</td><td>H1 &rarr; H2</td><td>Pro 2 case adds UWB + speaker; Pro 2 gains the FDA-authorized hearing features (2024).</td></tr>
+      <tr><td>AirPods Max</td><td>2020&ndash;</td><td>H1 (each cup)</td><td>The exception: replaceable ear cushions and a headband &mdash; still no battery service path.</td></tr>
+    </table>
+  </section>
+  <section>
+    <h2 id="chips">Key chips &amp; components</h2>
+    <ul>
+      <li><strong>Apple H1 / H2</strong> &mdash; headphone SoC; no public datasheet (collection target logged). The <a href="/library/original-docs/apple-sep-public-reference.md">Secure Enclave reference</a> (site library) covers the pairing security model the buds use with iCloud.</li>
+      <li><strong>Apple U1</strong> (Pro 2 case) &mdash; ultra-wideband ranging radio; no public datasheet. Collection target logged.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="faults">Faults &mdash; which part fails, and how you know</h2>
+    <p>Diagnosis on a sealed device is triage: which of the three devices (left bud, right bud, case) is lying to you?</p>
+    <ul>
+      <li><strong>One bud drains far faster than the other</strong> &mdash; that bud&rsquo;s stem cell is worn. There is no replacement; the service path is a replacement bud. A bud that dies in minutes has a failed cell, not a software bug.</li>
+      <li><strong>Crackling / static / weak bass (Pro, 1st gen)</strong> &mdash; the documented manufacturing defect Apple ran a service program for (see the record). Check program eligibility before paying for a replacement.</li>
+      <li><strong>Case won&rsquo;t charge the buds</strong> &mdash; dirty contacts in the case wells are the first cause (the buds&rsquo; stem contacts oxidize); a case that itself won&rsquo;t charge points at its port or coil.</li>
+      <li><strong>Find My can&rsquo;t locate a bud</strong> &mdash; buds only report when awake and near a Bluetooth listener; a fully dead bud is invisible until charged. The Pro 2 case (with its own U1 radio and speaker) is findable on its own.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="safety">Safety, before you open anything</h2>
+    <p>Do not attempt to open a bud with a swollen or hot cell. The cell is the stem; cutting the stem is cutting the battery. Swollen AirPods go to e-waste/battery recycling, not the workbench.</p>
+    <p>Earbud batteries are small but not harmless: a punctured button cell in a welded shell has nowhere to vent but into the plastic around it.</p>
+  </section>
+  <section>
+    <h2 id="record">The full record &mdash; dated, sourced, nothing smoothed over</h2>
+    <p>Two storylines run through the AirPods record: a repairability score of zero, and a consumer gadget crossing into regulated medicine.</p>
+    <table>
+      <thead><tr><th>Date</th><th>Event</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>2016-12</td><td>AirPods launch. iFixit&rsquo;s teardown scores them 0 out of 10 for repairability &mdash; the shell must be cut open and the battery is glued; the score is repeated for AirPods Pro (2019).</td><td>iFixit teardowns, 2016 &amp; 2019</td></tr>
+        <tr><td>2020-10-30</td><td>Apple announces a service program for AirPods Pro (1st generation) made before October 2020 with sound issues &mdash; crackling/static and failing noise cancellation &mdash; repaired or replaced free.</td><td>Apple service program notice</td></tr>
+        <tr><td>2024-09-12</td><td>The FDA authorizes Apple&rsquo;s Hearing Aid Feature for AirPods Pro 2 &mdash; the first over-the-counter hearing-aid software authorized for a consumer earbud, under the OTC hearing-aid framework.</td><td>FDA authorization; see this site&rsquo;s <a href="/devices/hearing-aids/">Hearing Aids</a> page</td></tr>
+        <tr><td>2024-09</td><td>AirPods 4 and updated Max move to USB-C; the product line&rsquo;s service model (replace, don&rsquo;t repair) is unchanged.</td><td>Apple product record</td></tr>
+      </tbody>
+    </table>
+    <h3>Did you know</h3>
+    <ul>
+      <li>Left and right buds are <strong>different devices</strong> &mdash; different model numbers, different FCC IDs, and not interchangeable in pairing until re-mated as a set.</li>
+      <li>The case is a computer too: on Pro 2 it has its own radio, speaker, and firmware &mdash; a lost case is a lost device, not a lost accessory.</li>
+      <li>Your earbuds contain an FDA-authorized medical feature: the Pro 2&rsquo;s hearing test and hearing aid functions run on the same H2 chip that plays music.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="documents">Documents &amp; deep dive</h2>
+    <p>Every document this page rests on, linked. Site library copies first, then the public record at the source.</p>
+    <ul>
+      <li><strong>FCC filings</strong> for each bud and case (grantee code BCG) &mdash; internal photos of the welded stack: <a href="https://fccid.io">fccid.io</a>.</li>
+      <li><strong>FDA authorization record</strong> &mdash; Hearing Aid Feature for AirPods Pro 2 (Sept. 12, 2024), under the OTC rule at 21 CFR 800.30; background on this site&rsquo;s <a href="/devices/hearing-aids/">Hearing Aids</a> page.</li>
+      <li><a href="/library/original-docs/apple-sep-public-reference.md">Apple Secure Enclave &mdash; Public Reference</a> &mdash; this site&rsquo;s library.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="reading">Further Reading</h2>
+    <ul>
+      <li><a href="/devices/apple-watch/">Apple Watch &mdash; sealed, but at least serviced as a unit</a></li>
+      <li><a href="/devices/hearing-aids/">Hearing Aids &mdash; what the Pro 2&rsquo;s medical feature actually is</a></li>
+      <li><a href="/obsolescence.html">Planned Obsolescence &mdash; the glued-battery pattern across the industry</a></li>
+    </ul>
+  </section>
+
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

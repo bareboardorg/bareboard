@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GoPro — BareBoard — Free Hardware Education</title>
+<meta name="description" content="GoPro HERO anatomy: GP2 silicon, the sacrificial door/lens/battery layer, FCC photos (grantee CNF), the Karma CPSC recall, faults and the full record.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="GoPro">
+<meta property="og:description" content="GoPro: a sealed camera that kept its removable battery — and the drone recall that ended its air war.">
+<meta property="og:url" content="https://bareboard.org/devices/gopro/">
+<meta property="og:image" content="https://bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/devices/">Devices</a></li>
+        <li class="has-children">
+          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/about.html#how-we-work">How we work</a></li>
+                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/notes/">Bench Notes</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                <li><a href="/protocols.html">Protocol RE</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
+                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
+                <li><a href="/hot-100.html">Game Consoles</a></li>
+                <li><a href="/hot-100.html">Media Streamers</a></li>
+                <li><a href="/hot-100.html">Networking Gear</a></li>
+                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
+                <li><a href="/hot-100.html">Other</a></li>
+                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
+                <li><a href="/hot-100.html">Phones</a></li>
+                <li><a href="/hot-100.html">Printers</a></li>
+                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
+                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
+                <li><a href="/hot-100.html">Wearables</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/most-wanted.html#board">The board</a></li>
+              </ul>
+            </div>
+          </div></li>
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+                <li><a href="/watchmen.html#corrections">Corrections</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+  <aside class="legal-notice bb-notice-amber">
+    <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
+  </aside>
+
+  <h1>GoPro</h1>
+  <p class="lede">A camera built to be crashed &mdash; and the one American company that tried to fight DJI in the air and got recalled back to the ground. Inside: a sensor, a stabilization brain, and a battery door that is the whole repair story.</p>
+  <section>
+    <h2 id="fcc">FCC ID</h2>
+    <p><strong>FCC IDs vary by model.</strong> GoPro files under its own grantee code <strong>CNF</strong> (cameras with Wi-Fi/Bluetooth/GPS); the Karma drone system filed as controller + aircraft + gimbal separately. The filings&rsquo; internal photos show the HERO board stack and, on the Karma set, the drone that the CPSC would later recall.</p>
+    <p>Every radio a device carries &mdash; Wi-Fi, Bluetooth, cellular, ultra-wideband, NFC &mdash; needs an FCC equipment authorization before the device can be sold in the United States. To get one, the manufacturer files photographs and test reports with the FCC, and those filings are <strong>public record</strong>. Check the label on your specific unit and look it up at <a href="https://fccid.io">fccid.io</a>.</p>
+    
+  </section>
+  <section>
+    <h2 id="fcc-revealed">What the FCC filing revealed</h2>
+    <p>The FCC filing for this device includes the documents manufacturers are required to submit: external photos, internal photos, test setup photos, RF test reports, and the user manual. These are public record at <a href="https://fccid.io/">fccid.io</a>.</p>
+    <ul>
+      <li><strong>Internal photos</strong> &mdash; the image-sensor board stacked on the main (GP-chip) board, the battery bay&rsquo;s contacts, and the antenna placement that lets a camera this small stream a live preview</li>
+      <li><strong>Test reports</strong> &mdash; Wi-Fi/Bluetooth output; GPS models show the receiver&rsquo;s filed characteristics</li>
+      <li><strong>The manual</strong> &mdash; filed publicly, including the battery and door instructions that are the extent of sanctioned owner service</li>
+    </ul>
+    <p>What the FCC filing does <em>not</em> include: schematics (withheld under confidentiality requests where the maker files them), firmware, and the full bill of materials.</p>
+  </section>
+  <section>
+    <h2 id="exploded">Exploded view &mdash; the assemblies in build order</h2>
+    <p>This is the centerpiece of the page: the device taken apart into its assemblies, in the order they go together, every part named in plain language with what it does. An <em>exploded view</em> is the drawing a manufacturer makes showing every part separated along the path it assembles &mdash; the single most useful document in repair, and the one most often kept behind a dealer login.</p>
+    <h3>The source</h3>
+    <p><strong>Parts book:</strong> none. GoPro sells doors, batteries, lenses (protective lens covers), and mounts &mdash; the consumable shell &mdash; and no internal part at all. <strong>FCC internal photos</strong> are the source for the stack below. A HERO is a sensor sandwich: lens &rarr; sensor board &rarr; main board &rarr; battery, in a rubberized unibody that is waterproof to 10&nbsp;m because it is sealed, not because it has serviceable gaskets you can replace.</p>
+    <p><strong>Coverage: PARTIAL &mdash; no public parts book; FCC internal-photo basis. Owner-serviceable layer is real but shallow: batteries, doors, lens covers.</strong></p>
+    <h3>Build order</h3>
+        <h3>Step 1 &mdash; Housing, lens &amp; doors</h3>
+    <p>The waterproofing strategy is a sealed body with exactly one opening &mdash; the side door &mdash; and its gasket is the camera&rsquo;s life expectancy.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Unibody housing</td><td>Rubberized polycarbonate shell, waterproof to 10&nbsp;m (33&nbsp;ft) bare on current flagships. The rating dies with any cracked door seal.</td></tr>
+        <tr><td>Protective lens cover</td><td>A twist-off glass cover over the actual lens &mdash; the one sacrificial optical part, designed to be replaced after the crash that would otherwise total the camera.</td></tr>
+        <tr><td>Side door &amp; gasket</td><td>Covers USB-C and the battery/SD bay. A torn gasket or grit in the seal is how &lsquo;waterproof&rsquo; cameras drown; the door is sold as a part for this reason.</td></tr>
+        <tr><td>Mounting fingers</td><td>The folding two-prong mount built into the base &mdash; the interface to the entire GoPro mount ecosystem.</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 2 &mdash; Imaging stack</h3>
+    <p>Sensor on its own board, processor on the main board, joined by a connector that crash forces love to unseat.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Image sensor (Sony-class CMOS, 1/1.9&Prime; on recent flagships)</td><td>The light sensor. Sensor size, not megapixels, is why the footage looks like it does at dusk.</td></tr>
+        <tr><td>GP2 processor (HERO10 onward; GP1 in HERO6&ndash;9)</td><td>GoPro&rsquo;s in-house SoC: image pipeline, HyperSmooth electronic stabilization (gyro-driven horizon leveling + crop), and the encoder. No public datasheet.</td></tr>
+        <tr><td>Gyroscope / IMU</td><td>The motion sensor whose data <em>is</em> the stabilization: HyperSmooth is computed from this part, not from a gimbal.</td></tr>
+        <tr><td>microSD slot</td><td>The only storage. Card speed class is a system spec &mdash; a slow card presents as a &lsquo;freezing camera&rsquo; fault (see Faults).</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 3 &mdash; Battery &amp; boards</h3>
+    <p>A removable pack in a sealed camera &mdash; the design decision that keeps HEROs repairable at exactly one layer.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Enduro battery pack</td><td>A slide-in lithium pack (1720&nbsp;mAh class). Removable, swappable, sold everywhere &mdash; the correct way to build a sealed device, and the reason a HERO outlives an AirPod.</td></tr>
+        <tr><td>Main board &amp; radios</td><td>Wi-Fi/Bluetooth (+ GPS on equipped models) on the main board; antennas at the shell edges per the FCC photos.</td></tr>
+        <tr><td>Front &amp; rear displays</td><td>Two LCDs (status front, touch rear) on flex cables &mdash; the rear screen is the most-cracked part on the camera and is not sold separately.</td></tr>
+      </tbody>
+    </table>
+
+        <p><strong>What is missing, in the open:</strong> any internal part, any diagram, any calibration procedure for the sensor stack. GoPro&rsquo;s service model is warranty exchange. The parts it does sell (doors, lens covers, batteries) are exactly the parts its design makes sacrificial &mdash; a coherent philosophy, documented here because it is the exception in this wave that proves design intent matters.</p>
+  </section>
+  <section>
+    <h2 id="we-reveal">What we reveal</h2>
+    <p>The FCC tells you what a device emits. We tell you what&rsquo;s inside and how it works.</p>
+    <ul>
+      <li><strong>Stabilization is a sensor + software, not a motor</strong> &mdash; the IMU&rsquo;s data, the GP2&rsquo;s crop: how HyperSmooth actually works</li>
+      <li><strong>The Karma file</strong> &mdash; what the CPSC recall of GoPro&rsquo;s drone (below) established about a battery latch, in the regulator&rsquo;s own record</li>
+    </ul>
+    <p>Check our <a href="/autopsy/">teardowns</a> for full board-level analysis.</p>
+  </section>
+  <section>
+    <h2 id="variants">The line</h2>
+    <p>One flagship cadence, one small-form experiment, one drone (recalled).</p>
+    <table>
+      <tr><th>Line</th><th>Years</th><th>Defining hardware</th><th>Notes</th></tr>
+      <tr><td>HERO (flagship)</td><td>2014&ndash; (numbered to 13)</td><td>GP1 (HERO6) &rarr; GP2 (HERO10) in-house silicon</td><td>Waterproof-without-housing from HERO5; the removable battery survives every redesign.</td></tr>
+      <tr><td>HERO (small / Session line)</td><td>2015&ndash;2018, Session; mini variants since</td><td>Sealed, smaller, battery built-in on Session</td><td>The Session&rsquo;s built-in battery is the exception that shows the rule.</td></tr>
+      <tr><td>MAX / 360 line</td><td>2019&ndash;</td><td>Dual lenses, dual sensors</td><td>Stitching is compute; the hardware is two HEROs back to back.</td></tr>
+      <tr><td>Karma (drone)</td><td>2016&ndash;2018</td><td>Detachable gimbal (Karma Grip) + quadcopter</td><td>Recalled (below); GoPro exited drones in January 2018.</td></tr>
+    </table>
+  </section>
+  <section>
+    <h2 id="chips">Key chips &amp; components</h2>
+    <ul>
+      <li><strong>GoPro GP1 / GP2</strong> &mdash; in-house camera SoCs; no public datasheet (collection target logged). Their existence is the documented break from the Ambarella parts earlier HEROs used.</li>
+      <li><strong>Image sensors (Sony CMOS)</strong> &mdash; identified per model from FCC photos and maker specs; sensor datasheets for the exact SKUs are not public. Collection target logged.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="faults">Faults &mdash; which part fails, and how you know</h2>
+    <p>Symptom first. The HERO fault tree is short because the camera is honest about what it is:</p>
+    <ul>
+      <li><strong>Freezing / corrupted files</strong> &mdash; the microSD card, first and almost always: an under-rated or counterfeit card. A card from the maker&rsquo;s published compatibility list is the fix and the diagnosis in one step.</li>
+      <li><strong>Won&rsquo;t power on after water exposure</strong> &mdash; check the door gasket for grit/tears before assuming the board: the seal is the system. Dry the bay fully; a camera that got wet inside is a corrosion clock, not a brick &mdash; yet.</li>
+      <li><strong>Overheating shutdowns (static, high-res modes)</strong> &mdash; documented behavior: a sealed, fanless camera recording 5.3K in still air is a thermal design at its edge. Airflow (the mount on a moving bike is the cooling system) and lower modes are the mitigations; GoPro publishes thermal guidance because this is physics, not defect.</li>
+      <li><strong>GPS never locks / position garbage</strong> &mdash; the GPS needs sky: first lock after travel or storage can take minutes. A unit that never locks with clear sky has an antenna/board fault.</li>
+      <li><strong>Battery drains in the case, camera warm</strong> &mdash; a stuck-on radio or a camera that didn&rsquo;t actually power down (voice control wake is a setting, and a battery cost).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="safety">Safety, before you open anything</h2>
+    <p>Swollen Enduro packs get the lithium rule: out of the camera, into battery recycling, no exceptions for &lsquo;one more shoot.&rsquo; The pack is removable precisely so this decision is easy.</p>
+    <p>A HERO that has taken water inside is not made safe by rice or time at the board level &mdash; powering a corroding board is how a recoverable camera becomes a dead one. Dry, unpowered, and decide with the board visible or not at all.</p>
+  </section>
+  <section>
+    <h2 id="record">The full record &mdash; dated, sourced, nothing smoothed over</h2>
+    <p>GoPro&rsquo;s record is a product record: one famous recall, one exit from a market, one patent war with the rival that replaced it.</p>
+    <table>
+      <thead><tr><th>Date</th><th>Event</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>2016-11-08</td><td>GoPro recalls the Karma drone (~2,500 units sold) after reports of power loss mid-flight; the CPSC record attributes the failures to a battery that could disconnect &mdash; a mechanical latch issue. Karma owners are refunded in full.</td><td>CPSC Recall No. 17-034 (GoPro Karma)</td></tr>
+        <tr><td>2018-01-08</td><td>GoPro discontinues Karma and exits the drone business entirely, citing a hostile regulatory environment and thin margins &mdash; the American challenge to DJI ends after one recalled product.</td><td>GoPro announcement, Jan. 8, 2018</td></tr>
+        <tr><td>2024-03</td><td>GoPro files a USITC complaint against Arashi Vision (Insta360) alleging its action cameras infringe GoPro patents &mdash; the action-camera fight moves to the same forum as the Apple Watch case on this site.</td><td>USITC complaint, March 2024 (institution of investigation followed)</td></tr>
+      </tbody>
+    </table>
+    <h3>Did you know</h3>
+    <ul>
+      <li>The Karma&rsquo;s camera gimbal was designed to detach and become a handheld stabilizer &mdash; the drone was a vehicle for a camera system, which is why the company survived the recall that killed the drone.</li>
+      <li>GoPro&rsquo;s stabilization is <em>computed</em>: there is no motor. The gyro&rsquo;s record of the shake, cropped against in software, is the whole trick &mdash; the opposite engineering religion from DJI&rsquo;s three-motor gimbal.</li>
+      <li>The battery is still removable after a decade of redesigns &mdash; proof, from the one company here that ships sealed waterproof hardware, that sealed and swappable are a choice, not a constraint.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="documents">Documents &amp; deep dive</h2>
+    <p>Every document this page rests on, linked. Site library copies first, then the public record at the source.</p>
+    <ul>
+      <li><strong>CPSC Recall No. 17-034</strong> &mdash; the Karma recall record (cpsc.gov), the primary source for the drone story.</li>
+      <li><strong>FCC filings</strong> (grantee code CNF) &mdash; camera and Karma internal photos: <a href="https://fccid.io">fccid.io</a>.</li>
+      <li><a href="/devices/dji-drones/">DJI Drones</a> &mdash; the other side of the drone story, including why Karma&rsquo;s failure mattered.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="reading">Further Reading</h2>
+    <ul>
+      <li><a href="/devices/dji-drones/">DJI Drones &mdash; the full federal record</a></li>
+      <li><a href="/devices/wyze-cam-v3/">Wyze Cam v3 &mdash; the fixed camera&rsquo;s teardown</a></li>
+      <li><a href="/hot-100.html">The Hot 100</a></li>
+    </ul>
+  </section>
+
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

@@ -93,6 +93,20 @@
               </div>
             </div>
           </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
         <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
           <div class="col-panel">
             <div class="dropdown-inner">
@@ -285,7 +299,7 @@ Starting kernel ...</code></pre>
 
 
 <h3>3. SWD debug port &mdash; Raspberry Pi Pico as the probe</h3>
-<p>ARM microcontrollers include a Serial Wire Debug (SWD) port: two pins (SWDIO and SWCLK, plus ground) through which the chip&rsquo;s entire flash memory can be read and written. A Raspberry Pi Pico flashed with the free Picoprobe firmware functions as a complete debug probe.</p><p><strong>You need:</strong> Raspberry Pi Pico (~$4), 3 jumper wires, free OpenOCD software.</p><p><strong>Use it when:</strong> the serial console is absent or locked. Wiring: Pico GP2 to target SWDIO, Pico GP3 to target SWCLK, GND to GND.</p><pre class="term"><code><span class="p">$</span> picotool load picoprobe.uf2
+<p>ARM microcontrollers include a Serial Wire Debug (SWD) port: two pins (SWDIO and SWCLK, plus ground) through which the chip&rsquo;s entire flash memory can be read and written. A Raspberry Pi Pico flashed with the free Picoprobe firmware functions as a complete debug probe.</p><p><strong>You need:</strong> Raspberry Pi Pico (~$4), 3 jumper wires, free OpenOCD software.</p><p><strong>Use it when:</strong> the serial console is absent or locked. Wiring: Pico GP2 to target SWCLK, Pico GP3 to target SWDIO, GND to GND.</p><pre class="term"><code><span class="p">$</span> picotool load picoprobe.uf2
 Loading picoprobe.uf2 into RP2040 device...
 The device was rebooted into application mode.
 <span class="p">$</span> openocd -f interface/picoprobe.cfg -f target/rp2040.cfg \
@@ -295,7 +309,7 @@ dumped 2097152 bytes in 3.42s</code></pre>
 
 
 <h3>4. JTAG on ESP32 &mdash; smart bulbs and plugs</h3>
-<p>Espressif documents the ESP32&rsquo;s JTAG debug pins: GPIO&nbsp;12 (TDI), GPIO&nbsp;13 (TCK), GPIO&nbsp;14 (TMS), GPIO&nbsp;15 (TDO). Many ESP32-based smart bulbs and plugs route these to test pads on the board edge. The same $4 Pico running Picoprobe works as the adapter.</p><p><strong>You need:</strong> Raspberry Pi Pico (~$4) with Picoprobe, jumper wires, free OpenOCD with ESP32 support.</p><p><strong>Use it when:</strong> working with ESP32-based IoT devices where the serial pins are inaccessible but test pads are visible.</p><pre class="term"><code><span class="p">$</span> openocd -f interface/picoprobe.cfg -f target/esp32.cfg
+<p>Espressif documents the ESP32&rsquo;s JTAG debug pins: GPIO&nbsp;12 (TDI), GPIO&nbsp;13 (TCK), GPIO&nbsp;14 (TMS), GPIO&nbsp;15 (TDO). Many ESP32-based smart bulbs and plugs route these to test pads on the board edge. Note the adapter matters here: Picoprobe/debugprobe speaks SWD only and cannot do JTAG, so the Pico from technique&nbsp;3 does <em>not</em> work for ESP32 JTAG. Use a real JTAG adapter &mdash; Espressif&rsquo;s own ESP-Prog (FT2232HL-based) is the documented option.</p><p><strong>You need:</strong> ESP-Prog or another JTAG-capable adapter (~$10&ndash;15), jumper wires, free OpenOCD with ESP32 support.</p><p><strong>Use it when:</strong> working with ESP32-based IoT devices where the serial pins are inaccessible but test pads are visible.</p><pre class="term"><code><span class="p">$</span> openocd -f interface/ftdi/esp32_devkitj_v1.cfg -f target/esp32.cfg
 Open On-Chip Debugger 0.12.0
 Info : esp32: Debug controller was reset.
 Info : esp32: Core 0 was reset.
@@ -361,12 +375,13 @@ Bus 001 Device 042: ID 05ac:1227 Apple, Inc. iPhone (DFU Mode)
 
 
 <h3>12. CH341A USB programmer &mdash; the $3 instrument</h3>
-<p>A single inexpensive USB adapter handles both SPI flash chips and I2C EEPROMs &mdash; the two most common firmware storage types in IoT devices, routers, and PC BIOS chips. Combined with the clip from technique&nbsp;5, it reads firmware from a powered-off board in minutes.</p><p><strong>You need:</strong> CH341A programmer (~$3).</p><p><strong>Use it when:</strong> routinely &mdash; it is worth acquiring before it is needed. It complements techniques&nbsp;5 and&nbsp;11.</p><pre class="term"><code><span class="p">$</span> # SPI flash (8-pin chip):
+<p>A single inexpensive USB adapter handles SPI flash chips and 25-series SPI EEPROMs &mdash; the most common firmware storage types in IoT devices, routers, and PC BIOS chips. Combined with the clip from technique&nbsp;5, it reads firmware from a powered-off board in minutes.</p><p><strong>You need:</strong> CH341A programmer (~$3).</p><p><strong>Use it when:</strong> routinely &mdash; it is worth acquiring before it is needed. It complements techniques&nbsp;5 and&nbsp;11.</p><pre class="term"><code><span class="p">$</span> # SPI flash (8-pin chip):
 <span class="p">$</span> flashrom -p ch341a_spi -r spi-backup.bin
 Found Winbond flash chip "W25Q64.V" (8192 kB, SPI).
 Reading flash... done.
-<span class="p">$</span> # I2C EEPROM (small settings chip) with the same adapter:
-<span class="p">$</span> flashrom -p ch341a_i2c -r eeprom-backup.bin
+<span class="p">$</span> # SPI EEPROM (25-series settings chip) with the same adapter and programmer:
+<span class="p">$</span> flashrom -p ch341a_spi -r eeprom-backup.bin
+Found Atmel flash chip "AT25DF081A" (1024 kB, SPI).
 Reading flash... done.</code></pre>
 
 

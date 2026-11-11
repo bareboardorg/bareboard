@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beyond Medicare: Medicaid, the VA, and Private Plans &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="Who pays to repair a power wheelchair when it is not Medicare: Medicaid&rsquo;s federal floor and state rules, EPSDT for under-21s, VA Prosthetics for VA-issued chairs, and what private plans actually promise.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Beyond Medicare: Medicaid, the VA, and Private Plans">
+<meta property="og:description" content="Medicaid, the VA, and private plans each have their own door for a wheelchair repair. Which door is yours, and what to cite or ask at it.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-insurance.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Beyond Medicare: Medicaid, the VA, and Private Plans</h1>
+    <p class="lede">The companion page, <a href="/pmd-repairs.html">Getting a Repair Paid For</a>, teaches Medicare&rsquo;s repair rules. Medicare is not the only payer. If your power wheelchair &mdash; a <strong>power mobility device (PMD)</strong>, meaning a power wheelchair or scooter you rely on to move around &mdash; was paid for by Medicaid, issued by the Department of Veterans Affairs (the VA), or covered by a private health plan, a different door, a different rulebook, and a different person to argue with apply. This page is those three doors, in plain language.</p>
+    <p><em>Provenance: compiled from primary sources only &mdash; Medicaid.gov and the Code of Federal Regulations (42 CFR, the published federal rules) for Medicaid, and the VA&rsquo;s own Prosthetic and Sensory Aids Service pages for veterans. Private health plans publish no single public rulebook, and this page says so where that is the case instead of inventing one. This is documentation, not legal advice: if a claim is denied, the appeal and hearing steps named on this page are the road.</em></p>
+  </section>
+
+  <section id="name-your-payer">
+    <h2>First: name your payer, not your chair</h2>
+    <p>Repair arguments fail when they are made to the wrong payer, with the wrong payer&rsquo;s rules. Before anything else, answer one question: <strong>who paid for this chair, or who covers you now?</strong></p>
+    <ul>
+      <li><strong>Medicare paid?</strong> Stop here and use <a href="/pmd-repairs.html">Getting a Repair Paid For</a> &mdash; that page is the Medicare rulebook, named and cited.</li>
+      <li><strong>Medicaid covers you?</strong> Read the Medicaid sections below. Your state&rsquo;s rule, not a national one, decides most repair questions.</li>
+      <li><strong>The VA issued your chair?</strong> Read the VA section. VA repair runs through VA Prosthetics, not through an insurance claim.</li>
+      <li><strong>A private plan</strong> &mdash; through a job, a spouse&rsquo;s job, or bought by you &mdash; <strong>covers you?</strong> Read the private-plan section. Your contract is the rulebook, and this page teaches what to ask for in it.</li>
+      <li><strong>You have two of these</strong> &mdash; for example Medicare and Medicaid together? Do not assume one door cancels the other. Name both when you talk to a supplier, and ask each payer what it will and will not do for this repair.</li>
+    </ul>
+  </section>
+
+  <section id="medicaid-floor">
+    <h2>Medicaid: a federal floor, and your state at the wheel</h2>
+    <p><strong>Medicaid</strong> is health coverage for people with low income, run jointly by the federal government and each state. That joint structure is the whole lesson of this section, and <a href="https://www.medicaid.gov/medicaid/benefits">Medicaid.gov&rsquo;s Benefits page</a> states it in one sentence: states <em>establish and administer their own Medicaid programs and determine the type, amount, duration, and scope of services within broad federal guidelines</em>.</p>
+    <p>So there is a <strong>federal floor</strong> &mdash; things every state must do &mdash; and then there is your state&rsquo;s own layer on top of it. Anyone who tells you &ldquo;Medicaid&rsquo;s repair rule is X&rdquo; as a single national sentence is, at best, describing one state. Here is the floor, cited:</p>
+    <ul>
+      <li><strong>Home health services are a mandatory benefit.</strong> Medicaid.gov&rsquo;s <a href="https://www.medicaid.gov/medicaid/benefits/mandatory-optional-medicaid-benefits">Mandatory &amp; Optional Medicaid Benefits</a> list &mdash; the federal list of what states must provide and what they may choose to add &mdash; puts home health services on the mandatory side, under section 1905(a)(7) of the Social Security Act and <a href="https://www.govinfo.gov/content/pkg/CFR-2024-title42-vol4/pdf/CFR-2024-title42-vol4-part440.pdf">42 CFR &sect;440.70</a>.</li>
+      <li><strong>Equipment lives inside that benefit.</strong> Section 440.70 defines home health services to include <em>medical supplies, equipment, and appliances suitable for use in any setting in which normal life activities take place</em>. <strong>Durable medical equipment (DME)</strong> &mdash; equipment that can be used again and again, serves a medical purpose, and is not useful to someone without a disability, illness, or injury &mdash; is the name suppliers and state programs use for this equipment category. A power wheelchair sits squarely in it.</li>
+      <li><strong>Medicaid is not capped by Medicare&rsquo;s list.</strong> The same regulation says state Medicaid coverage of equipment and appliances <em>is not restricted to the items covered as durable medical equipment in the Medicare program</em>. A state may cover more than Medicare does.</li>
+      <li><strong>A state list cannot be a locked door.</strong> Section 440.70 lets a state keep a list of preapproved equipment for administrative ease, but it prohibits absolute exclusions: the state must have a process, with criteria it makes available, for requesting equipment that is not on its list.</li>
+    </ul>
+    <p>What the federal floor does <em>not</em> contain is a national Medicaid repair rule like Medicare&rsquo;s. Whether a repair needs <strong>prior authorization</strong> &mdash; approval from the payer <em>before</em> the work is done, without which the payer may refuse to pay &mdash; which supplier may bill for it, on what form, and within what time limit: those are state rules. The next section teaches you to find yours instead of guessing it.</p>
+  </section>
+
+  <section id="find-your-state-rule">
+    <h2>How to find your state&rsquo;s actual repair rule</h2>
+    <p>Two state documents decide most Medicaid repair questions. Learn their names, because a supplier&rsquo;s front desk knows both:</p>
+    <ol>
+      <li><strong>Your state Medicaid program&rsquo;s DME fee schedule.</strong> A <strong>fee schedule</strong> is the payer&rsquo;s published list of billing codes and the amount it pays for each. If a repair part or a labour code is on your state&rsquo;s schedule, the state has a price for it &mdash; which is hard to square with a claim that the repair &ldquo;isn&rsquo;t covered.&rdquo;</li>
+      <li><strong>Your state Medicaid program&rsquo;s provider manual for DME.</strong> A <strong>provider manual</strong> is the rulebook the state gives suppliers: what is covered, what needs prior authorization, and what paperwork a claim must carry. It is written for suppliers, and it is public in state after state. As one concrete example &mdash; Texas only, not a national rule &mdash; the <a href="https://www.tmhp.com/sites/default/files/file-library/resources/provider-manuals/tmppm/pdf-chapters/2025/2025-12-december/2_06_dme_and_supplies.pdf">Texas Medicaid Provider Procedures Manual&rsquo;s DME handbook</a> is published by the Texas Medicaid &amp; Healthcare Partnership, the claims administrator for Texas Medicaid. Your state&rsquo;s equivalent has a different name and different rules. Search for it by your state&rsquo;s name plus &ldquo;Medicaid,&rdquo; &ldquo;provider manual,&rdquo; and &ldquo;durable medical equipment.&rdquo;</li>
+    </ol>
+    <p><strong>One more layer:</strong> many people get Medicaid through a <strong>managed care organization (MCO)</strong> &mdash; a private health plan company the state pays to run its members&rsquo; benefits. If your Medicaid card names a plan, that plan&rsquo;s prior-authorization list sits on top of the state rule. Ask the plan <em>and</em> check the state manual; if they disagree, say so to both, in writing.</p>
+    <p>Questions that cut through, whichever state you are in:</p>
+    <ul>
+      <li>&ldquo;Which page of the provider manual, or which line of the fee schedule, covers &mdash; or excludes &mdash; this repair?&rdquo;</li>
+      <li>&ldquo;Does this repair need prior authorization in this state, for this code? Show me where that is written.&rdquo;</li>
+      <li>&ldquo;If this part is not on the state&rsquo;s preapproved list, what is the state&rsquo;s process for requesting it?&rdquo; (Section 440.70 requires that process to exist.)</li>
+      <li>&ldquo;Is my Medicaid run by the state directly, or by a managed care plan &mdash; and which one is refusing?&rdquo;</li>
+    </ul>
+  </section>
+
+  <section id="epsdt">
+    <h2>Under 21: EPSDT is the strong protection</h2>
+    <p>If the chair&rsquo;s rider is under 21 and enrolled in Medicaid, the strongest sentence in this whole page applies. <strong>EPSDT</strong> &mdash; Early and Periodic Screening, Diagnostic, and Treatment &mdash; is Medicaid&rsquo;s federal benefit for children and young people under 21.</p>
+    <p>Medicaid.gov&rsquo;s <a href="https://www.medicaid.gov/medicaid/benefits/early-and-periodic-screening-diagnostic-and-treatment">EPSDT page</a> states the rule plainly: states are <em>required</em> to provide any additional services that are coverable under the federal Medicaid program and found to be <strong>medically necessary</strong> &mdash; needed to treat, correct, or reduce an illness or condition &mdash; <em>regardless of whether the service is covered in a state&rsquo;s Medicaid plan</em>. EPSDT is also on Medicaid.gov&rsquo;s mandatory-benefits list, under sections 1905(a)(4)(B) and 1905(r) of the Social Security Act and 42 CFR Part 441, Subpart B.</p>
+    <p>What that means at a supplier&rsquo;s counter: for an adult, &ldquo;our state plan doesn&rsquo;t list it&rdquo; can be a real answer that has to be worked around. For someone under 21, that sentence is not the end of the conversation. If the equipment or the repair is medically necessary to correct or reduce the rider&rsquo;s condition, EPSDT requires the state to furnish it even when the state plan for adults does not cover it. Say the letters: E-P-S-D-T. Then ask for the denial, if there still is one, in writing &mdash; the hearing right in the next section is how a written denial gets tested.</p>
+  </section>
+
+  <section id="medicaid-hearing">
+    <h2>If Medicaid says no: the fair hearing</h2>
+    <p>A <strong>fair hearing</strong> is a formal review, run by the state, of a Medicaid decision you believe is wrong. It is a federal right, not a favour your state grants. Under <a href="https://www.govinfo.gov/content/pkg/CFR-2025-title42-vol4/pdf/CFR-2025-title42-vol4-sec431-220.pdf">42 CFR &sect;431.220</a>, the state agency must grant a hearing to a person who requests one because they believe the agency denied their claim for covered benefits or services, acted erroneously, or did not act on the claim with reasonable promptness.</p>
+    <ol>
+      <li><strong>Get the denial in writing.</strong> The written notice names the action, the reason, and how to request a hearing. A verbal no cannot be appealed.</li>
+      <li><strong>Read the deadline on your notice and meet it.</strong> Do not guess it from a website &mdash; including this one. The notice in your hand is the document that controls your case.</li>
+      <li><strong>Bring the paper trail:</strong> the repair order, the fault evidence (see <a href="/pmd-fault-codes.html">Fault Codes, Translated</a> &mdash; write the code down, with the date), and, for under-21s, the EPSDT rule above.</li>
+      <li><strong>For the letters themselves</strong> &mdash; demanding the rule, the record, and a written answer &mdash; the templates are on <a href="/repair-demand-letter.html">the repair demand letter page</a>.</li>
+    </ol>
+  </section>
+
+  <section id="va">
+    <h2>Veterans: the VA is a different building entirely</h2>
+    <p>The VA does not pay claims the way an insurer does. For equipment, it mostly <em>provides</em> &mdash; it issues the chair, and it repairs what it issued, through its own service: the <strong>Prosthetic and Sensory Aids Service (PSAS)</strong>, the VA&rsquo;s prosthetics service. On the VA&rsquo;s own <a href="https://www.rehab.va.gov/psas/About_PSAS.asp">PSAS page</a>, VA calls it the largest and most comprehensive provider of prosthetic devices and sensory aids in the world, and it uses the word &ldquo;prosthetic&rdquo; broadly: any device that supports or replaces a body part or function.</p>
+    <p>The path, per VA&rsquo;s own public pages:</p>
+    <ol>
+      <li><strong>Be enrolled, and have a medical need.</strong> PSAS states its general eligibility in those two terms: veterans enrolled in the VA health care system who have a medical need for a prosthetic service or item. It also warns that additional eligibility criteria may apply for specific programs &mdash; ask, do not assume.</li>
+      <li><strong>A VA clinician starts it.</strong> VA&rsquo;s PSAS pages describe veterans referred by a physical medicine and rehabilitation physician receiving a full range of services and durable medical equipment, including mobility aids such as walkers and wheelchairs &mdash; and, in the same list, <em>prosthetic item repairs</em>. VA&rsquo;s <a href="https://www.womenshealth.va.gov/WOMENSHEALTH/topics/prosthetics.asp">PSAS page for women veterans</a> puts the sequence in plain words: once your VA primary care provider determines what is medically needed for your treatment plan, a <strong>consult</strong> &mdash; a formal referral from one VA service to another &mdash; can be submitted to PSAS.</li>
+      <li><strong>PSAS is who repairs.</strong> The repair request goes to the Prosthetics service at your VA medical center &mdash; the same service that issued the chair &mdash; not to the chair&rsquo;s manufacturer and not to a billing department.</li>
+    </ol>
+    <p><strong>VA-issued versus privately bought: the line that matters.</strong> Everything VA&rsquo;s pages above describe is the VA providing and repairing equipment <em>through its own system</em>. A <strong>Prosthetic Service Card</strong> makes the same point from the other side: one VA medical center&rsquo;s <a href="https://www.va.gov/indiana-health-care/health-services/">health services page</a> describes the card as letting an eligible veteran go directly to a local, non-VA source for needed repairs for <em>a VA-issued wheelchair</em> &mdash; that page ties card eligibility to being service-connected for loss of a limb, so treat the card as a specific program to ask Prosthetics about, not a general promise. If your chair was bought privately, outside the VA, VA&rsquo;s public pages do not promise to repair it. Ask your VA medical center&rsquo;s Prosthetics service whether it can take your chair on &mdash; and if the answer is no, your door is the payer that did buy the chair: Medicaid or a private plan, in the sections around this one.</p>
+    <p><strong>Service-connected</strong>, used above, means the VA has decided a disability was caused or made worse by your military service. You do not need to settle your status from this page: enrollment and medical need are PSAS&rsquo;s stated general test, and your VA medical center&rsquo;s Prosthetics service is the office that applies it to you.</p>
+  </section>
+
+  <section id="private">
+    <h2>Private insurance: the contract is the rulebook</h2>
+    <p>Honesty first: <strong>there is no primary public source for your private plan&rsquo;s repair rule, because your plan sets its own terms.</strong> Employer plans and plans bought individually are contracts. No Medicaid.gov or VA page can tell you what yours promises, and any website that quotes &ldquo;the&rdquo; private-insurance repair rule without naming a specific plan and a specific contract is guessing. What this section can teach is where the rule lives in your documents, and what to ask for.</p>
+    <p>Start with the vocabulary, because the traps are labelled with it:</p>
+    <ul>
+      <li><strong>Evidence of Coverage (EOC)</strong> &mdash; the plan&rsquo;s own detailed document (it may be called a certificate, a member handbook, or a summary plan description) spelling out what the plan covers, including its DME benefit. Your repair rule is in its DME and exclusions sections. Ask the plan for it by that name if you do not have it.</li>
+      <li><strong>In-network</strong> means a supplier that has a contract with your plan, at prices the plan agreed to. <strong>Out-of-network</strong> means one that does not. The trap: a supplier can be excellent, nearby, and willing &mdash; and your plan may still pay little or nothing toward its bill under your contract&rsquo;s out-of-network terms, leaving the rest to you. Before work starts, ask the plan, not just the supplier: &ldquo;Is this supplier in-network for DME repairs under my plan?&rdquo;</li>
+      <li><strong>Prior authorization</strong> applies here too &mdash; and unlike Medicaid&rsquo;s, a private plan&rsquo;s prior-authorization list is the plan&rsquo;s own. Ask whether this repair, under this billing code, needs it, and get the answer&rsquo;s reference number.</li>
+    </ul>
+    <p>You may see Medicare-like words in your plan&rsquo;s DME section &mdash; many plans borrow Medicare&rsquo;s language about medical necessity and repair versus replacement. Borrowed words are not borrowed rights: Medicare&rsquo;s repair rules on the <a href="/pmd-repairs.html">companion page</a> bind Medicare, not your plan. Read your own EOC, and hold the plan to <em>its</em> sentences.</p>
+    <p><strong>The documentation that travels</strong> &mdash; gather it before anyone asks, because every payer in this section decides from paper:</p>
+    <ul>
+      <li>The <strong>repair order</strong>: what failed, what work and which parts are proposed, and the supplier&rsquo;s price for each.</li>
+      <li>The <strong>fault evidence</strong>: the chair&rsquo;s fault code and when it appeared (your notes from <a href="/pmd-fault-codes.html">Fault Codes, Translated</a>), plus a photo or short video of the failure if it shows.</li>
+      <li>The <strong>medical-necessity note</strong>: a short statement from your treating clinician that you still need the chair and that this repair returns it to use.</li>
+      <li>The <strong>history</strong>: who paid for the chair, when, and any earlier repair records &mdash; proof this is a repair of covered equipment, not a new purchase in disguise.</li>
+    </ul>
+    <p><strong>Appeals, in one short passage:</strong> if the plan denies, get the denial in writing; it will name the plan&rsquo;s own appeal route and deadline &mdash; follow those, in that order, and meet that deadline. Send the documentation above with the appeal, ask the plan to point to the exact EOC sentence that excludes the repair, and keep a copy of everything you send. The letter templates on <a href="/repair-demand-letter.html">the repair demand letter page</a> are written for exactly this exchange.</p>
+  </section>
+
+  <section id="which-door">
+    <h2>Which door is yours: the summary</h2>
+    <table>
+      <thead>
+        <tr><th scope="col">Payer</th><th scope="col">Who repairs</th><th scope="col">What to cite or ask</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Medicare</strong></td>
+          <td>A Medicare-enrolled DME supplier; repairs to a chair you own are covered when necessary to make it serviceable.</td>
+          <td>The companion page: <a href="/pmd-repairs.html">Getting a Repair Paid For</a> &mdash; Policy Article A55426, and code K0462 for a loaner.</td>
+        </tr>
+        <tr>
+          <td><strong>Medicaid (adult)</strong></td>
+          <td>A supplier enrolled with your state Medicaid program or your managed care plan.</td>
+          <td>The federal floor &mdash; home health, including equipment, is mandatory (42 CFR &sect;440.70) &mdash; then your state&rsquo;s DME fee schedule and provider manual for the repair and prior-authorization rule. Denied? 42 CFR &sect;431.220: request a fair hearing.</td>
+        </tr>
+        <tr>
+          <td><strong>Medicaid (under 21)</strong></td>
+          <td>Same state suppliers &mdash; under a stronger federal duty.</td>
+          <td>EPSDT: medically necessary, federally coverable services must be furnished regardless of the state plan. Say &ldquo;EPSDT&rdquo; and get any denial in writing.</td>
+        </tr>
+        <tr>
+          <td><strong>VA (VA-issued chair)</strong></td>
+          <td>VA Prosthetics (PSAS) at your VA medical center, or a local source under a Prosthetic Service Card if you hold one.</td>
+          <td>Ask your VA provider for a consult to PSAS. Cite medical need, not an insurance code.</td>
+        </tr>
+        <tr>
+          <td><strong>Private plan</strong></td>
+          <td>An in-network DME supplier, after the plan&rsquo;s own prior authorization if it requires one.</td>
+          <td>Your Evidence of Coverage, DME section. Ask: in-network? prior authorization? Which EOC sentence excludes this, if denied?</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>And if no payer&rsquo;s door opens &mdash; the chair is yours, the fault is real, and the fight is paperwork &mdash; the wider picture is on <a href="/repair-rights.html">Repair Rights</a>, and the first move is still the same as on every page in this section: write the fault code down, with the date.</p>
+  </section>
+
+  <section id="sources">
+    <h2>Sources</h2>
+    <p>Primary sources only. Medicaid and VA rules above are stated from these pages and regulations; private-plan terms are deliberately not sourced to any of them, because no public primary source sets them.</p>
+    <ul>
+      <li>Medicaid.gov, <a href="https://www.medicaid.gov/medicaid/benefits">Benefits</a> &mdash; states establish and administer their own Medicaid programs and determine the type, amount, duration, and scope of services within broad federal guidelines.</li>
+      <li>Medicaid.gov, <a href="https://www.medicaid.gov/medicaid/benefits/mandatory-optional-medicaid-benefits">Mandatory &amp; Optional Medicaid Benefits</a> &mdash; home health services and EPSDT on the mandatory list, with their Social Security Act and CFR citations.</li>
+      <li><a href="https://www.govinfo.gov/content/pkg/CFR-2024-title42-vol4/pdf/CFR-2024-title42-vol4-part440.pdf">42 CFR &sect;440.70, Home health services</a> (in the Part 440 text published by the U.S. Government Publishing Office) &mdash; medical supplies, equipment, and appliances in the home health benefit; Medicaid equipment coverage not restricted to Medicare&rsquo;s DME list; preapproved lists permitted, absolute exclusions prohibited.</li>
+      <li>Medicaid.gov, <a href="https://www.medicaid.gov/medicaid/benefits/early-and-periodic-screening-diagnostic-and-treatment">Early and Periodic Screening, Diagnostic, and Treatment (EPSDT)</a> &mdash; states must provide medically necessary, federally coverable services for under-21s regardless of the state plan.</li>
+      <li><a href="https://www.govinfo.gov/content/pkg/CFR-2025-title42-vol4/pdf/CFR-2025-title42-vol4-sec431-220.pdf">42 CFR &sect;431.220, When a hearing is required</a> (U.S. Government Publishing Office) &mdash; the state agency must grant a fair hearing on a denied claim for covered benefits or services.</li>
+      <li>Texas Medicaid &amp; Healthcare Partnership, <a href="https://www.tmhp.com/sites/default/files/file-library/resources/provider-manuals/tmppm/pdf-chapters/2025/2025-12-december/2_06_dme_and_supplies.pdf">Texas Medicaid Provider Procedures Manual: DME handbook</a> &mdash; cited as one state&rsquo;s example of a public DME provider manual, not as a national rule.</li>
+      <li>U.S. Department of Veterans Affairs, Rehabilitation and Prosthetic Services, <a href="https://www.rehab.va.gov/psas/About_PSAS.asp">Prosthetic and Sensory Aids Service (PSAS)</a> &mdash; eligibility (enrolled, medical need), mobility aids including wheelchairs, and prosthetic item repairs.</li>
+      <li>U.S. Department of Veterans Affairs, Women Veterans Health Care, <a href="https://www.womenshealth.va.gov/WOMENSHEALTH/topics/prosthetics.asp">Prosthetic and Sensory Aids Service for Women Veterans</a> &mdash; the provider-determines-need, then consult-to-PSAS sequence.</li>
+      <li>U.S. Department of Veterans Affairs, VA Indiana Health Care, <a href="https://www.va.gov/indiana-health-care/health-services/">Health Services</a> &mdash; the Prosthetic Service Card description: direct local repairs for a VA-issued wheelchair, for eligible veterans.</li>
+    </ul>
+    <p><a href="/pmd.html">&larr; Back to PMD</a> &middot; <a href="/pmd-repairs.html">Getting a Repair Paid For (Medicare) &rarr;</a></p>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

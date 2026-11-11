@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Access &amp; Control: PlayStation &mdash; PS1 to PS5 &mdash; BareBoard</title>
+<meta name="description" content="Every door into a PlayStation an owner can open: Safe Mode on PS3, PS4 and PS5, owner-swappable storage, the official Net Yaroze and PS2 Linux kits, the paired optical drives, and the board-level documentation that exists — and does not.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Access &amp; Control: PlayStation">
+<meta property="og:description" content="Some doors Sony built and documented for you. Some it built and never mentioned. Some it welded shut. Mapped, generation by generation.">
+<meta property="og:url" content="https://www.bareboard.org/playstation-access.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Access and Control: PlayStation</h1>
+    <p class="lede">Every PlayStation has doors. Some Sony built and documented for you. Some it built for its own service benches and never mentioned. Some it welded shut. This page maps them, generation by generation &mdash; what each door is, how an owner opens it, and what it unlocks.</p>
+    <p>This is access documentation, not a jailbreak guide. It tells you what access exists on hardware you own, what an owner can legitimately do with it &mdash; back up, diagnose, repair, replace worn parts &mdash; and where the wall genuinely is. There are no keys here, no exploit code, no firmware files. The <a href="/devices/playstation/">PlayStation hub page</a> covers the chips and the history; this page covers the doors.</p>
+    <p><em>Provenance: Sony&rsquo;s own support pages and manuals are the source for everything labelled &ldquo;official&rdquo;. Board-level material is attributed to the community documentation it comes from (iFixit repair guides, the PSDevWiki, the fail0verflow team&rsquo;s published research) and is never dressed up as Sony fact. Where nobody outside Sony knows, this page says so.</em></p>
+  </section>
+
+  <section id="map">
+    <h2>The map: five generations, five sets of doors</h2>
+<table>
+<thead><tr><th>Console</th><th>The doors an owner has</th><th>What it unlocks, in one line</th><th>The hard limit</th></tr></thead>
+<tbody>
+<tr><td>PS1 (1994)</td><td>Parallel and serial ports on early models; Sony&rsquo;s own Net Yaroze hobbyist kit</td><td>Run your own code on your own console, with Sony&rsquo;s permission and Sony&rsquo;s tools</td><td>Nothing to unlock below that: the system software is a fixed ROM chip &mdash; no updates, no pairing, no locks</td></tr>
+<tr><td>PS2 (2000)</td><td>Sony&rsquo;s Linux kit; expansion-bay hard drive; Yabasic interpreter on PAL demo discs</td><td>Turn the console into a small Linux computer</td><td>No recovery menu on this generation &mdash; that starts with the PS3</td></tr>
+<tr><td>PS3 (2006)</td><td>Safe Mode recovery menu; owner-swappable hard drive; OtherOS (Linux install) on early firmware</td><td>Repair the file system, rebuild the database, reinstall the system from a USB stick</td><td>The Blu-ray drive&rsquo;s circuit board is paired to the motherboard</td></tr>
+<tr><td>PS4 (2013)</td><td>Safe Mode; owner-swappable hard drive; the deepest board-level documentation of the whole line</td><td>Full system reinstall from USB, plus community-documented debug output for dead consoles</td><td>The optical drive&rsquo;s daughterboard is paired; below Safe Mode, the firmware stays closed</td></tr>
+<tr><td>PS5 (2020)</td><td>Safe Mode; an official M.2 slot for adding storage</td><td>Recover, rebuild, reinstall, and expand &mdash; without opening more than the side cover</td><td>The built-in SSD is soldered down; the disc drive electronics are paired; board-level access is not publicly documented</td></tr>
+</tbody>
+</table>
+    <p>The pattern runs downhill: the older the console, the more of it an owner was allowed to touch. The PS1&rsquo;s maker sold hobbyists a development kit. The PS5&rsquo;s maker solders its storage to the board. Everything below fills in the middle of that slope.</p>
+  </section>
+
+  <section id="safe-mode">
+    <h2>The door three generations share: Safe Mode</h2>
+    <p><strong>Safe Mode</strong> is a recovery menu built into the PS3, PS4 and PS5. It starts the console with only the most basic functions running, so a console that cannot boot normally can still be repaired. It is official &mdash; Sony documents it on its support pages &mdash; and it is the single most useful owner door on any modern PlayStation.</p>
+    <p><strong>What it unlocks, in one line:</strong> repair a corrupted file system, rebuild the console&rsquo;s content database, reinstall the system software from a USB stick, and reset a console that will not start &mdash; all without opening the case.</p>
+    <p>On the PS4 and PS5, Sony&rsquo;s steps are:</p>
+    <ol>
+      <li>Turn the console fully off (hold the power button for three seconds).</li>
+      <li>Press and hold the power button again. Let go after the <strong>second beep</strong> &mdash; one beep when you press, another about seven seconds later.</li>
+      <li>Connect the controller with a USB cable and press the PS button. A wireless controller does not work in Safe Mode; the cable is required.</li>
+    </ol>
+    <p>The PS3&rsquo;s sequence is one step longer: from standby, hold the power button until the console turns on and then off again; then hold it again until you hear two quick beeps, and connect the controller by USB.</p>
+    <p>Sony&rsquo;s own warning, carried verbatim because it is the manufacturer&rsquo;s: <em>&ldquo;Some Safe Mode options will result in the loss of data. Be sure to back up data to a USB drive or Cloud Storage before selecting these options.&rdquo;</em> The menu mixes safe repairs (rebuild the database) with full wipes (reset / initialize). Read the label before you press it.</p>
+    <h3>What is in the menu</h3>
+    <p><strong>PS3 (called the recovery menu):</strong> Restart System; Restore Default Settings; Restore File System (repairs corrupted system areas on the drive); Rebuild Database; Restore PS3 System (the full wipe); System Update (installs the system file from a USB stick &mdash; on the PS3, Safe Mode updates come from storage media only, not the network).</p>
+    <p><strong>PS4:</strong> Restart PS4; Change Resolution; Update System Software (by internet, USB stick, or disc); Restore Default Settings; Rebuild Database; Initialize PS4 (the wipe); Initialize PS4 (Reinstall System Software) &mdash; the full reinstall, which needs the complete system file on a USB stick and is the recovery path after fitting a new hard drive.</p>
+    <p><strong>PS5:</strong> Restart PS5; Change Video Output; Repair Console Storage (on current system software &mdash; for consoles that do not start properly, and it does not erase data); Update System Software; Restore Default Settings; Clear Cache and Rebuild Database; Reset PS5 (the wipe); Reset PS5 (Reinstall System Software).</p>
+    <p>Note what Safe Mode is <em>not</em>: it is a repair menu, not a control panel. It exposes no settings an owner can tune, no logs an owner can read, and no way to run your own software. Sony built it so a broken console can be made whole again &mdash; by the book, to Sony&rsquo;s specification.</p>
+  </section>
+
+  <section id="ps1">
+    <h2>PS1 &mdash; the open era</h2>
+    <p>The original PlayStation (1994) has no recovery menu, no firmware updates, and nothing to unlock: its system software is a <strong>ROM</strong> &mdash; a chip whose contents were fixed at the factory (&ldquo;read-only memory&rdquo;). It cannot be updated, locked down later, or paired to anything. Access on a PS1 is physical: ports, boards, and drives, all of which simply work when replaced.</p>
+    <p>Early models (the SCPH-100x through 750x series) carry two expansion connectors on the back: a <strong>parallel port</strong> (a wide connector for exchanging data with external devices) and a <strong>serial port</strong> (a slower connector for sending data one stream at a time). Sony removed the parallel port on the final 900x revision. Those ports are how the era&rsquo;s accessories &mdash; cheat cartridges, link cables, development hardware &mdash; talked to the console.</p>
+    <p>Then there is the door Sony sold. <strong>Net Yaroze</strong> (1996 in Japan, 1997 elsewhere, about $750 by mail order) was an official hobbyist development kit: a matte-black PlayStation, a boot disc and access card, a serial cable to your PC, and a C compiler toolchain with Sony&rsquo;s documentation. You wrote a program on your computer, sent it down the cable, and ran it on the console. By design it could <em>not</em> boot a burned disc &mdash; your program had to fit in the console&rsquo;s memory and live there. <strong>What it unlocked, in one line:</strong> official permission to run your own code on a PlayStation, in 1996, from the manufacturer itself.</p>
+  </section>
+
+  <section id="ps2">
+    <h2>PS2 &mdash; the Linux kit</h2>
+    <p>Sony did it once more. <strong>Linux for PlayStation 2</strong> (2002) was an official kit for owners: Linux discs, a 40 GB hard drive, a network adaptor, a keyboard and mouse, and a monitor adaptor. Fitted to a console, it turned the PS2 into a small Linux computer you could program. The kit&rsquo;s hard drive is itself an owner door: the original &ldquo;fat&rdquo; PS2 has an <strong>expansion bay</strong> (an empty drive slot at the back) that takes a standard 3.5-inch desktop hard drive together with Sony&rsquo;s Network Adaptor. The slim PS2 removed the bay.</p>
+    <p>PAL-region consoles also shipped with a demo disc carrying <strong>Yabasic</strong>, a BASIC programming interpreter &mdash; a simple built-in language for writing small programs &mdash; that could save your work to a memory card. Small, but official, and on every PAL machine.</p>
+    <p>There is no Safe Mode on the PS2, and no pairing anywhere: the optical drive is a plain replaceable part, and fitting a different one needs no permission from the motherboard. <strong>What the generation unlocks, in one line:</strong> with Sony&rsquo;s own kit, the console becomes a computer; without it, it is still a machine any repairer can service part for part.</p>
+  </section>
+
+  <section id="ps3">
+    <h2>PS3 &mdash; the recovery menu arrives, and so does pairing</h2>
+    <p>The PS3 (2006) is the hinge. It introduced Safe Mode (above) and a genuinely owner-serviceable drive: the internal 2.5-inch <strong>SATA</strong> hard drive (SATA is the standard connector used by ordinary laptop drives) sits behind a cover on the side, and Sony&rsquo;s manual documents replacing it. The console formats a fresh drive itself; the full system file goes back on from a USB stick through Safe Mode. A built-in backup utility copies your data to a USB drive first.</p>
+    <p>Early &ldquo;fat&rdquo; PS3s also shipped with <strong>OtherOS</strong> &mdash; an official menu option to install Linux on the console alongside the PlayStation system. Sony removed it in the 3.21 firmware update in 2010; the <a href="/devices/playstation/">hub page</a> tells that story, including the Air Force supercomputer built from PS3s and the class action that followed. The door existed, was advertised, and was taken back. That sequence is the whole modern argument in one console.</p>
+    <p>Two honest limits. First, the PS3&rsquo;s Blu-ray drive carries a small circuit board whose identity is <strong>paired</strong> to the motherboard &mdash; <strong>parts pairing</strong> means the console checks that a part is the exact one it shipped with, and rejects strangers. Repair documentation is consistent on the fix: when you replace the drive mechanism, you move your original drive board onto the replacement, or the console will not play discs. Lose that board and no owner procedure re-pairs a new one. Second, the PS3&rsquo;s system firmware also lives on a <strong>flash</strong> chip on the motherboard (a chip that holds data without power and can be rewritten) &mdash; NOR or NAND type depending on the model &mdash; and the community has documented reading and writing it with external programmers to revive consoles with corrupted firmware. Sony documents none of that; it is community work, named as such.</p>
+  </section>
+
+  <section id="ps4">
+    <h2>PS4 &mdash; the best-documented PlayStation</h2>
+    <p>The PS4 (2013) kept the owner&rsquo;s storage door: Sony publishes the procedure for replacing the 2.5-inch internal drive yourself, and Safe Mode&rsquo;s reinstall option (option 7) puts the system back from a USB stick afterwards. Its Safe Mode is the PS3&rsquo;s, refined &mdash; the full menu is listed above.</p>
+    <p>The pairing wall followed it here. On the PS4, the optical drive&rsquo;s <strong>daughterboard</strong> &mdash; the small circuit board bolted to the drive &mdash; is married to the motherboard. iFixit&rsquo;s drive replacement guide states it in plain terms: the optical drive is &ldquo;married&rdquo; to the motherboard, and a replacement drive must carry your original daughterboard to work. The mechanics, the laser, the motors can all be swapped; the identity board cannot. If the daughterboard itself is dead, iFixit&rsquo;s repair community is blunt that there is no owner-level way to pair a new one.</p>
+    <p>Below the surface, the PS4 is the most openly documented console Sony has shipped &mdash; not by Sony. The community wiki <strong>PSDevWiki</strong> maps its motherboards board by board, including a <strong>UART</strong> on the board &mdash; a simple serial connection (three wires: send, receive, ground) that prints diagnostic text as the machine works. The wiki documents the UART debug interface of the PS4&rsquo;s companion processor (the small chip that manages power, standby and the drive), including the error logs it will print for a console that will not boot. The fail0verflow research team&rsquo;s published work uses the same interfaces. For a repairer, that output is the difference between guessing which board section died and reading it. Sony publishes none of it. The same is true of the console&rsquo;s serial flash: readable with community tools, documented by the community, invisible in Sony&rsquo;s manuals.</p>
+  </section>
+
+  <section id="ps5">
+    <h2>PS5 &mdash; one open slot, and the rest soldered or paired</h2>
+    <p>The PS5 (2020) keeps Safe Mode &mdash; its menu is listed above &mdash; and loses the swappable system drive. The built-in storage is a custom <strong>SSD</strong> (solid-state drive: storage on chips instead of a spinning disk) whose chips are <strong>soldered</strong> &mdash; melted into place &mdash; directly on the main board. When it wears out, there is no part to replace; the board is the part. Say it plainly, because Sony does not: <strong>the PS5&rsquo;s internal storage cannot be replaced by its owner, by a repair shop, or at all.</strong></p>
+    <p>What Sony gave instead is genuinely good: an <strong>M.2 expansion slot</strong> under the side cover. M.2 is the small stick format modern SSDs come in; <strong>NVMe</strong> is the fast protocol those sticks speak. Sony publishes the whole procedure and the requirements: a PCI-Express Gen4 x4 M.2 NVMe drive, 250 GB to 8 TB, in the standard stick lengths, with a recommended read speed of 5,500 MB/s or faster and a <strong>heatsink</strong> (a metal fin that pulls heat off the chips) fitted. Lift the cover, one screw holds the slot cover, seat the stick, one more screw, done &mdash; the console formats it on first boot, and games can be installed to it and played from it. <strong>What it unlocks, in one line:</strong> real, official, owner-fitted extra storage that behaves like the built-in drive.</p>
+    <p>Sony&rsquo;s warnings for the job, verbatim: <em>&ldquo;Do not turn off the power while saving data or while your M.2 SSD is being formatted. Doing so may cause data loss, corruption, or damage to your M.2 SSD or PS5 console.&rdquo;</em> And: <em>&ldquo;Do not use an M.2 SSD without a heat-dissipation mechanism, such as a heat sink or heat transfer sheet.&rdquo;</em> A USB drive can also be attached as extended storage, but PS5 games can only be <em>stored</em> there &mdash; to play one, it must be copied back to the internal drive or the M.2 stick.</p>
+    <p>The disc drive repeated the PS4&rsquo;s mistake with a new twist. The drive&rsquo;s electronics are paired to the motherboard &mdash; teardown and repair reporting (iFixit) confirms a bare drive swap can leave the console unable to read discs, so keep the original electronics. On the slim PS5, the drive is a detachable accessory (model CFI-ZDD1, compatible only with the CFI-2000 and CFI-7000 console groups), and attaching one requires an internet connection so the drive can be paired to that specific console &mdash; a drive that needs the network&rsquo;s permission before it will spin.</p>
+    <p>And the board level: as of this writing, there is <strong>no public documentation</strong> of a PS5 UART, test-point map, or owner path to the system flash comparable to the PS4&rsquo;s community wiki. Security researchers have published talks about the PS5&rsquo;s defences; a repairer&rsquo;s diagnostic door has not followed. If that changes, this page changes.</p>
+  </section>
+
+  <section id="controllers">
+    <h2>Controllers &mdash; the small doors</h2>
+    <p>PlayStation controllers have two owner doors, and Sony documents both. <strong>Pairing:</strong> a DualShock 4 (PS4) or DualSense (PS5) pairs to a console by plugging it in with a USB cable and pressing the PS button &mdash; the cable pairing is also how you move a controller between consoles. <strong>Reset:</strong> both controllers have a tiny recessed reset button in a pinhole on the back; Sony&rsquo;s support instructions are to press it with a straightened paper clip for about five seconds, then re-pair by cable. It is the fix for a controller that will not connect, and it costs nothing. Sony also publishes a free firmware updater application for Windows and Mac that updates DualShock 4 and DualSense firmware from a computer &mdash; no console required.</p>
+    <p><strong>What it unlocks, in one line:</strong> a controller that will pair, reset, and update without a service visit &mdash; the one corner of the modern PlayStation where the owner&rsquo;s access is complete. The limit is inside the controller: its battery and sticks are wear parts behind screws and solder, and Sony sells no parts. Drift on a DualSense is a board-level repair, documented by the repair community, not by Sony.</p>
+  </section>
+
+  <section id="the-law">
+    <h2>The law (United States)</h2>
+    <p>Section 1201 of the DMCA makes it illegal to bypass a digital lock guarding a copyrighted work &mdash; console firmware counts &mdash; even when your reason is lawful repair. Every three years, the Librarian of Congress grants exemptions, written at 37 CFR &sect; 201.40. The current repair exemption, &sect; 201.40(b)(15) &mdash; adopted in 2021 and renewed in 2024, in force through October 2027 &mdash; allows circumventing a lock when it is a necessary step to diagnose, maintain or repair a consumer device. For consoles, the regulation adds one sentence, quoted exactly:</p>
+    <p><em>&ldquo;For video game consoles, &lsquo;repair&rsquo; is limited to repair or replacement of a console&rsquo;s optical drive and requires restoring any technological protection measures that were circumvented or disabled.&rdquo;</em></p>
+    <p>Read it as it is written. The exemption covers a disc-model PlayStation&rsquo;s optical-drive repair &mdash; the paired-drive problem above is exactly the kind of job it was argued over. It does not cover anything else: not homebrew, not running your own software, not the Digital Edition consoles (they have no optical drive to repair). Broader console exemptions have been proposed in the rulemakings and not adopted.</p>
+    <p>Two further limits, stated plainly. First, the exemption legalises the <em>act</em> of circumvention for that repair; the separate anti-trafficking rules (&sect; 1201(a)(2) and (b)) still ban making or distributing circumvention tools, and the Librarian has no authority to exempt those &mdash; so a repair can be legal to perform while the tool that performs it has no legal supply chain. iFixit&rsquo;s filings in the rulemaking name this gap every cycle. Second, warranty: in 2018 the US Federal Trade Commission warned Sony, Nintendo and other manufacturers that &ldquo;warranty void if removed&rdquo; conditions violate the Magnuson-Moss Warranty Act unless the company waives the rule or can show the owner&rsquo;s work caused the failure. Opening your console does not, by itself, void a US warranty &mdash; damage your work causes is still on you.</p>
+    <p><em>This section is a summary of public law for education, not legal advice. BareBoard is not a law firm; if a repair business depends on the line, pay a lawyer to draw it.</em></p>
+  </section>
+
+  <section id="sources">
+    <h2>Sources</h2>
+    <ul>
+      <li>Sony (official): <a href="https://www.playstation.com/en-id/support/hardware/safe-mode-playstation/">How to use Safe Mode on PS5 consoles and PS4 consoles</a> &mdash; entry steps, option lists, and the data-loss warning quoted above.</li>
+      <li>Sony (official): <a href="https://www.playstation.com/en-us/support/hardware/ps5-install-m2-ssd/">How to add an M.2 SSD to a PS5 console</a> &mdash; requirements, installation, and the warnings quoted above.</li>
+      <li>Sony (official) support and manuals: PS3 Safe Mode and hard-drive replacement; PS4 hard-drive replacement; DualShock 4 / DualSense reset and pairing; the DualSense firmware updater for PC and Mac.</li>
+      <li>iFixit (repair community): <a href="https://www.ifixit.com/Answers/View/560618/Is+the+Optical+Drive+Daughterboard+swappable">PS4 optical drive daughterboard discussion</a> and the PS4/PS5 drive and teardown guides &mdash; the &ldquo;married&rdquo; drive boards and the PS5&rsquo;s paired drive electronics.</li>
+      <li>PSDevWiki (community documentation): <a href="https://www.psdevwiki.com/ps4/index.php?title=Southbridge&amp;direction=next&amp;oldid=285881">PS4 Southbridge</a> &mdash; the companion processor and its UART debug interface and error logs; motherboard pages for the board-level map.</li>
+      <li>fail0verflow (security research team), published PS4 research &mdash; the same board interfaces, independently documented.</li>
+      <li>Kotaku: <a href="https://kotaku.com/sony-hasnt-always-hated-homebrew-development-5796870">Sony Hasn&rsquo;t Always Hated Homebrew Development</a> &mdash; Net Yaroze (1997, $750) and Linux for PlayStation 2 (2002).</li>
+      <li>37 CFR &sect; 201.40(b)(15), via <a href="https://www.law.cornell.edu/cfr/text/37/201.40">Cornell Law Institute</a> &mdash; the repair exemption and its optical-drive sentence, quoted verbatim; and the <a href="/library/collected-public-docs/lawsuits/usco-1201-final-rule-2021-govinfo.pdf">2021 Final Rule</a> (Federal Register, Oct 28, 2021).</li>
+      <li>iFixit News: <a href="https://www.ifixit.com/News/54317/section-1201-exemptions-for-2021-repair-consoles-medical-devices">Section 1201 exemptions for 2021</a> &mdash; the console limitation and the anti-trafficking gap, in plain language.</li>
+      <li>US Federal Trade Commission, 2018 warranty warning letters to Sony, Nintendo and others (Magnuson-Moss / &ldquo;warranty void if removed&rdquo;).</li>
+    </ul>
+    <p><a href="/devices/playstation/">&larr; Back to the PlayStation hub</a> &middot; <a href="/nintendo-access.html">Nintendo: Access and Control &rarr;</a></p>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

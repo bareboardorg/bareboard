@@ -1,0 +1,126 @@
+/* BareBoard Chair Control (PMD owner tool) — page styles.
+   Uses the shared site variables from /style.css. No frameworks. */
+
+.pc-statusbar {
+  display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
+  margin: 1.25rem 0;
+}
+.pc-status {
+  display: inline-block; padding: 0.3rem 0.8rem; border-radius: 999px;
+  font-weight: 700; font-size: 0.95rem; border: 1px solid var(--line);
+  background: var(--surface); color: var(--secondary);
+}
+.pc-status.pc-on { color: #0a6b1d; border-color: #0a6b1d; }
+.pc-status.pc-sim { color: var(--accent-ink); border-color: var(--accent); }
+.pc-status-detail { color: var(--secondary); }
+
+.pc-card {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 14px; padding: 1.1rem 1.2rem; margin: 1rem 0;
+}
+.pc-card.pc-inner { margin-top: 1.25rem; }
+
+.pc-choices { display: grid; gap: 0.6rem; margin: 0.8rem 0; }
+.pc-choice {
+  display: block; border: 1px solid var(--line); border-radius: 12px;
+  padding: 0.8rem 1rem; cursor: pointer; background: var(--bg);
+}
+.pc-choice:has(input:checked) { border-color: var(--accent); background: rgba(0,102,204,0.06); }
+.pc-choice input { margin-right: 0.55rem; transform: scale(1.25); }
+.pc-choice-title { font-weight: 700; display: inline; }
+.pc-choice-sub { display: block; color: var(--secondary); margin-top: 0.25rem; font-size: 0.95rem; }
+
+.pc-hookup ol { margin: 0.6rem 0 0.2rem 1.3rem; }
+.pc-hookup li { margin: 0.3rem 0; }
+.pc-hookup .pc-warn {
+  border: 1px solid #b3541e; background: rgba(179,84,30,0.07);
+  border-radius: 10px; padding: 0.7rem 0.9rem; margin-top: 0.7rem;
+}
+
+.pc-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center; margin: 0.8rem 0; }
+.pc-btn {
+  font: inherit; font-size: 1rem; padding: 0.65rem 1.15rem; border-radius: 10px;
+  border: 1px solid var(--line); background: var(--surface); color: var(--text);
+  cursor: pointer; min-height: 48px;
+}
+.pc-btn:hover:not(:disabled) { border-color: var(--accent); }
+.pc-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.pc-btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 700; }
+.pc-btn-primary:hover:not(:disabled) { background: var(--accent-ink); }
+.pc-msg { color: var(--secondary); }
+.pc-msg.pc-err { color: #a1131e; font-weight: 600; }
+
+.pc-tabs { display: flex; gap: 0.4rem; flex-wrap: wrap; margin: 1.4rem 0 0; }
+.pc-tab {
+  font: inherit; padding: 0.6rem 1rem; border-radius: 10px 10px 0 0;
+  border: 1px solid var(--line); border-bottom: none; background: var(--bg);
+  color: var(--secondary); cursor: pointer; min-height: 48px;
+}
+.pc-tab[aria-selected="true"] { background: var(--surface); color: var(--text); font-weight: 700; }
+.pc-panel {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 0 12px 12px 12px;
+  padding: 1.1rem 1.2rem; margin-bottom: 1.2rem;
+}
+
+.pc-toggle { display: inline-flex; align-items: center; gap: 0.45rem; cursor: pointer; }
+.pc-toggle input { transform: scale(1.25); }
+
+.pc-buslog { list-style: none; margin: 0.6rem 0; max-height: 22rem; overflow-y: auto; }
+.pc-buslog li {
+  padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--line);
+  display: flex; gap: 0.7rem; align-items: baseline; flex-wrap: wrap;
+}
+.pc-buslog .pc-t { color: var(--tertiary); font-size: 0.85rem; font-family: var(--mono); }
+.pc-buslog .pc-raw { color: var(--tertiary); font-size: 0.85rem; font-family: var(--mono); display: none; }
+.pc-buslog.show-raw .pc-raw { display: inline; }
+.pc-buslog li.pc-trip { background: rgba(161,19,30,0.06); }
+
+.pc-fault {
+  border: 1px solid var(--line); border-left: 5px solid #a1131e; border-radius: 10px;
+  padding: 0.8rem 1rem; margin: 0.7rem 0; background: var(--bg);
+}
+.pc-fault h3 { margin: 0 0 0.3rem; }
+.pc-fault .pc-code { font-family: var(--mono); color: #a1131e; }
+.pc-ok {
+  border: 1px solid var(--line); border-left: 5px solid #0a6b1d; border-radius: 10px;
+  padding: 0.8rem 1rem; margin: 0.7rem 0; background: var(--bg);
+}
+
+.pc-manual { display: flex; gap: 0.7rem; flex-wrap: wrap; align-items: end; }
+.pc-manual label { display: flex; flex-direction: column; gap: 0.3rem; font-weight: 600; }
+.pc-manual select, .pc-manual input {
+  font: inherit; padding: 0.55rem 0.7rem; border: 1px solid var(--line);
+  border-radius: 8px; min-height: 48px; background: var(--surface);
+}
+
+.pc-backup {
+  display: flex; justify-content: space-between; gap: 0.8rem; flex-wrap: wrap; align-items: center;
+  border: 1px solid var(--accent); background: rgba(0,102,204,0.05);
+  border-radius: 10px; padding: 0.7rem 1rem; margin: 0.8rem 0;
+}
+
+.pc-param {
+  border: 1px solid var(--line); border-radius: 12px; padding: 0.9rem 1rem; margin: 0.7rem 0;
+  background: var(--bg);
+}
+.pc-param-head { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; align-items: baseline; }
+.pc-param-name { font-weight: 700; font-size: 1.05rem; }
+.pc-param-value { font-family: var(--mono); font-size: 1.05rem; }
+.pc-param-desc { color: var(--secondary); margin: 0.35rem 0; }
+.pc-param-controls { display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap; margin-top: 0.5rem; }
+.pc-param-controls input[type="range"] { flex: 1 1 12rem; height: 40px; }
+.pc-param-controls input[type="number"] {
+  font: inherit; width: 5.5rem; padding: 0.5rem; border: 1px solid var(--line); border-radius: 8px; min-height: 44px;
+}
+.pc-param-warn { border-left: 5px solid #b3541e; background: rgba(179,84,30,0.07); padding: 0.6rem 0.8rem; border-radius: 0 8px 8px 0; margin-top: 0.5rem; }
+.pc-param-locked { opacity: 0.85; }
+
+.pc-chain {
+  font-family: var(--mono); background: var(--bg); border: 1px solid var(--line);
+  border-radius: 10px; padding: 0.8rem 1rem; overflow-x: auto; white-space: nowrap;
+}
+
+@media (max-width: 820px) {
+  .pc-buslog li { flex-direction: column; gap: 0.15rem; }
+  .pc-param-controls input[type="range"] { flex-basis: 100%; }
+}

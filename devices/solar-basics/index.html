@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solar Basics — BareBoard — Free Hardware Education</title>
+<meta name="description" content="Solar basics: module datasheet terms (Voc/Isc/Vmp/Imp), strings and rapid shutdown (NEC 690.12), string vs micro vs optimizer inverters, UL 1741/IEEE 1547, NEM 3.0 record, faults and safety.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Solar Basics">
+<meta property="og:description" content="Solar basics: a diode run backwards by the sun, five datasheet numbers, and a system built from public documents.">
+<meta property="og:url" content="https://bareboard.org/devices/solar-basics/">
+<meta property="og:image" content="https://bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/devices/">Devices</a></li>
+        <li class="has-children">
+          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/about.html#how-we-work">How we work</a></li>
+                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/notes/">Bench Notes</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                <li><a href="/protocols.html">Protocol RE</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
+                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
+                <li><a href="/hot-100.html">Game Consoles</a></li>
+                <li><a href="/hot-100.html">Media Streamers</a></li>
+                <li><a href="/hot-100.html">Networking Gear</a></li>
+                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
+                <li><a href="/hot-100.html">Other</a></li>
+                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
+                <li><a href="/hot-100.html">Phones</a></li>
+                <li><a href="/hot-100.html">Printers</a></li>
+                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
+                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
+                <li><a href="/hot-100.html">Wearables</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/most-wanted.html#board">The board</a></li>
+              </ul>
+            </div>
+          </div></li>
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+                <li><a href="/watchmen.html#corrections">Corrections</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+  <aside class="legal-notice bb-notice-amber">
+    <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
+  </aside>
+
+  <aside class="legal-notice bb-notice-amber">
+    <strong>Solar panels are always on.</strong> There is no off switch for sunlight: a panel produces voltage whenever light hits it, and a string of panels produces up to 600&nbsp;V DC in a home system. DC arcs don&rsquo;t self-extinguish the way AC does. Roof work, string wiring, and anything inside an inverter belong to licensed electricians under NEC Article 690. This page teaches the system &mdash; how the pieces fit, what the terms mean, what the record shows &mdash; so an owner can talk to that electrician as an informed customer and read their own system&rsquo;s data like an owner.
+  </aside>
+  <h1>Solar Basics</h1>
+  <p class="lede">A panel is a diode run backwards by the sun. Everything else &mdash; the inverter, the rapid-shutdown boxes, the monitoring app &mdash; exists to make that simple fact safe, useful, and legible to a grid built for one-way power. This is the whole system, in build order, with the vocabulary defined as it appears.</p>
+  <section>
+    <h2 id="fcc">FCC ID</h2>
+    <p><strong>FCC IDs apply to the monitoring radios, not the power path.</strong> Inverters and gateways with Wi-Fi/cellular file under their makers&rsquo; grantee codes (Enphase, SolarEdge, Tesla, FranklinWH and others). Panels, racking, combiners, and batteries have no radios and no filings; their public record is their UL listing (UL 1741 for inverters, UL 61730 for modules), their datasheets &mdash; which in this industry are genuinely public &mdash; and NEC Article 690, the code that governs every installation.</p>
+    <p>Every radio a device carries &mdash; Wi-Fi, Bluetooth, cellular, ultra-wideband, NFC &mdash; needs an FCC equipment authorization before the device can be sold in the United States. To get one, the manufacturer files photographs and test reports with the FCC, and those filings are <strong>public record</strong>. Check the label on your specific unit and look it up at <a href="https://fccid.io">fccid.io</a>.</p>
+    
+  </section>
+  <section>
+    <h2 id="fcc-revealed">What the FCC filing revealed</h2>
+    <p>The FCC filing for this device includes the documents manufacturers are required to submit: external photos, internal photos, test setup photos, RF test reports, and the user manual. These are public record at <a href="https://fccid.io/">fccid.io</a>.</p>
+    <ul>
+      <li><strong>Module datasheets (genuinely public)</strong> &mdash; solar is the one category on this site where the maker publishes the part&rsquo;s full electrical character (Voc, Isc, Vmp, Imp, efficiency, temperature coefficients) as a sales document. Learn to read one and you can read every panel</li>
+      <li><strong>Inverter listings &amp; manuals (UL 1741, IEEE 1547)</strong> &mdash; grid-interaction behavior is standards-defined and the manuals are public: anti-islanding, grid profiles, and rapid-shutdown behavior are documented, not secret</li>
+      <li><strong>The monitoring layer</strong> &mdash; what the apps show vs. what the hardware meters (see the record: monitoring is where owners get orphaned)</li>
+    </ul>
+    <p>What the FCC filing does <em>not</em> include: schematics (withheld under confidentiality requests where the maker files them), firmware, and the full bill of materials.</p>
+  </section>
+  <section>
+    <h2 id="exploded">Exploded view &mdash; the assemblies in build order</h2>
+    <p>This is the centerpiece of the page: the device taken apart into its assemblies, in the order they go together, every part named in plain language with what it does. An <em>exploded view</em> is the drawing a manufacturer makes showing every part separated along the path it assembles &mdash; the single most useful document in repair, and the one most often kept behind a dealer login.</p>
+    <h3>The source</h3>
+    <p><strong>Parts book:</strong> not applicable in the usual sense &mdash; a solar system is an <em>assembly of documented components</em>, each with a public datasheet, assembled under a public code (NEC 690). The exploded view of a solar system is therefore architectural: the stack below is the system in energy order, each layer named with the terms its datasheet uses. Sources: module and inverter manufacturers&rsquo; published datasheets and manuals, UL 1741 / IEEE 1547 grid standards, NEC Article 690.</p>
+    <p><strong>Coverage: FULL as a system view &mdash; built from public datasheets and the governing code; there is no single maker&rsquo;s parts book because there is no single maker. Component-level repair (inside an inverter) is a different, thinner record, labeled where it appears.</strong></p>
+    <h3>Build order</h3>
+        <h3>Step 1 &mdash; The module (panel) &mdash; where light becomes voltage</h3>
+    <p>A panel is 60&ndash;72 (residential) silicon cells in series under glass. Its datasheet&rsquo;s five numbers are the whole language of this page:</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Voc &mdash; open-circuit voltage</td><td>The voltage with nothing connected (e.g., ~41&nbsp;V for a modern residential module). This is the number that adds up in a string toward the 600&nbsp;V residential limit &mdash; and it rises in the cold, which is why string sizing is a winter calculation.</td></tr>
+        <tr><td>Isc &mdash; short-circuit current</td><td>The maximum current the module can produce (~11&ndash;14&nbsp;A). Fuses and wire are sized from it, with the code&rsquo;s safety factors.</td></tr>
+        <tr><td>Vmp / Imp / Pmax</td><td>Voltage and current at maximum power, and their product &mdash; the wattage on the label (e.g., ~400&nbsp;W). Real output is this number minus heat, dirt, angle, and age (panels degrade ~0.5%/year, in the warranty&rsquo;s fine print).</td></tr>
+        <tr><td>Bypass diodes</td><td>Diodes across cell groups that let current route around a shaded section. Without them, one shaded cell throttles &mdash; and cooks in &mdash; the whole string. Shading behavior (Faults) is these diodes&rsquo; biography.</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 2 &mdash; Strings, combiners &amp; rapid shutdown &mdash; the DC middle</h3>
+    <p>Modules wire in series into strings; strings land in the inverter (or a combiner). The safety layer lives here.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>String wiring (series)</td><td>Modules in series add voltage (10 modules &asymp; 410&nbsp;V on a bright cold morning). Series is why rooftop DC is lethal and why connectors (MC4) are locking, touch-safe, and not to be mixed across brands.</td></tr>
+        <tr><td>Rapid-shutdown equipment (NEC 690.12)</td><td>Since the 2017 NEC, module-level electronics must bring conductors within/about the array down to safe voltages (80&nbsp;V inside the array boundary, 30&nbsp;V outside it) within 30 seconds of initiation. Firefighters wrote this rule with their roofs in mind. Microinverters and DC optimizers satisfy it inherently; string systems add per-module shutdown boxes.</td></tr>
+        <tr><td>Combiner / disconnects</td><td>Where strings merge (with fuses per string in larger systems) and the labeled DC disconnect &mdash; the switch that does NOT make the array safe, since the modules themselves are still live (see the warning at the top of this page).</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 3 &mdash; The inverter &mdash; DC in, grid-grade AC out</h3>
+    <p>The system&rsquo;s brain and its shortest-lived major part. Three architectures divide the market:</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>String inverter</td><td>One wall-mounted inverter for all strings. Cheapest per watt, one point of failure, needs add-on rapid-shutdown boxes. Its fans and capacitors set its lifespan (10&ndash;15 years is the planning number, against the panels&rsquo; 25+).</td></tr>
+        <tr><td>Microinverters (e.g., Enphase IQ series)</td><td>A small inverter under <em>each</em> module: no high-voltage DC on the roof, per-panel data, shade independence &mdash; at per-panel cost and per-panel roof electronics. The monitoring data owners love comes free with this architecture.</td></tr>
+        <tr><td>DC optimizers + inverter (e.g., SolarEdge)</td><td>A middle path: per-module DC-DC converters doing panel-level shutdown and optimization, feeding a simplified central inverter. Panel-level data, one proprietary ecosystem.</td></tr>
+        <tr><td>Grid duties (UL 1741 / IEEE 1547)</td><td>Whichever box: it must anti-island (stop energizing a dead grid instantly, for line workers&rsquo; lives), follow grid voltage/frequency profiles, and increasingly provide grid-support functions on the utility&rsquo;s command. The inverter is a grid citizen by standard, not by courtesy.</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 4 &mdash; Storage, loads &amp; the meter &mdash; where the energy goes</h3>
+    <p>Generation is half the system; the house and the grid negotiate the rest.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Battery (LFP is the residential standard chemistry now)</td><td>Stores the noon surplus for the evening. Hybrid inverters or AC-coupled units manage charge/discharge; the battery&rsquo;s own BMS is its conscience, as on the e-bike page &mdash; at 100&times; the scale.</td></tr>
+        <tr><td>Critical-loads panel / gateway</td><td>The sub-panel of circuits that stay alive in an outage, and the transfer equipment that islands the home legally and safely.</td></tr>
+        <tr><td>The bidirectional meter &amp; net metering</td><td>The utility meter spins both ways; the tariff decides what an exported kWh is worth. That tariff (see NEM 3.0 in the record) shapes system economics more than any hardware choice &mdash; the policy layer is part of the machine.</td></tr>
+      </tbody>
+    </table>
+
+        <p><strong>What is missing, in the open:</strong> board-level documentation for inverters. Teardowns exist in the community record, but no maker publishes inverter schematics or sells boards; a dead inverter is a swapped inverter, warranty or not. The honest summary for this category: the <em>system</em> is the best-documented technology on this entire site (public datasheets, public code, public standards), while the <em>boxes</em> are as closed as anything Apple makes. Both facts matter.</p>
+  </section>
+  <section>
+    <h2 id="we-reveal">What we reveal</h2>
+    <p>The FCC tells you what a device emits. We tell you what&rsquo;s inside and how it works.</p>
+    <ul>
+      <li><strong>The datasheet is the lesson</strong> &mdash; five numbers (Voc, Isc, Vmp, Imp, Pmax) that fully describe any panel ever made: solar&rsquo;s makers publish what phone makers classify</li>
+      <li><strong>MPPT, defined</strong> &mdash; Maximum Power Point Tracking: the inverter constantly hunts the voltage where V&times;I peaks as light and temperature shift. It is a control loop, not a feature badge &mdash; PWM charge controllers (the cheap alternative in small off-grid systems) simply don&rsquo;t do it, and the harvest difference is the price gap</li>
+    </ul>
+    <p>Check our <a href="/autopsy/">teardowns</a> for full board-level analysis.</p>
+  </section>
+  <section>
+    <h2 id="variants">System shapes</h2>
+    <p>The architectures an owner will meet:</p>
+    <table>
+      <tr><th>Shape</th><th>Inversion</th><th>Data granularity</th><th>Notes</th></tr>
+      <tr><td>String</td><td>One central inverter</td><td>System/string level</td><td>Lowest cost; shading on one panel drags its string.</td></tr>
+      <tr><td>Microinverter</td><td>Per module</td><td>Per panel</td><td>No rooftop HV DC; panel-level monitoring native.</td></tr>
+      <tr><td>Optimized string</td><td>Per-module DC + central inverter</td><td>Per panel</td><td>Middle cost; single-vendor ecosystem.</td></tr>
+      <tr><td>Off-grid / hybrid</td><td>Battery-centric inverter-charger</td><td>System level</td><td>Charge controller (MPPT) + inverter in one; NEC still applies; the grid rules don&rsquo;t.</td></tr>
+    </table>
+  </section>
+  <section>
+    <h2 id="chips">Key chips &amp; components</h2>
+    <ul>
+      <li><strong>Power stage (IGBT / SiC MOSFET)</strong> &mdash; the inverter&rsquo;s switching heart; wide-bandgap (silicon-carbide) parts are the current generation&rsquo;s efficiency story. Commodity power families of the classes in the <a href="/datasheets.html">Datasheet Index</a>.</li>
+      <li><strong>MPPT/control processors</strong> &mdash; DSP/MCU families (TI C2000-class parts are the industry&rsquo;s open secret for exactly this job) with public datasheets in the index.</li>
+      <li><strong>Module-level electronics</strong> &mdash; rapid-shutdown and optimizer ASICs are proprietary; their <em>behavior</em> is code-defined (NEC 690.12 timings above) even when their silicon isn&rsquo;t documented.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="faults">Faults &mdash; which part fails, and how you know</h2>
+    <p>Symptom first. Diagnosis here is data-first: a monitored system tells you which layer is lying.</p>
+    <ul>
+      <li><strong>One panel (or string) down, rest fine</strong> &mdash; read the per-panel data if you have it: a dead micro/optimizer announces itself by address. String systems: a whole string at zero is a connector, a fuse, or the inverter&rsquo;s input &mdash; in that order of likelihood, and all of them are electrician calls on the roof.</li>
+      <li><strong>Whole system producing ~30&ndash;70% on a clear day</strong> &mdash; heat derating (inverters throttle when hot &mdash; a sun-baked garage wall is a design flaw), soiling, or a grid-voltage rise curtailment (the utility&rsquo;s voltage pushing the inverter into its IEEE 1547 limits at solar noon &mdash; visible in the logs, and a utility conversation, not a defect).</li>
+      <li><strong>Production dies every afternoon, returns every morning</strong> &mdash; thermal cutout or an overheating connection cycling. The pattern is the diagnosis: temperature-shaped faults keep temperature-shaped hours.</li>
+      <li><strong>Monitoring dead, production fine (or unknown)</strong> &mdash; the gateway/radio layer (see the record: monitoring is the orphan-prone layer). Generation usually continues; the data gap is the loss &mdash; and the argument for systems whose metering is local, not only cloud.</li>
+      <li><strong>New monitoring message: &lsquo;insulation fault&rsquo; / ground fault</strong> &mdash; moisture in a connector or abraded string wiring. This one is not a wait-and-see: it&rsquo;s the arc-fault class of problem, and it books an electrician promptly.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="safety">Safety &mdash; the array has no off switch</h2>
+    <p><strong>Always live:</strong> modules generate in any light &mdash; moonlight makes volts, dawn makes enough to matter, and a covered array makes voltage at the uncovered seams. There is no state in which rooftop DC wiring is &lsquo;off&rsquo; in daylight. Rapid shutdown reduces conductor voltage; it does not make modules safe to handle carelessly.</p>
+    <p><strong>DC arcs are different:</strong> an AC arc crosses zero 120 times a second and tends to self-extinguish; a DC arc just burns. Damaged connectors and rodent-chewed string wiring are fire causes with a file in the incident record &mdash; the insulation-fault entry in Faults is the early warning of exactly this.</p>
+    <p>Roof + electricity + height is three hazard classes stacked. The owner&rsquo;s jobs in this system are reading data, keeping records, washing nothing electrical, and hiring the licensed installer well. Everything above the disconnect is theirs.</p>
+  </section>
+  <section>
+    <h2 id="record">The full record &mdash; dated, sourced, nothing smoothed over</h2>
+    <p>Solar&rsquo;s record is a policy record and an orphan record: tariffs that rewired the economics overnight, and a monitoring layer with a habit of dying before the panels do.</p>
+    <table>
+      <thead><tr><th>Date</th><th>Event</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>2017</td><td>NEC 2017 &sect;690.12 extends rapid shutdown to the module level (effective as states adopt it) &mdash; the fire service&rsquo;s requirement becomes the industry&rsquo;s architecture, and per-module electronics go from premium option to default design pressure.</td><td>NEC Article 690 (2017)</td></tr>
+        <tr><td>2022-12-15 / 2023-04-15</td><td>California&rsquo;s CPUC adopts NEM 3.0 (the &lsquo;net billing&rsquo; tariff), cutting compensation for exported solar energy by roughly 75% for new systems from April 15, 2023. Rooftop economics in the largest US market are rewritten by a tariff decision &mdash; batteries become standard equipment because the policy, not the physics, changed.</td><td>CPUC Decision D.22-12-056</td></tr>
+        <tr><td>2024-08-05</td><td>SunPower &mdash; once the premium US residential name &mdash; files Chapter 11. Its customers&rsquo; monitoring and warranty paths run through asset sales and successors: the orphan pattern again, this time at the installer/integrator layer.</td><td>SunPower Chapter 11 filing, Aug. 5, 2024</td></tr>
+        <tr><td>Ongoing</td><td>The 25-year panel against the 10-year inverter against the 5-year monitoring cloud: the industry&rsquo;s layered lifespans guarantee that every system owner will outlive at least one vendor relationship. Local metering and standards-based monitoring are the hedges this page keeps pointing at.</td><td>&mdash;</td></tr>
+      </tbody>
+    </table>
+    <h3>Did you know</h3>
+    <ul>
+      <li>A solar panel is warrantied for 25&ndash;30 years and degrades about half a percent a year &mdash; the panels installed today will still be making ~88% of rated power in the 2050s. The durable layer of the energy transition is the one with no moving parts and a public datasheet.</li>
+      <li>Cold makes voltage: a string sized &lsquo;exactly right&rsquo; on a summer datasheet can exceed its inverter&rsquo;s limit on a bright January morning, because Voc climbs as temperature falls. Winter is the design case.</li>
+      <li>One shaded cell can throttle a string because series wiring is a chain &mdash; the bypass diode is the link that lets the chain skip a bad link. Christmas lights taught the same lesson first.</li>
+      <li>Anti-islanding means your solar shuts off during a blackout unless you have storage and transfer equipment &mdash; the most common owner surprise in the category, and it is a safety feature working as designed (for the line crew&rsquo;s sake).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="documents">Documents &amp; deep dive</h2>
+    <p>Every document this page rests on, linked. Site library copies first, then the public record at the source.</p>
+    <ul>
+      <li><strong>NEC Article 690</strong> &mdash; the installation code; &sect;690.12 (rapid shutdown) is the section to read first.</li>
+      <li><strong>UL 1741 / IEEE 1547</strong> &mdash; inverter listing and grid-interconnection standards.</li>
+      <li><strong>Module datasheets</strong> &mdash; published by every maker; the <a href="/datasheets.html">Datasheet Index</a> collects the category&rsquo;s public documentation as collection proceeds.</li>
+      <li><strong>CPUC D.22-12-056</strong> &mdash; the NEM 3.0 decision: the primary source for the tariff story.</li>
+      <li><a href="/devices/ev-chargers/">EV Chargers</a> &mdash; the load that noon solar increasingly feeds.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="reading">Further Reading</h2>
+    <ul>
+      <li><a href="/devices/ev-chargers/">EV Chargers &mdash; the garage&rsquo;s other 240 volts</a></li>
+      <li><a href="/glossary.html">Glossary &mdash; the site&rsquo;s terms, defined in plain language</a></li>
+      <li><a href="/obsolescence.html">Planned Obsolescence &mdash; the monitoring-cloud problem</a></li>
+    </ul>
+  </section>
+
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

@@ -76,7 +76,19 @@
               </ul>
             </div>
           </div></li>
-        <li class="has-children">
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
           <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
           <div class="col-panel">
             <div class="dropdown-inner">
@@ -148,7 +160,8 @@
       <li><strong>FCC ID: <a href="https://fccid.io/2ABCB-RPI5">2ABCB-RPI5</a></strong> &mdash; Raspberry Pi 5</li>
       <li><strong>FCC ID: <a href="https://fccid.io/2ABCB-RPI4B">2ABCB-RPI4B</a></strong> &mdash; Raspberry Pi 4 Model B</li>
       <li><strong>FCC ID: <a href="https://fccid.io/2ABCB-RPI3BP">2ABCB-RPI3BP</a></strong> &mdash; Raspberry Pi 3 Model B / B+</li>
-      <li><strong>FCC ID: <a href="https://fccid.io/2ABCB-RPI0W">2ABCB-RPI0W</a></strong> &mdash; Raspberry Pi Zero / Zero W / Zero 2 W</li>
+      <li><strong>FCC ID: <a href="https://fccid.io/2ABCB-RPI0W">2ABCB-RPI0W</a></strong> &mdash; Raspberry Pi Zero W only (the plain Zero has no radio, so it has no FCC ID)</li>
+      <li><strong>FCC ID: <a href="https://fccid.io/2ABCB-RPI0W2">2ABCB-RPI0W2</a></strong> &mdash; Raspberry Pi Zero 2 W</li>
       <li><strong>FCC ID: <a href="https://fccid.io/2ABCB-RPI400">2ABCB-RPI400</a></strong> &mdash; Raspberry Pi 400</li>
       <li><strong>FCC ID: <a href="https://fccid.io/2ABCB-PICOW">2ABCB-PICOW</a></strong> &mdash; Raspberry Pi Pico W</li>
     </ul>
@@ -182,7 +195,7 @@
     <h2 id="variants">Models</h2>
     <table>
       <tr><th>Model</th><th>Released</th><th>SoC</th><th>RAM</th><th>Launch Price</th></tr>
-      <tr><td>Pi 1 Model B</td><td>2012</td><td>Broadcom BCM2835</td><td>512 MB</td><td>$35</td></tr>
+      <tr><td>Pi 1 Model B</td><td>2012</td><td>Broadcom BCM2835</td><td>256 MB at launch; 512 MB from October 2012</td><td>$35</td></tr>
       <tr><td>Pi Zero / Zero W</td><td>2015/2017</td><td>Broadcom BCM2835</td><td>512 MB</td><td>$5 / $10</td></tr>
       <tr><td>Pi 3 Model B / B+</td><td>2016/2018</td><td>Broadcom BCM2837</td><td>1 GB</td><td>$35</td></tr>
       <tr><td>Pi 4 Model B</td><td>2019</td><td>Broadcom BCM2711</td><td>1&ndash;8 GB</td><td>$35&ndash;$75</td></tr>
@@ -219,6 +232,30 @@
 
     <h3>Commercial prioritization</h3>
     <p>During shortages, Raspberry Pi prioritized industrial/commercial customers (Compute Module) over hobbyist retail, drawing criticism from the maker community that had built the brand. The company argued that commercial contracts kept the lights on during the crisis.</p>
+  </section>
+
+  <section>
+    <h2 id="record">The Full Record</h2>
+    <p>Everything in this timeline is documented &mdash; a court outcome, a regulator&rsquo;s action, a published security analysis, or Raspberry Pi&rsquo;s own statements &mdash; and each entry links its source. Where a popular claim about the Raspberry Pi is <em>not</em> proven, it is labeled Unverified at the end, with the evidence on both sides.</p>
+    <table>
+      <tr><th>Year</th><th>What happened</th><th>Source</th></tr>
+      <tr><td>2015</td><td><strong>The Xenon Death Flash: the Pi 2 was camera-shy.</strong> Days after launch, forum user Peter Onion found that photographing his Pi 2 with a xenon camera flash powered it down, every time. Raspberry Pi traced it to the U16 core-power regulator chip, whose bare-die WL-CSP package lets intense light trigger the photoelectric effect inside the silicon and drop the core voltage. LED flashes and sunlight do not trigger it, it causes no permanent damage, and the published fix was gloriously low-tech: cover U16 with Blu-Tack, Sugru, or an opaque case.</td><td><a href="https://www.raspberrypi.com/news/xenon-death-flash-a-free-physics-lesson/">Raspberry Pi &mdash; Xenon Death Flash</a></td></tr>
+      <tr><td>2015</td><td><strong>A Raspberry Pi went to orbit &mdash; and stayed.</strong> Two space-hardened Raspberry Pi computers, the Astro Pis, were waiting in the Columbus module of the International Space Station when ESA astronaut Tim Peake arrived on December 15, 2015. Students&rsquo; programs have run on them every year since through the European Astro Pi Challenge; upgraded Mark II units arrived in December 2021. Over 160,000 young people have taken part.</td><td><a href="https://education.esa.int/astro_pi_is_ten_a_decade_of_young_people_s_codes_in_space/">ESA Education &mdash; Astro Pi is ten</a></td></tr>
+      <tr><td>2021</td><td><strong>The first price increase in Raspberry Pi history.</strong> On October 20, 2021, Raspberry Pi moved the 2GB Pi 4 from $35 back to $45 and reintroduced the 1GB model at $35, citing shortage-driven cost increases, and stressed the change was temporary. (Details in Controversies &amp; Legal above.)</td><td><a href="https://www.raspberrypi.com/news/supply-chain-shortages-and-our-first-ever-price-increase/">Raspberry Pi &mdash; supply chain announcement</a></td></tr>
+      <tr><td>2021&ndash;2023</td><td><strong>Shortages, caps, and commercial prioritisation.</strong> Raspberry Pi made about 7 million units in 2021 &mdash; flat against 2020 despite much higher demand &mdash; and its own allocation guidance prioritised Compute Module and industrial lines while hobbyist boards stayed scarce and reseller prices spiked. Supply recovered through 2023. (Details in Controversies &amp; Legal above.)</td><td><a href="https://www.raspberrypi.com/news/supply-chain-shortages-and-our-first-ever-price-increase/">Raspberry Pi &mdash; supply chain announcement</a></td></tr>
+      <tr><td>2024</td><td><strong>Raspberry Pi goes public.</strong> Raspberry Pi Holdings plc listed on the London Stock Exchange on June 11, 2024, priced at &pound;2.80 per share &mdash; a market capitalisation of about &pound;541.6 million (about $690 million) and an offer size of &pound;166 million. Shares surged to about &pound;3.90 in early conditional trading; the Raspberry Pi Foundation remained the majority shareholder.</td><td><a href="https://www.theregister.com/on-prem/2024/06/11/raspberry-pi-stock-surges-after-london-ipo/906760?td=readmore">The Register &mdash; IPO pricing and debut</a></td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2 id="did-you-know">Did you know</h2>
+    <ul>
+      <li><strong>The name is two jokes layered together.</strong> &ldquo;Raspberry&rdquo; follows the fruit-named computer companies of the micro era &mdash; Apple, Apricot, Tangerine, Acorn &mdash; with a deliberate nod to blowing a raspberry; &ldquo;Pi&rdquo; is Python, because the early prototype booted straight into Python. Source: <a href="https://www.howtogeek.com/786795/why-is-it-called-the-raspberry-pi/">How-To Geek &mdash; Eben Upton on the name</a>.</li>
+      <li><strong>The first field fix for a Pi was a pellet of bread.</strong> Raspberry Pi&rsquo;s own Xenon Death Flash post records that one forum user shielded the light-sensitive U16 chip with bread &mdash; &ldquo;the first yeasted bug fix we have encountered.&rdquo; Source: <a href="https://www.raspberrypi.com/news/xenon-death-flash-a-free-physics-lesson/">Raspberry Pi &mdash; Xenon Death Flash</a>.</li>
+      <li><strong>Students named the space Pis.</strong> The two Astro Pi Mark II computers on the ISS were named Nikola Tesla and Marie Sk&#322;odowska-Curie by Mission Zero participants in 2022. Source: <a href="https://astro-pi.org/about/">Astro Pi &mdash; about the computers</a>.</li>
+      <li><strong>Over 73 million Raspberry Pis have now been sold.</strong> A November 2026 London Stock Exchange regulatory filing states cumulative sales of over 73 million units to date. Source: <a href="https://uk.advfn.com/stock-market/london/raspberry-pi-RPI/share-news/Raspberry-Pi-Holdings-PLC-TVR-Admission-of-Furth/99602803">Raspberry Pi Holdings plc &mdash; RNS filing via ADVFN</a>.</li>
+      <li><strong>It is the third best-selling general-purpose computer platform in history.</strong> Behind only the PC and the Mac &mdash; a ranking reached before the 2024 IPO, on the strength of 60 million-plus units. Source: <a href="https://colossus.com/article/raspberry-pi-eben-upton/">Colossus &mdash; A Foundation Model in Your Pocket</a>.</li>
+    </ul>
   </section>
 
   <section>

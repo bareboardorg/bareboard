@@ -76,7 +76,19 @@
               </ul>
             </div>
           </div></li>
-        <li class="has-children">
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
           <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
           <div class="col-panel">
             <div class="dropdown-inner">
@@ -140,13 +152,13 @@
     <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits, regulatory actions, and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you are responsible for complying with the laws where you live. This is not legal advice — it is a workbench.
   </aside>
   <h1>Flipper Zero</h1>
-  <p class="lede">A $169 pocket multi-tool for RFID, NFC, sub-GHz, infrared, iButton, Bluetooth, and GPIO — with open firmware and schematics. Use it on your own systems, or with written authorization.</p>
+  <p class="lede">A $199 pocket multi-tool for RFID, NFC, sub-GHz, infrared, iButton, Bluetooth, and GPIO — with open firmware and schematics. Use it on your own systems, or with written authorization.</p>
 
   <section>
     <h2 id="overview">What it is</h2>
     <p>A handheld, microcontroller-based multi-tool, not a phone and not a computer. It reads, stores, and replays low-power radio and contactless signals, and it can act as a USB HID device, a serial terminal, and a GPIO tool. Its strength is also its warning: the same tool that shows a weak access system can be misused on a system you do not own. Use it only on your own equipment or with written authorization.</p>
     <ul>
-      <li><strong>Price, official store:</strong> $169, microSD card not included in the basic pack.</li>
+      <li><strong>Price, official US store:</strong> $199 (launched at $169 in 2022; US store price as of late 2026), microSD card not included in the basic pack.</li>
       <li><strong>Screen:</strong> 128x64, 1.4-inch monochrome LCD, backlit.</li>
       <li><strong>Battery:</strong> LiPo 2000mAh, USB-C charging.</li>
       <li><strong>Size / weight:</strong> 100 x 40 x 25 mm, 102g.</li>
@@ -175,7 +187,7 @@
       <tr><td>125 kHz RFID coil</td><td>Low-frequency RFID. EM400x, EM410x, EM420x, HIDProx, Indala, T5577.</td><td>See official schematic and docs.flipper.net RFID section.</td></tr>
       <tr><td>Infrared RX / TX</td><td>Infrared capture and replay, 800-950nm.</td><td>See official docs, infrared section.</td></tr>
       <tr><td>128x64 LCD</td><td>1.4-inch monochrome display, backlit.</td><td>See official schematic for the display controller and part number.</td></tr>
-      <tr><td>microSD slot</td><td>Storage, up to 64GB, FAT32 guidance in official docs.</td><td>See official docs, storage section.</td></tr>
+      <tr><td>microSD slot</td><td>Storage, cards up to 256 GB supported, exFAT (FAT32 also works).</td><td>See official docs, storage section.</td></tr>
       <tr><td>LiPo battery, 2000mAh</td><td>Internal battery, USB-C charging.</td><td>See official docs, power section.</td></tr>
     </table>
     <p><strong>In progress, not yet published:</strong> full passive BOM, exploded view with every part labelled, and verified SWD pinout. Those will be added only from the official schematic and FCC internal photos, with sources, not from a guessed list.</p>
@@ -219,6 +231,34 @@
   </section>
 
   <section>
+    <h2 id="record">The Full Record</h2>
+    <p>Everything in this timeline is documented &mdash; a court outcome, a regulator&rsquo;s action, a published security analysis, or Flipper Devices&rsquo; own statements &mdash; and each entry links its source. Where a popular claim about the Flipper Zero is <em>not</em> proven, it is labeled Unverified at the end, with the evidence on both sides.</p>
+    <p>No court lawsuit against Flipper Devices was found in the public record checked for this page (see Lawsuits and discovery above). The record below is therefore what actually happened: a crowdfunding launch, then regulatory and marketplace actions &mdash; seizures, a refused certification, a marketplace ban, and one announced ban that was walked back.</p>
+    <table>
+      <tr><th>Year</th><th>What happened</th><th>Source</th></tr>
+      <tr><td>2020</td><td><strong>Kickstarter: $4.8 million.</strong> The Flipper Zero campaign closed in September 2020 having raised about $4.8 million from more than 37,000 backers &mdash; better than 8,000% of its funding goal. The first devices reached backers about 18 months later, in early 2022.</td><td><a href="https://hackaday.com/2020/09/02/flipper-zero-blasts-past-funding-goal-and-into-our-hearts/">Hackaday &mdash; Kickstarter result</a></td></tr>
+      <tr><td>2022</td><td><strong>U.S. Customs seized 15,000 units &mdash; then released them.</strong> In late 2022, U.S. Customs and Border Protection seized a shipment of about 15,000 Flipper Zeros; after review, the shipment was released. (Details in Lawsuits and discovery above.)</td><td><a href="https://www.XDA-developers.com/where-is-the-flipper-zero-banned/">XDA Developers &mdash; where Flipper Zero is banned</a></td></tr>
+      <tr><td>2023</td><td><strong>Brazil: Anatel seized shipments and refused certification.</strong> From early 2023, Brazil&rsquo;s telecom regulator Anatel redirected incoming Flipper Zero purchases to itself and rejected all homologation (certification) requests, stating in its letters that the device had been used to facilitate crime. The EFF argued the refusal blocks a legitimate security-research tool. (Details in Lawsuits and discovery above.)</td><td><a href="https://www.bleepingcomputer.com/news/security/brazil-seizing-flipper-zero-shipments-to-prevent-use-in-crime/">BleepingComputer &mdash; Brazil seizures</a></td></tr>
+      <tr><td>2023</td><td><strong>Amazon banned it as a &ldquo;card skimming device.&rdquo;</strong> In April 2023 Amazon removed Flipper Zero listings, notifying sellers: &ldquo;This product has been identified as a card skimming device. Amazon policy prohibits the sale or listing of card skimming devices.&rdquo; Flipper Devices appealed; the device remained on sale through its own store. This was a marketplace policy decision, not a law. (Details in Lawsuits and discovery above.)</td><td><a href="https://gizmodo.com/amazon-bans-flipper-zero-card-skimming-on-tiktok-1850313284">Gizmodo &mdash; Amazon ban</a></td></tr>
+      <tr><td>2023</td><td><strong>Gatwick Airport confiscation.</strong> On September 27, 2023, airport security staff at London Gatwick confiscated a traveller&rsquo;s Flipper Zero over security concerns &mdash; an individual confiscation, widely reported, not a UK ban. (Details in Lawsuits and discovery above.)</td><td><a href="https://en.wikipedia.org/wiki/Flipper%20Zero">Wikipedia &mdash; Flipper Zero, bans and seizures</a></td></tr>
+      <tr><td>2024</td><td><strong>Canada announced a ban &mdash; then walked it back.</strong> On February 8, 2024, at a national auto-theft summit, Canada announced it would ban devices used to steal cars by copying keyless-entry signals, naming the Flipper Zero. Flipper Devices responded that the device cannot defeat rolling-code systems used since the 1990s. By March 20, 2024, Innovation, Science and Economic Development Canada had shifted position: not an outright ban, but measures to restrict such devices to legitimate actors, with details to follow consultations. (Details in Lawsuits and discovery above.)</td><td><a href="https://www.malwarebytes.com/blog/news/2024/03/canada-revisits-decision-to-ban-flipper-zero?noamp=mobile">Malwarebytes &mdash; Canada revisits the ban</a></td></tr>
+    </table>
+    <aside class="bb-notice-amber">
+      <p><strong>Unverified: &ldquo;Flipper Zero is stealing modern cars.&rdquo;</strong> That the device is a driver of the recent car-theft surge is asserted but not proven. Evidence for the claim: the Canadian government named the device at its February 2024 auto-theft summit, police bulletins have flagged it, and viral videos show it interacting with vehicles and access systems. Evidence against: modern keyless systems use rolling codes &mdash; each press sends a fresh code, so a replayed recording is rejected &mdash; and Flipper Devices states the tool cannot hijack cars built after the 1990s; Malwarebytes noted in March 2024 that there had never been an officially confirmed case of a theft committed with a Flipper Zero, and real-world vehicle theft relies on relay and key-programming equipment costing thousands of dollars. No regulator or court record documents a modern car stolen with one. Sources: <a href="https://www.bleepingcomputer.com/news/security/flipper-zero-makers-respond-to-canadas-harmful-ban-proposal/">BleepingComputer &mdash; Flipper Devices&rsquo; response</a>, <a href="https://www.malwarebytes.com/blog/news/2024/03/canada-revisits-decision-to-ban-flipper-zero?noamp=mobile">Malwarebytes &mdash; Canada revisits the ban</a>.</p>
+    </aside>
+  </section>
+
+  <section>
+    <h2 id="did-you-know">Did you know</h2>
+    <ul>
+      <li><strong>The hacking tool is a pet.</strong> The pixel-art dolphin on the screen is a virtual pet in the Tamagotchi mould, and interacting with it is the device&rsquo;s core game mechanic: using the tools changes the dolphin&rsquo;s appearance and emotions, and levels it up. The security toolkit is quite literally gamified. Source: <a href="https://en.wikipedia.org/wiki/Flipper%20Zero">Wikipedia &mdash; Flipper Zero</a>.</li>
+      <li><strong>It beat its Kickstarter goal by more than 8,000%.</strong> The campaign asked for a modest crowdfunding goal and closed at about $4.8 million &mdash; the yardstick, as Hackaday put it at the time, by which crowdfunded hacking gadgets would be measured for years. Source: <a href="https://hackaday.com/2020/09/02/flipper-zero-blasts-past-funding-goal-and-into-our-hearts/">Hackaday</a>.</li>
+      <li><strong>The U.S. seizure reportedly came with a $70,000 storage bill.</strong> After Customs released the seized 15,000-unit shipment, the goods&rsquo; owners were billed about $70,000 in storage fees for the period of the inspection, as reported by RTL-SDR. Source: <a href="https://www.rtl-sdr.com/amazon-bans-the-flipper-zero/">RTL-SDR &mdash; Amazon bans the Flipper Zero</a>.</li>
+      <li><strong>Its game module is a Raspberry Pi in disguise.</strong> The Flipper Video Game Module, released in February 2024, turns the Zero into a game controller and TV console &mdash; and is built around a Raspberry Pi Pico (RP2040). Source: <a href="https://en.wikipedia.org/wiki/Flipper%20Zero">Wikipedia &mdash; Flipper Zero</a>.</li>
+    </ul>
+  </section>
+
+  <section>
     <h2 id="generation">Newer generation — Flipper One is not a successor</h2>
     <p>Flipper One, announced in May 2026, is <strong>not</strong> a newer generation of Flipper Zero. It is a parallel product, marketed in addition to Flipper Zero, focused on networks rather than local protocols.</p>
     <table>
@@ -227,7 +267,7 @@
       <tr><td>Core</td><td>STM32WB55RG microcontroller, CC1101, ST25R3916</td><td>Rockchip RK3576 ARM computer + Raspberry Pi RP2350B co-processor</td></tr>
       <tr><td>Connectivity</td><td>Sub-GHz, NFC, RFID, IR, BLE 5.0, USB-C</td><td>Wi-Fi 6E, dual Gigabit Ethernet, M.2 for 5G modem, USB, HDMI</td></tr>
       <tr><td>System</td><td>Flipper firmware + apps</td><td>Linux / Flipper OS, in development</td></tr>
-      <tr><td>Status</td><td>Available product, $169</td><td>Not yet a finished product for sale; price target around $350, not an official final price; crowdfunding planned later in 2026</td></tr>
+      <tr><td>Status</td><td>Available product, $199</td><td>Not yet a finished product for sale; pre-orders opened at $379; crowdfunding planned later in 2026</td></tr>
     </table>
     <p><strong>Parts taken out / put in, in focus terms:</strong> One does not swap Zero's CC1101/NFC/IR core for a faster version of the same core — it puts in a full ARM Linux computer, Ethernet, and Wi-Fi 6E, and moves away from Zero's offline-protocol focus. A true Zero successor, if one appears, will get its own exploded view here, with parts taken out and parts put in, part by part.</p>
   </section>
@@ -279,7 +319,7 @@
   <pre class="term"><code><span class="p">$</span> arm-none-eabi-gdb
 (gdb) target extended-remote [PORT]
 (gdb) monitor swdp_scan
-# Your target appears here. Then, and only then, attach with: monitor attach</code></pre>
+# Your target appears here. Then, and only then, attach with: attach 1</code></pre>
   <p><strong>JTAG chain check (OpenOCD):</strong></p>
   <pre class="term"><code><span class="p">$</span> openocd -f interface/[PROBE].cfg -f target/[TARGET].cfg -c "init; scan_chain; shutdown"
 # This lists the JTAG chain. It writes nothing to flash.</code></pre>

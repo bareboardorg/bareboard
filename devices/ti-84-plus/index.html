@@ -76,7 +76,19 @@
               </ul>
             </div>
           </div></li>
-        <li class="has-children">
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
           <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
           <div class="col-panel">
             <div class="dropdown-inner">
@@ -198,6 +210,31 @@
 
     <h3>Exam mode and lockdown</h3>
     <p>Newer TI calculators include &ldquo;exam mode&rdquo; features and increasingly locked-down firmware, limiting what users can do with hardware they own. This runs directly counter to the right-to-repair and device-ownership principles BareBoard stands for.</p>
+  </section>
+
+  <section>
+    <h2 id="record">The Full Record</h2>
+    <p>Everything in this timeline is documented &mdash; a court outcome, a regulator&rsquo;s action, a published security analysis, or Texas Instruments&rsquo; own statements &mdash; and each entry links its source. Where a popular claim about the TI-84 Plus is not proven, it is labeled Unverified at the end, with the evidence on both sides.</p>
+    <table>
+      <tr><th>Year</th><th>What happened</th><th>Source</th></tr>
+      <tr><td>2009</td><td><strong>The signing-key DMCA fight.</strong> In July 2009 hobbyist Benjamin Moody published the factors of the 512-bit RSA key TI used to sign calculator operating systems, and a volunteer distributed-computing project (the RSA Lattice Siever) factored the remaining keys, including the TI-84 Plus&rsquo;s &mdash; making custom operating systems possible on calculators people owned. TI answered with DMCA takedown notices against sites including United-TI, Reddit, and Wikipedia, and against individual bloggers. The Electronic Frontier Foundation took three bloggers&rsquo; cases pro bono and wrote to TI on October 13, 2009, warning that posting the keys did not violate the DMCA and that TI risked liability for misrepresentation. TI sent a few more notices, stopped after late 2009, and never sued anyone; the bloggers reposted their material. (Details in Controversies &amp; Legal above.)</td><td><a href="https://en.wikipedia.org/wiki/Texas_Instruments_signing_key_controversy">Wikipedia &mdash; signing key controversy</a></td></tr>
+      <tr><td>2014</td><td><strong>93 percent of the market, at a 2004 spec.</strong> The Washington Post, drawing on NPD Group figures, reported that TI took 93 percent of U.S. graphing-calculator sales in the year to June 2014 &mdash; about 1.6 million calculators &mdash; while the TI-84 Plus, launched in 2004 with a 96&times;64 screen and 24 KB of RAM, still sold for roughly $90&ndash;$125. Barclays analyst Blayne Curtis estimated the calculator cost $15&ndash;20 to manufacture, implying a profit margin above 50 percent. That cost figure is an analyst&rsquo;s estimate; TI has never confirmed it. (Details in Controversies &amp; Legal above.)</td><td><a href="https://www.techspot.com/news/57985-the-ti-84-plus-a-10-year-old-calculator-that-still-monopolizes-the-education-market.html">TechSpot &mdash; Washington Post analysis</a></td></tr>
+      <tr><td>2020</td><td><strong>TI removes native programming from the CE.</strong> In May 2020, TI&rsquo;s OS 5.5.x for the TI-84 Plus CE (OS 5.5.5 in the U.S., 5.5.1 in Europe; the same machine is sold in France as the TI-83 Premium CE) removed the ability to run programs written in assembly language or C &mdash; the languages of decades of community software &mdash; and blocked downgrading to an older OS that still could. TI said the change was made to &ldquo;prioritize learning for students&rdquo; and reduce the risk of exam cheating, after a video showed how to bypass test mode on an old OS version (5.2.2). TI-BASIC programs still ran; native code did not.</td><td><a href="https://en.wikipedia.org/wiki/TI-84_Plus_CE_series">Wikipedia &mdash; TI-84 Plus CE series</a></td></tr>
+      <tr><td>2020</td><td><strong>arTIfiCE: the community restores what TI removed &mdash; unofficially.</strong> About four months after the OS 5.5 removal, the calculator community released arTIfiCE, an exploit that uses a flaw in one of TI&rsquo;s own pre-installed apps to run assembly and C programs again on the new OS versions. TI never restored native support itself; it later patched the arTIfiCE flaw in OS 5.8.3, continuing the cat-and-mouse pattern. TI&rsquo;s official answer to demand for a modern language was a separate model, the TI-84 Plus CE Python (2021), which adds Python while native code stays locked out.</td><td><a href="https://en.wikipedia.org/wiki/TI-84_Plus_CE_series">Wikipedia &mdash; TI-84 Plus CE series</a></td></tr>
+    </table>
+    <aside class="bb-notice-amber">
+      <p><strong>Unverified: &ldquo;The TI-84 costs over $100 because exam boards require TI by name.&rdquo;</strong> Evidence for: the College Board and ACT publish approved-calculator lists on which the TI-84 appears, schools standardize lessons and textbooks on TI models, and TI held about 93 percent of U.S. graphing-calculator sales in 2013&ndash;14, so families often have no practical alternative. Evidence against: the approved lists also name Casio, HP, and other brands &mdash; no board mandates TI &mdash; and no court or regulator has found that TI fixed prices or colluded with exam boards. The $15&ndash;20 manufacturing-cost figure behind the &ldquo;price gouging&rdquo; version of this claim is one analyst&rsquo;s 2014 estimate, never confirmed by TI or by any audit. The dominance is documented; the mechanism commonly blamed for it is not proven.</p>
+    </aside>
+  </section>
+
+  <section>
+    <h2 id="did-you-know">Did you know</h2>
+    <ul>
+      <li><strong>The original TI-84 Plus&rsquo;s CPU outlived almost everything.</strong> Its Zilog Z80 was launched in July 1976 &mdash; it was already 28 years old when the TI-84 Plus shipped in 2004 &mdash; and Zilog kept the standalone chip in production until June 2024, a 48-year run. Source: <a href="https://www.allaboutcircuits.com/news/end-of-era-zilog-discontinues-z80-microprocessor/">All About Circuits &mdash; Z80 discontinued</a>.</li>
+      <li><strong>In France, the TI-84 Plus CE is a TI-83.</strong> The same color CE hardware is sold to French students as the TI-83 Premium CE, with a French exam mode &mdash; which is why the 2020 programming removal landed first and hardest in France. Source: <a href="https://en.wikipedia.org/wiki/TI-84_Plus_CE_series">Wikipedia &mdash; TI-84 Plus CE series</a>.</li>
+      <li><strong>The jailbreak that restored assembly hid in a geometry app.</strong> arTIfiCE works by exploiting a bug in Cabri Jr, the geometry application TI itself pre-installs on the CE &mdash; the locked door was opened with a key TI shipped in the box. Source: <a href="https://www.cemetech.net/forum/viewtopic.php?p=308819">Cemetech &mdash; arTIfiCE discussion</a>.</li>
+      <li><strong>Volunteers factored TI&rsquo;s lock with spare computer time.</strong> After the first 512-bit signing key fell in 2009, the community set up the RSA Lattice Siever, a BOINC distributed-computing project, and factored the rest of TI&rsquo;s calculator signing keys on donated home computers. Source: <a href="https://en.wikipedia.org/wiki/Texas_Instruments_signing_key_controversy">Wikipedia &mdash; signing key controversy</a>.</li>
+    </ul>
   </section>
 
   <section>

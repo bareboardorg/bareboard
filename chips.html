@@ -93,6 +93,20 @@
               </div>
             </div>
           </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
         <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
           <div class="col-panel">
             <div class="dropdown-inner">
@@ -204,6 +218,8 @@ Bus 001 Device 003: ID 8087:0026 Intel Corp. AX201 Bluetooth
 model name	: Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz</code></pre>
 
 <p><span class="mono">lspci</span> lists everything on the PCI bus (Wi-Fi cards, graphics). <span class="mono">lsusb</span> lists USB devices. <span class="mono">/proc/cpuinfo</span> describes the processor. The names you see here are the same ones in the table above.</p>
+
+<p>One caution about the example above: those three outputs come from <em>different</em> machines — no single laptop reports all of them. The AX200 is a standalone PCIe Wi-Fi card; the AX201 is a CNVi module whose Wi-Fi half rides the processor&rsquo;s built-in controller, so only its Bluetooth half (8087:0026) shows up, under USB. An AX200 machine&rsquo;s Bluetooth reports as AX200, not AX201.</p>
 </section>
 <section>
 <h2>IoT spotlight: the ESP32</h2>

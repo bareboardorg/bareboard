@@ -76,7 +76,19 @@
               </ul>
             </div>
           </div></li>
-        <li class="has-children">
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
           <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
           <div class="col-panel">
             <div class="dropdown-inner">
@@ -198,7 +210,7 @@
     <h2 id="controversies">Controversies &amp; Legal</h2>
 
     <h3>Joy-Con drift</h3>
-    <p>The defining hardware defect of the Switch era. Joy-Con analog sticks develop &ldquo;drift&rdquo; &mdash; registering input without being touched &mdash; caused by wear on internal components and dust ingress. UK consumer group Which? estimated over 40% of original Joy-Cons were affected.</p>
+    <p>The defining hardware defect of the Switch era. Joy-Con analog sticks develop &ldquo;drift&rdquo; &mdash; registering input without being touched &mdash; caused by wear on internal components and dust ingress. UK consumer group Which? found that 40% of surveyed owners (919 respondents) reported drift on their original Joy-Cons.</p>
     <p><strong>US class actions (2019&ndash;2024):</strong> Filed in 2019, alleging Nintendo knowingly sold defective controllers. After five years, the cases were dismissed &mdash; not on the merits, but because Nintendo&rsquo;s EULA contains a binding arbitration clause that plaintiffs had not opted out of.</p>
     <p><strong>French settlement (2026):</strong> France&rsquo;s DGCCRF found Nintendo of Europe committed &ldquo;misleading commercial practices&rdquo; from 2018&ndash;2023 by failing to inform consumers of the defect. Nintendo agreed to pay &euro;35 million (~$40M) &mdash; the first major financial penalty over Joy-Con drift. Nintendo denied intentional wrongdoing.</p>
     <p>Nintendo has offered free Joy-Con repairs since 2019, including out-of-warranty units.</p>
@@ -213,9 +225,37 @@
   </section>
 
   <section>
+    <h2 id="record">The Full Record</h2>
+    <p>Everything in this timeline is documented &mdash; a court outcome, a regulator&rsquo;s action, a published security analysis, or Nintendo&rsquo;s own statements &mdash; and each entry links its source. Where a popular claim about the Switch is not proven, it is labeled Unverified at the end, with the evidence on both sides.</p>
+    <table>
+      <tr><th>Year</th><th>What happened</th><th>Source</th></tr>
+      <tr><td>2018</td><td><strong>Fus&eacute;e Gel&eacute;e &mdash; CVE-2018-6242.</strong> Researchers publicly disclosed a buffer overflow in the NVIDIA Tegra X1&rsquo;s BootROM recovery mode (RCM) in April 2018. Anyone with physical access and a USB connection could bypass secure boot and run unverified code. Because the flaw sits in read-only mask ROM, it cannot be patched by software on units already shipped; Nintendo answered with revised hardware (the Mariko revision in the Key Chips section above). The same CVE also affected other Tegra X1 products, including Cisco conferencing hardware.</td><td><a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180620-nvidia-tx1-rom">Cisco advisory &mdash; CVE-2018-6242</a></td></tr>
+      <tr><td>2019&ndash;2024</td><td><strong>Joy-Con drift: the U.S. class actions end in dismissal.</strong> Suits filed in 2019 and 2020 (Diaz and Carbajal) alleged Nintendo knowingly sold defective controllers. In May 2024 both sides jointly called for dismissal: Nintendo&rsquo;s EULA binds buyers to arbitration and waives class actions, and the plaintiffs had not opted out. A third case had already been dismissed on the same grounds. Nintendo had offered free drift repairs, including out-of-warranty controllers, since 2019, and its president apologized for the trouble in 2020. (Details in Controversies &amp; Legal above.)</td><td><a href="https://www.nintendolife.com/news/2024/05/switch-joy-con-drift-class-action-lawsuit-dismissed-after-five-years">Nintendo Life &mdash; dismissal</a></td></tr>
+      <tr><td>2022</td><td><strong>Which? takes drifting Joy-Cons into the lab.</strong> The UK consumer group sent five sets of drifting Joy-Cons to a specialist lab. Every set showed wear on the joystick slider contact points of its plastic circuit boards after only months of use, plus dust and contamination inside despite dust-proofing cowls; the lab concluded a mechanical fault was likely. Which?&rsquo;s earlier survey found two in five UK owners of the original Switch reported drift. (Details in Controversies &amp; Legal above.)</td><td><a href="https://www.which.co.uk/policy-and-insight/article/which-tests-on-faulty-console-controllers-point-to-nintendo-design-flaws-a75t98f03Ma6">Which? &mdash; lab tests</a></td></tr>
+      <tr><td>2020&ndash;2022</td><td><strong>United States v. Bowser (Team Xecuter).</strong> Gary Bowser, the public face of Team Xecuter &mdash; a group that sold modchips and software for playing pirated games on the Switch and other consoles &mdash; was arrested in the Dominican Republic in September 2020 and deported to the U.S. He pleaded guilty in October 2021 to two federal circumvention felonies, and in February 2022 was sentenced to 40 months in prison. The money: $4.5 million in restitution under the plea, plus a separate $10 million judgment for Nintendo &mdash; $14.5 million in total. Prosecutors estimated the scheme caused more than $65 million in losses to game companies.</td><td><a href="https://www.geekwire.com/2022/switch-hacker-gary-w-bowser-given-40-month-sentence-owes-nintendo-14-5m/">GeekWire &mdash; sentencing</a></td></tr>
+      <tr><td>2024</td><td><strong>Nintendo v. Tropic Haze (Yuzu).</strong> Nintendo sued the company behind the Yuzu Switch emulator on February 26, 2024, alleging it facilitated piracy at scale. The case settled in about a week: on March 4, 2024, Tropic Haze agreed to pay $2.4 million, accept a permanent injunction, hand over the yuzu-emu.org domain, and shut down both Yuzu and its sister 3DS emulator, Citra. Because it settled, the case set no court precedent on emulation. (Details in Controversies &amp; Legal above.)</td><td><a href="https://en.wikipedia.org/wiki/Nintendo_of_America_Inc._v._Tropic_Haze_LLC">Wikipedia &mdash; case record</a></td></tr>
+      <tr><td>2026</td><td><strong>France fines Nintendo &euro;35 million over drift disclosure.</strong> On June 8, 2026, France&rsquo;s DGCCRF announced that Nintendo of Europe had accepted a &euro;35 million transactional fine for misleading commercial practices from 2018 to 2023: investigators found Nintendo knew of the drift defect as early as 2018 but only began informing consumers in 2020, after a complaint from consumer group UFC-Que Choisir, and that its messaging steered some owners into buying replacements instead of seeking repair. Nintendo must also publish a notice on its French homepage; it denied intentional wrongdoing and said the payment is not an admission of guilt. At European level, Nintendo had already committed in 2023 to free repairs for affected controllers even beyond the legal warranty. (Details in Controversies &amp; Legal above.)</td><td><a href="https://www.engadget.com/2189455/nintendo-will-pay-a-dollar40-million-fine-for-faulty-joy-cons/">Engadget &mdash; DGCCRF fine</a></td></tr>
+    </table>
+    <aside class="bb-notice-amber">
+      <p><strong>Unverified: &ldquo;Nintendo quietly fixed Joy-Con drift in later Joy-Cons.&rdquo;</strong> Evidence for: Nintendo has said it made continuous improvements to the Joy-Con and that only a small percentage were reported faulty, and consumer groups have noted quiet revisions to later models. Evidence against: Nintendo has never announced a fix, named a revised part, or documented a change to the basic stick design; the Which? lab was still finding the same wear fault in 2022, drift was reported on Switch Lite and OLED controllers built years after launch, and the French case treated the defect as live through 2023. Until Nintendo documents a design change, &ldquo;fixed&rdquo; is a claim, not a fact.</p>
+    </aside>
+  </section>
+
+  <section>
+    <h2 id="did-you-know">Did you know</h2>
+    <ul>
+      <li><strong>The Switch is Nintendo&rsquo;s best-selling console ever.</strong> By December 31, 2025, it had sold 155.37 million units, passing the Nintendo DS at 154.02 million &mdash; the hybrid handheld outsold every Nintendo box before it. Source: <a href="https://www.thurrott.com/games/nintendo/332294/nintendo-has-sold-155-million-switch-17-million-switch-2-consoles">Thurrott &mdash; Nintendo earnings report</a>.</li>
+      <li><strong>More games have been sold for Switch than for any other Nintendo platform.</strong> Nintendo reported cumulative Switch software sales of 1.3061 billion units by late 2024, a company record. Source: <a href="https://www.nintendo.co.jp/ir/pdf/2024/241106e.pdf">Nintendo &mdash; financial briefing (PDF)</a>.</li>
+      <li><strong>The Switch&rsquo;s unpatchable flaw also lived in office conferencing gear.</strong> CVE-2018-6242 came from the shared Tegra X1 chip; Cisco listed its Webex Room 55 among the products built on the same processor and had to disable recovery mode by software update. Source: <a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180620-nvidia-tx1-rom">Cisco advisory &mdash; CVE-2018-6242</a>.</li>
+      <li><strong>For all its defect history, the Switch has never been recalled in the U.S.</strong> A check of CPSC recall data in November 2026 found no CPSC recall matching Nintendo as a brand since 2010 &mdash; drift was handled with free repairs, lawsuits, and a French fine, never a recall. Source: <a href="https://www.savingsahead.com/P/12812/nintendo-switch-microsd-express-256gb.html">CPSC recall data check</a>.</li>
+    </ul>
+  </section>
+
+  <section>
     <h2 id="reading">Further Reading</h2>
     <ul>
       <li><a href="https://fccid.io/BKEHAC001">FCC filing BKEHAC001</a> &mdash; Switch hardware details</li>
+      <li><a href="/nintendo-access.html">Access &amp; Control: Nintendo</a> &mdash; Maintenance Mode, RCM (recovery mode) and the full storage backup it unlocks on launch-era units, the plug-in eMMC board, and the Joy-Con rail</li>
       <li><a href="/datasheets.html">BareBoard datasheet index</a></li>
     </ul>
     <h3>Video</h3>

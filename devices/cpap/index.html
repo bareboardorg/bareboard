@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPAP Machines — BareBoard — Free Hardware Education</title>
+<meta name="description" content="CPAP machines: blower/sensor anatomy, the SD card and OSCAR, the Philips PE-PUR foam recall (Z-1974-2021), consent decree, FDA warnings, faults and the full record.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="CPAP Machines">
+<meta property="og:description" content="CPAP: a fan, two sensors, your data on a card — and the largest recall in sleep medicine.">
+<meta property="og:url" content="https://bareboard.org/devices/cpap/">
+<meta property="og:image" content="https://bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/devices/">Devices</a></li>
+        <li class="has-children">
+          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/about.html#how-we-work">How we work</a></li>
+                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/notes/">Bench Notes</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                <li><a href="/protocols.html">Protocol RE</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
+                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
+                <li><a href="/hot-100.html">Game Consoles</a></li>
+                <li><a href="/hot-100.html">Media Streamers</a></li>
+                <li><a href="/hot-100.html">Networking Gear</a></li>
+                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
+                <li><a href="/hot-100.html">Other</a></li>
+                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
+                <li><a href="/hot-100.html">Phones</a></li>
+                <li><a href="/hot-100.html">Printers</a></li>
+                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
+                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
+                <li><a href="/hot-100.html">Wearables</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/most-wanted.html#board">The board</a></li>
+              </ul>
+            </div>
+          </div></li>
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+                <li><a href="/watchmen.html#corrections">Corrections</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+  <aside class="legal-notice bb-notice-amber">
+    <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
+  </aside>
+
+  <aside class="legal-notice bb-notice-amber">
+    <strong>Medical device &mdash; read this first.</strong> A CPAP is an FDA Class II prescription medical device that treats sleep apnea, a condition with real cardiovascular stakes. This page teaches the hardware and the public record. <strong>It never replaces your clinician:</strong> do not change your prescribed pressure, and do not stop therapy because of anything written here &mdash; talk to your doctor first, exactly as the FDA instructs. If your machine is a recalled Philips model, the FDA&rsquo;s guidance is in the record below.
+  </aside>
+  <h1>CPAP Machines</h1>
+  <p class="lede">A blower, two sensors, and a prescription &mdash; the bedside computer with the largest recall in medical-device history inside it. Your therapy data is written to an SD card in plain files; the machine that makes it was, for one maker, a case study in how not to handle a defect.</p>
+  <section>
+    <h2 id="fcc">FCC ID</h2>
+    <p><strong>FCC IDs apply to the connected models.</strong> CPAPs with cellular or Bluetooth radios (ResMed&rsquo;s AirSense line carries a cellular modem for its cloud; Philips models carried modems for the Encore/DreamMapper ecosystem) file under each maker&rsquo;s grantee code. The filings&rsquo; internal photos show the blower and flow path &mdash; the exact path the Philips recall was about. Non-connected travel models may have no filing; their public record is the FDA&rsquo;s.</p>
+    <p>Every radio a device carries &mdash; Wi-Fi, Bluetooth, cellular, ultra-wideband, NFC &mdash; needs an FCC equipment authorization before the device can be sold in the United States. To get one, the manufacturer files photographs and test reports with the FCC, and those filings are <strong>public record</strong>. Check the label on your specific unit and look it up at <a href="https://fccid.io">fccid.io</a>.</p>
+    
+  </section>
+  <section>
+    <h2 id="fcc-revealed">What the FCC filing revealed</h2>
+    <p>The FCC filing for this device includes the documents manufacturers are required to submit: external photos, internal photos, test setup photos, RF test reports, and the user manual. These are public record at <a href="https://fccid.io/">fccid.io</a>.</p>
+    <ul>
+      <li><strong>Internal photos (connected models)</strong> &mdash; the blower motor, the foam-lined air path (on Philips designs), the sensor board, and the modem</li>
+      <li><strong>FDA records</strong> &mdash; this category&rsquo;s deepest public file: 510(k) clearances, the recall database entries (Z-1974-2021 and siblings), inspection records, and the consent decree &mdash; all public, all linked below</li>
+      <li><strong>Test reports</strong> &mdash; cellular modem characteristics; the modem&rsquo;s network generation decides when the cloud features die (see Faults)</li>
+    </ul>
+    <p>What the FCC filing does <em>not</em> include: schematics (withheld under confidentiality requests where the maker files them), firmware, and the full bill of materials.</p>
+  </section>
+  <section>
+    <h2 id="exploded">Exploded view &mdash; the assemblies in build order</h2>
+    <p>This is the centerpiece of the page: the device taken apart into its assemblies, in the order they go together, every part named in plain language with what it does. An <em>exploded view</em> is the drawing a manufacturer makes showing every part separated along the path it assembles &mdash; the single most useful document in repair, and the one most often kept behind a dealer login.</p>
+    <h3>The source</h3>
+    <p><strong>Parts book:</strong> none published to owners or patients by any maker. CPAP service is a DME (durable medical equipment) channel business: machines are supplied, serviced, and swapped by equipment companies under prescription. <strong>FDA records + FCC internal photos</strong> are the sources for the stack below. The consumables (filters, tubing, masks, water chambers) are owner-handled by design and are marked as such; everything inside the shell is not.</p>
+    <p><strong>Coverage: PARTIAL &mdash; no public parts book; FDA-record + FCC-photo basis. Do not open a machine that is your prescribed therapy without a working backup and your clinician&rsquo;s knowledge &mdash; see Safety.</strong></p>
+    <h3>Build order</h3>
+        <h3>Step 1 &mdash; The air path &mdash; blower, foam, sensors</h3>
+    <p>Air enters at the filter, is pressurized by a brushless blower, passes pressure/flow sensors, and leaves for the hose. On Philips&rsquo; recalled designs, polyester-based polyurethane (PE-PUR) sound-abatement foam sat in this path to quiet the blower. That foam is the recall.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Inlet filter</td><td>A foam or fine filter at the intake &mdash; an owner consumable with a published replacement interval. A clogged filter makes the blower work harder and hotter.</td></tr>
+        <tr><td>Blower (BLDC motor + impeller)</td><td>The therapy itself: a brushless DC blower whose speed is the pressure. CPAP pressure (4&ndash;20 cmH&#8322;O &mdash; centimeters of water pressure) is controlled by spinning this motor faster or slower against the sensors&rsquo; feedback.</td></tr>
+        <tr><td>Sound-abatement foam (Philips designs)</td><td>PE-PUR foam pieces placed in the air path to damp blower noise. The foam&rsquo;s degradation &mdash; particles and off-gassed chemicals entering the air path &mdash; is FDA recall Z-1974-2021, the largest entry in the record below.</td></tr>
+        <tr><td>Pressure &amp; flow sensors</td><td>The feedback loop&rsquo;s eyes: they measure delivered pressure and airflow breath-by-breath, drive auto-adjusting (APAP) algorithms, and generate the therapy data on the card.</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 2 &mdash; Humidifier &amp; hose</h3>
+    <p>Comfort engineering that decides whether people actually use the machine.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Heated humidifier chamber</td><td>A removable water tub over a heater plate. Owner-handled daily; scale and biofilm are its failure modes, and distilled water is the maker&rsquo;s instruction for a reason.</td></tr>
+        <tr><td>Heated tube</td><td>A hose with a heating wire and a temperature sensor at the mask end, fighting &lsquo;rainout&rsquo; (condensation). Tubes are consumables with published replacement intervals.</td></tr>
+        <tr><td>Mask (the real interface)</td><td>Nasal, pillow, or full-face; owned by the patient, replaced on schedule, and the source of most &lsquo;therapy isn&rsquo;t working&rsquo; reports (leaks). Not part of the machine &mdash; and most of the therapy.</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 3 &mdash; Electronics, modem &amp; the SD card</h3>
+    <p>The computer that watches you sleep, and the card that remembers it.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Main board + display</td><td>Controls the blower loop, runs the interface, logs everything. Not sold as a part.</td></tr>
+        <tr><td>Cellular modem / Bluetooth</td><td>Uploads compliance and therapy summaries to the maker&rsquo;s cloud (which your clinician and insurer read). Modem generations matter: see the 3G entry in Faults.</td></tr>
+        <tr><td>SD card slot</td><td>The machine writes detailed flow/pressure data to a standard SD card in documented, readable files. Volunteer-built open-source software (OSCAR &mdash; Open Source CPAP Analysis Reporter) reads these cards and shows you everything the summary hides. Your data, in your hands, in plain files: the model this site exists to point at.</td></tr>
+      </tbody>
+    </table>
+
+        <p><strong>What is missing, in the open:</strong> service manuals, blower assemblies, and boards are not sold to patients. When a CPAP dies out of warranty, the channel&rsquo;s answer is a new machine at medical-channel prices &mdash; while the fault is, as often as not, a blower bearing or a power supply. The exploded view above is documented from the public record precisely because the maker record is closed.</p>
+  </section>
+  <section>
+    <h2 id="we-reveal">What we reveal</h2>
+    <p>The FCC tells you what a device emits. We tell you what&rsquo;s inside and how it works.</p>
+    <ul>
+      <li><strong>The SD card is the whole argument</strong> &mdash; your machine already records everything; OSCAR (free, volunteer-built) reads it. No permission is needed to look at your own therapy data</li>
+      <li><strong>Pressure is motor speed</strong> &mdash; why the blower is both the therapy and the wear item, and why &lsquo;hours used&rsquo; is the machine&rsquo;s odometer</li>
+    </ul>
+    <p>Check our <a href="/autopsy/">teardowns</a> for full board-level analysis.</p>
+  </section>
+  <section>
+    <h2 id="variants">The main lines</h2>
+    <p>Two makers dominate the US record, plus the travel class.</p>
+    <table>
+      <tr><th>Line</th><th>Maker</th><th>Hallmarks</th><th>Notes</th></tr>
+      <tr><td>AirSense 10 / 11</td><td>ResMed</td><td>Integrated humidifier, cellular cloud (myAir), SD logging</td><td>The post-recall US market default. AirSense 10&rsquo;s modem generation matters (see Faults).</td></tr>
+      <tr><td>DreamStation / System One (recalled)</td><td>Philips Respironics</td><td>PE-PUR foam air path</td><td>The recall line. Philips is barred from US sales of new CPAP/BiPAP under the 2024 consent decree until the FDA confirms compliance.</td></tr>
+      <tr><td>Travel CPAPs (AirMini, Transcend class)</td><td>ResMed / Somnetics</td><td>No humidifier (or waterless exchange), small blower</td><td>Same prescription rules; the size is bought with noise and dryness.</td></tr>
+    </table>
+  </section>
+  <section>
+    <h2 id="chips">Key chips &amp; components</h2>
+    <ul>
+      <li><strong>BLDC blower + driver</strong> &mdash; the therapy actuator; driver electronics of the classes indexed in this site&rsquo;s <a href="/datasheets.html">Datasheet Index</a>. The exact blower assemblies are proprietary and unsold &mdash; collection target logged.</li>
+      <li><strong>Pressure/flow sensing</strong> &mdash; differential-pressure sensor class parts; the same sensor families documented in the site&rsquo;s index for industrial control (see the <a href="/level-3-systems/autopsy-001-s7-300.html">S7-300 autopsy&rsquo;s</a> sensor coverage).</li>
+      <li><strong>Cellular modem modules</strong> &mdash; bought-in modules (the FCC filings name them per model); their network generation is a lifecycle spec, like a phone&rsquo;s.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="faults">Faults &mdash; which part fails, and how you know</h2>
+    <p>Symptom first &mdash; and a hard rule for this category: <strong>therapy faults are clinician conversations</strong> (pressure, settings, mask fit as prescribed). Hardware faults are these:</p>
+    <ul>
+      <li><strong>Machine reports huge leaks / therapy feels weak</strong> &mdash; mask seal, then hose (a pinhole at the cuff is the classic), then the humidifier tub&rsquo;s gasket seating. The blower is last on the list and rarely the answer.</li>
+      <li><strong>Loud, rough, or whining blower; error codes for motor faults</strong> &mdash; the blower&rsquo;s bearings at end-of-life (hours are the odometer &mdash; machines log them). Not an owner part; a DME swap or a new machine is the channel answer, which is the gate this page documents.</li>
+      <li><strong>Cloud/app stopped updating, machine works fine</strong> &mdash; the modem&rsquo;s network died, not the machine: AirSense 10 units built on 3G/CDMA modems lost their networks in the 2022 US 3G shutdowns. Therapy and the SD card are unaffected &mdash; the card, not the cloud, is the record that matters.</li>
+      <li><strong>Water in the tube (rainout), gurgling</strong> &mdash; humidity physics: raise tube temperature, lower humidity, insulate the hose, or move the machine below head height per the maker&rsquo;s guide.</li>
+      <li><strong>Musty smell / visible debris in the air path on a Philips unit</strong> &mdash; stop and check the recall status of your exact model and serial against the FDA/Philips remediation record before another night. This is the foam fault, and it outranks every other entry here.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="safety">Safety &amp; the makers&rsquo; and FDA&rsquo;s warnings &mdash; read first</h2>
+    <p><strong>From the FDA&rsquo;s recall record, in the FDA&rsquo;s own framing:</strong> the recalled Philips foam &ldquo;may degrade into particles that enter the air pathway and may off-gas certain chemicals&rdquo; (FDA recall Z-1974-2021). The FDA&rsquo;s standing instruction to users of recalled devices has been consistent: <strong>do not stop or change your therapy on your own &mdash; talk to your health care provider</strong> about whether to continue, because untreated sleep apnea carries its own serious risks. That instruction outranks anything on this page, including this page&rsquo;s fault list.</p>
+    <p><strong>This page never replaces your clinician.</strong> Pressure settings are a prescription. Changing them yourself (the menus are findable; that is not the point) changes a medical treatment without the person who owns your diagnosis. The site&rsquo;s ethos is owner knowledge &mdash; and on a life-support-adjacent device, knowledge includes knowing which decisions are yours and which are shared with your doctor.</p>
+    <p>Clean as the makers instruct: soap-and-water for masks and tubs on their published schedules; ozone/UV &lsquo;CPAP cleaner&rsquo; gadgets are not maker-approved &mdash; the FDA has warned about ozone cleaners&rsquo; own risks, and Philips attributed part of the foam degradation problem to ozone exposure. The cleaning gadget is a documented cause in this device&rsquo;s record, not a maintenance upgrade.</p>
+    <p>A CPAP runs all night, every night, at your bedside, on mains power with a water reservoir over a heater plate. Keep the tub&rsquo;s max-fill line sacred and the machine off the carpet.</p>
+  </section>
+  <section>
+    <h2 id="record">The full record &mdash; dated, sourced, nothing smoothed over</h2>
+    <p>The CPAP record is dominated by one event &mdash; the largest sleep-medicine recall in history &mdash; told here from the FDA&rsquo;s own documents, plus the quieter story of the data on your nightstand.</p>
+    <table>
+      <thead><tr><th>Date</th><th>Event</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>2021-06-14</td><td>Philips Respironics initiates the recall of CPAP, BiPAP, and ventilator devices for PE-PUR foam degradation. FDA recall Z-1974-2021 (Class I, the most serious class): 15,357,775 devices worldwide, 10,307,186 in the US.</td><td>FDA recall database, Z-1974-2021</td></tr>
+        <tr><td>2021-11-09</td><td>FDA issues a Form 483 after inspecting Philips&rsquo; Murrysville, PA facility &mdash; the inspection record becomes part of the public file.</td><td>FDA inspection records</td></tr>
+        <tr><td>2022-03-10</td><td>Finding Philips&rsquo; patient notification inadequate, the FDA issues a notification order under &sect;518(a) of the FD&amp;C Act &mdash; a rare escalation that lets the agency order the company to notify users directly.</td><td>FDA notification order, March 10, 2022</td></tr>
+        <tr><td>2024-04-09</td><td>A federal court (W.D. Pa.) enters a consent decree: Philips must execute a Recall Remediation Plan and may not sell new CPAP/BiPAP devices in the US until the FDA confirms the decree&rsquo;s requirements are met. Personal-injury and economic-loss settlements of ~$1.1 billion and ~$479 million follow in the MDL (No. 3014).</td><td>Consent decree, W.D. Pa., Apr. 9, 2024; MDL 3014 settlement records</td></tr>
+        <tr><td>2026-11-04</td><td>Philips discloses a further ~$322 million settlement with the US Department of Justice resolving criminal and civil investigations tied to the recall &mdash; the file is still growing five years on.</td><td>MedTech Dive, Nov. 4, 2026 (company disclosure)</td></tr>
+      </tbody>
+    </table>
+    <h3>Did you know</h3>
+    <ul>
+      <li>Your CPAP&rsquo;s manufacturer compliance reports (the ones insurers read) are a <em>summary</em>. The full breath-by-breath record is on the SD card in the machine, in files that free software (OSCAR) reads on any computer. Most patients have never been told the card exists.</li>
+      <li>A CPAP&rsquo;s pressure is just a fan&rsquo;s speed: the &lsquo;prescription&rsquo; is a number the blower holds against two sensors. The medicine is real; the mechanism is a motor controller.</li>
+      <li>The recall&rsquo;s remediation count (Philips reported ~2.69 million US sleep-therapy patients remediated by Sept. 2026) took longer than the devices&rsquo; own service lives &mdash; many recalled machines were replaced by their owners, at their own expense, years before the program reached them.</li>
+    </ul>
+    <h3>Unverified &mdash; alleged, not proven</h3>
+    <p><strong>The harm numbers need their label.</strong> The FDA received more than 116,000 medical device reports (MDRs) related to the foam through September 30, 2023, including 561 reports mentioning death. MDRs are <em>unverified reports</em> submitted by anyone; the FDA itself states they do not establish that the device caused the outcome. The documented facts are the foam&rsquo;s degradation, the recall, the decree, and the settlements. The causal toll in individual cases is alleged and litigated, not established &mdash; and this page will not print the scary number without its label attached.</p>
+  </section>
+  <section>
+    <h2 id="documents">Documents &amp; deep dive</h2>
+    <p>Every document this page rests on, linked. Site library copies first, then the public record at the source.</p>
+    <ul>
+      <li><strong>FDA recall database &mdash; Z-1974-2021</strong> and the Philips recall topic page (FDA): the primary record, including the &sect;518(a) order and the consent-decree summary.</li>
+      <li><strong>Consent decree, U.S. v. Philips RS North America</strong> (W.D. Pa., Apr. 9, 2024) &mdash; court record; litigation continues as MDL 3014.</li>
+      <li><strong>OSCAR &mdash; Open Source CPAP Analysis Reporter</strong> (volunteer project): the software that reads the SD card&rsquo;s data; documentation public on the project&rsquo;s wiki.</li>
+      <li><strong>FCC filings</strong> for connected models &mdash; blower/air-path internal photos: <a href="https://fccid.io">fccid.io</a>.</li>
+      <li><a href="/devices/hearing-aids/">Hearing Aids</a> &mdash; the other FDA-regulated device on this bench.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="reading">Further Reading</h2>
+    <ul>
+      <li><a href="/devices/hearing-aids/">Hearing Aids &mdash; FDA categories and the receiver repair</a></li>
+      <li><a href="/level-3-systems/autopsy-002-intellivue.html">Autopsy #002: Philips IntelliVue &mdash; the same parent company, the hospital side</a></li>
+      <li><a href="/repair-rights.html">Repair Rights &mdash; the medical-device exemption fight</a></li>
+    </ul>
+  </section>
+
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

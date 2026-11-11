@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Motors &amp; Brakes on the Meter &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="Electrical testing of power-chair drive motors, solenoid brakes and gearboxes with a multimeter: brake coil, winding, short-to-case and brush tests, with the manufacturers' own values by model.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Motors &amp; Brakes on the Meter">
+<meta property="og:description" content="Meter tests for drive motors, brake coils and brushes, in plain language &mdash; with the manufacturers' own values, by model.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-motors.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Motors &amp; Brakes on the Meter</h1>
+    <p class="lede">When a chair will not drive, veers, chatters, or shows a motor or brake code, the dealer&rsquo;s next step is usually a quote for a whole motor. Your next step can be a multimeter. A <strong>multimeter</strong> is a handheld meter that can measure voltage, and &mdash; the setting used on this page &mdash; <strong>resistance</strong>: how hard it is for electricity to get through a part, measured in <strong>ohms</strong> (written &Omega;). Resistance tests need no power in the part at all. That is what makes them owner-safe, and it is also what the manufacturers&rsquo; own service manuals tell their technicians to do first.</p>
+    <p>This page teaches three tests from those manuals: the motor <strong>winding</strong> test, the brake <strong>coil</strong> test, and the short-to-case test &mdash; plus brush inspection, gearbox noises, and freewheel levers. Every number printed here is tied to the manual that printed it first, for the model named next to it. There is no universal &ldquo;good motor&rdquo; number, and this page will not invent one: where your manual gives no number, the test is a comparison &mdash; left side against right side, on your own chair.</p>
+    <p><em>Provenance: procedures and values are compiled from the manufacturers&rsquo; published service and owner manuals listed in <a href="#sources">Sources</a> &mdash; Invacare, Sunrise Medical, Pride Mobility, PG Drives Technology and Dynamic Controls &mdash; and checked against them. Documentation, not bench measurement: if your chair disagrees with this page, the chair wins &mdash; write down what yours actually does.</em></p>
+  </section>
+
+  <section id="safety">
+    <h2>Safety first &mdash; every test on this page starts powered down</h2>
+    <p><strong>Before any procedure here:</strong> put the chair on level ground, switch it OFF at the joystick, and disconnect the main battery harness or trip the main circuit breaker. Block the drive wheels so the chair cannot roll. Do not sit in the chair while testing. Take off rings, watches and other metal jewellery. A resistance test is done on a part with <strong>no power connected to it</strong>: never put a meter set to ohms on a live circuit &mdash; it can damage the meter and the reading is meaningless anyway. Unplug the motor connector from the power module (also called the controller &mdash; the electronics box in the base that sends battery power to the motors) and test on the motor side of that plug, so you are measuring the motor alone, not the electronics.</p>
+    <p>One warning governs the whole page, from Invacare&rsquo;s Pronto M71 service manual, word for word: <em>&ldquo;A shorted electro-mechanical brake will damage the brake output section in the controller. DO NOT connect a shorted electro-mechanical brake to a good controller module. A shorted brake MUST be replaced.&rdquo;</em> In plain words: if a test on this page shows a brake at or near 0 ohms, do not plug it back in &ldquo;to see.&rdquo; You have your answer, and plugging it in can kill the controller too.</p>
+  </section>
+
+  <section id="drive-unit">
+    <h2>The drive unit is one assembly: motor, gearbox, brake</h2>
+    <p>Almost every power chair has two <strong>drive units</strong>, one per drive wheel, left and right. Each unit is three parts bolted together and usually sold &mdash; and quoted &mdash; as one assembly:</p>
+    <ul>
+      <li><strong>The motor.</strong> On most chairs a brushed direct-current (DC) motor. Inside it: a <strong>winding</strong> (coils of copper wire; the winding on the spinning part is the <strong>armature</strong>), a <strong>commutator</strong> (a ring of copper segments on the spinning shaft that the electricity passes through as it turns), and <strong>brushes</strong> (small blocks of carbon that press against the commutator and carry the current into the spinning part; because they rub, they slowly wear away &mdash; they are a wear part, like brake pads).</li>
+      <li><strong>The gearbox.</strong> A set of gears in a sealed, grease- or oil-filled case that trades the motor&rsquo;s speed for turning force (torque) at the wheel. The wheel bolts to the gearbox output shaft, not to the motor shaft.</li>
+      <li><strong>The brake.</strong> An electric parking brake on the back of the motor, covered in <a href="#brake-coil">its own section below</a>. Permobil builds it the same way: the <a href="/library/collected-public-docs/pmd/permobil_c300_service.pdf">Permobil C300 service manual</a> lists a magnetic wheel lock on each drive motor, wired separately from the motor itself.</li>
+    </ul>
+    <p>Why this matters for testing: a fault in any one of the three is quoted as a new &ldquo;motor.&rdquo; The meter separates them. The winding test accuses or clears the motor. The coil test accuses or clears the brake. The gearbox makes no electrical reading at all &mdash; it is judged by sound, leaks and play, in <a href="#gearbox">the gearbox section</a>. Test first, and the quote has to name the part that actually failed.</p>
+    <p><strong>The plug is the test point.</strong> On the Invacare and Sunrise designs the manuals describe, motor and brake travel together in one <strong>4-pin motor connector</strong>: two large pins for the motor, two small pins for the brake. Invacare&rsquo;s Pronto M71 manual says to locate the two motor contacts in the red and black housings, and the two brake contacts side by side in the black housings. Sunrise&rsquo;s Quickie Pulse 6 service manual says the same thing by size: small pins for the brake, large pins for the motor. Other chairs split them into two separate plugs &mdash; a heavy 2-wire plug for the motor and a small 2-wire plug for the brake. Either way: heavy pair = motor, light pair = brake. Identify the pair by the manual for your chair, not by guessing.</p>
+  </section>
+
+  <section id="left-right">
+    <h2>The owner&rsquo;s reference standard: left against right</h2>
+    <p>Your chair carries its own reference part: the other drive unit. It is the same make, same age, same mileage, and it has lived the same life. Before you judge any reading, take the same reading on both sides and write both down.</p>
+    <ol>
+      <li>Power down and disconnect the battery, as in <a href="#safety">Safety first</a>. Unplug one motor connector at the power module.</li>
+      <li>Touch the two meter probes together first and note what the meter shows: that small number is your leads&rsquo; own resistance. Subtract it from motor readings, or use the meter&rsquo;s REL (relative) button if it has one, so you are not blaming the motor for your test leads.</li>
+      <li>Take the motor reading and the brake reading on this side, exactly as in <a href="#motor-test">Procedure 2</a> and <a href="#brake-coil">Procedure 1</a>. Write them down with the side: &ldquo;left motor, left brake.&rdquo;</li>
+      <li>Reconnect that side, unplug the other side, and repeat, step for step, in the same order, with the chair in the same state.</li>
+      <li>Compare. Two sides that read close to each other, and inside the range your model&rsquo;s manual prints, are two healthy units &mdash; look elsewhere for the fault. One side open (the meter shows <strong>OL</strong> &mdash; &ldquo;over limit,&rdquo; no connection at all), shorted (at or near 0), or far from its twin is the faulty unit, and you can name it: side, part, and reading.</li>
+    </ol>
+    <p>Dynamic Controls makes the same point from the controller&rsquo;s side in the <a href="/library/collected-public-docs/pmd/dynamic-controls_shark-power-module_technical.pdf">SHARK power module technical manual</a>: <em>&ldquo;It is important that both motors have approximately the same motor resistance and motor cable length.&rdquo;</em> The chair itself expects the two sides to match. So should your diagnosis.</p>
+  </section>
+
+  <section id="brake-coil">
+    <h2>Procedure 1 &mdash; The brake coil test (&ldquo;ohm out each brake coil&rdquo;)</h2>
+    <p><strong>Fixes the question behind:</strong> brake fault codes, including Invacare MK6i E09/E10 in <a href="/pmd-fault-codes-2.html">Fault Codes, Translated: The Other Systems</a>, where Invacare&rsquo;s own service manual instruction is quoted word for word: <em>&ldquo;Check all connections. Ohm out each brake coil.&rdquo;</em> This procedure is that sentence, taught step by step.<br><strong>You need:</strong> A digital multimeter.</p>
+    <p><strong>What the brake is.</strong> The chair&rsquo;s parking brake is <strong>spring-applied, power-released</strong>. Inside the brake housing, a spring presses a friction plate against the motor shaft whenever there is no power: brake ON. The <strong>brake coil</strong> is a coil of wire that works as an <strong>electromagnet</strong> (a magnet that only pulls while electricity flows through the coil &mdash; that kind of coil, used to move a mechanical part, is called a <strong>solenoid</strong>, and this brake is often called a solenoid brake). When you push the joystick, the controller sends power to the coil, the coil pulls the plate off the shaft against the spring, and the wheel is free to turn. When you let go, power stops and the spring clamps the brake again.</p>
+    <p>That one design explains the stranded chair: <strong>a dead chair will not roll.</strong> No power means the springs hold both brakes on, on purpose &mdash; it is the fail-safe that stops a chair rolling away on a slope when its electronics die. It also means a brake coil that has failed open (a break in its wire) leaves that wheel clamped forever, and the controller, which checks the coil electrically, reports a brake fault and refuses to drive at all.</p>
+    <ol>
+      <li><strong>Power down first.</strong> Chair OFF, battery disconnected or breaker tripped, wheels blocked, as in <a href="#safety">Safety first</a>. Find the motor connector for one side at the power module and unplug it.</li>
+      <li>Find the two brake contacts in that plug: the small pins, or the side-by-side pair in the black housings on Invacare&rsquo;s 4-pin plug. Set the multimeter to ohms (the &Omega; setting; if the meter has ranges, choose the 200-ohm range).</li>
+      <li>Put one probe on each brake contact, on clean metal. Polarity (which probe goes where) does not matter for resistance. Hold them still until the reading settles, and write the number down with the side.</li>
+      <li>Read the result the way the manuals do. <strong>A steady reading inside your model&rsquo;s printed range</strong> (table below) means the coil is whole. <strong>OL or a very high reading</strong> means an open connection: the coil wire is broken, or a pin is not making contact &mdash; check the plug pins first, then condemn the coil. <strong>0 ohms, or near it,</strong> means a <strong>short circuit</strong> (the current has found a path with almost no resistance, usually damaged insulation inside the coil): the brake must be replaced, and per the warning in <a href="#safety">Safety first</a> it must not be reconnected to the controller.</li>
+      <li>Repeat on the other side and compare, as in <a href="#left-right">left against right</a>. Then reconnect everything firmly.</li>
+    </ol>
+    <p><strong>There is no universal brake-coil number.</strong> The manuals disagree with each other by a factor of six &mdash; because brake coils genuinely differ by motor. Use the row for your chair, or compare sides:</p>
+    <table>
+      <thead><tr><th>Manual</th><th>Brake coil, normal</th><th>Motor, normal (same manual)</th></tr></thead>
+      <tbody>
+        <tr><td>Sunrise Medical Quickie Pulse 6 service manual</td><td>approximately 12 to 15 ohms (small pins)</td><td>approximately 0.5 to 0.9 ohms (large pins)</td></tr>
+        <tr><td>Invacare Pronto M71 service manual (part no. 1118377)</td><td>40&ndash;80 ohms, &ldquo;depending on the motor&rdquo;</td><td>0.5 to 5 ohms; OL or over 15 ohms indicates a problem</td></tr>
+        <tr><td>Invacare Pronto M71, E09/E10 troubleshooting table (same manual)</td><td>45&ndash;50 ohms, for that fault</td><td>0&ndash;5 ohms, in the noise tables</td></tr>
+        <tr><td>Invacare Pronto M61 service manual</td><td>45&ndash;100 ohms, &ldquo;depending on the motor&rdquo;</td><td>0.5 to 5 ohms; over 15 ohms indicates a problem</td></tr>
+      </tbody>
+    </table>
+    <p>Read that table as the lesson, not just the data: a brake that reads 14 ohms is normal on a Pulse 6 and would sit far below the Invacare rows &mdash; the same coil judged by the wrong manual would be condemned. Anyone who gives you one number for &ldquo;a wheelchair brake&rdquo; without naming the model is guessing. The Invacare <a href="/library/collected-public-docs/pmd/invacare_linx_service.pdf">LiNX service manual</a> shows where the industry is heading instead: on LiNX chairs the electronics learn each motor&rsquo;s resistance automatically, per side, rather than relying on one printed value.</p>
+    <h3>The click test &mdash; no meter needed</h3>
+    <p>Resistance proves the coil&rsquo;s wire is whole. The click test proves the brake actually moves. It is Pride&rsquo;s own owner-manual check, in the <a href="/library/collected-public-docs/pmd/pride_jazzy-600-es_owner.pdf">Jazzy 600 ES owner&rsquo;s manual</a>:</p>
+    <ol>
+      <li>Reconnect the batteries, sit in the chair on level ground, turn the controller on and turn the speed down.</li>
+      <li>Wait one second and check the battery gauge stays lit.</li>
+      <li>Push the joystick slowly forward until you hear the electric brakes click, then release the joystick at once. You should hear a click from <strong>each</strong> drive unit, within a few seconds of moving the stick.</li>
+      <li>Repeat the test three times in all, pushing the joystick backwards, then left, then right.</li>
+    </ol>
+    <p>A coil that reads correctly but never clicks has a mechanical problem &mdash; a stuck plate or a broken linkage inside the brake &mdash; not an electrical one. A brake that clicks on one side only has just told you which side to meter first. And before you ride after any brake work, prove the brakes hold: chair on, then off, on level ground, unoccupied, and try to push it &mdash; it must not roll (the full prove-out is <a href="/pmd-fixes.html">Cheap Fixes, Procedure 1</a>).</p>
+  </section>
+
+  <section id="motor-test">
+    <h2>Procedure 2 &mdash; The motor winding test: continuity, and shorts to case</h2>
+    <p><strong>Fixes the question behind:</strong> motor fault codes, a chair that veers, chatters, runs on one side only, or runs and then will not restart.<br><strong>You need:</strong> A digital multimeter.</p>
+    <p><strong>Continuity</strong> means an unbroken electrical path: current offered at one end can reach the other. The winding test offers the meter&rsquo;s tiny test current at one motor pin and looks for it at the other, through brushes, commutator and winding in one loop. Three results are possible, and each means something different:</p>
+    <ol>
+      <li><strong>Power down first.</strong> Chair OFF, battery disconnected or breaker tripped, wheels blocked. Unplug one motor connector at the power module.</li>
+      <li>Find the two motor contacts: the large pins, or the pair in the red and black housings on Invacare&rsquo;s plug. Set the meter to ohms, lowest range. Note your leads&rsquo; own reading from touching the probes together, as in <a href="#left-right">left against right</a>.</li>
+      <li>One probe on each motor contact. Write the reading down. Now turn that side&rsquo;s drive wheel slowly by hand through a full turn and watch the meter: the reading moves a little as the commutator turns under the brushes &mdash; that is normal &mdash; but it should never jump to OL or drop to a dead short. A spot where it drops out is a damaged commutator segment or a brush losing contact at that angle, and the angle is your evidence.</li>
+      <li><strong>Judge it against your model, not a slogan.</strong> Invacare&rsquo;s Pronto M71 manual: a normal reading is between 0.5 and 5 ohms, and &ldquo;a reading of O.L. (open line) or in excess of 15 ohms indicates a problem&rdquo; &mdash; high readings, it says, &ldquo;are generally caused by bad connections and/or damaged brushes.&rdquo; Sunrise&rsquo;s Pulse 6 manual is far tighter for its motor: approximately 0.5 to 0.9 ohms through the brush assembly and motor, and it warns that new brushes change the reading until they are run in (see <a href="#brushes">brushes</a>). An <strong>open</strong> reading (OL) means the loop is broken somewhere: a pin, a brush worn away, or a broken winding wire. A <strong>near-zero</strong> reading, at or below what your own test leads read, means a short inside the motor.</li>
+      <li><strong>The short-to-case test.</strong> Leave the meter on ohms (or its continuity beeper setting, if it has one). Put one probe on a motor contact and the other on clean bare metal of the motor case &mdash; an unpainted bolt head or the gearbox case where it bolts to the motor. The winding is insulated from the case, so the meter should show <strong>OL &mdash; no connection at all</strong>. Repeat on the second motor contact. Any continuity reading from either contact to the case means the winding&rsquo;s insulation has failed and the winding is <strong>shorted to case</strong>: that motor is done, and it can take the controller with it if it is driven. Do the same two checks on the brake&rsquo;s small pins while you are there &mdash; the coil should likewise be isolated from the case.</li>
+      <li>Repeat the whole procedure on the other side, compare the pair of readings, then reconnect.</li>
+    </ol>
+    <p><strong>Why a cheap meter struggles here, honestly stated.</strong> A motor&rsquo;s true armature resistance can be a fraction of one ohm: PG Drives Technology&rsquo;s <a href="/library/collected-public-docs/pmd/pg-drives_vsi_technical.pdf">VSI technical manual</a> works an example with an armature resistance of 200 milli-ohms (0.2 ohms &mdash; a <strong>milli-ohm</strong> is a thousandth of an ohm) plus a typical 40 milli-ohms for cables and connectors, and sets motor compensation to 70% of the total. Numbers that small are swamped by test-lead resistance on a basic meter, which is why the manuals&rsquo; plug readings (0.5 ohms and up, through brushes and contacts) are the owner&rsquo;s working test, and why the left-versus-right comparison on the same meter, same leads, same day, is worth more than the third decimal place. You are hunting opens, shorts, drop-outs and one side that disagrees with the other &mdash; all of which a basic meter shows clearly.</p>
+  </section>
+
+  <section id="brushes">
+    <h2>Brushes: the wear part inside the motor</h2>
+    <p>Worn brushes are the single most common cause of the &ldquo;high reading&rdquo; motor fault, on the manufacturers&rsquo; own evidence: Invacare blames high motor readings on &ldquo;bad connections and/or damaged brushes,&rdquo; blames a motor that &ldquo;chatters or runs erratically, or only one motor turns&rdquo; on a damaged connector or worn brushes, and blames a motor that stutters on &ldquo;poor connection or worn brushes.&rdquo; A brush is a consumable. Replacing a pair of carbon blocks is a parts-and-labour job; replacing a &ldquo;motor assembly&rdquo; is a four-figure quote. Knowing which one your chair needs is the whole game.</p>
+    <h3>Which designs let you change them</h3>
+    <ul>
+      <li><strong>External brush caps.</strong> Two caps on the motor housing, unscrewed with a screwdriver, with a brush under each. Pride&rsquo;s owner manuals teach this inspection to owners directly: unscrew the motor brush caps, remove the brushes, inspect for wear, replace if necessary. Invacare&rsquo;s M71 manual covers the same design and warns: if the caps will not come off, they are overtightened or the motor has been very hot &mdash; let it cool, and if they still will not move, the motor goes in for service rather than being forced.</li>
+      <li><strong>Internal brushes.</strong> Invacare also documents motors where the brushes live under the motor end cap: end-cap screws out, brush located in its holder, shunt wire (the brush&rsquo;s own flexible lead) unbolted. More care, same principle &mdash; and the manual&rsquo;s caution stands: note exactly which way each brush comes out, because it must go back in exactly the same way to sit correctly on the commutator.</li>
+      <li><strong>Sealed in.</strong> Many newer and smaller drive units have no brush caps, no end-cap procedure, and no brush part number in the parts book. On those, the brushes are sealed inside for the life of the unit: when the winding test and the brush symptoms say the brushes are gone, the serviceable part is the motor itself. Say so plainly rather than hunting for a cap that does not exist &mdash; check the parts catalog for your chair (start at <a href="/pmd-parts.html">Parts, Not Assemblies</a> and the <a href="/library-hub.html">library hub</a>): if it lists brushes, they are serviceable; if it lists only a motor, they are not.</li>
+      <li><strong>Brushless motors.</strong> A smaller number of chairs use brushless motors, which have no brushes or commutator at all &mdash; the controller switches the windings electronically. There is nothing to inspect or wear out in the brush sense; a winding test on one is a different procedure, and this page&rsquo;s brush sections do not apply.</li>
+    </ul>
+    <h3>Procedure 3 &mdash; Brush inspection (cap-type motors)</h3>
+    <ol>
+      <li><strong>Power down first.</strong> Chair OFF, battery disconnected or breaker tripped, wheels blocked. Work on one brush at a time, and note each brush&rsquo;s orientation as it comes out &mdash; photograph it. It goes back exactly as it came out.</li>
+      <li>Unscrew the brush cap gently. Sunrise&rsquo;s Pulse 6 manual cautions against damaging the cap with excessive force; Invacare&rsquo;s warning about stuck caps is above. Lift the brush out.</li>
+      <li><strong>Judge the brush.</strong> Good, from both manuals: the end that rides the commutator is smooth, clean and shiny, the carbon is not chipped, and its lead and spring have not overheated or discoloured. The Sunrise Medical owner manual for the <a href="/library/collected-public-docs/pmd/sunrise_quickie-s636-s646_owner.pdf">Quickie S-636/S-646</a> puts the owner check in one line: the brushes should be checked every four months for wear, they &ldquo;should be clean and shiny,&rdquo; and worn or blackened brushes are replaced. Pulse 6 gives the one printed wear limit on this page: replace any brush assembly <strong>less than &frac14; inch long</strong>.</li>
+      <li><strong>Judge the commutator</strong> while the brush is out, through the cap opening if you can see it: Pulse 6 states it should be clean, not overheated, and show no signs of excessive arcing (electrical sparking across the surface), and that its normal colour is &ldquo;bright copper to dull brown copper.&rdquo; Blackened, grooved or burnt segments mean the motor has been failing electrically, not just wearing.</li>
+      <li>Refit the brush in its original orientation, refit the cap, and repeat for every brush on that motor, then the other motor. A high winding reading from <a href="#motor-test">Procedure 2</a> that was caused by brushes should fall once good brushes are seated.</li>
+      <li><strong>New brushes must be run in.</strong> A fresh brush touches the commutator on only part of its face until it beds in, so it carries only part of the load and reads differently. Sunrise&rsquo;s Pulse 6 instruction: replace the brush assemblies on both motors, and run the new assemblies in by operating the motor for 20 to 30 minutes, alternating between forward and reverse, with the gearbox released. Invacare&rsquo;s M71 burn-in is longer and is not to be left running alone &mdash; its warning, word for word: <em>&ldquo;DO NOT leave the wheelchair unattended while performing this procedure - otherwise damage to wheelchair and/or property may occur.&rdquo;</em> Use the run-in your own manual prints, with the chair on blocks, wheels clear of the ground, and someone present.</li>
+    </ol>
+  </section>
+
+  <section id="gearbox">
+    <h2>The gearbox: judged by sound, leaks and play</h2>
+    <p>The gearbox has no wires, so the meter says nothing about it. The manuals judge it three other ways. <strong>Backlash</strong> is mechanical slack: the small amount a shaft or wheel can move before the gear teeth on the other side of the play make contact and start driving. A little is built in; growing play is wear you can feel by rocking a raised drive wheel gently forward and back and feeling where the slack ends.</p>
+    <table>
+      <thead><tr><th>What you find</th><th>What the manuals name as the cause</th></tr></thead>
+      <tbody>
+        <tr><td>Motor makes a clicking noise</td><td>Invacare M71: bad coupler between motor and gearbox, or bad bearings; a raised commutator plate inside the motor; or a bad gearbox. Meter the motor (&ldquo;normal reading is 0&ndash;5 Ohms&rdquo;) before blaming the gears.</td></tr>
+        <tr><td>Grinding noise, or the motor locks up</td><td>Invacare M71: bad coupler between motor and gearbox, bad bearings, or bad gears.</td></tr>
+        <tr><td>Excessive clicking coming from the motor/gearbox</td><td>Invacare M71: a bad bearing in the motor or gearbox &mdash; or loose wheel hardware. Tighten the wheel first; it is the free fix.</td></tr>
+        <tr><td>Gearbox is leaking fluid</td><td>Invacare M71: a bad seal around the drive shaft, or loose hardware. Its fix order matters: retighten loose hardware; if the seal is bad, the motor or gearbox is replaced &mdash; and remove the motor brushes and inspect them for grease contamination, replacing the unit if contamination is found. Sunrise Pulse 6 starts the same inspection at the same place: check the output shafts for signs of grease leakage.</td></tr>
+        <tr><td>Gearbox shaft movement, or a bent shaft</td><td>Invacare M71 names the cause as rough driving, and the fix as replacing the motor or gearbox. Test for it by hand on a raised, blocked chair: push and pull the drive wheel in and out and side to side. Any clunking movement at the shaft is this finding.</td></tr>
+        <tr><td>Chattering, erratic running, one motor only</td><td>Not a gearbox sound at all, on Invacare&rsquo;s table: damaged connector or worn brushes first, motor or gearbox only after the meter says so. See <a href="#brushes">brushes</a>.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Honest limit:</strong> two sounds owners ask about &mdash; a plain <em>whine</em> that rises with speed, and a single <em>clunk</em> as the chair takes up drive &mdash; are not assigned a cause in the service manuals consulted for this page, so this page does not assign them one. Gear whine and take-up clunk are consistent with normal gear mesh and backlash on many chairs and with wear on others; the manual-backed move is the comparison again &mdash; same sound test, both sides, wheels raised, and a record of whether it is new and getting worse. A sound that is new, one-sided, and growing is a finding. A sound both sides have always made is a characteristic. Do not let anyone sell you a gearbox on a whine alone, and do not ignore a grind: grinding <em>is</em> in the table, with named causes.</p>
+    <p>One more gearbox-adjacent check, from Sunrise&rsquo;s Pulse 6 inspection: operate each gearbox release lever by hand and confirm it moves easily and fully engages and disengages. A lever that will not travel fully is the bridge to the next section.</p>
+  </section>
+
+  <section id="freewheel">
+    <h2>Freewheel levers: what they actually disconnect</h2>
+    <p>The <strong>freewheel lever</strong> (also called the motor release, drive release or engaging lever/knob, depending on the maker) is a lever on each drive unit that mechanically disconnects the wheel from the gearbox, so the chair can be pushed by hand. Pride&rsquo;s <a href="/library/collected-public-docs/pmd/pride_jazzy-600-es_owner.pdf">Jazzy 600 ES owner&rsquo;s manual</a> describes levers &ldquo;mounted on each motor&rdquo; that &ldquo;allow you to disengage the drive motors and maneuver the chair manually&rdquo; &mdash; push both down for freewheel, pull both up for drive. Invacare&rsquo;s <a href="/library/collected-public-docs/pmd/invacare_tdx-sp2_owner.pdf">TDX SP2 owner&rsquo;s manual</a> describes the same idea as a coupling lever: in the push position the motor is disengaged and the motor brakes are not operational, and the remote must be switched off.</p>
+    <p>Understand the two things that lever does <strong>not</strong> do. It does not switch the brake coil off electrically &mdash; it is a mechanical release, which is why a lever left halfway, or packed with grit, can leave the brake&rsquo;s position switch reporting &ldquo;released&rdquo; and the controller refusing to drive: that reset is <a href="/pmd-fixes.html">Cheap Fixes, Procedure 1</a>. And it does not make the chair safe to sit in or park: with the drive disengaged, the braking system is disengaged with it.</p>
+    <p>Pride&rsquo;s warning, carried word for word: <em>&ldquo;Do not use the power chair while the drive motors are disengaged! Do not disengage the drive motors when the power chair is on an incline, as the unit could roll on its own! Only engage the freewheel mode when on a level surface.&rdquo;</em></p>
+    <p>Practical rules that follow from the manuals:</p>
+    <ul>
+      <li>Freewheel is for pushing an unoccupied chair a short distance, on the level, with the power off. Re-engage both levers to DRIVE, firmly, the moment the push is done.</li>
+      <li>Work the levers by hand, never with your foot, and never force them: Pride warns that excessive force, or standing on the levers, &ldquo;may result in damage to the freewheel levers, motors, and brakes,&rdquo; and that the lever handles are not tie-down points.</li>
+      <li>If a chair &ldquo;will not drive&rdquo; but pushes freely by hand with the power on, suspect the levers before anything electrical: Invacare&rsquo;s own table for a chair that will not drive with E09/E10 showing starts with the motor locks &mdash; engage them to drive.</li>
+      <li>Permobil does it as one mechanism rather than per-motor levers: the <a href="/library/collected-public-docs/pmd/permobil_c300_service.pdf">C300 service manual</a> documents a single wheel-lock release rail linking the magnetic wheel lock on each motor, with a sensor that reports its position to the electronics &mdash; same principle, same fault when it stops halfway.</li>
+    </ul>
+  </section>
+
+  <section id="verdicts">
+    <h2>Reading your results: what to replace, what to leave alone</h2>
+    <ul>
+      <li><strong>Brake open (OL) on one side, normal on the other:</strong> coil or its plug on the open side. Check the pins, retest at the plug, then name that brake.</li>
+      <li><strong>Brake at 0 ohms on either side:</strong> shorted brake. Replace it. Do not reconnect it to the controller to &ldquo;double-check&rdquo; &mdash; <a href="#safety">the warning</a> is the manufacturer&rsquo;s, not this page&rsquo;s caution.</li>
+      <li><strong>Motor reading high, brushes worn or blackened:</strong> brushes first &mdash; the cheapest part in the whole drive unit, and the cause the manuals name first. Retest after replacement and run-in before accepting a motor quote.</li>
+      <li><strong>Motor open, or shorted to case, with good brushes and clean pins:</strong> the winding itself has failed. That motor is done; on a sealed unit, that is the unit. Your readings &mdash; side, values, both sides compared &mdash; are the evidence to take into the parts conversation at <a href="/pmd-parts.html">Parts, Not Assemblies</a>.</li>
+      <li><strong>Both motors and both brakes read normal and match:</strong> the drive units are cleared. The fault is upstream &mdash; connections, the power module, or the control system: go back to the code in <a href="/pmd-fault-codes.html">Fault Codes, Translated</a> and <a href="/pmd-reading.html">Reading the Chair</a>, and keep your meter sheet. A cleared motor is a result, not a dead end.</li>
+      <li><strong>Electrical tests all pass, but it grinds or leaks:</strong> gearbox, on the table in <a href="#gearbox">the gearbox section</a>. Gearboxes on most chairs are not opened by owners &mdash; they are sealed cases &mdash; but a named cause (seal, bearings, gears) is a different quote from a guessed one, and some chairs do sell the gearbox separately from the motor: check yours in <a href="/pmd-exploded.html">the exploded views</a> and <a href="/pmd-repairs.html">repairs</a> before agreeing to a combined unit.</li>
+    </ul>
+    <p>Whatever you find, write it down in the form the trade itself uses: date, side, part, reading, and the manual range you compared it to. That one line is what turns &ldquo;you need a new motor&rdquo; into a conversation you can win. The wider fight over why this information was ever locked up is at <a href="/repair-rights.html">Repair Rights</a>; the programming side of the same lock is at <a href="/pmd-programmers.html">The Keys</a>; and if the chair stopped today and you have not triaged it yet, start at <a href="/pmd-start.html">Start Here: Your Chair Stopped</a>.</p>
+  </section>
+
+  <section id="sources">
+    <h2>Sources</h2>
+    <p>Library copies on this site (preserved copies, linked so you can read the exact document this page used):</p>
+    <ul>
+      <li><a href="/library/collected-public-docs/pmd/permobil_c300_service.pdf">Permobil C300 Service Manual</a> &mdash; drive motor and gear as one unit; magnetic wheel lock on each drive motor; wheel-lock release rail and sensor.</li>
+      <li><a href="/library/collected-public-docs/pmd/pride_jazzy-600-es_owner.pdf">Pride Jazzy 600 ES Owner&rsquo;s Manual</a> &mdash; brake click test; manual freewheel levers and their warnings, quoted verbatim; motor brush inspection.</li>
+      <li><a href="/library/collected-public-docs/pmd/sunrise_quickie-s636-s646_owner.pdf">Sunrise Medical Quickie S-636/S-646 Owner&rsquo;s Manual</a> &mdash; motor brushes: check every four months; clean and shiny; replace worn or blackened.</li>
+      <li><a href="/library/collected-public-docs/pmd/invacare_tdx-sp2_owner.pdf">Invacare TDX SP2 Owner&rsquo;s Manual</a> &mdash; freewheel/push position: motor disengaged, motor brakes not operational; automatic brakes when the remote is off.</li>
+      <li><a href="/library/collected-public-docs/pmd/invacare_linx_service.pdf">Invacare LiNX Service Manual</a> &mdash; motor resistance learned per motor, per side, by Adaptive Load Compensation.</li>
+      <li><a href="/library/collected-public-docs/pmd/dynamic-controls_shark-power-module_technical.pdf">Dynamic Controls SHARK Power Module Technical Manual</a> &mdash; both motors should have approximately the same motor resistance; park brake connections in the motor connector.</li>
+      <li><a href="/library/collected-public-docs/pmd/pg-drives_vsi_technical.pdf">PG Drives Technology VSI Technical Manual</a> &mdash; motor compensation worked example: 200 milli-ohm armature, 40 milli-ohm cables and connectors.</li>
+      <li><a href="/library/collected-public-docs/pmd/sunrise_quickie-pulse-6_owner.pdf">Sunrise Medical Quickie Pulse 6 Owner&rsquo;s Manual</a> &mdash; the owner&rsquo;s manual for the chair whose service manual (below) supplied the Pulse 6 test values.</li>
+    </ul>
+    <p>Manufacturer service manuals consulted in their publicly posted copies (not yet in the site library &mdash; listed as collection targets in this page&rsquo;s build record):</p>
+    <ul>
+      <li><a href="https://cdn2.guidespdf.com/view/476/476863-pronto_m71.pdf">Invacare Pronto M71 Service Manual, part no. 1118377</a> &mdash; motor testing (0.5&ndash;5 ohms; OL or over 15 ohms a problem; high readings from bad connections and/or damaged brushes); electro-mechanical parking brake testing (40&ndash;80 ohms; shorted-brake warning, quoted verbatim); E09/E10 table (brake coil 45&ndash;50 ohms); Motor/Gearbox/Brake troubleshooting table (clicking, grinding, leaking, chattering causes); external and internal brush inspection/replacement and burn-in.</li>
+      <li><a href="https://www.manualslib.com/manual/1032813/Invacare-Pronto-M61.html?page=6">Invacare Pronto M61 Service Manual, Testing (ManualsLib copy)</a> &mdash; motor 0.5 to 5 ohms, over 15 ohms a problem; brake 45&ndash;100 ohms depending on the motor.</li>
+      <li><a href="https://doczz.net/doc/4580377/quickie%C2%AE-pulse%E2%84%A2-service-manual">Sunrise Medical Quickie Pulse 6 Service Manual, 111425 Rev B (publicly posted copy)</a> &mdash; Motor/Gearbox Inspection, section 6: park brake approximately 12 to 15 ohms (small pins); motor approximately 0.5 to 0.9 ohms (large pins); brush replacement under &frac14; inch; commutator colour and condition; grease leakage at output shafts; release lever travel; brush run-in 20 to 30 minutes alternating forward and reverse.</li>
+    </ul>
+    <p>Settings and control context for the systems these motors hang off: <a href="/pmd-settings.html">The Settings</a> and <a href="/pmd-control.html">owner control</a>.</p>
+  </section>
+
+  <section>
+    <p><a href="/pmd.html">&larr; Back to PMD</a> &middot; <a href="/pmd-fault-codes-2.html">Fault codes: the other systems &rarr;</a> &middot; <a href="/pmd-fixes.html">The cheap fixes &rarr;</a></p>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

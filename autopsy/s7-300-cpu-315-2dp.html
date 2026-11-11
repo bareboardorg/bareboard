@@ -84,6 +84,20 @@
               </div>
             </div>
           </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
         <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
           <div class="col-panel">
             <div class="dropdown-inner">
@@ -168,7 +182,7 @@ dated and marked. That is the standard.</p>
 <tr><td>Order number</td><td>6ES7315-2AG10-0AB0</td></tr>
 <tr><td>Class</td><td>Mid-range CPU; machines built early 2000s–2010s (packaging lines, machine tools, material handling) [2]</td></tr>
 <tr><td>Product status</td><td>Discontinued by Siemens; successor 6ES7315-2AH14-0AB0 (256 KB work memory) [2][3]</td></tr>
-<tr><td>Physical</td><td>40 × 125 × 130 mm, ~0.5 kg [3]</td></tr>
+<tr><td>Physical</td><td>40 × 125 × 130 mm, ~290 g [3]</td></tr>
 </table>
 
 <h2>Acquisition</h2>
@@ -219,7 +233,7 @@ public part-number system [5]; third-party chips go to the datasheet hunt.</li>
 capacitors</strong>; photograph the board; check electrolytics for bulging [9].</li>
 <li>Inspect the MMC slot and any card present (read-only; image, never write).</li>
 <li>Record the MPI/DP connector pinout against the public manual [6].</li>
-<li>Check the battery compartment; record the cell type from its label (not yet verified).</li>
+<li>Confirm there is no battery to check: this CPU is battery-less by design &mdash; the program and retentive data live on the Micro Memory Card, so there is no backup cell to record.</li>
 <li>Bench power-on: current-limited 24 V DC, no fieldbus attached; record LED behavior
 (SF/BF/DC5V) against the public diagnostics documentation [9].</li>
 </ol>
@@ -233,8 +247,7 @@ system decodes module markings [5], and the rack's PS/SM/IM/CP modules each carr
 <ul>
 <li><strong>Mains hazard:</strong> PS307/PS305 are mains-connected (120/230 V AC, Class I,
 grounded). Discharge capacitors before opening; treat the primary side as live until proven otherwise [7][8].</li>
-<li><strong>Battery:</strong> a backup cell compartment is expected on the CPU module — type
-to be verified from the label on the bench (dated 2026-10-08).</li>
+<li><strong>Battery:</strong> none &mdash; the CPU 315-2 DP is battery-less by design; do not go looking for a backup cell compartment on the CPU module.</li>
 <li><strong>Fieldbus:</strong> never connect a bench PLC to a live PROFIBUS DP network or
 in-service I/O. Retired unit, bench only.</li>
 </ul>
@@ -245,7 +258,7 @@ in-service I/O. Retired unit, bench only.</li>
 <li>All bench findings: none claimed; bench work pending — 2026-10-08.</li>
 <li>Work memory figure (128 KB): confirmed by three independent listings [1][2][3]; to be
 confirmed against the unit label and the official Siemens datasheet on the bench — 2026-10-08.</li>
-<li>Backup battery type: not yet verified — 2026-10-08.</li>
+<li>Backup battery: none &mdash; this CPU is battery-less by design (MMC-based); the earlier "type not yet verified" note was wrong, corrected against the Siemens data for 6ES7315-2AG10-0AB0.</li>
 </ul>
 
 <h2>Disclosure</h2>

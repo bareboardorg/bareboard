@@ -76,7 +76,19 @@
               </ul>
             </div>
           </div></li>
-        <li class="has-children">
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
           <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
           <div class="col-panel">
             <div class="dropdown-inner">
@@ -147,13 +159,13 @@
 
   <section>
     <h2 id="fcc">FCC ID</h2>
-    <p>No standalone FCC ID was located for this device in public records. ITEAD markets the Basic R3 internationally; the ESP8285 module family carries Espressif&rsquo;s own modular certifications. If you can verify a grant, <a href="/support.html">let us know</a>.</p>
+    <p><strong>FCC ID: <a href="https://fccid.io/2APN5BASICR3">2APN5BASICR3</a></strong> (Grantee: 2APN5 = ITEAD / Sonoff). The finished device is certified under its own grant.</p>
   </section>
 
   <section>
     <h2 id="fcc-revealed">What the FCC filing revealed</h2>
-    <p>Nothing &mdash; because there is no filing to reveal. No standalone FCC equipment authorization for the Basic R3 was located in the public record, so the FCC holds no internal photos, no RF test reports, and no filed manual for this device.</p>
-    <p>That absence is the finding. The Basic R3&rsquo;s Wi-Fi radio is Espressif&rsquo;s ESP8285 design, and Espressif certifies its module family under its own FCC grants (grantee code 2AC7Z). The free documentation the FCC route hands a researcher for most devices &mdash; board photos and test data on the public record &mdash; does not exist for this one. Everything under &ldquo;What we reveal&rdquo; had to be learned from the physical device.</p>
+    <p>The filing exists: FCC ID 2APN5BASICR3, granted to ITEAD, holds the usual public record for this device &mdash; external and internal photos, RF test reports, and the filed user manual.</p>
+    <p>Why the device needed its own grant: the Basic R3 does not contain a pre-certified radio module. Its ESP8285 is a bare SoC soldered directly to the board, so there was no module certification for ITEAD to inherit &mdash; the finished product was certified as a whole, under ITEAD&rsquo;s own grantee code. (Contrast devices built around Espressif&rsquo;s WROOM modules, which do carry Espressif&rsquo;s own grants, 2AC7Z.)</p>
   </section>
 
   <section>
@@ -187,7 +199,7 @@
     <h3>Flash mode with one button and one cable</h3>
     <p><strong>You need:</strong> A 3.3 V USB-to-serial adapter (about $3) and four Dupont wires. <strong>Mains-voltage warning:</strong> disconnect from wall power; power the board only from the 3.3 V adapter during this procedure.</p>
     <ol>
-      <li>Wire the adapter to the serial header: GND to GND, TX to RX, RX to TX. Do not connect the adapter&rsquo;s 5 V line.</li>
+      <li>Wire the adapter to the serial header: 3.3 V to 3.3 V, GND to GND, TX to RX, RX to TX. The 3.3 V wire is what powers the board during flashing &mdash; without it the chip never comes up. Do not connect the adapter&rsquo;s 5 V line anywhere.</li>
       <li>Press and hold the case button (GPIO0 low), then apply 3.3 V power. Release the button &mdash; the ESP8285 is now in UART download mode.</li>
       <li>Back up the original firmware first, then write your replacement firmware with esptool.</li>
     </ol>
@@ -199,6 +211,30 @@ $ esptool.py --port /dev/ttyUSB0 write_flash 0x00000 tasmota.bin
 Writing at 0x00000000... 100%
 Leaving... Hard resetting via RTS pin...</code></pre>
     <p><em>The R3 also offers a manufacturer-documented DIY mode (local REST API over Wi-Fi) for users who prefer not to open the case at all.</em></p>
+  </section>
+
+  <section>
+    <h2 id="record">The Full Record</h2>
+    <p>Everything in this timeline is documented &mdash; a court outcome, a regulator&rsquo;s action, a published security analysis, or ITEAD&rsquo;s own statements &mdash; and each entry links its source. Where a popular claim about the Basic R3 is <em>not</em> proven, it is labeled Unverified at the end, with the evidence on both sides.</p>
+    <table>
+      <tr><th>Year</th><th>What happened</th><th>Source</th></tr>
+      <tr><td>2021</td><td><strong>Pairing sent the home Wi-Fi password in plain text (Sonoff S26 tested; the Basic line shared the app and the guide).</strong> In May 2021, A&amp;O IT Group published its test of the Sonoff S26, a sibling plug on the same eWeLink system: during pairing, the app sent the home Wi-Fi network name and password to the device over unencrypted HTTP, where an attacker in radio range could capture them, along with the device&rsquo;s ID and API key. The researchers also quoted the Sonoff Basic/RF user guide for the pairing access point&rsquo;s default password &mdash; 12345678, printed in the manual and not changeable by the user &mdash; and said ITEAD had not responded to their disclosure by the time they published. The Basic R3 was not the unit on their bench; it pairs through the same eWeLink flow.</td><td><a href="https://www.aoitgroup.com/knowledge-hub/smart-plugs-sold-for-just-over-a-tenner-give-hackers-access-to-your-home-network">A&amp;O IT Group &mdash; smart plug security research, May 2021</a></td></tr>
+      <tr><td>2022</td><td><strong>eWeLink cloud downtime, January 2022.</strong> For about two days in mid-January 2022, Sonoff users reported the eWeLink cloud unreachable &mdash; devices patchy or offline in the app and in cloud-linked integrations &mdash; while local-network control kept working for those who had it set up. There was no public status page to check; users traded reports in the Home Assistant forum and pointed to eWeLink&rsquo;s Twitter account for news. That is this device&rsquo;s cloud dependency in one episode: the switch on the wall still worked, the remote control did not.</td><td><a href="http://community.home-assistant.io/t/control-sonoff-devices-with-ewelink-original-firmware-over-lan-and-or-cloud/167567?page=11">Home Assistant community &mdash; eWeLink cloud downtime reports, January 2022</a></td></tr>
+      <tr><td>2023</td><td><strong>eWeLink retired the v1 cloud interface that community tools relied on (platform-level).</strong> In September 2023, after waves of &ldquo;all disconnected&rdquo; failures in the popular SonoffLAN Home Assistant integration, eWeLink support told a user that the project&rsquo;s traffic had been observed, that it still used the v1 interface, that v1 was no longer under maintenance, and that eWeLink was gradually discontinuing it until it would be entirely inaccessible. Nothing about the Basic R3 hardware had changed &mdash; the cloud contract underneath community integrations had.</td><td><a href="https://community.home-assistant.io/t/sonoff-all-disconnected/610091">Home Assistant community &mdash; Sonoff all disconnected, September 2023</a></td></tr>
+      <tr><td>2024</td><td><strong>CVE-2024-7205: a person you shared a device with could take it over (eWeLink cloud, platform-level &mdash; not Basic R3 firmware).</strong> eWeLink&rsquo;s own security advisory list records the flaw in the eWeLink Cloud Service homepage module before version 2.19.0, published July 30, 2024: when a device was shared, sharing exposed unnecessary device-sensitive information that let a secondary user take over the device as if they were the primary user. A stock Basic R3 lives on eWeLink&rsquo;s cloud, so a cloud account flaw is part of this device&rsquo;s real record even though the bug was not in the switch itself.</td><td><a href="https://ewelink.cc/category/security-advisories-notices/">eWeLink &mdash; security advisories &amp; notices</a></td></tr>
+    </table>
+    <p><strong>The empty part of the record, stated plainly:</strong> No CPSC recall, no lawsuit, and no CVE naming the Sonoff Basic R3 itself was found in the public record as of November 2026. ITEAD&rsquo;s documented record for this device is the pairing and cloud record above &mdash; thin, and stated as thin, rather than padded. No Unverified aside is included on this page, because no widely believed claim about the Basic R3 itself met the bar of a documented allegation with evidence on both sides.</p>
+  </section>
+
+  <section>
+    <h2 id="did-you-know">Did you know</h2>
+    <ul>
+      <li><strong>DIY mode speaks plain HTTP on purpose.</strong> ITEAD&rsquo;s DIY protocol document says the Basic R3 announces itself on your network using mDNS and takes control commands as HTTP POST requests &mdash; and recommends HTTP instead of HTTPS because of the LAN&rsquo;s security and the device&rsquo;s limited computing power. Local control and weak local encryption are the same design choice, seen from two sides. Source: <a href="https://github.com/itead/Sonoff_Devices_DIY_Tools/raw/refs/heads/master/SONOFF%20DIY%20MODE%20Protocol%20Doc%20v2.0%20Doc.pdf">SONOFF DIY Mode API Protocol v2.0 (PDF, ITEAD, March 2020)</a>.</li>
+      <li><strong>The whole R3 family shares one 10 A relay board.</strong> A teardown of the R3 range found the same relay board &mdash; built around a GI-1A-5DH relay rated at 10 A &mdash; under the Wi-Fi, RF, and Zigbee variants, with components simply left off the versions that do not need them. One mains board, several radios. Source: <a href="https://notenoughtech.com/featured/sonoff-basic-r3-teardown/">NotEnoughTech &mdash; Sonoff Basic R3 teardown</a>.</li>
+      <li><strong>DIY mode 2.0 deleted the jumper.</strong> The first DIY mode made you open the case and bridge a jumper to reconfigure the switch. DIY mode 2.0, on firmware 3.5.0 and later, needs only a long press of the pairing button to enter Compatible Pairing Mode &mdash; no disassembly at all. Source: <a href="https://sonoff.tech/blogs/news/no-tasmota-and-ewelink-cloud-to-control-the-sonoff-device-yes/">SONOFF &mdash; DIY mode 2.0 announcement</a>.</li>
+      <li><strong>You can flash Tasmota through DIY mode itself, with no cable.</strong> DIY mode&rsquo;s over-the-air update function accepts a firmware file you point it at, and community guides use exactly that door to install Tasmota on a Basic R3 &mdash; the manufacturer&rsquo;s own escape hatch from the cloud doubles as the community firmware&rsquo;s front door. The guides warn the trip is one-way: there is no documented path back to stock ITEAD firmware. Source: <a href="https://cgomesu.com/blog/ota-tasmota-sonoff/">Flashing Tasmota onto Sonoff devices over-the-air &mdash; guide</a>.</li>
+      <li><strong>The manual covers a radio this model does not have.</strong> The combined BASICR3/BASICRFR3 manual lists a 433.92 MHz RF receiver in its specifications &mdash; then notes that the BASICR3 does <em>not</em> support the 433.92 MHz remote controller. That feature belongs to the RFR3 sibling; the plain R3&rsquo;s only radio is 2.4 GHz Wi-Fi. Source: <a href="https://manuals.plus/sonoff/diy-basic-wi-fi-smart-switch-manual">Sonoff BASICR3/BASICRFR3 user manual</a>.</li>
+    </ul>
   </section>
 
   <section>

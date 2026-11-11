@@ -93,6 +93,20 @@
               </div>
             </div>
           </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
         <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
           <div class="col-panel">
             <div class="dropdown-inner">
@@ -167,7 +181,7 @@
       <img src="/img/pmd-joystick-board.jpg" alt="The circuit board inside a powered wheelchair joystick, with indicator lights" loading="lazy">
       <figcaption><strong>Where the codes live:</strong> the circuit board inside a powered-wheelchair joystick &mdash; the board that drives the battery lights and the screen your codes appear on. Photo: &lsquo;Joystick&rsquo;s Powered Board 1.JPG&rsquo; by Mbroemme5783, Wikimedia Commons. Source: https://commons.wikimedia.org/wiki/File:Joystick's_Powered_Board_1.JPG. Licensed under CC BY-SA 3.0: https://creativecommons.org/licenses/by-sa/3.0/.</figcaption>
     </figure>
-    <p><em>Provenance: these tables are compiled from the manufacturers&rsquo; own published manuals &mdash; the PG Drives VR2 and R-net technical manuals and the Dynamic Controls LiNX manuals &mdash; and checked line by line against them (R-net Technical Manual SK77981-14; PP1A Programmer Guide SK73747). Codes that could not be confirmed in the manuals are not listed. Documentation, not bench measurement: if your chair disagrees with this page, the chair wins &mdash; write down what yours actually does.</em></p>
+    <p><em>Provenance: these tables are compiled from the manufacturers&rsquo; own published manuals &mdash; the PG Drives VR2 and R-net technical manuals and the <a href="/library/collected-public-docs/pmd/dynamic-controls_linx-le_technical.pdf">Dynamic Controls LiNX manuals</a> &mdash; and checked line by line against them (R-net Technical Manual SK77981-14; PP1A Programmer Guide SK73747). Codes that could not be confirmed in the manuals are not listed. Documentation, not bench measurement: if your chair disagrees with this page, the chair wins &mdash; write down what yours actually does.</em></p>
   </section>
 
   <section id="vr2">
@@ -195,18 +209,18 @@
 
   <section id="rnet">
     <h2>Curtiss-Wright R-net &mdash; read the screen</h2>
-    <p>On R-net chairs with a color screen (CJSM, CJSM2, Omni), a trip shows three things: the module that complained (PM = power module, JSM = joystick module, ISM = seating module), a short text, and a 4-digit code. The code is the exact sub-circuit. Here are the ones an owner can act on.</p>
+    <p>On R-net chairs with a color screen (CJSM, CJSM2, Omni), a trip shows three things: the module that complained (PM = power module, JSM = joystick module, ISM = seating module), a short text, and a 4-digit code. The code is the exact sub-circuit. Note that R-net names the two drive channels <strong>Motor 1</strong> and <strong>Motor 2</strong> &mdash; never &ldquo;left&rdquo; and &ldquo;right&rdquo;. Which side of the chair Motor 1 and Motor 2 are on depends on how the chair was set up, so identify the motor by its plug at the power module, not by side. Here are the ones an owner can act on.</p>
 <table>
 <thead><tr><th>Code</th><th>Module</th><th>What it means</th><th>What you check first</th></tr></thead>
 <tbody>
-<tr><td>1505 / 1506</td><td>PM</td><td>Parking brake error (left / right brake)</td><td>Check both freewheel levers are in DRIVE; inspect the small 2-pin brake wires at the back of each motor (Procedure 1).</td></tr>
+<tr><td>1505 / 1506</td><td>PM</td><td>Parking brake error (Motor 1 / Motor 2 brake)</td><td>Check both freewheel levers are in DRIVE; inspect the small 2-pin brake wires at the back of each motor (Procedure 1).</td></tr>
 <tr><td>1D05</td><td>JSM</td><td>Joystick stationary time exceeded</td><td>The joystick was held in one position too long. Power-cycle the chair &mdash; this code clears on restart. If it returns at once, check that the stick springs back freely to center; a binding boot or gaiter can hold it off-center.</td></tr>
 <tr><td>2C00</td><td>PM</td><td>Low battery voltage</td><td>Charge; check the main disconnect plug and terminal bolts for looseness or corrosion.</td></tr>
 <tr><td>2F00</td><td>JSM</td><td>Joystick deflected at power-up</td><td>The stick was pushed during boot. Center it; if it will not clear, power off and on, hands free.</td></tr>
-<tr><td>3B00</td><td>PM</td><td>Left motor disconnected</td><td>Check the left motor plug and brushes.</td></tr>
-<tr><td>3C00</td><td>PM</td><td>Right motor disconnected</td><td>Check the right motor plug and brushes.</td></tr>
-<tr><td>3D00 / 3D01</td><td>PM</td><td>Left motor short circuit</td><td>Short in the left motor cable or winding. Inspect the cable run.</td></tr>
-<tr><td>3E00 / 3E01</td><td>PM</td><td>Right motor short circuit</td><td>Short in the right motor cable or winding. Inspect the cable run.</td></tr>
+<tr><td>3B00</td><td>PM</td><td>Motor 1 disconnected</td><td>Check the Motor 1 plug and brushes.</td></tr>
+<tr><td>3C00</td><td>PM</td><td>Motor 2 disconnected</td><td>Check the Motor 2 plug and brushes.</td></tr>
+<tr><td>3D00 / 3D01</td><td>PM</td><td>Motor 1 short circuit</td><td>Short in the Motor 1 cable or winding. Inspect the cable run.</td></tr>
+<tr><td>3E00 / 3E01</td><td>PM</td><td>Motor 2 short circuit</td><td>Short in the Motor 2 cable or winding. Inspect the cable run.</td></tr>
 <tr><td>4401</td><td>PM</td><td>Internal controller trip</td><td>Power-cycle after 30 seconds off. If it persists, the power module needs replacement.</td></tr>
 <tr><td>Trip text: Over-current</td><td>PM / ISM</td><td>Actuator channel over-current</td><td>Unplug seating actuators one by one to isolate the shorted cable.</td></tr>
 </tbody>

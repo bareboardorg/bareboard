@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exploded Views &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="Every power wheelchair on this page, broken down to the component level from the manufacturer&amp;rsquo;s own parts guide: exploded diagrams, callouts, part numbers, and plain language for every part.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Exploded Views">
+<meta property="og:description" content="Every power wheelchair on this page, broken down to the component level from the manufacturer&amp;rsquo;s own parts guide: exploded diagrams, callouts, part numbers, and plain language for every part.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-exploded.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Exploded Views</h1>
+    <p class="lede">A power wheelchair is not one expensive assembly. It is a frame, two motors, a handful of wheels, a seat, a controller, and two batteries &mdash; and every one of those parts has a number. These pages take each chair apart <strong>using the manufacturer&rsquo;s own parts guide</strong>: the exploded diagram the dealer sees, the callout for every component, and the maker&rsquo;s part number, with one plain line explaining what each part does.</p>
+    <p>610 manufacturer diagrams and 4605 component rows, across 9 chairs. Where a maker publishes the full breakdown, the page is complete. Where a maker publishes nothing, the page says so, in the open, with the maker&rsquo;s own words quoted. Nobody should have to guess what their chair is made of.</p>
+  </section>
+
+  <section>
+    <h2>The chairs</h2>
+    <table>
+      <thead><tr><th>Model</th><th>Maker</th><th>Source guide</th><th>Coverage</th><th>Assemblies</th><th>Component rows</th></tr></thead>
+      <tbody>
+        <tr><td><a href="/pmd-exploded-jazzy-air-2.html">Pride Jazzy Air 2</a></td><td>Pride Mobility</td><td><a href="/library/collected-public-docs/pmd/pride_jazzy-air-2_ipb.pdf">Illustrated Parts Breakdown, INFMANU4980 Rev. A</a></td><td>Full IPB</td><td>18</td><td>108</td></tr>
+        <tr><td><a href="/pmd-q6-edge-3.html">Quantum Q6 Edge 3</a></td><td>Quantum Rehab</td><td><a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Illustrated Parts Breakdown, INFMANU4994 Rev. C</a></td><td>Full IPB</td><td>66</td><td>704</td></tr>
+        <tr><td><a href="/pmd-exploded-q6-edge-4.html">Quantum Q6 Edge 4</a></td><td>Quantum Rehab</td><td><a href="/library/collected-public-docs/pmd/quantum_q6-edge-4_parts.pdf">Illustrated Parts Breakdown, INFMANU5556 Rev. B</a></td><td>Full IPB</td><td>110</td><td>1025</td></tr>
+        <tr><td><a href="/pmd-exploded-jazzy-623.html">Pride Jazzy 623</a></td><td>Pride Mobility</td><td><a href="/library/collected-public-docs/pmd/pride_jazzy-623_parts.pdf">Illustrated Parts Breakdown, INFMANU4526 Rev. B</a></td><td>Full IPB</td><td>16</td><td>199</td></tr>
+        <tr><td><a href="/pmd-exploded-tdx-sp2.html">Invacare TDX SP2</a></td><td>Invacare</td><td><a href="/library/collected-public-docs/pmd/invacare_tdx-sp2_parts-catalog.pdf">Spare Parts Catalogue, v2015/08/24e EN</a></td><td>Full parts catalog</td><td>210</td><td>1163</td></tr>
+        <tr><td><a href="/pmd-exploded-tdx-sp.html">Invacare TDX SP</a></td><td>Invacare</td><td><a href="/library/collected-public-docs/pmd/invacare_tdx-sp_parts.pdf">Spare Parts Catalogue, v2015/08/21c EN</a></td><td>Full parts catalog</td><td>183</td><td>1356</td></tr>
+        <tr><td><a href="/pmd-exploded-jazzy-600-es.html">Pride Jazzy 600 ES</a></td><td>Pride Mobility</td><td><a href="/library/collected-public-docs/pmd/pride_jazzy-600-es_owner.pdf">Owner&rsquo;s Manual, INFMANU4480 Rev. C</a></td><td>Partial — manual figures</td><td>4</td><td>28</td></tr>
+        <tr><td><a href="/pmd-exploded-quickie-pulse-6.html">Sunrise Quickie Pulse 6</a></td><td>Sunrise Medical</td><td><a href="/library/collected-public-docs/pmd/sunrise_quickie-pulse-6_owner.pdf">Owner&rsquo;s Manual, doc. 119832</a></td><td>Manual-only</td><td>1</td><td>11</td></tr>
+        <tr><td><a href="/pmd-exploded-m3-corpus.html">Permobil M3 Corpus</a></td><td>Permobil</td><td><a href="/library/collected-public-docs/pmd/permobil_m3-corpus_owner.pdf">User Manual (overview diagram)</a></td><td>Manual-only — no IPB exists in public</td><td>1</td><td>11</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Full IPB / full catalog</strong> means every assembly in the maker&rsquo;s guide is reproduced, component by component. <strong>Partial / manual-only</strong> means the maker&rsquo;s breakdown is not openly available &mdash; the page is built from the labeled diagrams in the owner&rsquo;s manual and says exactly what is missing and why. No diagram on this site is redrawn or invented: if it is not the manufacturer&rsquo;s own picture, it is not here.</p>
+  </section>
+
+  <section>
+    <h2>How to use an exploded view</h2>
+    <p>Find your chair&rsquo;s symptom first, then the assembly that contains it. On the diagram, each part carries a <strong>callout</strong> &mdash; a short label like A1 or a position number. The table under the diagram turns that callout into the maker&rsquo;s <strong>part number</strong> and description. That part number is the whole game: it is how you order the $6 bearing instead of the $300 assembly, and it is the number a parts desk cannot argue with.</p>
+    <p>Assemblies are laid out in <strong>build order</strong> &mdash; frame, drive, motors, wheels, seating, electronics, batteries &mdash; so a reader with zero experience can follow how the chair goes together, one step at a time. Safety warnings are the makers&rsquo; own, quoted word for word on each page.</p>
+    <p><a href="/pmd.html">&larr; Back to PMD</a></p>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

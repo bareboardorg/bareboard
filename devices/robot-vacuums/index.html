@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robot Vacuums — BareBoard — Free Hardware Education</title>
+<meta name="description" content="Robot vacuums: LiDAR vs vSLAM anatomy, module-level parts, FCC photos, the 2022 Roomba photo leak, iRobot's collapse, faults and the full record.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Robot Vacuums">
+<meta property="og:description" content="Robot vacuums: the floor computer that maps your home — and the record of where those maps went.">
+<meta property="og:url" content="https://bareboard.org/devices/robot-vacuums/">
+<meta property="og:image" content="https://bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/devices/">Devices</a></li>
+        <li class="has-children">
+          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/about.html#how-we-work">How we work</a></li>
+                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/notes/">Bench Notes</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                <li><a href="/protocols.html">Protocol RE</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
+                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
+                <li><a href="/hot-100.html">Game Consoles</a></li>
+                <li><a href="/hot-100.html">Media Streamers</a></li>
+                <li><a href="/hot-100.html">Networking Gear</a></li>
+                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
+                <li><a href="/hot-100.html">Other</a></li>
+                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
+                <li><a href="/hot-100.html">Phones</a></li>
+                <li><a href="/hot-100.html">Printers</a></li>
+                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
+                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
+                <li><a href="/hot-100.html">Wearables</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/most-wanted.html#board">The board</a></li>
+              </ul>
+            </div>
+          </div></li>
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+                <li><a href="/watchmen.html#corrections">Corrections</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+  <aside class="legal-notice bb-notice-amber">
+    <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
+  </aside>
+
+  <h1>Robot Vacuums</h1>
+  <p class="lede">A floor computer that maps your home to clean it. Two sensor religions (camera and laser), one brush-and-fan drivetrain, and a record that runs from leaked living-room photos to the bankruptcy of the company that invented the category.</p>
+  <section>
+    <h2 id="fcc">FCC ID</h2>
+    <p><strong>FCC IDs vary by brand and model</strong> &mdash; iRobot, Roborock, Ecovacs, and Shark file under their own grantee codes for Wi-Fi/Bluetooth (and, on dock-equipped models, sometimes a second radio in the dock). The internal photos show what the marketing hides: the navigation sensor stack and how much of the robot is dustbin.</p>
+    <p>Every radio a device carries &mdash; Wi-Fi, Bluetooth, cellular, ultra-wideband, NFC &mdash; needs an FCC equipment authorization before the device can be sold in the United States. To get one, the manufacturer files photographs and test reports with the FCC, and those filings are <strong>public record</strong>. Check the label on your specific unit and look it up at <a href="https://fccid.io">fccid.io</a>.</p>
+    
+  </section>
+  <section>
+    <h2 id="fcc-revealed">What the FCC filing revealed</h2>
+    <p>The FCC filing for this device includes the documents manufacturers are required to submit: external photos, internal photos, test setup photos, RF test reports, and the user manual. These are public record at <a href="https://fccid.io/">fccid.io</a>.</p>
+    <ul>
+      <li><strong>Internal photos</strong> &mdash; the main board, the fan motor, the sensor turret (LiDAR models) or camera window (vSLAM models), and the battery pack&rsquo;s true size</li>
+      <li><strong>Test reports</strong> &mdash; radio duty cycles that explain why a vacuum is a polite network citizen and a mapping dock is not</li>
+      <li><strong>The manual</strong> &mdash; filed publicly, including the maintenance schedule the makers themselves print (brushes, filters, wheels) &mdash; the closest thing to a service document the category publishes</li>
+    </ul>
+    <p>What the FCC filing does <em>not</em> include: schematics (withheld under confidentiality requests where the maker files them), firmware, and the full bill of materials.</p>
+  </section>
+  <section>
+    <h2 id="exploded">Exploded view &mdash; the assemblies in build order</h2>
+    <p>This is the centerpiece of the page: the device taken apart into its assemblies, in the order they go together, every part named in plain language with what it does. An <em>exploded view</em> is the drawing a manufacturer makes showing every part separated along the path it assembles &mdash; the single most useful document in repair, and the one most often kept behind a dealer login.</p>
+    <h3>The source</h3>
+    <p><strong>Parts book:</strong> none published &mdash; but this category is a partial exception on parts: iRobot and Roborock both <em>sell</em> owner-replaceable modules (wheel modules, brush cages, batteries, even main boards on some Roomba generations slide out as units). No exploded diagram is published; the stack below is rebuilt from FCC internal photos and the makers&rsquo; own module-replacement guides, which are public.</p>
+    <p><strong>Coverage: PARTIAL &mdash; no public parts book or exploded diagram; FCC internal-photo basis + manufacturers&rsquo; published module-replacement guides. Uniquely for this wave: several assemblies below are genuinely sold as owner-swappable modules, and the table says which.</strong></p>
+    <h3>Build order</h3>
+        <h3>Step 1 &mdash; Chassis, bumper &amp; cliff sensors</h3>
+    <p>The robot&rsquo;s body is a sensor platform that happens to hold a vacuum.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Bumper + infrared window</td><td>The front bumper is a switch (bump sensing) behind an IR-transparent strip (wall-following and dock homing receivers). A scratched IR window presents as navigation failure.</td></tr>
+        <tr><td>Cliff sensors (4&ndash;6, downward IR pairs)</td><td>Infrared emitter/detector pairs that see the floor&rsquo;s reflection vanish at a stair edge. Dust on these is the #1 cause of a robot that refuses to run &lsquo;in the dark&rsquo; it imagines.</td></tr>
+        <tr><td>Top deck: LiDAR turret or camera window</td><td>LiDAR models spin a laser rangefinder in a turret (a small motor + the LDS unit); camera (vSLAM) models look forward/up through a window. This part decides the robot&rsquo;s whole navigation character.</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 2 &mdash; Drive &amp; cleaning train</h3>
+    <p>Two drive wheels, a caster, brushes, and a fan. Every part here is a wear item and most are owner-replaceable modules on the major brands.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Drive wheel modules (L/R)</td><td>Spring-loaded motor + gearbox + treaded wheel, sold as slide-in modules on Roomba. A robot driving in circles has usually lost one.</td></tr>
+        <tr><td>Main brush(es)</td><td>Bristle or rubber extractors. Hair wrap is the design condition, not abuse; the rubber dual-roller designs exist to shed it.</td></tr>
+        <tr><td>Side brush</td><td>The spinning whisk that sweeps edges into the main brush&rsquo;s path. A consumable.</td></tr>
+        <tr><td>Suction fan (vacuum motor)</td><td>A high-speed blower. It is why the dustbin&rsquo;s seal matters: leaks upstream of the fan are suction lost forever.</td></tr>
+        <tr><td>Dustbin + filter</td><td>The bin and its HEPA-style filter. A clogged filter is the most common &lsquo;weak suction&rsquo; fault and the cheapest fix in the category.</td></tr>
+        <tr><td>Mop module (combo models)</td><td>A pad + water tank that clips under or behind the bin; on dock models the dock washes it.</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 3 &mdash; Electronics &amp; battery</h3>
+    <p>One main board, one battery, and the radios that make the map leave the robot.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Main board + SoC</td><td>Navigation compute (camera models run real vision pipelines), motor drivers, and the radio. Board-level parts are not sold; boards sometimes are, as modules, on older Roombas.</td></tr>
+        <tr><td>Battery pack</td><td>Li-ion, typically 1800&ndash;5200&nbsp;mAh, screwed under a bottom plate &mdash; owner-replaceable on most major brands with a screwdriver, a fact worth naming because phones forgot it.</td></tr>
+        <tr><td>Charging contacts &amp; dock (base)</td><td>Two metal pads mate with the dock. Auto-empty docks add a vacuum motor and a bag &mdash; a second appliance with its own consumables and its own failure modes.</td></tr>
+      </tbody>
+    </table>
+
+        <p><strong>What is missing, in the open:</strong> schematics and any published exploded diagram. What exists &mdash; module sales and replacement guides &mdash; makes this category the <em>least</em> sealed in the smart home, and it still isn&rsquo;t documented to the standard this site holds for a wheelchair. Both facts belong on the page.</p>
+  </section>
+  <section>
+    <h2 id="we-reveal">What we reveal</h2>
+    <p>The FCC tells you what a device emits. We tell you what&rsquo;s inside and how it works.</p>
+    <ul>
+      <li><strong>The map is the product</strong> &mdash; what vSLAM and LiDAR actually record, what leaves the house, and what the 2022 photo leak proved about test fleets</li>
+      <li><strong>Module economics</strong> &mdash; why this category sells wheels and brushes while phone makers glue batteries</li>
+    </ul>
+    <p>Check our <a href="/autopsy/">teardowns</a> for full board-level analysis.</p>
+  </section>
+  <section>
+    <h2 id="variants">Navigation religions</h2>
+    <p>Pick a robot by how it sees; everything else follows.</p>
+    <table>
+      <tr><th>System</th><th>Used by</th><th>How it navigates</th><th>Failure character</th></tr>
+      <tr><td>LiDAR (LDS turret)</td><td>Roborock, Ecovacs, Dreame</td><td>Spinning laser builds a floor plan in minutes; methodical rows</td><td>Turret motor/belt wear; map is precise, including in the dark</td></tr>
+      <tr><td>vSLAM (camera)</td><td>iRobot Roomba (j/i/s series)</td><td>Ceiling-facing camera tracks visual landmarks; learns over runs</td><td>Needs light; confused by dark rooms and changed furniture</td></tr>
+      <tr><td>Camera + structured light / 3D avoidance</td><td>Roomba j-series, Roborock flagships</td><td>Adds obstacle recognition (cords, pet waste) to either base system</td><td>The pet-waste avoidance guarantee exists because the failure mode is legendary</td></tr>
+      <tr><td>Random / gyro (budget)</td><td>Eufy and entry models</td><td>Bump-and-turn with inertial dead reckoning</td><td>No map to leak &mdash; and no map to use</td></tr>
+    </table>
+  </section>
+  <section>
+    <h2 id="chips">Key chips &amp; components</h2>
+    <ul>
+      <li><strong>Navigation SoCs</strong> &mdash; camera models run ARM application processors doing visual SLAM; specific parts are identified per model in FCC internal photos. Public datasheets for the exact SKUs are uncommon &mdash; collection targets logged per family.</li>
+      <li><strong>Motor drivers &amp; fan controllers</strong> &mdash; commodity power parts of the classes indexed in this site&rsquo;s <a href="/datasheets.html">Datasheet Index</a> (the same driver families that move the site&rsquo;s stepper and DC projects).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="faults">Faults &mdash; which part fails, and how you know</h2>
+    <p>Symptom first &mdash; this category&rsquo;s faults are dominated by dirt, hair, and one famous wheel.</p>
+    <ul>
+      <li><strong>Refuses to start, flashes a cliff/dark error in daylight</strong> &mdash; dust film on the cliff sensors. Wipe the sensor windows before anything else; this is the category&rsquo;s most misdiagnosed fault.</li>
+      <li><strong>Drives in circles / one wheel&rsquo;s tread gone</strong> &mdash; a drive wheel module: hair in the axle, a worn tread, or a dead gearmotor. On Roomba these are owner-swappable modules by design.</li>
+      <li><strong>Weak suction, loud fan</strong> &mdash; clogged filter or a dustbin seal leak. The fan is fine; its air is escaping. Filter first, always.</li>
+      <li><strong>Won&rsquo;t dock / won&rsquo;t charge</strong> &mdash; oxidized charging contacts (robot and dock), or the dock&rsquo;s IR homing window blocked. Clean contacts with a melamine pad per the maker&rsquo;s own guide.</li>
+      <li><strong>Map wrong, rooms merged, robot &lsquo;lost&rsquo;</strong> &mdash; a dirty LiDAR window or camera lens, or a moved charging dock (the map&rsquo;s origin). Software resets fix maps; they do not fix dirty optics.</li>
+      <li><strong>Error tones after a brush change</strong> &mdash; the brush cage isn&rsquo;t latched or the end caps weren&rsquo;t swapped onto the new brush. The robot is reporting a mechanical truth.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="safety">Safety, before you open anything</h2>
+    <p>The battery lives under a screwed plate and is owner-replaceable on most major brands &mdash; replace it with the maker&rsquo;s pack or a reputable equivalent, and recycle the old one. A swollen pack in a device that drives itself around your house is not a &lsquo;monitor it&rsquo; situation.</p>
+    <p>Auto-empty docks are mains appliances with their own motors and bags; unplug before clearing a dock clog. And a robot vacuum&rsquo;s map of your home is sensitive data &mdash; know which account it lives in and what the maker&rsquo;s retention policy says before you sell or scrap the robot (factory-reset it, like a phone).</p>
+  </section>
+  <section>
+    <h2 id="record">The full record &mdash; dated, sourced, nothing smoothed over</h2>
+    <p>The category&rsquo;s record is a privacy record and a business record: what the mapping saw, and what happened to the company that mapped first.</p>
+    <table>
+      <thead><tr><th>Date</th><th>Event</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>2019&ndash;2020</td><td>iRobot development robots (specially modified test units in paid beta testers&rsquo; homes, cameras labeled and participants consented) capture images of home interiors, including a woman on a toilet. The images flow to data-labeling contractors for machine-learning training.</td><td>MIT Technology Review investigation, Dec. 19, 2022</td></tr>
+        <tr><td>2022-12-19</td><td>MIT Technology Review publishes the screenshots &mdash; obtained from gig workers who labeled them &mdash; proving floor-robot camera data leaves the home and passes through human labelers. iRobot confirms the images came from test units, not customer robots, and says the labeling violated its data agreements.</td><td>MIT Technology Review, Dec. 19, 2022; iRobot statement</td></tr>
+        <tr><td>2022-08-05</td><td>Amazon announces a $1.7 billion acquisition of iRobot &mdash; the mapping data of millions of homes valued as part of a platform deal, drawing immediate regulator and privacy-advocate scrutiny.</td><td>Amazon/iRobot announcements</td></tr>
+        <tr><td>2024-01-29</td><td>Amazon and iRobot terminate the acquisition after the European Commission moves to block it; iRobot cuts roughly 31% of its workforce and its CEO departs. The FTC&rsquo;s parallel review ends with the deal.</td><td>iRobot/Amazon joint statement, Jan. 29, 2024</td></tr>
+        <tr><td>2025-12-14</td><td>iRobot files for Chapter 11 bankruptcy under a plan to sell the company to Picea Robotics &mdash; its own longtime contract manufacturer. The category&rsquo;s inventor ends as a brand inside its supply chain.</td><td>iRobot Chapter 11 filing, S.D.N.Y., Dec. 2025</td></tr>
+      </tbody>
+    </table>
+    <h3>Did you know</h3>
+    <ul>
+      <li>A flagship robot&rsquo;s most famous warranty is about pet waste: iRobot&rsquo;s &ldquo;P.O.O.P.&rdquo; (Pet Owner Official Promise) guarantees a replacement if a j7 runs through pet waste in the first year &mdash; because obstacle avoidance is a data problem and everyone in the industry knows it.</li>
+      <li>The battery is held by screws and sold to owners: robot vacuums quietly kept the replaceable-battery norm that phones abandoned.</li>
+      <li>LiDAR models navigate perfectly in total darkness; camera models can be defeated by a dark room. The &lsquo;smarter&rsquo; sensor is the one that needs your lights on.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="documents">Documents &amp; deep dive</h2>
+    <p>Every document this page rests on, linked. Site library copies first, then the public record at the source.</p>
+    <ul>
+      <li><strong>MIT Technology Review (Dec. 19, 2022)</strong> &mdash; the Roomba photo investigation; the primary reporting behind the record above.</li>
+      <li><strong>Manufacturers&rsquo; module-replacement guides</strong> (iRobot, Roborock support libraries) &mdash; public, and the basis for which assemblies this page marks owner-swappable.</li>
+      <li><strong>FCC filings</strong> per brand/model &mdash; internal photos: <a href="https://fccid.io">fccid.io</a>.</li>
+      <li><a href="/devices/wyze-cam-v3/">Wyze Cam v3</a> &mdash; the other camera that lives in your house, with its own record.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="reading">Further Reading</h2>
+    <ul>
+      <li><a href="/devices/smart-locks/">Smart Locks &mdash; home data with a key attached</a></li>
+      <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+      <li><a href="/hot-100.html">The Hot 100</a></li>
+    </ul>
+  </section>
+
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

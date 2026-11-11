@@ -76,7 +76,19 @@
               </ul>
             </div>
           </div></li>
-        <li class="has-children">
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
           <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
           <div class="col-panel">
             <div class="dropdown-inner">
@@ -145,7 +157,7 @@
     <h2 id="fcc">FCC ID</h2>
     <p><strong>FCC ID: <a href="https://fccid.io/2AC7ZESPWROOM32">2AC7Z-ESPWROOM32</a></strong> (Grantee: 2AC7Z = Espressif Systems) for the ESP32-WROOM-32 module.</p>
     <ul>
-      <li><strong>Other variants:</strong> 2AC7Z-ESPWROOM32UE, 2A9ZM-WROOM32E (32E variant)</li>
+      <li><strong>Other variants:</strong> 2AC7Z-ESPWROOM32UE, 2AC7Z-ESPWROOM32E (32E variant)</li>
       <li><strong>Available:</strong> Test reports, antenna specs, user manuals, RF exposure docs</li>
     </ul>
   </section>
@@ -184,7 +196,8 @@
       <tr><td>ESP32-S2</td><td>Single-core Xtensa LX7</td><td>Wi-Fi 4 only</td><td>USB OTG. No Bluetooth.</td></tr>
       <tr><td>ESP32-S3</td><td>Dual-core Xtensa LX7</td><td>Wi-Fi 4 + BT 5</td><td>AI acceleration, USB OTG.</td></tr>
       <tr><td>ESP32-C3</td><td>RISC-V @ 160 MHz</td><td>Wi-Fi 4 + BT 5</td><td>Espressif&rsquo;s RISC-V entry. Cheap.</td></tr>
-      <tr><td>ESP32-C6 / H2</td><td>RISC-V</td><td>Wi-Fi 6 / 802.15.4</td><td>Newer low-power parts.</td></tr>
+      <tr><td>ESP32-C6</td><td>RISC-V</td><td>Wi-Fi 6 + 802.15.4</td><td>Newer low-power part.</td></tr>
+      <tr><td>ESP32-H2</td><td>RISC-V</td><td>802.15.4 only &mdash; <strong>no Wi-Fi</strong></td><td>Thread/Zigbee-only part; do not spec it where Wi-Fi is needed.</td></tr>
     </table>
   </section>
 
@@ -209,6 +222,32 @@
 
     <h3>Espressif&rsquo;s open documentation (positive)</h3>
     <p>Credit where due: Espressif is one of the few chip vendors that publishes comprehensive, public, no-NDA documentation &mdash; technical reference manuals, datasheets, hardware design guides, and open-source SDKs (ESP-IDF). This is the model BareBoard wishes every vendor followed. Open docs don&rsquo;t prevent vulnerabilities, but they let the community find and fix them.</p>
+  </section>
+
+  <section>
+    <h2 id="record">The Full Record</h2>
+    <p>Everything in this timeline is documented &mdash; a court outcome, a regulator&rsquo;s action, a published security analysis, or Espressif&rsquo;s own statements &mdash; and each entry links its source. Where a popular claim about the ESP32 is <em>not</em> proven, it is labeled Unverified at the end, with the evidence on both sides.</p>
+    <table>
+      <tr><th>Year</th><th>What happened</th><th>Source</th></tr>
+      <tr><td>2019</td><td><strong>Secure Boot bypass by fault injection (CVE-2019-15894).</strong> Riscure analysts and, independently, LimitedResults showed that a precisely timed voltage glitch (fault injection &mdash; physically disturbing the chip at the right instant) could make the ESP32 skip its Secure Boot digest check and boot unverified code from flash. The attack needs the chip in hand and does not defeat Flash Encryption; Espressif&rsquo;s fix was firmware that permanently enables Flash Encryption alongside Secure Boot, plus a revised chip with hardened ROM code.</td><td><a href="https://nvd.nist.gov/vuln/detail/cve-2019-15894">NVD &mdash; CVE-2019-15894</a></td></tr>
+      <tr><td>2019</td><td><strong>eFuse key extraction by fault injection (CVE-2019-17391).</strong> LimitedResults showed a second glitch, applied just after reset, could corrupt the read-protection bits on the chip&rsquo;s electronic fuses (eFuses) as they were read out &mdash; exposing the Flash Encryption and Secure Boot keys themselves, repeatably, until the full key could be recovered. Chips then in the field could not be patched; Espressif&rsquo;s answer was the ESP32-D0WD-V3 revision, whose ROM checks block the attack, and a new Secure Boot V2 scheme.</td><td><a href="https://www.espressif.com/en/news/Security_Advisory_Concerning_Fault_Injection_and_eFuse_Protections">Espressif advisory &mdash; CVE-2019-17391</a></td></tr>
+      <tr><td>2020</td><td><strong>Wi-Fi authentication bypass (CVE-2020-12638).</strong> Broadcasting forged Wi-Fi beacon frames impersonating an access point could force an ESP32 (and ESP8266) to switch from encrypted to open authentication, effectively disabling its 802.11 encryption for the duration of the attack. It did not break TLS or give access to the real network. Espressif fixed it in ESP-IDF v3.1.8, v3.2.4, v3.3.3, v4.0.2, v4.1, v4.2 and later (advisory AR2020-002).</td><td><a href="https://nvd.nist.gov/vuln/detail/cve-2020-12638">NVD &mdash; CVE-2020-12638</a></td></tr>
+      <tr><td>2023</td><td><strong>Hardened ESP32 V3 bypassed by one EM glitch (CVE-2023-35818).</strong> Raelize and the Technology Innovation Institute used electromagnetic fault injection (EMFI &mdash; a focused magnetic pulse instead of a voltage glitch) on the ESP32 revision v3.0/v3.1 &mdash; the revision built to resist the 2019 attacks &mdash; to redirect execution into the ROM UART download mode even with Secure Boot V2 and Flash Encryption enabled and download mode permanently disabled. Espressif advisory AR2023-005 states there is no immediate mitigation; the flaw is in the silicon.</td><td><a href="https://documentation.espressif.com/AR2023-005%20Security%20Advisory%20Concerning%20Bypassing%20Secure%20Boot%20and%20Flash%20Encryption%20Using%20EMFI%20EN.pdf">Espressif advisory AR2023-005 (PDF)</a></td></tr>
+      <tr><td>2025</td><td><strong>Undocumented Bluetooth HCI commands (CVE-2025-27840).</strong> Tarlogic disclosed 29 undocumented vendor-specific HCI commands in the original ESP32&rsquo;s Bluetooth controller, including memory read/write; Espressif says they are internal debug commands that cannot be triggered over Bluetooth, radio, or the internet, and shipped a software fix removing access to them (advisory AR2025-004, May 2025). (Details in Controversies &amp; Legal above.)</td><td><a href="https://developer.espressif.com/blog/2025/03/esp32-bluetooth-clearing-the-air/">Espressif &mdash; Clearing the Air</a></td></tr>
+    </table>
+    <aside class="bb-notice-amber">
+      <p><strong>Unverified: &ldquo;The ESP32 has a backdoor.&rdquo;</strong> The 29 undocumented commands are documented fact (above); the <em>backdoor</em> label &mdash; a deliberately planted, hidden access route &mdash; is not proven. Evidence for the label: Tarlogic&rsquo;s March 6, 2025 press release used the word &ldquo;backdoor,&rdquo; and the commands were undocumented and include direct memory write (opcode 0xFC02). Evidence against: Tarlogic itself replaced &ldquo;backdoor&rdquo; with &ldquo;hidden feature&rdquo; within days, its own slides never claimed a backdoor, Espressif states the commands are debug commands in the Bluetooth controller IP that require code already running on the chip (or a compromised host) and cannot be triggered remotely, and independent analysis notes that comparable vendor-specific memory commands exist in Bluetooth chips from Broadcom, Cypress, and Texas Instruments. No court, regulator, or CVE record calls it a backdoor; CVE-2025-27840 records undocumented commands, nothing more. Sources: <a href="https://www.bleepingcomputer.com/news/security/undocumented-commands-found-in-bluetooth-chip-used-by-a-billion-devices/">BleepingComputer (updated reporting)</a>, <a href="https://darkmentor.com/blog/esp32_non-backdoor/">Dark Mentor &mdash; &ldquo;The ESP32 &lsquo;backdoor&rsquo; that wasn&rsquo;t&rdquo;</a>.</p>
+    </aside>
+  </section>
+
+  <section>
+    <h2 id="did-you-know">Did you know</h2>
+    <ul>
+      <li><strong>The ESP32 was in over a billion units by 2023.</strong> That scale &mdash; one low-cost Wi-Fi + Bluetooth chip across an enormous share of the IoT world &mdash; is why a set of undocumented debug commands made international news in 2025. Source: <a href="https://www.bleepingcomputer.com/news/security/undocumented-commands-found-in-bluetooth-chip-used-by-a-billion-devices/">BleepingComputer</a>.</li>
+      <li><strong>Only the original ESP32 has the 29 HCI debug commands.</strong> Espressif states the ESP32-C, ESP32-S, and ESP32-H series do not have these commands in their Bluetooth controllers at all. Source: <a href="https://developer.espressif.com/blog/2025/03/esp32-bluetooth-clearing-the-air/">Espressif &mdash; Clearing the Air</a>.</li>
+      <li><strong>Every silicon break in the timeline above needed the chip in hand.</strong> The NVD records for CVE-2019-15894 and CVE-2023-35818 both carry a physical-access attack vector (AV:P): these are lab attacks on a device you already hold, not remote exploits against devices in the field. Sources: <a href="https://nvd.nist.gov/vuln/detail/cve-2019-15894">NVD &mdash; CVE-2019-15894</a>, <a href="https://documentation.espressif.com/AR2023-005%20Security%20Advisory%20Concerning%20Bypassing%20Secure%20Boot%20and%20Flash%20Encryption%20Using%20EMFI%20EN.pdf">Espressif AR2023-005</a>.</li>
+      <li><strong>The hardened chip fell to a single glitch.</strong> The ESP32 V3 was Espressif&rsquo;s answer to the 2019 fault-injection attacks; the WOOT &rsquo;24 paper behind CVE-2023-35818 describes the first successful fault-injection attack bypassing both Secure Boot and Flash Encryption with one electromagnetic glitch, on a target that had fault-injection countermeasures. Source: <a href="https://www.usenix.org/system/files/woot24-delvaux.pdf">Delvaux et al., USENIX WOOT &rsquo;24 (PDF)</a>.</li>
+    </ul>
   </section>
 
   <section>

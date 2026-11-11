@@ -10,6 +10,11 @@
   --accent: #0066cc;
   --accent-ink: #004a99;
   --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  /* Apple motion + glass */
+  --ease: cubic-bezier(0.28, 0.11, 0.32, 1);
+  --glass: rgba(252, 252, 253, 0.62);
+  --glass-edge: rgba(255, 255, 255, 0.55);
+  --hairline: rgba(0, 0, 0, 0.08);
   color-scheme: light;
 }
 
@@ -42,12 +47,12 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   top: 0;
   z-index: 50;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.08) 100%),
-    rgba(252, 252, 253, 0.45);
-  -webkit-backdrop-filter: blur(20px) saturate(160%) brightness(1.07);
-  backdrop-filter: blur(20px) saturate(160%) brightness(1.07);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.38);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.06) 100%),
+    rgba(251, 251, 253, 0.72);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--hairline);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
 .nav-inner {
@@ -115,54 +120,130 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 .search-toggle:hover { color: var(--text); background: rgba(0, 0, 0, 0.05); }
 .search-toggle[aria-expanded="true"] { color: var(--text); background: rgba(0, 102, 204, 0.1); }
 
-/* full-width frosted panel shared by Finder columns and search */
-.site-nav .col-panel,
-.site-nav .search-panel {
+/* Dropdown positioning layer: full-width and transparent; the glass
+ * lives on the card inside it (.dropdown-inner), which floats under
+ * its trigger word, sized to its Finder columns. */
+.site-nav .col-panel {
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
+  z-index: 100;
+  visibility: hidden;
+  pointer-events: none;
+  transition: visibility 0s linear 0.3s;
+}
+.site-nav .has-children.open > .col-panel {
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+/* The glass card: translucent, backdrop-blurred, 20px radius. */
+.site-nav .dropdown-inner {
+  pointer-events: none;
+  width: fit-content;
+  max-width: calc(100vw - 24px);
+  margin-top: 10px;
+  padding: 0.35rem;
+  border-radius: 20px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.34) 0%, rgba(255, 255, 255, 0.10) 42%, rgba(255, 255, 255, 0.02) 100%),
-    rgba(252, 252, 253, 0.42);
-  -webkit-backdrop-filter: blur(20px) saturate(160%) brightness(1.07);
-  backdrop-filter: blur(20px) saturate(160%) brightness(1.07);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.38);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.10) 46%, rgba(255, 255, 255, 0.03) 100%),
+    var(--glass);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid var(--glass-edge);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.7),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.05),
-    0 18px 44px rgba(0, 0, 0, 0.13);
+    inset 0 -1px 0 rgba(0, 0, 0, 0.04),
+    0 24px 60px rgba(0, 0, 0, 0.18),
+    0 4px 16px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateY(-8px) scale(0.995);
+  transform-origin: top left;
+  transition:
+    opacity 0.26s var(--ease),
+    transform 0.26s var(--ease);
+  overflow: hidden;
+}
+.site-nav .has-children.open .dropdown-inner {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+/* no-JS fallback: hover/focus reveals the card, static column inside */
+html:not(.js) .site-nav .has-children:hover > .col-panel,
+html:not(.js) .site-nav .has-children:focus-within > .col-panel {
+  visibility: visible;
+  transition-delay: 0s;
+}
+html:not(.js) .site-nav .has-children:hover .dropdown-inner,
+html:not(.js) .site-nav .has-children:focus-within .dropdown-inner {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+/* no-JS fallback for the bare-list panel variant */
+.site-nav .dropdown-col {
+  list-style: none;
+  margin: 0;
+  padding: 0.45rem 0.3rem;
+  min-width: 12rem;
+}
+.site-nav .dropdown-col > li > a {
+  display: block;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text);
+  border-radius: 8px;
+  white-space: nowrap;
+}
+.site-nav .dropdown-col > li > a:hover {
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.05);
+}
+.site-nav .dropdown-col > li.dropdown-sub > a {
+  padding-left: 1.6rem;
+  color: var(--secondary);
+  font-size: 0.86rem;
+}
+
+/* Search panel: same glass card, centered under the bar. */
+.site-nav .search-panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  width: min(46rem, calc(100vw - 24px));
   z-index: 100;
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.10) 46%, rgba(255, 255, 255, 0.03) 100%),
+    var(--glass);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid var(--glass-edge);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.04),
+    0 24px 60px rgba(0, 0, 0, 0.18),
+    0 4px 16px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-8px);
+  transform: translate(-50%, -8px);
   pointer-events: none;
   transition:
-    opacity 0.24s ease,
-    transform 0.24s ease,
-    visibility 0s linear 0.24s;
+    opacity 0.26s var(--ease),
+    transform 0.26s var(--ease),
+    visibility 0s linear 0.26s;
 }
-.site-nav .has-children.open > .col-panel,
 .site-nav .search-panel.open {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translate(-50%, 0);
   pointer-events: auto;
   transition:
-    opacity 0.24s ease,
-    transform 0.24s ease,
-    visibility 0s;
-}
-/* no-JS fallback: hover/focus still reveals panels */
-html:not(.js) .site-nav .has-children:hover > .col-panel,
-html:not(.js) .site-nav .has-children:focus-within > .col-panel {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  pointer-events: auto;
-  transition:
-    opacity 0.24s ease,
-    transform 0.24s ease,
+    opacity 0.26s var(--ease),
+    transform 0.26s var(--ease),
     visibility 0s;
 }
 
@@ -173,57 +254,85 @@ html:not(.js) .site-nav .has-children:focus-within > .col-panel {
   position: fixed;
   inset: 0;
   z-index: 40;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.14);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transition:
-    opacity 0.24s ease,
-    visibility 0s linear 0.24s;
+    opacity 0.26s var(--ease),
+    visibility 0s linear 0.26s;
 }
 .nav-curtain.on {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  -webkit-backdrop-filter: blur(3px) saturate(130%);
+  backdrop-filter: blur(3px) saturate(130%);
   transition:
-    opacity 0.24s ease,
+    opacity 0.26s var(--ease),
     visibility 0s;
 }
 
-/* Finder column strip */
+/* Finder column strip (Miller columns): the track holds one column
+ * per depth; each column scrolls independently; selecting an item
+ * cascades a new column in from the right. */
 .finder {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+.finder-track {
   display: flex;
   align-items: stretch;
-  max-width: 46rem;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  overflow-x: auto;
-  min-height: 4rem;
+  width: max-content;
+  min-width: 100%;
 }
 .finder-col {
   list-style: none;
   margin: 0;
-  padding: 0.7rem 0;
-  min-width: 13rem;
-  max-width: 16rem;
+  padding: 0.45rem 0.3rem;
+  min-width: 12.75rem;
+  max-width: 15.5rem;
   flex: 0 0 auto;
   overflow-y: auto;
-  max-height: 21rem;
+  max-height: 22rem;
+  animation: col-in 0.3s var(--ease) both;
+}
+@keyframes col-in {
+  from { opacity: 0; transform: translateX(16px); }
 }
 .finder-col + .finder-col {
-  border-left: 1px solid var(--line);
+  border-left: 1px solid rgba(0, 0, 0, 0.06);
 }
 .finder-col-head {
-  font-family: var(--mono);
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.07em;
   color: var(--tertiary);
-  padding: 0.35rem 1.1rem 0.5rem;
+  padding: 0.45rem 0.75rem 0.3rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.finder-col-head > a {
+  color: var(--secondary);
+}
+/* The head link must not inherit the item-row styles from
+ * .finder-col > li > a — it is a caption, not a row. */
+.finder-col > li.finder-col-head > a {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  font-size: inherit;
+  letter-spacing: inherit;
+}
+.finder-col > li.finder-col-head > a:hover {
+  color: var(--accent);
+  text-decoration: none;
+  background: none;
 }
 .finder-col > li > a,
 .finder-col > li > .finder-note {
@@ -231,25 +340,45 @@ html:not(.js) .site-nav .has-children:focus-within > .col-panel {
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
-  padding: 0.42rem 1.1rem;
-  font-size: 0.92rem;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.9rem;
   letter-spacing: -0.005em;
   color: var(--text);
   white-space: nowrap;
-  border-radius: 6px;
-  margin: 0 0.4rem;
-  transition: background-color 0.12s ease;
+  border-radius: 8px;
+  margin: 0 0.15rem;
+  transition: background-color 0.12s ease, color 0.12s ease;
 }
-.finder-col > li > a:hover { text-decoration: none; background: rgba(0, 0, 0, 0.045); }
+.finder-col > li > a:hover { text-decoration: none; background: rgba(0, 0, 0, 0.05); }
+.finder-col > li > a:focus-visible { outline-offset: -2px; }
+/* Finder selection: solid system blue, white text. */
 .finder-col > li.selected > a {
-  background: rgba(0, 102, 204, 0.12);
-  color: var(--text);
+  background: var(--accent);
+  color: #fff;
 }
 .finder-col > li.has-kids > a::after {
   content: "\203a";
   color: var(--tertiary);
   font-size: 1.05rem;
   line-height: 1;
+}
+.finder-col > li.selected.has-kids > a::after {
+  color: rgba(255, 255, 255, 0.8);
+}
+/* Back chevron row: only used by the small-screen slide layout. */
+.finder-back-row { display: none; }
+.finder-back {
+  display: block;
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  font-size: 0.95rem;
+  text-align: left;
+  cursor: pointer;
 }
 .finder-col > li > .finder-note {
   color: var(--secondary);
@@ -562,6 +691,14 @@ footer {
 }
 footer p { margin-bottom: 0.4rem; color: var(--secondary); }
 footer nav { display: flex; gap: 1.2rem; margin-top: 0.8rem; flex-wrap: wrap; }
+footer nav a {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--secondary);
+}
+footer nav a:hover { color: var(--text); text-decoration: none; }
 
 /* ---------- page transitions ---------- */
 
@@ -582,6 +719,8 @@ body { animation: page-in 0.35s ease; }
   ::view-transition-new(root) { animation: none; }
   body { animation: none; }
   * { transition: none !important; }
+  .finder-col { animation: none; }
+  .finder { scroll-behavior: auto; }
 }
 
 
@@ -650,16 +789,7 @@ body { animation: page-in 0.35s ease; }
   .site-nav nav > ul::-webkit-scrollbar { display: none; }
   .site-nav nav > ul > li { flex: 0 0 auto; }
   .site-nav nav > ul > li > a { font-size: 0.86rem; white-space: nowrap; }
-  /* Finder panel on small screens: columns scroll horizontally with snap */
-  .finder {
-    padding: 0 1rem;
-    scroll-snap-type: x proximity;
-  }
-  .finder-col {
-    min-width: 11.5rem;
-    max-width: 78vw;
-    scroll-snap-align: start;
-  }
+  /* Finder panel on small screens: single-column slide, see mobile.css */
   .finder-col > li > a { font-size: 0.95rem; }
   /* search panel stays comfortable */
   .search-inner { padding: 1rem 1.25rem 0.4rem; }

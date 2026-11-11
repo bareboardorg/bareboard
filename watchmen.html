@@ -84,6 +84,20 @@
               </div>
             </div>
           </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
         <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
           <div class="col-panel">
             <div class="dropdown-inner">
@@ -310,7 +324,7 @@ If you can read this page, you can run it.</li>
 <tr><td><a href="#ch341a">CH341A programmers</a></td><td>SPI flash programmer</td><td>Chip closed</td><td>Behaviorally verifiable with open host tools</td><td><a href="#ch341a">W³</a></td></tr>
 <tr><td><a href="#saleae">Saleae Logic 8 / Pro 8</a></td><td>Logic analyzer</td><td>Closed</td><td>Good hardware; trust rests on the vendor</td><td><a href="#saleae">§1</a></td></tr>
 <tr><td><a href="#rigol">Rigol DS1054Z</a></td><td>Oscilloscope</td><td>Closed</td><td>The most-hacked scope in history; network-exposed</td><td><a href="#rigol">§2</a></td></tr>
-<tr><td><a href="#siglent">Siglent SDS1104X-E</a></td><td>Oscilloscope</td><td>Closed</td><td>Documented backdoor accounts — the textbook W³ case</td><td><a href="#siglent">§3</a></td></tr>
+<tr><td><a href="#siglent">Siglent SDS1104X-E</a></td><td>Oscilloscope</td><td>Closed</td><td>Documented backdoor accounts on the sibling SDS1202X-E — the textbook W³ case</td><td><a href="#siglent">§3</a></td></tr>
 <tr><td><a href="#hantek">Hantek 6022BE</a></td><td>USB scope</td><td>High</td><td>Community replaced the vendor firmware entirely</td><td><a href="#hantek">§4</a></td></tr>
 <tr><td><a href="#fluke">Fluke 87V</a></td><td>Multimeter</td><td>Docs partly public</td><td>The reference meter; 2014 trademark seizure on record</td><td><a href="#fluke">§5</a></td></tr>
 <tr><td><a href="#unite">UNI-T UT61E</a></td><td>Multimeter</td><td>High</td><td>The hacker's meter; EEPROM hack documented publicly</td><td><a href="#unite">§6</a></td></tr>
@@ -319,7 +333,7 @@ If you can read this page, you can run it.</li>
 <tr><td><a href="#pinecil">Pinecil</a></td><td>Soldering iron</td><td>Full</td><td>Open hardware, open firmware — the people's iron</td><td><a href="#pinecil">§9</a></td></tr>
 <tr><td><a href="#quick">Quick 861DW</a></td><td>Hot-air station</td><td>Closed</td><td>Clone epidemic; clones omit safety components</td><td><a href="#quick">§10</a></td></tr>
 <tr><td><a href="#jlink">Segger J-Link</a></td><td>Debug probe</td><td>Closed</td><td>Clone war; Segger's terms prohibit clones; FCC-exempt</td><td><a href="#jlink">§11</a></td></tr>
-<tr><td><a href="#stlink">ST-Link V2</a></td><td>Debug probe</td><td>Firmware closed</td><td>Clone pinouts inconsistent; genuine ID 0483:374B</td><td><a href="#stlink">§12</a></td></tr>
+<tr><td><a href="#stlink">ST-Link V2</a></td><td>Debug probe</td><td>Firmware closed</td><td>Clone pinouts inconsistent; USB ID does not authenticate (clones report the same 0483:3748)</td><td><a href="#stlink">§12</a></td></tr>
 <tr><td><a href="#bmp">Black Magic Probe</a></td><td>Debug probe</td><td>Full (GPLv3)</td><td>Fully auditable — build it yourself</td><td><a href="#bmp">§13</a></td></tr>
 <tr><td><a href="#ftdi">FTDI FT232RL</a></td><td>USB-serial chip</td><td>Chip closed</td><td>The 2014 driver kill-switch — the canonical case</td><td><a href="#ftdi">§14</a></td></tr>
 <tr><td><a href="#wch">WCH CH340 / CH341A</a></td><td>USB chips</td><td>Chips closed</td><td>macOS driver saga; community driver is the fix</td><td><a href="#wch">§15</a></td></tr>
@@ -337,7 +351,7 @@ If you can read this page, you can run it.</li>
 <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/E-mu_Systems_Emulator_II_Serial_No._729_-_closeup_-_emulator_2_memory_option_board%2C_with_Saleae_Logic_analyzer_connected_to_one_of_the_many_DRAM_chips_%282011-01-22_19.25.56_by_John_R._Southern_%40Flickr5404785842%29.jpg/1280px-thumbnail.jpg" alt="Saleae Logic analyzer connected to a board under test" loading="lazy">
 <p class="small">Photo: John R. Southern from Toronto, Ontario, Canada, CC BY-SA 2.0, via <a href="https://commons.wikimedia.org/wiki/File:E-mu_Systems_Emulator_II_Serial_No._729_-_closeup_-_emulator_2_memory_option_board,_with_Saleae_Logic_analyzer_connected_to_one_of_the_many_DRAM_chips_(2011-01-22_19.25.56_by_John_R._Southern_@Flickr5404785842).jpg">Wikimedia Commons</a>. Pictured: the original Saleae Logic in use, clipped onto a board.</p>
 <p><strong>What it is:</strong> the industry-standard USB logic analyzer — 8 digital
-channels (Pro adds analog, ±10 V, 12-bit, up to 500 MS/s). The software is the product:
+channels (Pro adds analog, ±10 V, 12-bit, up to 500 MS/s digital — analog sampling is 50 MS/s). The software is the product:
 Logic 2, with an SDK for custom protocol analyzers [46].</p>
 <p><strong>How open is it:</strong> hardware closed — no public schematics, no firmware
 source. The software is proprietary. What <em>is</em> public: an EEVblog teardown of the
@@ -410,7 +424,11 @@ telnet port 23</strong> on the local network; the EasyScopeX control software an
 without authentication and speaks unencrypted TCP; BusyBox, glibc, and the kernel are
 outdated with known vulnerabilities; no patch at disclosure. SEC Consult's verdict:
 "all procedures executed with this device are untrustworthy" [8]. No public litigation
-found.</p>
+found. <strong>Model gap, stated plainly:</strong> the documented backdoor case is the
+SDS1202X-E — the 2-channel sibling of this section's 4-channel SDS1104X-E, not the
+1104X-E itself. The two share the X-E platform and firmware lineage, which is why the
+case belongs in this audit, but no equivalent finding has been published for the
+SDS1104X-E itself.</p>
 <p><strong>Watch-outs:</strong> this is the textbook case of why W³ exists — a bench
 instrument with hardcoded root backdoors, shipped to labs. Do not attach it to a
 network you don't control. Treat measurements from a network-attached Siglent scope
@@ -598,7 +616,7 @@ game. The V2 boot-logo feature is still in progress.</p>
 </ol>
 
 <h3 id="quick">§10 — Quick 861DW</h3>
-<p><strong>What it is:</strong> 1000 W hot-air rework station, 100–480 °F, digital PID —
+<p><strong>What it is:</strong> 1000 W hot-air rework station, 100–500 °C, digital PID —
 the repair-shop standard. Genuine units run roughly $150–220 depending on market;
 clones are much cheaper.</p>
 <p><strong>How open is it:</strong> closed — no public schematics. Community knowledge
@@ -610,7 +628,7 @@ up (DIY step 2). Genuine units are made in the Wujin High-Tech Development Zone,
 Changzhou, Jiangsu, China. <strong>Controversies &amp; litigation (checked 2026-10-08):</strong>
 the clone epidemic — community verdict: "It's not serviceable. If you lose the heater
 element, throw it in the trash and buy another" [32]. No litigation found.</p>
-<p><strong>Watch-outs:</strong> a hot-air station is mains plus 480 °C. A clone that
+<p><strong>Watch-outs:</strong> a hot-air station is mains plus up to 500 °C. A clone that
 omits safety components is a fire risk. Check the back label; buy from authorized
 distributors.</p>
 <p><strong>Do it yourself — the basic audit:</strong></p>
@@ -657,8 +675,10 @@ the free on-board debugger on every Nucleo board.</p>
 host tools open (OpenOCD, STM32CubeProgrammer). ST publishes an official guide: "How to
 recognize a genuine ST-Link/V2 versus a cloned one" [37].</p>
 <p><strong>Public record:</strong> <strong>FCC ID:</strong> not yet verified — look it
-up (DIY step 2). Genuine units carry USB ID 0483:374B; clones commonly report
-0483:3748 [38]. <strong>Controversies &amp; litigation (checked 2026-10-08):</strong>
+up (DIY step 2). Genuine standalone ST-LINK/V2 units report USB ID 0483:3748 —
+and so do the clones, which copy it, so the ID alone authenticates nothing.
+0483:374B is a different device: the STLINK-V2-1 soldered onto Nucleo/Discovery
+boards [38]. <strong>Controversies &amp; litigation (checked 2026-10-08):</strong>
 the clone epidemic — inconsistent pinouts (SWCLK/SWIO swapped between clones from the
 same seller), the SWO pin missing, RST wired as SWIM reset; ST supports genuine units
 only [37][38]. No litigation found.</p>
@@ -667,7 +687,7 @@ when they shouldn't. A clone probe on a Blue Pill (itself often a clone STM32) i
 stack of unknowns.</p>
 <p><strong>Do it yourself — the basic audit:</strong></p>
 <ol>
-<li>Plug it in. On Linux, type <code>lsusb</code> — look for "STMicroelectronics ST-LINK/V2", ID 0483:374b.</li>
+<li>Plug it in. On Linux, type <code>lsusb</code> — look for "STMicroelectronics ST-LINK/V2", ID 0483:3748. Expect clones to show the identical ID: it proves nothing either way. (ID 0483:374B would mean a board-mounted STLINK-V2-1, not a standalone V2.) Judge the unit by the checks below, not by its USB ID.</li>
 <li>Check the SWO pin is present on the header — clones often omit it [38].</li>
 <li>Try a firmware update with the official ST tool — clones often fail.</li>
 <li>If it works, it works — but record which unit it is, because clones vary.</li>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What You Can Change From the Joystick Itself &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="On-board programming for owners: the settings menus already built into your power wheelchair hand control &mdash; R-net CJSM2, DX2, LiNX, Q-Logic 3 and MK6i &mdash; what each menu lets you change, and what stays locked behind the dealer key.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="What You Can Change From the Joystick Itself">
+<meta property="og:description" content="The menus already built into the hand control you hold every day, system by system: what is open, and what the dealer key still guards.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-onboard.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <h1>What You Can Change From the Joystick Itself</h1>
+    <p class="lede">Before the dealer&rsquo;s laptop, before the dongle, there is a smaller door: the settings menus already built into the hand control you hold every day. Every major control system has one. None of them were ever walked through for owners. Here they are, system by system, exactly as the manufacturers printed them in their own manuals.</p>
+    <p>First, the words. The <strong>hand control</strong> (also called the joystick module, or the <strong>remote</strong>) is the unit in front of you: joystick, buttons, and screen. The <strong>drive screen</strong> is its home screen &mdash; the one that shows your speed, battery, and current <strong>profile</strong>. A profile is a saved set of drive behaviour &mdash; indoor, outdoor, attendant &mdash; built by whoever programmed the chair; you can switch between profiles, but on most systems you cannot edit what is inside one from the hand control. <strong>On-board programming</strong>, shortened to <strong>OBP</strong>, is a programming mode built into the hand control itself, as opposed to programming done from a separate tool. A <strong>mode</strong> is a job the hand control is doing right now &mdash; driving, seating, settings &mdash; and most hand controls step through modes with a Mode button.</p>
+    <p>The stance of this page is narrow and deliberate: <strong>here is what the maker already left open to you.</strong> Every button sequence below is printed in a published owner manual or a published programming guide, and each section names its source. Where a menu exists but a dealer-set switch decides whether you may open it, this page says exactly that &mdash; it does not teach you to defeat the switch. And the safety line from <a href="/pmd-settings.html">the settings page</a> stands in full: some settings can break hardware, including the seating actuator rule &mdash; on systems that sense the end of an actuator&rsquo;s travel by motor current, actuator acceleration and deceleration must stay at 100%. That rule, and what each deep setting means, lives on <a href="/pmd-settings.html">the settings page</a>; this page does not re-teach deep settings. For the tools and permission tiers behind the locked doors, see <a href="/pmd-programmers.html">the programmers page</a>.</p>
+  </section>
+
+  <section id="r-net">
+    <h2>Curtiss-Wright R-net (CJSM2 colour-screen joystick): two doors</h2>
+    <p>R-net chairs with the colour-screen CJSM2 joystick have <em>two</em> menus, and they are not the same door. The <strong>Settings Menu</strong> is the owner&rsquo;s menu, printed in the chair&rsquo;s user manual. <strong>OBP</strong> is the programming menu documented in Curtiss-Wright&rsquo;s <a href="/library/collected-public-docs/pmd/pg-drives_r-net_programming.pdf">On-Board Programming manual SK78571</a> &mdash; and whether OBP opens at all was decided when the chair was programmed.</p>
+    <h3>Door one: the Settings Menu (owner level)</h3>
+    <p>Permobil&rsquo;s <a href="https://documentation.permobil.com/manuals/341124.pdf">CJSM2 user manual</a> (order no. 341124) describes it this way: &ldquo;The settings menu permits the user to change, for example the clock, the display brightness, and the background color.&rdquo; On a Permobil-fitted panel:</p>
+    <ol>
+      <li>Press and hold the function button for hazard lights to open the Settings Menu. If your panel&rsquo;s function buttons are programmed with seat functions instead, first press the Mode button one or more times until the settings icon appears on the screen, then press and hold the function button for hazard lights.</li>
+      <li>Move the joystick to scroll through the menu. Push the joystick right to enter a submenu.</li>
+      <li>To leave, select <strong>Exit</strong> at the bottom of the menu and push the joystick right.</li>
+    </ol>
+    <p>What is inside, per that manual:</p>
+    <ul>
+      <li><strong>Time</strong> &mdash; <em>Set Time</em> sets the clock; <em>Display Time</em> chooses 12-hour, 24-hour, or off.</li>
+      <li><strong>Distance</strong> &mdash; the <strong>odometer</strong> (the chair&rsquo;s mileage counter). <em>Total Distance</em> is stored in the power module and counts everything driven while that module has been fitted; <em>Trip Distance</em> counts since the last reset and can be cleared by you with a right joystick push; <em>Display Distance</em> chooses which of the two the screen shows.</li>
+      <li><strong>Backlight</strong> &mdash; screen brightness from 0% to 100%; <em>Auto Backlight</em> lets the panel&rsquo;s light sensor adjust brightness for you (on or off); <em>Backlight Time</em> sets how long the backlight stays on after the last input, from 0 to 240 seconds.</li>
+      <li><strong>Bluetooth and Infrared setup</strong> (on panels fitted with them) &mdash; pairing devices, and learning or deleting infrared codes for controlling household devices.</li>
+      <li><strong>System</strong> &mdash; read-only: <em>Diagnostics</em> shows the control system&rsquo;s diagnostic information, and <em>Timers</em> shows how many hours the chair has been driven. (What the diagnostic codes mean is on <a href="/pmd-fault-codes.html">the fault codes page</a>.)</li>
+    </ul>
+    <p>Panels differ between chair brands. PGDT&rsquo;s own R-net CJSM2 user guide opens the same menu by pressing and holding the top left-hand screen button for 1 second. The menu contents are the same family; the button that opens it is the part your chair&rsquo;s own manual decides.</p>
+    <h3>Door two: OBP (only if it was left enabled)</h3>
+    <p>The <a href="/library/collected-public-docs/pmd/pg-drives_r-net_programming.pdf">OBP manual SK78571</a> is blunt about the gate: &ldquo;OBP in the field can be entered via two methods &ndash; connection of a hardware dongle or a keycode. The actual method required is set by the factory programming of the control system.&rdquo; A <strong>dongle</strong> is a small hardware plug that carries programming permission (the tiers are mapped on <a href="/pmd-programmers.html">the programmers page</a>). The manual also states: &ldquo;OBP is not possible using an LED Joystick Module.&rdquo; If your chair has the LED joystick, this door does not exist.</p>
+    <p>If the dongle method is set, the published sequence is:</p>
+    <ol>
+      <li>Turn off the control system.</li>
+      <li>Insert the R-net Dongle along the communication cables in the system configuration.</li>
+      <li>Turn on the control system.</li>
+      <li>After initialization, press the Mode key until the OBP screen is reached.</li>
+    </ol>
+    <p>If the keycode method is set, the published sequence is:</p>
+    <ol>
+      <li>Hold down the Horn button, then hold down the On/Off button until there is a short bleep. The normal power-up sound occurs before this bleep.</li>
+      <li>Release the Horn button, but keep holding the On/Off button until there are two further short bleeps.</li>
+      <li>Release the On/Off button. There is a longer bleep, and OBP mode is entered. (A dongle also opens OBP when the keycode method is set.)</li>
+    </ol>
+    <p>PGDT prints the consequence of that second method in its own manual, verbatim: &ldquo;If the keycode method is set, then it may be possible for a wheelchair user to gain entry to the OBP function. PGDT accept no liability for losses of any kind if this method of OBP is set. PGDT also accept no liability for losses of any kind if OBP access is gained by unauthorised personnel obtaining a dongle.&rdquo; Read that carefully: the maker knows the keycode door can be opened by the rider. Whether it is open on your chair was still someone else&rsquo;s choice.</p>
+    <p>Inside OBP, navigation is all joystick: forward and reverse deflections move up and down the parameter list; a left deflection on a highlighted parameter title shows its full name, and on the profiled screens a second left deflection goes back a screen. The Speed buttons change a value. The manual&rsquo;s storage instruction matters: &ldquo;To ensure all new values are stored correctly, exit OBP mode with a series of left hand joystick deflections.&rdquo; There is no published &ldquo;exit without saving&rdquo; path &mdash; leaving any other way is exactly what that sentence warns against.</p>
+    <p>What OBP contains is the deep parameter tree &mdash; speeds, acceleration, deceleration, torque, tremor damping, seating actuator speeds, profile enable, and more. That tree is translated setting by setting on <a href="/pmd-settings.html">the settings page</a>, and the manual&rsquo;s own warning, verbatim, is why this page does not walk you through changing them: &ldquo;Programming should only be conducted by healthcare professionals with in-depth knowledge of PGDT control systems. Incorrect programming could result in an unsafe set-up of a wheelchair for a user. PGDT accept no responsibility for losses of any kind if the programming of the control system is altered from the factory pre-set values.&rdquo; Knowing the door exists, knowing whether yours is set to dongle or keycode, and knowing the values you were fitted with &mdash; that is owner knowledge. The values themselves belong in a conversation with the clinician who fitted you.</p>
+  </section>
+
+  <section id="dx2">
+    <h2>Dynamic Controls DX2: there is no menu &mdash; and that is the finding</h2>
+    <p>The DX2 hand controls covered by Dynamic&rsquo;s <a href="/library/collected-public-docs/pmd/dynamic-controls_dx2-rem42x_technical.pdf">DX2-REM42x manual (GBK65568)</a> and <a href="/library/collected-public-docs/pmd/dynamic-controls_dx2-acs2_technical.pdf">DX2-ACS2 installation manual (GBK65548)</a> are LED remotes: rows of lights and buttons, no screen, no settings menu, no clock to set. The ACS2 manual defines the system&rsquo;s position in one sentence, verbatim: &ldquo;The term &lsquo;programming&rsquo; used in this manual refers to adjusting parameters and configuring options to suit an application. &lsquo;Programming&rsquo; does not change or alter any software within the controller and is performed using a controlled programming tool available only to authorised personnel.&rdquo; Every parameter change on DX2 goes through the Wizard PC software or the DX Hand Held Programmer, behind a dealer or OEM dongle &mdash; the full tier map is on <a href="/pmd-programmers.html">the programmers page</a>.</p>
+    <p>What the REM42x buttons themselves do, per the manual, is operation, not programming:</p>
+    <ol>
+      <li><strong>Choose a drive profile:</strong> press <strong>+</strong> or <strong>&minus;</strong> on the Drive Profile Selection button. The remote supports 5 drive profiles, and the lit Drive Profile LEDs show which one is active. The manual&rsquo;s own framing: a drive profile is &ldquo;a specific drive setting (slow or fast, indoors or outdoors) that your therapist or dealer can adjust to suit your personal needs and preference.&rdquo; You pick among them; you cannot edit inside one.</li>
+      <li><strong>Run the seating:</strong> press <strong>+</strong> or <strong>&minus;</strong> on the Actuator Selection button to enter Seating Mode, press <strong>+</strong>/<strong>&minus;</strong> or push the joystick left/right to choose among up to 4 seating functions, then push the joystick forward or reverse to move the selected function. Pressing the Drive Profile Selection button returns you to Driving Mode, in the profile you were in before.</li>
+      <li><strong>Lights (REM420 only):</strong> the side light button switches the side/positioning lights; the indicator buttons switch the turn indicators; the hazard button switches the hazard lights.</li>
+      <li><strong>Lock the chair:</strong> if the Lock Enable parameter has been set to Yes by the programmer, hold the On/Off button for more than 4 seconds while the system is on. The system turns off, and after 4 seconds all the Drive Profile LEDs and the Lock LED light. <strong>To unlock:</strong> press On/Off, then press the Horn button twice within 10 seconds while the Lock LED flashes; miss the 10 seconds and the system turns off again.</li>
+    </ol>
+    <p>Two of those everyday features are themselves gated: the lock only exists if a programmer set Lock Enable to Yes, and sleep behaviour, seating availability, and which profiles exist at all are likewise parameter decisions. On DX2, the honest summary is that the hand control is a set of switches into someone else&rsquo;s configuration.</p>
+  </section>
+
+  <section id="linx">
+    <h2>Dynamic Controls LiNX (REM400 / REM500 touchscreens): a real settings menu</h2>
+    <p>LiNX chairs with the DLX-REM400 or DLX-REM500 touchscreen remotes have the most complete owner menu of any system here, documented in Invacare&rsquo;s <a href="https://www.invacare.ie/sites/ie/files/csv_migration/product_docs/technical_docs/DTEC011199_1637423~M.pdf">LiNX REM400/REM500 User Manual (1637423)</a> &mdash; a manual whose cover states it &ldquo;MUST be given to the user of the product.&rdquo; A <strong>function card</strong> is one full screen of the remote dedicated to one job &mdash; a drive card for driving, a seating card for seat movement &mdash; and you move between cards and profiles by swiping.</p>
+    <p>To open the Menu screen:</p>
+    <ol>
+      <li>Tap and hold the navigation button until the Menu screen appears.</li>
+      <li>The Menu screen offers Clock, Screen Lock, Glove Mode, Settings, and Odometer. Tap the entry you want.</li>
+      <li>Tap the close button to leave the Menu screen.</li>
+    </ol>
+    <p>What you can change there, per the manual:</p>
+    <ul>
+      <li><strong>Clock:</strong> tap the clock to edit the time; arrows adjust hours and minutes independently, and a switch toggles between 12-hour and 24-hour display.</li>
+      <li><strong>Settings &rarr; Display:</strong> <em>Brightness</em> (a slider); <em>Speedo/Odo Display</em> (show or hide speedometer and odometer information on drive cards); <em>Language</em> (the Menu screen&rsquo;s interface language); <em>Units</em> (metric or imperial).</li>
+      <li><strong>Settings &rarr; Audible Cues:</strong> turn the remote&rsquo;s spoken-style sound cues on or off, adjust their tempo, and set their volume.</li>
+      <li><strong>Settings &rarr; Interaction:</strong> <em>Tap-Only Mode</em> (tap only, instead of swipe-and-tap); <em>Tap Zone</em> (how large an area around your first touch counts as a tap &mdash; the manual recommends a low value for good dexterity, a high value for poor dexterity); <em>Left Hand Mode</em> (mirrors the controls to the left side of the screen).</li>
+      <li><strong>Settings &rarr; Connectivity:</strong> the Bluetooth connectivity settings for pairing phones and computers.</li>
+      <li><strong>Odometer:</strong> view total distance and the trip meter, reset the trip meter to zero, and switch the displayed units between miles and kilometres. The total cannot be reset from this screen &mdash; the manual says, verbatim in substance, to contact your provider to reset that value.</li>
+      <li><strong>Glove Mode</strong> makes the touchscreen more sensitive so it responds through gloves, and <strong>Screen Lock</strong> freezes the touchscreen against accidental touches (rain included); turning the remote off and on clears the lock.</li>
+    </ul>
+    <p>LiNX also gives the owner one genuine piece of programming: <strong>memory positions</strong>. A memory position is a saved seat position &mdash; tilt, recline, legrests and all &mdash; that the chair returns to on one command. Dynamic&rsquo;s published <a href="/library/collected-public-docs/pmd/dynamic-controls_linx_technical-appnote.pdf">LiNX application note, &ldquo;Operating and Updating Memory Positions&rdquo;</a>, documents the owner updating those positions from the remote. On a REM400/500:</p>
+    <ol>
+      <li>Reposition the seating to the new target position using the normal seating motions.</li>
+      <li>Open the settings menu on the remote module.</li>
+      <li>Select <strong>Update Position</strong>; a list of pre-defined memory positions is displayed.</li>
+      <li>Select the memory position you want to overwrite.</li>
+      <li>An overlay asks you to confirm: select <strong>Yes</strong> to overwrite it with your current seat position (it is usable immediately), or <strong>No</strong> to go back to the list without changing anything. That No is this menu&rsquo;s exit-without-saving.</li>
+    </ol>
+    <p>On a button remote (REM2xx), the same update is a button sequence: activate the memory position you want to update (a momentary activation is enough), reposition the seat, then press and hold the bottom of the drive function selector and the seat function selector rocker switches simultaneously for five seconds. The rocker backlights pulse while you hold; a faster triple pulse confirms success, and an alternating left/right pulse means the update failed.</p>
+    <p>The gate, stated exactly as Dynamic states it: only memory positions that use angle-sensor feedback <em>and</em> have the parameter <strong>&ldquo;Allow Occupant to Update Position&rdquo;</strong> enabled can be updated by the user, and the application note adds that &ldquo;some memory positions may be configured by the distributor so that they cannot be updated by the user.&rdquo; The position names, too, can only be changed from a LiNX Access tool, not from the remote. Everything deeper &mdash; drive performance, speeds, seating limits &mdash; stays in the LiNX Access tools behind the Access Key, and the user manual carries the matching warning, verbatim: &ldquo;Wrong settings can make the power wheelchair uncontrollable or unstable. An uncontrolled or unstable power wheelchair can cause an unsafe situation such as a crash.&rdquo; The service side of this system is Dynamic&rsquo;s <a href="/library/collected-public-docs/pmd/invacare_linx_service.pdf">LiNX service manual</a>, preserved in the library.</p>
+  </section>
+
+  <section id="q-logic">
+    <h2>Quantum Q-Logic 3: the Settings screen</h2>
+    <p>Quantum&rsquo;s Q-Logic 3 hand control has a Settings screen documented for owners in the <a href="https://quantumrehab.co.uk/wp-content/uploads/2025/11/us_q-logic3_boi_om.pdf">Q-Logic 3 Basic Operation Instructions (INFMANU4809, Rev D)</a>. Two everyday controls come first, because they are the ones riders actually mean by &ldquo;settings&rdquo;: the <strong>speed adjustment knob</strong> raises and lowers the chair&rsquo;s speed within the active profile (turn it up to increase, down to decrease; the speed indicator bar follows), and the <strong>drive profiles</strong> &mdash; up to four &mdash; are selected by pushing the On/Off and Mode Select Lever up repeatedly to cycle through them, or by pressing the Key 1 select button to jump straight to profile 1. The manual is explicit about the boundary, verbatim in substance: &ldquo;Drive profiles are set by your Quantum Rehab Provider. Contact your Quantum Rehab Provider to change or add a drive profile.&rdquo; You choose among profiles; the provider builds them.</p>
+    <p>To change display, sound, or clock settings, the manual&rsquo;s path is the same four steps for every subject:</p>
+    <ol>
+      <li>Push the Home Screen button.</li>
+      <li>Push the joystick left to enter the Settings screen.</li>
+      <li>Push the joystick up or down through the available setting subjects.</li>
+      <li>When the desired subject is highlighted, push the joystick right to enter that subject. At any time, a left command returns to the previous menu &mdash; that is the way back out.</li>
+    </ol>
+    <p>The subjects the manual walks through:</p>
+    <ul>
+      <li><strong>Display &rarr; Backgrounds</strong> &mdash; the screen background.</li>
+      <li><strong>Display &rarr; Brightness</strong> &mdash; the display includes a sensor that adjusts brightness for daytime or nighttime; <em>Brightness Day</em> sets brightness for bright light and <em>Brightness Night</em> for low light. Inside the subject: push the joystick right to switch between day and night, up or down to adjust (each push changes the value by 5%), and left to exit and accept the setting.</li>
+      <li><strong>Display &rarr; Set Time</strong> &mdash; the clock. Push the joystick left or right to highlight the value to change, up or down to adjust it, then highlight <strong>Set</strong> to keep the new time or <strong>Cancel</strong> to discard it, and push up to perform the highlighted function. Cancel is this system&rsquo;s printed exit-without-saving.</li>
+      <li><strong>Sound &rarr; System Beeps</strong> &mdash; settings with a checkbox are switched by a right command: one right command checks (enables) the setting, another unchecks (disables) it.</li>
+      <li><strong>Bluetooth operation</strong> &mdash; which environmental functions (the chair&rsquo;s built-in Bluetooth control of paired devices) are available on the Environmental Functions screen.</li>
+    </ul>
+    <p>One Q-Logic 3 setting deserves its own paragraph, because the owner holds the key to the dealer&rsquo;s door: <strong>Prog Access</strong>. The manual explains that dealer programming through a paired Windows or iOS device (Prog Access Econ-w / Econ-i) must be enabled on the hand control before it works &mdash; verbatim: &ldquo;Prog Access Econ-w must be enabled to allow the dealer of medical equipment access to the Q-Logic 3 parameters for adjustment. If Prog Access Econ-w is not enabled (even if the dealer of medical equipment has been paired with the Q-Logic 3 previously), the Q-Logic 3 cannot be programmed by the dealer of medical equipment.&rdquo; The same text is printed for the iOS version. Programming access over Bluetooth is, on this system, opt-in from the rider&rsquo;s own screen.</p>
+    <p>The manual also prints, verbatim, why the drive parameters themselves are not on that screen: &ldquo;The controller program can affect speed acceleration, deceleration, dynamic stability, and braking. If it is programmed incorrectly or outside of the safe limits as determined by your healthcare professional, it can create a dangerous situation. Only your Quantum Rehab Provider or a trained technician should program your controller.&rdquo; (The chair-level manual for a Q-Logic 3 chair, the <a href="/library/collected-public-docs/pmd/quantum_q6-edge-2_owner.pdf">Q6 Edge 2.0 owner&rsquo;s manual</a>, is preserved in the library.)</p>
+  </section>
+
+  <section id="mk6i">
+    <h2>Invacare MK6i (colour MPJ+ joystick): the 10-second menu</h2>
+    <p>MK6i chairs with the colour MPJ+ joystick (Invacare&rsquo;s documents also print the name as CMPJ+) hide their owner menu behind a long press, documented in Invacare&rsquo;s MK6i Electronics Field Reference Guide (part no. 1141471), section 16, &ldquo;User Settings/Diagnostics&rdquo;:</p>
+    <ol>
+      <li>Depress (press and hold) the Mode button of the MPJ+ joystick for 10 seconds. The User Settings screen appears, with four choices.</li>
+      <li>Move the joystick forward or reverse to scroll through the list.</li>
+      <li>Move the joystick to the right to select a setting.</li>
+    </ol>
+    <p>The four choices, with the guide&rsquo;s own descriptions:</p>
+    <ul>
+      <li><strong>Set Date and Time</strong> &mdash; &ldquo;Sets the clock on the color MPJ+ joystick. Adds date and time stamp to error codes.&rdquo; Move the joystick up or down to change the highlighted value (hour, minute, AM/PM, month, day, year), right or left to select a value or the Set icon, then highlight Set and move the joystick forward to enter the new date and time.</li>
+      <li><strong>Battery Voltage</strong> &mdash; &ldquo;Displays current battery voltage. This is a diagnostic test a user can perform prior to a service call.&rdquo;</li>
+      <li><strong>Fault Codes</strong> &mdash; displays the chair&rsquo;s fault codes, each stamped with its date and time, which the guide notes &ldquo;can be helpful to a provider prior to making a service call.&rdquo; The fault log screen itself prints its own exit: &ldquo;MODE to Exit.&rdquo; (The codes themselves are translated on <a href="/pmd-fault-codes.html">the fault codes page</a>.)</li>
+      <li><strong>Connected Devices</strong> &mdash; displays what devices are connected to the system.</li>
+    </ul>
+    <p>That is the whole owner menu: a clock and three read-only windows. Everything else on MK6i lives in the MK6i Easy Remote Programmer, and the guide draws the tier line inside the fault log itself, verbatim: &ldquo;A professional memory card is required in the MK6i Programmer to view error code and troubleshooting information.&rdquo; You may read your own fault codes from the joystick, date-stamped, for free. The page that explains what they mean sits behind the professional card &mdash; the arrangement <a href="/pmd-programmers.html">the programmers page</a> maps in full.</p>
+  </section>
+
+  <section id="summary">
+    <h2>The summary: five systems, five doors</h2>
+<table>
+<thead><tr><th>System</th><th>The door in</th><th>What is open</th><th>What is still locked</th></tr></thead>
+<tbody>
+<tr><td><strong>R-net CJSM2</strong> (Curtiss-Wright)</td><td>Settings Menu: hold the hazard function button (Permobil panels). OBP: dongle + Mode key, or the Horn + On/Off keycode &mdash; whichever the factory programming set</td><td>Clock and format, backlight and auto-backlight, odometer display and trip reset, Bluetooth/IR setup, read-only diagnostics and timers. OBP, where enabled, exposes the full parameter tree</td><td>OBP itself, if the dongle method was set and you hold no dongle; all OBP on LED joysticks (not possible); the deep values are published as professional-only &mdash; see <a href="/pmd-settings.html">the settings page</a></td></tr>
+<tr><td><strong>DX2</strong> (Dynamic Controls)</td><td>There is no menu. Buttons only</td><td>Drive profile selection (+/&minus;), seating operation, lights on the REM420, and the lock/unlock sequence if Lock Enable was set</td><td>Everything else: all parameters sit in Wizard / DX-HHP behind dealer or OEM dongles</td></tr>
+<tr><td><strong>LiNX REM400/500</strong> (Dynamic Controls)</td><td>Tap and hold the navigation button for the Menu screen</td><td>Clock, brightness, language, units, audible cues, tap interaction and left-hand mode, odometer and trip reset, glove mode, screen lock &mdash; plus updating memory seat positions where &ldquo;Allow Occupant to Update Position&rdquo; was enabled</td><td>Drive and seating performance parameters (LiNX Access Key); total odometer reset; memory-position names; memory positions the distributor set as non-updatable</td></tr>
+<tr><td><strong>Q-Logic 3</strong> (Quantum / Curtis)</td><td>Home button, then joystick left for the Settings screen</td><td>Backgrounds, day/night brightness, clock (with Set/Cancel), system beeps, Bluetooth environmental-function availability, speed knob within the profile, profile selection, and enabling or disabling dealer Prog Access</td><td>The profiles themselves and all drive programming: provider-only, by the manual&rsquo;s own warning</td></tr>
+<tr><td><strong>MK6i colour MPJ+</strong> (Invacare)</td><td>Hold the Mode button for 10 seconds</td><td>Set date and time; read battery voltage, date-stamped fault codes, and connected devices</td><td>All adjustments (MK6i programmer); even the fault log&rsquo;s causes and fixes require a professional memory card in that programmer</td></tr>
+</tbody>
+</table>
+    <p>The pattern across all five is the same one the rest of this section documents: the cosmetic layer &mdash; clocks, brightness, backgrounds &mdash; was left open almost everywhere, because it costs the maker nothing. The layer that decides how the chair drives was left open almost nowhere, and where a door into it exists at all (R-net&rsquo;s keycode, LiNX&rsquo;s memory positions, Q-Logic&rsquo;s Prog Access switch), whether it works on your chair was decided by whoever programmed it. Your rights in that arrangement are on <a href="/repair-rights.html">the repair rights page</a>.</p>
+  </section>
+
+  <section id="sources">
+    <h2>Sources</h2>
+    <p>Every menu path on this page comes from one of these published documents. Library copies are the site&rsquo;s preserved copies; the rest are the publishers&rsquo; own files.</p>
+    <ul>
+      <li>Curtiss-Wright PG Drives Technology, <a href="/library/collected-public-docs/pmd/pg-drives_r-net_programming.pdf">R-net On-Board Programming Manual SK78571</a> (library copy) &mdash; OBP entry by dongle and keycode, OBP navigation and storage, the parameter tree, and the warnings quoted verbatim.</li>
+      <li>Permobil, <a href="https://documentation.permobil.com/manuals/341124.pdf">Power Platform R-net LCD (CJSM2) User Manual, order no. 341124</a> (publisher&rsquo;s PDF) &mdash; the Settings Menu path and its Time, Distance, Backlight, Bluetooth, Infrared, and System submenus.</li>
+      <li>Dynamic Controls, <a href="/library/collected-public-docs/pmd/dynamic-controls_dx2-rem42x_technical.pdf">DX2-REM42x manual GBK65568</a> and <a href="/library/collected-public-docs/pmd/dynamic-controls_dx2-acs2_technical.pdf">DX2-ACS2 Installation Manual GBK65548</a> (library copies) &mdash; profile selection, seating operation, lights, lock/unlock, and the authorised-personnel programming definition.</li>
+      <li>Invacare, <a href="https://www.invacare.ie/sites/ie/files/csv_migration/product_docs/technical_docs/DTEC011199_1637423~M.pdf">LiNX DLX-REM400 / DLX-REM500 User Manual 1637423</a> (publisher&rsquo;s PDF) &mdash; the Menu screen, Configuring Time, Configuring Settings, and Configuring Odometer; Dynamic Controls, <a href="/library/collected-public-docs/pmd/dynamic-controls_linx_technical-appnote.pdf">LiNX Application Note: Operating and Updating Memory Positions</a> (library copy) &mdash; the REM400/500 and REM2xx memory-position update sequences and the &ldquo;Allow Occupant to Update Position&rdquo; gate; Invacare, <a href="/library/collected-public-docs/pmd/invacare_linx_service.pdf">LiNX service manual</a> (library copy).</li>
+      <li>Quantum Rehab, <a href="https://quantumrehab.co.uk/wp-content/uploads/2025/11/us_q-logic3_boi_om.pdf">Q-Logic 3 Basic Operation Instructions, INFMANU4809 Rev D</a> (publisher&rsquo;s PDF) &mdash; the Settings screen path, Display/Sound/Set Time subjects, profile selection, Prog Access, and the programming warning quoted verbatim; Quantum Rehab, <a href="/library/collected-public-docs/pmd/quantum_q6-edge-2_owner.pdf">Q6 Edge 2.0 Owner&rsquo;s Manual</a> (library copy).</li>
+      <li>Invacare, MK6i Electronics Field Reference Guide, part no. 1141471, section 16 &mdash; the MPJ+ User Settings menu, its four choices, and the professional memory card requirement. (No preserved or publisher copy is linked yet; it is logged as a collection target.) PGDT&rsquo;s R-net CJSM2 user guide is likewise cited for the screen-button variant of the Settings Menu path and is a collection target.</li>
+    </ul>
+    <p>More of the preserved PMD document collection is indexed at <a href="/library-hub.html">the library hub</a>.</p>
+  </section>
+
+  <section>
+    <p><a href="/pmd.html">&larr; Back to PMD</a> &middot; <a href="/pmd-settings.html">The settings, in plain language &rarr;</a> &middot; <a href="/pmd-programmers.html">Programmers, dongles and access tiers &rarr;</a></p>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

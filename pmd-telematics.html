@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What Your Chair Phones Home &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="Telematics units on connected power chairs: the radios the FCC exhibits document, what Permobil's own privacy notices say is reported, where it goes, and what an owner can and cannot switch off.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="What Your Chair Phones Home">
+<meta property="og:description" content="What a connected power chair transmits, in the makers' own documents &mdash; and what has an off switch.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-telematics.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>What Your Chair Phones Home</h1>
+    <p class="lede">Some power wheelchairs carry a small radio box that reports on the chair &mdash; where it is, how its batteries are doing, how it has been driven and seated, and what has gone wrong with it. This page says what that box is, what the manufacturer&rsquo;s own documents say it sends, where the data goes, and which parts of it you can switch off. Where the public record runs out, this page says so instead of guessing.</p>
+    <p><strong>Words used on this page, defined once:</strong></p>
+    <ul>
+      <li><strong>Telematics</strong> &mdash; a unit fitted to a vehicle or machine that collects information about it and sends that information away over a radio link. On a power chair, the telematics unit is the reporting box itself.</li>
+      <li><strong>Cellular modem</strong> &mdash; the radio that talks to mobile phone networks (the same networks phones use), so the chair can reach the internet without your phone or your home Wi-Fi.</li>
+      <li><strong>SIM</strong> (Subscriber Identity Module) &mdash; the small card, or built-in chip, that gives a cellular device its identity on a phone network. It is what lets the modem connect.</li>
+      <li><strong>GNSS</strong> (Global Navigation Satellite System) &mdash; positioning by satellite signals. <strong>GPS</strong> (Global Positioning System) is the American GNSS system and the word most documents use. A GNSS receiver works out where the chair is by listening to satellites; it does not transmit to them.</li>
+      <li><strong>Bluetooth</strong> &mdash; a short-range radio (metres, not kilometres) for talking to nearby devices such as a phone. <strong>BLE</strong> (Bluetooth Low Energy) is its low-power version.</li>
+      <li><strong>The cloud</strong> &mdash; in these documents, the manufacturer&rsquo;s computers on the internet. &ldquo;Sent to the cloud&rdquo; means sent to the maker, not stored on the chair.</li>
+      <li><strong>Fleet Management</strong> (Permobil&rsquo;s name; shortened to <strong>Fleet</strong> in its documents) &mdash; the maker&rsquo;s online system where dealers and service providers can see data from connected chairs.</li>
+    </ul>
+    <p>The board-level teardown of the reporting box &mdash; what the silicon actually is &mdash; lives on <a href="/pmd-parts.html">Parts, Not Assemblies</a>. This page is about the data: what flows, and who controls the tap.</p>
+  </section>
+
+  <section>
+    <h2>The hardware: what the FCC record documents</h2>
+    <p>A maker cannot legally sell a radio device in the United States without filing test reports and photographs with the Federal Communications Commission (FCC). Those filings are public. They prove what radios a unit contains. They do not, by themselves, prove what data the unit sends &mdash; for that, this page uses the makers&rsquo; own manuals and privacy documents, in the sections below.</p>
+    <h3>Permobil ConnectMe (FCC ID: 2AKPO331495)</h3>
+    <p>The <a href="/library/collected-public-docs/pmd-fcc/2AKPO331495_User-Manual-3320095.pdf">ConnectMe user&rsquo;s manual</a> (Permobil, Edition 2, 2017-03) states the unit&rsquo;s purpose in its own words:</p>
+    <blockquote>
+      <p>&ldquo;ConnectMe is a cellular solution that provides communication between the Permobil wheelchair and Permobil cloud service. It is also used in near field communication for transfer of data between the wheelchair and a Bluetooth&reg; device e.g. SmartPhone.&rdquo; &mdash; Permobil, ConnectMe user&rsquo;s manual</p>
+    </blockquote>
+    <p>The same manual&rsquo;s technical specifications list:</p>
+    <ul>
+      <li><strong>Cellular:</strong> GSM (quad-band 850/900/1800/1900 MHz) and UMTS (bands B1, B2, B5, B8), with an internal antenna. The manual&rsquo;s label page says the unit contains a pre-qualified embedded GSM/UMTS module, FCC ID: N7NWP8, and the label carries an <strong>ICCID</strong> &mdash; the serial number of a SIM card &mdash; which is how the manual documents that the unit holds its own SIM and its own phone-network connection, independent of your phone.</li>
+      <li><strong>Bluetooth:</strong> Bluetooth&reg; 4.1, internal antenna.</li>
+      <li><strong>Positioning:</strong> &ldquo;GNSS: A-GPS L1, GLONASS, Galileo&rdquo; &mdash; that is, the unit can work out its position from three satellite systems (the American GPS, the Russian GLONASS, and the European Galileo). A-GPS means the satellite fix is assisted by data from the cellular network, which makes the fix faster.</li>
+      <li><strong>Connections to the chair:</strong> a 6-pin connector and a 4-pin <a href="/library/collected-public-docs/pmd/pg-drives_r-net_programming.pdf">R-net</a> connector &mdash; R-net is the chair&rsquo;s control system, so the unit is wired into the same network that carries the chair&rsquo;s fault codes and settings (see <a href="/pmd-fault-codes.html">Fault Codes, Translated</a> and <a href="/pmd-reading.html">Reading the Chair</a>). Supported chairs listed in the manual: M3, M5, F3, F5, M300, M400.</li>
+    </ul>
+    <p>The hardware itself is photographed in the FCC exhibits: <a href="/library/collected-public-docs/pmd-fcc/2AKPO331495_Internal-Photos-3320087.pdf">internal photos</a> and the <a href="/library/collected-public-docs/pmd-fcc/2AKPO331495_Test-Report-3320111.pdf">test report</a> are in the library, and <a href="/pmd-parts.html">Parts, Not Assemblies</a> walks through the board.</p>
+    <h3>The newer Permobil module (FCC ID: 2AKPO338877)</h3>
+    <p>A second, newer Permobil filing covers module model 338877, hosted in what its <a href="/library/collected-public-docs/pmd-fcc/2AKPO338877_SAR-Test-Report-part-01-9646920.pdf">SAR test report</a> (a SAR report measures radio energy absorbed by the body) calls the &ldquo;Permobil Power Platform.&rdquo; The report describes the equipment under test, in its own words, as a &ldquo;Module fixed on a wheelchair, supports Cellular, WLAN 2.4 GHz and BT 2.4 GHz technologies&rdquo; &mdash; cellular, Wi-Fi, and Bluetooth in one module. Its <a href="/library/collected-public-docs/pmd-fcc/2AKPO338877_External-Photos-9616799.pdf">external photos exhibit</a> labels the cellular module inside as an EG25-G module. The tested cellular technologies span GSM, WCDMA, and LTE across many bands. So the newer generation adds Wi-Fi and LTE to the radio set; the original ConnectMe was GSM/UMTS and Bluetooth.</p>
+    <h3>WHILL&rsquo;s user-interface device (FCC ID: 2AN6F-4218000)</h3>
+    <p>WHILL&rsquo;s FCC filing for its wheelchair user-interface device (the control unit the rider uses) documents Bluetooth, Bluetooth LE, Wi-Fi at 2.4 GHz and 5 GHz, and LTE cellular test data in its exhibits, including its <a href="/library/collected-public-docs/pmd-fcc/2AN6F-4218000_User-manual-7022007.pdf">user manual exhibit</a> and <a href="/library/collected-public-docs/pmd-fcc/2AN6F-4218000_Internal-Photos-7021973.pdf">internal photos</a>. That documents radio <em>capability</em> in the hardware. This page found no WHILL-published document describing a telematics data flow &mdash; what, if anything, those radios report, and to whom &mdash; so it makes no claim about one. WHILL appears on this page again below, where the public record does speak: a Bluetooth safety vulnerability.</p>
+  </section>
+
+  <section>
+    <h2>What Permobil says is reported</h2>
+    <p>Everything in this section comes from Permobil&rsquo;s own published documents: its <a href="https://www.permobil.com/en-us/privacy-notice/mypermobil">MyPermobil privacy notice</a>, its <a href="https://www.permobil.com/en-us/privacy-notice/fleet-management-and-quickconfig">Fleet Management privacy notice</a>, its <a href="https://permobilwebcdn.azureedge.net/media/nl0jnzh4/doc0096-01_faq_my-permobil.pdf">MyPermobil FAQ (DOC0096-01)</a>, and its <a href="https://permobilwebcdn.azureedge.net/media/tvjfxrrj/factory-connected-wheelchair-faq_uk_261019_web-4.pdf">Factory Connected Wheelchair FAQ</a> for the newer factory-connected chairs. No other maker&rsquo;s behaviour is described by these documents, and this page does not stretch them to cover anyone else.</p>
+    <p>The MyPermobil privacy notice states the core list verbatim:</p>
+    <blockquote>
+      <p>&ldquo;The wheelchair collects details about how you use our products. This includes seating and positioning regimen and history, mileage, battery status, maintenance information, diagnostic data and service data.&rdquo; &mdash; Permobil, MyPermobil privacy notice (&ldquo;Usage and Device Information&rdquo;)</p>
+    </blockquote>
+    <table>
+<thead><tr><th>What is reported</th><th>What it means in plain words</th><th>Stated in</th></tr></thead>
+<tbody>
+<tr><td>Seating and positioning regimen and history</td><td>How the powered seat functions (tilt, recline, lift and the rest) have been used, and when</td><td>MyPermobil and Fleet privacy notices</td></tr>
+<tr><td>Mileage</td><td>Distance the chair has travelled</td><td>MyPermobil and Fleet privacy notices</td></tr>
+<tr><td>Battery status</td><td>Charge level and battery condition; the Factory FAQ adds battery health and charging status</td><td>Privacy notices; Factory Connected FAQ</td></tr>
+<tr><td>Maintenance information</td><td>Information about upkeep of the chair</td><td>MyPermobil and Fleet privacy notices</td></tr>
+<tr><td>Diagnostic data and service data</td><td>Fault and health information from the chair&rsquo;s electronics, and records of service activity; the Factory FAQ names &ldquo;system error codes&rdquo; explicitly &mdash; the same fault codes translated on <a href="/pmd-fault-codes.html">this page</a> and <a href="/pmd-fault-codes-2.html">its second part</a></td><td>Privacy notices; Factory Connected FAQ</td></tr>
+<tr><td>Actuator metrics and motor performance</td><td>How the seat actuators and drive motors are performing (an actuator is the powered mover that tilts, reclines or lifts the seat)</td><td>Factory Connected FAQ, Level 2 telemetry list</td></tr>
+<tr><td>Real-time geographic location</td><td>Where the chair is, from its GPS receiver &mdash; only under the consent rule in the next row&rsquo;s document, see below</td><td>MyPermobil and Fleet privacy notices (&ldquo;Location Information&rdquo;)</td></tr>
+<tr><td>Your name, email address and country; phone number if you choose to add it; and the chair&rsquo;s serial number</td><td>Collected only when you register a MyPermobil account and link it to the chair; the Fleet notice says this information &ldquo;is visible in Fleet as long as the MyPermobil account is active&rdquo;</td><td>Fleet privacy notice; Factory Connected FAQ, Level 3</td></tr>
+<tr><td>App technical and usage data</td><td>From the phone app itself: IP address (the number that identifies a device on a network), device type and version, operating system; pages viewed, time spent in the app, and navigation paths</td><td>MyPermobil privacy notice (&ldquo;Data Collected from app users&rdquo;)</td></tr>
+</tbody>
+</table>
+    <p>On location, the notice is specific about both the trigger and the recipients:</p>
+    <blockquote>
+      <p>&ldquo;Permobil offers location-based services that require your explicit consent prior to activation. The information collected includes the real-time geographic location data of your wheelchair when the GPS device is activated. When you activate location data you share GPS information with Permobil and with your Service Provider.&rdquo; &mdash; Permobil, MyPermobil privacy notice (&ldquo;Location Information&rdquo;)</p>
+    </blockquote>
+    <p>The MyPermobil FAQ adds two owner-facing details. First, the history the app builds when GPS is on: &ldquo;places that have been visited for &gt;30 minutes will appear as part of historical travel details.&rdquo; Second, the one transmission rhythm any Permobil document states: battery range estimates in the app are &ldquo;updated approximately every 5-10 minutes within the app.&rdquo; No Permobil document found for this page states how often the chair itself transmits its telemetry &mdash; see &ldquo;What is not publicly documented&rdquo; below.</p>
+    <h3>Two generations, two defaults</h3>
+    <p><strong>The ConnectMe generation (the aftermarket/earlier fitted unit):</strong> the MyPermobil FAQ says activation and consent come first, verbatim:</p>
+    <blockquote>
+      <p>&ldquo;Permobil respects our users&rsquo; privacy therefore remote connectivity is turned off by default during the production process. Permobil does not collect any data without consent. During MyPermobil activation process user must provide consent and agree to the data privacy regulations.&rdquo; &mdash; Permobil, MyPermobil FAQ (DOC0096-01)</p>
+    </blockquote>
+    <p>The same FAQ confirms whose network carries the ongoing traffic: data &ldquo;transmission to the cloud relies on the internal SIM card in the ConnectMe module in the power wheelchair base&rdquo; &mdash; the chair&rsquo;s own cellular connection, not your phone&rsquo;s.</p>
+    <p><strong>The factory-connected generation:</strong> the Factory Connected Wheelchair FAQ describes newer M and F-series chairs (it gives a shipping start of 1 December 2026 for the UK &amp; Ireland) as sending three levels of data. <strong>Level 1, Core Configuration Data</strong> &mdash; the connection the chair uses to reach Permobil&rsquo;s configuration servers and keep receiving firmware and software updates. <strong>Level 2, Technical Telemetry Data</strong> &mdash; the battery, actuator, mileage, motor and error-code list in the table above; the FAQ says that from 1 December 2026 it &ldquo;will be enabled by default on factory-connected wheelchairs.&rdquo; <strong>Level 3, Personal Data</strong> &mdash; name and email linked to the serial number, &ldquo;only collected when the user creates a MyPermobil account and provides consent,&rdquo; with GPS an additional, separate consent in the app. Read the defaults carefully: they are not the same default the older FAQ describes.</p>
+  </section>
+
+  <section>
+    <h2>Where the data goes</h2>
+    <p>Per Permobil&rsquo;s documents, the chair sends its data to Permobil, and Permobil shows it in two places: to you, in the MyPermobil app, and to your dealer or service provider, in Fleet Management. The Factory Connected FAQ defines the connected chair this way: it &ldquo;sends technical data from the chair to Permobil. In turn, Permobil presents insights based on the data to the dealer/service provider through Fleet Management, and to users through the MyPermobil app.&rdquo; The benefit Permobil states for the dealer side is that &ldquo;Dealers/service providers can see the chair&rsquo;s status in Fleet Management, perform remote diagnostics and can often solve problems with less downtime and fewer in-person visits.&rdquo;</p>
+    <p>On surveillance, the same FAQ states, verbatim: &ldquo;Permobil does not proactively monitor or surveil the technical data available in Fleet Management. Permobil makes the data insights available to dealers/service providers via Fleet management so that they have the opportunity to better service their users.&rdquo;</p>
+    <p>On storage, the Factory Connected FAQ (a UK document) says technical telemetry data and personal information &ldquo;is stored in Permobil Fleet Management on servers in EU (Amsterdam),&rdquo; and that personal data in Fleet &ldquo;is pseudonymised as soon as user data (personal data) is disconnected from the wheelchair&rdquo; &mdash; pseudonymised means the name link is removed while the data itself remains. The US privacy notices read for this page do not state a storage location or a retention period; the FAQ itself defers the detail: &ldquo;Information on how data is managed and retained is detailed in the respective Privacy Notice.&rdquo;</p>
+    <p>Two documents disagree in tone about sharing, and this page prints both rather than picking one. The older US MyPermobil FAQ says: &ldquo;We do not share any raw or unprocessed data. However, we may share wheelchair insights and reports to authorized providers in order to secure quality to our end-users. Additionally, Permobil may use unidentifiable data for purposes of scientific research or improving product quality and end-user outcomes.&rdquo; The newer Factory Connected FAQ answers the third-party question in full: &ldquo;No. Permobil does not share personal or the technical data with third parties.&rdquo; Which document governs a given chair depends on its generation and region &mdash; your chair&rsquo;s own privacy notice is the authority.</p>
+    <h3>The other kind of pipe: a session you start (Quantum / Pride)</h3>
+    <p>Quantum Rehab (Pride Mobility&rsquo;s complex-rehab brand) publishes a different model. Its <strong>Interactive Assist</strong> app does not describe an always-reporting telematics unit; it describes a live session between your chair and your provider, in Quantum&rsquo;s own words:</p>
+    <blockquote>
+      <p>&ldquo;Interactive Assist from Quantum Rehab&reg; is an app which provides a direct real-time connection from a power chair&rsquo;s electronics to a provider&rsquo;s programming station. The connection provides the technician with full system and diagnostics information along with tools, such as a real-time mirror image of the power chair&rsquo;s electronics display, to eliminate wasteful trips.&rdquo; &mdash; Quantum Rehab, Q-Logic 3 Advanced Drive Control System page</p>
+    </blockquote>
+    <p>Quantum&rsquo;s published Interactive Assist pages list what the provider can do in that session: real-time monitoring, battery management, viewing error-code history, diagnostic history, motor usage history, change-log history, basic programming, and a mirror of your chair&rsquo;s display. The chair end of the link is Bluetooth to your phone (the app connects the <a href="/library/collected-public-docs/pmd/quantum_q6-edge-2_owner.pdf">Q-Logic 3</a> electronics via Bluetooth, per Quantum&rsquo;s <a href="https://www.quantumrehab.com/pdf/basic-troubleshooting-instructions/us_interactive_assist_android_om.pdf">Interactive Assist owner&rsquo;s manual</a>); the phone&rsquo;s internet connection carries it the rest of the way. The manual puts the session key in your hands, as a safety instruction: &ldquo;A power chair user or power chair caretaker should only provide the IAA&rsquo;s channel and passcode to a trusted HME provider representative.&rdquo; (IAA is the manual&rsquo;s short name for the Interactive Assist application; HME means home medical equipment &mdash; your dealer.) It also limits what the session is for: remote access should be used only &ldquo;to identify the power chair&rsquo;s controller system&rsquo;s current settings and/or troubleshooting&rdquo; and &ldquo;to modify the power chair&rsquo;s controller system&rsquo;s non-performance related settings.&rdquo;</p>
+    <p>The distinction matters. Permobil&rsquo;s ConnectMe model, as documented, is a chair that reports on a continuing basis once activated. Quantum&rsquo;s documented model is a connection opened for a service session, gated by a channel and passcode the user hands over. This page found no Quantum-published privacy notice describing what, if anything, is kept after an Interactive Assist session ends &mdash; see the undocumented list below. How dealer programming itself works, with and without these pipes, is covered on <a href="/pmd-programmers.html">The Programmers</a> and <a href="/pmd-settings.html">The Settings</a>.</p>
+  </section>
+
+  <section>
+    <h2>What you can switch off &mdash; and what you cannot</h2>
+    <table>
+<thead><tr><th>Control</th><th>What it does</th><th>Stated in</th></tr></thead>
+<tbody>
+<tr><td>Airplane mode (ConnectMe)</td><td>Turns the transmitting modem off while the chair keeps working normally. Per the <a href="/library/collected-public-docs/pmd-fcc/2AKPO331495_User-Manual-3320095.pdf">ConnectMe manual</a>: put the main fuse On, enter seat mode with the joystick&rsquo;s Mode button, scroll to menu M6, then lean the joystick forward for more than 5 seconds; the display shows &ldquo;Airplane Mode On.&rdquo; Repeat to turn transmission back on. The MyPermobil FAQ gives a different gesture for proportional joystick controls (a 15-second left command in seating mode) and the M6 method for OMNI/OMNI2 switched inputs &mdash; follow your own control panel&rsquo;s manual; the current Permobil owner manuals (for example the <a href="/library/collected-public-docs/pmd/permobil_f5-corpus-vs_owner.pdf">F5 Corpus VS</a> and <a href="/library/collected-public-docs/pmd/permobil_m3-corpus_owner.pdf">M3 Corpus</a> manuals) cover the &ldquo;Connected wheelchair&rdquo; section and point to the control-panel manual for the steps.</td><td>ConnectMe user&rsquo;s manual, pp. 18&ndash;21; MyPermobil FAQ</td></tr>
+<tr><td>Main fuse Off (ConnectMe)</td><td>The only complete off the manual documents. Verbatim: &ldquo;ConnectMe device is powered as long as the battery in the wheelchair is connected to its electronics. In order to completely turn off ConnectMe device the main fuse has to be set in its &lsquo;Off&rsquo; state.&rdquo; Note what else that fuse powers: this stops the chair&rsquo;s electronics too, so it is a storage/transport off, not a driving off.</td><td>ConnectMe user&rsquo;s manual, p. 22</td></tr>
+<tr><td>Location / GPS toggle</td><td>Stops location collection. The privacy notice: &ldquo;You can turn on or off location data collection on your device in the MyPermobil app, by contacting your Service Provider or Permobil.&rdquo; The FAQ: say &ldquo;no&rdquo; to location services during activation, or slide the GPS toolbar to &ldquo;Off&rdquo; in the app dashboard, at any time. GPS is not required to use the app.</td><td>MyPermobil privacy notice; MyPermobil FAQ</td></tr>
+<tr><td>Disconnect your account / withdraw consent</td><td>Unlinks your name and email from the chair. The Factory FAQ: users &ldquo;can remove their personal data (name and email address) at any time by withdrawing consent in the MyPermobil app. The wheelchair will then be anonymised but will continue to transmit technical telemetry data.&rdquo; Anonymised here means the personal link is cut; the chair&rsquo;s technical reporting continues.</td><td>Factory Connected FAQ; Fleet privacy notice</td></tr>
+<tr><td>Never activating (ConnectMe generation)</td><td>Per the MyPermobil FAQ quoted above, remote connectivity is off by default from production and no data is collected without consent given during activation. A chair that is never activated is, on that document&rsquo;s account, a chair that does not report.</td><td>MyPermobil FAQ (DOC0096-01)</td></tr>
+<tr><td>Telemetry opt-out (factory-connected generation)</td><td>Not a switch on the chair. The Factory FAQ directs opt-out requests to Permobil Technical Support or the supplying dealer, and states: &ldquo;Only the legal owner of the wheelchair (e.g., the user, dealer, customer organisation, or funding authority) can request removal of the chair&rsquo;s technical telemetry data through the supplying dealer.&rdquo;</td><td>Factory Connected FAQ</td></tr>
+<tr><td>WHILL Bluetooth off</td><td>WHILL&rsquo;s recall notice, as summarised in the FDA record, gave users &ldquo;explicit instructions on how to disable the Bluetooth so the device may be safely operated&rdquo; while the vulnerability below awaited its firmware fix. The fix itself arrived as a firmware update; the current instructions live in WHILL&rsquo;s own <a href="https://whill.inc/us/voluntary-safety-notice/">voluntary safety notice</a>.</td><td>FDA recall record Z-1826-2026</td></tr>
+</tbody>
+</table>
+    <p><strong>What has no off switch in the public record:</strong></p>
+    <ul>
+      <li><strong>Level 1 core configuration data on factory-connected chairs.</strong> The Factory FAQ states it plainly, twice: &ldquo;This data is always active,&rdquo; and &ldquo;Core configuration data always remains active, ensuring the wheelchair can continue to receive firmware and software updates.&rdquo; No owner control for it is documented.</li>
+      <li><strong>A chair-side off switch for Level 2 telemetry on factory-connected chairs.</strong> The documented routes are withdrawing consent (which only unlinks your identity &mdash; the telemetry continues, per the FAQ) or a removal request through the dealer/support channel. Airplane mode is documented for the ConnectMe unit; this page found no document extending an equivalent owner-operated radio kill switch to the factory-connected Power Platform module.</li>
+      <li><strong>Any documented data-flow off switch at all for makers other than Permobil.</strong> For Quantum, the documented control is the session itself: no channel and passcode handed over, no session. No Pride/Quantum document found for this page describes an always-on telematics stream to switch off &mdash; or one to switch on.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What is not publicly documented</h2>
+    <p>This page&rsquo;s rule is that a data flow is only stated when a primary document states it. The following are the gaps that rule leaves. They are printed as gaps, not filled with guesses:</p>
+    <ul>
+      <li><strong>How long telemetry is kept.</strong> The US MyPermobil and Fleet privacy notices read for this page state no retention period. The UK Factory FAQ says personal data is pseudonymised when disconnected, and defers retention detail to the privacy notices. No document found states a number of months or years after which a chair&rsquo;s telemetry is deleted.</li>
+      <li><strong>How often a chair transmits.</strong> The only cadence in any document found is the app&rsquo;s battery-estimate refresh (&ldquo;approximately every 5-10 minutes&rdquo;). Whether telemetry uploads continuously, periodically, or when the chair is used is not stated.</li>
+      <li><strong>Whether fault codes upload automatically or are read on request.</strong> The documents list diagnostic data and error codes among what is collected, and describe dealers performing &ldquo;remote diagnostics,&rdquo; but do not state the trigger. The fault codes themselves are translated on <a href="/pmd-fault-codes.html">Fault Codes</a>; how a given code travels is not publicly specified.</li>
+      <li><strong>Encryption of the ConnectMe cellular link.</strong> The ConnectMe manual and FCC exhibits read for this page do not state whether the chair-to-cloud traffic is encrypted, or how. (The MyPermobil app&rsquo;s store listing states the app&rsquo;s data is encrypted in transit; that is a statement about the phone app, not about the chair&rsquo;s own modem link, and this page does not merge the two.)</li>
+      <li><strong>Whether the GNSS receiver logs position when location services were never consented to.</strong> The hardware capability is documented (see above). The privacy notices tie location <em>collection</em> to explicit consent. No document found describes the receiver&rsquo;s behaviour outside that consent.</li>
+      <li><strong>Quantum Interactive Assist session records.</strong> No Quantum-published document found for this page states what session data (mirror images, fault history, change logs) is stored, where, or for how long after a session.</li>
+      <li><strong>Every other maker.</strong> No primary telematics or connected-chair privacy documents from Sunrise Medical, Invacare, or other power-chair makers were found for this page, so it says nothing about their chairs&rsquo; reporting. Absence of a document is not evidence of absence of a radio &mdash; check your own chair&rsquo;s FCC label and manual, using <a href="/pmd-start.html">Start Here</a> and the <a href="/library-hub.html">Library</a>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>When the radio is the risk: the WHILL Bluetooth recall</h2>
+    <p>Connectivity is also a safety surface: a radio that can command a chair is a radio that must check who is asking. For one maker, the regulator record shows what happens when it does not. The US Cybersecurity and Infrastructure Security Agency (CISA &mdash; the federal cybersecurity agency) published advisory ICSMA-25-364-01 on WHILL Model C2 electric wheelchairs and Model F power chairs (<a href="/library/collected-public-docs/pmd-fda/K213383.pdf">Model C2&rsquo;s FDA 510(k) record</a> is in the library). CISA&rsquo;s summary, verbatim: &ldquo;Successful exploitation of this vulnerability could allow an attacker within Bluetooth range to take control over the product.&rdquo; The vulnerability itself (CVE-2025-14346), in CISA&rsquo;s words:</p>
+    <blockquote>
+      <p>&ldquo;WHILL Model C2 Electric Wheelchairs and Model F Power Chairs do not enforce authentication for Bluetooth connections. An attacker within range can pair with the device and issue movement commands, override speed restrictions, and manipulate configuration profiles without any credentials or user interaction.&rdquo; &mdash; CISA, advisory ICSMA-25-364-01</p>
+    </blockquote>
+    <p>CISA scored it 9.8 out of 10 (Critical) and recorded, at publication: &ldquo;No known public exploitation specifically targeting this vulnerability has been reported to CISA at this time.&rdquo; The Food and Drug Administration (FDA) recall record for the same event (<a href="/library/collected-public-docs/pmd-fda/recall_Z-1826-2026.html">recall Z-1826-2026</a>, Model C2, software before HMI 2.22 / MC 1.13; a companion record, Z-1827-2026, covers Model F) gives the manufacturer&rsquo;s reason verbatim: &ldquo;Cyber vulnerability of BLE communication was found by CISA VDP program.&rdquo; The FDA&rsquo;s determined cause is listed as &ldquo;Device Design.&rdquo; The record states 4,685 Model C2 units in commerce, that distribution was to cease until corrective firmware was installed, and that users were given instructions to disable Bluetooth in the interim (see the table above). CISA&rsquo;s advisory lists the fixes WHILL deployed on 29 December 2025, including a firmware safeguard against unauthorised speed-profile changes and blocking unlock commands while the chair is in motion.</p>
+    <p>The lesson is general, and it is the reason this page exists: the same short-range radio that lets your provider read your fault history can, if it skips authentication, let a stranger drive your chair. Knowing which radios your chair carries &mdash; and which of them you can turn off &mdash; is owner knowledge, not dealer knowledge. Securing your own chair day to day is covered in <a href="/pmd-repairs.html">Repairs</a> and <a href="/pmd-control.html">Control</a>; the legal fight over who may service connected chairs is in <a href="/repair-rights.html">Repair Rights</a>.</p>
+  </section>
+
+  <section>
+    <h2>Sources</h2>
+    <ul>
+      <li>Permobil, <em>ConnectMe User&rsquo;s Manual</em>, Edition 2, 2017-03 (FCC exhibit, FCC ID: 2AKPO331495) &mdash; library copy: <a href="/library/collected-public-docs/pmd-fcc/2AKPO331495_User-Manual-3320095.pdf">2AKPO331495_User-Manual-3320095.pdf</a>. Purpose, specifications, airplane mode, complete-off procedure.</li>
+      <li>Permobil FCC exhibits, FCC ID: 2AKPO331495 &mdash; <a href="/library/collected-public-docs/pmd-fcc/2AKPO331495_Internal-Photos-3320087.pdf">internal photos</a>; <a href="/library/collected-public-docs/pmd-fcc/2AKPO331495_Test-Report-3320111.pdf">test report</a>.</li>
+      <li>Permobil FCC exhibits, FCC ID: 2AKPO338877 (Power Platform module 338877) &mdash; <a href="/library/collected-public-docs/pmd-fcc/2AKPO338877_SAR-Test-Report-part-01-9646920.pdf">SAR test report, part 1</a>; <a href="/library/collected-public-docs/pmd-fcc/2AKPO338877_External-Photos-9616799.pdf">external photos (EG25-G module)</a>.</li>
+      <li>Permobil, <a href="https://www.permobil.com/en-us/privacy-notice/mypermobil">MyPermobil privacy notice</a> (permobil.com) &mdash; Usage and Device Information; Location Information; app-user data.</li>
+      <li>Permobil, <a href="https://www.permobil.com/en-us/privacy-notice/fleet-management-and-quickconfig">Fleet Management and QuickConfig privacy notice</a> (permobil.com) &mdash; Technical Data in Fleet; Location Information in Fleet; account data visible in Fleet.</li>
+      <li>Permobil, <a href="https://permobilwebcdn.azureedge.net/media/nl0jnzh4/doc0096-01_faq_my-permobil.pdf">MyPermobil FAQs, DOC0096-01</a> (permobil.com) &mdash; activation and consent default; internal SIM; GPS toggle and &gt;30-minute history; 5&ndash;10-minute battery-estimate updates; data-use statement.</li>
+      <li>Permobil, <a href="https://permobilwebcdn.azureedge.net/media/tvjfxrrj/factory-connected-wheelchair-faq_uk_261019_web-4.pdf">Factory Connected Wheelchair FAQ</a> (permobil.com, UK) &mdash; three data levels; defaults from 1 December 2026; Fleet storage in Amsterdam; monitoring, sharing, and opt-out statements.</li>
+      <li>Permobil owner manuals in the library &mdash; <a href="/library/collected-public-docs/pmd/permobil_f5-corpus-vs_owner.pdf">F5 Corpus VS owner manual</a> (&ldquo;Connected wheelchair&rdquo; section); <a href="/library/collected-public-docs/pmd/permobil_m3-corpus_owner.pdf">M3 Corpus owner manual</a>.</li>
+      <li>PG Drives Technology (Curtiss-Wright), <a href="/library/collected-public-docs/pmd/pg-drives_r-net_programming.pdf">R-net programming guide</a> &mdash; library copy, for the control system the ConnectMe unit plugs into.</li>
+      <li>Quantum Rehab, <a href="https://www.quantumrehab.com/quantum-electronics/q-logic-3-advanced-drive-control-system.asp">Q-Logic 3 Advanced Drive Control System</a> (quantumrehab.com) &mdash; Interactive Assist definition; and Quantum Rehab Canada, <a href="https://www.quantumrehab.ca/quantum-electronics/interactive-assist.asp">Interactive Assist Mobile App</a> &mdash; session capabilities and fault-history access.</li>
+      <li>Quantum Rehab, <a href="https://www.quantumrehab.com/pdf/basic-troubleshooting-instructions/us_interactive_assist_android_om.pdf">Interactive Assist owner&rsquo;s manual, Android (US)</a> (quantumrehab.com) &mdash; channel-and-passcode safety instructions; permitted uses of remote access. Chair-side system: <a href="/library/collected-public-docs/pmd/quantum_q6-edge-2_owner.pdf">Quantum Q6 Edge 2.0 owner manual</a> (library copy).</li>
+      <li>CISA, <a href="https://www.cisa.gov/news-events/ics-medical-advisories/icsma-25-364-01">Advisory ICSMA-25-364-01: WHILL Model C2 Electric Wheelchairs and Model F Power Chairs</a> (cisa.gov), initial release 30 December 2025 &mdash; CVE-2025-14346, CVSS 9.8, mitigations.</li>
+      <li>FDA recall records &mdash; library copies: <a href="/library/collected-public-docs/pmd-fda/recall_Z-1826-2026.html">Z-1826-2026 (WHILL Model C2)</a>; <a href="/library/collected-public-docs/pmd-fda/K213383.pdf">K213383, WHILL Model C2 510(k)</a>. Companion Model F record Z-1827-2026 via the FDA source linked in the site&rsquo;s manifests.</li>
+      <li>WHILL FCC exhibits, FCC ID: 2AN6F-4218000 &mdash; <a href="/library/collected-public-docs/pmd-fcc/2AN6F-4218000_User-manual-7022007.pdf">user manual exhibit</a>; <a href="/library/collected-public-docs/pmd-fcc/2AN6F-4218000_Internal-Photos-7021973.pdf">internal photos</a>.</li>
+      <li>WHILL, <a href="https://whill.inc/us/voluntary-safety-notice/">voluntary safety notice</a> (whill.inc/us) &mdash; the maker&rsquo;s current owner instructions for the Bluetooth issue.</li>
+    </ul>
+    <p>More of the chair, piece by piece: <a href="/pmd-exploded.html">Exploded views</a> &middot; <a href="/pmd-fixes.html">The Cheap Fixes</a> &middot; <a href="/library-hub.html">The Library</a></p>
+    <p><a href="/pmd.html">&larr; Back to PMD</a> &middot; <a href="/pmd-parts.html">Parts, Not Assemblies &rarr;</a></p>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Keys: Programmers, Dongles and Access Tiers &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="The tools that read and write a power chair&rsquo;s settings, named system by system: Curtiss-Wright, Curtis, Dynamic and Invacare programmers, their dongles and keys, and the access tiers that decide who may change what.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="The Keys: Programmers, Dongles and Access Tiers">
+<meta property="og:description" content="The dealer lock is not a metaphor. It is a specific dongle, in a specific tier. Every system&rsquo;s key, named.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-programmers.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>The Keys: Programmers, Dongles and Access Tiers</h1>
+    <p class="lede">The <a href="/pmd-settings.html">settings page</a> showed you the numbers that make your chair yours. This page names the tools that read and write those numbers &mdash; and the tier system that decides who is allowed to hold them.</p>
+    <p>Every control system has the same three-part lock: <strong>software</strong> (the program that talks to the chair), a <strong>key</strong> (a physical <strong>dongle</strong> &mdash; a small plug that carries the permission &mdash; or a card), and <strong>tiers</strong> (levels of access: the same tool shows more, or fewer, settings depending on which key is plugged in). The software is rarely the secret. The key is.</p>
+    <p><em>Provenance: compiled from the manufacturers&rsquo; own published material &mdash; Curtiss-Wright&rsquo;s programming support pages and <a href="/library/collected-public-docs/pmd/pg-drives_r-net-pc-programmer_programming.pdf">R-net manuals</a>, the Curtis Instruments 1313/1314 programming manual, Dynamic Controls&rsquo; LiNX Access documentation and <a href="/library/collected-public-docs/pmd/dynamic-controls_shark-power-module_technical.pdf">SHARK</a>/<a href="/library/collected-public-docs/pmd/dynamic-controls_dx2-acs2_technical.pdf">DX2 manuals</a>, and Invacare&rsquo;s MK6i Field Reference Guide (part no. 1141471). Where a fact comes from the owner community instead of a manual, it is not stated here.</em></p>
+  </section>
+
+  <section id="map">
+    <h2>The map: five systems, five keys</h2>
+<table>
+<thead><tr><th>System</th><th>The tools</th><th>The key</th><th>The tiers</th></tr></thead>
+<tbody>
+<tr><td>Curtiss-Wright R-net, VR2, VSI</td><td>PP1A / PP1B hand-held programmers; R-net PC Programmer (PC software)</td><td>A programming dongle for the PC tool; the hand-helds are level-built</td><td>&lsquo;A&rsquo; level (dealer) and &lsquo;B&rsquo; level (engineering/OEM) &mdash; some parameters cannot be changed below &lsquo;B&rsquo;</td></tr>
+<tr><td>Curtis Instruments (Quantum Q-Logic 3)</td><td>1313 hand-held programmer; 1314 PC Programming Station</td><td>The programmer itself, sold in one of four versions</td><td>User, Service, Dealer, OEM &mdash; each version works at its own level and every level below it</td></tr>
+<tr><td>Dynamic Controls LiNX</td><td>LiNX Access app (iOS) and LiNX Access PC tool &mdash; the apps are free</td><td>LiNX Access Key: DLX-HKEY01-A (Distributor) or DLX-HKEY02-A (Manufacturer)</td><td>Default (no key: read files only), Distributor (basic parameters), Manufacturer (high-level parameters)</td></tr>
+<tr><td>Dynamic Controls DX, DX2, Shark (older systems)</td><td>Wizard 5 PC software (DWIZ5-SW); DX Hand Held Programmer (DX-HHP)</td><td>Wizard Dongle, sold separately: DWD-DLR-U (Dealer) or DWD-OEM-U (OEM), plus system adapters</td><td>Dealer and OEM dongles; the software kit is sold with no dongle in the box</td></tr>
+<tr><td>Invacare MK6i</td><td>MK6i Easy Remote Programmer (hand-held); the older MK5 programmer also works</td><td>A removable memory card in the programmer &mdash; a user card or a professional card</td><td>The card is the tier: the fault log&rsquo;s causes and fixes stay locked without a professional card</td></tr>
+</tbody>
+</table>
+    <p>Read the table once and the industry makes sense: the tool is never the product. The permission is the product.</p>
+  </section>
+
+  <section id="curtiss-wright">
+    <h2>Curtiss-Wright &mdash; the dongle is the level</h2>
+    <p>For R-net, VR2 and VSI chairs, programming happens two ways. A <strong>hand-held programmer</strong> &mdash; Curtiss-Wright&rsquo;s PP1A or PP1B &mdash; plugs into the chair and works through menus on its own small screen. Or a PC runs the <strong>R-net PC Programmer</strong> software, and the PC connects to the chair through the <strong>charging socket</strong> &mdash; the same round 3-pin socket the charger uses (Curtiss-Wright&rsquo;s own support pages describe the programming cable landing in the charging socket of the controller).</p>
+    <p>The PC software is one program. What it will show you is decided by the dongle. Curtiss-Wright&rsquo;s support pages distinguish <strong>&lsquo;A&rsquo; level</strong> tools (the dealer level) from <strong>&lsquo;B&rsquo; level</strong> tools (the engineering level, held by chair manufacturers), and state plainly that some parameters &mdash; their examples include certain drive and profile settings &mdash; can only be changed with a &lsquo;B&rsquo; level hand-held or PC programmer. If you do not have &lsquo;B&rsquo; access, their answer is to send the controller back to them.</p>
+    <p>One door is already in your hands: <strong>on-board programming</strong>. R-net chairs with a colour-screen joystick (CJSM2) carry a programming mode built into the joystick itself (documented in Curtiss-Wright&rsquo;s <a href="/library/collected-public-docs/pmd/pg-drives_r-net_programming.pdf">On-Board Programming manual, SK78571</a>). It covers a subset &mdash; display and user settings, and drive adjustments where the manufacturer has enabled them. Whether that door is open on your chair was decided by whoever programmed it.</p>
+  </section>
+
+  <section id="curtis">
+    <h2>Curtis Instruments &mdash; four versions of the same tool</h2>
+    <p>Quantum&rsquo;s Q-Logic 3 electronics are built by <strong>Curtis Instruments</strong> (PG Drives&rsquo; own fault-code listing names it: &ldquo;Quantum Q-Logic 3 (Curtis Instruments)&rdquo;). Curtis sells two programming tools that do the same job: the <strong>1313 hand-held programmer</strong> and the <strong>1314 PC Programming Station</strong>. Its manual states the rule in one breath: both programmers are available in <strong>User, Service, Dealer, and OEM versions</strong>, and each can perform the actions available at its own level and the levels below it &mdash; a User programmer works at User level only, while an OEM programmer has full access.</p>
+    <p>Nothing about the hardware changes between versions. The version is the permission, sold as a different product at a different price to a different customer.</p>
+  </section>
+
+  <section id="linx">
+    <h2>Dynamic Controls LiNX &mdash; the free app and the paid key</h2>
+    <p>LiNX is programmed from the <strong>LiNX Access</strong> app (iPhone/iPad, or the PC tool). Dynamic Controls gives the app away free. The app is not the tool: it works through a <strong>LiNX Access Key</strong>, a hardware key that connects to the chair through its XLR (charger-style) port, and Dynamic&rsquo;s own documentation defines three levels:</p>
+    <ul>
+      <li><strong>Default (no key).</strong> You can receive a chair&rsquo;s configuration file (a <strong>.lci file</strong> &mdash; the chair&rsquo;s whole setup as one file) by email or file transfer, and view its distributor-level configuration and diagnostics, read-only. You cannot connect to a live chair.</li>
+      <li><strong>Distributor</strong> &mdash; key <strong>DLX-HKEY01-A</strong>. Connects to a live chair; reads and configures the basic performance parameters. This is the dealer/provider key.</li>
+      <li><strong>Manufacturer</strong> &mdash; key <strong>DLX-HKEY02-A</strong>. Connects and configures the high-level parameters. This is the chair-maker key.</li>
+    </ul>
+    <p>Dynamic defines the authorised users in its own listing: original equipment manufacturers and their approved distribution channels &mdash; dealers, providers, therapists and service technicians. The owner of the chair is not on the list. Note the one crack in the wall, though: the Default level means a dealer can email you your own .lci file and you can open it, read every setting in it, and keep it forever &mdash; free, with no key. Ask for that file by name. It is your backup, and <a href="/pmd.html#the-lock">the hub page</a> explains what happens to owners who never got one.</p>
+  </section>
+
+  <section id="dynamic-legacy">
+    <h2>Dynamic Controls DX, DX2 and Shark &mdash; the kit with no key in the box</h2>
+    <p>The older Dynamic systems are programmed from a PC running <strong>Wizard 5</strong> software, or with the <strong>DX Hand Held Programmer (DX-HHP)</strong>. Dynamic&rsquo;s own <a href="/library/collected-public-docs/pmd/dynamic-controls_shark-power-module_technical.pdf">SHARK installation manual</a> lists the programming accessories by part number, and the list is the whole story:</p>
+    <ul>
+      <li><strong>Wizard 5 Kit (DWIZ5-KIT)</strong> &mdash; software, cables and adapter. The manual notes, in parentheses: <em>no dongle</em>.</li>
+      <li><strong>Wizard 5 software only (DWIZ5-SW)</strong>.</li>
+      <li><strong>Wizard Dongle</strong> &mdash; OEM version (<strong>DWD-OEM</strong>, or USB <strong>DWD-OEM-U</strong>) or Dealer version (<strong>DWD-DLR</strong>, or USB <strong>DWD-DLR-U</strong>), sold separately.</li>
+      <li><strong>SHARK Programming Adapter (DK-ADAPT)</strong> &mdash; the adapter a Shark system needs.</li>
+    </ul>
+    <p>You can buy the software, the cables and the adapter and still program nothing, because the dongle is a separate line item in two tiers &mdash; and Dynamic&rsquo;s DX2 documentation says it in four words: &ldquo;Access level dongle also required.&rdquo;</p>
+  </section>
+
+  <section id="mk6i">
+    <h2>Invacare MK6i &mdash; your settings live on a card</h2>
+    <p>Invacare&rsquo;s MK6i electronics (the TDX chairs) are programmed with the <strong>MK6i Easy Remote Programmer</strong>, a hand-held unit; Invacare&rsquo;s Field Reference Guide also documents using the older <strong>MK5 programmer</strong> on MK6i electronics. What makes this system different is where the programming lives: on a <strong>removable memory card</strong>. The guide gives the memory card its own section &mdash; programs are saved to the card and restored from it.</p>
+    <p>There are two kinds of card, and the difference is the tier. With a <strong>user card</strong>, settings can be saved and restored. But Invacare&rsquo;s guide states that a <strong>professional memory card</strong> is required in the programmer to view the fault log&rsquo;s error codes together with their causes and troubleshooting steps. Your chair records what went wrong, dates it, and timestamps it (on the colour MPJ+ joystick) &mdash; and the page that explains it is behind the professional card.</p>
+    <p>The owner&rsquo;s move on this system is real, though: because the whole setup is a file on a card, a copy of your card is a complete backup of your fit. If your chair is MK6i, ask for that copy before any module is swapped.</p>
+  </section>
+
+  <section id="demand">
+    <h2>What to demand before anyone swaps a module</h2>
+    <p>You may never hold the key. You can still hold the backup. Before a dealer replaces any electronic module on your chair, ask for four things &mdash; every one of them is a button-press in the tools above, and none of them costs the dealer anything but minutes:</p>
+    <ol>
+      <li><strong>Your settings, exported, handed to you.</strong> The R-net program file, the LiNX .lci file, or a copy of the MK6i memory card &mdash; whichever your system uses. This is the fit your clinician built, in a file you own.</li>
+      <li><strong>The fault log, read before it is cleared.</strong> Codes and history first; erasing them destroys the evidence of what actually failed.</li>
+      <li><strong>Your settings restored after the swap</strong> &mdash; loaded from your backup, not factory defaults &mdash; and verified with a ride before the technician leaves. A swapped module at factory settings is how tremor dampening and torque silently vanish (<a href="/pmd-settings.html">the settings page</a> names what to check).</li>
+      <li><strong>The old module&rsquo;s settings read before it goes back.</strong> If the replacement arrives wrong, the old module may be the only other copy of your fit.</li>
+    </ol>
+    <p><a href="/pmd.html">&larr; Back to PMD</a> &middot; <a href="/pmd-settings.html">The settings &rarr;</a></p>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

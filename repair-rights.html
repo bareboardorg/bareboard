@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Shield: Right-to-Repair Law &mdash; BareBoard</title>
+<meta name="description" content="The layered legal defense for owners and independent repairers: Magnuson-Moss, the DMCA &sect;1201 repair exemptions, the eight powered-wheelchair state laws with citations, the electronics laws, and the escalation ladder for when they say no.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="The Shield: Defending Yourself with Right-to-Repair Law">
+<meta property="og:description" content="Federal warranty law, the &sect;1201 repair exemptions, eight wheelchair statutes with citations and enforcers, and what to do when they refuse.">
+<meta property="og:url" content="https://www.bareboard.org/repair-rights.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>The Shield: Defending Yourself with Right-to-Repair Law</h1>
+    <p class="lede">When a manufacturer says &ldquo;dealer only,&rdquo; that is not the end of the conversation. In much of the United States it is the start of a legal one &mdash; and the law is increasingly on the owner&rsquo;s side. This page is the layered defense: the federal floor, the eight powered-wheelchair states, the wider electronics laws, and the exact escalation ladder for when they say no anyway.</p>
+    <p><em>Provenance: every law below is cited to its primary text &mdash; the U.S. Code, the Code of Federal Regulations, state session laws and codes, FTC orders, and court opinions. Several of those documents are collected in our own library and linked where they appear. This is education, not legal advice: we are a documentation project, not your lawyer. If money or mobility is on the line, a consumer-protection attorney or your state Attorney General&rsquo;s office is the next call.</em></p>
+  </section>
+
+  <section id="words">
+    <h2>Five words, defined once</h2>
+    <ul>
+      <li><strong>Statute</strong> &mdash; a law passed by a legislature (Congress or a state assembly). Everything below with a section number is a statute or a regulation made under one.</li>
+      <li><strong>Exemption</strong> &mdash; a written exception that takes specified conduct out of a ban. The DMCA repair rules below are exemptions: the ban still exists; the exempted repair is carved out of it.</li>
+      <li><strong>Preemption</strong> &mdash; when a higher level of law overrides a lower one. Federal law preempts conflicting state law; it is why the anti-trafficking limit in the DMCA section matters even in states with strong repair statutes.</li>
+      <li><strong>Standing</strong> &mdash; the legal right to bring a complaint or a lawsuit. Some laws below give standing to you personally; some give it only to the Attorney General. Knowing which one you are holding changes what you do.</li>
+      <li><strong>Parts pairing</strong> &mdash; software that ties a replacement part to one specific device by serial number or cryptographic check, so the device rejects or degrades a working part the manufacturer did not bless. Several newer laws ban or restrict it by name.</li>
+    </ul>
+  </section>
+
+  <section id="federal">
+    <h2>Layer one: the federal floor</h2>
+
+    <h3>Your warranty cannot be voided for repairing your own device</h3>
+    <p>The <strong>Magnuson-Moss Warranty Act</strong> (the federal warranty law, 15 U.S.C. &sect;&sect; 2301&ndash;2312) contains the sentence manufacturers hope you never read, at <strong>15 U.S.C. &sect; 2302(c)</strong>: a warrantor may not condition warranty coverage on the customer using an article or service that carries a brand, trade, or corporate name &mdash; unless the article or service is provided free, or the Federal Trade Commission (FTC, the federal consumer-protection agency) has waived the rule for that product. That is the <strong>tie-in ban</strong>: &ldquo;use our parts or lose your warranty&rdquo; is unlawful as a blanket condition, and the FTC&rsquo;s own interpretation (<strong>16 C.F.R. &sect; 700.8</strong>) treats a warranty that purports to void coverage when the owner uses non-branded parts as deceptive. The burden runs the other way from what service desks claim: a maker that wants to deny a claim must show that <em>your</em> part or <em>your</em> repair caused the failure &mdash; it is not your job to prove it didn&rsquo;t.</p>
+    <p>This is enforced law, not theory. In 2022 the FTC ordered Harley-Davidson (<a href="/library/collected-public-docs/lawsuits/ftc-harley-davidson-consent-order-2022.pdf">Decision and Order, File No. 2123140</a>) and MWE Investments/Westinghouse (<a href="/library/collected-public-docs/lawsuits/ftc-mwe-westinghouse-decision-order-2022.pdf">Decision and Order, Docket No. C-4774</a>) to strike their void-if-repaired terms and to tell customers their rights were restored; <a href="/library-hub.html">Weber</a> settled the same charge the same summer. And the Act gives you <strong>standing</strong> of your own: <strong>15 U.S.C. &sect; 2310(d)</strong> lets a consumer sue a warrantor that fails to comply, with attorney&rsquo;s fees recoverable if you win. Template 3 on the <a href="/repair-demand-letter.html">demand-letter page</a> is built on this layer.</p>
+
+    <h3>Picking the lock on your own device is federally exempt</h3>
+    <p>The <strong>Digital Millennium Copyright Act (DMCA), &sect; 1201</strong> (17 U.S.C. &sect; 1201) bans circumventing &mdash; bypassing &mdash; the digital locks on copyrighted software, which includes the firmware inside almost every modern device. Every three years the Librarian of Congress, on the Copyright Office&rsquo;s recommendation, issues <strong>exemptions</strong> to that ban, codified at <strong>37 C.F.R. &sect; 201.40</strong>. The repair exemptions now include:</p>
+    <ul>
+      <li><strong>Medical devices</strong> &mdash; circumvention for diagnosis, maintenance, and repair of lawfully acquired medical devices, first exempted in the 2021 rule (<a href="/library/collected-public-docs/lawsuits/usco-1201-final-rule-2021-govinfo.pdf">86 Fed. Reg. 59627</a>) and renewed in 2024 (<a href="/library/collected-public-docs/lawsuits/usco-1201-final-rule-2024-govinfo.pdf">89 Fed. Reg. 85437</a>, exemption at &sect; 201.40(b)(17)). The device industry sued to kill it; the D.C. Circuit upheld the exemption in <em>Medical Imaging &amp; Technology Alliance v. Library of Congress</em>, 189 F.4th 1150 (decided September 1, 2026) &mdash; <a href="/library/collected-public-docs/lawsuits/mita-v-library-of-congress-cadc-opinion-2026.pdf">the opinion is in our library</a>.</li>
+      <li><strong>Video game consoles</strong> &mdash; circumvention solely to repair a console&rsquo;s optical drive, exempt since 2021 and renewed in 2024, under the same &sect; 201.40 list.</li>
+      <li><strong>Consumer devices generally</strong> &mdash; diagnosis, maintenance, and repair of lawfully acquired software-enabled devices is exempt, the provision the wheelchair and medical-device exemptions build on.</li>
+    </ul>
+    <p><strong>The honest limit, and it matters:</strong> the exemptions free the <em>act</em> of circumventing for repair. They do not free the <em>tools</em>. &sect; 1201&rsquo;s separate <strong>anti-trafficking</strong> ban &mdash; no making or distributing circumvention tools &mdash; is not something the Librarian has statutory authority to exempt, so it stands. An owner may legally pick their own lock; selling them the pick remains banned. Our <a href="/pmd.html#the-law">PMD law section</a> states the same line. No state law can override this, because of <strong>preemption</strong>: federal copyright law wins where the two conflict.</p>
+
+    <h3>The FTC is actively enforcing against repair restrictions</h3>
+    <p>Three markers worth citing in any dispute. The FTC&rsquo;s report to Congress <a href="/library-hub.html"><em>Nixing the Fix</em></a> (May 2021) found &ldquo;scant evidence&rdquo; justifying manufacturer repair restrictions. Its <a href="/library-hub.html"><strong>Policy Statement on Repair Restrictions</strong></a> (July 21, 2021) committed the Commission to prioritizing enforcement under the FTC Act, Magnuson-Moss, and the antitrust laws. And on July 8, 2026 the FTC and five states settled <em>FTC v. Deere &amp; Company</em>: <a href="/library/collected-public-docs/lawsuits/ftc-v-deere-stipulated-order-2026.pdf">the stipulated order</a> requires Deere, for ten years, to give owners and independent repairers repair resources equivalent to its dealers&rsquo;, on fair and reasonable terms. A manufacturer refusing you in 2026 is refusing against the stated position of its federal regulator.</p>
+
+    <h3>Once it&rsquo;s sold, patent law stops policing it</h3>
+    <p><em>Impression Products, Inc. v. Lexmark International, Inc.</em>, 581 U.S. 360 (2017) &mdash; <a href="/library/collected-public-docs/lawsuits/impression-products-v-lexmark-scotus-opinion-2017.pdf">Supreme Court opinion in our library</a> &mdash; held that a patent holder&rsquo;s rights are <strong>exhausted</strong> (used up) at the first authorized sale, domestic or foreign: post-sale restrictions cannot be enforced through patent law. It is the doctrine under the whole refill-and-repair economy, and the reason &ldquo;patent protected, no unauthorized parts&rdquo; stickers mean less than they claim.</p>
+  </section>
+
+  <section id="wheelchair-states">
+    <h2>Layer two: the eight powered-wheelchair states</h2>
+    <p>These statutes are specific to powered wheelchairs (some reach wider mobility equipment). Each one obliges the manufacturer to supply the means of repair to owners and independent repair providers. Read your state&rsquo;s entry for the four facts that matter in a dispute: the <strong>citation</strong>, the <strong>effective date</strong>, <strong>exactly what you are entitled to</strong>, and <strong>who enforces it</strong>.</p>
+
+    <h3>Colorado &mdash; the first, and the template</h3>
+    <ul>
+      <li><strong>Citation:</strong> Consumer Wheelchair Repair Bill of Rights Act, Colo. Rev. Stat. &sect;&sect; 6-1-1501 to 6-1-1505 (Part 15), enacted by HB22-1031 &mdash; <a href="/library/collected-public-docs/lawsuits/co-hb22-1031-signed-act.pdf">signed act in our library</a>.</li>
+      <li><strong>Effective:</strong> January 1, 2023.</li>
+      <li><strong>Entitles you to:</strong> documentation, parts, embedded software, firmware, and tools &mdash; expressly including the resources to reset or disable security functions &mdash; on fair and reasonable terms, for any chair. The only carve-out is genuine trade secrets.</li>
+      <li><strong>Enforcement:</strong> a violation is a deceptive trade practice under the Colorado Consumer Protection Act (&sect; 6-1-105(1)(qqq)), enforceable by the Attorney General and by private suit under that Act.</li>
+    </ul>
+
+    <h3>California</h3>
+    <ul>
+      <li><strong>Citation:</strong> Consumer Wheelchair Right to Repair, Cal. Health &amp; Safety Code &sect;&sect; 21300&ndash;21303, enacted by SB 1384 (2024).</li>
+      <li><strong>Effective:</strong> January 1, 2025; applies to wheelchairs sold or in use on or after that date.</li>
+      <li><strong>Entitles you to:</strong> documentation, parts, embedded software, firmware, and tools on fair and reasonable terms and costs. For chairs under the Medi-Cal complex-rehabilitation rules, parts that require programming, calibration, or clinical involvement for seating and positioning are carved out &mdash; the statute names the covered ordinary parts (batteries, chargers, nonprogrammable joysticks, wheel assemblies, casters, armrests and similar).</li>
+      <li><strong>Enforcement:</strong> civil penalties &mdash; up to $2,500 per wheelchair for a first violation (with a three-day cure window for a non-knowing first violation), up to $10,000 per wheelchair for later ones &mdash; in actions by an injured person or by the Attorney General, a district attorney, county counsel, or a city prosecutor.</li>
+    </ul>
+
+    <h3>Maryland</h3>
+    <ul>
+      <li><strong>Citation:</strong> Powered Wheelchairs Repair subtitle, Md. Code, Commercial Law &sect;&sect; 14-5001 to 14-5004, enacted by HB 31 (Chapter 546, Acts of 2025; cross-filed as SB 382).</li>
+      <li><strong>Effective:</strong> October 1, 2025; applies prospectively.</li>
+      <li><strong>Entitles you to:</strong> documentation, parts, embedded software, firmware, and tools for the covered repairs. Maryland&rsquo;s definition of a tool is the sharpest in the country: it expressly includes software or other mechanisms that <em>provide, program, or pair a new part</em> or calibrate functionality &mdash; pairing software is a repair tool by statute.</li>
+      <li><strong>Enforcement:</strong> a violation is an unfair, abusive, or deceptive trade practice under the Maryland Consumer Protection Act (&sect; 13-301), enforced by the Attorney General&rsquo;s Consumer Protection Division, with the Act&rsquo;s penalty provisions behind it.</li>
+    </ul>
+
+    <h3>Nevada</h3>
+    <ul>
+      <li><strong>Citation:</strong> AB 407 (Chapter 129, 2025), codified at Nev. Rev. Stat. &sect;&sect; 597.2691 et seq.</li>
+      <li><strong>Effective:</strong> May 30, 2025, on signing.</li>
+      <li><strong>Entitles you to:</strong> documentation, parts, and tools on fair and reasonable terms &mdash; and Nevada&rsquo;s law reaches <em>all</em> mobility equipment designed for people with physical disabilities: powered and manual wheelchairs, mobility scooters, and power-assist devices. It also prohibits manufacturers from using software mechanisms to block working replacement parts. (The broader consumer-electronics version in the bill as introduced was amended out; this law is mobility-only.)</li>
+      <li><strong>Enforcement:</strong> a violation is a deceptive trade practice (NRS 597.2697); enforcement runs through the Attorney General&rsquo;s consumer-protection authority.</li>
+    </ul>
+
+    <h3>Oregon</h3>
+    <ul>
+      <li><strong>Citation:</strong> SB 550 (2025), Chapter 290, 2025 Laws, extending Oregon&rsquo;s Right to Repair Act (SB 1596, 2024) to electric wheelchairs and complex rehabilitation technology.</li>
+      <li><strong>Effective:</strong> January 1, 2026, for the wheelchair coverage.</li>
+      <li><strong>Entitles you to:</strong> the documentation, tools, and parts the manufacturer makes available to its authorized service providers, on fair and reasonable terms &mdash; plus Oregon&rsquo;s first-in-the-nation ban on <strong>parts pairing</strong> for covered equipment manufactured and sold after January 1, 2025.</li>
+      <li><strong>Enforcement:</strong> a violation is an unlawful trade practice under Oregon&rsquo;s Unlawful Trade Practices Act, enforceable by the Attorney General and through that Act&rsquo;s private remedy.</li>
+    </ul>
+
+    <h3>Rhode Island</h3>
+    <ul>
+      <li><strong>Citation:</strong> Right to Consumer Access to Powered Wheelchair Repairs Act, R.I. Gen. Laws ch. 6-61, enacted by 2025-H 5017 Substitute A / 2025-S 0884.</li>
+      <li><strong>Effective:</strong> signed June 26, 2025. (The act text we reviewed does not state a separate delayed operative date; treat coverage as live from signing and verify against the current chapter text before relying on a specific date.)</li>
+      <li><strong>Entitles you to:</strong> documentation, parts, and software from the original manufacturer, to owners and independent providers alike; manufacturers are barred from using parts that block installation of non-manufacturer-approved replacements. Rhode Island&rsquo;s act also reaches the payer side: a health plan may not require prior authorization or medical documentation to complete repairs to consumer-owned complex rehabilitation technology.</li>
+      <li><strong>Enforcement:</strong> violations are penalized as unfair or deceptive trade practices under Rhode Island law.</li>
+    </ul>
+
+    <h3>Tennessee</h3>
+    <ul>
+      <li><strong>Citation:</strong> Consumer Wheelchair Repair Bill of Rights Act, Tenn. Code Ann. &sect;&sect; 47-18-5701 et seq., enacted by SB 77 / HB 414 (2023). (A broader companion bill, SB 1252 / HB 1470, did not pass; the enacted law is the SB 77 text.)</li>
+      <li><strong>Effective:</strong> July 1, 2023, for contracts and agreements entered into, amended, or renewed on or after that date.</li>
+      <li><strong>Entitles you to:</strong> new or used replacement parts, documentation, embedded software, firmware, and tools, on fair and reasonable terms and costs.</li>
+      <li><strong>Enforcement:</strong> a violation is a violation of the Tennessee Consumer Protection Act of 1977 (the act amends &sect; 47-18-104(b) to say so) &mdash; the Attorney General and the Act&rsquo;s private remedy both stand behind it.</li>
+    </ul>
+
+    <h3>Washington</h3>
+    <ul>
+      <li><strong>Citation:</strong> SB 5680, Chapter 354, Laws of 2025, adding a new chapter to Title 19 of the Revised Code of Washington. (The identical House vehicle, HB 1826, did not advance; SB 5680 is the law.)</li>
+      <li><strong>Effective:</strong> July 27, 2025.</li>
+      <li><strong>Entitles you to:</strong> documentation, parts, embedded software, firmware, and tools, including updates, on fair and reasonable terms and costs &mdash; across mobility equipment: power and manual wheelchairs, mobility scooters, and power-assist devices. The act also shields manufacturers and authorized providers from liability for damage caused by an owner&rsquo;s or independent&rsquo;s repair.</li>
+      <li><strong>Enforcement:</strong> a violation is an unfair or deceptive act under Washington&rsquo;s Consumer Protection Act &mdash; and this one is enforceable <em>only</em> by the Attorney General. Your remedy in Washington is a well-documented complaint, not a private suit; the playbook below is written with that in mind.</li>
+    </ul>
+  </section>
+
+  <section id="electronics-states">
+    <h2>Layer three: the general electronics laws</h2>
+    <p>For everything that is not a wheelchair, nine states have enacted consumer-electronics repair statutes as of late 2026. The pattern is the same &mdash; documentation, parts, and tools on fair and reasonable terms &mdash; but each has its own start date, product window, and exclusions (most exclude medical devices and game consoles, which is why layers one and two matter). One line each:</p>
+    <ul>
+      <li><strong>New York</strong> &mdash; Digital Fair Repair Act, Gen. Bus. Law &sect; 399-nn; in force for digital electronic equipment first sold or used on or after July 1, 2023; documentation and tools at no charge; Attorney General enforcement.</li>
+      <li><strong>Minnesota</strong> &mdash; Digital Fair Repair Act, Minn. Stat. &sect; 325E.72; effective July 1, 2024, reaching equipment sold on or after July 1, 2021; Attorney General enforcement.</li>
+      <li><strong>California</strong> &mdash; Right to Repair Act, SB 244 (2023), Pub. Resources Code &sect; 42488 et seq.; operative July 1, 2024 for electronics and appliances sold on or after July 1, 2021; support periods of three years ($50&ndash;$99.99) or seven years ($100 and up); enforced by public prosecutors, not private suits.</li>
+      <li><strong>Colorado</strong> &mdash; HB24-1121, consumer right to repair digital electronic equipment; effective January 1, 2026; software tools must be free, and parts-pairing limits apply to equipment made after January 1, 2026. (Colorado also wrote the first farm-equipment repair law, HB23-1011, effective January 1, 2024.)</li>
+      <li><strong>Oregon</strong> &mdash; SB 1596 (2024); the first parts-pairing ban in the country, and the base act the wheelchair law above extends.</li>
+      <li><strong>Washington</strong> &mdash; ESHB 1483, Chapter 353, Laws of 2025; manufacturer obligations from January 1, 2026 for electronics and appliances sold on or after July 1, 2021, with parts-pairing restrictions from the same date.</li>
+      <li><strong>Connecticut</strong> &mdash; electronics right-to-repair enacted, effective July 1, 2026. <em>Citation-only entry: we have verified the enactment and effective date from legislative reporting but not yet the codified section numbers from the primary text; check the current Connecticut General Statutes before citing a section.</em></li>
+      <li><strong>Texas</strong> &mdash; HB 2963, effective September 1, 2026, for consumer electronics &mdash; and it expressly excludes medical devices, which is why Texas wheelchair owners are carved out, as our <a href="/pmd.html#the-law">PMD law section</a> notes.</li>
+      <li><strong>Kansas</strong> &mdash; enacted, applying to equipment sold from July 1, 2027. <em>Citation-only entry, same caveat as Connecticut.</em></li>
+    </ul>
+  </section>
+
+  <section id="playbook">
+    <h2>When they say no: the escalation ladder</h2>
+    <p>Work the ladder in order. Each rung creates the paper the next rung needs. Be honest with yourself about what each rung can do: a complaint is not a court order, and an agency report is not a refund &mdash; but refusals that were free when they were verbal get expensive for a manufacturer once they are written down in front of a regulator.</p>
+    <ol>
+      <li><strong>Get the refusal in writing.</strong> Email, a ticket response, a letter. &ldquo;We can&rsquo;t sell you that part&rdquo; said on the phone never happened; written, it is evidence. Ask: &ldquo;Please confirm in writing that you are declining to provide [part/document/tool] for [device, serial number].&rdquo;</li>
+      <li><strong>Cite the statute back, in writing.</strong> Send the demand letter from the <a href="/repair-demand-letter.html">templates page</a> &mdash; the right one for your situation (wheelchair owner, independent repairer, or warranty threat). Name the law, the section, and what you are entitled to. Give a response deadline. In California, note the manufacturer&rsquo;s three-day cure window for a first non-knowing violation works in your favor only if your letter starts the clock.</li>
+      <li><strong>File with your state Attorney General.</strong> Every wheelchair statute above runs through a consumer-protection act, and AG consumer-protection divisions take online complaints. Attach the refusal and your letter. In Washington this rung is not optional &mdash; the AG is the <em>only</em> enforcer, so your complaint <em>is</em> the enforcement mechanism, and complaints are counted.</li>
+      <li><strong>Report it to the FTC</strong> at ReportFraud.ftc.gov. Honest limit: the FTC does not resolve individual complaints or recover your money. What it does is build the pattern record its enforcement lawyers act on &mdash; the Deere order above started as exactly this kind of record. Five minutes, and it counts.</li>
+      <li><strong>Use the courts where the law gives you standing.</strong> Magnuson-Moss (&sect; 2310(d)) and the Colorado, Maryland, Tennessee, and Oregon consumer-protection frameworks support private claims; California&rsquo;s wheelchair act lets an injured person sue for its penalties. For the price of a part or a repair, small-claims court is built for exactly this size of wrong &mdash; bring the statute, the refusal, and the letter. Where the statute is AG-only (Washington) or prosecutor-enforced (California electronics), do not invent a private claim that does not exist; rungs 3 and 4 are your route.</li>
+      <li><strong>Keep the file.</strong> Dates, names, ticket numbers, the fault code, what was said. The same rule as every page in this project: a repair you can document is a repair you can argue about &mdash; and win.</li>
+    </ol>
+    <p><a href="/repair-demand-letter.html">The demand letters &rarr;</a> &middot; <a href="/pmd-repairs.html">Getting a repair paid for (Medicare) &rarr;</a> &middot; <a href="/pmd.html">&larr; Back to PMD</a></p>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

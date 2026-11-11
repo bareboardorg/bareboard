@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exploded View: Pride Jazzy 600 ES &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="The Pride Jazzy 600 ES from its owner&amp;rsquo;s manual: labeled figures of the whole chair, power base, and electrical components in plain language. Its IPB exists but is not openly downloadable — the gap is named on the page.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Exploded View: Pride Jazzy 600 ES">
+<meta property="og:description" content="The Pride Jazzy 600 ES from its owner&amp;rsquo;s manual: labeled figures of the whole chair, power base, and electrical components in plain language. Its IPB exists but is not openly downloadable — the gap is named on the page.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-exploded-jazzy-600-es.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Exploded View: Pride Jazzy 600 ES</h1>
+    <p class="lede">Pride <strong>does</strong> publish an Illustrated Parts Breakdown for the Jazzy 600 ES (INFMANU4643, Rev. H) &mdash; but the only public copy we could find sits on a host that refuses every download we attempt. So this page is built from what is openly readable: the labeled figures in the chair&rsquo;s owner&rsquo;s manual. The whole chair, the power base, the electrical components, and the assembly view, with every label explained in plain language.</p>
+    <p><strong>Coverage: partial &mdash; owner&rsquo;s manual figures.</strong> No part numbers, because the manual prints none. When a readable copy of the IPB is public, this page gets the full treatment: every assembly, every callout, every part number.</p>
+  </section>
+
+  <section>
+    <h2>The source</h2>
+    <p><strong>Guide:</strong> Owner&rsquo;s Manual &mdash; Jazzy 600 ES<br>
+    <strong>Document:</strong> INFMANU4480, Rev. C / June 2014 &mdash; Pride Mobility Products Corporation<br>
+    <strong>Full guide (PDF, in this site&rsquo;s library):</strong> <a href="/library/collected-public-docs/pmd/pride_jazzy-600-es_owner.pdf">pride_jazzy-600-es_owner.pdf</a></p>
+    <p>This copy was retrieved from a dealer-posted public copy (Go Mobility, Ireland). The IPB for this chair &mdash; <a href="/library-hub.html">INFMANU4643, Rev. H / 032017</a> &mdash; exists; its only located public copy (guidespdf / servls) drops our connections, so it is listed here as a known source gap rather than silently skipped.</p>
+  </section>
+  <section>
+    <h2>The maker&rsquo;s own warnings, word for word</h2>
+    <p>Pride prints these in the 600 ES owner&rsquo;s manual, around the freewheel levers and the suspension springs. Word for word:</p>
+    <blockquote><p>WARNING! Do not use the power chair while the drive motors are disengaged! Do not disengage the drive motors when the power chair is on an incline, as the unit could roll on its own! Only engage the freewheel mode when on a level surface.</p></blockquote>
+    <blockquote><p>WARNING! It is important to remember that when your power chair is in freewheel mode, the braking system is disengaged.</p></blockquote>
+    <blockquote><p>WARNING! Do not use your foot to operate the manual freewheel levers. Do not stand on the manual freewheel levers. Applying excessive force to the manual freewheel levers may result in damage to the freewheel levers, motors, and brakes.</p></blockquote>
+    <blockquote><p>WARNING! Do not use the freewheel lever handles as tie-down points to secure this product.</p></blockquote>
+    <blockquote><p>PROHIBITED! The spring tension on your power chair was factory set to meet the needs of the demographic majority of users. Do not adjust the tension of any spring on your power chair.</p></blockquote>
+    <blockquote><p>NOTE: Any nylon insert lock nut removed during the disassembly or adjustment of the power chair must be replaced with a new nut. Nylon insert lock nuts should not be reused as it may cause damage to the nylon insert, resulting in a less secure fit. Replacement nylon insert lock nuts are available at local hardware stores or through your authorized Pride Provider.</p></blockquote>
+    <p><em>Verbatim from the Jazzy 600 ES Owner&rsquo;s Manual, INFMANU4480, Rev. C.</em></p>
+  </section>
+
+  <section>
+    <h2>Build order</h2>
+    <p>The assemblies are laid out in the order you would build the chair: frame first, batteries last. Every step is one exploded view from the maker&rsquo;s guide, followed by its parts table. The <strong>Callout</strong> column is the label printed on the diagram. The <strong>Part number</strong> column is the maker&rsquo;s own number &mdash; the number a parts desk cannot argue with.</p>
+    <ul>
+      <li><strong>Frame:</strong> <a href="#step-1">Step 1: The whole chair (Owner’s Manual Figure 1)</a></li>
+      <li><strong>Drive:</strong> <a href="#step-2">Step 2: The power base (Figure 2)</a></li>
+      <li><strong>Seating:</strong> <a href="#step-3">Step 3: Assembly view — what comes apart (Figure 6)</a></li>
+      <li><strong>Electronics and controller:</strong> <a href="#step-4">Step 4: Electrical components (Figure 3)</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Stage 1 — Frame</h2>
+    <p>Start with the skeleton. Every other system bolts to the frame, so it goes together first.</p>
+    <h3 id="step-1">Step 1 &mdash; The whole chair (Owner’s Manual Figure 1)</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-600-es/jazzy-600-es-p7.jpg" alt="The whole chair (Owner’s Manual Figure 1) — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 1.</strong> The whole chair (Owner’s Manual Figure 1) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Part (maker&rsquo;s label)</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Seatback</td><td>Supports your back.</td></tr>
+        <tr><td>Seat assembly</td><td>The whole seat unit: base, back, and armrests together.</td></tr>
+        <tr><td>Armrest</td><td>Supports your arms, and helps you transfer in and out.</td></tr>
+        <tr><td>Joystick</td><td>The hand control you drive with.</td></tr>
+        <tr><td>Controller</td><td>The chair’s brain: takes the joystick’s commands and drives the motors.</td></tr>
+        <tr><td>Seat base</td><td>The platform the seat sits on.</td></tr>
+        <tr><td>Power base assembly</td><td>The bottom half of the chair: frame, motors, wheels, and batteries.</td></tr>
+        <tr><td>Caster wheel</td><td>The small swivel wheels. Not powered &amp;mdash; they follow where the chair turns.</td></tr>
+        <tr><td>Manual freewheel lever</td><td>The lever that disconnects the motors so the chair can be pushed by hand. One on each motor.</td></tr>
+        <tr><td>Drive wheel</td><td>The big powered wheels. The motors turn these.</td></tr>
+        <tr><td>Spring shock / gas damper</td><td>Soaks up bumps so the seat rides level.</td></tr>
+        <tr><td>Front rigging (foot platform)</td><td>The foot platform your feet rest on.</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section>
+    <h2>Stage 2 — Drive</h2>
+    <p>The drive parts carry power from the motors out to the wheels.</p>
+    <h3 id="step-2">Step 2 &mdash; The power base (Figure 2)</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-600-es/jazzy-600-es-p8.jpg" alt="The power base (Figure 2) — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 2.</strong> The power base (Figure 2) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Part (maker&rsquo;s label)</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Trapeze bars</td><td>The bars at the back of the base that the seat mounts onto.</td></tr>
+        <tr><td>Rear shroud</td><td>The rear body cover. It protects the parts underneath.</td></tr>
+        <tr><td>Front cover</td><td>The front body cover.</td></tr>
+        <tr><td>Manual freewheel lever</td><td>Disconnects the motor so the chair can be pushed by hand.</td></tr>
+        <tr><td>Suspension spring</td><td>Soaks up bumps. Its tension is factory-set — see Pride’s prohibition in the warnings above.</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section>
+    <h2>Stage 3 — Seating</h2>
+    <p>Seating goes on once the base rolls. This is the system that holds the rider — fit is safety here.</p>
+    <h3 id="step-3">Step 3 &mdash; Assembly view — what comes apart (Figure 6)</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-600-es/jazzy-600-es-p11.jpg" alt="Assembly view — what comes apart (Figure 6) — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 3.</strong> Assembly view — what comes apart (Figure 6) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Part (maker&rsquo;s label)</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Armrest angle adjustment</td><td>Sets the angle of the armrests.</td></tr>
+        <tr><td>Controller position</td><td>Where the joystick sits &amp;mdash; it can be moved for the rider’s reach.</td></tr>
+        <tr><td>Seat height/angle adjustment</td><td>Sets how high the seat sits and how it tilts.</td></tr>
+        <tr><td>Foot platform angle adjustment</td><td>Sets the angle of the foot platform.</td></tr>
+        <tr><td>Foot platform height/depth adjustment</td><td>Sets where the foot platform sits, up/down and forward/back.</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section>
+    <h2>Stage 4 — Electronics and controller</h2>
+    <p>The electronics wire the chair together: controller, joystick, and the cables between them.</p>
+    <h3 id="step-4">Step 4 &mdash; Electrical components (Figure 3)</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-600-es/jazzy-600-es-p9.jpg" alt="Electrical components (Figure 3) — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 4.</strong> Electrical components (Figure 3) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Part (maker&rsquo;s label)</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Controller power module</td><td>The box that turns joystick commands into motor power.</td></tr>
+        <tr><td>Controller connector</td><td>Where the controller’s harness plugs into the power base.</td></tr>
+        <tr><td>Battery connectors</td><td>Where the batteries plug in. Corrosion here causes many “dead chair” faults.</td></tr>
+        <tr><td>Motor connectors</td><td>Where each motor plugs into the harness.</td></tr>
+        <tr><td>Main circuit breaker</td><td>A resettable safety switch on the rear frame. If the chair dies under load, this may have tripped — let the chair rest a minute, then push it back in.</td></tr>
+        <tr><td>Quick release battery connectors</td><td>Battery plugs you can pull apart by hand — the fast way to make the chair electrically safe.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>What is missing, in the open</h2>
+    <p>The full parts breakdown for this chair: <strong>published by Pride, but not openly downloadable from anywhere we can reach</strong>. If you hold a copy of INFMANU4643, you hold the missing half of this page.</p>
+    <p><a href="/pmd-exploded.html">&larr; All exploded views</a> &middot; <a href="/pmd.html">PMD section</a></p>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

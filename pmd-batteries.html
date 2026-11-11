@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Batteries &amp; Chargers &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="Power wheelchair batteries and chargers in plain language: the matched 24V pair, gel and AGM chemistry, real MK Battery capacities, break-in, charging voltages, storage, replacement, and the lithium question.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Batteries &amp; Chargers">
+<meta property="og:description" content="The battery pair is a system: chemistry, real capacities, break-in, charging, storage, and lithium &mdash; in plain language.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-batteries.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Batteries &amp; Chargers</h1>
+    <p class="lede">A power wheelchair does not run on a battery. It runs on a <strong>pair</strong> &mdash; two batteries, wired together, charged together, and replaced together. Treat them as one system and a pair can last for years. Treat them as two separate boxes and the weaker one will take the other down with it. This page is that system, in plain language: what the pair is, what the chemistry words mean, what the numbers on the side really promise, and how charging decides whether a pair lives two years or five.</p>
+    <p>Words in <strong>bold</strong> are defined where they first appear. Where a maker&rsquo;s own safety warning matters, it is quoted word for word, with the maker and the document named.</p>
+    <p><em>Provenance: capacities, break-in, charging and storage guidance on this page come from the makers&rsquo; own publications &mdash; above all MK Battery&rsquo;s <a href="https://www.mkbattery.com/application/files/3717/4181/6041/MK_HME_BCG_v12_US_LowRes.pdf">HME Battery Care Guide (LIT-HME1017)</a> and MK&rsquo;s gel specification sheets, Invacare&rsquo;s <a href="/library/collected-public-docs/pmd/invacare_tdx-sp2_owner.pdf">TDX SP2 owner&rsquo;s manual</a>, and Lester Electrical&rsquo;s charger manuals. Air-travel limits are the Federal Aviation Administration&rsquo;s; funding limits are the Centers for Medicare &amp; Medicaid Services&rsquo;. If a fact could not be checked in a primary source like those, it is not on this page.</em></p>
+  </section>
+
+  <section id="safety">
+    <h2>Safety first &mdash; the makers&rsquo; words</h2>
+    <p>Before any work at a battery terminal: put the chair on level ground, switch it OFF, and disconnect the main battery harness or trip the main circuit breaker. Work on one terminal at a time with an insulated tool, and remove rings, watches and other metal jewellery. A dropped tool across both terminals is a short circuit.</p>
+    <p>Invacare, in the <a href="/library/collected-public-docs/pmd/invacare_tdx-sp2_owner.pdf">TDX SP2 owner&rsquo;s manual</a> (document 1578997-P), section 6.3.3:</p>
+    <p>&ldquo;DO NOT attempt to recharge the batteries and operate the power wheelchair at the same time.&rdquo;</p>
+    <p>&ldquo;DO NOT sit in the power wheelchair while charging the batteries.&rdquo;</p>
+    <p>&ldquo;NEVER attempt to recharge the batteries by attaching cables directly to the battery terminals.&rdquo;</p>
+    <p>On the charger itself, same manual, same section:</p>
+    <p>&ldquo;Only ever use the battery charger supplied with your power wheelchair, or a charger that has been approved by Invacare.&rdquo;</p>
+    <p>And on running a pair flat, section 6.3.6 of that manual:</p>
+    <p>&ldquo;Avoid ultra-deep discharges and never drain your batteries completely.&rdquo;</p>
+    <p>MK Battery, on the battery label reproduced in its <a href="https://www.mkbattery.com/application/files/3717/4181/6041/MK_HME_BCG_v12_US_LowRes.pdf">HME Battery Care Guide</a>:</p>
+    <p>&ldquo;WARNING: RISK OF FIRE, EXPLOSION OR BURNS. DO NOT DISASSEMBLE OR INCINERATE.&rdquo;</p>
+    <p>&ldquo;NOT RECOMMENDED FOR INVERTED USE. FOLLOW PROPER CHARGING INSTRUCTIONS.&rdquo;</p>
+  </section>
+
+  <section id="system">
+    <h2>The pair is a system</h2>
+    <p>Almost every power chair runs on <strong>two 12-volt batteries wired in series</strong>. <strong>Series</strong> means one after the other in a chain, so their voltages add: 12V + 12V = <strong>24V</strong>, which is what the chair&rsquo;s motors and controller are built for. MK Battery&rsquo;s <a href="https://www.mkbattery.com/application/files/3717/4181/6041/MK_HME_BCG_v12_US_LowRes.pdf">HME Battery Care Guide</a> puts it plainly: wheelchairs and scooters typically require two batteries with a 24-volt series connection.</p>
+    <p>Because they are chained, the pair is only as strong as its weaker half. If one battery ages faster, it drags the other down on every ride and every charge. That is why every rule on this page is about the pair, not the single battery:</p>
+    <ul>
+      <li>Buy them as a <strong>matched pair</strong> &mdash; same maker, same model, same size, similar date codes. MK&rsquo;s guide says never to mix and match different manufacturers, sizes or technologies, and never to mix gel with AGM.</li>
+      <li>Charge them together, every time, with the chair&rsquo;s charger.</li>
+      <li>Test them separately when there is trouble (see <a href="/pmd-fixes.html">Cheap Fixes, Procedure 3</a>), but replace them together.</li>
+    </ul>
+    <p><strong>Capacity</strong> is how much charge a battery holds, measured in <strong>amp-hours (Ah)</strong> &mdash; roughly, how many amps it can give, for how many hours, before it is empty. A 50 Ah battery and a 75 Ah battery can both be 12V; the bigger number is a bigger fuel tank, not more power at the plug.</p>
+    <p><strong>Deep-cycle</strong> means a battery built to be used and recharged every day, giving up a large share of its charge each time. A chair battery is a deep-cycle battery. That one fact explains most of this page.</p>
+  </section>
+
+  <section id="chemistries">
+    <h2>Three chemistries &mdash; and one that does not belong</h2>
+    <p>All chair batteries in this section are lead-acid underneath: lead plates in sulphuric acid. What differs is what holds the acid.</p>
+    <table>
+<thead><tr><th>Chemistry</th><th>What it is, in plain words</th><th>What it means for you</th></tr></thead>
+<tbody>
+<tr><td><strong>Flooded</strong> (wet)</td><td>The acid is liquid, sloshing free inside. The caps open so water can be topped up.</td><td>Needs watering, can spill, and vents gas. Not sealed &mdash; and Medicare&rsquo;s wheelchair policy denies a non-sealed battery as not reasonable and necessary (see Sources). Chairs do not ship with these.</td></tr>
+<tr><td><strong>AGM</strong> &mdash; Absorbed Glass Mat</td><td>The acid is soaked into fibreglass mats squeezed between the plates. Sealed.</td><td>No watering, no spills. A common chair fitment, often a little cheaper than gel, with a higher charging voltage than gel (see Charging).</td></tr>
+<tr><td><strong>Gel</strong></td><td>The acid is set into a jelly (a gelled electrolyte) so it cannot move. Sealed.</td><td>No watering, no spills. MK Battery built its name on genuine gel for power mobility. Gel is sensitive to charging voltage: too high damages it, which is why charger profile matters.</td></tr>
+</tbody>
+</table>
+    <p>AGM and gel are both <strong>VRLA</strong> &mdash; <strong>valve-regulated lead-acid</strong>, meaning sealed batteries with a safety valve that lets out gas only if pressure builds too far. MK&rsquo;s guide calls them &ldquo;Sealed VRLA Gel and AGM batteries&rdquo; and notes they require no watering. Sealed is why chairs ship with gel or AGM: the chair can tilt, travel and sit in a living room without acid on the floor, and the user never has to open a battery.</p>
+    <p><strong>Never fit car starting batteries.</strong> A car battery is built for one job: a huge burst for a few seconds to start an engine, then an immediate refill from the alternator. Its plates are thin, to give that burst. Used as a chair battery &mdash; drained deeply every day &mdash; those thin plates wear out fast, range falls, and the pair dies early. A chair needs the opposite design: thicker plates, built for slow, deep, daily use. That is what &ldquo;deep-cycle&rdquo; on the label is promising, and a starting battery does not have it.</p>
+  </section>
+
+  <section id="sizes">
+    <h2>Group sizes and real capacities</h2>
+    <p><strong>Group size</strong> is a standard box size &mdash; length, width and height &mdash; set by the Battery Council International (BCI). It says whether the battery fits your chair&rsquo;s tray. It does <em>not</em> fix the capacity: two batteries in the same group size, from different makers or chemistries, can hold different amounts.</p>
+    <p>The table below is one maker&rsquo;s own numbers, stated exactly: <strong>MK Battery&rsquo;s gel batteries</strong>, capacity at the <strong>20-hour rate</strong> (written C/20 &mdash; the capacity measured when the battery is drained steadily over 20 hours; drain it faster and you get less, which is why the rate must always be named).</p>
+    <table>
+<thead><tr><th>Group size</th><th>MK gel model</th><th>Capacity at C/20</th></tr></thead>
+<tbody>
+<tr><td>U1</td><td>MU-1 SLD G</td><td>31.6 Ah</td></tr>
+<tr><td>22NF</td><td>M22NF SLD G</td><td>51.0 Ah</td></tr>
+<tr><td>Group 34</td><td><a href="https://www.easymedonline.com/media/pdf/M34SLDG.pdf">M34 SLD G specification sheet</a></td><td>60.0 Ah</td></tr>
+<tr><td>Group 24</td><td><a href="https://www.easymedonline.com/media/pdf/M24SLDG.pdf">M24 SLD G specification sheet</a></td><td>73.6 Ah</td></tr>
+</tbody>
+</table>
+    <p>Source: MK Battery&rsquo;s published gel specifications &mdash; the general specifications in MK&rsquo;s HME literature and the individual M34 SLD G and M24 SLD G specification sheets linked in the table. MK notes on those sheets that amp-hour capacity is a nominal rating and that all ratings are after 15 cycles &mdash; which is the break-in point in the next section.</p>
+    <p><strong>Why these numbers look lower than the ones in <a href="/pmd-fixes.html">Cheap Fixes, Procedure 3</a>.</strong> Procedure 3 quotes generic ranges across makers and chemistries &mdash; U1 34&ndash;35 Ah, 22NF 55 Ah, Group 34 60&ndash;65 Ah, Group 24 75&ndash;85 Ah. There is no contradiction. Those ranges are dominated by AGM batteries and by makers who rate generously; gel of the same box size commonly rates a few amp-hours lower, and MK rates its gel honestly at the same 20-hour rate. Same tray, different chemistry, different maker, different number. When you are comparing a quote, compare like with like: chemistry, maker, and the C/20 rate, all three.</p>
+    <p>One more honest point: the pair&rsquo;s capacity is the capacity of <em>one</em> battery in the chain, not double. Two 51.0 Ah batteries in series give you 24V at 51.0 Ah &mdash; the voltage added, the amp-hours did not.</p>
+  </section>
+
+  <section id="break-in">
+    <h2>Break-in: the first 15 to 20 cycles</h2>
+    <p>A new gel or AGM pair does not give its full capacity on day one. MK Battery&rsquo;s <a href="https://www.mkbattery.com/application/files/3717/4181/6041/MK_HME_BCG_v12_US_LowRes.pdf">HME Battery Care Guide</a> explains that the design trades some initial capacity for longer life, and states that gel battery performance improves once the battery has been cycled (discharged and recharged) 15&ndash;20 times &mdash; a break-in period MK calls necessary to fully activate the battery for maximum performance and longevity. Invacare&rsquo;s <a href="/library/collected-public-docs/pmd/invacare_tdx-sp2_owner.pdf">TDX SP2 owner&rsquo;s manual</a> says the same thing in its own range: new batteries reach full capacity after about 10&ndash;20 charging cycles.</p>
+    <p>At one charge a night, that is roughly two to three weeks of normal use. Two practical consequences:</p>
+    <ul>
+      <li>Do not judge a new pair by its first week&rsquo;s range, and do not let a supplier judge it either. Short range in week one is the design, not a defect.</li>
+      <li>Charge fully before first use, and charge daily and fully through the break-in. MK also notes there is no &ldquo;memory&rdquo; effect to train away &mdash; gel and AGM do not need to be run flat to stay healthy, and running them flat harms them.</li>
+    </ul>
+  </section>
+
+  <section id="charging">
+    <h2>Charging: the habit that decides the lifespan</h2>
+    <p>MK&rsquo;s guidance is blunt and simple: <strong>charge daily, and for as long as possible, even on days with low usage.</strong> Charge immediately after use; if you cannot, do not leave the pair in a discharged state for more than 24 hours. MK recommends a minimum charge of 8 hours to return about 80% of capacity, more time to return 100%, and a 12-hour charge at least once a week. Chronic undercharging &mdash; short, skipped charges &mdash; is, in MK&rsquo;s words, a common cause of <strong>sulfation</strong>: hard crystals that form on the plates of a battery left partly empty, permanently blocking capacity.</p>
+    <p><strong>Depth of discharge</strong> &mdash; how much of the tank you use before recharging &mdash; sets cycle life. The harder a battery works, the shorter its life: Invacare&rsquo;s manual gives the scale, about 500 cycles at 80% discharge against about 5,000 cycles at 10% discharge. You cannot avoid using your chair, but you can avoid the deep end: charge before the gauge is in the red, not after.</p>
+    <h3>Gel and AGM need different chargers &mdash; or the right profile</h3>
+    <p>A <strong>charge profile</strong> is the charger&rsquo;s recipe: what voltage it holds at each stage of charging. Gel and AGM recipes are different, and the difference is voltage. From MK&rsquo;s own specification sheets:</p>
+    <table>
+<thead><tr><th></th><th>MK gel (per 12V battery)</th><th>MK AGM (per 12V battery)</th></tr></thead>
+<tbody>
+<tr><td>Cycle charge voltage</td><td>13.8&ndash;14.1V (2.30&ndash;2.35V per cell, M34 SLD G sheet)</td><td>14.4&ndash;15.0V (MK ES-series AGM sheets)</td></tr>
+<tr><td>Float voltage</td><td>13.4&ndash;13.6V</td><td>13.5&ndash;13.8V</td></tr>
+</tbody>
+</table>
+    <p>Run a gel pair on an AGM recipe and every charge pushes it above the voltage its gel can tolerate; run AGM on a gel recipe and it never quite fills. Either way the pair dies early, quietly, months later, with no single event to blame. Charger makers build for this: Lester Electrical&rsquo;s <a href="https://batterychargerdepot.com/BatteryChargers/Summit%20%20User%20Manual.pdf">Summit Series user&rsquo;s manual</a> explains that the charger is factory-configured for the battery type named in the BATTERY field on its ratings label, with separate standard profiles for wet, AGM and gel, and warns the user to make sure the battery system has the properly rated voltage, amp-hours and type for the charging system. MK&rsquo;s own rule in its guide: never use an automotive trickle-type or wet-type charger on sealed VRLA gel or AGM batteries, as doing so will damage them &mdash; and use the equipment manufacturer&rsquo;s automatic charger for routine charging.</p>
+    <h3>On-board and off-board chargers</h3>
+    <p>An <strong>on-board charger</strong> is built into the chair: you plug the chair into the wall, usually through the socket on the joystick. An <strong>off-board charger</strong> is a separate box that sits on a shelf and plugs into the chair&rsquo;s charging socket &mdash; the arrangement Lester&rsquo;s <a href="https://batterychargerdepot.com/BatteryChargers/Summit%20%20User%20Manual.pdf">Summit manual</a> describes as off-board (shelf) versus on-board (built-in) models of the same charger family. Neither is automatically better. What matters is the match: right profile for your chemistry, right size for your capacity, in the form you will actually use every night. Permobil&rsquo;s owner guidance for the <a href="/library/collected-public-docs/pmd/permobil_m3-corpus_owner.pdf">M3 Corpus</a> is typical of the makers: charge from the control panel socket, connect the charger to the chair first and then to the wall, use only the charger intended for the chair, and charge in a well-ventilated, dry room.</p>
+    <h3>Reading the charger&rsquo;s lights</h3>
+    <p>Chargers speak in lights, and the exact words are in the charger&rsquo;s own manual &mdash; read yours, because colours and patterns differ by maker. The pattern to expect, from Lester&rsquo;s manuals for its wheelchair chargers: a steady or blinking light while charging is in progress, a changed, steady indication when the charge is complete, and distinct blink patterns for faults such as voltage too low to start or an over-voltage shutoff. Two rules hold across makers: a charger that claims &ldquo;done&rdquo; in an hour after a full day&rsquo;s use is telling you something is wrong &mdash; with the charger, the connection, or the pair &mdash; and a charger that never finishes is doing the same. Both are diagnoses, not annoyances: start with the socket and pins (<a href="/pmd-fixes.html">Cheap Fixes, Procedure 2</a>), then test the pair (Procedure 3).</p>
+  </section>
+
+  <section id="voltage">
+    <h2>Voltage: reading the pair&rsquo;s state of charge</h2>
+    <p><strong>State of charge</strong> is how full the tank is, as a percentage. The honest way to estimate it with a meter is <strong>resting voltage</strong>: the voltage of a battery that has sat with no charger and no load &mdash; measured one battery at a time, as in <a href="/pmd-fixes.html">Cheap Fixes, Procedure 3</a>. MK Battery&rsquo;s published state-of-charge chart for 12V batteries gives:</p>
+    <table>
+<thead><tr><th>State of charge</th><th>Gel &mdash; resting volts</th><th>AGM &mdash; resting volts</th></tr></thead>
+<tbody>
+<tr><td>100%</td><td>12.85&ndash;12.95V</td><td>12.80&ndash;12.90V</td></tr>
+<tr><td>75%</td><td>12.65V</td><td>12.60V</td></tr>
+<tr><td>50%</td><td>12.35V</td><td>12.30V</td></tr>
+<tr><td>25%</td><td>12.00V</td><td>12.00V</td></tr>
+<tr><td>0%</td><td>11.80V</td><td>11.80V</td></tr>
+</tbody>
+</table>
+    <p>That chart is why Procedure 3&rsquo;s rule works: a healthy, charged battery reads <strong>12.7V or more</strong> at rest, and the two batteries of a pair should sit <strong>within 0.1V of each other</strong>. A battery well below its mate is the weak half of the system, even if the pair&rsquo;s total looks acceptable. And resting voltage alone can still lie &mdash; a worn battery can show a decent rest number and collapse the moment it has to work. That is what the load test in Procedure 3 is for. Judge by both.</p>
+  </section>
+
+  <section id="storage">
+    <h2>Storage: park it full, keep it cool, top it up</h2>
+    <p>MK Battery&rsquo;s <a href="https://www.mkbattery.com/application/files/3717/4181/6041/MK_HME_BCG_v12_US_LowRes.pdf">storage guidance</a> is three sentences long, and all three matter:</p>
+    <ul>
+      <li>Always store your batteries <strong>fully charged</strong>.</li>
+      <li><strong>Charge once a month</strong> while in storage with the equipment manufacturer&rsquo;s charger, for a minimum of 24 hours.</li>
+      <li>Avoid hot and cold extremes when storing.</li>
+    </ul>
+    <p>Invacare&rsquo;s <a href="/library/collected-public-docs/pmd/invacare_tdx-sp2_owner.pdf">TDX SP2 manual</a> agrees, and adds its own numbers: if the chair will not be used for more than two weeks, charge at least once a month and always before use; the manual recommends storing the chair at about 15&deg;C. A fully charged sealed pair can hold its charge for months, but &ldquo;can&rdquo; is not a plan &mdash; a pair put away flat, or put away full and forgotten for a year, is the pair that will not take a charge when you need the chair again. If the chair is stored where someone else controls the building, write the monthly charge on a card taped to the joystick.</p>
+  </section>
+
+  <section id="replacement">
+    <h2>Replacement: both, same size, and recycle the old pair</h2>
+    <p>When a pair is done, it is done together. The diagnosis comes first &mdash; resting voltage, the pair-match check, and the load test in <a href="/pmd-fixes.html">Cheap Fixes, Procedure 3</a> &mdash; so you are replacing a proven failure, not a dirty connection. Then:</p>
+    <ul>
+      <li>Replace <strong>both</strong> batteries with a new matched pair: same maker, same model, same group size as the tray takes, same chemistry the charger is set for.</li>
+      <li>Fully charge the new pair before first use &mdash; Invacare&rsquo;s manual warns, in its caution, that battery life will be reduced if new batteries are not fully charged before initial use &mdash; and expect the 15&ndash;20-cycle break-in before full range returns.</li>
+      <li>Take the old pair back. MK&rsquo;s guide: all old batteries are considered hazardous material and must be recycled through an approved agency; lead-acid batteries are virtually 100% recyclable, and in most areas it is illegal to discard one in the trash. The retailer who sells the new pair is the normal route &mdash; ask before you buy, not after.</li>
+    </ul>
+    <p>For what a fair replacement looks like as parts rather than a dealer&rsquo;s assembly price, see <a href="/pmd-parts.html">Parts, Not Assemblies</a>; for who is allowed to make you wait for it, see <a href="/repair-rights.html">Repair Rights</a>.</p>
+  </section>
+
+  <section id="lithium">
+    <h2>The lithium question, honestly</h2>
+    <p><strong>Lithium</strong> batteries &mdash; a different chemistry entirely, most often lithium-ion or lithium iron phosphate in mobility packs &mdash; exist as retrofits for power chairs, and the honest answer is: sometimes, with conditions, and never as a drop-in afterthought. Here is what can be stated from primary sources, and what cannot.</p>
+    <p>Every lithium pack contains a <strong>BMS &mdash; a battery management system</strong>: a small electronic board inside the pack that watches each cell&rsquo;s voltage and temperature, balances the cells, and cuts the pack off if it is overcharged, over-discharged, shorted or overheated. The BMS is not an accessory; it is the safety system, and a pack&rsquo;s quality is largely its BMS&rsquo;s quality. It also means a lithium pack is electronics, not just chemistry &mdash; it has to agree with your chair&rsquo;s controller and your charger, both of which were designed around lead-acid behaviour and lead-acid voltages. The makers&rsquo; warnings quoted at the top of this page &mdash; only the supplied or approved charger, only approved batteries &mdash; do not disappear because the new pack is lighter. A lithium conversion needs a charger made for that pack, and a chair whose controller accepts it; get both confirmed for your exact chair model before money moves.</p>
+    <p><strong>Weight and range.</strong> The lead pair you are replacing is heavy, and MK&rsquo;s sheets say exactly how heavy: a Group 24 gel battery is 51.5 lb, so the pair is about 103 lb before cables. Any lithium pack&rsquo;s stated weight can be held against that number, and its stated watt-hours &mdash; <strong>watt-hours (Wh)</strong> are volts times amp-hours &mdash; against the lead pair&rsquo;s 24V times its amp-hours. This page makes no range claim for any retrofit pack, because no chair maker publishes one for a conversion it did not build: range depends on the pack, the chair, the rider and the terrain, and a seller&rsquo;s number is not a measurement of your chair.</p>
+    <p><strong>Funding.</strong> Medicare&rsquo;s wheelchair options policy (Local Coverage Determination L33792) treats lithium as its own line: a lithium-based battery (code E2397) is allowed one at a time, with a usual maximum replacement frequency of once every three years &mdash; while up to two sealed lead-acid batteries at a time are allowed for a power wheelchair. A conversion your funder did not approve can become a conversion you pay for in full, including the charger. Ask first, in writing.</p>
+    <p><strong>Air travel.</strong> Sealed lead-acid pairs travel as non-spillable batteries under long-standing rules. Lithium is stricter, and the <a href="https://www.faa.gov/hazmat/packsafe/airline-passengers-and-batteries">FAA&rsquo;s PackSafe guidance</a> sets the lines: for a mobility device with a removable lithium battery, the battery is limited to 300 Wh, must ride in the cabin, and the airline must be told where it is; a spare is limited to one at up to 300 Wh, or two at up to 160 Wh each. Most full-size chair conversions are far above 300 Wh &mdash; a 24V, 50 Ah pack is 1,200 Wh &mdash; so a converted chair may simply not be flyable with its battery removed, where the lead pair was. If you fly with your chair, that fact alone can decide the question. The full travel procedure is on <a href="/pmd-travel.html">Flying With Your Chair</a>.</p>
+    <p>The balanced summary: lithium can be the right answer for a chair that is specified for it, with its own charger, its own BMS, and a funder and an airline that both accept it. As an unresearched swap into a lead-acid chair, it asks the controller, the charger, the funder and the airline to all agree at once &mdash; and it only takes one of them saying no.</p>
+  </section>
+
+  <section id="sources">
+    <h2>Sources</h2>
+    <ul>
+      <li>MK Battery, <a href="https://www.mkbattery.com/application/files/3717/4181/6041/MK_HME_BCG_v12_US_LowRes.pdf"><em>HME Battery Care Guide</em>, LIT-HME1017</a> (mkbattery.com) &mdash; the pair in series, matched-pair rules, break-in 15&ndash;20 cycles, daily charging, minimum 8-hour charge, sulfation, storage (store fully charged, charge monthly in storage, avoid extremes), recycling, and the verbatim label warnings quoted above.</li>
+      <li>MK Battery, gel specification sheets: <a href="https://www.easymedonline.com/media/pdf/M34SLDG.pdf">M34 SLD G</a> and <a href="https://www.easymedonline.com/media/pdf/M24SLDG.pdf">M24 SLD G</a> (MK Battery documents) &mdash; Group 34 at 60.0 Ah and Group 24 at 73.6 Ah at C/20, gel cycle voltage 2.30&ndash;2.35V per cell, float and weight figures; with MK&rsquo;s HME general gel specifications for U1 (MU-1 SLD G) at 31.6 Ah and 22NF (M22NF SLD G) at 51.0 Ah at C/20.</li>
+      <li>MK Battery, ES-series AGM specification data (as published for MK AGM mobility batteries) &mdash; AGM cycle charge voltage 14.4&ndash;15.0V and float 13.5&ndash;13.8V per 12V battery, for the gel/AGM profile comparison.</li>
+      <li>MK Battery, state-of-charge to open-circuit voltage chart for 12V batteries (gel and AGM columns), as published from MK Battery&rsquo;s manual &mdash; the resting-voltage table above.</li>
+      <li>Invacare, <a href="/library/collected-public-docs/pmd/invacare_tdx-sp2_owner.pdf"><em>TDX SP2 Series owner&rsquo;s manual</em>, document 1578997-P, section 6.3</a> (site library copy) &mdash; all Invacare warnings quoted verbatim, break-in 10&ndash;20 cycles, daily charging, cycle life at 80% vs 10% discharge, storage and monthly charging.</li>
+      <li>Lester Electrical, <a href="https://batterychargerdepot.com/BatteryChargers/Summit%20%20User%20Manual.pdf"><em>Summit Series user&rsquo;s manual</em></a> (Lester Electrical) &mdash; factory-configured battery profiles (wet / AGM / gel), on-board versus off-board chargers, and the ratings-label check.</li>
+      <li>Permobil, <a href="/library/collected-public-docs/pmd/permobil_m3-corpus_owner.pdf"><em>M3 Corpus owner&rsquo;s manual</em></a> (site library copy) &mdash; charging from the control panel, charger intended for the chair, ventilated dry room.</li>
+      <li>Centers for Medicare &amp; Medicaid Services, <a href="https://www.cms.gov/training-education/medicare-learning-networkr-mln/compliance/medicare-provider-compliance-tips/wheelchair-options-accessories">Wheelchair Options &amp; Accessories compliance guidance</a>, summarising Local Coverage Determination L33792 &mdash; up to two sealed batteries at a time, non-sealed batteries denied, lithium battery E2397 one at a time with usual replacement once every three years.</li>
+      <li>Federal Aviation Administration, <a href="https://www.faa.gov/hazmat/packsafe/airline-passengers-and-batteries">PackSafe: Airline Passengers and Batteries</a> &mdash; lithium mobility-device limits: 300 Wh, cabin carriage for removed batteries, spare-battery limits.</li>
+    </ul>
+    <p><a href="/pmd.html">&larr; Back to PMD</a> &middot; <a href="/pmd-fixes.html">The Cheap Fixes &mdash; Procedure 3: test and replace the pair &rarr;</a></p>
+  </section>
+
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apple TV — BareBoard — Free Hardware Education</title>
+<meta name="description" content="Apple TV HD and 4K: fanless A-series board, integrated power supply, FCC photos, model splits, faults and the full (short) record.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Apple TV">
+<meta property="og:description" content="Apple TV: a fanless box, an honest short record, and a power supply that decides when it dies.">
+<meta property="og:url" content="https://bareboard.org/devices/apple-tv/">
+<meta property="og:image" content="https://bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/devices/">Devices</a></li>
+        <li class="has-children">
+          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/about.html#how-we-work">How we work</a></li>
+                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/notes/">Bench Notes</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                <li><a href="/protocols.html">Protocol RE</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
+                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
+                <li><a href="/hot-100.html">Game Consoles</a></li>
+                <li><a href="/hot-100.html">Media Streamers</a></li>
+                <li><a href="/hot-100.html">Networking Gear</a></li>
+                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
+                <li><a href="/hot-100.html">Other</a></li>
+                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
+                <li><a href="/hot-100.html">Phones</a></li>
+                <li><a href="/hot-100.html">Printers</a></li>
+                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
+                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
+                <li><a href="/hot-100.html">Wearables</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/most-wanted.html#board">The board</a></li>
+              </ul>
+            </div>
+          </div></li>
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+                <li><a href="/watchmen.html#corrections">Corrections</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+  <aside class="legal-notice bb-notice-amber">
+    <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
+  </aside>
+
+  <h1>Apple TV</h1>
+  <p class="lede">A fanless A-series box with no user-serviceable anything inside &mdash; and the quietest record of any Apple line. The board tour comes from the FCC filing, because Apple has never published anything deeper.</p>
+  <section>
+    <h2 id="fcc">FCC ID</h2>
+    <p><strong>FCC IDs vary by model.</strong> Apple&rsquo;s grantee code is <strong>BCG</strong>. Every Apple TV files for Wi-Fi and Bluetooth (the remote pairs over Bluetooth; newer remotes add no radio of their own beyond it), and the internal photos show a board that is mostly power supply and heatsink.</p>
+    <p>Every radio a device carries &mdash; Wi-Fi, Bluetooth, cellular, ultra-wideband, NFC &mdash; needs an FCC equipment authorization before the device can be sold in the United States. To get one, the manufacturer files photographs and test reports with the FCC, and those filings are <strong>public record</strong>. Check the label on your specific unit and look it up at <a href="https://fccid.io">fccid.io</a>.</p>
+    
+  </section>
+  <section>
+    <h2 id="fcc-revealed">What the FCC filing revealed</h2>
+    <p>The FCC filing for this device includes the documents manufacturers are required to submit: external photos, internal photos, test setup photos, RF test reports, and the user manual. These are public record at <a href="https://fccid.io/">fccid.io</a>.</p>
+    <ul>
+      <li><strong>Internal photos</strong> &mdash; the single board: SoC under a large heatsink, the integrated power supply section, and the antenna placements at the case edges</li>
+      <li><strong>Test reports</strong> &mdash; the Wi-Fi radio&rsquo;s output per band, which changed when the 2022 model made Ethernet and Thread model-dependent</li>
+      <li><strong>The user manual</strong> &mdash; filed publicly; it documents the ports and the remote pairing the filings cover</li>
+    </ul>
+    <p>What the FCC filing does <em>not</em> include: schematics (withheld under confidentiality requests where the maker files them), firmware, and the full bill of materials.</p>
+  </section>
+  <section>
+    <h2 id="exploded">Exploded view &mdash; the assemblies in build order</h2>
+    <p>This is the centerpiece of the page: the device taken apart into its assemblies, in the order they go together, every part named in plain language with what it does. An <em>exploded view</em> is the drawing a manufacturer makes showing every part separated along the path it assembles &mdash; the single most useful document in repair, and the one most often kept behind a dealer login.</p>
+    <h3>The source</h3>
+    <p><strong>Parts book:</strong> none. No Self Service Repair coverage, no published manual, no parts. <strong>FCC internal photos</strong> are the source for the stack below. The unit is held together with clips and screws under the base &mdash; it can be opened (unlike the Watch and AirPods, it is not welded), but Apple sells no part you could install, so the exploded view is a diagnostic map, not a shopping list.</p>
+    <p><strong>Coverage: PARTIAL &mdash; no public parts book; FCC internal-photo basis.</strong></p>
+    <h3>Build order</h3>
+        <h3>Step 1 &mdash; Case &amp; power supply</h3>
+    <p>The box is a mains-powered device: the power supply is inside, which is why the cord has no wall wart.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Case &amp; base</td><td>A plastic shell on a rubberized base. The base is the way in.</td></tr>
+        <tr><td>Integrated power supply</td><td>A small AC-DC supply section on the main board. This is the part that ages: its capacitors are the documented weak point of fanless always-on boxes.</td></tr>
+        <tr><td>Heatsink</td><td>A large metal mass over the SoC. Fanless means the case and this sink are the cooling system.</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 2 &mdash; Logic board</h3>
+    <p>One board, phone-class silicon, TV outputs.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A-series SoC</td><td>A8 (HD) through A15 Bionic (4K, 3rd gen). The same chip family as the iPad, clocked for a box with no battery limit.</td></tr>
+        <tr><td>RAM &amp; NAND storage</td><td>Soldered. 32&ndash;128&nbsp;GB storage tiers are board variants, not upgrades.</td></tr>
+        <tr><td>Ethernet controller (equipped models)</td><td>Present on the 128&nbsp;GB 4K (3rd gen); the 64&nbsp;GB model omits Ethernet and Thread &mdash; check which board you have before blaming the network.</td></tr>
+        <tr><td>HDMI &amp; radios</td><td>HDMI output with CEC (the protocol that lets the TV remote and the Apple TV wake each other); Wi-Fi/Bluetooth combo radio; Thread radio on equipped models.</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 3 &mdash; The Siri Remote &mdash; a separate device</h3>
+    <p>The remote is a Bluetooth peripheral with its own battery and its own failure modes.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Remote battery</td><td>Rechargeable, internal, and not sold as a part. A remote that dies in a day is a service/replacement item.</td></tr>
+        <tr><td>Touch surface / clickpad</td><td>The 1st-generation Siri Remote&rsquo;s all-touch face was redesigned in 2021 to a clickpad with a touch ring after sustained user criticism.</td></tr>
+        <tr><td>USB-C / Lightning port</td><td>Charging only. No data path for owners.</td></tr>
+      </tbody>
+    </table>
+
+        <p><strong>What is missing, in the open:</strong> schematics and parts, as with every Apple TV. But note what the FCC photos prove: this is a simple, well-made board whose most likely death (power-supply capacitors) is a fault any bench could fix &mdash; if the parts and documentation were sold. They are not.</p>
+  </section>
+  <section>
+    <h2 id="we-reveal">What we reveal</h2>
+    <p>The FCC tells you what a device emits. We tell you what&rsquo;s inside and how it works.</p>
+    <ul>
+      <li><strong>The model split that matters</strong> &mdash; Ethernet and Thread exist on one 2022 variant and not the other; the box does not tell you from the front</li>
+      <li><strong>Why these die</strong> &mdash; always-on, fanless, mains-powered: the PSU ages on wall-clock time, not usage time</li>
+    </ul>
+    <p>Check our <a href="/autopsy/">teardowns</a> for full board-level analysis.</p>
+  </section>
+  <section>
+    <h2 id="variants">Models</h2>
+    <p>Three hardware eras: the original hobbyist box, the HD, and the 4K line.</p>
+    <table>
+      <tr><th>Model</th><th>Years</th><th>Chip</th><th>Notes</th></tr>
+      <tr><td>Apple TV HD (4th gen)</td><td>2015</td><td>A8</td><td>First tvOS model; App Store arrives.</td></tr>
+      <tr><td>Apple TV 4K (1st gen)</td><td>2017</td><td>A10X</td><td>Adds 4K/HDR.</td></tr>
+      <tr><td>Apple TV 4K (2nd gen)</td><td>2021</td><td>A12</td><td>Ships with the redesigned clickpad remote.</td></tr>
+      <tr><td>Apple TV 4K (3rd gen)</td><td>2022</td><td>A15</td><td>64&nbsp;GB model drops Ethernet + Thread; 128&nbsp;GB keeps both.</td></tr>
+    </table>
+  </section>
+  <section>
+    <h2 id="chips">Key chips &amp; components</h2>
+    <ul>
+      <li><strong>Apple A8&ndash;A15 SoCs</strong> &mdash; phone silicon in a mains box; no public datasheets. See the <a href="/library/original-docs/apple-pmic-identification-guide.md">Apple PMIC Identification Guide</a> (site library) for the power parts around them.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="faults">Faults &mdash; which part fails, and how you know</h2>
+    <p>A box with no moving parts fails in a short list of ways.</p>
+    <ul>
+      <li><strong>Completely dead, no light</strong> &mdash; the power supply section. On a fanless always-on device this is the expected end-of-life fault; check the cord and outlet first, then accept it is board-level.</li>
+      <li><strong>Reboot loops under load</strong> &mdash; heat and a tired PSU: the heatsink path is passive, so dust and a closed cabinet are real causes. Ventilate before condemning it.</li>
+      <li><strong>Remote eats its battery</strong> &mdash; the remote&rsquo;s cell, or a stuck touch surface keeping it awake. The remote is the highest-failure part of the system and the cheapest to replace.</li>
+      <li><strong>No network on a wired setup</strong> &mdash; confirm the model: the 64&nbsp;GB 4K (3rd gen) has no Ethernet port at all. Owners have &ldquo;repaired&rdquo; a port their model never had.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="safety">Safety, before you open anything</h2>
+    <p>The power supply is <strong>inside</strong> this box and connects to mains. Its capacitors can hold a charge after unplugging. If you open one, treat the PSU section the way you would any mains supply: no probing a live board, and no hurry around the big capacitors.</p>
+  </section>
+  <section>
+    <h2 id="record">The full record &mdash; dated, sourced, nothing smoothed over</h2>
+    <p>An honest record section for this device is short &mdash; and the page says so rather than inflating it.</p>
+    <table>
+      <thead><tr><th>Date</th><th>Event</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>2015-10</td><td>Apple TV HD launches tvOS and the App Store on the platform; the Siri Remote&rsquo;s all-touch design begins six years of documented user complaints.</td><td>Apple product record</td></tr>
+        <tr><td>2021-04</td><td>The second-generation Siri Remote replaces the touch surface with a clickpad &mdash; an admission, in hardware, that the original remote was a design failure.</td><td>Apple product record</td></tr>
+        <tr><td>2022-10</td><td>Apple TV 4K (3rd gen) splits the line: the cheaper 64&nbsp;GB model removes Ethernet and Thread &mdash; features the previous generation had at every tier.</td><td>Apple specifications</td></tr>
+      </tbody>
+    </table>
+    <h3>Did you know</h3>
+    <ul>
+      <li>There is no fan and never has been: every Apple TV cools a phone chip with a lump of metal and patience.</li>
+      <li>The box has no power brick because the power supply is on the board &mdash; which is also why it is the part that eventually kills the box.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="documents">Documents &amp; deep dive</h2>
+    <p>Every document this page rests on, linked. Site library copies first, then the public record at the source.</p>
+    <ul>
+      <li><strong>FCC filings</strong> for each model (grantee code BCG) &mdash; internal photos and RF reports: <a href="https://fccid.io">fccid.io</a>.</li>
+      <li><a href="/library/original-docs/apple-pmic-identification-guide.md">Apple PMIC Identification Guide</a> &mdash; this site&rsquo;s library.</li>
+      <li><strong>No recalls, no class actions, no regulator actions</strong> attach to the Apple TV line as of this writing &mdash; stated plainly, because a clean record is also a record.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="reading">Further Reading</h2>
+    <ul>
+      <li><a href="/devices/ipad/">iPad &mdash; the same silicon with a battery and a parts book (for four models)</a></li>
+      <li><a href="/devices/echo-dot/">Echo Dot (5th Gen) &mdash; the media box&rsquo;s smart-speaker cousin</a></li>
+      <li><a href="/hot-100.html">The Hot 100</a></li>
+    </ul>
+  </section>
+
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

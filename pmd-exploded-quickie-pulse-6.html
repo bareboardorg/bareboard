@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exploded View: Sunrise Quickie Pulse 6 &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="The Sunrise Quickie Pulse 6 from its owner&amp;rsquo;s manual: the labeled parts diagram with every numbered part in plain language. Sunrise&amp;rsquo;s parts book exists but is not openly downloadable — the gap is named on the page.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Exploded View: Sunrise Quickie Pulse 6">
+<meta property="og:description" content="The Sunrise Quickie Pulse 6 from its owner&amp;rsquo;s manual: the labeled parts diagram with every numbered part in plain language. Sunrise&amp;rsquo;s parts book exists but is not openly downloadable — the gap is named on the page.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-exploded-quickie-pulse-6.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Exploded View: Sunrise Quickie Pulse 6</h1>
+    <p class="lede">Sunrise Medical publishes a <strong>Complete Parts Manual</strong> for the Quickie Pulse 6 &mdash; a real parts book, assembly by assembly. The one public copy we could find sits on a dead host that answers every request with 403 Forbidden. So this page is built from what is openly readable: the labeled diagram in the chair&rsquo;s owner&rsquo;s manual, &ldquo;Your Chair and Its Parts,&rdquo; with every numbered part explained in plain language.</p>
+    <p><strong>Coverage: manual-only.</strong> The diagram covers the Pulse 6 BC, SC, and CC. The parts book (serial prefix PLS) is listed below as a known source gap; when a readable copy is public, this page gets the full treatment.</p>
+  </section>
+
+  <section>
+    <h2>The source</h2>
+    <p><strong>Guide:</strong> Owner&rsquo;s Manual &mdash; Quickie Pulse (6BC, 6SC, 6CC, 5BC, 5CC, 6MPC)<br>
+    <strong>Document:</strong> Document 119832 &mdash; Sunrise Medical (US) LLC<br>
+    <strong>Full guide (PDF, in this site&rsquo;s library):</strong> <a href="/library/collected-public-docs/pmd/sunrise_quickie-pulse-6_owner.pdf">sunrise_quickie-pulse-6_owner.pdf</a></p>
+    <p>This copy was retrieved from a dealer-posted public copy (Open Box Medical, S3). The Pulse 6 Service Manual (111425, Rev. B, 2011) is a troubleshooting guide without parts breakdowns. The Complete Parts Manual for this chair exists &mdash; its only located public copy is unreachable, so it is named here as a source gap, not silently skipped.</p>
+  </section>
+  <section>
+    <h2>The maker&rsquo;s own warnings, word for word</h2>
+    <p>Sunrise prints these on the first page of the Pulse owner&rsquo;s manual. Word for word:</p>
+    <blockquote><p>WARNING &mdash; Attention wheelchair users, do not operate this wheelchair without first reading the owner&rsquo;s manual. If you do not understand the instructions and warnings of this owner&rsquo;s manual please contact your dealer or qualified technician before operating this Quickie wheelchair. Failure to do so may result in damage and/or injury.</p></blockquote>
+    <blockquote><p>DEALER/TECHNICIAN WARNING &mdash; Attention dealers and qualified technicians, do not operate or service this wheelchair without first reading this owners manual. If you do not understand the instructions and warnings of this owners manual please contact the Quickie Technical Service Department before operating and/or servicing this Quickie wheelchair. Failure to do so may result in damage and/or injury.</p></blockquote>
+    <p><em>Verbatim from the Quickie Pulse Owner&rsquo;s Manual, document 119832.</em></p>
+  </section>
+
+  <section>
+    <h2>Build order</h2>
+    <p>The assemblies are laid out in the order you would build the chair: frame first, batteries last. Every step is one exploded view from the maker&rsquo;s guide, followed by its parts table. The <strong>Callout</strong> column is the label printed on the diagram. The <strong>Part number</strong> column is the maker&rsquo;s own number &mdash; the number a parts desk cannot argue with.</p>
+    <ul>
+      <li><strong>Frame:</strong> <a href="#step-1">Step 1: Your chair and its parts — Pulse 6 BC / SC / CC</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Stage 1 — Frame</h2>
+    <p>Start with the skeleton. Every other system bolts to the frame, so it goes together first.</p>
+    <h3 id="step-1">Step 1 &mdash; Your chair and its parts — Pulse 6 BC / SC / CC</h3>
+    <figure>
+      <img src="/img/pmd-exploded/quickie-pulse-6/quickie-pulse-6-p4.jpg" alt="Your chair and its parts — Pulse 6 BC / SC / CC — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 1.</strong> Your chair and its parts — Pulse 6 BC / SC / CC &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Part (maker&rsquo;s label)</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>1. Flip-back, height-adjustable armrest</td><td>Supports your arm. It flips back and adjusts up or down so you can transfer in and out of the chair.</td></tr>
+        <tr><td>2. VR2 controller joystick (RNET optional)</td><td>The hand control you drive with. VR2 is the standard control system on this chair; R-Net was the optional upgrade.</td></tr>
+        <tr><td>3. Captain’s Seat</td><td>The padded seat the rider sits in.</td></tr>
+        <tr><td>4. Front caster 7&quot;</td><td>The small front swivel wheel, 7 inches across. Not powered — it follows where the chair turns.</td></tr>
+        <tr><td>5. Rear stabilizing caster 6&quot;</td><td>The small rear caster, 6 inches across, that keeps the chair stable.</td></tr>
+        <tr><td>6. Single plate foot platform (shown); swing-away (optional); 70° hangers; swing-away ELR hangers (optional)</td><td>The plate your feet rest on. The optional hangers swing away so your feet can reach the floor for transfers; ELR hangers can also lift your legs.</td></tr>
+        <tr><td>7. Drive wheels</td><td>The big powered wheels. The motors turn these.</td></tr>
+        <tr><td>8. Brake release</td><td>Releases the brakes so the chair can be pushed by hand.</td></tr>
+        <tr><td>9. Caster fork (front)</td><td>Holds the front caster wheel and lets it swivel.</td></tr>
+        <tr><td>10. Caster fork (rear)</td><td>Holds the rear caster wheel and lets it swivel.</td></tr>
+        <tr><td>11. Shroud</td><td>The plastic cover over the base. It protects the parts underneath.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>What is missing, in the open</h2>
+    <p>The full parts book for this chair: <strong>published by Sunrise, currently not openly downloadable from anywhere we can reach</strong>. The owner&rsquo;s manual diagram above is everything the maker gives owners today.</p>
+    <p><a href="/pmd-exploded.html">&larr; All exploded views</a> &middot; <a href="/pmd.html">PMD section</a></p>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

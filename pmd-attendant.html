@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Attendant Control &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="The attendant control explained: the second control that lets a carer drive a power chair from behind, who has control at any moment, attendant speed limits, its own faults, and a safe setup checklist.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="The Attendant Control">
+<meta property="og:description" content="Dual control in plain language &mdash; who drives, how control changes hands, how fast the attendant is allowed to go, and the faults a second control creates.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-attendant.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <h1>The Attendant Control</h1>
+    <p class="lede">Some power chairs carry <strong>two</strong> driving controls. The main one sits in front of the person in the chair (the <strong>occupant</strong>). The second one &mdash; the <strong>attendant control</strong> &mdash; mounts at the back, on a push handle, so a carer (the <strong>attendant</strong>) walking behind can drive the chair for them. A chair wired so <em>either</em> control can drive, with a way of passing control between them, is a <strong>dual-control</strong> chair. This page explains how the two controls share one chair: who is in charge at any moment, how control changes hands, how fast the attendant is allowed to go, and the faults a second live control creates all by itself.</p>
+    <p>Two people, two joysticks, one chair is a safety question before it is a convenience. Every system below answers it the same basic way &mdash; <strong>only one control drives at a time</strong> &mdash; but each maker decides <em>which</em> one, and <em>how the other one takes over</em>, differently. Some of those decisions are switches you can touch. Some are set in programming, where you cannot. This page names which is which.</p>
+    <p><em>Provenance: this page is compiled from the manufacturers&rsquo; own published documents &mdash; Invacare&rsquo;s <a href="/library/collected-public-docs/pmd/invacare_linx_service.pdf">LiNX service manual</a> and <a href="/library/collected-public-docs/pmd/invacare_tdx-sp2_owner.pdf">TDX SP2 owner&rsquo;s manual</a>, Dynamic Controls&rsquo; <a href="/library/collected-public-docs/pmd/dynamic-controls_dx2-rem42x_technical.pdf">DX2-REM42x</a> and <a href="/library/collected-public-docs/pmd/dynamic-controls_dx2-acs2_technical.pdf">DX2-REMB-ACS2 technical manuals</a>, PG Drives Technology&rsquo;s <a href="/library/collected-public-docs/pmd/pg-drives_mobility-diagnostics_fault-codes.pdf">mobility diagnostics guide</a> and <a href="/library/collected-public-docs/pmd/pg-drives_r-net_programming.pdf">R-net programming manual</a>, the R-net operation text carried in Sunrise Medical&rsquo;s <a href="/library/collected-public-docs/pmd/sunrise_quickie-s636-s646_owner.pdf">Quickie S-636 / S-646 owner&rsquo;s manual</a>, and Quantum Rehab&rsquo;s <a href="/library/collected-public-docs/pmd/quantum_q6-edge-2_owner.pdf">Q6 Edge 2.0 owner&rsquo;s manual</a> &mdash; and checked against them. Behaviour that could not be confirmed in a manufacturer&rsquo;s document is not stated as fact. Documentation, not bench measurement: if your chair disagrees with this page, the chair wins &mdash; write down what yours actually does.</em></p>
+  </section>
+
+  <section id="safety">
+    <p><strong>Before any check on this page that touches a plug or cable:</strong> put the chair on level ground, switch it OFF, and disconnect the main battery harness or trip the main circuit breaker. Do not do the check while anyone is seated in the chair. Connector pins can remain live after switch-off. Keep a disconnected cable from touching skin, jewelry, tools, or metal, and cover or restrain it so the pins cannot short. If you cannot disconnect power, inspect visually only and stop.</p>
+    <p>A second control is a second way for the chair to move. Treat it as live whenever the chair is powered, even when it is not the control in charge: on several systems its power button still works, and on one system below its power button is an emergency stop for the whole chair.</p>
+  </section>
+
+  <section id="what">
+    <h2>What it is, and where it mounts</h2>
+    <p>An attendant control is a small hand control &mdash; a <strong>joystick</strong> (the stick you push to steer; further means faster), an on/off (power) button, and usually a <strong>speed dial or speed buttons</strong> that cap the top speed &mdash; fitted at the rear of the chair, where a person walking behind can reach it while holding the push handles. It is not a separate machine: it plugs into the same <strong>bus</strong> (the cable network the chair&rsquo;s electronic modules talk to each other on) as the occupant&rsquo;s control, and it talks to the same <strong>power module</strong> (the box in the base that feeds the motors). Driving from it feels like driving from the front, except that forward is away from you and the chair&rsquo;s weight is in front of your hands.</p>
+    <p>Makers sell it under different names. These are the ones this page covers, with the document that describes each:</p>
+<table>
+<thead><tr><th>System</th><th>The attendant hardware</th><th>Where it mounts</th></tr></thead>
+<tbody>
+<tr><td>Invacare LiNX (Dynamic Controls electronics)</td><td><strong>DLX-REM050</strong>, a drive-only attendant remote, and <strong>DLX-ACU200</strong>, an attendant control unit with a display, seating control and a &ldquo;who&rsquo;s in charge&rdquo; indication. Both are documented in Invacare&rsquo;s <a href="/library/collected-public-docs/pmd/invacare_linx_service.pdf">LiNX service manual</a>.</td><td>On a bracket on the push handle or the push bar, per the same manual&rsquo;s mounting sections.</td></tr>
+<tr><td>Dynamic Controls DX / DX2</td><td><strong>DX-ACU</strong> Attendant Control module, with a physical <strong>User/Attendant switch</strong> on it. Operation is described in the <a href="/library/collected-public-docs/pmd/dynamic-controls_dx2-rem42x_technical.pdf">DX2-REM42x technical manual</a> and the <a href="/library/collected-public-docs/pmd/dynamic-controls_dx2-acs2_technical.pdf">DX2-REMB-ACS2 technical manual</a>.</td><td>At the rear, as part of the DX system; the switch that hands over control is on the ACU itself.</td></tr>
+<tr><td>PG Drives R-net (Curtiss-Wright)</td><td>Two different things: an <strong>Attendant Control Module</strong> (attendant only) and a <strong>Dual Attendant Module</strong> (user or attendant, switchable). The R-net user manual, carried in Sunrise Medical&rsquo;s <a href="/library/collected-public-docs/pmd/sunrise_quickie-s636-s646_owner.pdf">Quickie S-636 / S-646 owner&rsquo;s manual</a>, states the difference in its intended-use text: with an Attendant Control Module fitted the chair &ldquo;may be operated by an assistant on behalf of the user&rdquo;; with a Dual Control Module fitted it &ldquo;may be operated by the user, or control may be switched to an assistant.&rdquo;</td><td>The attendant module connects at any point on the R-net bus and is used from the rear of the chair.</td></tr>
+<tr><td>Invacare MK6i (TDX line)</td><td>An attendant remote in the G90A family. Invacare&rsquo;s <a href="/library/collected-public-docs/pmd/invacare_tdx-sp2_parts-catalog.pdf">TDX SP2 parts catalog</a> lists the hardware plainly: &ldquo;Remote Support attendant control G90A&rdquo; and left- and right-hand &ldquo;Bracket for attendant control&rdquo; parts.</td><td>On a rear bracket, left or right side.</td></tr>
+<tr><td>Quantum Q-Logic (Q6 Edge and others)</td><td>A dedicated <strong>Attendant Control</strong> unit: joystick, on/off button, mode button and LED, actuator (powered seating) indicators and a battery meter, per Quantum&rsquo;s <a href="https://share.quantumrehab.com/resource/quantum/can/eng/owners-manuals/q-logic-3-advanced-drive-control-system">Q-Logic 3 Basic Operation Instructions</a>. Quantum&rsquo;s <a href="/library/collected-public-docs/pmd/quantum_q6-edge-2_owner.pdf">Q6 Edge 2.0 owner&rsquo;s manual</a> notes one visible side effect: &ldquo;If your power chair is equipped with an attendant control, the fender lights will activate using the single switch when the controller is turned on.&rdquo;</td><td>At the rear of the chair, up by the push handles.</td></tr>
+<tr><td>Permobil Corpus chairs</td><td>Permobil&rsquo;s own <a href="/library/collected-public-docs/pmd/permobil_m3-corpus_owner.pdf">M3 Corpus owner&rsquo;s manual</a> and <a href="/library/collected-public-docs/pmd/permobil_f5-corpus-vs_owner.pdf">F5 Corpus VS owner&rsquo;s manual</a> describe <em>no Permobil attendant drive control at all</em> &mdash; &ldquo;attendant&rdquo; appears in them only for freewheel pushing and general assistance. On Permobil chairs the driving electronics underneath are commonly R-net, so an attendant setup follows the R-net rules above; do not expect the Permobil owner&rsquo;s manual to explain it.</td><td>&mdash;</td></tr>
+</tbody>
+</table>
+    <p>One naming trap: an attendant control is not the same as <strong>freewheel mode</strong> (the motors disengaged so the chair can be pushed by hand, covered on <a href="/pmd-start.html">Start Here</a>). Freewheel is muscle power with the brakes off. The attendant control is full powered driving, from behind.</p>
+  </section>
+
+  <section id="who">
+    <h2>Who has control &mdash; and how it changes hands</h2>
+    <p>This is the heart of dual control. No system on this page mixes the two joysticks together, and none lets both drive at once. Each one picks a single control to be <strong>in charge</strong> (the makers&rsquo; own words: <em>in charge</em>, <em>in control</em>, <em>in focus</em>) and ignores the other one&rsquo;s joystick. What differs is how the chair decides, and how the two people swap. Per system, as documented:</p>
+<table>
+<thead><tr><th>System</th><th>Who is in charge</th><th>How control changes hands</th><th>What the other control can still do</th></tr></thead>
+<tbody>
+<tr><td><strong>Invacare LiNX</strong> (two remotes, e.g. occupant remote + DLX-REM050)</td><td>Whichever remote <strong>powered the system up</strong>. Invacare&rsquo;s LiNX remote user manual, word for word: &ldquo;Either remote can power up the system. The remote that powers up has control (remote-in-charge).&rdquo;</td><td>There is no mid-drive grab on the standard setup: &ldquo;To change control, power down the system with either remote, then power up again with the remote that requires control.&rdquo; One exception: if the system is locked and you unlock it from the DLX-REM050, the REM050 is in charge automatically.</td><td>Nothing except its power button &mdash; and that button still matters: either remote can power the whole system <em>down</em>, and pressing the power button while driving is an emergency stop. You can tell who is in charge from the battery gauge: on the remote that is <em>not</em> in charge, the battery gauge is switched off.</td></tr>
+<tr><td><strong>PG Drives R-net</strong> (Dual Attendant Module)</td><td>Whichever side the module&rsquo;s <strong>Control Switch</strong> selects. The module&rsquo;s <strong>Control Indicator</strong> shows it: &ldquo;If the red wheelchair light is on, the user&rsquo;s input device has control. If the green attendant light is on, the Attendant Module has control.&rdquo; On screen-based R-net systems the module in control displays the <strong>In Focus</strong> symbol.</td><td>The Control Switch &ldquo;transfers drive control of the wheelchair between the User Input Device and the Attendant Module&rdquo; &mdash; a deliberate switch flip at the back of the chair, not a power cycle.</td><td>The side not in control does not drive. Whether the occupant can <em>take</em> control back from the attendant is not a switch at all: it is a programmed setting (R-net calls the idea <em>allow grab</em>, set under Input Device Type in programming). Traditional attendant setups are configured so the user can never gain control from the attendant; R-net can be programmed to allow it. Which way your chair is set is invisible from the joystick &mdash; ask, and see <a href="/pmd-programmers.html">The Keys</a>.</td></tr>
+<tr><td><strong>Dynamic DX / DX2</strong> (DX-ACU)</td><td>The attendant, whenever the <strong>User/Attendant switch on the DX-ACU</strong> is set to &ldquo;Attendant&rdquo;. The occupant remote shows it: the <strong>Attendant Profile LED</strong> lights, and the chair locks into the <strong>Attendant Drive Profile (Drive Profile 6)</strong>.</td><td>The attendant releases control back by switching the User/Attendant switch back. Until that happens, the profile cannot be changed: the Attendant Drive Profile &ldquo;will stay active until the attendant releases control back to the user.&rdquo;</td><td>The occupant&rsquo;s <strong>joystick does nothing</strong>. The occupant remote&rsquo;s <strong>buttons still work</strong> as normal &mdash; but pressing its Drive Profile button cannot take the drive profile away from the attendant; at most it returns the remote to Drive Mode.</td></tr>
+<tr><td><strong>Quantum Q-Logic 2</strong></td><td>The input device that <strong>powered the chair up</strong>. The Q-Logic 2 Basic Operation Instructions state it in one sentence: &ldquo;When multiple input devices are used, the device that powered up the chair is in control.&rdquo;</td><td>Power the chair up from the control that should drive. The newer Q-Logic 3 instructions describe the attendant unit&rsquo;s layout but defer its use to the provider &mdash; &ldquo;For more information on these applications, contact your Quantum Rehab Provider&rdquo; &mdash; so on a Q-Logic 3 chair, get the handover rule for <em>your</em> chair in writing from the provider.</td><td>Not stated for the attendant pairing in the public Q-Logic documents this page could check &mdash; treat the other joystick as live until you have tested otherwise, with the chair unoccupied.</td></tr>
+<tr><td><strong>Invacare MK6i</strong></td><td>The attendant, when the attendant control is switched in. The chair announces it rather than hiding it: code <strong>W05, &ldquo;attendant control active&rdquo;</strong> &mdash; which is a status, not a fault. It is translated in full on <a href="/pmd-fault-codes-2.html#mk6i">Fault Codes, Translated (part two)</a>; this page does not repeat the table.</td><td>By the attendant control&rsquo;s own switching, per the chair&rsquo;s remote manual. The TDX SP2 owner&rsquo;s manual itself hands the detail off: driving instructions live in the manual for the fitted remote.</td><td>&mdash;</td></tr>
+</tbody>
+</table>
+    <p><strong>What happens if both joysticks are touched at once?</strong> The in-charge joystick drives; the other joystick is ignored &mdash; and on PG Drives systems it is worse than ignored. PG&rsquo;s <a href="/library/collected-public-docs/pmd/pg-drives_mobility-diagnostics_fault-codes.pdf">mobility diagnostics guide</a> lists trip <strong>7107, Primary Joystick Deflected</strong>: &ldquo;The most common cause of this trip is if the Primary Joystick on the Joystick Module is deflected away from center whilst a Dual Attendant Module is in control.&rdquo; In plain terms: while the attendant is driving, an occupant idly pushing their own stick can <em>trip the chair and stop it</em>. Agree before you move: when the attendant is driving, the occupant&rsquo;s hands stay off the stick.</p>
+    <p><strong>And who is <em>allowed</em> to take control is, on LiNX, a programming decision.</strong> Invacare&rsquo;s <a href="/library/collected-public-docs/pmd/invacare_linx_service.pdf">LiNX service manual</a> describes the &ldquo;user-in-charge&rdquo; system: by default there are no restricted users, and &ldquo;both the attendant and the occupant can request to be user-in-charge at any time by pressing power button.&rdquo; A provider can restrict that in programming &mdash; the parameter offers <em>No Restriction</em> (the default), <em>Occupant Priority</em> (restricts the attendant), <em>Attendant Priority</em> (restricts the occupant) and <em>No Change Allowed</em> (restricts both). A restricted user&rsquo;s request is simply denied. That setting is changed with the LiNX Access programming tool, not from either control &mdash; it is tiered, like the rest of the settings in <a href="/pmd-settings.html">The Settings</a>.</p>
+    <blockquote><p>CAUTION! Risk of injury or damage &mdash; &ldquo;When setting either occupant or attendant as restricted user in user-in-charge-system, consideration needs to be given to whether benefit outweighs risk, since restricted user is unable to take control from user by activating power button in emergency.&rdquo; &mdash; Invacare, <a href="/library/collected-public-docs/pmd/invacare_linx_service.pdf">LiNX service manual</a></p></blockquote>
+  </section>
+
+  <section id="speed">
+    <h2>Speed in attendant mode &mdash; the attendant is deliberately slowed down</h2>
+    <p>Every maker treats attendant driving as its own, tamer setup &mdash; the attendant is walking, steering a heavy chair from its least stable end, with the occupant&rsquo;s feet pointing at the obstacles. But there is <strong>no universal attendant speed limit</strong> in these manuals: no maker here publishes one fixed number that applies to every chair. What each system does instead:</p>
+    <ul>
+      <li><strong>LiNX / DLX-REM050:</strong> the system powers up in <strong>drive function one</strong> and stays there &mdash; &ldquo;As an attendant, you cannot change the drive function but can control the maximum speed with the speed dial.&rdquo; The attendant&rsquo;s freedom is the dial (ten steps on the main remotes), not the functions; what drive function one <em>means</em> in speed is a programmed value. The larger DLX-ACU200 gives the attendant up to three drive functions and a display showing who is in charge.</li>
+      <li><strong>DX / DX2:</strong> attendant mode <em>is</em> a profile. The Attendant Drive Profile (Drive Profile 6) holds its own speeds and accelerations, set in programming, and it cannot be swapped for a faster profile mid-drive &mdash; see the handover table above. A slow attendant mode on a DX chair is a programming choice; so is a fast one.</li>
+      <li><strong>R-net Dual Attendant:</strong> the attendant module has its own maximum-speed indicator (five steps, step 1 lowest, step 5 highest) and its own speed increase/decrease buttons, separate from the occupant&rsquo;s speed setting. The attendant picks a step; the actual speed each step allows comes from the attendant profile&rsquo;s programmed values.</li>
+      <li><strong>Simpler chairs sometimes do hard-cap it.</strong> To show the contrast: Drive Medical&rsquo;s attendant controller kit for its Aerocarbon powerchair states that &ldquo;when the attendant controller is being used, the maximum forward speed is limited to 3mph.&rdquo; A fixed cap exists on chairs like that &mdash; on the programmable systems above, the cap is whatever the profile says, which is why two chairs of the same model can behave differently.</li>
+    </ul>
+    <p>Plainly: if an attendant mode feels dangerously fast or uselessly slow, that is not a broken part. It is a number in programming &mdash; the attendant profile&rsquo;s maximum speed &mdash; and changing it is a programmer job. See <a href="/pmd-settings.html">The Settings</a> for what those numbers are, and <a href="/pmd-programmers.html">The Keys</a> for who holds the tools.</p>
+  </section>
+
+  <section id="faults">
+    <h2>Faults the attendant control itself causes</h2>
+    <p>A second control is a second joystick to be knocked, a second cable to be crushed, and a second module the system can lose. The fault literature treats it that way. The owner-level ones, per system:</p>
+<table>
+<thead><tr><th>What you see</th><th>What it means</th><th>What you check first</th></tr></thead>
+<tbody>
+<tr><td>MK6i shows <strong>W05</strong></td><td>Attendant control active. Not a fault &mdash; the attendant control is switched in and driving.</td><td>Nothing. Full translation on <a href="/pmd-fault-codes-2.html#mk6i">Fault Codes, Translated (part two)</a>.</td></tr>
+<tr><td>PG Drives trip <strong>7107</strong></td><td>Primary (occupant) joystick deflected while the Dual Attendant Module is in control.</td><td>Hands off the front stick while the attendant drives. Centre the joystick and cycle the power. PG&rsquo;s <a href="/library/collected-public-docs/pmd/pg-drives_mobility-diagnostics_fault-codes.pdf">diagnostics guide</a>: if it persists, the Joystick Module itself is suspect.</td></tr>
+<tr><td>PG Drives trip <strong>3000 / 714D / 7147</strong></td><td>Dual Attendant joystick deflected at power-up &mdash; the attendant was holding or leaning on the stick as the chair was switched on.</td><td>Let go of the attendant stick, wait for the battery gauge&rsquo;s start-up blink to finish, and power-cycle. If it persists, PG assumes a defective joystick in the Dual Module.</td></tr>
+<tr><td>PG Drives trip <strong>5400 / 7113 / 7124 / 7126 / 7133</strong> (communications trip, VSI)</td><td>The Dual Module has become <strong>disconnected while switched on</strong>.</td><td>The cable between the controller and the Dual Module: properly connected, and in good condition along its whole run. The chair is not dead: switch off, leave the Dual Module disconnected, switch on again, and the chair drives from the user control.</td></tr>
+<tr><td>PG Drives trip <strong>7140 / 7142</strong></td><td>Dual communications trip between Joystick Module, Dual Attendant Module and Power Module.</td><td>Check each cable for continuity (a meter check that the wire is unbroken end to end). If the cables are sound, PG&rsquo;s verdict is that the Dual Attendant Module itself must be assumed defective.</td></tr>
+<tr><td>PG Drives trip <strong>7164</strong></td><td>Dual Attendant joystick orientation error &mdash; the data that tells the module which way its stick points has been corrupted, possibly by an incorrect or incomplete orientation sequence.</td><td>The fix is re-performing the orientation sequence in the <a href="/library/collected-public-docs/pmd/pg-drives_mobility-diagnostics_fault-codes.pdf">diagnostics guide</a> &mdash; a service procedure, not a setting. If the trip persists, the module may be defective.</td></tr>
+<tr><td>PG Drives trip <strong>7B00</strong></td><td>The Dual Module was connected while the system was already switched on.</td><td>Switch off, connect the module, switch on again. Hot-plugging the attendant control is itself the fault.</td></tr>
+<tr><td>LiNX dual-remote system shows <strong>flash code 2</strong> at power-up</td><td>One remote was disconnected while the system was powered down; the remaining remote expected two remotes and found one. A fault on either remote is also <em>shown on both</em> remotes.</td><td>Cycle the power to clear it. Reconnect and check the missing remote&rsquo;s cable and plug. Note the trap in Invacare&rsquo;s manual: if the <em>power button</em> of the remote-in-charge is faulty, the system does not operate at all &mdash; the healthy remote cannot simply take over.</td></tr>
+<tr><td>DX shows <strong>2 flashes</strong></td><td>DX accessory fault: an accessory device on the DX Bus &mdash; the class the attendant module belongs to &mdash; is faulting or sending a slow/stop signal.</td><td>Unplug accessories one at a time to find the culprit, attendant module included. Full DX table on <a href="/pmd-fault-codes-2.html">Fault Codes, Translated (part two)</a>.</td></tr>
+</tbody>
+</table>
+    <p><strong>The weak point is the cable at the push handle.</strong> The attendant control lives where hands grip, bags hang, door frames clip and the chair gets lifted and folded. Invacare&rsquo;s <a href="/library/collected-public-docs/pmd/invacare_linx_service.pdf">LiNX service manual</a> mounts it &ldquo;using a bracket on the push handle or the push bar&rdquo; and routes its cable down the back of the chair with everything else &mdash; the run most exposed to flexing and knocks. Invacare&rsquo;s remote manual is explicit about what that does to a bus cable: &ldquo;Regular bending can damage the bus cable.&rdquo; When an attendant control fails intermittently, works at some backrest angles and not others, or faults when the push handle is touched, suspect that cable run and its plugs before you suspect the module &mdash; the general method is <a href="/pmd-fixes.html">Procedure 4 in The Cheap Fixes</a>, and reading the chair&rsquo;s behaviour first is <a href="/pmd-reading.html">Reading the Chair</a>.</p>
+  </section>
+
+  <section id="warnings">
+    <h2>The manufacturers&rsquo; own warnings &mdash; word for word</h2>
+    <p>Attendant driving is where the manuals stop being generic. These are carried verbatim, with the maker named; emphasis is theirs.</p>
+    <blockquote><p>&ldquo;Test the behavior of the attendant control unit without an occupant to avoid injury. When handing over to other attendants, ensure they are sufficiently instructed.&rdquo; &mdash; Invacare, LiNX remote user manual, on the DLX-REM050 attendant control unit</p></blockquote>
+    <blockquote><p>WARNING! &ldquo;Make sure you heed all warnings and follow all instructions in each section of this manual. (Be aware that warnings that apply to the rider also apply to you).&rdquo; &mdash; Sunrise Medical, <a href="/library/collected-public-docs/pmd/sunrise_quickie-s636-s646_owner.pdf">Quickie S-636 / S-646 owner&rsquo;s manual</a>, &ldquo;Notice to Attendants&rdquo;</p></blockquote>
+    <blockquote><p>&ldquo;In the event of the wheelchair moving in an unexpected way RELEASE THE JOYSTICK. This action will stop the wheelchair under any circumstances.&rdquo; &mdash; PG Drives Technology / Sunrise Medical, R-net Control System user manual, &ldquo;Precautions for Use&rdquo;</p></blockquote>
+    <blockquote><p>CAUTION! Risk of tipping over &mdash; &ldquo;Never approach obstacles at an angle but at 90 degrees as shown below.&rdquo; Invacare&rsquo;s <a href="/library/collected-public-docs/pmd/invacare_tdx-sp2_owner.pdf">TDX SP2 owner&rsquo;s manual</a> states immediately before this section that &ldquo;the following instructions how to take obstacles also apply for attendants if the power wheelchair is fitted with an attendant control.&rdquo;</p></blockquote>
+    <blockquote><p>CAUTION! Risk of tipping over &mdash; &ldquo;Only ever drive downhill at a maximum of 2/3 of the top speed. Avoid sudden changes of direction or abrupt braking when driving on slopes.&rdquo; &mdash; Invacare, <a href="/library/collected-public-docs/pmd/invacare_tdx-sp2_owner.pdf">TDX SP2 owner&rsquo;s manual</a></p></blockquote>
+    <blockquote><p>WARNING! &ldquo;Freewheel mode should only be used on level ground and when an attendant is present to control the wheelchair. If you use freewheel mode on an incline or without an attendant, you can get injured or cause property damage.&rdquo; &mdash; Permobil, <a href="/library/collected-public-docs/pmd/permobil_m3-corpus_owner.pdf">M3 Corpus owner&rsquo;s manual</a> (the same warning appears in the <a href="/library/collected-public-docs/pmd/permobil_f5-corpus-vs_owner.pdf">F5 Corpus VS owner&rsquo;s manual</a>)</p></blockquote>
+    <blockquote><p>CAUTION! Risk of the power wheelchair running away &mdash; &ldquo;The motors may only be disengaged by an attendant, not by the user. This ensures that the motors are only disengaged if an attendant is available to secure the power wheelchair and prevent unintended rolling.&rdquo; &mdash; Invacare, <a href="/library/collected-public-docs/pmd/invacare_tdx-sp2_owner.pdf">TDX SP2 owner&rsquo;s manual</a></p></blockquote>
+  </section>
+
+  <section id="checklist">
+    <h2>Safe setup checklist for families</h2>
+    <p>Nothing here needs a tool. It is the agreement two people make before a heavy chair moves with a person in it:</p>
+    <ol>
+      <li><strong>Agree who is driving, out loud, before the chair moves.</strong> Then confirm it on the chair: green attendant light or In Focus symbol (R-net), the Attendant Profile LED (DX), a live battery gauge on your remote and a dark one on the other (LiNX), or W05 on the screen (MK6i). If the indication and the agreement disagree, stop.</li>
+      <li><strong>Practise with the chair empty first.</strong> That is Invacare&rsquo;s own instruction, quoted above: test the attendant control&rsquo;s behaviour with no occupant in the seat, in an open space, until stopping is boring.</li>
+      <li><strong>Start at the lowest speed setting</strong> &mdash; dial down, step 1, profile as delivered &mdash; and only raise it when the attendant can stop the chair dead, on purpose, without a lurch. Walking pace is the ceiling that matters, whatever the profile allows.</li>
+      <li><strong>Occupant&rsquo;s hands off.</strong> While the attendant drives, the occupant does not touch their joystick: on PG Drives systems that alone can trip the chair (7107), and on every system it breaks the one-driver agreement.</li>
+      <li><strong>Both people know the stop.</strong> Releasing the joystick stops the chair. Pressing the power button while driving is an emergency stop on LiNX, and either LiNX remote&rsquo;s power button powers the system down &mdash; including the occupant&rsquo;s. Agree who calls it.</li>
+      <li><strong>Kerbs head-on, never at an angle</strong> (Invacare&rsquo;s warning, above), front wheels square to the obstacle, slow and at a steady speed. If you are pushing by hand in freewheel instead, Sunrise&rsquo;s attendant method is to stay at the rear, and to descend a kerb backwards, lowering the rear wheels first.</li>
+      <li><strong>Slopes slower than feels necessary:</strong> downhill at no more than two-thirds of top speed (Invacare, above), straight up or straight down, never turning across the slope, and never in freewheel without an attendant holding the chair.</li>
+      <li><strong>Check the attendant cable weekly</strong> &mdash; the R-net manual&rsquo;s weekly checks (cables for damage, connectors secure and properly mated, joystick gaiter intact) apply double at the push handle, where the attendant lead flexes and gets knocked. A chafed attendant cable is next month&rsquo;s communications trip.</li>
+      <li><strong>Hand over properly.</strong> A new attendant gets the same empty-chair practice and is told who is in charge, how to hand control back, and how to stop &mdash; before they drive a person anywhere. If your chair&rsquo;s handover works differently from this page, write down how yours works and keep it with the chair.</li>
+    </ol>
+    <p>If the chair&rsquo;s problem is bigger than its controls &mdash; a dealer refusing a repair, a part held hostage &mdash; see <a href="/repair-rights.html">Repair Rights</a> and <a href="/pmd-repairs.html">The Repairs</a>. If the chair has stopped entirely, start at <a href="/pmd-start.html">Start Here</a>.</p>
+  </section>
+
+  <section id="sources">
+    <h2>Sources</h2>
+    <ul>
+      <li>Invacare, <a href="/library/collected-public-docs/pmd/invacare_linx_service.pdf">LiNX service manual</a> (1605129-C) &mdash; DLX-REM050 and DLX-ACU200 attendant units, push-handle/push-bar mounting, and the user-in-charge restriction parameter with its CAUTION. Library copy.</li>
+      <li>Invacare, LiNX remote user manual (DLX-REM110 / 211 / 216, with section 4.11 on the DLX-REM050 attendant control unit) &mdash; remote-in-charge handover, drive function one, fault handling in dual-remote systems, flash codes. Accessed copy: <a href="https://manuals.plus/m/d57f4909026670fe9629164519c82a51fa743fb3eb48e0bd273c759298893c4f">manuals.plus</a>.</li>
+      <li>Invacare, <a href="/library/collected-public-docs/pmd/invacare_tdx-sp2_owner.pdf">TDX SP2 owner&rsquo;s manual</a> (1578997-P) &mdash; obstacle and gradient warnings applied to attendants, freewheel rules. Library copy.</li>
+      <li>Invacare, <a href="/library/collected-public-docs/pmd/invacare_tdx-sp2_parts-catalog.pdf">TDX SP2 parts catalog</a> &mdash; G90A attendant remote supports and brackets. Library copy.</li>
+      <li>Dynamic Controls, <a href="/library/collected-public-docs/pmd/dynamic-controls_dx2-rem42x_technical.pdf">DX2-REM42x technical manual</a> and <a href="/library/collected-public-docs/pmd/dynamic-controls_dx2-acs2_technical.pdf">DX2-REMB-ACS2 technical manual</a> &mdash; Attendant Mode, the User/Attendant switch on the DX-ACU, Attendant Drive Profile 6, ACU programming parameters. Library copies.</li>
+      <li>PG Drives Technology (Curtiss-Wright), <a href="/library/collected-public-docs/pmd/pg-drives_mobility-diagnostics_fault-codes.pdf">Mobility Diagnostics: fault codes guide</a> &mdash; trips 7107, 3000/714D/7147, 5400 group, 7140/7142, 7164, 7B00 and the Dual Module trip group. Library copy.</li>
+      <li>PG Drives Technology, <a href="/library/collected-public-docs/pmd/pg-drives_r-net_programming.pdf">R-net programming manual</a> &mdash; the programming layer behind profiles and input devices. Library copy.</li>
+      <li>Sunrise Medical / PG Drives Technology, R-net Control System user manual (Rev. H) &mdash; Attendant vs Dual Attendant intended use, Dual Attendant Control Module sections 10.1&ndash;10.6, In Focus, weekly checks, precautions. Operation text as carried in Sunrise Medical&rsquo;s <a href="/library/collected-public-docs/pmd/sunrise_quickie-s636-s646_owner.pdf">Quickie S-636 / S-646 owner&rsquo;s manual</a> (108833 Rev. F, library copy); Dual Attendant chapter also read at <a href="https://www.manualslib.fr/manual/870250/Quickie-R-Net.html?page=30">ManualsLib, R-Net manual page 30</a> and <a href="https://www.manualslib.fr/manual/870250/Quickie-R-Net.html?page=31">page 31</a>.</li>
+      <li>Quantum Rehab (Pride Mobility), <a href="/library/collected-public-docs/pmd/quantum_q6-edge-2_owner.pdf">Q6 Edge 2.0 owner&rsquo;s manual</a> &mdash; attendant control and fender lights. Library copy. Plus Quantum Rehab, <a href="https://share.quantumrehab.com/resource/quantum/can/eng/owners-manuals/q-logic-3-advanced-drive-control-system">Q-Logic 3 Basic Operation Instructions</a> (INFMANU4809 Rev F) &mdash; attendant control layout and provider deferral, publisher&rsquo;s page; and the Q-Logic 2 Basic Operation Instructions for the power-up-in-control rule, accessed at <a href="https://manuals.plus/m/e45dd2717e53f8ff6c33f6ae4b7d69ec581b6f9ae2df5414b943f46042f9def0">manuals.plus</a>.</li>
+      <li>Permobil, <a href="/library/collected-public-docs/pmd/permobil_m3-corpus_owner.pdf">M3 Corpus owner&rsquo;s manual</a> and <a href="/library/collected-public-docs/pmd/permobil_f5-corpus-vs_owner.pdf">F5 Corpus VS owner&rsquo;s manual</a> &mdash; freewheel-with-attendant warning; no attendant drive control described. Library copies.</li>
+      <li>Invacare, LiNX catalogue (ANZ, 2017) &mdash; DLX-ACU200 access to up to three drive functions, attendant-in-charge indicator. Publisher&rsquo;s page: <a href="https://www.invacare.com.au/sites/default/files/Invacare%20Linx%20V%20Catalogue_2017_ANZ_0.pdf">invacare.com.au (PDF)</a>.</li>
+      <li>Drive Medical, Aerocarbon attendant controller kit instructions &mdash; the 3 mph attendant-mode forward-speed limit quoted for contrast. Accessed at <a href="https://www.medicalsupplies.co.uk/user/products/large/drive-medical-aerocarbon-wheelchair-attendant-controller-user-manual.pdf">medicalsupplies.co.uk (PDF)</a>.</li>
+      <li>mo-vis, Scoot Control R-net installation manual &mdash; R-net Input Device Type &ldquo;Attendant&rdquo; and the Allow grab setting, as an example of how the grab rule is programmed: <a href="https://www.mo-vis.com/sites/default/files/2025-05/D-P015-61-70-M1-0700%20Installation%20Manual.pdf">mo-vis.com (PDF)</a>.</li>
+    </ul>
+    <p>Documents named in the manufacturers&rsquo; own manuals but not held in the site library are listed in this build&rsquo;s report to the coordinator as collection targets &mdash; among them the DX-ACU Installation Manual, which both DX2 manuals above point to and this page could not read.</p>
+  </section>
+
+  <section>
+    <h2>Keep reading</h2>
+    <p><a href="/pmd.html">&larr; Back to PMD</a> &middot; <a href="/pmd-control.html">The Controls</a> &middot; <a href="/pmd-fault-codes-2.html">Fault Codes, Translated (part two)</a> &middot; <a href="/pmd-settings.html">The Settings</a> &middot; <a href="/pmd-programmers.html">The Keys</a> &middot; <a href="/pmd-parts.html">Parts, Not Assemblies</a> &middot; <a href="/pmd-exploded.html">Exploded Views</a> &middot; <a href="/library-hub.html">The Library</a></p>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

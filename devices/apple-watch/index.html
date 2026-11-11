@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apple Watch — BareBoard — Free Hardware Education</title>
+<meta name="description" content="Apple Watch: the potted S-series SiP, FCC internal photos, the Masimo blood-oxygen ban and restoration, faults and the full record.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Apple Watch">
+<meta property="og:description" content="Apple Watch: a computer sealed in resin, and the court fight over its blood-oxygen sensor.">
+<meta property="og:url" content="https://bareboard.org/devices/apple-watch/">
+<meta property="og:image" content="https://bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/devices/">Devices</a></li>
+        <li class="has-children">
+          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/about.html#how-we-work">How we work</a></li>
+                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/notes/">Bench Notes</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                <li><a href="/protocols.html">Protocol RE</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
+                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
+                <li><a href="/hot-100.html">Game Consoles</a></li>
+                <li><a href="/hot-100.html">Media Streamers</a></li>
+                <li><a href="/hot-100.html">Networking Gear</a></li>
+                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
+                <li><a href="/hot-100.html">Other</a></li>
+                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
+                <li><a href="/hot-100.html">Phones</a></li>
+                <li><a href="/hot-100.html">Printers</a></li>
+                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
+                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
+                <li><a href="/hot-100.html">Wearables</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/most-wanted.html#board">The board</a></li>
+              </ul>
+            </div>
+          </div></li>
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+                <li><a href="/watchmen.html#corrections">Corrections</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+  <aside class="legal-notice bb-notice-amber">
+    <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
+  </aside>
+
+  <h1>Apple Watch</h1>
+  <p class="lede">The smallest sealed computer Apple sells. There is no board to probe: the whole computer is one resin-potted module, and the FCC filing&rsquo;s photographs are the closest thing to a teardown the public record allows.</p>
+  <section>
+    <h2 id="fcc">FCC ID</h2>
+    <p><strong>FCC IDs vary by model and case size.</strong> Apple&rsquo;s grantee code is <strong>BCG</strong>. GPS + Cellular models file for their LTE and ultra-wideband radios as well as Wi-Fi/Bluetooth &mdash; and because the device is glued shut and never opened by its owner, the internal photos in those filings are the only official look inside that exists.</p>
+    <p>Every radio a device carries &mdash; Wi-Fi, Bluetooth, cellular, ultra-wideband, NFC &mdash; needs an FCC equipment authorization before the device can be sold in the United States. To get one, the manufacturer files photographs and test reports with the FCC, and those filings are <strong>public record</strong>. Check the label on your specific unit and look it up at <a href="https://fccid.io">fccid.io</a>.</p>
+    
+  </section>
+  <section>
+    <h2 id="fcc-revealed">What the FCC filing revealed</h2>
+    <p>The FCC filing for this device includes the documents manufacturers are required to submit: external photos, internal photos, test setup photos, RF test reports, and the user manual. These are public record at <a href="https://fccid.io/">fccid.io</a>.</p>
+    <ul>
+      <li><strong>Internal photos</strong> &mdash; the S-series module as a single potted unit, the Taptic Engine&rsquo;s share of the case, the battery, and the antenna layout in the case and band lugs</li>
+      <li><strong>Test reports</strong> &mdash; SAR data measured at the wrist, which bounds how hard the cellular radio may transmit</li>
+      <li><strong>The user manual</strong> &mdash; filed with the FCC; it documents the magnetic charging puck interface and the sensor array on the case back</li>
+    </ul>
+    <p>What the FCC filing does <em>not</em> include: schematics (withheld under confidentiality requests where the maker files them), firmware, and the full bill of materials.</p>
+  </section>
+  <section>
+    <h2 id="exploded">Exploded view &mdash; the assemblies in build order</h2>
+    <p>This is the centerpiece of the page: the device taken apart into its assemblies, in the order they go together, every part named in plain language with what it does. An <em>exploded view</em> is the drawing a manufacturer makes showing every part separated along the path it assembles &mdash; the single most useful document in repair, and the one most often kept behind a dealer login.</p>
+    <h3>The source</h3>
+    <p><strong>Parts book:</strong> none. Apple publishes no parts book, no service manual, and no Self Service Repair path for the Watch. <strong>FCC internal photos</strong> are the primary source: they show the assembly stack below &mdash; case, potted computer module, battery, Taptic Engine, display &mdash; and they are what this exploded view is rebuilt from. Apple&rsquo;s own service model is whole-unit or module replacement through Apple; there is no published procedure at any level.</p>
+    <p><strong>Coverage: PARTIAL &mdash; no public parts book. FCC internal-photo basis. The stack below is real; the part numbers don&rsquo;t exist publicly, because Apple has never published any.</strong></p>
+    <h3>Build order</h3>
+        <h3>Step 1 &mdash; Case &amp; antennas</h3>
+    <p>The case is the chassis, the antenna ground, and the waterproofing. Series models are rated for swimming; the Ultra line adds a depth gauge and water-temperature sensor.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Case (aluminum / titanium / steel)</td><td>The frame. Antennas are built into the case and the display&rsquo;s edge &mdash; there is no antenna part to replace.</td></tr>
+        <tr><td>Digital Crown &amp; side button</td><td>The rotary input (with an optical encoder) and the button; on ECG models the crown is also an electrode.</td></tr>
+        <tr><td>Speaker &amp; microphone ports</td><td>Tiny acoustic ports with membranes. The speaker doubles as the water-ejection pump you hear after a swim (it plays a tone to push water out).</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 2 &mdash; The computer &mdash; one potted module</h3>
+    <p>The S-series SiP (System in Package) is the entire computer &mdash; processor, memory, storage, radios, and power management &mdash; sealed in resin as a single component. A SiP is a whole circuit board shrunk and potted into one part. It cannot be opened, probed, or repaired; it can only be replaced, and Apple does not sell it.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>S-series SiP</td><td>CPU, GPU, RAM, flash, Wi-Fi/Bluetooth (and LTE/UWB on cellular models), and the Secure Enclave in one sealed block.</td></tr>
+        <tr><td>Sensor array (case back)</td><td>The optical heart-rate sensor (green/infrared LEDs + photodiodes), blood-oxygen LEDs on equipped models, and the second electrode for ECG. It is part of the case-back crystal assembly.</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 3 &mdash; Battery &amp; Taptic Engine</h3>
+    <p>The two biggest occupants after the module: a small lithium cell and the linear actuator that taps your wrist.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Battery cell</td><td>A single small lithium-ion cell, glued in. Apple&rsquo;s service answer to a worn Watch battery is a paid battery service &mdash; there is no owner procedure.</td></tr>
+        <tr><td>Taptic Engine</td><td>A linear resonant actuator &mdash; a weight on a spring, driven back and forth. It is why the Watch taps instead of buzzes.</td></tr>
+        <tr><td>Magnetic charging interface</td><td>The inductive coil in the case back that mates with the puck. No port, no contacts, nothing to clean but the surface.</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 4 &mdash; Display assembly</h3>
+    <p>The display is the case&rsquo;s front face and part of the seal. Force Touch gaskets (early models) and the display&rsquo;s adhesive ring are the waterproofing.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>OLED display &amp; cover crystal</td><td>LTPO OLED under ion-strengthened glass or sapphire (steel/titanium models). Cracked crystal = whole-unit service territory.</td></tr>
+        <tr><td>Display gasket &amp; adhesive</td><td>The seal. Any opening destroys it, and Apple does not publish a resealing procedure for owners.</td></tr>
+      </tbody>
+    </table>
+
+        <p><strong>What is missing, in the open:</strong> everything below the module level. There is no public schematic, no parts list, no calibration procedure. The honest summary of Watch repair in 2026: screens and batteries are serviced by Apple as sealed-unit work, the SiP is a black box by design, and the FCC photos on this page are the deepest public look inside the device that exists.</p>
+  </section>
+  <section>
+    <h2 id="we-reveal">What we reveal</h2>
+    <p>The FCC tells you what a device emits. We tell you what&rsquo;s inside and how it works.</p>
+    <ul>
+      <li><strong>Why there is nothing to probe</strong> &mdash; the SiP explained: what potting does, why it defeats board repair, and why that is a design choice, not a law of physics</li>
+      <li><strong>The sensor stack</strong> &mdash; which sensors are real hardware and which are software licenses on the same hardware (the blood-oxygen story below)</li>
+    </ul>
+    <p>Check our <a href="/autopsy/">teardowns</a> for full board-level analysis.</p>
+  </section>
+  <section>
+    <h2 id="variants">Models</h2>
+    <p>One architecture, three case families. Every model is the same idea: potted module, small cell, sealed case.</p>
+    <table>
+      <tr><th>Line</th><th>Years</th><th>Defining hardware</th><th>Notes</th></tr>
+      <tr><td>Series (numbered)</td><td>2015&ndash;</td><td>S1 &rarr; S10 SiP</td><td>ECG from Series 4 (FDA-cleared app); blood oxygen from Series 6 (see the record below).</td></tr>
+      <tr><td>SE</td><td>2020&ndash;</td><td>Prior-generation SiP, no ECG/SpO2 on early models</td><td>The budget line &mdash; same sealed construction.</td></tr>
+      <tr><td>Ultra</td><td>2022&ndash;</td><td>Titanium case, depth gauge, dual-frequency GPS, action button</td><td>The dive line; EN13319 dive-computer rating on the Oceanic+ app configuration.</td></tr>
+    </table>
+  </section>
+  <section>
+    <h2 id="chips">Key chips &amp; components</h2>
+    <ul>
+      <li><strong>Apple S-series SiP</strong> &mdash; no public datasheet; the module is identified only as a unit in FCC photos. The <a href="/library/original-docs/apple-sep-public-reference.md">Secure Enclave public reference</a> (site library) covers the security block inside it.</li>
+      <li><strong>Ultra-wideband (U1/U2)</strong> &mdash; the precision-finding radio in the module (Series 9+/Ultra 2 use the second-generation part). Datasheet: none public &mdash; collection target logged.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="faults">Faults &mdash; which part fails, and how you know</h2>
+    <p>A sealed device fails as a unit, so diagnosis here means identifying which sealed system died &mdash; and knowing the honest service path for each.</p>
+    <ul>
+      <li><strong>Battery life collapses</strong> &mdash; check the reported battery health in Settings; below 80% the fix is Apple&rsquo;s battery service. There is no safe owner opening procedure for this glued, sealed case.</li>
+      <li><strong>Heart-rate or SpO2 readings vanish</strong> &mdash; first the fit and the case-back crystal (dirt and a loose band defeat optical sensors), then software; a dead sensor array is a whole-unit fault.</li>
+      <li><strong>Digital Crown sticks or scrolls by itself</strong> &mdash; debris under the crown is the classic cause; Apple&rsquo;s own support guidance is a rinse under warm running water for water-resistant models. Mechanical failure beyond that is service-only.</li>
+      <li><strong>Won&rsquo;t charge, puck gets hot</strong> &mdash; a failing cell can swell against the display and lift it. A lifting screen on a Watch is a battery warning, not a screen fault. Stop charging it.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="safety">Safety, before you open anything</h2>
+    <p>Do not pry a swollen Watch. The cell sits directly under the display crystal; forcing the case can puncture it. Apple&rsquo;s battery service exists precisely because this device was designed with no owner-safe way in.</p>
+    <p>Water resistance is a gasket condition, not a permanent property: it degrades with age, impacts, and any opening. A serviced-by-you Watch (if you get in at all) is no longer a swim watch, whatever the spec sheet said when it was new.</p>
+  </section>
+  <section>
+    <h2 id="record">The full record &mdash; dated, sourced, nothing smoothed over</h2>
+    <p>The Watch&rsquo;s record contains the decade&rsquo;s clearest case of a feature removed by a court &mdash; and then engineered back in.</p>
+    <table>
+      <thead><tr><th>Date</th><th>Event</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>2018-09-12</td><td>Apple Watch Series 4 ECG app and irregular-rhythm notifications receive FDA clearance (De Novo) &mdash; the first consumer wearable ECG sold direct to consumers in the US.</td><td>FDA clearance records; Apple Newsroom, Sept. 2018</td></tr>
+        <tr><td>2019-08-30</td><td>Apple announces a screen-replacement program for aluminum Series 2 and 3 models whose screens could crack around the edge in specific conditions.</td><td>Apple service program notice</td></tr>
+        <tr><td>2020-01 / 2021-06</td><td>Masimo sues Apple (2020, trade-secret and patent claims), then files at the ITC (2021) alleging the Watch&rsquo;s blood-oxygen sensor infringes Masimo patents.</td><td>C.D. Cal. filings; USITC Inv. No. 337-TA-1276</td></tr>
+        <tr><td>2023-10-26</td><td>The ITC issues a limited exclusion order against Apple Watches with the infringing blood-oxygen feature.</td><td>USITC final determination, Inv. No. 337-TA-1276</td></tr>
+        <tr><td>2023-12 / 2024-01</td><td>Apple briefly pauses US sales of Series 9 and Ultra 2, then resumes selling them with blood oxygen disabled, under a US Customs ruling that the redesigned (feature-off) models fall outside the order.</td><td>U.S. Customs and Border Protection ruling, Jan. 12, 2024; Apple statements</td></tr>
+        <tr><td>2025-08-14</td><td>Apple announces a redesigned Blood Oxygen feature &mdash; measured on the Watch, computed on the paired iPhone &mdash; restored to US Series 9, Series 10, and Ultra 2 by software update, following a new US Customs ruling.</td><td>Apple Newsroom, Aug. 14, 2025</td></tr>
+      </tbody>
+    </table>
+    <h3>Did you know</h3>
+    <ul>
+      <li>The entire computer is <strong>one part</strong>. The S-series SiP pots the processor, memory, storage, and radios in resin &mdash; the smallest &ldquo;motherboard&rdquo; Apple sells is also the least repairable object it makes.</li>
+      <li>The speaker is also a pump: after swimming, the Watch plays a series of tones that eject water from the speaker cavity.</li>
+      <li>A software update moved a medical sensor&rsquo;s computation from the Watch to the phone to satisfy a customs ruling &mdash; the feature you own can be re-architected by litigation.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="documents">Documents &amp; deep dive</h2>
+    <p>Every document this page rests on, linked. Site library copies first, then the public record at the source.</p>
+    <ul>
+      <li><strong>FCC filings</strong> for every Watch model (grantee code BCG) &mdash; the internal photos this exploded view is built from: <a href="https://fccid.io">fccid.io</a>.</li>
+      <li><strong>USITC Investigation No. 337-TA-1276</strong> &mdash; the Masimo exclusion-order record (public ITC docket).</li>
+      <li><a href="/library/original-docs/apple-sep-public-reference.md">Apple Secure Enclave &mdash; Public Reference</a> &mdash; this site&rsquo;s library.</li>
+      <li><a href="/devices/hearing-aids/">Hearing Aids</a> &mdash; the other body-worn medical computer, with the opposite documentation culture.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="reading">Further Reading</h2>
+    <ul>
+      <li><a href="/devices/ipad/">iPad &mdash; the same chips at the opposite scale</a></li>
+      <li><a href="/devices/airpods/">AirPods &mdash; sealed even tighter</a></li>
+      <li><a href="/repair-rights.html">Repair Rights</a></li>
+    </ul>
+  </section>
+
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

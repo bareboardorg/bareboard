@@ -76,7 +76,19 @@
               </ul>
             </div>
           </div></li>
-        <li class="has-children">
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
           <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
           <div class="col-panel">
             <div class="dropdown-inner">
@@ -208,6 +220,34 @@
 $ screen /dev/ttyUSB0 115200
 # (boot log appears here if the header carries a console)</code></pre>
     <p><em>Pin functions on this header are not officially documented; identifying TX/RX/GND requires a multimeter and patience. This is normal reverse-engineering practice on hardware you own.</em></p>
+  </section>
+
+  <section>
+    <h2 id="record">The Full Record</h2>
+    <p>Everything in this timeline is documented &mdash; a court outcome, a regulator&rsquo;s action, a published security analysis, or Amazon&rsquo;s own statements &mdash; and each entry links its source. Where a popular claim about the Echo Dot is <em>not</em> proven, it is labeled Unverified at the end, with the evidence on both sides.</p>
+    <p><em>Scope note: the Echo Dot (5th Gen) went on sale in October 2022, so most of the record below is the record of the Alexa platform and the Echo line this speaker runs on. Entries are labeled platform-level or Echo line where that is what they are.</em></p>
+    <table>
+      <tr><th>Year</th><th>What happened</th><th>Source</th></tr>
+      <tr><td>2018</td><td><strong>An Echo recorded a private conversation and sent it to a contact (Echo line).</strong> A Portland family&rsquo;s Echo recorded a conversation about hardwood floors and sent it to an employee in the husband&rsquo;s contact list, who called to warn them. Amazon confirmed the device logs and explained it as an unlikely chain of mishearings: background speech taken for the wake word, then for a &ldquo;send message&rdquo; request, then for a contact name, then for the confirmation &ldquo;right&rdquo; &mdash; a run of misreadings in a row. Amazon called it an extremely rare occurrence and said it was evaluating options to make this case even less likely.</td><td><a href="https://techcrunch.com/2018/05/24/family-claims-their-echo-sent-a-private-conversation-to-a-random-contact/">TechCrunch &mdash; Echo sent a private conversation to a contact</a></td></tr>
+      <tr><td>2018</td><td><strong>About 1,700 recordings of a stranger sent to the wrong customer (platform-level).</strong> A customer in Germany who asked Amazon for his own data under the GDPR (Europe&rsquo;s privacy law) received a download containing about 1,700 Alexa audio files of a different household &mdash; a man who, unlike the recipient, actually owned an Echo. Reporters at the magazine c&rsquo;t used details in the recordings to identify and contact that man. Amazon called it an unfortunate case of human error and an isolated incident, and said it had resolved the issue with the two customers involved.</td><td><a href="https://www.knkx.org/2018-12-20/amazon-customer-receives-1-700-audio-files-of-a-stranger-who-used-alexa">KNKX / NPR &mdash; customer receives 1,700 audio files of a stranger</a></td></tr>
+      <tr><td>2019</td><td><strong>Human review of Alexa recordings revealed &mdash; and confirmed by Amazon (platform-level).</strong> Bloomberg reported that Amazon employed thousands of full-time staff and contractors around the world to listen to, transcribe, and annotate a sample of Alexa voice recordings in order to improve speech recognition. Amazon confirmed the program, saying it annotated an &ldquo;extremely small sample&rdquo; of recordings to improve the customer experience, and that employees did not have direct access to information identifying the person or account. Bloomberg&rsquo;s sources said reviewers sometimes encountered recordings in which Alexa did not appear to have been deliberately activated.</td><td><a href="https://www.macrumors.com/2019/04/10/amazon-employees-alexa-voice-recordings/">MacRumors &mdash; Amazon employees listen to Alexa recordings (Bloomberg report, Amazon statement)</a></td></tr>
+      <tr><td>2023</td><td><strong>$25 million FTC/DOJ settlement over children&rsquo;s Alexa recordings (platform-level).</strong> The Federal Trade Commission and the Department of Justice charged that Amazon kept children&rsquo;s Alexa voice recordings indefinitely, used them for its own purposes, and undermined parents&rsquo; deletion requests &mdash; deleting files in some databases while retaining transcripts elsewhere &mdash; in violation of the Children&rsquo;s Online Privacy Protection Act (COPPA) Rule. Amazon agreed to a $25 million civil penalty, deletion of inactive child accounts and of certain voice recordings and geolocation data, and a ban on using data subject to deletion requests to create or improve any data product. Amazon said it disagreed with the FTC&rsquo;s claims and denied violating the law. The FTC announced a separate action against Ring the same day; that case concerns Ring cameras, not Echo devices, and is not part of this device&rsquo;s record.</td><td><a href="https://www.ftc.gov/business-guidance/blog/2023/05/out-mouths-babes-ftc-says-amazon-kept-kids-alexa-voice-data-forever-even-after-parents-ordered?tpcc=NL_Marketing">FTC &mdash; Amazon kept kids&rsquo; Alexa voice data forever</a></td></tr>
+      <tr><td>2025</td><td><strong>The local-processing opt-out was switched off (platform-level).</strong> On March 28, 2025, Amazon ended the &ldquo;Do Not Send Voice Recordings&rdquo; setting, which had let some Echo owners keep Alexa requests from being sent to Amazon&rsquo;s cloud. Amazon emailed owners of the models that processed audio on the device itself (Echo Dot 4th Gen, Echo Show 10, Echo Show 15); Amazon&rsquo;s own help page had also listed the Echo Dot (5th Gen) among the supported devices that could use the setting through a local-processing device on the same home network. Amazon said the change supported generative-AI features that rely on its cloud, and told the Associated Press fewer than 0.03% of customers had used the feature. A separate &ldquo;Don&rsquo;t save recordings&rdquo; choice remains, but Alexa voice requests from this speaker are now processed in Amazon&rsquo;s cloud.</td><td><a href="https://arstechnica.com/gadgets/2025/03/everything-you-say-to-your-echo-will-be-sent-to-amazon-starting-on-march-28/">Ars Technica &mdash; everything you say to your Echo will be sent to Amazon</a></td></tr>
+    </table>
+    <aside class="bb-notice-amber">
+      <p><strong>Unverified: &ldquo;Alexa is recording everything you say, all the time.&rdquo;</strong> No court, regulator, or published technical analysis has shown an Echo continuously recording and uploading room audio. Amazon&rsquo;s stated design is that the device listens on the device itself for its wake word and streams only after it believes it heard it. Evidence that feeds the belief: the 2018 Portland case began with a word that merely sounded like &ldquo;Alexa,&rdquo; and reviewers in the 2019 program reported clips in which Alexa did not appear to have been deliberately activated &mdash; mistaken activations are documented. Evidence against the strong version of the claim: every documented case is a mistaken activation or a mishandled file, not continuous capture, and the FTC&rsquo;s 2023 case was about retention and deletion of recordings, not secret always-on recording. Mistaken activation is fact; always-on recording is not proven.</p>
+    </aside>
+  </section>
+
+  <section>
+    <h2 id="did-you-know">Did you know</h2>
+    <ul>
+      <li><strong>This speaker is also a thermometer that can act.</strong> The 5th-generation Dot added a built-in temperature sensor, and it is not just a readout: Alexa Routines can use it to turn on a fan or adjust a thermostat when the room crosses a temperature you set. Source: <a href="https://mobilesyrup.com/2022/09/28/amazon-fift-gen-echo-dot-announced/">MobileSyrup &mdash; 5th-gen Echo Dot announcement</a>.</li>
+      <li><strong>It can quietly extend your Wi-Fi.</strong> The 5th-gen Dot has eero Built-in: if your home already runs on an eero mesh network, the speaker doubles as a Wi-Fi extender for that network. Source: <a href="https://mobilesyrup.com/2022/09/28/amazon-fift-gen-echo-dot-announced/">MobileSyrup &mdash; 5th-gen Echo Dot announcement</a>.</li>
+      <li><strong>A human reviewer could sift through about 1,000 clips in a single shift.</strong> That is the workload Bloomberg&rsquo;s sources described for the Alexa annotation program Amazon confirmed in 2019 &mdash; work that existed to teach Alexa the accents and phrasing it got wrong. Source: <a href="https://threatpost.com/amazon-auditors-listen-to-echo-recordings-report-says/143696/">Threatpost &mdash; Amazon auditors listen to Echo recordings</a>.</li>
+      <li><strong>Its Amazon-branded brain carries a MediaTek-style marking.</strong> The AZ2 Neural Edge processor is Amazon&rsquo;s second-generation on-device speech chip, but the part itself is marked MT8519BAAV &mdash; an MT-prefixed marking of the kind MediaTek uses &mdash; and Amazon publishes no datasheet for it. Source: <a href="http://www.briandorey.com/post/echo-dot-5th-gen-smart-speaker-teardown">Brian Dorey &mdash; Echo Dot 5th Generation teardown</a>.</li>
+      <li><strong>More than 800,000 children had their own Alexa profiles.</strong> That figure is the FTC&rsquo;s, from its 2023 complaint: each child profile linked to a parent&rsquo;s account and held the child&rsquo;s name, birth date, and gender &mdash; which is why children&rsquo;s recordings sat at the center of the $25 million case above. Source: <a href="https://www.ftc.gov/business-guidance/blog/2023/05/out-mouths-babes-ftc-says-amazon-kept-kids-alexa-voice-data-forever-even-after-parents-ordered?tpcc=NL_Marketing">FTC &mdash; Amazon kept kids&rsquo; Alexa voice data forever</a>.</li>
+    </ul>
   </section>
 
   <section>

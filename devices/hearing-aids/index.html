@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hearing Aids — BareBoard — Free Hardware Education</title>
+<meta name="description" content="Hearing aids: RIC/BTE anatomy, the owner-replaceable receiver, wax guards, FDA OTC rule 21 CFR 800.30, red-flag warnings, faults and the full record.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Hearing Aids">
+<meta property="og:description" content="Hearing aids: a rice-grain speaker, a licensed gate, and the 2022 rule that broke it open.">
+<meta property="og:url" content="https://bareboard.org/devices/hearing-aids/">
+<meta property="og:image" content="https://bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li><a href="/devices/">Devices</a></li>
+        <li class="has-children">
+          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/about.html#how-we-work">How we work</a></li>
+                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/notes/">Bench Notes</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                <li><a href="/protocols.html">Protocol RE</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
+                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
+                <li><a href="/hot-100.html">Game Consoles</a></li>
+                <li><a href="/hot-100.html">Media Streamers</a></li>
+                <li><a href="/hot-100.html">Networking Gear</a></li>
+                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
+                <li><a href="/hot-100.html">Other</a></li>
+                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
+                <li><a href="/hot-100.html">Phones</a></li>
+                <li><a href="/hot-100.html">Printers</a></li>
+                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
+                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
+                <li><a href="/hot-100.html">Wearables</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/most-wanted.html#board">The board</a></li>
+              </ul>
+            </div>
+          </div></li>
+                <li class="has-children">
+          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+              </ul>
+            </div>
+          </div></li>
+<li class="has-children">
+          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="has-children">
+          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <ul class="dropdown-col">
+                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
+                <li><a href="/watchmen.html#methodology">Methodology</a></li>
+                <li><a href="/watchmen.html#tools">The bench</a></li>
+                <li><a href="/watchmen.html#corrections">Corrections</a></li>
+              </ul>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+  <aside class="legal-notice bb-notice-amber">
+    <strong>Educational purpose.</strong> Everything on this page is published for education and research. Teardowns document hardware the author legally owns. Datasheets link to public sources. FCC filings are public record. Lawsuits and controversies cite public reporting. Nothing here is stolen, leaked, or confidential. If you use this information, you&rsquo;re responsible for complying with the laws where you live. This isn&rsquo;t legal advice &mdash; it&rsquo;s a workbench.
+  </aside>
+
+  <aside class="legal-notice bb-notice-amber">
+    <strong>Medical device &mdash; read this first.</strong> Hearing aids are FDA-regulated medical devices. This page teaches the hardware and the public record. <strong>It never replaces your clinician:</strong> it cannot diagnose your hearing, fit a device to your ears, or tell you whether a sound you hear is a symptom. Sudden hearing loss is a medical emergency &mdash; same-day care, not a shopping trip.
+  </aside>
+  <h1>Hearing Aids</h1>
+  <p class="lede">A microphone, an amplifier with a fitted curve, and a speaker the size of a grain of rice &mdash; sold for a century through a licensed gate, and since October 17, 2022, also over the counter. The hardware is simple. The gate was the product.</p>
+  <section>
+    <h2 id="fcc">FCC ID</h2>
+    <p><strong>FCC IDs apply to the wireless models.</strong> Bluetooth hearing aids (nearly all current prescription models and most OTC models) file under each maker&rsquo;s grantee code for their Bluetooth Low Energy radios; some ecosystems add a proprietary 2.4&nbsp;GHz link (TV streamers, remote mics) that files separately. Non-wireless aids have no FCC filing &mdash; their public record lives at the FDA instead (below). The filings&rsquo; internal photos show the hybrid circuit and receiver that are the whole device.</p>
+    <p>Every radio a device carries &mdash; Wi-Fi, Bluetooth, cellular, ultra-wideband, NFC &mdash; needs an FCC equipment authorization before the device can be sold in the United States. To get one, the manufacturer files photographs and test reports with the FCC, and those filings are <strong>public record</strong>. Check the label on your specific unit and look it up at <a href="https://fccid.io">fccid.io</a>.</p>
+    
+  </section>
+  <section>
+    <h2 id="fcc-revealed">What the FCC filing revealed</h2>
+    <p>The FCC filing for this device includes the documents manufacturers are required to submit: external photos, internal photos, test setup photos, RF test reports, and the user manual. These are public record at <a href="https://fccid.io/">fccid.io</a>.</p>
+    <ul>
+      <li><strong>Internal photos (wireless models)</strong> &mdash; the amplifier hybrid/DSP board, the receiver&rsquo;s armature, the battery contacts or rechargeable cell, and the antenna (often the wire that also carries sound to the receiver-in-canal)</li>
+      <li><strong>FDA 510(k) summaries &amp; registration records</strong> &mdash; prescription aids are Class I/II devices; their FDA listings and, for OTC models, the rule at 21 CFR 800.30 are the category&rsquo;s real public documents</li>
+      <li><strong>Test reports</strong> &mdash; Bluetooth output at body-worn range; hearing aids are among the lowest-power radios the FCC certifies</li>
+    </ul>
+    <p>What the FCC filing does <em>not</em> include: schematics (withheld under confidentiality requests where the maker files them), firmware, and the full bill of materials.</p>
+  </section>
+  <section>
+    <h2 id="exploded">Exploded view &mdash; the assemblies in build order</h2>
+    <p>This is the centerpiece of the page: the device taken apart into its assemblies, in the order they go together, every part named in plain language with what it does. An <em>exploded view</em> is the drawing a manufacturer makes showing every part separated along the path it assembles &mdash; the single most useful document in repair, and the one most often kept behind a dealer login.</p>
+    <h3>The source</h3>
+    <p><strong>Parts book:</strong> none published to owners by any major maker &mdash; but the exploded anatomy of a hearing aid is standardized across the industry, because the <em>consumable</em> layer (domes, wax guards, receivers on RIC models, tubes on BTE models) is designed to be owner-handled. The stack below is the dominant modern form, the RIC (receiver-in-canal): the speaker sits in the ear canal on a thin wire; the body sits behind the ear. Sources: FCC internal photos for wireless models, FDA device records, and the makers&rsquo; own published care-and-maintenance guides.</p>
+    <p><strong>Coverage: PARTIAL &mdash; no public parts book; anatomy from FCC internal photos + FDA records + manufacturers&rsquo; published care guides. The owner-serviceable layer (receivers, domes, wax guards, tubes, batteries) is real and is marked as such.</strong></p>
+    <h3>Build order</h3>
+        <h3>Step 1 &mdash; Behind the ear &mdash; the body</h3>
+    <p>The body holds the ears of the system (microphones), the brain (the amplifier), and the power.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Microphones (2)</td><td>Two ports on the body enable directional hearing &mdash; the aid compares the pair to favor sound in front of you. A clogged mic port is a &lsquo;dead aid&rsquo; that isn&rsquo;t.</td></tr>
+        <tr><td>Amplifier / DSP chip</td><td>A digital signal processor running your fitted program: it amplifies frequencies by your audiogram (a graph of your hearing loss), compresses loud sounds, and fights feedback. This chip and its fitting are why an aid is a medical device and not an earbud.</td></tr>
+        <tr><td>Battery &mdash; zinc-air button (sizes 10 / 312 / 13 / 675) or sealed Li-ion</td><td>Disposable zinc-air cells activate when you peel the tab (they breathe air to work) and run days; rechargeable models seal a lithium cell inside &mdash; with the service consequences this site documents everywhere else.</td></tr>
+        <tr><td>Push button / rocker &amp; telecoil</td><td>Program/volume control; the telecoil is a small coil that hears magnetic loop systems (the &lsquo;T&rsquo; setting) in theaters and counters &mdash; a second, invisible input most owners never learn exists.</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 2 &mdash; The wire &amp; the receiver &mdash; the part that actually fails</h3>
+    <p>On a RIC aid, a thin cable runs from the body into the canal, ending in the receiver &mdash; which, confusingly, is the speaker. (In hearing-aid language the &lsquo;receiver&rsquo; receives electrical signal and makes sound.)</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>Receiver (speaker)</td><td>A balanced-armature micro-speaker &mdash; the same physics as high-end earphones. It is the most failure-prone part (it lives in earwax and humidity) and, on most RIC models, it is <strong>owner-replaceable</strong>: it unplugs from the body. This is the category&rsquo;s one true owner repair, and it fixes the majority of &lsquo;dead aid&rsquo; cases.</td></tr>
+        <tr><td>Dome / earmold</td><td>The silicone tip or custom mold that couples the receiver to your canal. Fit is acoustics: a loose dome leaks bass and causes feedback squeal.</td></tr>
+        <tr><td>Wax guard (cerumen filter)</td><td>A tiny mesh screen at the receiver&rsquo;s mouth. It clogs by design so the receiver doesn&rsquo;t. A clogged wax guard is the #1 cause of a &lsquo;suddenly quiet&rsquo; aid &mdash; a 60-second owner fix that clinics charge visits for when owners aren&rsquo;t told.</td></tr>
+      </tbody>
+    </table>
+    <h3>Step 3 &mdash; The other forms</h3>
+    <p>Same parts, different packaging.</p>
+    <table>
+      <thead><tr><th>Part</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>BTE (behind-the-ear, with tube)</td><td>The receiver stays in the body; sound travels down a tube to the mold. Tubes harden and crack &mdash; an owner-replaceable consumable.</td></tr>
+        <tr><td>ITE / CIC (in-the-ear / completely-in-canal)</td><td>Everything, receiver included, is built into a custom shell in the canal. Nothing is owner-serviceable but batteries and wax guards; the deep fit makes wax the whole fault tree.</td></tr>
+        <tr><td>Charging case / dock (rechargeable models)</td><td>A contact or inductive charger &mdash; and, on some models, a UV/drying cycle, because moisture is the category&rsquo;s chronic disease.</td></tr>
+      </tbody>
+    </table>
+
+        <p><strong>What is missing, in the open:</strong> fitting software and its documentation. The amplifier&rsquo;s curve is set by proprietary software (each maker&rsquo;s fitting suite) through a programming interface, and that software is licensed to clinicians, not sold to owners. The hardware on this page is yours; the adjustment layer is the gate. Self-fitting OTC models move part of that layer into a phone app &mdash; which is exactly why the 2022 rule mattered (see the record).</p>
+  </section>
+  <section>
+    <h2 id="we-reveal">What we reveal</h2>
+    <p>The FCC tells you what a device emits. We tell you what&rsquo;s inside and how it works.</p>
+    <ul>
+      <li><strong>The receiver is the repair</strong> &mdash; the one owner-swappable electronic part, and the industry&rsquo;s quietest success story</li>
+      <li><strong>The fitting is the moat</strong> &mdash; why the same hardware costs $200 OTC and $4,000 through a clinic: the amplifier is commodity; the license to tune it is not</li>
+    </ul>
+    <p>Check our <a href="/autopsy/">teardowns</a> for full board-level analysis.</p>
+  </section>
+  <section>
+    <h2 id="variants">Forms &amp; channels</h2>
+    <p>Two independent splits: shape, and how it may legally be sold.</p>
+    <table>
+      <tr><th>Form / channel</th><th>What it is</th><th>Owner-serviceable</th><th>Notes</th></tr>
+      <tr><td>RIC (receiver-in-canal)</td><td>Body behind ear + wire + in-canal speaker</td><td>Receiver, domes, wax guards, batteries</td><td>The dominant prescription form &mdash; and the most repairable.</td></tr>
+      <tr><td>BTE (behind-the-ear)</td><td>Body + tube + earmold</td><td>Tubes, domes, batteries, wax guards</td><td>High-power losses; pediatric standard.</td></tr>
+      <tr><td>ITE / CIC</td><td>Custom shell in the canal</td><td>Batteries, wax guards only</td><td>Cosmetic choice with a service cost.</td></tr>
+      <tr><td>OTC (any form)</td><td>FDA category (21 CFR 800.30), adults 18+, perceived mild-to-moderate loss</td><td>As per form, plus app self-fitting</td><td>No prescription, no fitting visit. Includes a software case: AirPods Pro 2&rsquo;s authorized Hearing Aid Feature (see <a href="/devices/airpods/">AirPods</a>).</td></tr>
+      <tr><td>Prescription (any form)</td><td>Fitted by licensed professionals after an exam (or a signed waiver)</td><td>As per form</td><td>Required for under-18s and for severe/profound loss; the fitting is part of the product.</td></tr>
+    </table>
+  </section>
+  <section>
+    <h2 id="chips">Key chips &amp; components</h2>
+    <ul>
+      <li><strong>DSP/amplifier platforms</strong> &mdash; each maker&rsquo;s proprietary signal-processing chip (Sonova/Phonak, Demant/Oticon, GN/ReSound, WS Audiology/Signia-Widex, Starkey). No public datasheets; the FDA 510(k) summaries are the deepest public technical documents. Collection targets logged per platform.</li>
+      <li><strong>Balanced-armature receivers</strong> (Knowles, Sonion) &mdash; the speaker itself is a bought component with public family documentation; Knowles publishes armature datasheets openly &mdash; the exception in this stack, linked from the <a href="/datasheets.html">Datasheet Index</a> as collection proceeds.</li>
+      <li><strong>Bluetooth LE / LE Audio</strong> &mdash; the radio layer; Auracast broadcast audio is the incoming public standard that will matter in venues &mdash; the telecoil&rsquo;s successor, arriving by radio instead of magnetics.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="faults">Faults &mdash; which part fails, and how you know</h2>
+    <p>This is the most fixable fault tree on the site &mdash; because the top three entries are not faults at all, but maintenance nobody was taught. <strong>None of this replaces an audiologist; a sudden change in your hearing is a symptom, not a fault code &mdash; see Safety.</strong></p>
+    <ul>
+      <li><strong>Aid suddenly quiet or dead</strong> &mdash; wax guard first (replace it), dome second (clear/replace), receiver third (on RIC models, swap in a spare and listen). This order fixes the overwhelming majority of cases and every clinic knows it.</li>
+      <li><strong>Weak, distorted, or intermittent</strong> &mdash; a dying receiver (swap-test as above) or a corroded battery contact (the zinc-air&rsquo;s spring finger &mdash; clean it dry, never wet). Rechargeable models: a cell at end-of-life is a factory service, full stop.</li>
+      <li><strong>Whistling (feedback)</strong> &mdash; sound leaking from the canal back to the mics: a loose dome, a cracked tube, or wax pushing the aid out of seat. Mechanical causes first; feedback is geometry, not electronics.</li>
+      <li><strong>Dead after moisture</strong> &mdash; dry it (the maker&rsquo;s dryer/dock cycle, or a desiccant jar overnight) before condemning it. Moisture is the chronic disease; corrosion is the late stage.</li>
+      <li><strong>One aid fine, the pair unbalanced</strong> &mdash; asymmetric faults are usually the wax/receiver layer on one side. But <em>suddenly</em> worse hearing in one ear, with a working aid verified in the other ear, is a body symptom &mdash; Safety, below, is not boilerplate.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="safety">Safety &amp; the FDA&rsquo;s warnings &mdash; read before the fault list, not after</h2>
+    <p><strong>The FDA&rsquo;s red flags come first &mdash; before any purchase and before any repair.</strong> The FDA requires OTC hearing-aid packaging to carry a &ldquo;When to See a Doctor&rdquo; list. Per the FDA&rsquo;s rule and consumer guidance, see a doctor (preferably an ear, nose, and throat specialist) first if you have: a deformed or misshapen ear; fluid, pus, or blood from the ear in the last 6 months; pain or discomfort in the ear; heavy earwax buildup or a feeling that something is stuck in the ear; dizziness or vertigo; sudden hearing loss, or hearing that rapidly got worse in the last 90 days; hearing that goes up and down; hearing much worse in one ear; or ringing in one ear only, or new ringing in the last 90 days. <strong>Sudden hearing loss is an emergency</strong> &mdash; treatment windows are measured in days.</p>
+    <p><strong>OTC aids are only for adults (18+) with perceived mild-to-moderate loss.</strong> They are not for children, and they are not a treatment for severe or profound loss. If you can&rsquo;t hear speech in a quiet room, the FDA&rsquo;s guidance is a professional, not a product.</p>
+    <p><strong>This page never replaces your clinician.</strong> It teaches hardware. Your audiologist owns your audiogram, your fitting, and anything on the red-flag list. A repaired hearing aid with an unexamined ear is the wrong outcome delivered efficiently.</p>
+    <p>Button batteries (zinc-air) are a swallowing hazard for children and pets &mdash; small, shiny, and genuinely dangerous. Store and dispose of them like it.</p>
+  </section>
+  <section>
+    <h2 id="record">The full record &mdash; dated, sourced, nothing smoothed over</h2>
+    <p>The hearing aid&rsquo;s record is a regulatory record: a legal monopoly on a simple amplifier, and the decade-long fight that broke it open.</p>
+    <table>
+      <thead><tr><th>Date</th><th>Event</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>1977&ndash;2022</td><td>Federal rules require a medical evaluation (or a signed adult waiver) before any hearing-aid sale, and state licensing reserves dispensing to professionals. The result, documented across decades of policy literature: a concentrated industry (five makers &mdash; Sonova, Demant, GN, WS Audiology, Starkey &mdash; supplying the overwhelming majority of the world market) and US prices of roughly $1,000&ndash;$6,000 per pair.</td><td>21 CFR 801.420/801.421 (historical); GAO-24-106854 price data</td></tr>
+        <tr><td>2017-08-18</td><td>The FDA Reauthorization Act (&sect;709) orders the FDA to create an over-the-counter category &mdash; Congress legislating a repair to the market&rsquo;s structure.</td><td>Pub. L. 115-52, &sect;709</td></tr>
+        <tr><td>2022-08-16 / 2022-10-17</td><td>The FDA issues the final OTC rule (21 CFR 800.30); it takes effect October 17, 2022. Adults with perceived mild-to-moderate loss may buy directly. The rule fixes labeling (including the red-flag list in Safety), output limits, and design requirements.</td><td>FDA final rule, 87 FR 50698; 21 CFR 800.30</td></tr>
+        <tr><td>2024-05-07</td><td>The GAO reports on the new market (GAO-24-106854): OTC aids at roughly $200&ndash;$1,000+ against $1,000&ndash;$6,000 prescription pairs &mdash; the price gap the rule was built to create, now measured.</td><td>GAO-24-106854</td></tr>
+        <tr><td>2024-09-12</td><td>The FDA authorizes the first OTC hearing-aid <em>software</em> for a consumer earbud &mdash; Apple&rsquo;s Hearing Aid Feature for AirPods Pro 2. The fitting layer moves into an app, on hardware millions already own.</td><td>FDA authorization, Sept. 12, 2024; see <a href="/devices/airpods/">AirPods</a></td></tr>
+      </tbody>
+    </table>
+    <h3>Did you know</h3>
+    <ul>
+      <li>The part that fails most is a screen the size of a pinhead: the wax guard is a designed clog point that protects the receiver &mdash; and the most common &lsquo;broken&rsquo; hearing aid in the world is a healthy aid behind a full wax guard.</li>
+      <li>Zinc-air batteries breathe: the tab you peel is a seal, and a cell starts dying the moment you peel it &mdash; the only battery on this site that runs on air.</li>
+      <li>A hearing aid&rsquo;s &lsquo;receiver&rsquo; is its speaker. The vocabulary is a century old (it &lsquo;receives&rsquo; the electrical signal), and it confuses every first-time owner who goes looking for the radio.</li>
+      <li>The same balanced-armature receivers sit in concert in-ear monitors: the audiophile and medical worlds share a parts bin and never mention each other.</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="documents">Documents &amp; deep dive</h2>
+    <p>Every document this page rests on, linked. Site library copies first, then the public record at the source.</p>
+    <ul>
+      <li><strong>21 CFR 800.30</strong> &mdash; the OTC hearing-aid rule (FDA): eligibility, labeling, the red-flag list. The primary document of the category.</li>
+      <li><strong>FDA, &ldquo;OTC Hearing Aids: What You Should Know&rdquo;</strong> &mdash; the FDA&rsquo;s consumer guide; the plain-language companion to the rule.</li>
+      <li><strong>GAO-24-106854</strong> (May 7, 2024) &mdash; the measured price comparison.</li>
+      <li><strong>FCC filings</strong> for wireless models &mdash; internal photos: <a href="https://fccid.io">fccid.io</a>.</li>
+      <li><a href="/devices/airpods/">AirPods</a> &mdash; the consumer device that crossed into this category in 2024.</li>
+      <li>Consumer background: <a href="https://ears.ucsf.edu/en/devices/over-the-counter-hearing-aids">UCSF&rsquo;s OTC hearing-aid guide</a> (clinical summary of the FDA framework).</li>
+    </ul>
+  </section>
+  <section>
+    <h2 id="reading">Further Reading</h2>
+    <ul>
+      <li><a href="/devices/cpap/">CPAP Machines &mdash; the other bedside medical device with a recall record</a></li>
+      <li><a href="/devices/airpods/">AirPods &mdash; the hearing aid that is also an earbud</a></li>
+      <li><a href="/repair-rights.html">Repair Rights &mdash; medical devices included</a></li>
+    </ul>
+  </section>
+
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

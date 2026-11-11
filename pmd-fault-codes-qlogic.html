@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Q-Logic, Translated &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="Quantum Rehab Q-Logic 3 and Q-Logic 2 fault codes, translated: what the screen shows, what it means, and what an owner checks first.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Q-Logic, Translated">
+<meta property="og:description" content="Q-Logic 3 and Q-Logic 2 codes in plain language &mdash; what the chair shows, what it means, what to check first.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-fault-codes-qlogic.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+
+<main>
+  <section class="hero">
+    <h1>Q-Logic, Translated</h1>
+    <p class="lede">Thirty-nine Quantum Rehab chairs in this site&rsquo;s census run Q-Logic electronics &mdash; and until now they had no fault lesson, because nobody had translated Q-Logic into plain language. This is that translation: what the screen shows, what it means, and what you check first.</p>
+    <p>Q-Logic is not one box. It is a system: a <strong>hand control</strong> (the joystick unit in front of you, with the screen), a <strong>power module</strong> (the box in the base that drives the motors &mdash; Quantum&rsquo;s manuals also call it the powerbase module), and <strong>bus cables</strong> (the cables the parts use to talk to each other). When something fails, the hand control is where the chair tells you.</p>
+    <p><em>Provenance: compiled from the manufacturers&rsquo; own published documents &mdash; Quantum Rehab&rsquo;s <a href="https://www.quantumrehab.com/pdf/basic-operation-instructions/us_q-logic3_boi_om.pdf">Q-Logic 3 Basic Operation Instructions (INFMANU4809)</a>, its <a href="https://alliedmedical.co.nz/cdn/shop/files/Q-Logic_2_Basic_Operation_Instructions.pdf?v=3521381568056164107">Q-Logic 2 Basic Operation Instructions (INFMANU4499)</a>, the published <a href="https://manuals.plus/m/2a5cede3c4a3e685498eef30873ad58a7a7b479ef1a0e07109f8f4584086d6bc">Q-Logic 3 Fault List</a>, and the <a href="/library/collected-public-docs/pmd/quantum_q6-edge-2_owner.pdf">Q6 Edge 2.0 owner&rsquo;s manual</a> held in this site&rsquo;s library &mdash; and checked against them. Codes that could not be confirmed in published material are not listed. Documentation, not bench measurement: if your chair disagrees with this page, the chair wins &mdash; write down what yours actually does.</em></p>
+  </section>
+
+  <section id="safety">
+    <p><strong>Before any check in these tables that touches a plug, cable, motor, brake, actuator, or battery terminal:</strong> put the chair on level ground, switch it OFF, and disconnect the main battery harness or trip the main circuit breaker. Do not do the check while seated in the chair. Connector pins can remain live after switch-off. Keep a disconnected cable from touching skin, jewelry, tools, or metal, and cover or restrain it so the pins cannot short. At a battery terminal, work on one terminal at a time with an insulated tool. If you cannot disconnect power, inspect visually only and stop.</p>
+    <p>The manufacturer&rsquo;s own warning, carried word for word from the <a href="/library/collected-public-docs/pmd/quantum_q6-edge-2_owner.pdf">Q6 Edge 2.0 owner&rsquo;s manual</a>: <em>&ldquo;Do not use the power chair while the drive motors are disengaged! Do not disengage the drive motors when the power chair is on an incline, as the unit could roll on its own! Only engage the freewheel mode when on a level surface.&rdquo;</em></p>
+    <p>And its mandatory instruction on the same levers: <em>&ldquo;You must turn off the power before disengaging the drive motors; otherwise, you may get an error code on the controller. To clear this code, turn off the controller and place the power chair in drive mode. Then, turn on the controller. The error message should be cleared. If it is not, contact your Quantum Rehab Provider.&rdquo;</em> Keep that sequence. Half the &ldquo;faults&rdquo; on this page are that sequence done out of order.</p>
+  </section>
+
+  <section id="what">
+    <h2>What Q-Logic is, and which chairs have it</h2>
+    <p><strong>Quantum Rehab</strong> is the complex-rehab division of Pride Mobility Products. Its chairs are sold through providers, not off a shelf. <strong>Q-Logic</strong> is the electronics family Quantum fits to them: Quantum&rsquo;s own parts books label the assemblies &ldquo;Q-LOGIC, CURTIS&rdquo; &mdash; the system is built by <strong>Curtis Instruments</strong>, the mobility-electronics maker whose own controller manuals carry its <strong>enAble</strong> name (see Curtis&rsquo;s <a href="https://cdn.curtisinstruments.com/products/manuals/1212_manual_en.pdf">Model 1212 manual</a> for the smaller enAble controllers). Quantum sells the chair and the support. Curtis built the brain.</p>
+    <p>Quantum&rsquo;s own <a href="https://www.quantumrehab.com/quantum-electronics/what-can-i-do-with-q-logic-3.asp">&ldquo;What Can I Do with Q-Logic 3?&rdquo; page</a> lists Q-Logic 3 on the Edge 3 Stretto, Edge 3, 4Front, Q6 Edge 2.0, Q6 Edge 2.0 X, Q6 Edge HD, Q6 Edge Z and Q1450. The library holds the paper trail for the Q6 line: the <a href="/library/collected-public-docs/pmd/quantum_q6-edge-2_owner.pdf">Q6 Edge 2.0 owner&rsquo;s manual</a>, the <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3-stretto_parts.pdf">Q6 Edge 3 Stretto parts book</a>, the <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Q6 Edge 3 Illustrated Parts Breakdown</a>, and the earlier <a href="/library/collected-public-docs/pmd/quantum_q6-edge-2012_parts.pdf">2012 Q6 Edge parts book</a> from the Q-Logic 2 era &mdash; its joystick pages list Q-Logic 2 and Q-Logic 3 hand controls side by side, which is why both generations live on the same chairs.</p>
+    <p>Three words you need before the tables:</p>
+    <ul>
+      <li><strong>Motor 1 and Motor 2</strong> are the two drive motors. Q-Logic does not promise that Motor 1 is the left one on your chair &mdash; identify a motor by its plug at the power module, not only by side.</li>
+      <li><strong>Brake 1 and Brake 2</strong> are the electric parking brakes, one inside each motor. A brake code is very often a <strong>freewheel lever</strong> (the lever on each motor that disconnects it so the chair can be pushed) left in the push position.</li>
+      <li>An <strong>encoder</strong> is the sensor that reports how far a motor has turned. An <strong>actuator</strong> is a powered seat motor (tilt, recline, elevate, legrests). An <strong>inhibit</strong> is a deliberate &ldquo;do not drive&rdquo; signal &mdash; the charger being plugged in is the common one.</li>
+    </ul>
+  </section>
+
+  <section id="qlogic3">
+    <h2>Q-Logic 3 &mdash; read the words on the colour screen</h2>
+    <p>The Q-Logic 3 hand control has a colour <strong>LCD screen</strong> (LCD = the flat display). It shows three kinds of message, in Quantum&rsquo;s own definitions: <strong>Information</strong> (does not affect how the chair runs), <strong>Warning</strong> (may affect it), and <strong>Error</strong> (does affect it). Error codes appear on the screen <strong>by number</strong>, with a short text. The chair also warns you before a fault: pop-up screens appear when the battery falls to 50%, 30% and 15%, and if the electronics get too hot the chair slows itself down first (<strong>thermal rollback</strong> &mdash; a protective speed cut, not a breakdown).</p>
+    <p>One honest wrinkle: Quantum&rsquo;s guides do not all number two joystick codes the same way &mdash; the <a href="https://www.quantumrehab.com/pdf/basic-operation-instructions/us_q-logic3_boi_om.pdf">Basic Operation Instructions</a> print them as 34 and 35, the <a href="https://manuals.plus/m/2a5cede3c4a3e685498eef30873ad58a7a7b479ef1a0e07109f8f4584086d6bc">Fault List</a> and the <a href="https://quantumrehab.co.uk/wp-content/uploads/2026/01/US_CA_Q-Logic3-Programming-Guide_om_RevB_Feb20_5071-1.pdf">Q-Logic 3 Programming Guide</a> as 35 and 36. The words on the screen are the same. Trust the words first, the number second, and write down both.</p>
+<table>
+<thead><tr><th>What the chair shows</th><th>What it means</th><th>What you check first</th></tr></thead>
+<tbody>
+<tr><td>#1 &mdash; Motor 1 not connected</td><td>The power module cannot see Motor 1</td><td>Power off. Inspect the Motor 1 connections at the power module and along the cable. Power on.</td></tr>
+<tr><td>#2 &mdash; Motor 2 not connected</td><td>Same fault, Motor 2 side</td><td>Same checks as #1, on the Motor 2 side.</td></tr>
+<tr><td>#3 &mdash; Brake 1 not connected</td><td>The brake in Motor 1 is not answering</td><td>Power off. Move the freewheel lever: disengage, then firmly re-engage to DRIVE. Inspect the motor connections. Power on (see <a href="/pmd-fixes.html">Cheap Fixes, Procedure 1</a>).</td></tr>
+<tr><td>#4 &mdash; Brake 2 not connected</td><td>Same fault, Brake 2 side</td><td>Same checks as #3, on the other motor.</td></tr>
+<tr><td>#14 &mdash; Proportional input device not connected</td><td>The drive input the chair was programmed to expect (usually the joystick) is missing at switch-on</td><td>Power off. Disconnect and reconnect the 9-pin D-sub plug (the wide plug with nine pins) on the input device. Power on. If the wrong input is programmed, that fix needs a programming device &mdash; name the code and ask for the input selection to be corrected before anyone quotes a new joystick. Quantum Canada&rsquo;s <a href="https://www.quantumrehab.ca/quantum-electronics/interactive-assist.asp">Interactive Assist page</a> lists this exact code as one a provider can resolve remotely.</td></tr>
+<tr><td>#15 &mdash; Drive motor encoder not connected</td><td>A motor&rsquo;s turn sensor is not answering</td><td>Power off. Disconnect both encoder cables, inspect them, reconnect both. Power on.</td></tr>
+<tr><td>#20 &mdash; Undervoltage</td><td>Battery voltage too low</td><td>Charge the battery pair. If it returns on a charged pair, load-test both batteries (Procedure 3) and check the main plugs and breaker.</td></tr>
+<tr><td>#21 &mdash; Overvoltage</td><td>Battery voltage too high</td><td>Check whether the batteries were overcharged. Quantum&rsquo;s own help text adds: avoid driving downhill fast with fully charged batteries &mdash; the motors charge the batteries on a descent.</td></tr>
+<tr><td>#23 &mdash; Motor 1 output defect</td><td>The power module&rsquo;s output to Motor 1 has failed its check</td><td>Power off. Inspect the motor connections. Power on. If it stays, the fault is in the output stage or the motor &mdash; say the code when you call; do not let the whole power module be condemned before the cable is checked.</td></tr>
+<tr><td>#24 &mdash; Motor 2 output defect</td><td>Same fault, Motor 2 output</td><td>Same checks as #23, on the Motor 2 side.</td></tr>
+<tr><td>#25 &mdash; Brake 1 error</td><td>Brake 1 failed a check that is not simple disconnection</td><td>Power off. Disengage then re-engage the freewheel lever. Inspect the motor connections. Power on.</td></tr>
+<tr><td>#26 &mdash; Brake 2 error</td><td>Same fault, Brake 2</td><td>Same checks as #25, on the other motor.</td></tr>
+<tr><td>#28 &mdash; Main contactor (main relay) warning</td><td>The main power relay in the base did not behave as expected; Quantum Canada links this code to under-voltage from undercharging</td><td>Power off. Wait 5 seconds. Power on. Then look at your charging habit and the battery pair before anything else &mdash; this code is a battery story until proven otherwise.</td></tr>
+<tr><td>#31 &mdash; Motor stall detected</td><td>A motor was held still under power &mdash; the chair was driven against something it could not move</td><td>Back up and try the obstacle again with more speed, or go around it, or find where it is lower. This code is the chair protecting itself, not a broken motor.</td></tr>
+<tr><td>#32 / #33 &mdash; Overtemperature / speed reduction (overtemperature)</td><td>The electronics are too hot. At #32 the chair stops to protect itself; at #33 it slows down first</td><td>Power off and let the system cool down. Quantum&rsquo;s help text is explicit: &ldquo;This is the normal system behavior.&rdquo;</td></tr>
+<tr><td>#34 / #35 &mdash; Joystick not centered (numbering varies by guide &mdash; see above)</td><td>The joystick was pushed away from centre at power-up</td><td>Power off. Release the joystick to its centre (neutral) position &mdash; take bags, sleeves and attendant hands off it. Power on.</td></tr>
+<tr><td>#42 &mdash; Incompatible secondary module</td><td>A module on the system does not match the rest &mdash; it appears after a part is added, removed or updated</td><td>Power off. Remove the incompatible device if one was just fitted. Power on. If this follows a firmware update or a part swap, say so when you call: the swap was never configured.</td></tr>
+<tr><td>#46 &mdash; Bluetooth not working</td><td>The chair&rsquo;s wireless link failed its check</td><td>Power off. Wait 5 seconds. Power on. A reboot is Quantum&rsquo;s whole published fix for this code.</td></tr>
+<tr><td>#47 &mdash; Suspension lock not engaged &mdash; seek level ground</td><td>The suspension lock (the mechanism that steadies the chair) is not engaged</td><td>Move to level ground. Check the suspension lock mechanism.</td></tr>
+<tr><td>#49 &mdash; DMS fault</td><td><strong>DMS</strong> is the dead-man&rsquo;s switch line &mdash; the signal that proves an input is being held deliberately. The line was interrupted</td><td>Power off. Wait 5 seconds. Power on. If it returns, check the switch and input cables along their run.</td></tr>
+<tr><td>#56 &mdash; Actuator overcurrent</td><td>A powered seat function is drawing too much current</td><td>Power off. Disconnect and reconnect the seat module cables one at a time. Power on. A pinched actuator cable is the usual cause (Procedure 4 checks the cable run).</td></tr>
+<tr><td>#75 &mdash; &ldquo;Chair is not charging / Please check charger&rdquo;</td><td>The charger is plugged into the controller but not into the wall outlet, so the chair is not charging. This exact screen is printed in both the Q-Logic 3 guide and the <a href="/library/collected-public-docs/pmd/quantum_q6-edge-2_owner.pdf">Q6 Edge 2.0 owner&rsquo;s manual</a></td><td>If the system was off with the charger plugged into the controller, unplug the charger from the controller. If the system is on, unplug the charger from the controller, then switch off and back on. Then plug the charger into a live outlet.</td></tr>
+<tr><td>#174 &mdash; Invalid memory position</td><td>A saved memory-seat position holds inconsistent data, or the position cannot be reached</td><td>Bring the chair out of anterior tilt (forward tilt) and retry the memory position. If it still fails, reset that memory position and store it again.</td></tr>
+<tr><td>#204 &mdash; Communication error</td><td>Modules on the bus have lost contact with each other</td><td>Power off. Wait 5 seconds. Power on. If it returns, work the bus cables: unplug, inspect the pins, reconnect firmly (Procedure 4).</td></tr>
+</tbody>
+</table>
+    <p>That is the owner&rsquo;s table &mdash; the codes Quantum publishes a fix for. It is not the whole list. The full <a href="https://manuals.plus/m/2a5cede3c4a3e685498eef30873ad58a7a7b479ef1a0e07109f8f4584086d6bc">Fault List</a> runs past #215, and most of it never reaches your screen with an explanation. That gap is the next section.</p>
+  </section>
+
+  <section id="qlogic2">
+    <h2>Q-Logic 2 &mdash; numbers on the LCD</h2>
+    <p>Q-Logic 2 is the previous generation, fitted to earlier Q6 Edge chairs and many Quantum and Jazzy rehab chairs of its era. Its hand control also has an LCD screen, and it uses the same three message kinds &mdash; information, warning, error &mdash; with codes shown <strong>by number</strong>. Quantum&rsquo;s <a href="https://alliedmedical.co.nz/cdn/shop/files/Q-Logic_2_Basic_Operation_Instructions.pdf?v=3521381568056164107">Q-Logic 2 Basic Operation Instructions</a> publish only the codes an owner can easily put right. They are, word for word in meaning:</p>
+<table>
+<thead><tr><th>What the chair shows</th><th>What it means</th><th>What you check first</th></tr></thead>
+<tbody>
+<tr><td>#35, #37</td><td>Joystick fault / connection</td><td>Check the joystick cable is connected. Turn the On/Off Mode Select Lever off, then back on, to recycle the power.</td></tr>
+<tr><td>#36, #110</td><td>Joystick not centered</td><td>Release the joystick while turning the chair on. Let it sit dead centre, hands off.</td></tr>
+<tr><td>#46</td><td>High battery voltage</td><td>Disconnect the charger.</td></tr>
+<tr><td>#47, #101, #105</td><td>Low battery voltage</td><td>Charge the batteries. If the code returns on a full charge, the pair is the story (Procedure 3).</td></tr>
+<tr><td>#49&ndash;#53</td><td>Motor not connected</td><td>Check the motor brake connector &mdash; the combined plug at the motor that carries both motor and brake wires.</td></tr>
+<tr><td>#74&ndash;#75</td><td>Motor disconnected</td><td>Check the motor brake connector.</td></tr>
+<tr><td>#81&ndash;#90</td><td>Motor / brake fault</td><td>Check the motor brake connector, and both freewheel levers firmly to DRIVE first (Procedure 1).</td></tr>
+<tr><td>#107</td><td>Charger drive inhibit</td><td>Disconnect the charger. The chair will not drive while it thinks it is charging.</td></tr>
+<tr><td>#111&ndash;#112</td><td>Center detect fault (the chair cannot confirm the joystick is centred)</td><td>Check the joystick cable is connected.</td></tr>
+<tr><td>#131&ndash;#132</td><td>Motor fault</td><td>Check the motor wiring along its whole run for pinches and cuts.</td></tr>
+<tr><td>#141, #187</td><td>Drive / actuator restriction</td><td>Clear the restriction &mdash; a seat position, lock or obstruction is holding the drive or a seat function back. Move the seat back toward neutral and retry.</td></tr>
+<tr><td>#192&ndash;#195</td><td>Motor disconnected / shorted</td><td>Check the motor brake connector. A short means inspect the cable where it passes hinges and frame edges.</td></tr>
+<tr><td>#200&ndash;#201</td><td>Motor fault</td><td>Check the motor wiring.</td></tr>
+</tbody>
+</table>
+    <p>Q-Logic 2 also has <strong>thermal rollback</strong>: if the motors or controller pass a safe temperature, the controller cuts output to <strong>20% of full operation</strong> until things cool, then resumes on its own. A Q-Logic 2 chair that goes slow on a hot climb and recovers is doing its job.</p>
+    <p>Behind this short owner table sits a much longer shared list. The published <a href="https://alliedmedical.co.nz/cdn/shop/files/q-logic-1-and-2-fault-codes.pdf?v=18391163265163446701">Q-Logic 1 and 2 fault-code list</a> runs from software faults at #1 through bus, joystick, battery, motor and brake faults past #200 &mdash; including entries whose remedy is a parameter change, and which mark that parameter, in the list&rsquo;s own words, as &ldquo;an OEM parameter.&rdquo; You can read that list. You cannot act on most of it. That is the gate, in one document.</p>
+  </section>
+
+  <section id="qlogic1">
+    <h2>Q-Logic 1 and the simpler Curtis chairs &mdash; thin coverage, said plainly</h2>
+    <p>Coverage here is thin, and this page will not pretend otherwise. For the original Q-Logic (the system the parts books call Q-Logic 1, on pre-2012 chairs such as the early Q6 Edge &mdash; see the <a href="/library/collected-public-docs/pmd/quantum_q6-edge-2012_parts.pdf">2012 parts book</a>), no owner-level Basic Operation guide with an error table was found in this site&rsquo;s library or in Quantum&rsquo;s or Pride&rsquo;s publicly posted manuals during this build. What is public is the shared <a href="https://alliedmedical.co.nz/cdn/shop/files/q-logic-1-and-2-fault-codes.pdf?v=18391163265163446701">Q-Logic 1 and 2 fault-code list</a> above: its joystick codes (#35&ndash;#39), battery codes (#46, #47, #100&ndash;#105), motor codes (#49&ndash;#54, #74&ndash;#75) and brake codes (#81&ndash;#90) match the Q-Logic 2 owner table closely enough to use the same first checks &mdash; cable, connector, freewheel lever, charge. Its software faults (#1&ndash;#34) all carry the same published remedy, &ldquo;update software,&rdquo; which is a programmer job, not an owner job.</p>
+    <p>The simpler Curtis-built controls on Quantum and Jazzy chairs &mdash; the NE and NE+ hand controls listed in the <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3-stretto_parts.pdf">Stretto parts book</a> alongside Q-Logic &mdash; are a separate, non-expandable family. No publicly posted Quantum owner guide with a full NE/NE+ error table was held in the library or found on Quantum&rsquo;s site for this page, so their codes are not translated here rather than guessed. If you have one of those chairs, the code, a photo of the display, and the chair&rsquo;s serial number are what to take to a provider &mdash; and the missing guide is named in this page&rsquo;s source notes as a collection target.</p>
+  </section>
+
+  <section id="gate">
+    <h2>What the programmer sees that you don&rsquo;t</h2>
+    <p>Say it plainly: <strong>your screen shows you a number and one line. The programming device shows the full sentence, the history, and the settings behind it &mdash; and the programming device is not sold to you.</strong></p>
+    <p>The evidence is in Quantum&rsquo;s own owner guide. The Q-Logic 3 error table in the <a href="https://www.quantumrehab.com/pdf/basic-operation-instructions/us_q-logic3_boi_om.pdf">Basic Operation Instructions</a> heads its detailed columns &ldquo;Code Text (programming device)&rdquo; and &ldquo;Description Help text (programming device)&rdquo;. The help text exists. It is labelled, in the owner&rsquo;s manual, as belonging to the other tool.</p>
+    <p>That tool, for Q-Logic 3, is <strong>ECON</strong>: <strong>ECON-W</strong> on a Windows computer and <strong>ECON-i</strong> on an iPhone or iPad, both by Curtis Instruments, connecting by the chair&rsquo;s built-in Bluetooth. Quantum UK&rsquo;s <a href="https://quantumrehab.co.uk/apps/econ-w/">ECON page</a> describes it as a tool that allows &ldquo;clinicians and service technicians&rdquo; to customise and configure Q-Logic 3 chairs, with access to diagnostics and data logs. The ECON-i app&rsquo;s own listing states its authorised users: original equipment manufacturers (OEMs) and approved dealers/providers, therapists, and wheelchair service technicians. The owner of the chair is not on the list. There is also a <strong>handheld programmer (HHP)</strong> &mdash; Quantum&rsquo;s own <a href="https://www.quantumrehab.com/education/saving-the-day-programming-parameters.asp">programming-parameters article</a> names the required equipment as &ldquo;Handheld programmer (HHP), Econ-W or Econ-I&rdquo; &mdash; and Quantum Canada&rsquo;s <a href="https://www.quantumrehab.ca/quantum-electronics/interactive-assist.asp">Interactive Assist</a> gives a provider a live remote connection to your chair&rsquo;s electronics, including its error-code history, from their programming station. You cannot open that history yourself.</p>
+    <p>Two things are worth knowing inside the gate. First, that same Quantum article documents a real owner protection: Q-Logic 3 stores its programming files (<strong>XPA files</strong> &mdash; the chair&rsquo;s whole setup as files) <em>in the chair itself</em>, with revisions kept, so a lost dealer copy is not the only copy. Ask, in those words, for your XPA files to be exported and handed to you before any module is swapped. Second, the generic Curtis programmers named on <a href="/pmd-programmers.html">The Keys</a> &mdash; the 1313 hand-held and 1314 PC Programming Station, each sold in User, Service, Dealer and OEM versions &mdash; are the wider Curtis tier system Q-Logic grew from. Each version works at its own level and every level below it. The version is the permission.</p>
+    <p>And the codes follow the same rule. The full <a href="https://manuals.plus/m/2a5cede3c4a3e685498eef30873ad58a7a7b479ef1a0e07109f8f4584086d6bc">Q-Logic 3 Fault List</a> contains entries whose only published help text is an instruction to connect a programming device &mdash; for example #16 and #17 (brake shorted or programmed incorrectly: &ldquo;Connect programming device. Check Brake Voltage Setting&rdquo;) and #40 and #45 (encoder or input configuration that only a programming device can change). A code you can read but cannot clear is not a diagnosis you own. It is a ticket you are handed.</p>
+  </section>
+
+  <section id="checks">
+    <h2>Owner checks before any module is condemned</h2>
+    <p>Work this order. It is the order the codes themselves point to, and every step is in <a href="/pmd-fixes.html">The Cheap Fixes</a>.</p>
+    <ol>
+      <li><strong>Freewheel levers (Procedure 1).</strong> Both levers firmly to DRIVE, power off and back on. Brake codes #3, #4, #25, #26 on Q-Logic 3 and the #81&ndash;#90 group on Q-Logic 2 start here.</li>
+      <li><strong>Charger and inhibit (Procedure 2).</strong> Charger unplugged from the controller, socket pins clean and straight. That clears Q-Logic 2 #107, explains Q-Logic 3 #75, and removes a whole family of &ldquo;will not drive&rdquo; calls.</li>
+      <li><strong>Battery pair (Procedure 3).</strong> Charge overnight, check both main plugs, terminal bolts and the main circuit breaker on the rear frame (push it back in if it has tripped, after a minute&rsquo;s rest &mdash; the <a href="/library/collected-public-docs/pmd/quantum_q6-edge-2_owner.pdf">owner&rsquo;s manual</a> procedure). Load-test each battery. Q-Logic lives on a 24-volt pair: one dying battery drags the other down, and Quantum&rsquo;s rule is to replace both at the same time, never mix old and new. Undervoltage, overvoltage, main-relay and half the &ldquo;random&rdquo; codes live here.</li>
+      <li><strong>Bus and motor cables (Procedure 4).</strong> With power disconnected: hand control cable, 9-pin D-sub, motor and brake plugs at the power module, encoder cables, seat module cables &mdash; unplug, inspect for bent pins, corrosion and pinches, reconnect firmly, one at a time. Communication codes (#204, Q-Logic 2 bus faults) and motor-not-connected codes are cable codes until the cable has been proved good.</li>
+      <li><strong>Joystick at power-up.</strong> Nothing resting on the stick, hands off, then switch on. That is the whole fix for the not-centered codes on both generations.</li>
+    </ol>
+    <p>If the code survives all five, you have not failed &mdash; you have done the diagnosis. Write the code, the exact screen words, and the date down, and photograph the screen. The <a href="/library/collected-public-docs/pmd/quantum_q6-edge-2_owner.pdf">owner&rsquo;s manual</a> itself tells you what a provider will ask for: &ldquo;model number, serial number, nature of the problem, and the error code if available.&rdquo; Hand them all four. A chair that &ldquo;powers up, but does not move&rdquo; with code #3 recorded is a brake-lever conversation. The same chair with no code recorded is a module quote.</p>
+  </section>
+
+  <section>
+    <h2>Before you call anyone</h2>
+    <p>Read the screen out loud. Write the number and the words. Try the owner checks in order. Then call with the code in your hand &mdash; and ask for two things before any part is ordered: the fault history read out before it is cleared, and your XPA programming files exported to you. Both are button-presses in the dealer&rsquo;s tool. Neither costs them a part.</p>
+    <p>More of the system: <a href="/pmd-fault-codes.html">Fault codes, translated (part one)</a> &middot; <a href="/pmd-fault-codes-2.html">Fault codes, translated: the other systems</a> &middot; <a href="/pmd-programmers.html">The Keys: programmers and access tiers</a> &middot; <a href="/pmd-settings.html">The Settings</a> &middot; <a href="/pmd-start.html">Start Here: your chair stopped</a></p>
+    <p><a href="/pmd.html">&larr; Back to PMD</a> &middot; <a href="/pmd-fixes.html">The cheap fixes &rarr;</a></p>
+  </section>
+
+  <section id="sources">
+    <h2>Sources</h2>
+    <ul>
+      <li>Quantum Rehab, <a href="https://www.quantumrehab.com/pdf/basic-operation-instructions/us_q-logic3_boi_om.pdf">Q-Logic 3 Basic Operation Instructions, INFMANU4809/Rev E</a> &mdash; message types, owner error table, battery pop-ups, charging indicator #75.</li>
+      <li>Quantum Rehab / Pride Mobility, <a href="https://alliedmedical.co.nz/cdn/shop/files/Q-Logic_2_Basic_Operation_Instructions.pdf?v=3521381568056164107">Q-Logic 2 Basic Operation Instructions, INFMANU4499/Rev A</a> &mdash; Q-Logic 2 owner error table, thermal rollback to 20%.</li>
+      <li><a href="https://manuals.plus/m/2a5cede3c4a3e685498eef30873ad58a7a7b479ef1a0e07109f8f4584086d6bc">Q-Logic 3 Fault List and Troubleshooting Guide</a> (manufacturer fault list, republished) &mdash; full numbered list, help texts, programming-device entries.</li>
+      <li><a href="https://alliedmedical.co.nz/cdn/shop/files/q-logic-1-and-2-fault-codes.pdf?v=18391163265163446701">Q-Logic 1 and 2 fault-code list</a> (manufacturer list, hosted by Allied Medical) &mdash; shared list, OEM-parameter remedies.</li>
+      <li>Quantum Rehab, <a href="/library/collected-public-docs/pmd/quantum_q6-edge-2_owner.pdf">Q6 Edge 2.0 / 2.0x / 3 owner&rsquo;s manual</a> (library copy) &mdash; freewheel warnings quoted verbatim, circuit breaker, battery-pair rules, Error #75, what to tell a provider.</li>
+      <li>Pride Mobility / Quantum Rehab parts books (library copies): <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Q6 Edge 3 Illustrated Parts Breakdown</a>, <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3-stretto_parts.pdf">Q6 Edge 3 Stretto parts book</a>, <a href="/library/collected-public-docs/pmd/quantum_q6-edge-2012_parts.pdf">Q6 Edge (2012) parts book</a> &mdash; Q-Logic / Curtis assembly naming, Q-Logic 1, 2 and 3 hand controls, NE / NE+ assemblies.</li>
+      <li>Quantum Rehab, <a href="https://quantumrehab.co.uk/wp-content/uploads/2026/01/US_CA_Q-Logic3-Programming-Guide_om_RevB_Feb20_5071-1.pdf">Q-Logic 3 Programming Guide, INFMANU5071/Rev B</a> &mdash; joystick code #35 wording, calibration context.</li>
+      <li>Quantum Rehab, <a href="https://www.quantumrehab.com/quantum-electronics/what-can-i-do-with-q-logic-3.asp">&ldquo;What Can I Do with Q-Logic 3?&rdquo;</a> &mdash; the chair list for Q-Logic 3, ECON-W / ECON-i naming.</li>
+      <li>Quantum Rehab, <a href="https://www.quantumrehab.com/education/saving-the-day-programming-parameters.asp">&ldquo;Saving the Day: Programming Parameters&rdquo;</a> &mdash; HHP / Econ-W / Econ-I as required programming equipment, XPA files stored in the chair.</li>
+      <li>Quantum Rehab Canada, <a href="https://www.quantumrehab.ca/quantum-electronics/interactive-assist.asp">Interactive Assist</a> &mdash; provider remote access, error-code history, codes 14, 15, 23, 24, 28, 43, 44, 45, 49 and 72 notes.</li>
+      <li>Quantum Rehab UK, <a href="https://quantumrehab.co.uk/apps/econ-w/">ECON</a> &mdash; ECON as a clinician and service-technician tool with diagnostics and data logs.</li>
+      <li>Curtis Instruments, <a href="https://cdn.curtisinstruments.com/products/manuals/1212_manual_en.pdf">Model 1212 manual</a> &mdash; the enAble controller line and the Curtis 1313 / 1314 programming family behind the tier system named on <a href="/pmd-programmers.html">The Keys</a>.</li>
+    </ul>
+    <p>Not held, and not linked because no copy was found in the site library, the site&rsquo;s archive.org inventory, or the publisher&rsquo;s public site during this build: a Q-Logic 1 owner Basic Operation guide, and a Quantum NE / NE+ owner error-code guide. Both are named as collection targets in the build report for this page.</p>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>
