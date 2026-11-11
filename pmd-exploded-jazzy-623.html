@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exploded View: Pride Jazzy 623 &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="Every assembly of the Pride Jazzy 623 exploded to the component level, from Pride&rsquo;s own Illustrated Parts Breakdown (INFMANU4526 Rev. B): 16 assemblies and 199 parts, with a plain-language line for every part.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Exploded View: Pride Jazzy 623">
+<meta property="og:description" content="Every assembly of the Pride Jazzy 623 exploded to the component level, from Pride&rsquo;s own Illustrated Parts Breakdown (INFMANU4526 Rev. B): 16 assemblies and 199 parts, with a plain-language line for every part.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-exploded-jazzy-623.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <h1>Exploded View: Pride Jazzy 623</h1>
+    <p class="lede">The whole Jazzy 623, taken apart by the people who built it. Pride&rsquo;s <strong>Illustrated Parts Breakdown</strong> for this chair explodes 16 assemblies into numbered parts. Every diagram below is Pride&rsquo;s own page, followed by the book&rsquo;s parts table with a plain-language line added for every part.</p>
+    <p><strong>Coverage: full IPB.</strong> All 16 assemblies and their 199 parts are here. The book&rsquo;s last two pages are electrical system diagrams — drawings with no parts lists — so they live in the linked book only.</p>
+  </section>
+
+  <section>
+    <h2>The source</h2>
+    <p><strong>Guide:</strong> Pride Mobility Illustrated Parts Breakdown for the Jazzy 623 power chair.</p>
+    <p><strong>Document:</strong> INFMANU4526 Rev. B (the book&rsquo;s footer code reads Rev.B/022414) &mdash; 34 pages, Australian edition.</p>
+    <p><strong>Full guide (PDF, in this site&rsquo;s library):</strong> <a href="/library/collected-public-docs/pmd/pride_jazzy-623_parts.pdf">pride_jazzy-623_parts.pdf</a></p>
+    <p>The book is honest about its own scope, in its notes: &ldquo;Only serviceable components are shown. Items with lower-case extensions represent right/left specific components.&rdquo; Callouts marked with an asterisk (*) are parts the book does not illustrate — the book&rsquo;s introduction says so. The prices printed in the book are Australian dollars; they are not reproduced here — the part numbers are what a parts desk orders by.</p>
+  </section>
+
+  <section>
+    <h2>The maker&rsquo;s own warnings</h2>
+    <p>This breakdown prints no warning paragraphs. On Pride&rsquo;s chairs the safety warnings are decals, and the book lists them as parts — the battery-warning decal (DWR1235L515), the tire-deflation decal (DWR1234L957 &mdash; &ldquo;deflate tire completely&rdquo; before a wheel comes apart), the EMI/RFI decal (DWR1235L512), and the cord-placement decal (DWR1235L521) are all in the Shroud and Owner&rsquo;s steps below, with their part numbers.</p>
+    <p>If a warning decal on your chair is peeling or unreadable, it is a replaceable part. A warning you cannot read cannot warn you.</p>
+  </section>
+
+  <section>
+    <h2>Build order</h2>
+    <p>The assemblies are laid out in the order you would build the chair: frame first, batteries last. Every step is one exploded view from the maker&rsquo;s guide, followed by its parts table. The <strong>Callout</strong> column is the label printed on the diagram. The <strong>Part number</strong> column is the maker&rsquo;s own number &mdash; the number a parts desk cannot argue with.</p>
+    <ul>
+      <li><strong>Frame:</strong> <a href="#step-1">Step 1: Main Frame</a> &middot; <a href="#step-2">Step 2: Articulating Beam</a> &middot; <a href="#step-3">Step 3: Trapeze Bars Assembly</a></li>
+      <li><strong>Motors and gearboxes:</strong> <a href="#step-4">Step 4: Song</a> &middot; <a href="#step-5">Step 5: I-Song</a> &middot; <a href="#step-6">Step 6: Freewheel Lever, Motor Mount, and Suspension Assembly</a></li>
+      <li><strong>Wheels and casters:</strong> <a href="#step-7">Step 7: Front Caster Arm and Front Suspension</a> &middot; <a href="#step-8">Step 8: Drive Wheel Assembly</a></li>
+      <li><strong>Seating:</strong> <a href="#step-9">Step 9: Foot Platform</a> &middot; <a href="#step-10">Step 10: Seat Mount Assembly</a></li>
+      <li><strong>Electronics and controller:</strong> <a href="#step-11">Step 11: Controller Assembly</a> &middot; <a href="#step-12">Step 12: Non-Power Positioning</a> &middot; <a href="#step-13">Step 13: Actuator</a></li>
+      <li><strong>Batteries and charger:</strong> <a href="#step-14">Step 14: Battery Access Bracket</a></li>
+      <li><strong>Covers, decals and accessories:</strong> <a href="#step-15">Step 15: Shroud Assembly With Center Panel</a> &middot; <a href="#step-16">Step 16: Owner’s and Decal Packages</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Stage 1 — Frame</h2>
+    <p>Start with the skeleton. Every other system bolts to the frame, so it goes together first.</p>
+    <h3 id="step-1">Step 1 &mdash; Main Frame</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-623/jazzy-623-p4.jpg" alt="Main Frame — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 1.</strong> Main Frame &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>DWR1062C040</td><td>BUMPER,BLACK,MOLDED POLYURETHANE,6.5MM ID X 25MM OD,C-1062-040</td><td>2</td><td>Part of the frame — the structure everything else bolts to.</td></tr>
+        <tr><td>A2</td><td>SCRSHCS1158</td><td>SCREW,SHCS,BLACK ZINC,M6-1.0 X 10MM</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>A3</td><td>DWR1062C054</td><td>SHROUD,REAR BUMPER,BLACK,C-1062-054</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B1 - C3</td><td>FRMASMB16061</td><td>FRAME,ASSY,MAIN,SUSPENSION BEAM,Q6 EDGE,E-1062-079</td><td>1</td><td>Lets the wheels ride over bumps while the seat stays level.</td></tr>
+        <tr><td>B1</td><td>DWR1062C055</td><td>BUMPER,BLACK,MOLDED POLYURETHANE,C-1062-055</td><td>4</td><td>Part of the frame — the structure everything else bolts to.</td></tr>
+        <tr><td>B2</td><td>DWR1060C048</td><td>NUT,STEEL,U-STYLE CLIP-ON,M5-.8,C-1060-048</td><td>2</td><td>Threads onto a bolt to clamp parts together.</td></tr>
+        <tr><td>B3</td><td>CLPCBLC1028</td><td>CLAMP,CABLE,BLACK,NYLON,.38" DIAMETER,P-CLIP,C-1059-042</td><td>2</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>*B4</td><td>SCRPPH1036</td><td>SCREW,PPH,BLACK ZINC,M4-.7 X 8MM</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>*B5</td><td>DWR1062D078</td><td>SHROUD,BREAKER MOUNT,BLACK,MOLDED ABS,D-1062-078</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>C1 - C3</td><td>FRMASMB15970</td><td>FRAME,ASSY,FRONT STABILIZER BRIDGE,STANDARD,D-1062-047</td><td>1</td><td>Part of the frame — the structure everything else bolts to.</td></tr>
+        <tr><td>C1</td><td>SCRHHCS1402</td><td>SCREW,HHCS,BLACK ZINC CHROMATE,M10-1.5 X 25MM,GRADE 12.9</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>C2</td><td>WASMETR1031</td><td>WASHER,FLAT,BLACK ZINC,10.5MM ID X 20MM OD X 2MM TH</td><td>8</td><td>Sits under a bolt head or nut to spread the clamping force.</td></tr>
+        <tr><td>C3</td><td>NUTNYLK1090</td><td>NUT,NYLOCK,BLACK ZINC,M10-1.5,GRADE 12.9</td><td>4</td><td>Threads onto a bolt to clamp parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-2">Step 2 &mdash; Articulating Beam</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-623/jazzy-623-p8.jpg" alt="Articulating Beam — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 2.</strong> Articulating Beam &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1 - L1</td><td>FRMASMB16051</td><td>ARTICULATING BEAM,ASSY,STANDARD,W/6" CASTER WHEELS,Q6 EDGE,D-1062-067</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>A1a</td><td>FRMASMB16285</td><td>RIGHT CASTER,ASSY,LOW IMPACT,BLACK RIM/GRAY TIRE,6" WHEEL,W/FORK &amp; COVERS,W/RADIUS,D-1202-048</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>A1b</td><td>FRMASMB16284</td><td>LEFT CASTER,ASSY,LOW IMPACT,BLACK RIM/GRAY TIRE,6" WHEEL,W/FORK &amp; COVERS,W/RADIUS,D-1202-047</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>B1</td><td>SCRHHCS1619</td><td>SCREW,HHCS,BLACK ZINC,M12-1.75 X 85MM,GRADE 12.9</td><td>1</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>C1</td><td>WASMETR1050</td><td>WASHER,FLAT,BLACK ZINC,13MM ID X 24MM OD X 2.5MM TH</td><td>2</td><td>Sits under a bolt head or nut to spread the clamping force.</td></tr>
+        <tr><td>D1</td><td>DWR1062B004</td><td>SPACER,SILVER,STEEL,12MM ID X 19MM OD X 54.75MM TH,B-1062-</td><td>1</td><td>Part of the frame — the structure everything else bolts to.</td></tr>
+        <tr><td>E1</td><td>NUTNYLK1066</td><td>NUT,NYLOCK,BLACK ZINC,M12-1.25,GRADE 8,(MTS: 53212007)</td><td>1</td><td>Threads onto a bolt to clamp parts together.</td></tr>
+        <tr><td>F1</td><td>DWR1005B133</td><td>BEARING,BALL,16.0MM ID X 40.0MM OD X 12.0MM TH,ABEC-1,B1005-133,(6203-2RS DOUBLE SEAL)</td><td>2</td><td>Part of the frame — the structure everything else bolts to.</td></tr>
+        <tr><td>G1</td><td>DWR1005B134</td><td>SPACER,BRIGHT ZINC,STEEL,18MM ID X 25MM OD X 15.5MM TH,B1005-134</td><td>1</td><td>Part of the frame — the structure everything else bolts to.</td></tr>
+        <tr><td>H1</td><td>DWR1133A003</td><td>SHIM,BLACK ZINC,STEEL,13MM ID X 21MM OD X 4.763MM TH,A-1133-</td><td>1</td><td>Part of the frame — the structure everything else bolts to.</td></tr>
+        <tr><td>I1</td><td>DWR1133A005</td><td>WASHER,BLACK,STEEL,13MM ID X 40MM OD X 3MM TH,A-1133-005</td><td>1</td><td>Sits under a bolt head or nut to spread the clamping force.</td></tr>
+        <tr><td>J1</td><td>NUTNYLK1010</td><td>NUT,NYLOCK,BLACK ZINC,1/2-20</td><td>1</td><td>Threads onto a bolt to clamp parts together.</td></tr>
+        <tr><td>K1</td><td>WHLASMB2130</td><td>WHEEL,ASSY,LOW IMPACT,BLACK RIM/GRAY TIRE,6" X 2",W/BEARINGS &amp; SPACER,E-1202-039</td><td>1</td><td>A complete wheel — tire and hub together.</td></tr>
+        <tr><td>L1</td><td>DWR1065C008</td><td>SHROUD,COVER,CAP,CASTER,BLACK,C-1065-008</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-3">Step 3 &mdash; Trapeze Bars Assembly</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-623/jazzy-623-p28.jpg" alt="Trapeze Bars Assembly — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 3.</strong> Trapeze Bars Assembly &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1 - D1</td><td>FRMASMB16167</td><td>SEAT TOWER,ASSY,14.00" CENTERS,TRAPEZE BARS,PAIR</td><td>1</td><td>Part of the frame — the structure everything else bolts to.</td></tr>
+        <tr><td>A1</td><td>FRMASMB16165</td><td>SEAT TOWER,ASSY,14.00" CENTERS,FRONT TRAPEZE BAR</td><td>1</td><td>Part of the frame — the structure everything else bolts to.</td></tr>
+        <tr><td>B1</td><td>FRMASMB16166</td><td>SEAT TOWER,ASSY,14.00" CENTERS,REAR TRAPEZE BAR</td><td>1</td><td>Part of the frame — the structure everything else bolts to.</td></tr>
+        <tr><td>C1</td><td>SCRHHCS1247</td><td>SCREW,HHCS,BLACK ZINC,3/8-16 X 0.50",GRADE 8</td><td>1</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>D1</td><td>SCRHHCS1188</td><td>SCREW,HHCS,BLACK ZINC,1/4-20 X 1.25",GRADE 5</td><td>1</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Stage 2 — Motors and gearboxes</h2>
+    <p>The motor and gearbox on each side are the muscles of the chair. One pair per side.</p>
+    <h3 id="step-4">Step 4 &mdash; Song</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-623/jazzy-623-p10.jpg" alt="Song — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 4.</strong> Song &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1a</td><td>DRVASMB2437</td><td>RIGHT MOTOR,ASSY,DRIVE,E868 G4,W/GEARBOX,125 RPM,26.8:1,SHARK CONNECTOR,H-1210-091,(ELECTROCRAFT: 868-004-004-05)</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>A1b</td><td>DRVASMB2436</td><td>LEFT MOTOR,ASSY,DRIVE,E868 G4,W/GEARBOX,125 RPM,26.8:1,SHARK CONNECTOR,H-1210-087,(ELECTROCRAFT: 868-003-003-05)</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>B1</td><td>WASMETR1147</td><td>WASHER,FLAT,BLACK ZINC,10.3MM ID X 24MM OD X 2.5MM TH,SERRATED</td><td>1</td><td>Sits under a bolt head or nut to spread the clamping force.</td></tr>
+        <tr><td>C1</td><td>NUTNYLK1041</td><td>NUT,NYLOCK,ZINC,M10-1.25,GRADE 8</td><td>1</td><td>Threads onto a bolt to clamp parts together.</td></tr>
+        <tr><td>D1</td><td>KEYSTL1026</td><td>AXLE KEY,5MM W X 5MM H X 37.5MM L,(ELECTROCRAFT: 1150154019)</td><td>1</td><td>Part of the motor and gearbox set that pushes the chair.</td></tr>
+        <tr><td>E1</td><td>PLSINDV1165</td><td>BRUSH CAP,MOTOR,702/670/679/925,(ELECTROCRAFT: 0003-0280)</td><td>4</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>F1</td><td>DRVBRSH1039</td><td>MOTOR,BRUSH,JAZZY MOTOR,925,C-1210-015,(ELECTROCRAFT: 0002-6986)</td><td>4</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>G1</td><td>SCRSHCS1316</td><td>SCREW,SHCS,ZINC,M6-1.0 X 20MM,GRADE 12.9</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>H1</td><td>SCRSHCS1154</td><td>SCREW, SHCS,M6-1.0 X 35MM,GRADE 12.9</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>I1</td><td>SCRSHCS1322</td><td>SCREW,SHCS,ZINC,M6-1.0 X 16MM,GRADE 12.9</td><td>1</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>J1</td><td>SCRSHCS1323</td><td>SCREW,SHCS,ZINC,M6-1.0 X 30MM,GRADE 12.9</td><td>1</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-5">Step 5 &mdash; I-Song</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-623/jazzy-623-p12.jpg" alt="I-Song — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 5.</strong> I-Song &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1a</td><td>MOT132969</td><td>RIGHT MOTOR,ASSY,I-SONG,5 MPH,125 RPM,INDIVIDUAL BRAKE LEVERS,Q6EDGE,DYNAMIC CONNECTOR</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>A1b</td><td>MOT132968</td><td>LEFT MOTOR,ASSY,I-SONG,5 MPH,125 RPM,INDIVIDUAL BRAKE LEVERS,Q6EDGE,DYNAMIC CONNECTOR</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>B1</td><td>WASMETR1147</td><td>WASHER,FLAT,BLACK ZINC,10.3MM ID X 24MM OD X 2.5MM TH,SERRATED</td><td>1</td><td>Sits under a bolt head or nut to spread the clamping force.</td></tr>
+        <tr><td>C1</td><td>NUTNYLK1041</td><td>NUT,NYLOCK,ZINC,M10-1.25,GRADE 8</td><td>1</td><td>Threads onto a bolt to clamp parts together.</td></tr>
+        <tr><td>D1</td><td>KEYSTL1026</td><td>AXLE KEY,5MM W X 5MM H X 37.5MM L,(ELECTROCRAFT: 1150154019)</td><td>1</td><td>Part of the motor and gearbox set that pushes the chair.</td></tr>
+        <tr><td>E1</td><td>PLSINDV1165</td><td>BRUSH CAP,MOTOR,702/670/679/925,(ELECTROCRAFT: 0003-0280)</td><td>4</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>F1</td><td>DRVBRSH1039</td><td>MOTOR,BRUSH,JAZZY MOTOR,925,C-1210-015,(ELECTROCRAFT: 0002-6986)</td><td>4</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>G1</td><td>SCRSHCS1192</td><td>SCREW,SHCS,BLACK ZINC,M6-1.0 X 20MM,GRADE 12.9</td><td>3</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>H1</td><td>SCRSHCS1084</td><td>SCREW,SHCS,BLACK ZINC,M6-1.0 X 35MM,GRADE 12.9</td><td>3</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-6">Step 6 &mdash; Freewheel Lever, Motor Mount, and Suspension Assembly</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-623/jazzy-623-p14.jpg" alt="Freewheel Lever, Motor Mount, and Suspension Assembly — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 6.</strong> Freewheel Lever, Motor Mount, and Suspension Assembly &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1a</td><td>FRMASMB16057</td><td>RIGHT FREEWHEEL,ASSY,RELEASE,C-1062-053</td><td>1</td><td>The lever that disconnects the motor so the chair can be pushed by hand.</td></tr>
+        <tr><td>A1b</td><td>FRMASMB16056</td><td>LEFT FREEWHEEL,ASSY,RELEASE,LEFT,C-1062-052</td><td>1</td><td>The lever that disconnects the motor so the chair can be pushed by hand.</td></tr>
+        <tr><td>B1a</td><td>FRMASMB17954</td><td>RIGHT MOTOR MOUNT,ASSY,W/MOUNTING HARDWARE,D-1062-113</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>B1b</td><td>FRMASMB17953</td><td>LEFT MOTOR MOUNT,ASSY,W/MOUNTING HARDWARE,D-1062-112</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>C1</td><td>FRMASMB16030</td><td>SUSPENSION,ASSY,PIVOTING SPRING MOUNT,QUANTUM623,C-1062-044</td><td>1</td><td>Lets the wheels ride over bumps while the seat stays level.</td></tr>
+        <tr><td>D1</td><td>SCRHHCS1412</td><td>SCREW,HHCS,BLACK ZINC,M8-1.25 X 16MM,GRADE 10.9,W/NYLON PATCH</td><td>1</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>E1</td><td>WASMETR1096</td><td>WASHER,CUSTOM,BLACK ZINC,8.4MM ID X 30MM OD X 2.5MM TH,B-1005-026</td><td>1</td><td>Sits under a bolt head or nut to spread the clamping force.</td></tr>
+        <tr><td>F1</td><td>SCRHHCS1282</td><td>SCREW,HHCS,BLACK ZINC CHROMATE,M8-1.25 X 20MM,GRADE 12.9</td><td>1</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>G1</td><td>WASMETR1029</td><td>WASHER,FLAT,BLACK ZINC,8.4MM ID X 16MM OD X 1.6MM TH,METRIC,GB96-8</td><td>1</td><td>Sits under a bolt head or nut to spread the clamping force.</td></tr>
+        <tr><td>H1</td><td>NUTNJAM1020</td><td>NUT,NYLOCK JAM,BLACK ZINC,M8-1.25</td><td>1</td><td>Threads onto a bolt to clamp parts together.</td></tr>
+        <tr><td>I1</td><td>SCRSHCS1316</td><td>SCREW,SHCS,ZINC,M6-1.0 X 20MM,GRADE 12.9</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>J1</td><td>SCRSHCS1154</td><td>SCREW, SHCS,M6-1.0 X 35MM,GRADE 12.9</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>K1</td><td>SCRSHCS1322</td><td>SCREW,SHCS,ZINC,M6-1.0 X 16MM,GRADE 12.9</td><td>1</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>L1</td><td>SCRSHCS1323</td><td>SCREW,SHCS,ZINC,M6-1.0 X 30MM,GRADE 12.9</td><td>1</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>M1</td><td>SCRSHCS1192</td><td>SCREW,SHCS,BLACK ZINC,M6-1.0 X 20MM,GRADE 12.9</td><td>3</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>N1</td><td>SCRSHCS1084</td><td>SCREW,SHCS,BLACK ZINC,M6-1.0 X 35MM,GRADE 12.9</td><td>3</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Stage 3 — Wheels and casters</h2>
+    <p>Wheels next: the big drive wheels in the middle, the small swiveling casters at the corners.</p>
+    <h3 id="step-7">Step 7 &mdash; Front Caster Arm and Front Suspension</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-623/jazzy-623-p6.jpg" alt="Front Caster Arm and Front Suspension — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 7.</strong> Front Caster Arm and Front Suspension &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1 - K1</td><td>FRMASMB16161</td><td>CASTER ARM,ASSY,FRONT,FOR 6" CASTERS,PAIR,Q6 EDGE</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>A1a</td><td>FRMASMB16050</td><td>RIGHT CASTER ARM,ASSY,W/WHEEL,FOR 6" CASTERS,E-1062-076</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>A1b</td><td>FRMASMB16049</td><td>LEFT CASTER ARM,ASSY,W/WHEEL,FOR 6" CASTERS,E-1062-075</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>B1a</td><td>FRMASMB16285</td><td>RIGHT CASTER,ASSY,LOW IMPACT,BLACK RIM/GRAY TIRE,6" WHEEL,W/FORK &amp; COVERS,W/RADIUS,D-1202-048</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>B1b</td><td>FRMASMB16284</td><td>LEFT CASTER,ASSY,LOW IMPACT,BLACK RIM/GRAY TIRE,6" WHEEL,W/FORK &amp; COVERS,W/RADIUS,D-1202-047</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>C1</td><td>WHLASMB2130</td><td>WHEEL,ASSY,LOW IMPACT,BLACK RIM/GRAY TIRE,6" X 2",W/BEARINGS &amp; SPACER,E-1202-039</td><td>1</td><td>A complete wheel — tire and hub together.</td></tr>
+        <tr><td>D1</td><td>SCRHHCS1412</td><td>SCREW,HHCS,BLACK ZINC,M8-1.25 X 16MM,GRADE 10.9,W/NYLON PATCH</td><td>1</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>E1</td><td>WASMETR1096</td><td>WASHER,CUSTOM,BLACK ZINC,8.4MM ID X 30MM OD X 2.5MM TH,B-1005-026</td><td>1</td><td>Sits under a bolt head or nut to spread the clamping force.</td></tr>
+        <tr><td>F1</td><td>DWR1005B133</td><td>BEARING,BALL,16.0MM ID X 40.0MM OD X 12.0MM TH,ABEC-1,B1005-133,(6203-2RS DOUBLE SEAL)</td><td>2</td><td>Part of the wheel set the chair rolls on.</td></tr>
+        <tr><td>G1</td><td>DWR1005B134</td><td>SPACER,BRIGHT ZINC,STEEL,18MM ID X 25MM OD X 15.5MM TH,B1005-134</td><td>1</td><td>Part of the wheel set the chair rolls on.</td></tr>
+        <tr><td>H1</td><td>DWR1133A003</td><td>SHIM,BLACK ZINC,STEEL,13MM ID X 21MM OD X 4.763MM TH,A-1133-</td><td>1</td><td>Part of the wheel set the chair rolls on.</td></tr>
+        <tr><td>I1</td><td>DWR1133A005</td><td>WASHER,BLACK,STEEL,13MM ID X 40MM OD X 3MM TH,A-1133-005</td><td>1</td><td>Sits under a bolt head or nut to spread the clamping force.</td></tr>
+        <tr><td>J1</td><td>NUTNYLK1010</td><td>NUT,NYLOCK,BLACK ZINC,1/2-20</td><td>1</td><td>Threads onto a bolt to clamp parts together.</td></tr>
+        <tr><td>K1</td><td>DWR1065C008</td><td>SHROUD,COVER,CAP,CASTER,BLACK,C-1065-008</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>L1</td><td>FRMASMB17516</td><td>SUSPENSION,ASSY,STRUT,FRONT,Q6EDGE,D-1062-099</td><td>1</td><td>Lets the wheels ride over bumps while the seat stays level.</td></tr>
+        <tr><td>M1</td><td>DWR1062C058</td><td>SUSPENSION,DAMPER SHOCK,W/10MM BALL ENDS,60MM STROKE,COMPRESSION,C-1062-058</td><td>1</td><td>A shock absorber. It smooths bumps so the ride doesn't jar you.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-8">Step 8 &mdash; Drive Wheel Assembly</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-623/jazzy-623-p30.jpg" alt="Drive Wheel Assembly — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 8.</strong> Drive Wheel Assembly &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1 - B3</td><td>WHLASMB2122</td><td>WHEEL,ASSY,PNEUMATIC,SILVER RIM/GRAY TIRE,14",5 SPOKE,W/LUGNUTS,E-1203-051</td><td>1</td><td>A complete wheel — tire and hub together.</td></tr>
+        <tr><td>A1</td><td>TIRPNEU1004</td><td>TIRE,PNEUMATIC,GRAY,3.00-8 X 14",C-248-5</td><td>1</td><td>Part of the wheel set the chair rolls on.</td></tr>
+        <tr><td>A2</td><td>TUBSTND1002</td><td>TUBE,300-8,ANGLED VALVE W/CAP</td><td>1</td><td>Part of the wheel set the chair rolls on.</td></tr>
+        <tr><td>A3</td><td>DWR7700A010</td><td>SLIP COVER,VALVE STEM,35PSI,2.4 BAR,MAX RATING,A-7700-010</td><td>1</td><td>Part of the wheel set the chair rolls on.</td></tr>
+        <tr><td>A4</td><td>DWR1005B049</td><td>NUT,LUG,ZINC,5/16-24,B-1005-049</td><td>5</td><td>Threads onto a bolt to clamp parts together.</td></tr>
+        <tr><td>B1 - B3</td><td>WHLASMB2095</td><td>WHEEL,ASSY,RIM,SILVER,ALUMINUM,8",5 SPOKE,MACHINED FACE,D-1203-071</td><td>1</td><td>Rolls on the ground and carries the chair's weight.</td></tr>
+        <tr><td>B1</td><td>DWR1203E041A</td><td>WHEEL,RIM,SILVER,ALUMINUM,8",5 SPOKE,MACHINED FACED,OUTER,E-1203-041</td><td>1</td><td>Rolls on the ground and carries the chair's weight.</td></tr>
+        <tr><td>B2</td><td>DWR1133E025B</td><td>WHEEL,RIM,SILVER,ALUMINUM,8",TRI-SPOKE,INNER,E-1133-025</td><td>1</td><td>Rolls on the ground and carries the chair's weight.</td></tr>
+        <tr><td>B3</td><td>SCRSHCS1175</td><td>SCREW,SHCS,BLACK ZINC,M6-1.0 X 20MM</td><td>6</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>C1</td><td>WHLASMB2081</td><td>WHEEL,ASSY,HUB,5 SPOKE,W/STUDS,G4 MOTORS,B-1203-010</td><td>1</td><td>Rolls on the ground and carries the chair's weight.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Stage 4 — Seating</h2>
+    <p>Seating goes on once the base rolls. This is the system that holds the rider — fit is safety here.</p>
+    <h3 id="step-9">Step 9 &mdash; Foot Platform</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-623/jazzy-623-p22.jpg" alt="Foot Platform — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 9.</strong> Foot Platform &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>FRMASMB16077</td><td>FOOT PLATFORM,ASSY,W/MOUNTING BRACKET,Q6 EDGE,D-1201-</td><td>1</td><td>Supports your legs and feet.</td></tr>
+        <tr><td>B1</td><td>SCRHHCS1220</td><td>SCREW,HHCS,BLACK ZINC,M8-1.25 X 45MM,GRADE 10.9</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>C1</td><td>WASMETR1029</td><td>WASHER,FLAT,BLACK ZINC,8.4MM ID X 16MM OD X 1.6MM TH,METRIC,GB96-8</td><td>2</td><td>Sits under a bolt head or nut to spread the clamping force.</td></tr>
+        <tr><td>D1</td><td>NUTNYLK1011</td><td>NUT,NYLOCK,BLACK ZINC,M8-1.25</td><td>2</td><td>Threads onto a bolt to clamp parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-10">Step 10 &mdash; Seat Mount Assembly</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-623/jazzy-623-p29.jpg" alt="Seat Mount Assembly — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 10.</strong> Seat Mount Assembly &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1 - A5</td><td>FRMASMB16029</td><td>SEAT MOUNT CONNECTOR,ASSY,L-BRACKET,UNIVERSAL,Q6EDGE,C-1062-041</td><td>1</td><td>Where a cable joins. Corrosion here causes many 'dead chair' faults.</td></tr>
+        <tr><td>A1</td><td>DWR1062D045</td><td>MOUNTING BRACKET,SEAT INTERFACE,UNIVERSAL,D-1062-045</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>A2</td><td>DWR1062C036</td><td>MOUNTING BRACKET,SEAT INTERFACE BACK PLATE,THREADED,C-1062-036</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>A3</td><td>SCRSHCS1302</td><td>SCREW,SHCS,BLACK ZINC,3/8-16 X 1.00",GRADE 8,W/NYLON PATCH</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>A4</td><td>WASLOCK1014</td><td>WASHER, LOCK,BLACK ZINC,3/8"ID X 9/16"OD X 1/8"T</td><td>2</td><td>Sits under a bolt head or nut to spread the clamping force.</td></tr>
+        <tr><td>A5</td><td>WASSAE1006</td><td>WASHER,FLAT,BLACK ZINC,3/8,SAE</td><td>2</td><td>Sits under a bolt head or nut to spread the clamping force.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Stage 5 — Electronics and controller</h2>
+    <p>The electronics wire the chair together: controller, joystick, and the cables between them.</p>
+    <h3 id="step-11">Step 11 &mdash; Controller Assembly</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-623/jazzy-623-p16.jpg" alt="Controller Assembly — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 11.</strong> Controller Assembly &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>CTLDC1529</td><td>CONTROLLER,JOYSTICK MODULE,DYNAMIC SHARK,4 KEY,STANDARD,H-1111-200,(80896-01)</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>B1</td><td>CTLDC1531</td><td>CONTROLLER,JOYSTICK MODULE,DYNAMIC SHARK,5 KEY,2 ACTUATORS,H-1111-201,(80897-11)</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>C1</td><td>FRMASMB12893</td><td>SWING AWAY JOYSTICK MOUNT,ASSY,4" BRACKET,DOUBLE LINK,INLINE,RIGHT,SHARK</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>D1</td><td>FRMASMB12892</td><td>SWING AWAY JOYSTICK MOUNT,ASSY,4" BRACKET,DOUBLE LINK,INLINE,LEFT,SHARK</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>E1</td><td>DWR1111H204</td><td>ELECTRONIC,HARNESS,DYNAMIC SHARK BUS CABLE,1.5M L,H-1111-204,(GSM80233)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>F1</td><td>DWR1056H007</td><td>ELECTRONIC,HARNESS,DYNAMIC FLIGHT BUS CABLE,300MM L,H-1056-007,(DYNAMIC: GSM 80203)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/library/collected-public-docs/pmd/dynamic-controls_shark-power-module_technical.pdf">Dynamic Controls SHARK Power Module Installation Manual</a> — the installation manual for the Shark control system (library copy, PDF).</p>
+    <h3 id="step-12">Step 12 &mdash; Non-Power Positioning</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-623/jazzy-623-p18.jpg" alt="Non-Power Positioning — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 12.</strong> Non-Power Positioning &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1 - A10</td><td>ELE122271</td><td>ELECTRONIC,ASSY,SHARK,G4,5 MPH,125 RPM MOTORS,Q6 EDGE</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>A1</td><td>CTL122268</td><td>CONTROLLER,SHARK,ASSY,60 AMP,W/G4 PROGRAM,JAZZY623</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>A2</td><td>SCRPPH1390</td><td>SCREW,PPH,BLACK ZINC,M5-.8 X 35MM</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>A3</td><td>DWR1062H005</td><td>ELECTRONIC,HARNESS,POWER CABLE,Q6EDGE,DYNAMIC,H-1062-</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A4</td><td>DWR1056H007</td><td>ELECTRONIC,HARNESS,DYNAMIC FLIGHT BUS CABLE,300MM L,H-1056-007,(DYNAMIC: GSM 80203)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A5</td><td>DWR1111H204</td><td>ELECTRONIC,HARNESS,DYNAMIC SHARK BUS CABLE,1.5M L,H-1111-204,(GSM80233)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A6</td><td>DWR1116H017</td><td>ELECTRONIC,HARNESS,4 PIN,RUN PLUG,DYNAMIC FLIGHT,H-1116-</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A7</td><td>DWR1502H005</td><td>ELECTRONIC,ASSY,BATTERY CABLE,GRAY,W/125A/32V FUSEABLE LINK,QUICK DISCONNECT,H-1502-005</td><td>2</td><td>A battery cable with a fuseable link. It carries power from the batteries, and the link breaks if too much current flows.</td></tr>
+        <tr><td>A8</td><td>ELEASMB1000</td><td>ELECTRONIC,ASSY,CIRCUIT BREAKER,50 AMP,COMPLETE,RIGHT ANGLE TERMINALS,PUSH TO RESET,H-1000-204</td><td>1</td><td>A sacrificial link: it blows or trips to protect the wiring if too much current flows.</td></tr>
+        <tr><td>A9</td><td>INDPART2148</td><td>COVER,12 X 1.25T,BREAKER BUTTON, W/NUT</td><td>1</td><td>Threads onto a bolt to clamp parts together.</td></tr>
+        <tr><td>*A10</td><td>PLSTIE1004</td><td>TIE WRAP,BLACK,8"</td><td>5</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>B1</td><td>DWR1062D078</td><td>SHROUD,BREAKER MOUNT,BLACK,MOLDED ABS,D-1062-078</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>C1</td><td>SCRPPH1036</td><td>SCREW,PPH,BLACK ZINC,M4-.7 X 8MM</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/library/collected-public-docs/pmd/dynamic-controls_shark-power-module_technical.pdf">Dynamic Controls SHARK Power Module Installation Manual</a> — the installation manual for the Shark control system (library copy, PDF).</p>
+    <h3 id="step-13">Step 13 &mdash; Actuator</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-623/jazzy-623-p20.jpg" alt="Actuator — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 13.</strong> Actuator &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1 - A11</td><td>ELE122273</td><td>ELECTRONIC,ASSY,SHARK,G4,5 MPH,125 RPM MOTORS,Q6 EDGE,2 ACTUATOR</td><td>1</td><td>A small electric pusher that tilts, reclines, lifts, or moves part of the seat.</td></tr>
+        <tr><td>A1</td><td>CTL122270</td><td>CONTROLLER,SHARK,ASSY,60 AMP,2 ACTUATOR,W/G4 PROGRAM,JAZZY623</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>A2</td><td>SCRPPH1390</td><td>SCREW,PPH,BLACK ZINC,M5-.8 X 35MM</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>A3</td><td>DWR1062H005</td><td>ELECTRONIC,HARNESS,POWER CABLE,Q6EDGE,DYNAMIC,H-1062-</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A4</td><td>DWR1056H007</td><td>ELECTRONIC,HARNESS,DYNAMIC FLIGHT BUS CABLE,300MM L,H-1056-007,(DYNAMIC: GSM 80203)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A5</td><td>DWR1111H204</td><td>ELECTRONIC,HARNESS,DYNAMIC SHARK BUS CABLE,1.5M L,H-1111-204,(GSM80233)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A6</td><td>DWR1361H087</td><td>ELECTRONIC,HARNESS,2 ACTUATOR/INHIBIT,DYNAMIC SHARK,JAZZY600,H-1361-087</td><td>1</td><td>A small electric pusher that tilts, reclines, lifts, or moves part of the seat.</td></tr>
+        <tr><td>A7</td><td>DWR1361H038</td><td>ELECTRONIC,HARNESS,RUN PLUG,SURE SEAL,SYNERGY TILT,H-1361-038</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A8</td><td>DWR1502H005</td><td>ELECTRONIC,ASSY,BATTERY CABLE,GRAY,W/125A/32V FUSEABLE LINK,QUICK DISCONNECT,H-1502-005</td><td>2</td><td>A battery cable with a fuseable link. It carries power from the batteries, and the link breaks if too much current flows.</td></tr>
+        <tr><td>A9</td><td>ELEASMB1000</td><td>ELECTRONIC,ASSY,CIRCUIT BREAKER,50 AMP,COMPLETE,RIGHT ANGLE TERMINALS,PUSH TO RESET,H-1000-204</td><td>1</td><td>A sacrificial link: it blows or trips to protect the wiring if too much current flows.</td></tr>
+        <tr><td>A10</td><td>INDPART2148</td><td>COVER,12 X 1.25T,BREAKER BUTTON, W/NUT</td><td>1</td><td>Threads onto a bolt to clamp parts together.</td></tr>
+        <tr><td>*A11</td><td>PLSTIE1004</td><td>TIE WRAP,BLACK,8"</td><td>5</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>B1</td><td>DWR1062D078</td><td>SHROUD,BREAKER MOUNT,BLACK,MOLDED ABS,D-1062-078</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>C1</td><td>SCRPPH1036</td><td>SCREW,PPH,BLACK ZINC,M4-.7 X 8MM</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/library/collected-public-docs/pmd/dynamic-controls_shark-power-module_technical.pdf">Dynamic Controls SHARK Power Module Installation Manual</a> — the installation manual for the Shark control system (library copy, PDF).</p>
+  </section>
+
+  <section>
+    <h2>Stage 6 — Batteries and charger</h2>
+    <p>Batteries last — they are the heaviest parts, and everything electrical depends on them.</p>
+    <h3 id="step-14">Step 14 &mdash; Battery Access Bracket</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-623/jazzy-623-p24.jpg" alt="Battery Access Bracket — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 14.</strong> Battery Access Bracket &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1 - B1</td><td>FRMASMB16033</td><td>FRAME,ASSY,BATTERY ACCESS BRACKET,STANDARD,Q6 EDGE,C-1062-073</td><td>1</td><td>Holds the batteries in place on the frame.</td></tr>
+        <tr><td>A1</td><td>DWR1005B080</td><td>BUMPER,BLACK,RUBBER,0.80" OD,B-1005-080</td><td>2</td><td>Part of the battery and charging system.</td></tr>
+        <tr><td>A2</td><td>SCRPPH1371</td><td>SCREW,PPH,ZINC,M4-.7 X 30MM</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>A3</td><td>SCRPPH1103</td><td>SCREW,PPH,BLACK ZINC,M4-.7 X 25MM</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>B1</td><td>FRMASMB16869</td><td>FRAME,ASSY,BATTERY ACCESS BRACKET,STANDARD,D-1062-053</td><td>1</td><td>Holds the batteries in place on the frame.</td></tr>
+        <tr><td>C1 - D1</td><td>FRMASMB16314</td><td>FRAME,ASSY,BATTERY ACCESS BRACKET,HIGH MOUNT/AFP,Q6 EDGE,C-1062-072</td><td>1</td><td>Holds the batteries in place on the frame.</td></tr>
+        <tr><td>C1</td><td>DWR1005B080</td><td>BUMPER,BLACK,RUBBER,0.80" OD,B-1005-080</td><td>2</td><td>Part of the battery and charging system.</td></tr>
+        <tr><td>C2</td><td>SCRPPH1371</td><td>SCREW,PPH,ZINC,M4-.7 X 30MM</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>C3</td><td>SCRPPH1103</td><td>SCREW,PPH,BLACK ZINC,M4-.7 X 25MM</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>D1</td><td>FRMASMB16034</td><td>FRAME,ASSY,BATTERY ACCESS BRACKET,HIGH MOUNT/AFP,D-1062-054</td><td>1</td><td>Holds the batteries in place on the frame.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Stage 7 — Covers, decals and accessories</h2>
+    <p>Covers, decals, and accessories finish the chair.</p>
+    <h3 id="step-15">Step 15 &mdash; Shroud Assembly With Center Panel</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-623/jazzy-623-p26.jpg" alt="Shroud Assembly With Center Panel — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 15.</strong> Shroud Assembly With Center Panel &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1a - A12</td><td>DGN124500</td><td>SHROUD,ASSY,CANDY APPLE RED,J623</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>A1b - A12</td><td>DGN124501</td><td>SHROUD,ASSY,VIPER BLUE,J623</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>A1a</td><td>DWR1062E038A</td><td>SHROUD,MAIN,CANDY APPLE RED,E-1062-038</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>A1b</td><td>DWR1062E038B</td><td>SHROUD,MAIN,VIPER BLUE,E-1062-038</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>A2</td><td>DWR1062E036</td><td>SHROUD,SIDE TRIM,BLACK,FRONT RIGHT,E-1062-036</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>A3</td><td>DWR1062E037</td><td>SHROUD,SIDE TRIM,BLACK,FRONT LEFT,E-1062-037</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>A4</td><td>DWR1062E081</td><td>SHROUD,SIDE TRIM,BLACK,REAR RIGHT,E-1062-081</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>A5</td><td>DWR1062E080</td><td>SHROUD,SIDE TRIM,BLACK,REAR LEFT,W/BREAKER INSERT,E-1062-080</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>A6</td><td>SCRPPH1388</td><td>SCREW,PPH,BLACK ZINC,M3-.5 X 6MM</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>A7</td><td>SCRPPH1036</td><td>SCREW,PPH,BLACK ZINC,M4-.7 X 8MM</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>*A8</td><td>DWR1234L004</td><td>DECAL,ICON,MAXIMUM WEIGHT CAPACITY,300LBS/135 KG,L-1234-</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*A9</td><td>DWR1234L012</td><td>DECAL,ICON,1.5",READ OWNERS MANUAL,L-1234-012</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>*A10</td><td>DWR1235L515</td><td>DECAL,WARNING,BATTERY WARNINGS,L-1235-515</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*A11</td><td>LAB120013</td><td>DECAL,JAZZY623 AESTHETIC LABEL</td><td>2</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*A12</td><td>DWR1235L678</td><td>DECAL,BATTERY CONNECTION,1.6" X 2.3",QUANTUM623,L-1235-678</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>B1a</td><td>SHDASMB5908</td><td>SHROUD,ASSY,FRONT DOOR,CANDY APPLE RED,E-1062-032</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B1b</td><td>SHDASMB5909</td><td>SHROUD,ASSY,FRONT DOOR,VIPER BLUE,E-1062-032</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>C1a</td><td>DGN124498</td><td>SHROUD,ASSY,REAR DOOR,CANDY APPLE RED,J623</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>C1b</td><td>DGN124499</td><td>SHROUD,ASSY,REAR DOOR,VIPER BLUE,J623</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>D1</td><td>DWR1062D050</td><td>SHROUD,BLACK,FENDER,RIGHT,D-1062-050</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>E1</td><td>DWR1062D051</td><td>SHROUD,BLACK,FENDER,LEFT,D-1062-051</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>F1</td><td>SCRPPH1036</td><td>SCREW,PPH,BLACK ZINC,M4-.7 X 8MM</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>G1</td><td>PLSKNCP1056</td><td>KNOB,PLASTIC,M4-.7 X 12MM,KNURLED HEAD,TALL,C-1060-041</td><td>2</td><td>The stick-top you hold to drive.</td></tr>
+        <tr><td>H1</td><td>WASNEOP1003</td><td>WASHER,BLACK,NEOPRENE,3.20MM ID X 7.00MM OD X 1.90MM TH,O-RING</td><td>2</td><td>Sits under a bolt head or nut to spread the clamping force.</td></tr>
+        <tr><td>I1</td><td>SHDASMB6069</td><td>SHROUD,ASSY,BATTERY SPACER,Q6 EDGE</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>J1</td><td>SHDASMB6043</td><td>SHROUD,ASSY,CENTER PANEL,STANDARD,Q6 EDGE</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>K1</td><td>VELMUSH1016</td><td>REUSABLE FASTENER,MUSHROOM,15MM OD,W/ADHESIVE BACK</td><td>8</td><td>A finishing part or accessory from the maker's catalog.</td></tr>
+        <tr><td>L1</td><td>DWR1062D072</td><td>SHROUD,FRONT DOOR CAP,BLACK,D-1062-072</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-16">Step 16 &mdash; Owner’s and Decal Packages</h3>
+    <figure>
+      <img src="/img/pmd-exploded/jazzy-623/jazzy-623-p31.jpg" alt="Owner’s and Decal Packages — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 16.</strong> Owner’s and Decal Packages &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>*N/A</td><td>INF122179</td><td>OWNER'S PACKAGE,ASSY,J623,AUSTRALIA</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>*N/A</td><td>PROZBAG1003</td><td>BAG,10"L X 12"W X 2MIL,ZIPLOCK</td><td>1</td><td>A finishing part or accessory from the maker's catalog.</td></tr>
+        <tr><td>*N/A</td><td>INFINFB1149</td><td>MANUAL,WARRANTY CARD,AUSTRALIAN</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>*N/A</td><td>PLSTIE1015</td><td>CABLE TIE,BLACK,NYLON,7.5-8MM W X 200-220MM L,100 LBS MINIMUM TESILE STRENGTH</td><td>6</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>*N/A</td><td>DWR1235L519</td><td>HANG TAG,ROUND,GENERIC,COUNTRY OF ORIGIN,L-1235-519</td><td>1</td><td>A finishing part or accessory from the maker's catalog.</td></tr>
+        <tr><td>*N/A</td><td>INFMANU3992</td><td>MANUAL,CONSUMER SAFETY GUIDE,POWERCHAIR</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>*N/A</td><td>DWR1202C027</td><td>REFLECTOR,AMBER,CASTER SPHERE,C-1202-027</td><td>8</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>*N/A</td><td>INFINFB2528</td><td>MANUAL,PRODUCT INSERT SHEET,Q6EDGE,REFLECTOR INSTALLATION</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>*N/A</td><td>INFINFB2668</td><td>MANUAL,PRODUCT INSERT SHEET,Q6EDGE TRANSIT,ENGLISH/FRENCH</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>*N/A</td><td>INFINFB3072</td><td>MANUAL,PRODUCT INSERT SHEET,POWER CHAIR WARRANTY,AUSTRALIA</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>*N/A</td><td>INFMANU4501</td><td>MANUAL,OWNER'S,J623,AUSTRALIA</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>*N/A</td><td>INFINFB3184</td><td>MANUAL,PRODUCT SPECIFICATION SHEET,J623,AUSTRALIA</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>*N/A</td><td>LAB122180</td><td>DECAL,ASSY,J623,AUSTRALIA</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*N/A</td><td>DECSERN1032</td><td>DECAL,SERIAL NUMBER,4" X 6",BARCODE,W/PRIDE LOGO</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*N/A</td><td>DWR1000L025</td><td>DECAL,POWERCHAIR,US AND FOREIGN PATENTS PENDING,DOMESTIC,L-1000-025</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*N/A</td><td>DWR1234L799</td><td>DECAL,ICON,1'' X 2.5'',WEATHER/MANUAL/LOOSE GARMENT,L-1234-799</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>*N/A</td><td>DWR1234L957</td><td>DECAL,WARNING,DEFLATE TIRE COMPLETELY,L-1234-957</td><td>2</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*N/A</td><td>DWR1235L225</td><td>DECAL,LIMITED STABILITY,LITESTREAMXF,L-1235-225</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*N/A</td><td>DWR1235L512</td><td>DECAL,WARNING,EMI-RFI,20V/M,L-1235-512</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*N/A</td><td>DWR1235L520</td><td>DECAL,CAUTION,EXTENSION CORD/GROUNDING PRONG,L-1235-</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*N/A</td><td>DWR1235L521</td><td>DECAL,WARNING,CONTROLLER CORD PLACEMENT,L-1235-521</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*N/A</td><td>DWR1235L638</td><td>DECAL,ICON,JAZZY FREEWHEEL,UP-DRIVE/DOWN-NEUTRAL,L-1235-638</td><td>2</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*N/A</td><td>LAB120013</td><td>DECAL,JAZZY623 AESTHETIC LABEL</td><td>2</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*N/A</td><td>LAB123415</td><td>DECAL,DATA PLATE,Q6EDGE</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>What this page is</h2>
+    <p>Every diagram and every part number above comes from Pride&rsquo;s own IPB — nothing redrawn, nothing guessed. The &lsquo;What this part does&rsquo; column is ours. If a part on your chair does not match the book, your chair is a different revision — check the document number before you order.</p>
+    <p><a href="/pmd-exploded.html">&larr; All exploded views</a> &middot; <a href="/pmd.html">PMD section</a></p>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>
