@@ -1,0 +1,1953 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pdf2xml SYSTEM "pdf2xml.dtd">
+
+<pdf2xml producer="poppler" version="24.02.0">
+<page number="1" position="absolute" top="0" left="0" height="629" width="892">
+	<fontspec id="0" size="36" family="MNCRLI+GTAmerica-Bl" color="#ffffff"/>
+	<fontspec id="1" size="15" family="WPRPYF+GTAmerica-Rg" color="#ffffff"/>
+	<fontspec id="2" size="21" family="LKGCKB+GTAmerica-Md" color="#ffffff"/>
+<text top="518" left="638" width="191" height="36" font="0"><b>M3 Corpus</b></text>
+<text top="558" left="638" width="82" height="15" font="1">User manual</text>
+<text top="553" left="726" width="5" height="21" font="2">|</text>
+<text top="558" left="736" width="93" height="15" font="1">British English</text>
+</page>
+<page number="2" position="absolute" top="0" left="0" height="629" width="892">
+	<fontspec id="3" size="16" family="LKGCKB+GTAmerica-Md" color="#000000"/>
+	<fontspec id="4" size="13" family="MZFBCE+GTAmerica-Lt" color="#000000"/>
+	<fontspec id="5" size="12" family="MZFBCE+GTAmerica-Lt" color="#000000"/>
+<text top="43" left="38" width="238" height="16" font="3">Welcome to the Permobil family</text>
+<text top="70" left="38" width="369" height="13" font="4">We hope that you enjoy your new power wheelchair. Permobil's</text>
+<text top="86" left="38" width="373" height="13" font="4">founder, Dr. Per Uddén, believed that every person has the right</text>
+<text top="102" left="38" width="346" height="13" font="4">to have his or her disability compensated as far as possible</text>
+<text top="119" left="38" width="362" height="13" font="4">using the same technology that we all use in our everyday life.</text>
+<text top="135" left="38" width="332" height="13" font="4">Your new wheelchair is a state-of-the-art medical device</text>
+<text top="151" left="38" width="320" height="13" font="4">designed to achieve this goal by providing unparalleled</text>
+<text top="167" left="38" width="228" height="13" font="4">convenience, comfort, and technology.</text>
+<text top="40" left="478" width="186" height="16" font="3">How to contact Permobil</text>
+<text top="73" left="534" width="77" height="13" font="4">Permobil Ltd.</text>
+<text top="92" left="534" width="217" height="13" font="4">Unit 7, Polaris Centre, 41 Brownfields</text>
+<text top="113" left="534" width="214" height="13" font="4">Welwyn Garden City, Herts, AL7 1AN</text>
+<text top="134" left="534" width="95" height="13" font="4">United Kingdom</text>
+<text top="159" left="534" width="107" height="13" font="4">+44 1484 722 888</text>
+<text top="184" left="534" width="106" height="13" font="4">+44 1484 723 013</text>
+<text top="206" left="534" width="120" height="13" font="4">info@permobil.co.uk</text>
+<text top="231" left="534" width="112" height="13" font="4">www.permobil.com</text>
+<text top="270" left="534" width="180" height="13" font="4">Production units. See <a href="permobil_m3-corpus_owner.pdf.html#69">page 69.</a></text>
+<text top="294" left="534" width="158" height="13" font="4">Local offices. See <a href="permobil_m3-corpus_owner.pdf.html#70">page 70.</a></text>
+<text top="332" left="478" width="253" height="16" font="3">Head office of the Permobil group</text>
+<text top="368" left="534" width="72" height="13" font="4">Permobil AB</text>
+<text top="387" left="534" width="92" height="13" font="4">Klökanvägen 16</text>
+<text top="408" left="534" width="99" height="13" font="4">863 41 Sundsvall</text>
+<text top="427" left="534" width="47" height="13" font="4">Sweden</text>
+<text top="449" left="534" width="101" height="13" font="4">+46 60 59 59 00</text>
+<text top="473" left="534" width="114" height="13" font="4">info@permobil.com</text>
+<text top="497" left="534" width="112" height="13" font="4">www.permobil.com</text>
+<text top="510" left="38" width="191" height="12" font="5">Produced and published by Permobil</text>
+<text top="526" left="38" width="49" height="12" font="5">Edition: 6</text>
+<text top="540" left="38" width="93" height="12" font="5">Date: 2026-01-26</text>
+<text top="556" left="38" width="93" height="12" font="5">Order no: 337305</text>
+<text top="556" left="144" width="40" height="12" font="5">eng-UK</text>
+</page>
+<page number="3" position="absolute" top="0" left="0" height="629" width="892">
+<text top="45" left="51" width="7" height="16" font="3"><a href="permobil_m3-corpus_owner.pdf.html#4">1</a></text>
+<text top="45" left="85" width="92" height="16" font="3"><a href="permobil_m3-corpus_owner.pdf.html#4">Introduction</a></text>
+<text top="45" left="417" width="10" height="16" font="3"><a href="permobil_m3-corpus_owner.pdf.html#4">4</a></text>
+<text top="74" left="51" width="9" height="16" font="3"><a href="permobil_m3-corpus_owner.pdf.html#5">2</a></text>
+<text top="74" left="85" width="69" height="16" font="3"><a href="permobil_m3-corpus_owner.pdf.html#5">Overview</a></text>
+<text top="74" left="418" width="10" height="16" font="3"><a href="permobil_m3-corpus_owner.pdf.html#5">5</a></text>
+<text top="96" left="51" width="16" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#6">2.1</a></text>
+<text top="96" left="111" width="145" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#6">Wheelchair specification</a></text>
+<text top="96" left="420" width="8" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#6">6</a></text>
+<text top="112" left="51" width="18" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#7">2.2</a></text>
+<text top="112" left="111" width="50" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#7">Tool bag</a></text>
+<text top="112" left="421" width="7" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#7">7</a></text>
+<text top="128" left="51" width="18" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#8">2.3</a></text>
+<text top="128" left="111" width="127" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#8">General control panel</a></text>
+<text top="128" left="420" width="8" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#8">8</a></text>
+<text top="144" left="51" width="18" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#9">2.4</a></text>
+<text top="144" left="111" width="39" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#9">Omni2</a></text>
+<text top="144" left="420" width="8" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#9">9</a></text>
+<text top="160" left="51" width="18" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#10">2.5</a></text>
+<text top="160" left="111" width="132" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#10">Connected wheelchair</a></text>
+<text top="160" left="414" width="14" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#10">10</a></text>
+<text top="177" left="51" width="18" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#11">2.6</a></text>
+<text top="177" left="111" width="121" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#11">Lights and reflectors</a></text>
+<text top="177" left="417" width="11" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#11">11</a></text>
+<text top="193" left="51" width="17" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#12">2.7</a></text>
+<text top="193" left="111" width="43" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#12">Wheels</a></text>
+<text top="193" left="415" width="13" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#12">12</a></text>
+<text top="209" left="51" width="18" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#13">2.8</a></text>
+<text top="209" left="111" width="95" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#13">Tie-down points</a></text>
+<text top="209" left="414" width="13" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#13">13</a></text>
+<text top="225" left="51" width="18" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#14">2.9</a></text>
+<text top="225" left="111" width="113" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#14">Serial number label</a></text>
+<text top="225" left="414" width="13" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#14">14</a></text>
+<text top="241" left="51" width="24" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#15">2.10</a></text>
+<text top="241" left="111" width="71" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#15">Accessories</a></text>
+<text top="241" left="414" width="13" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#15">15</a></text>
+<text top="257" left="51" width="21" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#16">2.11</a></text>
+<text top="257" left="111" width="68" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#16">Spare parts</a></text>
+<text top="257" left="414" width="13" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#16">16</a></text>
+<text top="273" left="51" width="23" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#17">2.12</a></text>
+<text top="273" left="111" width="74" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#17">User manual</a></text>
+<text top="273" left="415" width="12" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#17">17</a></text>
+<text top="301" left="51" width="10" height="16" font="3"><a href="permobil_m3-corpus_owner.pdf.html#18">3</a></text>
+<text top="301" left="85" width="49" height="16" font="3"><a href="permobil_m3-corpus_owner.pdf.html#18">Safety</a></text>
+<text top="301" left="411" width="17" height="16" font="3"><a href="permobil_m3-corpus_owner.pdf.html#18">18</a></text>
+<text top="322" left="51" width="16" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#18">3.1</a></text>
+<text top="322" left="111" width="133" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#18">Types of warning signs</a></text>
+<text top="322" left="414" width="13" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#18">18</a></text>
+<text top="339" left="51" width="18" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#18">3.2</a></text>
+<text top="339" left="111" width="82" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#18">Warning signs</a></text>
+<text top="339" left="414" width="13" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#18">18</a></text>
+<text top="355" left="51" width="18" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#22">3.3</a></text>
+<text top="355" left="111" width="38" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#22">Labels</a></text>
+<text top="355" left="413" width="15" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#22">22</a></text>
+<text top="382" left="51" width="10" height="16" font="3"><a href="permobil_m3-corpus_owner.pdf.html#24">4</a></text>
+<text top="382" left="85" width="133" height="16" font="3"><a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage</a></text>
+<text top="382" left="408" width="19" height="16" font="3"><a href="permobil_m3-corpus_owner.pdf.html#24">24</a></text>
+<text top="404" left="51" width="16" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#24">4.1</a></text>
+<text top="404" left="111" width="130" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#24">Driving the wheelchair</a></text>
+<text top="404" left="412" width="15" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#24">24</a></text>
+<text top="420" left="51" width="18" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#27">4.2</a></text>
+<text top="420" left="111" width="86" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#27">Seat functions</a></text>
+<text top="420" left="413" width="14" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#27">27</a></text>
+<text top="436" left="51" width="19" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#32">4.3</a></text>
+<text top="436" left="111" width="131" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#32">Charging the batteries</a></text>
+<text top="436" left="412" width="15" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#32">32</a></text>
+<text top="452" left="51" width="19" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#32">4.4</a></text>
+<text top="452" left="111" width="97" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#32">Freewheel mode</a></text>
+<text top="452" left="412" width="15" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#32">32</a></text>
+<text top="468" left="51" width="19" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#33">4.5</a></text>
+<text top="468" left="111" width="130" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#33">Vehicle transportation</a></text>
+<text top="468" left="412" width="15" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#33">33</a></text>
+<text top="484" left="51" width="19" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#36">4.6</a></text>
+<text top="484" left="111" width="104" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#36">Air transportation</a></text>
+<text top="484" left="412" width="15" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#36">36</a></text>
+<text top="501" left="51" width="18" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#37">4.7</a></text>
+<text top="501" left="111" width="109" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#37">Rail transportation</a></text>
+<text top="501" left="413" width="14" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#37">37</a></text>
+<text top="517" left="51" width="19" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#38">4.8</a></text>
+<text top="517" left="111" width="117" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#38">Main circuit breaker</a></text>
+<text top="517" left="412" width="15" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#38">38</a></text>
+<text top="533" left="51" width="19" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#38">4.9</a></text>
+<text top="533" left="111" width="114" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#38">Wheelchair storage</a></text>
+<text top="533" left="412" width="15" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#38">38</a></text>
+<text top="549" left="51" width="25" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#39">4.10</a></text>
+<text top="549" left="111" width="120" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#39">Manual adjustments</a></text>
+<text top="549" left="412" width="15" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#39">39</a></text>
+<text top="48" left="478" width="30" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#39">4.10.1</a></text>
+<text top="48" left="555" width="48" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#39">Headrest</a></text>
+<text top="48" left="841" width="14" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#39">39</a></text>
+<text top="62" left="478" width="31" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#41">4.10.2</a></text>
+<text top="62" left="555" width="146" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#41">Headrest with link hardware</a></text>
+<text top="62" left="843" width="12" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#41">41</a></text>
+<text top="77" left="478" width="32" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#43">4.10.3</a></text>
+<text top="77" left="555" width="63" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#43">Backrest tilt</a></text>
+<text top="77" left="841" width="14" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#43">43</a></text>
+<text top="91" left="478" width="32" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#44">4.10.4</a></text>
+<text top="91" left="555" width="120" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#44">Removing the backrest</a></text>
+<text top="91" left="841" width="14" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#44">44</a></text>
+<text top="106" left="478" width="32" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#44">4.10.5</a></text>
+<text top="106" left="555" width="42" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#44">Armrest</a></text>
+<text top="106" left="841" width="14" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#44">44</a></text>
+<text top="120" left="478" width="32" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#49">4.10.6</a></text>
+<text top="120" left="555" width="58" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#49">Leg rest tilt</a></text>
+<text top="120" left="841" width="14" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#49">49</a></text>
+<text top="134" left="478" width="31" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#49">4.10.7</a></text>
+<text top="134" left="555" width="56" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#49">Footplates</a></text>
+<text top="134" left="841" width="14" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#49">49</a></text>
+<text top="149" left="478" width="32" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#51">4.10.8</a></text>
+<text top="149" left="555" width="83" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#51">Lumbar support</a></text>
+<text top="149" left="843" width="11" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#51">51</a></text>
+<text top="163" left="478" width="32" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#52">4.10.9</a></text>
+<text top="163" left="555" width="73" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#52">Trunk support</a></text>
+<text top="163" left="841" width="13" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#52">52</a></text>
+<text top="177" left="478" width="37" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#53">4.10.10</a></text>
+<text top="177" left="555" width="70" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#53">Knee support</a></text>
+<text top="177" left="841" width="14" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#53">53</a></text>
+<text top="192" left="478" width="34" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#54">4.10.11</a></text>
+<text top="192" left="555" width="122" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#54">Rotational panel holder</a></text>
+<text top="192" left="841" width="14" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#54">54</a></text>
+<text top="206" left="478" width="36" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#57">4.10.12</a></text>
+<text top="206" left="555" width="106" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#57">Parallel panel holder</a></text>
+<text top="206" left="842" width="13" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#57">57</a></text>
+<text top="220" left="478" width="36" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#59">4.10.13</a></text>
+<text top="220" left="555" width="81" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#59">Positioning belt</a></text>
+<text top="220" left="841" width="14" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#59">59</a></text>
+<text top="246" left="478" width="10" height="16" font="3"><a href="permobil_m3-corpus_owner.pdf.html#60">5</a></text>
+<text top="246" left="512" width="98" height="16" font="3"><a href="permobil_m3-corpus_owner.pdf.html#60">Maintenance</a></text>
+<text top="246" left="834" width="20" height="16" font="3"><a href="permobil_m3-corpus_owner.pdf.html#60">60</a></text>
+<text top="268" left="478" width="16" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#61">5.1</a></text>
+<text top="268" left="538" width="224" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#61">Maintenance and inspection schedule</a></text>
+<text top="268" left="842" width="13" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#61">61</a></text>
+<text top="284" left="478" width="18" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#62">5.2</a></text>
+<text top="284" left="538" width="52" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#62">Cleaning</a></text>
+<text top="284" left="840" width="15" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#62">62</a></text>
+<text top="300" left="478" width="18" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#63">5.3</a></text>
+<text top="300" left="538" width="169" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#63">Inflating the drive wheel tires</a></text>
+<text top="300" left="839" width="15" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#63">63</a></text>
+<text top="317" left="478" width="19" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#63">5.4</a></text>
+<text top="317" left="538" width="91" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#63">Positioning belt</a></text>
+<text top="317" left="839" width="15" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#63">63</a></text>
+<text top="344" left="478" width="10" height="16" font="3"><a href="permobil_m3-corpus_owner.pdf.html#64">6</a></text>
+<text top="344" left="512" width="122" height="16" font="3"><a href="permobil_m3-corpus_owner.pdf.html#64">Troubleshooting</a></text>
+<text top="344" left="835" width="20" height="16" font="3"><a href="permobil_m3-corpus_owner.pdf.html#64">64</a></text>
+<text top="373" left="478" width="8" height="16" font="3"><a href="permobil_m3-corpus_owner.pdf.html#66">7</a></text>
+<text top="373" left="512" width="150" height="16" font="3"><a href="permobil_m3-corpus_owner.pdf.html#66">General information</a></text>
+<text top="373" left="835" width="19" height="16" font="3"><a href="permobil_m3-corpus_owner.pdf.html#66">66</a></text>
+<text top="395" left="478" width="15" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#66">7.1</a></text>
+<text top="395" left="538" width="54" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#66">Warranty</a></text>
+<text top="395" left="839" width="15" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#66">66</a></text>
+<text top="411" left="478" width="17" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#66">7.2</a></text>
+<text top="411" left="538" width="155" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#66">Standards and regulations</a></text>
+<text top="411" left="839" width="15" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#66">66</a></text>
+<text top="427" left="478" width="18" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#66">7.3</a></text>
+<text top="427" left="538" width="114" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#66">Reporting incidents</a></text>
+<text top="427" left="839" width="15" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#66">66</a></text>
+<text top="444" left="478" width="18" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#66">7.4</a></text>
+<text top="444" left="538" width="141" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#66">Scrapping and recycling</a></text>
+<text top="444" left="839" width="15" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#66">66</a></text>
+<text top="460" left="478" width="17" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#67">7.5</a></text>
+<text top="460" left="538" width="169" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#67">EU declaration of conformity</a></text>
+<text top="460" left="840" width="14" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#67">67</a></text>
+<text top="476" left="478" width="18" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#68">7.6</a></text>
+<text top="476" left="538" width="142" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#68">Technical specifications</a></text>
+<text top="476" left="839" width="15" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#68">68</a></text>
+</page>
+<page number="4" position="absolute" top="0" left="0" height="629" width="892">
+	<fontspec id="6" size="21" family="LKGCKB+GTAmerica-Md" color="#000000"/>
+	<fontspec id="7" size="12" family="LKGCKB+GTAmerica-Md" color="#000000"/>
+<text top="37" left="38" width="9" height="21" font="6">1</text>
+<text top="37" left="72" width="118" height="21" font="6">Introduction</text>
+<text top="69" left="38" width="372" height="13" font="4">Before you use your wheelchair for the first time, you must read</text>
+<text top="86" left="38" width="356" height="13" font="4">and understand the contents of this user manual. It instructs</text>
+<text top="102" left="38" width="325" height="13" font="4">you on how to properly and safely use and care for your</text>
+<text top="118" left="38" width="330" height="13" font="4">wheelchair. You must also read and understand the user</text>
+<text top="134" left="38" width="340" height="13" font="4">manuals for your specific accessories before you use your</text>
+<text top="150" left="38" width="328" height="13" font="4">wheelchair. This user manual and additional information</text>
+<text top="166" left="38" width="367" height="13" font="4">concerning our products are available at www.permobil.com or</text>
+<text top="182" left="38" width="79" height="13" font="4">by telephone.</text>
+<text top="203" left="38" width="366" height="13" font="4">Your power wheelchair is a complex medical device prescribed</text>
+<text top="219" left="38" width="369" height="13" font="4">to you by your healthcare provider and configured to meet your</text>
+<text top="235" left="38" width="303" height="13" font="4">needs. Permobil is not responsible for inappropriate</text>
+<text top="251" left="38" width="366" height="13" font="4">prescription or selection of models or features, or for improper</text>
+<text top="267" left="38" width="368" height="13" font="4">use of or modifications to the wheelchair. If the wheelchair has</text>
+<text top="283" left="38" width="365" height="13" font="4">an unexpected impact on your health, contact your healthcare</text>
+<text top="299" left="38" width="51" height="13" font="4">provider.</text>
+<text top="320" left="38" width="371" height="13" font="4">The illustrations in this user manual are generic and may not be</text>
+<text top="336" left="38" width="211" height="13" font="4">exact depictions of your wheelchair.</text>
+<text top="586" left="38" width="7" height="12" font="7">4</text>
+<text top="586" left="49" width="72" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#4">Introduction</a></text>
+</page>
+<page number="5" position="absolute" top="0" left="0" height="629" width="892">
+	<fontspec id="8" size="13" family="LKGCKB+GTAmerica-Md" color="#000000"/>
+<text top="37" left="51" width="12" height="21" font="6">2</text>
+<text top="37" left="85" width="88" height="21" font="6">Overview</text>
+<text top="73" left="561" width="248" height="13" font="4">This chapter gives you an overview of your</text>
+<text top="89" left="561" width="282" height="13" font="4">wheelchair. The parts on the overview image are</text>
+<text top="105" left="561" width="282" height="13" font="4">described in more detail throughout the manual.</text>
+<text top="125" left="561" width="250" height="13" font="4">The M3 Corpus is a mid-wheel drive power</text>
+<text top="141" left="561" width="251" height="13" font="4">wheelchair for indoor and outdoor use. It is</text>
+<text top="157" left="561" width="281" height="13" font="4">intended for people limited to a seated position.</text>
+<text top="177" left="561" width="273" height="13" font="4">The expected service life of this product is five</text>
+<text top="194" left="561" width="35" height="13" font="4">years.</text>
+<text top="241" left="563" width="13" height="13" font="8">A.</text>
+<text top="241" left="587" width="54" height="13" font="4">Headrest</text>
+<text top="260" left="563" width="12" height="13" font="8">B.</text>
+<text top="260" left="587" width="52" height="13" font="4">Backrest</text>
+<text top="279" left="563" width="13" height="13" font="8">C.</text>
+<text top="279" left="587" width="80" height="13" font="4">Control panel</text>
+<text top="298" left="563" width="13" height="13" font="8">D.</text>
+<text top="298" left="587" width="27" height="13" font="4">Seat</text>
+<text top="317" left="563" width="12" height="13" font="8">E.</text>
+<text top="317" left="587" width="47" height="13" font="4">Leg rest</text>
+<text top="335" left="563" width="11" height="13" font="8">F.</text>
+<text top="335" left="587" width="56" height="13" font="4">Footplate</text>
+<text top="241" left="709" width="13" height="13" font="8">G.</text>
+<text top="241" left="733" width="47" height="13" font="4">Armrest</text>
+<text top="260" left="709" width="13" height="13" font="8">H.</text>
+<text top="260" left="733" width="46" height="13" font="4">Chassis</text>
+<text top="279" left="709" width="7" height="13" font="8">I.</text>
+<text top="279" left="733" width="113" height="13" font="4">Serial number label</text>
+<text top="298" left="709" width="9" height="13" font="8">J.</text>
+<text top="298" left="733" width="68" height="13" font="4">Drive wheel</text>
+<text top="317" left="709" width="13" height="13" font="8">K.</text>
+<text top="317" left="733" width="77" height="13" font="4">Caster wheel</text>
+<text top="586" left="789" width="55" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#5">Overview </a>-</text>
+<text top="586" left="848" width="7" height="12" font="7">5</text>
+</page>
+<page number="6" position="absolute" top="0" left="0" height="629" width="892">
+	<fontspec id="9" size="19" family="LKGCKB+GTAmerica-Md" color="#000000"/>
+<text top="38" left="38" width="24" height="19" font="9">2.1</text>
+<text top="38" left="98" width="219" height="19" font="9">Wheelchair specification</text>
+<text top="77" left="550" width="86" height="13" font="4">Product name:</text>
+<text top="77" left="697" width="67" height="13" font="8">M3 Corpus</text>
+<text top="99" left="550" width="85" height="13" font="4">Model version:</text>
+<text top="99" left="697" width="8" height="13" font="8">3</text>
+<text top="119" left="550" width="103" height="13" font="4">Wheelchair class:</text>
+<text top="119" left="697" width="9" height="13" font="8">B</text>
+<text top="158" left="564" width="147" height="13" font="4">Height, width, and length</text>
+<text top="179" left="549" width="189" height="13" font="4">Height: 960–1170 mm (38&#34;–46&#34;)</text>
+<text top="199" left="549" width="190" height="13" font="4">Width: 650–790 mm (25.5&#34;–31&#34;)</text>
+<text top="219" left="549" width="132" height="13" font="4">Length: 1016 mm (40&#34;)</text>
+<text top="255" left="564" width="164" height="13" font="4">Smallest transportation size</text>
+<text top="276" left="549" width="135" height="13" font="4">Height: 823 mm (32.5&#34;)</text>
+<text top="296" left="549" width="190" height="13" font="4">Width: 650–790 mm (25.5&#34;–31&#34;)</text>
+<text top="316" left="549" width="138" height="13" font="4">Length: 855 mm (33.5&#34;)</text>
+<text top="352" left="566" width="120" height="13" font="4">Weight specification</text>
+<text top="372" left="549" width="242" height="13" font="4">Wheelchair with batteries: 176 kg (388 lb)</text>
+<text top="392" left="549" width="223" height="13" font="4">Maximum user weight: 150 kg (330 lb)</text>
+<text top="413" left="549" width="289" height="13" font="4">The maximum user weight can vary depending on</text>
+<text top="429" left="549" width="171" height="13" font="4">the wheelchair configuration.</text>
+<text top="586" left="38" width="7" height="12" font="7">6</text>
+<text top="586" left="48" width="55" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#5">Overview</a></text>
+</page>
+<page number="7" position="absolute" top="0" left="0" height="629" width="892">
+<text top="38" left="51" width="27" height="19" font="9">2.2</text>
+<text top="38" left="111" width="76" height="19" font="9">Tool bag</text>
+<text top="72" left="561" width="241" height="13" font="4">The wheelchair comes with a tool bag for</text>
+<text top="88" left="561" width="270" height="13" font="4">maintenance and adjustments. It contains the</text>
+<text top="104" left="561" width="88" height="13" font="4">following tools:</text>
+<text top="141" left="577" width="46" height="13" font="4">Wrench</text>
+<text top="161" left="561" width="123" height="13" font="4">general maintenance</text>
+<text top="181" left="561" width="36" height="13" font="4">11 mm</text>
+<text top="201" left="561" width="38" height="13" font="4">13 mm</text>
+<text top="238" left="577" width="60" height="13" font="4">Allen keys</text>
+<text top="258" left="561" width="247" height="13" font="4">general maintenance and seat adjustment</text>
+<text top="278" left="561" width="49" height="13" font="4">2−6 mm</text>
+<text top="314" left="577" width="88" height="13" font="4">Socket wrench</text>
+<text top="335" left="561" width="123" height="13" font="4">general maintenance</text>
+<text top="355" left="561" width="38" height="13" font="4">15 mm</text>
+<text top="586" left="790" width="55" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#5">Overview </a>-</text>
+<text top="586" left="849" width="6" height="12" font="7">7</text>
+</page>
+<page number="8" position="absolute" top="0" left="0" height="629" width="892">
+	<fontspec id="10" size="13" family="MZFBCE+GTAmerica-Lt" color="#005bbd"/>
+<text top="38" left="38" width="28" height="19" font="9">2.3</text>
+<text top="38" left="98" width="191" height="19" font="9">General control panel</text>
+<text top="72" left="564" width="47" height="13" font="4">Joystick</text>
+<text top="109" left="564" width="167" height="13" font="4">Example of button functions</text>
+<text top="127" left="549" width="13" height="13" font="8">A.</text>
+<text top="127" left="572" width="40" height="13" font="4">On/off</text>
+<text top="146" left="549" width="12" height="13" font="8">B.</text>
+<text top="146" left="572" width="29" height="13" font="4">Horn</text>
+<text top="165" left="549" width="13" height="13" font="8">C.</text>
+<text top="165" left="572" width="155" height="13" font="4">Decrease maximum speed</text>
+<text top="184" left="549" width="13" height="13" font="8">D.</text>
+<text top="184" left="572" width="150" height="13" font="4">Increase maximum speed</text>
+<text top="220" left="549" width="293" height="13" font="4">For more information, see the user manual of your</text>
+<text top="236" left="549" width="80" height="13" font="4">control panel:</text>
+<text top="272" left="590" width="224" height="13" font="10"><a href="https://documentation.permobil.com/manuals/control_panels/">https://documentation.permobil.com/</a></text>
+<text top="289" left="590" width="148" height="13" font="10"><a href="https://documentation.permobil.com/manuals/control_panels/">manuals/control_panels/</a></text>
+<text top="586" left="38" width="7" height="12" font="7">8</text>
+<text top="586" left="48" width="55" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#5">Overview</a></text>
+</page>
+<page number="9" position="absolute" top="0" left="0" height="629" width="892">
+<text top="38" left="51" width="28" height="19" font="9">2.4</text>
+<text top="38" left="111" width="58" height="19" font="9">Omni2</text>
+<text top="72" left="561" width="287" height="13" font="4">Your wheelchair can be equipped with an Omni2.</text>
+<text top="88" left="561" width="271" height="13" font="4">An Omni2 is a device that makes it possible to</text>
+<text top="104" left="561" width="293" height="13" font="4">operate the wheelchair with something other than</text>
+<text top="121" left="561" width="115" height="13" font="4">a standard joystick.</text>
+<text top="166" left="563" width="187" height="13" font="4">Button configuration for Omni2.</text>
+<text top="187" left="563" width="13" height="13" font="8">A.</text>
+<text top="187" left="587" width="40" height="13" font="4">On/off</text>
+<text top="206" left="563" width="12" height="13" font="8">B.</text>
+<text top="206" left="587" width="38" height="13" font="4">Profile</text>
+<text top="225" left="563" width="13" height="13" font="8">C.</text>
+<text top="225" left="587" width="55" height="13" font="4">Minus (−)</text>
+<text top="244" left="563" width="13" height="13" font="8">D.</text>
+<text top="244" left="587" width="48" height="13" font="4">Settings</text>
+<text top="187" left="709" width="12" height="13" font="8">E.</text>
+<text top="187" left="733" width="69" height="13" font="4">LCD screen</text>
+<text top="206" left="709" width="11" height="13" font="8">F.</text>
+<text top="206" left="733" width="34" height="13" font="4">Mode</text>
+<text top="225" left="709" width="13" height="13" font="8">G.</text>
+<text top="225" left="733" width="63" height="13" font="4">Navigation</text>
+<text top="243" left="709" width="13" height="13" font="8">H.</text>
+<text top="243" left="733" width="45" height="13" font="4">Plus (+)</text>
+<text top="286" left="561" width="293" height="13" font="4">For more information, see the user manual of your</text>
+<text top="302" left="561" width="236" height="13" font="4">Omni2 on the website of Curtiss-Wright:</text>
+<text top="338" left="603" width="237" height="13" font="10"><a href="http://support.pgdt.com/omni2-manual.pdf">http://support.pgdt.com/omni2-manual.</a></text>
+<text top="355" left="603" width="20" height="13" font="10"><a href="http://support.pgdt.com/omni2-manual.pdf">pdf</a></text>
+<text top="586" left="789" width="55" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#5">Overview </a>-</text>
+<text top="586" left="848" width="7" height="12" font="7">9</text>
+</page>
+<page number="10" position="absolute" top="0" left="0" height="629" width="892">
+<text top="38" left="38" width="27" height="19" font="9">2.5</text>
+<text top="38" left="98" width="198" height="19" font="9">Connected wheelchair</text>
+<text top="72" left="549" width="265" height="13" font="4">Your power wheelchair has a Power Platform,</text>
+<text top="88" left="549" width="263" height="13" font="4">which contains a radio transmitter. In certain</text>
+<text top="104" left="549" width="286" height="13" font="4">areas, radio transmission is not allowed and your</text>
+<text top="121" left="549" width="221" height="13" font="4">wheelchair must be set to flight mode</text>
+<text top="121" left="785" width="3" height="13" font="4">.</text>
+<text top="157" left="549" width="293" height="13" font="4">For more information, see the user manual of your</text>
+<text top="173" left="549" width="80" height="13" font="4">control panel:</text>
+<text top="209" left="590" width="224" height="13" font="10"><a href="https://documentation.permobil.com/manuals/control_panels/">https://documentation.permobil.com/</a></text>
+<text top="225" left="590" width="148" height="13" font="10"><a href="https://documentation.permobil.com/manuals/control_panels/">manuals/control_panels/</a></text>
+<text top="586" left="38" width="13" height="12" font="7">10</text>
+<text top="586" left="54" width="55" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#5">Overview</a></text>
+</page>
+<page number="11" position="absolute" top="0" left="0" height="629" width="892">
+<text top="38" left="51" width="28" height="19" font="9">2.6</text>
+<text top="38" left="111" width="182" height="19" font="9">Lights and reflectors</text>
+<text top="72" left="561" width="286" height="13" font="4">The wheelchair is equipped with reflectors at the</text>
+<text top="88" left="561" width="170" height="13" font="4">front, the rear, and the sides.</text>
+<text top="109" left="561" width="253" height="13" font="4">Front lights, rear lights, and turn signals are</text>
+<text top="125" left="561" width="51" height="13" font="4">optional.</text>
+<text top="161" left="577" width="91" height="13" font="4">Front reflectors</text>
+<text top="181" left="577" width="87" height="13" font="4">Rear reflectors</text>
+<text top="201" left="577" width="86" height="13" font="4">Side reflectors</text>
+<text top="586" left="786" width="55" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#5">Overview </a>-</text>
+<text top="586" left="845" width="10" height="12" font="7">11</text>
+</page>
+<page number="12" position="absolute" top="0" left="0" height="629" width="892">
+<text top="38" left="38" width="26" height="19" font="9">2.7</text>
+<text top="38" left="98" width="65" height="19" font="9">Wheels</text>
+<text top="72" left="549" width="291" height="13" font="4">The wheelchair drive wheels have pneumatic tires</text>
+<text top="88" left="549" width="278" height="13" font="4">or flat-free (foam filled) tires. The caster wheels</text>
+<text top="104" left="549" width="172" height="13" font="4">have solid polyurethane tires.</text>
+<text top="141" left="564" width="92" height="13" font="4">Pneumatic tires</text>
+<text top="161" left="564" width="153" height="13" font="4">Flat-free (foam filled) tires</text>
+<text top="197" left="567" width="248" height="13" font="4">Inflating the pneumatic tires. See <a href="permobil_m3-corpus_owner.pdf.html#63">page 63.</a></text>
+<text top="586" left="38" width="12" height="12" font="7">12</text>
+<text top="586" left="53" width="55" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#5">Overview</a></text>
+</page>
+<page number="13" position="absolute" top="0" left="0" height="629" width="892">
+<text top="38" left="51" width="28" height="19" font="9">2.8</text>
+<text top="38" left="111" width="143" height="19" font="9">Tie-down points</text>
+<text top="72" left="561" width="271" height="13" font="4">The wheelchair is equipped with four tie-down</text>
+<text top="88" left="561" width="176" height="13" font="4">points used for transportation</text>
+<text top="88" left="783" width="68" height="13" font="4">. Two in the</text>
+<text top="104" left="561" width="29" height="13" font="4">front</text>
+<text top="104" left="609" width="110" height="13" font="4">and two in the rear</text>
+<text top="104" left="734" width="3" height="13" font="4">.</text>
+<text top="141" left="580" width="213" height="13" font="4">Vehicle transportation. See <a href="permobil_m3-corpus_owner.pdf.html#33">page 33.</a></text>
+<text top="586" left="784" width="55" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#5">Overview </a>-</text>
+<text top="586" left="843" width="12" height="12" font="7">13</text>
+</page>
+<page number="14" position="absolute" top="0" left="0" height="629" width="892">
+<text top="38" left="38" width="28" height="19" font="9">2.9</text>
+<text top="38" left="98" width="171" height="19" font="9">Serial number label</text>
+<text top="72" left="549" width="276" height="13" font="4">The serial number label is located on the lower,</text>
+<text top="88" left="549" width="199" height="13" font="4">left side of the wheelchair chassis</text>
+<text top="88" left="763" width="23" height="13" font="4">. An</text>
+<text top="104" left="549" width="274" height="13" font="4">additional serial number label is located on the</text>
+<text top="121" left="549" width="44" height="13" font="4">seat tilt</text>
+<text top="121" left="608" width="214" height="13" font="4">. You may need to tilt the seat to see</text>
+<text top="137" left="549" width="137" height="13" font="4">the serial number label.</text>
+<text top="157" left="549" width="252" height="13" font="4">The contents of the serial number label are</text>
+<text top="173" left="549" width="129" height="13" font="4">described on <a href="permobil_m3-corpus_owner.pdf.html#22">page 22.</a></text>
+<text top="586" left="38" width="12" height="12" font="7">14</text>
+<text top="586" left="54" width="55" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#5">Overview</a></text>
+</page>
+<page number="15" position="absolute" top="0" left="0" height="629" width="892">
+<text top="38" left="51" width="37" height="19" font="9">2.10</text>
+<text top="38" left="111" width="108" height="19" font="9">Accessories</text>
+<text top="72" left="561" width="286" height="13" font="4">Accessories for Permobil products are subject to</text>
+<text top="88" left="561" width="276" height="13" font="4">continuous development. Contact your nearest</text>
+<text top="104" left="561" width="257" height="13" font="4">Permobil dealer for more information on the</text>
+<text top="121" left="561" width="280" height="13" font="4">accessories available for your product. Only use</text>
+<text top="137" left="561" width="260" height="13" font="4">accessories that are authorized by Permobil.</text>
+<text top="586" left="784" width="55" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#5">Overview </a>-</text>
+<text top="586" left="843" width="12" height="12" font="7">15</text>
+</page>
+<page number="16" position="absolute" top="0" left="0" height="629" width="892">
+<text top="38" left="38" width="32" height="19" font="9">2.11</text>
+<text top="38" left="98" width="103" height="19" font="9">Spare parts</text>
+<text top="72" left="549" width="276" height="13" font="4">Spare parts must be ordered through Permobil.</text>
+<text top="109" left="549" width="253" height="13" font="4">Only use spare parts that are authorized by</text>
+<text top="125" left="549" width="55" height="13" font="4">Permobil.</text>
+<text top="586" left="38" width="12" height="12" font="7">16</text>
+<text top="586" left="53" width="55" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#5">Overview</a></text>
+</page>
+<page number="17" position="absolute" top="0" left="0" height="629" width="892">
+	<fontspec id="11" size="5" family="UPEGUS+ArialUnicodeMS" color="#231f20"/>
+	<fontspec id="12" size="7" family="UPEGUS+ArialUnicodeMS" color="#231f20"/>
+<text top="38" left="51" width="35" height="19" font="9">2.12</text>
+<text top="38" left="111" width="111" height="19" font="9">User manual</text>
+<text top="72" left="577" width="85" height="13" font="4">Main text area</text>
+<text top="92" left="577" width="124" height="13" font="4">Main illustration area</text>
+<text top="113" left="577" width="259" height="13" font="4">Text correlates to the illustration to the right</text>
+<text top="133" left="577" width="46" height="13" font="4">Tool list</text>
+<text top="153" left="577" width="99" height="13" font="4">Instruction steps</text>
+<text top="173" left="577" width="76" height="13" font="4">Warning sign</text>
+<text top="193" left="577" width="154" height="13" font="4">Chapter and page number</text>
+<text top="381" left="481" width="2" height="4" font="11">-</text>
+<text top="310" left="133" width="5" height="6" font="12">1.</text>
+<text top="318" left="133" width="5" height="6" font="12">2.</text>
+<text top="327" left="133" width="5" height="6" font="12">3.</text>
+<text top="335" left="133" width="5" height="6" font="12">4.</text>
+<text top="586" left="785" width="55" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#5">Overview </a>-</text>
+<text top="586" left="844" width="11" height="12" font="7">17</text>
+</page>
+<page number="18" position="absolute" top="0" left="0" height="629" width="892">
+	<fontspec id="13" size="16" family="LKGCKB+GTAmerica-Md" color="#ffffff"/>
+	<fontspec id="14" size="16" family="MZFBCE+GTAmerica-Lt" color="#ffffff"/>
+<text top="37" left="38" width="12" height="21" font="6">3</text>
+<text top="37" left="72" width="62" height="21" font="6">Safety</text>
+<text top="70" left="38" width="369" height="13" font="4">Your wheelchair is a complex medical device and must be used</text>
+<text top="86" left="38" width="366" height="13" font="4">safely. This chapter contains important information about how</text>
+<text top="102" left="38" width="173" height="13" font="4">to safely use your wheelchair.</text>
+<text top="122" left="38" width="346" height="13" font="4">Permobil is not responsible for personal injuries or property</text>
+<text top="138" left="38" width="326" height="13" font="4">damage resulting from any person’s failure to follow the</text>
+<text top="154" left="38" width="367" height="13" font="4">warnings and instructions in this user manual or from failure to</text>
+<text top="170" left="38" width="143" height="13" font="4">exercise good judgment.</text>
+<text top="191" left="38" width="346" height="13" font="4">The following warnings are referenced throughout this user</text>
+<text top="207" left="38" width="357" height="13" font="4">manual. Anytime you see the exclamation point symbol, refer</text>
+<text top="223" left="38" width="321" height="13" font="4">back to this chapter to review the appropriate warning.</text>
+<text top="255" left="38" width="25" height="19" font="9">3.1</text>
+<text top="255" left="98" width="201" height="19" font="9">Types of warning signs</text>
+<text top="286" left="38" width="355" height="13" font="4">The following types of warning signs are used in this manual:</text>
+<text top="326" left="92" width="83" height="16" font="13">WARNING!</text>
+<text top="356" left="41" width="370" height="13" font="4">Indicates a hazardous situation which, if not avoided, could</text>
+<text top="372" left="41" width="370" height="13" font="4">result in injury or death as well as damage to the product or</text>
+<text top="388" left="41" width="87" height="13" font="4">other property.</text>
+<text top="432" left="92" width="78" height="16" font="13">CAUTION!</text>
+<text top="463" left="41" width="370" height="13" font="4">Indicates a hazardous situation which, if not avoided, could</text>
+<text top="479" left="41" width="291" height="13" font="4">result in damage to the product or other property.</text>
+<text top="523" left="92" width="100" height="16" font="3">IMPORTANT!</text>
+<text top="553" left="41" width="189" height="13" font="4">Indicates important information.</text>
+<text top="38" left="466" width="28" height="19" font="9">3.2</text>
+<text top="38" left="525" width="124" height="19" font="9">Warning signs</text>
+<text top="84" left="520" width="83" height="16" font="13">WARNING!</text>
+<text top="84" left="610" width="174" height="16" font="14">Follow the warnings and</text>
+<text top="104" left="520" width="85" height="16" font="14">instructions</text>
+<text top="134" left="469" width="370" height="13" font="4">Follow the warnings and instructions in this user manual. If you</text>
+<text top="150" left="469" width="198" height="13" font="4">do not, it can lead to bodily injury.</text>
+<text top="194" left="520" width="83" height="16" font="13">WARNING!</text>
+<text top="194" left="610" width="208" height="16" font="14">Vehicle seating requirements</text>
+<text top="227" left="469" width="370" height="13" font="4">When you use the wheelchair as a seat in a vehicle, it must be</text>
+<text top="244" left="469" width="370" height="13" font="4">forward-facing and you must use a three-point belt restraint,</text>
+<text top="260" left="469" width="370" height="13" font="4">including a shoulder and pelvic belt, to reduce the risk of head</text>
+<text top="276" left="469" width="370" height="13" font="4">and chest impacts with vehicle components. The wheelchair is</text>
+<text top="292" left="469" width="370" height="13" font="4">only designed and tested for use in this configuration. If the</text>
+<text top="308" left="469" width="370" height="13" font="4">wheelchair is used in another vehicle seating configuration, it</text>
+<text top="324" left="469" width="195" height="13" font="4">can lead to bodily injury or death.</text>
+<text top="368" left="520" width="83" height="16" font="13">WARNING!</text>
+<text top="368" left="610" width="176" height="16" font="14">Use tie-down points and</text>
+<text top="388" left="520" width="183" height="16" font="14">docking systems properly</text>
+<text top="422" left="469" width="370" height="13" font="4">Make sure that you use tie-down points and docking systems</text>
+<text top="438" left="469" width="370" height="13" font="4">properly. If you do not use them properly, it can lead to bodily</text>
+<text top="454" left="469" width="88" height="13" font="4">injury or death.</text>
+<text top="586" left="38" width="12" height="12" font="7">18</text>
+<text top="586" left="53" width="41" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#18">Safety</a></text>
+</page>
+<page number="19" position="absolute" top="0" left="0" height="629" width="892">
+	<fontspec id="15" size="16" family="MZFBCE+GTAmerica-Lt" color="#000000"/>
+<text top="54" left="105" width="83" height="16" font="13">WARNING!</text>
+<text top="54" left="195" width="171" height="16" font="14">Pay attention to release</text>
+<text top="74" left="105" width="91" height="16" font="14">mechanisms</text>
+<text top="104" left="54" width="370" height="13" font="4">Adjust your restraint system such that the release mechanisms</text>
+<text top="120" left="54" width="370" height="13" font="4">cannot be pressed during a crash. If you do not, it can lead to</text>
+<text top="136" left="54" width="126" height="13" font="4">bodily injury or death.</text>
+<text top="180" left="105" width="83" height="16" font="13">WARNING!</text>
+<text top="180" left="195" width="221" height="16" font="14">Positioning aids do not replace</text>
+<text top="200" left="105" width="66" height="16" font="14">seatbelts</text>
+<text top="230" left="54" width="370" height="13" font="4">Wheelchair positioning aids do not replace vehicle mounted</text>
+<text top="246" left="54" width="370" height="13" font="4">seatbelts. In a traffic accident, they do not provide the same</text>
+<text top="263" left="54" width="370" height="13" font="4">protection as vehicle mounted seatbelts. If you use positioning</text>
+<text top="279" left="54" width="315" height="13" font="4">aids as a seatbelt, it can lead to bodily injury or death.</text>
+<text top="323" left="105" width="83" height="16" font="13">WARNING!</text>
+<text top="323" left="195" width="227" height="16" font="14">Use positioning aids at all times</text>
+<text top="356" left="54" width="370" height="13" font="4">Use securely fastened positioning aids, including your position-</text>
+<text top="372" left="54" width="370" height="13" font="4">ing belt, at all times. If you do not, you can sustain bodily</text>
+<text top="389" left="54" width="45" height="13" font="4">injuries.</text>
+<text top="433" left="105" width="83" height="16" font="13">WARNING!</text>
+<text top="433" left="195" width="224" height="16" font="14">Do not overload the wheelchair</text>
+<text top="463" left="54" width="370" height="13" font="4">Do not use the wheelchair to pull any kind of object and never</text>
+<text top="479" left="54" width="370" height="13" font="4">hang excessive weights on the wheelchair. If you do, the</text>
+<text top="495" left="54" width="294" height="13" font="4">wheelchair can become less stable and injure you.</text>
+<text top="54" left="532" width="83" height="16" font="13">WARNING!</text>
+<text top="54" left="623" width="156" height="16" font="14">Remain aware of your</text>
+<text top="74" left="532" width="176" height="16" font="14">wheelchair’s dimensions</text>
+<text top="104" left="481" width="370" height="13" font="4">Always remain aware of your wheelchair’s dimensions. Some</text>
+<text top="120" left="481" width="370" height="13" font="4">emergency exits or paths can be too small for your wheelchair</text>
+<text top="136" left="481" width="151" height="13" font="4">to navigate through them.</text>
+<text top="181" left="532" width="100" height="16" font="3">IMPORTANT!</text>
+<text top="181" left="639" width="211" height="16" font="15">Do not modify the wheelchair</text>
+<text top="214" left="481" width="370" height="13" font="4">Do not modify your wheelchair or any of its components. Your</text>
+<text top="230" left="481" width="370" height="13" font="4">wheelchair has been configured specifically for your needs as</text>
+<text top="246" left="481" width="370" height="13" font="4">prescribed by your healthcare provider. Special skills, training,</text>
+<text top="262" left="481" width="370" height="13" font="4">and knowledge are needed to set up, modify, and repair the</text>
+<text top="278" left="481" width="67" height="13" font="4">wheelchair.</text>
+<text top="320" left="532" width="83" height="16" font="13">WARNING!</text>
+<text top="320" left="623" width="135" height="16" font="14">Avoid steep slopes</text>
+<text top="353" left="481" width="370" height="13" font="4">Do not drive the wheelchair on slopes steeper than 7.5°. If you</text>
+<text top="370" left="481" width="370" height="13" font="4">do, the wheelchair can become less stable and injure you. For</text>
+<text top="386" left="481" width="370" height="13" font="4">maximum performance and stability, use caution on slopes</text>
+<text top="402" left="481" width="94" height="13" font="4">steeper than 6°.</text>
+<text top="446" left="532" width="83" height="16" font="13">WARNING!</text>
+<text top="446" left="623" width="224" height="16" font="14">Use freewheel mode cautiously</text>
+<text top="479" left="481" width="370" height="13" font="4">Freewheel mode should only be used on level ground and when</text>
+<text top="495" left="481" width="370" height="13" font="4">an attendant is present to control the wheelchair. If you use</text>
+<text top="512" left="481" width="370" height="13" font="4">freewheel mode on an incline or without an attendant, you can</text>
+<text top="528" left="481" width="222" height="13" font="4">get injured or cause property damage.</text>
+<text top="586" left="798" width="41" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#18">Safety </a>-</text>
+<text top="586" left="843" width="12" height="12" font="7">19</text>
+</page>
+<page number="20" position="absolute" top="0" left="0" height="629" width="892">
+<text top="54" left="92" width="83" height="16" font="13">WARNING!</text>
+<text top="54" left="183" width="206" height="16" font="14">Do not exceed the maximum</text>
+<text top="74" left="92" width="83" height="16" font="14">user weight</text>
+<text top="107" left="41" width="370" height="13" font="4">Do not drive the wheelchair if you exceed the maximum user</text>
+<text top="123" left="41" width="327" height="13" font="4">weight. If you do, the wheelchair can harm you or break.</text>
+<text top="168" left="92" width="83" height="16" font="13">WARNING!</text>
+<text top="168" left="183" width="107" height="16" font="14">No passengers</text>
+<text top="201" left="41" width="370" height="13" font="4">Do not use the wheelchair to carry passengers, regardless of</text>
+<text top="217" left="41" width="370" height="13" font="4">their age or weight. If you do, it can affect the wheelchair’s</text>
+<text top="233" left="41" width="171" height="13" font="4">maneuverability and stability.</text>
+<text top="278" left="92" width="83" height="16" font="13">WARNING!</text>
+<text top="278" left="183" width="226" height="16" font="14">Drive extra carefully when lifted</text>
+<text top="297" left="92" width="55" height="16" font="14">or tilted</text>
+<text top="327" left="41" width="370" height="13" font="4">If the seat or backrest is lifted or tilted on flat ground, drive at a</text>
+<text top="344" left="41" width="370" height="13" font="4">low speed. If the seat or backrest is lifted or tilted, do not drive</text>
+<text top="360" left="41" width="370" height="13" font="4">the wheelchair on slopes or over obstacles. If you do, the</text>
+<text top="376" left="41" width="294" height="13" font="4">wheelchair can become less stable and injure you.</text>
+<text top="420" left="92" width="83" height="16" font="13">WARNING!</text>
+<text top="420" left="183" width="133" height="16" font="14">Turn off the power</text>
+<text top="454" left="41" width="370" height="13" font="4">Turn off the power before you get in or out of the wheelchair or</text>
+<text top="470" left="41" width="370" height="13" font="4">lift the armrest. If you do not, the wheelchair can move</text>
+<text top="486" left="41" width="176" height="13" font="4">unintentionally and injure you.</text>
+<text top="54" left="520" width="83" height="16" font="13">WARNING!</text>
+<text top="54" left="610" width="215" height="16" font="14">Do not use the wheelchair if it</text>
+<text top="74" left="520" width="236" height="16" font="14">behaves abnormally or erratically</text>
+<text top="107" left="469" width="370" height="13" font="4">If the wheelchair is not behaving as it should, or if you suspect</text>
+<text top="123" left="469" width="370" height="13" font="4">that something is wrong, stop the wheelchair as soon as</text>
+<text top="139" left="469" width="370" height="13" font="4">possible, turn off the power and contact your service provider</text>
+<text top="156" left="469" width="370" height="13" font="4">or Permobil for further information. If you use a wheelchair that</text>
+<text top="172" left="469" width="353" height="13" font="4">behaves abnormally or erratically, it can lead to bodily injury.</text>
+<text top="216" left="520" width="100" height="16" font="3">IMPORTANT!</text>
+<text top="216" left="627" width="162" height="16" font="15">Do not use a damaged</text>
+<text top="236" left="520" width="78" height="16" font="15">wheelchair</text>
+<text top="266" left="469" width="370" height="13" font="4">If the wheelchair or its accessories have suffered transportation</text>
+<text top="282" left="469" width="370" height="13" font="4">damage, damage during driving, or damage from other causes,</text>
+<text top="298" left="469" width="370" height="13" font="4">you must inform Permobil as soon as possible and immediately</text>
+<text top="314" left="469" width="370" height="13" font="4">stop using your wheelchair. There is a risk that the wheelchair or</text>
+<text top="330" left="469" width="370" height="13" font="4">its accessories can no longer be used safely. Contact your</text>
+<text top="347" left="469" width="301" height="13" font="4">service provider or Permobil for further information.</text>
+<text top="391" left="520" width="83" height="16" font="13">WARNING!</text>
+<text top="391" left="610" width="175" height="16" font="14">Keep the electronics dry</text>
+<text top="424" left="469" width="370" height="13" font="4">Make sure that the electronics are not exposed to moisture. If</text>
+<text top="440" left="469" width="370" height="13" font="4">any of the shrouds or the joystick boot have cracks or tears,</text>
+<text top="456" left="469" width="370" height="13" font="4">replace them immediately. Exposure to moisture can cause the</text>
+<text top="472" left="469" width="370" height="13" font="4">wheelchair to short-circuit or catch fire, which can lead to</text>
+<text top="489" left="469" width="208" height="13" font="4">personal injury or property damage.</text>
+<text top="586" left="38" width="15" height="12" font="7">20</text>
+<text top="586" left="56" width="41" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#18">Safety</a></text>
+</page>
+<page number="21" position="absolute" top="0" left="0" height="629" width="892">
+<text top="54" left="105" width="83" height="16" font="13">WARNING!</text>
+<text top="54" left="195" width="137" height="16" font="14">Do not get pinched</text>
+<text top="87" left="54" width="370" height="13" font="4">The wheelchair is heavy and contains many moving parts, which</text>
+<text top="103" left="54" width="370" height="13" font="4">means that you can be pinched when you adjust the wheelchair</text>
+<text top="120" left="54" width="370" height="13" font="4">or if you use the wheelchair incorrectly. When you see this</text>
+<text top="136" left="54" width="370" height="13" font="4">warning, be mindful of your body location to avoid being</text>
+<text top="152" left="54" width="370" height="13" font="4">pinched. Do not put any part of your body between moving</text>
+<text top="168" left="54" width="34" height="13" font="4">parts.</text>
+<text top="212" left="105" width="83" height="16" font="13">WARNING!</text>
+<text top="212" left="195" width="185" height="16" font="14">Use leg rest tilt cautiously</text>
+<text top="246" left="54" width="370" height="13" font="4">Do not use the leg rest tilt when a knee support is in place. If you</text>
+<text top="262" left="54" width="175" height="13" font="4">do, it can lead to bodily injury.</text>
+<text top="306" left="105" width="100" height="16" font="3">IMPORTANT!</text>
+<text top="306" left="212" width="145" height="16" font="15">Recycle all batteries</text>
+<text top="339" left="54" width="370" height="13" font="4">Used batteries must be disposed of responsibly in accordance</text>
+<text top="355" left="54" width="183" height="13" font="4">with local recycling regulations.</text>
+<text top="400" left="105" width="83" height="16" font="13">WARNING!</text>
+<text top="400" left="195" width="191" height="16" font="14">Use the recommended tire</text>
+<text top="420" left="105" width="62" height="16" font="14">pressure</text>
+<text top="453" left="54" width="370" height="13" font="4">Use the recommended tire pressure. If you overfill the tires, they</text>
+<text top="469" left="54" width="212" height="13" font="4">can explode and cause bodily injury.</text>
+<text top="54" left="532" width="100" height="16" font="3">IMPORTANT!</text>
+<text top="54" left="639" width="160" height="16" font="15">Electromagnetic fields</text>
+<text top="87" left="481" width="370" height="13" font="4">The electronics in a power wheelchair can be affected by</text>
+<text top="104" left="481" width="354" height="13" font="4">external electromagnetic fields (for example mobile phones).</text>
+<text top="148" left="532" width="83" height="16" font="13">WARNING!</text>
+<text top="148" left="623" width="154" height="16" font="14">Discontinue use after</text>
+<text top="168" left="532" width="147" height="16" font="14">extraordinary events</text>
+<text top="201" left="481" width="370" height="13" font="4">Do not use your wheelchair if it has been dropped, crushed,</text>
+<text top="217" left="481" width="370" height="13" font="4">exposed to fire, submerged in water, or involved in a vehicular</text>
+<text top="233" left="481" width="370" height="13" font="4">accident, or other extraordinary events. Events like these can</text>
+<text top="249" left="481" width="370" height="13" font="4">lead to significant damage that is impossible to detect upon</text>
+<text top="266" left="481" width="370" height="13" font="4">inspection. Contact your service provider or Permobil. Damage</text>
+<text top="282" left="481" width="370" height="13" font="4">caused by these types of incidents exceeds the limits covered</text>
+<text top="298" left="481" width="187" height="13" font="4">by the manufacturer’s warranty.</text>
+<text top="342" left="532" width="83" height="16" font="13">WARNING!</text>
+<text top="342" left="623" width="199" height="16" font="14">Sufficient ground clearance</text>
+<text top="376" left="481" width="370" height="13" font="4">Always position the leg rest and footplate high enough so that</text>
+<text top="392" left="481" width="370" height="13" font="4">they will not hit the ground when you drive your wheelchair. This</text>
+<text top="408" left="481" width="370" height="13" font="4">includes when you drive over changing slopes or over obstacles.</text>
+<text top="424" left="481" width="370" height="13" font="4">If you allow the leg rest or footplate to hit the ground, the</text>
+<text top="440" left="481" width="294" height="13" font="4">wheelchair can become less stable and injure you.</text>
+<text top="586" left="799" width="41" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#18">Safety </a>-</text>
+<text top="586" left="843" width="12" height="12" font="7">21</text>
+</page>
+<page number="22" position="absolute" top="0" left="0" height="629" width="892">
+<text top="38" left="38" width="28" height="19" font="9">3.3</text>
+<text top="38" left="98" width="57" height="19" font="9">Labels</text>
+<text top="69" left="38" width="363" height="13" font="4">Your wheelchair has labels that contain important information</text>
+<text top="85" left="38" width="343" height="13" font="4">about safety and proper use. These labels are described in</text>
+<text top="101" left="38" width="371" height="13" font="4">greater detail in this subchapter. Do not remove labels from the</text>
+<text top="117" left="38" width="371" height="13" font="4">wheelchair. If a label becomes difficult to read or falls off, order</text>
+<text top="133" left="38" width="173" height="13" font="4">a replacement from Permobil.</text>
+<text top="43" left="466" width="118" height="13" font="8">Serial number label</text>
+<text top="69" left="466" width="13" height="13" font="8">A.</text>
+<text top="69" left="515" width="186" height="13" font="4">Serial number of the wheelchair</text>
+<text top="88" left="466" width="12" height="13" font="8">B.</text>
+<text top="88" left="505" width="128" height="13" font="4">Maximum user weight</text>
+<text top="107" left="466" width="13" height="13" font="8">C.</text>
+<text top="107" left="489" width="80" height="13" font="4">Model: Model</text>
+<text top="123" left="489" width="171" height="13" font="4">Model version: Model version</text>
+<text top="142" left="466" width="13" height="13" font="8">D.</text>
+<text top="142" left="489" width="232" height="13" font="4">Name and address of the manufacturer</text>
+<text top="161" left="466" width="12" height="13" font="8">E.</text>
+<text top="161" left="489" width="212" height="13" font="4">YYYY-MM-DD: Date of manufacture</text>
+<text top="180" left="466" width="11" height="13" font="8">F.</text>
+<text top="180" left="513" width="50" height="13" font="4">CE mark</text>
+<text top="196" left="515" width="88" height="13" font="4">Medical device</text>
+<text top="215" left="466" width="13" height="13" font="8">G.</text>
+<text top="215" left="489" width="227" height="13" font="4">Unique Device Identification (UDI) as a</text>
+<text top="231" left="489" width="352" height="13" font="4">GS1 DataMatrix and human readable format including: GTIN</text>
+<text top="247" left="489" width="346" height="13" font="4">- global trade item number, date of manufacture, and serial</text>
+<text top="263" left="489" width="45" height="13" font="4">number</text>
+<text top="490" left="466" width="51" height="13" font="8">Warning</text>
+<text top="512" left="466" width="310" height="13" font="4">This label indicates that special attention is required.</text>
+<text top="586" left="38" width="13" height="12" font="7">22</text>
+<text top="586" left="55" width="41" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#18">Safety</a></text>
+</page>
+<page number="23" position="absolute" top="0" left="0" height="629" width="892">
+	<fontspec id="16" size="13" family="VPBKBP+GTAmerica-LtIt" color="#000000"/>
+	<fontspec id="17" size="4" family="UPEGUS+ArialUnicodeMS" color="#ffffff"/>
+<text top="43" left="51" width="60" height="13" font="8">Pinch risk</text>
+<text top="62" left="51" width="350" height="13" font="4">This label indicates a pinch risk. When you see this label, be</text>
+<text top="78" left="51" width="342" height="13" font="4">extra careful to avoid pinching yourself or your belongings.</text>
+<text top="151" left="51" width="123" height="13" font="8">Main circuit breaker</text>
+<text top="171" left="51" width="354" height="13" font="4">This label shows the on and off positions for the main circuit</text>
+<text top="187" left="51" width="187" height="13" font="4">breaker. Read more on <a href="permobil_m3-corpus_owner.pdf.html#38">page 38.</a></text>
+<text top="262" left="51" width="101" height="13" font="8">Freewheel mode</text>
+<text top="282" left="51" width="315" height="13" font="4">The picture to the left of the arrows indicates that the</text>
+<text top="298" left="51" width="374" height="13" font="4">wheelchair is not in freewheel mode. The pictures to the right of</text>
+<text top="314" left="51" width="357" height="13" font="4">the arrows indicate that the wheelchair is in freewheel mode.</text>
+<text top="330" left="51" width="270" height="13" font="4">Read more about freewheel mode on <a href="permobil_m3-corpus_owner.pdf.html#32">page 32.</a></text>
+<text top="413" left="51" width="99" height="13" font="8">Tie-down points</text>
+<text top="435" left="51" width="361" height="13" font="4">This label shows the wheelchair’s tie-down points. Read more</text>
+<text top="451" left="51" width="261" height="13" font="4">about wheelchair transportation on <a href="permobil_m3-corpus_owner.pdf.html#33">page 33.</a></text>
+<text top="43" left="478" width="191" height="13" font="8">Conformance with ISO 7176–19</text>
+<text top="60" left="478" width="311" height="13" font="4">This label shows conformance with ISO 7176–19. See</text>
+<text top="77" left="478" width="29" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#35">4.5.2</a></text>
+<text top="77" left="511" width="249" height="13" font="16"><a href="permobil_m3-corpus_owner.pdf.html#35"><i>Using the wheelchair as a seat in a vehicle</i></a></text>
+<text top="77" left="760" width="3" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#35">.</a></text>
+<text top="150" left="478" width="126" height="13" font="8">Dahl docking station</text>
+<text top="172" left="478" width="369" height="13" font="4">If your wheelchair has been equipped with a lock plate for Dahl</text>
+<text top="188" left="478" width="336" height="13" font="4">MK II or VarioDock, it will have this label. The lock plate is</text>
+<text top="205" left="478" width="214" height="13" font="4">installed underneath the wheelchair.</text>
+<text top="105" left="499" width="7" height="4" font="17">ISO</text>
+<text top="110" left="499" width="14" height="4" font="17">7176-19</text>
+<text top="586" left="797" width="41" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#18">Safety </a>-</text>
+<text top="586" left="841" width="14" height="12" font="7">23</text>
+</page>
+<page number="24" position="absolute" top="0" left="0" height="629" width="892">
+<text top="37" left="38" width="13" height="21" font="6">4</text>
+<text top="37" left="72" width="169" height="21" font="6">Wheelchair usage</text>
+<text top="69" left="38" width="452" height="13" font="4">This chapter aims to provide you with basic information to quickly get started</text>
+<text top="86" left="38" width="446" height="13" font="4">with your wheelchair, and also provide you with information you may need in</text>
+<text top="102" left="38" width="453" height="13" font="4">your everyday use of the wheelchair. The following subchapters describe how</text>
+<text top="118" left="38" width="448" height="13" font="4">to drive the wheelchair, how to use the most common seat functions, how to</text>
+<text top="134" left="38" width="454" height="13" font="4">charge the batteries, how to enter and exit freewheel mode, and some helpful</text>
+<text top="150" left="38" width="443" height="13" font="4">information if you want to transport your wheelchair. They also describe the</text>
+<text top="166" left="38" width="389" height="13" font="4">main circuit breaker, wheelchair storage, and manual adjustments.</text>
+<text top="199" left="38" width="25" height="19" font="9">4.1</text>
+<text top="199" left="98" width="197" height="19" font="9">Driving the wheelchair</text>
+<text top="229" left="38" width="408" height="13" font="4">You must always drive your wheelchair carefully and defensively. Your</text>
+<text top="245" left="38" width="412" height="13" font="4">wheelchair is a complex medical device, not an automobile. Due to the</text>
+<text top="261" left="38" width="446" height="13" font="4">individualized nature of Permobil products, your wheelchair is equipped with</text>
+<text top="277" left="38" width="400" height="13" font="4">one of numerous different ways to drive it. The most common way is</text>
+<text top="294" left="38" width="412" height="13" font="4">described below, but your wheelchair may not conform to this process</text>
+<text top="310" left="38" width="199" height="13" font="4">depending on its individualization.</text>
+<text top="339" left="38" width="448" height="13" font="4">To drive your wheelchair, you must first turn on the power. The power button</text>
+<text top="356" left="38" width="450" height="13" font="4">or switch is most commonly located on the wheelchair’s control panel, which</text>
+<text top="372" left="38" width="445" height="13" font="4">is usually attached to the armrest. Most Permobil wheelchairs also include a</text>
+<text top="388" left="38" width="442" height="13" font="4">joystick on the control panel. Use this joystick to turn the wheelchair and to</text>
+<text top="404" left="38" width="458" height="13" font="4">drive forward and rearward. Simply press the joystick in the direction you want</text>
+<text top="420" left="38" width="30" height="13" font="4">to go</text>
+<text top="420" left="84" width="378" height="13" font="4">. The further you press the joystick, the faster the wheelchair will</text>
+<text top="436" left="38" width="249" height="13" font="4">move. Release the joystick to stop moving.</text>
+<text top="473" left="38" width="425" height="13" font="4">Drive as gently as possible and avoid sudden braking. Do not turn off the</text>
+<text top="489" left="38" width="434" height="13" font="4">power to stop the wheelchair. If you turn off the power while you drive, the</text>
+<text top="505" left="38" width="170" height="13" font="4">wheelchair will stop abruptly.</text>
+<text top="586" left="38" width="14" height="12" font="7">24</text>
+<text top="586" left="55" width="101" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage</a></text>
+</page>
+<page number="25" position="absolute" top="0" left="0" height="629" width="892">
+<text top="43" left="51" width="447" height="13" font="4">Do not move the joystick before, during, or immediately after you turn on the</text>
+<text top="59" left="51" width="431" height="13" font="4">control system. If you move the joystick during this time, it can generate a</text>
+<text top="75" left="51" width="387" height="13" font="4">joystick error. If this happens, turn off and then on the wheelchair.</text>
+<text top="111" left="51" width="428" height="13" font="4">For additional information on how to control your wheelchair, refer to any</text>
+<text top="127" left="51" width="449" height="13" font="4">other documentation received with your wheelchair or contact your Permobil</text>
+<text top="144" left="51" width="40" height="13" font="4">dealer.</text>
+<text top="173" left="51" width="442" height="13" font="4">Do not use the joystick as support when you get in or out of the wheelchair.</text>
+<text top="209" left="51" width="444" height="13" font="4">The first time you drive your wheelchair must be in the presence of a person</text>
+<text top="226" left="51" width="394" height="13" font="4">who is qualified to ensure that the wheelchair is properly fit for you.</text>
+<text top="262" left="51" width="405" height="13" font="4">Make sure that your feet are correctly and securely positioned on the</text>
+<text top="278" left="51" width="250" height="13" font="4">footplates before you drive the wheelchair.</text>
+<text top="438" left="51" width="33" height="16" font="3">4.1.1</text>
+<text top="438" left="111" width="142" height="16" font="3">Driving restrictions</text>
+<text top="465" left="51" width="435" height="13" font="4">The wheelchair consumes much power when you drive up a hill, climb over</text>
+<text top="481" left="51" width="455" height="13" font="4">obstacles, or drive on rough terrain (for example sand). Permobil recommends</text>
+<text top="497" left="51" width="436" height="13" font="4">that you, as far as possible, avoid to drive for a long period of time in these</text>
+<text top="513" left="51" width="116" height="13" font="4">types of conditions.</text>
+<text top="586" left="737" width="101" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage </a>-</text>
+<text top="586" left="841" width="14" height="12" font="7">25</text>
+</page>
+<page number="26" position="absolute" top="0" left="0" height="629" width="892">
+<text top="43" left="38" width="403" height="13" font="4">Permobil recommends that you do not use the wheelchair in extreme</text>
+<text top="59" left="38" width="402" height="13" font="4">conditions, such as heavy rain, thick snow, or excessive heat or cold.</text>
+<text top="75" left="38" width="438" height="13" font="4">Prolonged exposure to sunlight or cold temperatures can cause wheelchair</text>
+<text top="91" left="38" width="442" height="13" font="4">surfaces to become very hot or cold. The driving range of your wheelchair is</text>
+<text top="107" left="38" width="455" height="13" font="4">approximately 25 km (16 mi) when the battery temperature is 25°C (77°F). The</text>
+<text top="123" left="38" width="429" height="13" font="4">driving range is affected by the battery temperature. Temperatures below</text>
+<text top="139" left="38" width="456" height="13" font="4">25°C (77°F) can shorten the driving range. Temperatures below −25°C (−13°F)</text>
+<text top="156" left="38" width="143" height="13" font="4">can harm your batteries.</text>
+<text top="192" left="38" width="456" height="13" font="4">Do not use the wheelchair on stairs or escalators. Remember that alcohol can</text>
+<text top="208" left="38" width="269" height="13" font="4">affect your ability to drive a power wheelchair.</text>
+<text top="244" left="38" width="455" height="13" font="4">This user manual’s wheelchair specification states the wheelchair’s maximum</text>
+<text top="261" left="38" width="416" height="13" font="4">user weight. The stated user weight includes the user and any personal</text>
+<text top="277" left="38" width="44" height="13" font="4">effects.</text>
+<text top="313" left="38" width="452" height="13" font="4">Avoid sudden stops and starts. Use caution in any of the following situations:</text>
+<text top="332" left="38" width="304" height="13" font="4">• when you are near edges or on elevated surfaces</text>
+<text top="351" left="38" width="455" height="13" font="4">• when you drive on soft or uneven surfaces, such as grass, gravel, sand, ice,</text>
+<text top="367" left="55" width="46" height="13" font="4">or snow</text>
+<text top="386" left="38" width="454" height="13" font="4">• when you drive from an area of high traction (for example a sidewalk) to an</text>
+<text top="402" left="55" width="229" height="13" font="4">area of low traction (for example grass)</text>
+<text top="421" left="38" width="268" height="13" font="4">• when you are in narrow or confined spaces</text>
+<text top="439" left="38" width="410" height="13" font="4">• when there are ridges that could cause the wheelchair to move in a</text>
+<text top="456" left="55" width="106" height="13" font="4">different direction</text>
+<text top="586" left="38" width="14" height="12" font="7">26</text>
+<text top="586" left="55" width="100" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage</a></text>
+</page>
+<page number="27" position="absolute" top="0" left="0" height="629" width="892">
+<text top="43" left="51" width="438" height="13" font="4">When you drive over an obstacle, always directly face it. You can drive over</text>
+<text top="59" left="51" width="418" height="13" font="4">obstacles up to 75 mm (3&#34;). If you drive over higher obstacles, there is a</text>
+<text top="75" left="51" width="446" height="13" font="4">greater risk of tipping and of damage to the wheelchair. Please note that the</text>
+<text top="91" left="51" width="400" height="13" font="4">type of spring and setting can affect the wheelchair’s ability to climb</text>
+<text top="107" left="51" width="432" height="13" font="4">obstacles. If a car lock is installed on the wheelchair, it affects the ground</text>
+<text top="123" left="51" width="61" height="13" font="4">clearance.</text>
+<text top="153" left="51" width="434" height="13" font="4">When you drive downhill, additional precautions must be taken. Select the</text>
+<text top="169" left="51" width="444" height="13" font="4">lowest maximum speed and proceed with caution. Driving down a slope can</text>
+<text top="185" left="51" width="454" height="13" font="4">shift your center of gravity forward. Release the joystick if the wheelchair rolls</text>
+<text top="201" left="51" width="421" height="13" font="4">faster than you would like. This makes the wheelchair stop, and you can</text>
+<text top="218" left="51" width="428" height="13" font="4">descend again more slowly. Avoid sudden stops and starts. Note that the</text>
+<text top="234" left="51" width="370" height="13" font="4">distance required to stop will increase when you drive downhill.</text>
+<text top="270" left="51" width="343" height="13" font="4">Drive the wheelchair straight up slopes whenever possible.</text>
+<text top="302" left="51" width="28" height="19" font="9">4.2</text>
+<text top="302" left="111" width="129" height="19" font="9">Seat functions</text>
+<text top="333" left="51" width="397" height="13" font="4">Your wheelchair can have seat functions. A seat function is a power</text>
+<text top="349" left="51" width="70" height="13" font="4">adjustment.</text>
+<text top="369" left="51" width="447" height="13" font="4">Due to the custom nature of Permobil products, your wheelchair is equipped</text>
+<text top="385" left="51" width="400" height="13" font="4">with one of numerous different ways to adjust its seat functions. For</text>
+<text top="401" left="51" width="440" height="13" font="4">additional information on how to control your wheelchair, refer to any other</text>
+<text top="417" left="51" width="457" height="13" font="4">documentation received with your wheelchair or contact your Permobil dealer.</text>
+<text top="454" left="51" width="426" height="13" font="4">Permobil offers the following seat functions. Available functions can vary</text>
+<text top="470" left="51" width="321" height="13" font="4">depending on the equipment fitted on your wheelchair.</text>
+<text top="489" left="51" width="61" height="13" font="4">• seat lift</text>
+<text top="508" left="51" width="61" height="13" font="4">• seat tilt</text>
+<text top="526" left="51" width="81" height="13" font="4">• anterior tilt</text>
+<text top="545" left="51" width="87" height="13" font="4">• backrest tilt</text>
+<text top="586" left="738" width="100" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage </a>-</text>
+<text top="586" left="842" width="13" height="12" font="7">27</text>
+</page>
+<page number="28" position="absolute" top="0" left="0" height="629" width="892">
+<text top="43" left="38" width="79" height="13" font="4">• leg rest tilt</text>
+<text top="61" left="38" width="89" height="13" font="4">• footplate lift</text>
+<text top="98" left="38" width="444" height="13" font="4">The wheelchair’s center of gravity changes when you change the position of</text>
+<text top="114" left="38" width="435" height="13" font="4">the seat and/or the backrest. When you lift or tilt the seat or backrest, you</text>
+<text top="130" left="38" width="206" height="13" font="4">decrease the wheelchair’s stability.</text>
+<text top="170" left="92" width="83" height="16" font="13">WARNING!</text>
+<text top="170" left="183" width="286" height="16" font="14"><a href="permobil_m3-corpus_owner.pdf.html#20">Drive extra carefully when lifted or tilted</a></text>
+<text top="221" left="38" width="35" height="16" font="3">4.2.1</text>
+<text top="221" left="98" width="59" height="16" font="3">Seat lift</text>
+<text top="248" left="38" width="437" height="13" font="4">The seat lift lifts and lowers the seat. When the seat is lifted, the maximum</text>
+<text top="264" left="38" width="441" height="13" font="4">speed of the wheelchair can be reduced automatically or the ability to drive</text>
+<text top="280" left="38" width="436" height="13" font="4">the wheelchair can be restricted completely. The reduced maximum speed</text>
+<text top="297" left="38" width="458" height="13" font="4">can be indicated with a turtle on the display of the control panel, and the drive</text>
+<text top="313" left="38" width="254" height="13" font="4">restriction can be indicated with a red light.</text>
+<text top="586" left="38" width="14" height="12" font="7">28</text>
+<text top="586" left="55" width="100" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage</a></text>
+</page>
+<page number="29" position="absolute" top="0" left="0" height="629" width="892">
+<text top="40" left="51" width="37" height="16" font="3">4.2.2</text>
+<text top="40" left="111" width="59" height="16" font="3">Seat tilt</text>
+<text top="67" left="51" width="439" height="13" font="4">The seat tilt tilts the entire seat, from headrest to leg rest. When the seat is</text>
+<text top="83" left="51" width="452" height="13" font="4">tilted, the maximum speed of the wheelchair can be reduced automatically or</text>
+<text top="99" left="51" width="445" height="13" font="4">the ability to drive the wheelchair can be restricted completely. The reduced</text>
+<text top="115" left="51" width="439" height="13" font="4">maximum speed can be indicated with a turtle on the display of the control</text>
+<text top="132" left="51" width="428" height="13" font="4">panel and by a yellow light on the switch box. The drive restriction can be</text>
+<text top="148" left="51" width="420" height="13" font="4">indicated with a red light on the switch box or by a flashing turtle on the</text>
+<text top="164" left="51" width="163" height="13" font="4">display of the control panel.</text>
+<text top="586" left="737" width="101" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage </a>-</text>
+<text top="586" left="841" width="14" height="12" font="7">29</text>
+</page>
+<page number="30" position="absolute" top="0" left="0" height="629" width="892">
+<text top="40" left="38" width="38" height="16" font="3">4.2.3</text>
+<text top="40" left="98" width="86" height="16" font="3">Anterior tilt</text>
+<text top="67" left="38" width="410" height="13" font="4">The anterior tilt has programmable positions to meet individual needs.</text>
+<text top="87" left="38" width="238" height="13" font="4">Typical tilt positions are 5°, 10°, and 20°.</text>
+<text top="106" left="38" width="368" height="13" font="4">• 10° makes it easier to reach objects, for instance on a table.</text>
+<text top="125" left="38" width="232" height="13" font="4">• 20° extends your reach even further.</text>
+<text top="161" left="38" width="421" height="13" font="4">When you tilt the seat forward or rearward, it will stop when it reaches a</text>
+<text top="177" left="38" width="415" height="13" font="4">preprogrammed position or a neutral, not tilted, position. If you want to</text>
+<text top="193" left="38" width="454" height="13" font="4">continue the movement forward or rearward, press the button again or repeat</text>
+<text top="210" left="38" width="447" height="13" font="4">the joystick maneuver. The tilt angle can vary depending on how the anterior</text>
+<text top="226" left="38" width="338" height="13" font="4">tilt is programmed and if any positioning limitations apply.</text>
+<text top="266" left="92" width="83" height="16" font="13">WARNING!</text>
+<text top="266" left="183" width="227" height="16" font="14"><a href="permobil_m3-corpus_owner.pdf.html#19">Use positioning aids at all times</a></text>
+<text top="358" left="38" width="38" height="16" font="3">4.2.4</text>
+<text top="358" left="98" width="92" height="16" font="3">Backrest tilt</text>
+<text top="385" left="38" width="428" height="13" font="4">The backrest tilt tilts the backrest rearward and back up again. When the</text>
+<text top="401" left="38" width="422" height="13" font="4">backrest is tilted, the maximum speed of the wheelchair can be reduced</text>
+<text top="417" left="38" width="395" height="13" font="4">automatically or the ability to drive the wheelchair can be restricted</text>
+<text top="433" left="38" width="459" height="13" font="4">completely. The reduced maximum speed can be indicated with a turtle on the</text>
+<text top="450" left="38" width="449" height="13" font="4">display of the control panel and by a yellow light on the switch box. The drive</text>
+<text top="466" left="38" width="450" height="13" font="4">restriction can be indicated with a red light on the switch box or by a flashing</text>
+<text top="482" left="38" width="238" height="13" font="4">turtle on the display of the control panel.</text>
+<text top="586" left="38" width="15" height="12" font="7">30</text>
+<text top="586" left="56" width="100" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage</a></text>
+</page>
+<page number="31" position="absolute" top="0" left="0" height="629" width="892">
+<text top="40" left="51" width="38" height="16" font="3">4.2.5</text>
+<text top="40" left="111" width="85" height="16" font="3">Leg rest tilt</text>
+<text top="67" left="51" width="424" height="13" font="4">The leg rest tilt tilts the leg rest. When the leg rest is tilted, the maximum</text>
+<text top="83" left="51" width="441" height="13" font="4">speed of the wheelchair can be reduced automatically or the ability to drive</text>
+<text top="99" left="51" width="436" height="13" font="4">the wheelchair can be restricted completely. The reduced maximum speed</text>
+<text top="115" left="51" width="428" height="13" font="4">can be indicated with a turtle on the display of the control panel and by a</text>
+<text top="132" left="51" width="458" height="13" font="4">yellow light on the switch box. The drive restriction can be indicated with a red</text>
+<text top="148" left="51" width="428" height="13" font="4">light on the switch box or by a flashing turtle on the display of the control</text>
+<text top="164" left="51" width="36" height="13" font="4">panel.</text>
+<text top="204" left="105" width="83" height="16" font="13">WARNING!</text>
+<text top="204" left="195" width="185" height="16" font="14"><a href="permobil_m3-corpus_owner.pdf.html#21">Use leg rest tilt cautiously</a></text>
+<text top="255" left="51" width="38" height="16" font="3">4.2.6</text>
+<text top="255" left="111" width="97" height="16" font="3">Footplate lift</text>
+<text top="282" left="51" width="437" height="13" font="4">The footplate lift shortens or lengthens the leg rests to adjust the height of</text>
+<text top="298" left="51" width="458" height="13" font="4">the footplates. You can use this function to adjust the pressure on the back of</text>
+<text top="314" left="51" width="68" height="13" font="4">your thighs.</text>
+<text top="586" left="739" width="101" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage </a>-</text>
+<text top="586" left="843" width="12" height="12" font="7">31</text>
+</page>
+<page number="32" position="absolute" top="0" left="0" height="629" width="892">
+<text top="38" left="38" width="28" height="19" font="9">4.3</text>
+<text top="38" left="98" width="198" height="19" font="9">Charging the batteries</text>
+<text top="69" left="38" width="453" height="13" font="4">You can charge your wheelchair from the control panel. The charger socket is</text>
+<text top="85" left="38" width="408" height="13" font="4">located at the front of the joystick. Always connect the charger to the</text>
+<text top="101" left="38" width="445" height="13" font="4">wheelchair first before you connect the charger to the wall. It is not possible</text>
+<text top="117" left="38" width="231" height="13" font="4">to drive the wheelchair while it charges.</text>
+<text top="153" left="38" width="446" height="13" font="4">Charge the wheelchair as often as possible. Do not use the wheelchair if the</text>
+<text top="169" left="38" width="434" height="13" font="4">battery charge is low because you could become stranded. If the batteries</text>
+<text top="186" left="38" width="341" height="13" font="4">become completely discharged, charge them immediately.</text>
+<text top="222" left="38" width="437" height="13" font="4">Only use a Permobil charger intended for use with your wheelchair. Charge</text>
+<text top="238" left="38" width="458" height="13" font="4">the batteries in a well-ventilated, dry room. Never expose your batteries or any</text>
+<text top="254" left="38" width="241" height="13" font="4">part of your wheelchair to an open flame.</text>
+<text top="290" left="38" width="418" height="13" font="4">For more information and further instructions, see the battery charger’s</text>
+<text top="307" left="38" width="396" height="13" font="4">manual that was supplied with your wheelchair or contact Permobil.</text>
+<text top="339" left="38" width="29" height="19" font="9">4.4</text>
+<text top="339" left="98" width="145" height="19" font="9">Freewheel mode</text>
+<text top="369" left="38" width="450" height="13" font="4">The wheelchair is fitted with two freewheel levers. When the freewheel levers</text>
+<text top="385" left="38" width="457" height="13" font="4">are released, the wheelchair’s brakes are disengaged from the motor. When in</text>
+<text top="402" left="38" width="417" height="13" font="4">freewheel mode, the wheelchair can be moved manually, but cannot be</text>
+<text top="418" left="38" width="144" height="13" font="4">controlled electronically.</text>
+<text top="438" left="38" width="458" height="13" font="4">When the wheelchair is in freewheel mode, it must not be possible to drive the</text>
+<text top="454" left="38" width="365" height="13" font="4">wheelchair. If it can be driven, contact your service technician.</text>
+<text top="494" left="92" width="83" height="16" font="13">WARNING!</text>
+<text top="494" left="183" width="224" height="16" font="14"><a href="permobil_m3-corpus_owner.pdf.html#19">Use freewheel mode cautiously</a></text>
+<text top="586" left="38" width="14" height="12" font="7">32</text>
+<text top="586" left="55" width="101" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage</a></text>
+</page>
+<page number="33" position="absolute" top="0" left="0" height="629" width="892">
+<text top="40" left="51" width="36" height="16" font="3">4.4.1</text>
+<text top="40" left="111" width="187" height="16" font="3">Entering freewheel mode</text>
+<text top="67" left="51" width="9" height="13" font="8">1.</text>
+<text top="67" left="75" width="287" height="13" font="4">Make sure that the wheelchair is on level ground.</text>
+<text top="86" left="51" width="11" height="13" font="8">2.</text>
+<text top="86" left="75" width="139" height="13" font="4">Turn off the wheelchair.</text>
+<text top="105" left="51" width="11" height="13" font="8">3.</text>
+<text top="105" left="75" width="386" height="13" font="4">Flip both freewheel levers away from the center of the wheelchair.</text>
+<text top="134" left="51" width="38" height="16" font="3">4.4.2</text>
+<text top="134" left="111" width="175" height="16" font="3">Exiting freewheel mode</text>
+<text top="160" left="51" width="9" height="13" font="8">1.</text>
+<text top="160" left="75" width="139" height="13" font="4">Turn off the wheelchair.</text>
+<text top="179" left="51" width="11" height="13" font="8">2.</text>
+<text top="179" left="75" width="366" height="13" font="4">Flip both freewheel levers toward the center of the wheelchair.</text>
+<text top="211" left="51" width="28" height="19" font="9">4.5</text>
+<text top="211" left="111" width="198" height="19" font="9">Vehicle transportation</text>
+<text top="242" left="51" width="437" height="13" font="4">This chapter describes how you transport your wheelchair in a vehicle. The</text>
+<text top="258" left="51" width="415" height="13" font="4">wheelchair must only be transported in wheelchair accessible vehicles.</text>
+<text top="287" left="51" width="35" height="16" font="3">4.5.1</text>
+<text top="287" left="111" width="268" height="16" font="3">Securing the wheelchair in a vehicle</text>
+<text top="314" left="51" width="449" height="13" font="4">This chapter describes how you secure the wheelchair in a vehicle. You must</text>
+<text top="330" left="51" width="439" height="13" font="4">either secure the wheelchair at its tie-down points or use a docking system</text>
+<text top="346" left="51" width="451" height="13" font="4">that complies with ISO 10542–1:2012, which is an international standard that</text>
+<text top="362" left="51" width="369" height="13" font="4">governs wheelchair tie-downs and occupant-restraint systems.</text>
+<text top="398" left="51" width="405" height="13" font="4">Remove loose objects, trays, and other auxiliary equipment from your</text>
+<text top="414" left="51" width="438" height="13" font="4">wheelchair and store them safely before you transport your wheelchair in a</text>
+<text top="431" left="51" width="424" height="13" font="4">motor vehicle. If you transport a wheelchair in a motor vehicle with loose</text>
+<text top="447" left="51" width="427" height="13" font="4">objects, trays, or other auxiliary equipment the vehicle’s occupants could</text>
+<text top="463" left="51" width="111" height="13" font="4">suffer bodily injury.</text>
+<text top="586" left="737" width="100" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage </a>-</text>
+<text top="586" left="841" width="14" height="12" font="7">33</text>
+</page>
+<page number="34" position="absolute" top="0" left="0" height="629" width="892">
+<text top="43" left="38" width="445" height="13" font="4">This is how you secure the wheelchair at its four tie-down points. Make sure</text>
+<text top="59" left="38" width="420" height="13" font="4">that the wheelchair is properly secured and that the wheelchair is not in</text>
+<text top="75" left="38" width="448" height="13" font="4">freewheel mode. Secure the wheelchair with straps at the tie-down points at</text>
+<text top="91" left="38" width="403" height="13" font="4">the front and rear. The tie-down points are marked with yellow labels</text>
+<text top="91" left="457" width="30" height="13" font="4">. Use</text>
+<text top="107" left="38" width="207" height="13" font="4">heavy-duty straps when necessary.</text>
+<text top="155" left="38" width="454" height="13" font="4">After you have secured the straps to your wheelchair, secure the other end of</text>
+<text top="171" left="38" width="451" height="13" font="4">the straps to your vehicle according to the appropriate instructions. The end-</text>
+<text top="187" left="38" width="397" height="13" font="4">fitting on the strap must comply with ISO 10542–1:2012, which is an</text>
+<text top="204" left="38" width="425" height="13" font="4">international standard that governs wheelchair tie-downs and occupant-</text>
+<text top="220" left="38" width="404" height="13" font="4">restraint systems. Every vehicle tie-down system is different, and it is</text>
+<text top="236" left="38" width="444" height="13" font="4">important that you follow the instructions for your particular vehicle system.</text>
+<text top="272" left="38" width="457" height="13" font="4">To make transportation of the wheelchair easier, you can remove or fold down</text>
+<text top="288" left="38" width="444" height="13" font="4">the backrest. This is done in a few simple moves. See <a href="permobil_m3-corpus_owner.pdf.html#44">page 44. </a>If necessary,</text>
+<text top="305" left="38" width="281" height="13" font="4">you can also remove the headrest. See <a href="permobil_m3-corpus_owner.pdf.html#39">page 39.</a></text>
+<text top="586" left="38" width="14" height="12" font="7">34</text>
+<text top="586" left="56" width="101" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage</a></text>
+</page>
+<page number="35" position="absolute" top="0" left="0" height="629" width="892">
+<text top="43" left="51" width="418" height="13" font="4">You can also use a docking system to secure your wheelchair. The Dahl</text>
+<text top="59" left="51" width="431" height="13" font="4">docking stations MK II and VarioDock are approved docking systems. The</text>
+<text top="75" left="51" width="434" height="13" font="4">maximum user weight for Dahl docking stations is 136 kg. See the docking</text>
+<text top="91" left="51" width="222" height="13" font="4">station’s manual on how to operate it.</text>
+<text top="111" left="51" width="429" height="13" font="4">For service technicians who install lock plates, find the relevant assembly</text>
+<text top="127" left="51" width="96" height="13" font="4">instruction here:</text>
+<text top="127" left="150" width="230" height="13" font="10"><a href="https://refs.permobil.com/IFU/332849">https://refs.permobil.com/IFU/332849</a></text>
+<text top="294" left="51" width="38" height="16" font="3">4.5.2</text>
+<text top="294" left="111" width="315" height="16" font="3">Using the wheelchair as a seat in a vehicle</text>
+<text top="321" left="51" width="448" height="13" font="4">Permobil recommends that, whenever feasible, you transfer to a vehicle seat</text>
+<text top="337" left="51" width="447" height="13" font="4">and that you use the vehicle’s restraint systems. The unoccupied wheelchair</text>
+<text top="353" left="51" width="456" height="13" font="4">should be stored in a cargo area or secured in the vehicle during travel. Follow</text>
+<text top="369" left="51" width="455" height="13" font="4">the instructions below if you want to use the wheelchair as a seat in a vehicle.</text>
+<text top="409" left="105" width="83" height="16" font="13">WARNING!</text>
+<text top="409" left="195" width="291" height="16" font="14"><a href="permobil_m3-corpus_owner.pdf.html#19">Positioning aids do not replace seatbelts</a></text>
+<text top="469" left="105" width="83" height="16" font="13">WARNING!</text>
+<text top="469" left="195" width="208" height="16" font="14"><a href="permobil_m3-corpus_owner.pdf.html#18">Vehicle seating requirements</a></text>
+<text top="586" left="737" width="101" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage </a>-</text>
+<text top="586" left="841" width="14" height="12" font="7">35</text>
+</page>
+<page number="36" position="absolute" top="0" left="0" height="629" width="892">
+<text top="43" left="38" width="451" height="13" font="4">The wheelchair shall be forward-facing when you use it as a seat in a vehicle.</text>
+<text top="59" left="38" width="398" height="13" font="4">Permobil has no manufacturer-designated wheelchair-mounted belt</text>
+<text top="75" left="38" width="270" height="13" font="4">restraints. Use the vehicle’s restraint systems.</text>
+<text top="95" left="38" width="447" height="13" font="4">You must use both pelvic-belt restraints and shoulder-belt restraints. Pelvic-</text>
+<text top="111" left="38" width="386" height="13" font="4">and shoulder-belt restraints should be used together as designed.</text>
+<text top="131" left="38" width="446" height="13" font="4">Make sure that the belt restraints are as tight as possible, without becoming</text>
+<text top="148" left="38" width="459" height="13" font="4">uncomfortable, and that they are not twisted. They must be close to your body</text>
+<text top="164" left="38" width="434" height="13" font="4">and not held away by parts of the wheelchair. Adjust your restraint system</text>
+<text top="180" left="38" width="404" height="13" font="4">such that the release mechanisms cannot be pressed during a crash.</text>
+<text top="274" left="38" width="439" height="13" font="4">The shoulder-belt restraint should be worn over the middle of the shoulder.</text>
+<text top="290" left="38" width="438" height="13" font="4">The pelvic-belt restraint should be in contact with and worn low across the</text>
+<text top="306" left="38" width="452" height="13" font="4">pelvis and within the preferred zone of 30° to 75°. A steeper pelvic-belt angle</text>
+<text top="322" left="38" width="397" height="13" font="4">between 45° to 75° to the horizontal is preferred. Make sure that no</text>
+<text top="338" left="38" width="443" height="13" font="4">components of the wheelchair are lifted or tilted. The wheelchair must be in</text>
+<text top="355" left="38" width="190" height="13" font="4">the position shown in the image.</text>
+<text top="481" left="38" width="29" height="19" font="9">4.6</text>
+<text top="481" left="98" width="158" height="19" font="9">Air transportation</text>
+<text top="512" left="38" width="445" height="13" font="4">This chapter contains information that can be helpful if you are transporting</text>
+<text top="528" left="38" width="131" height="13" font="4">your wheelchair by air.</text>
+<text top="586" left="38" width="14" height="12" font="7">36</text>
+<text top="586" left="55" width="100" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage</a></text>
+</page>
+<page number="37" position="absolute" top="0" left="0" height="629" width="892">
+<text top="40" left="51" width="35" height="16" font="3">4.6.1</text>
+<text top="40" left="111" width="68" height="16" font="3">Batteries</text>
+<text top="67" left="51" width="455" height="13" font="4">The main circuit breaker must always be in the off position. In most cases, gel</text>
+<text top="83" left="51" width="336" height="13" font="4">batteries do not have to be removed from the wheelchair.</text>
+<text top="112" left="51" width="38" height="16" font="3">4.6.2</text>
+<text top="112" left="111" width="174" height="16" font="3">Weight and dimensions</text>
+<text top="139" left="51" width="451" height="13" font="4">Contact the relevant airline for applicable rules on weight and dimensions for</text>
+<text top="155" left="51" width="135" height="13" font="4">your power wheelchair.</text>
+<text top="184" left="51" width="38" height="16" font="3">4.6.3</text>
+<text top="184" left="111" width="249" height="16" font="3">Preventing damage to wheelchair</text>
+<text top="210" left="51" width="446" height="13" font="4">Since the wheelchair will be put with other goods in a confined space during</text>
+<text top="227" left="51" width="380" height="13" font="4">the flight, it is important to take preventive measures to minimize</text>
+<text top="243" left="51" width="242" height="13" font="4">transportation damage to the wheelchair.</text>
+<text top="263" left="51" width="459" height="13" font="4">Cover the control panel and other sensitive objects with soft, shock-absorbing</text>
+<text top="279" left="51" width="452" height="13" font="4">material (foam plastic or similar). Push the control panel toward the backrest.</text>
+<text top="295" left="51" width="257" height="13" font="4">Tape any loose cables to the seat or covers.</text>
+<text top="327" left="51" width="27" height="19" font="9">4.7</text>
+<text top="327" left="111" width="166" height="19" font="9">Rail transportation</text>
+<text top="358" left="51" width="450" height="13" font="4">Regulation (EU) 1300/2014 concerns the interoperability of the European rail</text>
+<text top="374" left="51" width="449" height="13" font="4">network. A part of this regulation contains limits for weights and dimensions.</text>
+<text top="390" left="51" width="438" height="13" font="4">Your wheelchair can deviate from the weight limits and from the dimension</text>
+<text top="406" left="51" width="91" height="13" font="4">limits specified.</text>
+<text top="586" left="738" width="100" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage </a>-</text>
+<text top="586" left="842" width="13" height="12" font="7">37</text>
+</page>
+<page number="38" position="absolute" top="0" left="0" height="629" width="892">
+<text top="38" left="38" width="29" height="19" font="9">4.8</text>
+<text top="38" left="98" width="178" height="19" font="9">Main circuit breaker</text>
+<text top="69" left="38" width="450" height="13" font="4">Your wheelchair has a main circuit breaker with two functions. You can use it</text>
+<text top="85" left="38" width="457" height="13" font="4">to turn off the main power, for example before you transport the wheelchair. It</text>
+<text top="101" left="38" width="286" height="13" font="4">also trips if there are any issues with the circuits.</text>
+<text top="121" left="38" width="452" height="13" font="4">The first time the main circuit breaker trips, you can reset it yourself. If it trips</text>
+<text top="137" left="38" width="225" height="13" font="4">again, contact your service technician.</text>
+<text top="157" left="38" width="444" height="13" font="4">Use the lever at the back of the wheelchair to turn on and off or to reset the</text>
+<text top="173" left="38" width="451" height="13" font="4">main circuit breaker. Always turn off the control panel before you turn off the</text>
+<text top="190" left="38" width="120" height="13" font="4">main circuit breaker.</text>
+<text top="375" left="38" width="29" height="19" font="9">4.9</text>
+<text top="375" left="98" width="172" height="19" font="9">Wheelchair storage</text>
+<text top="406" left="38" width="373" height="13" font="4">You can store your wheelchair for a short or long period of time.</text>
+<text top="426" left="38" width="455" height="13" font="4">When you store it for a short time, make sure that the room is dry and at least</text>
+<text top="442" left="38" width="436" height="13" font="4">5°C (41°F). If the temperature is lower, the batteries might not charge fully.</text>
+<text top="458" left="38" width="253" height="13" font="4">They are also more vulnerable to corrosion.</text>
+<text top="478" left="38" width="436" height="13" font="4">When you store it for a long time, fully charge the batteries before storage.</text>
+<text top="494" left="38" width="445" height="13" font="4">Remember to switch off the main circuit breaker. Charge the batteries every</text>
+<text top="510" left="38" width="421" height="13" font="4">month. You will need to switch on the main circuit breaker to charge the</text>
+<text top="527" left="38" width="418" height="13" font="4">batteries, then switch off the main circuit breaker if the wheelchair is to</text>
+<text top="543" left="38" width="105" height="13" font="4">remain in storage.</text>
+<text top="586" left="38" width="14" height="12" font="7">38</text>
+<text top="586" left="55" width="100" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage</a></text>
+</page>
+<page number="39" position="absolute" top="0" left="0" height="629" width="892">
+<text top="38" left="51" width="38" height="19" font="9">4.10</text>
+<text top="38" left="111" width="180" height="19" font="9">Manual adjustments</text>
+<text top="69" left="51" width="423" height="13" font="4">The wheelchair can have functions that are adjusted manually. Available</text>
+<text top="85" left="51" width="407" height="13" font="4">functions vary depending on the equipment fitted on your wheelchair.</text>
+<text top="105" left="51" width="457" height="13" font="4">If you do not have the power lift function on your wheelchair, seat height must</text>
+<text top="121" left="51" width="285" height="13" font="4">only be adjusted by authorized service providers.</text>
+<text top="150" left="51" width="128" height="16" font="3">4.10.1 Headrest</text>
+<text top="177" left="51" width="427" height="13" font="4">This chapter shows you how to adjust the height, depth, and angle of the</text>
+<text top="193" left="51" width="437" height="13" font="4">headrest. It also shows you how to remove and install the headrest. Do not</text>
+<text top="209" left="51" width="451" height="13" font="4">put any weight on the headrest while you adjust it. If you do, you can damage</text>
+<text top="225" left="51" width="11" height="13" font="4">it.</text>
+<text top="586" left="737" width="101" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage </a>-</text>
+<text top="586" left="841" width="14" height="12" font="7">39</text>
+</page>
+<page number="40" position="absolute" top="0" left="0" height="629" width="892">
+<text top="43" left="38" width="352" height="13" font="4">This is how you adjust the height and depth of the headrest.</text>
+<text top="61" left="38" width="9" height="13" font="8">1.</text>
+<text top="61" left="62" width="109" height="13" font="4">Loosen the handle</text>
+<text top="61" left="190" width="95" height="13" font="4">on the backrest.</text>
+<text top="80" left="38" width="11" height="13" font="8">2.</text>
+<text top="80" left="62" width="303" height="13" font="4">Adjust the height or depth to the preferred position.</text>
+<text top="99" left="38" width="11" height="13" font="8">3.</text>
+<text top="99" left="62" width="110" height="13" font="4">Tighten the handle</text>
+<text top="99" left="188" width="3" height="13" font="4">.</text>
+<text top="259" left="38" width="283" height="13" font="4">This is how you adjust the angle of the headrest.</text>
+<text top="278" left="38" width="9" height="13" font="8">1.</text>
+<text top="278" left="62" width="109" height="13" font="4">Loosen the handle</text>
+<text top="278" left="190" width="160" height="13" font="4">on the rear of the headrest.</text>
+<text top="296" left="38" width="11" height="13" font="8">2.</text>
+<text top="296" left="62" width="300" height="13" font="4">Adjust the headrest angle to the preferred position.</text>
+<text top="315" left="38" width="11" height="13" font="8">3.</text>
+<text top="315" left="62" width="110" height="13" font="4">Tighten the handle</text>
+<text top="315" left="188" width="3" height="13" font="4">.</text>
+<text top="586" left="38" width="15" height="12" font="7">40</text>
+<text top="586" left="56" width="100" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage</a></text>
+</page>
+<page number="41" position="absolute" top="0" left="0" height="629" width="892">
+<text top="43" left="51" width="281" height="13" font="4">This is how you remove and install the headrest.</text>
+<text top="61" left="51" width="9" height="13" font="8">1.</text>
+<text top="61" left="75" width="109" height="13" font="4">Loosen the handle</text>
+<text top="61" left="202" width="95" height="13" font="4">on the backrest.</text>
+<text top="80" left="51" width="11" height="13" font="8">2.</text>
+<text top="80" left="75" width="167" height="13" font="4">Lift the headrest straight up.</text>
+<text top="101" left="51" width="418" height="13" font="4">Install the headrest in the reverse order. You can remove and install the</text>
+<text top="117" left="51" width="254" height="13" font="4">headrest without affecting current settings.</text>
+<text top="254" left="51" width="270" height="16" font="3">4.10.2 Headrest with link hardware</text>
+<text top="281" left="51" width="427" height="13" font="4">This chapter shows you how to adjust the height, depth, and angle of the</text>
+<text top="297" left="51" width="394" height="13" font="4">headrest. It also shows you how to remove and install the headrest.</text>
+<text top="326" left="51" width="428" height="13" font="4">This is how you adjust the height of the headrest. There are four different</text>
+<text top="342" left="51" width="238" height="13" font="4">height settings on your headrest. Setting</text>
+<text top="342" left="308" width="143" height="13" font="4">is the lowest and setting</text>
+<text top="342" left="469" width="32" height="13" font="4">is the</text>
+<text top="359" left="51" width="101" height="13" font="4">highest. If setting</text>
+<text top="359" left="171" width="327" height="13" font="4">is used, test the seat functions seat tilt and backrest tilt</text>
+<text top="375" left="51" width="95" height="13" font="4">for interference.</text>
+<text top="395" left="65" width="100" height="13" font="4">Allen key 2.5 mm</text>
+<text top="430" left="51" width="9" height="13" font="8">1.</text>
+<text top="430" left="75" width="315" height="13" font="4">Follow the instructions below to remove the headrest.</text>
+<text top="449" left="51" width="11" height="13" font="8">2.</text>
+<text top="449" left="75" width="397" height="13" font="4">Remove the screw and put it in the preferred setting on the bracket.</text>
+<text top="468" left="51" width="11" height="13" font="8">3.</text>
+<text top="468" left="75" width="307" height="13" font="4">Follow the instructions below to install the headrest.</text>
+<text top="586" left="739" width="101" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage </a>-</text>
+<text top="586" left="842" width="12" height="12" font="7">41</text>
+</page>
+<page number="42" position="absolute" top="0" left="0" height="629" width="892">
+<text top="43" left="38" width="352" height="13" font="4">This is how you adjust the height and depth of the headrest.</text>
+<text top="63" left="52" width="89" height="13" font="4">Allen key 5 mm</text>
+<text top="98" left="38" width="9" height="13" font="8">1.</text>
+<text top="98" left="62" width="175" height="13" font="4">Loosen the screw at each link</text>
+<text top="98" left="252" width="3" height="13" font="4">.</text>
+<text top="117" left="38" width="11" height="13" font="8">2.</text>
+<text top="117" left="62" width="244" height="13" font="4">Change the angle of the links as required.</text>
+<text top="135" left="38" width="11" height="13" font="8">3.</text>
+<text top="135" left="62" width="114" height="13" font="4">Tighten the screws.</text>
+<text top="274" left="38" width="283" height="13" font="4">This is how you adjust the angle of the headrest.</text>
+<text top="294" left="52" width="89" height="13" font="4">Allen key 5 mm</text>
+<text top="329" left="38" width="9" height="13" font="8">1.</text>
+<text top="329" left="62" width="135" height="13" font="4">Loosen the front screw</text>
+<text top="329" left="216" width="83" height="13" font="4">in the top link.</text>
+<text top="348" left="38" width="11" height="13" font="8">2.</text>
+<text top="348" left="62" width="297" height="13" font="4">Adjust the headrest angle to the preferred position</text>
+<text top="348" left="375" width="3" height="13" font="4">.</text>
+<text top="367" left="38" width="11" height="13" font="8">3.</text>
+<text top="367" left="62" width="108" height="13" font="4">Tighten the screw.</text>
+<text top="586" left="38" width="14" height="12" font="7">42</text>
+<text top="586" left="55" width="101" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage</a></text>
+</page>
+<page number="43" position="absolute" top="0" left="0" height="629" width="892">
+<text top="43" left="51" width="281" height="13" font="4">This is how you remove and install the headrest.</text>
+<text top="61" left="51" width="9" height="13" font="8">1.</text>
+<text top="61" left="75" width="109" height="13" font="4">Loosen the handle</text>
+<text top="61" left="202" width="157" height="13" font="4">at the rear of the backrest.</text>
+<text top="80" left="51" width="11" height="13" font="8">2.</text>
+<text top="80" left="75" width="164" height="13" font="4">Lift the headrest straight up</text>
+<text top="80" left="254" width="3" height="13" font="4">.</text>
+<text top="101" left="51" width="443" height="13" font="4">Install in the reverse order. You can remove and install the headrest without</text>
+<text top="117" left="51" width="152" height="13" font="4">affecting current settings.</text>
+<text top="274" left="51" width="151" height="16" font="3">4.10.3 Backrest tilt</text>
+<text top="300" left="51" width="414" height="13" font="4">You can adjust the backrest to several fixed positions. From an upright</text>
+<text top="316" left="51" width="318" height="13" font="4">position, the backrest can be tilted a maximum of 45°.</text>
+<text top="337" left="51" width="337" height="13" font="4">Do not put any weight on the backrest while you adjust it.</text>
+<text top="355" left="51" width="9" height="13" font="8">1.</text>
+<text top="355" left="75" width="244" height="13" font="4">Hold the backrest and pull out the handle</text>
+<text top="355" left="337" width="156" height="13" font="4">of the quick-acting lock so</text>
+<text top="372" left="75" width="202" height="13" font="4">that the locking tube moves freely.</text>
+<text top="390" left="51" width="11" height="13" font="8">2.</text>
+<text top="390" left="75" width="300" height="13" font="4">Adjust the backrest angle to the preferred position.</text>
+<text top="409" left="51" width="11" height="13" font="8">3.</text>
+<text top="409" left="75" width="112" height="13" font="4">Release the handle</text>
+<text top="409" left="206" width="141" height="13" font="4">to lock the locking tube.</text>
+<text top="428" left="51" width="12" height="13" font="8">4.</text>
+<text top="428" left="75" width="289" height="13" font="4">Make sure that the backrest is locked in position.</text>
+<text top="586" left="737" width="100" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage </a>-</text>
+<text top="586" left="840" width="14" height="12" font="7">43</text>
+</page>
+<page number="44" position="absolute" top="0" left="0" height="629" width="892">
+<text top="40" left="38" width="231" height="16" font="3">4.10.4 Removing the backrest</text>
+<text top="67" left="38" width="456" height="13" font="4">You can remove the backrest to make transportation of the wheelchair easier.</text>
+<text top="83" left="38" width="203" height="13" font="4">First, remove the backrest cushion</text>
+<text top="83" left="257" width="188" height="13" font="4">. It is attached with Velcro. Then</text>
+<text top="99" left="38" width="130" height="13" font="4">carefully undo the clip</text>
+<text top="99" left="187" width="267" height="13" font="4">on the backrest and pull the upper part of the</text>
+<text top="115" left="38" width="118" height="13" font="4">backrest straight up</text>
+<text top="115" left="172" width="3" height="13" font="4">.</text>
+<text top="136" left="38" width="326" height="13" font="4">If needed, you can also remove the headrest. See <a href="permobil_m3-corpus_owner.pdf.html#39">4.10.1</a></text>
+<text top="136" left="367" width="54" height="13" font="16"><a href="permobil_m3-corpus_owner.pdf.html#39"><i>Headrest</i></a></text>
+<text top="136" left="422" width="57" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#39">, page 39.</a></text>
+<text top="501" left="38" width="120" height="16" font="3">4.10.5 Armrest</text>
+<text top="527" left="38" width="445" height="13" font="4">This chapter shows you how to adjust a swiveling armrest and how to adjust</text>
+<text top="543" left="38" width="204" height="13" font="4">armrest height and armrest angles.</text>
+<text top="586" left="38" width="15" height="12" font="7">44</text>
+<text top="586" left="56" width="100" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage</a></text>
+</page>
+<page number="45" position="absolute" top="0" left="0" height="629" width="892">
+	<fontspec id="18" size="15" family="LKGCKB+GTAmerica-Md" color="#000000"/>
+	<fontspec id="19" size="13" family="LKGCKB+GTAmerica-Md" color="#ffffff"/>
+<text top="42" left="51" width="180" height="15" font="18">4.10.5.1 Swiveling armrest</text>
+<text top="66" left="51" width="413" height="13" font="4">This chapter describes how you adjust a swiveling armrest. A swiveling</text>
+<text top="82" left="51" width="459" height="13" font="4">armrest is an armrest that you can push in or out as preferred between certain</text>
+<text top="99" left="51" width="211" height="13" font="4">settings. There is one locked setting</text>
+<text top="99" left="281" width="145" height="13" font="4">and three swivel settings</text>
+<text top="99" left="473" width="3" height="13" font="4">.</text>
+<text top="150" left="60" width="92" height="13" font="19">Swivel settings</text>
+<text top="180" left="219" width="88" height="13" font="4">Factory setting</text>
+<text top="181" left="369" width="43" height="13" font="4">Locked</text>
+<text top="210" left="219" width="88" height="13" font="4">Factory setting</text>
+<text top="211" left="369" width="59" height="13" font="4">0° to +15°</text>
+<text top="241" left="219" width="90" height="13" font="4">Custom setting</text>
+<text top="242" left="369" width="69" height="13" font="4">-15° to +15°</text>
+<text top="271" left="219" width="90" height="13" font="4">Custom setting</text>
+<text top="272" left="369" width="63" height="13" font="4">0° to +30°</text>
+<text top="319" left="51" width="244" height="13" font="4">This is how you change the swivel setting.</text>
+<text top="339" left="65" width="89" height="13" font="4">Allen key 5 mm</text>
+<text top="374" left="51" width="9" height="13" font="8">1.</text>
+<text top="374" left="75" width="118" height="13" font="4">Fold up the armrest.</text>
+<text top="393" left="51" width="11" height="13" font="8">2.</text>
+<text top="393" left="75" width="260" height="13" font="4">Remove the screws from the current setting.</text>
+<text top="412" left="51" width="11" height="13" font="8">3.</text>
+<text top="412" left="75" width="312" height="13" font="4">Insert and tighten the screws in the preferred setting.</text>
+<text top="431" left="51" width="12" height="13" font="8">4.</text>
+<text top="431" left="75" width="135" height="13" font="4">Fold down the armrest.</text>
+<text top="586" left="737" width="101" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage </a>-</text>
+<text top="586" left="840" width="14" height="12" font="7">45</text>
+</page>
+<page number="46" position="absolute" top="0" left="0" height="629" width="892">
+	<fontspec id="20" size="15" family="UPEGUS+ArialUnicodeMS" color="#231f20"/>
+<text top="42" left="38" width="295" height="15" font="18">4.10.5.2 Armrest height and armrest angles</text>
+<text top="66" left="38" width="419" height="13" font="4">This chapter shows you how to adjust the height of the armrest and the</text>
+<text top="82" left="38" width="409" height="13" font="4">angles of the armrest. There are two ways to adjust the armrest angle.</text>
+<text top="112" left="38" width="425" height="13" font="4">This is how you adjust the height of the armrest. You can see the current</text>
+<text top="128" left="38" width="450" height="13" font="4">height of the armrest on the backrest. The adjustment crank is located in the</text>
+<text top="144" left="38" width="55" height="13" font="4">backrest.</text>
+<text top="164" left="52" width="89" height="13" font="4">Allen key 5 mm</text>
+<text top="185" left="52" width="104" height="13" font="4">Adjustment crank</text>
+<text top="220" left="38" width="9" height="13" font="8">1.</text>
+<text top="220" left="62" width="137" height="13" font="4">Loosen the four screws</text>
+<text top="220" left="218" width="95" height="13" font="4">on the backrest.</text>
+<text top="339" left="38" width="11" height="13" font="8">2.</text>
+<text top="339" left="62" width="176" height="13" font="4">Remove the adjustment crank</text>
+<text top="339" left="254" width="3" height="13" font="4">.</text>
+<text top="357" left="38" width="11" height="13" font="8">3.</text>
+<text top="357" left="62" width="325" height="13" font="4">Use the adjustment crank to turn the adjustment screw</text>
+<text top="357" left="406" width="48" height="13" font="4">until the</text>
+<text top="373" left="62" width="206" height="13" font="4">armrest is in the preferred position.</text>
+<text top="392" left="38" width="12" height="13" font="8">4.</text>
+<text top="392" left="62" width="237" height="13" font="4">Tighten the four screws on the backrest.</text>
+<text top="304" left="606" width="8" height="14" font="20">4</text>
+<text top="586" left="38" width="14" height="12" font="7">46</text>
+<text top="586" left="56" width="100" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage</a></text>
+</page>
+<page number="47" position="absolute" top="0" left="0" height="629" width="892">
+<text top="43" left="51" width="438" height="13" font="4">This is one way to adjust the angle of the armrest. The lower lock nut has a</text>
+<text top="59" left="51" width="99" height="13" font="4">left-hand thread.</text>
+<text top="79" left="65" width="87" height="13" font="4">Wrench 14 mm</text>
+<text top="114" left="51" width="9" height="13" font="8">1.</text>
+<text top="114" left="75" width="148" height="13" font="4">Loosen the two lock nuts</text>
+<text top="114" left="241" width="130" height="13" font="4">on the adjustment bar</text>
+<text top="114" left="387" width="3" height="13" font="4">.</text>
+<text top="133" left="51" width="11" height="13" font="8">2.</text>
+<text top="133" left="75" width="399" height="13" font="4">Turn the adjustment bar to adjust the armrest angle to the preferred</text>
+<text top="149" left="75" width="50" height="13" font="4">position.</text>
+<text top="168" left="51" width="11" height="13" font="8">3.</text>
+<text top="168" left="75" width="152" height="13" font="4">Tighten the two lock nuts.</text>
+<text top="586" left="738" width="100" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage </a>-</text>
+<text top="586" left="841" width="13" height="12" font="7">47</text>
+</page>
+<page number="48" position="absolute" top="0" left="0" height="629" width="892">
+<text top="43" left="38" width="323" height="13" font="4">This is the other way to adjust the angle of the armrest.</text>
+<text top="63" left="52" width="89" height="13" font="4">Allen key 5 mm</text>
+<text top="98" left="38" width="9" height="13" font="8">1.</text>
+<text top="98" left="62" width="229" height="13" font="4">Move the screw from the fixed position</text>
+<text top="98" left="310" width="130" height="13" font="4">to the flexible position</text>
+<text top="98" left="455" width="3" height="13" font="4">.</text>
+<text top="117" left="38" width="11" height="13" font="8">2.</text>
+<text top="117" left="62" width="294" height="13" font="4">Adjust the armrest angle to the preferred position.</text>
+<text top="135" left="38" width="11" height="13" font="8">3.</text>
+<text top="135" left="62" width="105" height="13" font="4">Tighten the screw</text>
+<text top="135" left="182" width="3" height="13" font="4">.</text>
+<text top="586" left="38" width="15" height="12" font="7">48</text>
+<text top="586" left="56" width="100" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage</a></text>
+</page>
+<page number="49" position="absolute" top="0" left="0" height="629" width="892">
+<text top="40" left="51" width="144" height="16" font="3">4.10.6 Leg rest tilt</text>
+<text top="67" left="51" width="428" height="13" font="4">The leg rest on your wheelchair can be adjusted to several positions from</text>
+<text top="83" left="51" width="123" height="13" font="4">vertical to horizontal.</text>
+<text top="102" left="51" width="9" height="13" font="8">1.</text>
+<text top="102" left="75" width="110" height="13" font="4">Pull out the handle</text>
+<text top="102" left="204" width="281" height="13" font="4">of the quick-acting lock so that the locking tube</text>
+<text top="118" left="75" width="77" height="13" font="4">moves freely.</text>
+<text top="137" left="51" width="11" height="13" font="8">2.</text>
+<text top="137" left="75" width="292" height="13" font="4">Adjust the leg rest angle to the preferred position.</text>
+<text top="156" left="51" width="11" height="13" font="8">3.</text>
+<text top="156" left="75" width="112" height="13" font="4">Release the handle</text>
+<text top="156" left="206" width="141" height="13" font="4">to lock the locking tube.</text>
+<text top="175" left="51" width="12" height="13" font="8">4.</text>
+<text top="175" left="75" width="281" height="13" font="4">Make sure that the leg rest is locked in position.</text>
+<text top="292" left="51" width="140" height="16" font="3">4.10.7 Footplates</text>
+<text top="318" left="51" width="405" height="13" font="4">This chapter shows you how to adjust the height and the angle of the</text>
+<text top="335" left="51" width="428" height="13" font="4">footplates. There are two ways to adjust the height of the footplates. You</text>
+<text top="351" left="51" width="387" height="13" font="4">need to remove the leg rest cover before you can make any height</text>
+<text top="367" left="51" width="70" height="13" font="4">adjustment.</text>
+<text top="402" left="51" width="9" height="13" font="8">1.</text>
+<text top="402" left="75" width="142" height="13" font="4">Remove the two screws.</text>
+<text top="421" left="51" width="11" height="13" font="8">2.</text>
+<text top="421" left="75" width="178" height="13" font="4">Pull the leg rest cover forward.</text>
+<text top="586" left="737" width="101" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage </a>-</text>
+<text top="586" left="840" width="14" height="12" font="7">49</text>
+</page>
+<page number="50" position="absolute" top="0" left="0" height="629" width="892">
+<text top="43" left="38" width="296" height="13" font="4">This is how you adjust the height of the footplates.</text>
+<text top="63" left="54" width="251" height="13" font="4">Adjusts both footplates to the same height</text>
+<text top="83" left="54" width="421" height="13" font="4">Adjusts the footplates separately, if you prefer them at different heights</text>
+<text top="118" left="38" width="9" height="13" font="8">1.</text>
+<text top="118" left="62" width="147" height="13" font="4">Undo the locking screws.</text>
+<text top="137" left="38" width="11" height="13" font="8">2.</text>
+<text top="137" left="62" width="263" height="13" font="4">Adjust the footplates to the preferred height.</text>
+<text top="156" left="38" width="11" height="13" font="8">3.</text>
+<text top="156" left="62" width="160" height="13" font="4">Tighten the locking screws.</text>
+<text top="174" left="38" width="12" height="13" font="8">4.</text>
+<text top="174" left="62" width="250" height="13" font="4">Make sure that the footplates are secured.</text>
+<text top="193" left="38" width="11" height="13" font="8">5.</text>
+<text top="193" left="62" width="198" height="13" font="4">Push the leg rest cover into place.</text>
+<text top="212" left="38" width="12" height="13" font="8">6.</text>
+<text top="212" left="62" width="139" height="13" font="4">Tighten the two screws.</text>
+<text top="331" left="38" width="405" height="13" font="4">This is how you adjust the angle of the footplates. You can adjust the</text>
+<text top="348" left="38" width="346" height="13" font="4">footplates separately if you prefer them at different angles.</text>
+<text top="368" left="52" width="89" height="13" font="4">Allen key 5 mm</text>
+<text top="388" left="52" width="88" height="13" font="4">Wrench 10 mm</text>
+<text top="423" left="38" width="9" height="13" font="8">1.</text>
+<text top="423" left="62" width="119" height="13" font="4">Tilt up the footplate.</text>
+<text top="442" left="38" width="11" height="13" font="8">2.</text>
+<text top="442" left="62" width="116" height="13" font="4">Loosen the lock nut</text>
+<text top="442" left="194" width="3" height="13" font="4">.</text>
+<text top="461" left="38" width="11" height="13" font="8">3.</text>
+<text top="461" left="62" width="117" height="13" font="4">Turn the stop screw</text>
+<text top="461" left="198" width="259" height="13" font="4">up or down until the footplate angle is in the</text>
+<text top="477" left="62" width="108" height="13" font="4">preferred position.</text>
+<text top="496" left="38" width="12" height="13" font="8">4.</text>
+<text top="496" left="62" width="117" height="13" font="4">Tighten the lock nut</text>
+<text top="496" left="195" width="3" height="13" font="4">.</text>
+<text top="586" left="38" width="15" height="12" font="7">50</text>
+<text top="586" left="56" width="100" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage</a></text>
+</page>
+<page number="51" position="absolute" top="0" left="0" height="629" width="892">
+<text top="40" left="51" width="178" height="16" font="3">4.10.8 Lumbar support</text>
+<text top="67" left="51" width="458" height="13" font="4">This chapter shows you how to adjust the lumbar support. The lumbar support</text>
+<text top="83" left="51" width="451" height="13" font="4">consists of three cushions with Velcro. If you want to adjust it, simply remove</text>
+<text top="99" left="51" width="382" height="13" font="4">the backrest cushion and adjust the lumbar support as preferred.</text>
+<text top="586" left="739" width="100" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage </a>-</text>
+<text top="586" left="843" width="12" height="12" font="7">51</text>
+</page>
+<page number="52" position="absolute" top="0" left="0" height="629" width="892">
+<text top="40" left="38" width="165" height="16" font="3">4.10.9 Trunk support</text>
+<text top="67" left="38" width="408" height="13" font="4">This chapter shows you how to adjust the height of the trunk support.</text>
+<text top="97" left="38" width="316" height="13" font="4">This is how you adjust the height of the trunk support.</text>
+<text top="117" left="52" width="89" height="13" font="4">Allen key 5 mm</text>
+<text top="152" left="38" width="9" height="13" font="8">1.</text>
+<text top="152" left="62" width="177" height="13" font="4">Remove the backrest cushion.</text>
+<text top="171" left="38" width="11" height="13" font="8">2.</text>
+<text top="171" left="62" width="104" height="13" font="4">Loosen the screw</text>
+<text top="171" left="184" width="313" height="13" font="4">on the backrest that holds the trunk support in place.</text>
+<text top="189" left="38" width="11" height="13" font="8">3.</text>
+<text top="189" left="62" width="144" height="13" font="4">Adjust the trunk support</text>
+<text top="189" left="225" width="146" height="13" font="4">to the preferred position.</text>
+<text top="208" left="38" width="12" height="13" font="8">4.</text>
+<text top="208" left="62" width="105" height="13" font="4">Tighten the screw</text>
+<text top="208" left="182" width="3" height="13" font="4">.</text>
+<text top="227" left="38" width="11" height="13" font="8">5.</text>
+<text top="227" left="62" width="182" height="13" font="4">Put back the backrest cushion.</text>
+<text top="586" left="38" width="14" height="12" font="7">52</text>
+<text top="586" left="55" width="100" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage</a></text>
+</page>
+<page number="53" position="absolute" top="0" left="0" height="629" width="892">
+<text top="40" left="51" width="160" height="16" font="3">4.10.10 Knee support</text>
+<text top="67" left="51" width="457" height="13" font="4">This chapter gives you information about the position of the knee support and</text>
+<text top="83" left="51" width="325" height="13" font="4">shows you how to remove and attach the knee support.</text>
+<text top="103" left="51" width="440" height="13" font="4">The knee support shall be placed below the kneecap. If the knee support is</text>
+<text top="119" left="51" width="419" height="13" font="4">not in the correct position, contact an authorized service technician. All</text>
+<text top="136" left="51" width="424" height="13" font="4">adjustments of the knee support must be made by an authorized service</text>
+<text top="152" left="51" width="65" height="13" font="4">technician.</text>
+<text top="181" left="51" width="449" height="13" font="4">You can remove the knee support from the leg rest to make it easier to get in</text>
+<text top="197" left="51" width="436" height="13" font="4">and out of the wheelchair. The leg rest must be in its most vertical position</text>
+<text top="214" left="51" width="341" height="13" font="4">(90° to the seat) before you can remove the knee support.</text>
+<text top="586" left="737" width="101" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage </a>-</text>
+<text top="586" left="841" width="14" height="12" font="7">53</text>
+</page>
+<page number="54" position="absolute" top="0" left="0" height="629" width="892">
+<text top="43" left="38" width="9" height="13" font="8">1.</text>
+<text top="43" left="62" width="335" height="13" font="4">Make sure that the leg rest is in its most vertical position.</text>
+<text top="61" left="38" width="11" height="13" font="8">2.</text>
+<text top="61" left="62" width="142" height="13" font="4">Press and hold the latch</text>
+<text top="61" left="220" width="3" height="13" font="4">.</text>
+<text top="80" left="38" width="11" height="13" font="8">3.</text>
+<text top="80" left="62" width="192" height="13" font="4">Lift the knee support straight up.</text>
+<text top="101" left="38" width="433" height="13" font="4">When you attach the knee support to your wheelchair, make sure that it is</text>
+<text top="117" left="38" width="433" height="13" font="4">securely in position before you rely on it for support. If you do not properly</text>
+<text top="133" left="38" width="303" height="13" font="4">secure the knee support, it can lead to bodily injury.</text>
+<text top="173" left="92" width="83" height="16" font="13">WARNING!</text>
+<text top="173" left="183" width="185" height="16" font="14"><a href="permobil_m3-corpus_owner.pdf.html#21">Use leg rest tilt cautiously</a></text>
+<text top="305" left="38" width="234" height="16" font="3">4.10.11 Rotational panel holder</text>
+<text top="332" left="38" width="443" height="13" font="4">You can adjust the distance between the armrest and the control panel, the</text>
+<text top="348" left="38" width="455" height="13" font="4">resistance of the rotational panel holder, and the angle of the rotational panel</text>
+<text top="364" left="38" width="40" height="13" font="4">holder.</text>
+<text top="394" left="38" width="424" height="13" font="4">This is how you adjust the distance between the armrest and the control</text>
+<text top="410" left="38" width="36" height="13" font="4">panel.</text>
+<text top="430" left="52" width="89" height="13" font="4">Allen key 5 mm</text>
+<text top="465" left="38" width="9" height="13" font="8">1.</text>
+<text top="465" left="62" width="104" height="13" font="4">Loosen the screw</text>
+<text top="465" left="184" width="106" height="13" font="4">on the panel joint.</text>
+<text top="484" left="38" width="11" height="13" font="8">2.</text>
+<text top="484" left="62" width="291" height="13" font="4">Adjust the control panel to the preferred position.</text>
+<text top="502" left="38" width="11" height="13" font="8">3.</text>
+<text top="502" left="62" width="108" height="13" font="4">Tighten the screw.</text>
+<text top="586" left="38" width="14" height="12" font="7">54</text>
+<text top="586" left="56" width="100" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage</a></text>
+</page>
+<page number="55" position="absolute" top="0" left="0" height="629" width="892">
+<text top="43" left="51" width="393" height="13" font="4">This is how you adjust the resistance of the rotational panel holder.</text>
+<text top="63" left="51" width="158" height="13" font="4">Loosen or tighten the knob</text>
+<text top="63" left="228" width="254" height="13" font="4">on the friction joint to adjust how easily the</text>
+<text top="79" left="51" width="306" height="13" font="4">rotational panel holder can be pushed to either side.</text>
+<text top="586" left="737" width="101" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage </a>-</text>
+<text top="586" left="841" width="14" height="12" font="7">55</text>
+</page>
+<page number="56" position="absolute" top="0" left="0" height="629" width="892">
+<text top="43" left="38" width="422" height="13" font="4">You can angle the rotational control panel to either side. This is how you</text>
+<text top="59" left="38" width="97" height="13" font="4">adjust the angle.</text>
+<text top="79" left="52" width="90" height="13" font="4">Allen key 4 mm</text>
+<text top="114" left="38" width="9" height="13" font="8">1.</text>
+<text top="114" left="62" width="108" height="13" font="4">Remove the screw</text>
+<text top="114" left="189" width="175" height="13" font="4">on the side you want to angle.</text>
+<text top="133" left="38" width="11" height="13" font="8">2.</text>
+<text top="133" left="62" width="138" height="13" font="4">Loosen the other screw</text>
+<text top="133" left="216" width="3" height="13" font="4">.</text>
+<text top="152" left="38" width="11" height="13" font="8">3.</text>
+<text top="152" left="62" width="169" height="13" font="4">Adjust the angle of the panel</text>
+<text top="152" left="250" width="146" height="13" font="4">to the preferred position.</text>
+<text top="170" left="38" width="12" height="13" font="8">4.</text>
+<text top="170" left="62" width="139" height="13" font="4">Tighten the two screws.</text>
+<text top="586" left="38" width="14" height="12" font="7">56</text>
+<text top="586" left="55" width="100" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage</a></text>
+</page>
+<page number="57" position="absolute" top="0" left="0" height="629" width="892">
+<text top="40" left="51" width="213" height="16" font="3">4.10.12 Parallel panel holder</text>
+<text top="67" left="51" width="445" height="13" font="4">You can adjust the distance between the armrest and the control panel. It is</text>
+<text top="83" left="51" width="311" height="13" font="4">also possible to adjust the angle of the control panel.</text>
+<text top="113" left="51" width="424" height="13" font="4">This is how you adjust the distance between the armrest and the control</text>
+<text top="129" left="51" width="423" height="13" font="4">panel. Leave a gap of at least 10 mm (0.4&#34;) between the armrest and the</text>
+<text top="145" left="51" width="80" height="13" font="4">control panel.</text>
+<text top="165" left="65" width="88" height="13" font="4">Torque wrench</text>
+<text top="185" left="65" width="89" height="13" font="4">Allen key 5 mm</text>
+<text top="220" left="51" width="9" height="13" font="8">1.</text>
+<text top="220" left="75" width="110" height="13" font="4">Loosen the screws</text>
+<text top="220" left="204" width="192" height="13" font="4">enough to slide the panel holder.</text>
+<text top="379" left="51" width="11" height="13" font="8">2.</text>
+<text top="379" left="75" width="246" height="13" font="4">Adjust the panel to the preferred position.</text>
+<text top="398" left="51" width="11" height="13" font="8">3.</text>
+<text top="398" left="75" width="238" height="13" font="4">Torque the screws to 9.8 N m (7.2 lb. ft.).</text>
+<text top="586" left="738" width="101" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage </a>-</text>
+<text top="586" left="842" width="13" height="12" font="7">57</text>
+</page>
+<page number="58" position="absolute" top="0" left="0" height="629" width="892">
+<text top="43" left="38" width="309" height="13" font="4">This is how you adjust the angle of the control panel.</text>
+<text top="63" left="52" width="90" height="13" font="4">Allen key 4 mm</text>
+<text top="99" left="38" width="451" height="13" font="4">Slide the panel to the preferred position. You can loosen or tighten the screw</text>
+<text top="115" left="54" width="142" height="13" font="4">to adjust the resistance.</text>
+<text top="586" left="38" width="14" height="12" font="7">58</text>
+<text top="586" left="55" width="100" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage</a></text>
+</page>
+<page number="59" position="absolute" top="0" left="0" height="629" width="892">
+<text top="40" left="51" width="176" height="16" font="3">4.10.13 Positioning belt</text>
+<text top="67" left="51" width="444" height="13" font="4">Always wear your positioning belt. There is an accessory rail on each side of</text>
+<text top="83" left="51" width="395" height="13" font="4">the seat frame where you can attach for example a positioning belt.</text>
+<text top="103" left="65" width="88" height="13" font="4">Wrench 10 mm</text>
+<text top="138" left="51" width="9" height="13" font="8">1.</text>
+<text top="138" left="75" width="353" height="13" font="4">Screw the positioning belt in place in the rail’s upper groove.</text>
+<text top="235" left="51" width="11" height="13" font="8">2.</text>
+<text top="235" left="75" width="364" height="13" font="4">Make sure that the belt buckle locks properly in the snap lock.</text>
+<text top="586" left="737" width="100" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#24">Wheelchair usage </a>-</text>
+<text top="586" left="841" width="14" height="12" font="7">59</text>
+</page>
+<page number="60" position="absolute" top="0" left="0" height="629" width="892">
+<text top="37" left="38" width="12" height="21" font="6">5</text>
+<text top="37" left="72" width="125" height="21" font="6">Maintenance</text>
+<text top="69" left="38" width="438" height="13" font="4">For the wheelchair to work well, it is important that you use it correctly and</text>
+<text top="85" left="38" width="424" height="13" font="4">maintain it regularly. A well maintained wheelchair lasts longer and has a</text>
+<text top="102" left="38" width="454" height="13" font="4">lower risk of defects. Only carry out maintenance and minor adjustments that</text>
+<text top="118" left="38" width="444" height="13" font="4">are specified in the user manual. All other maintenance, service, and repairs</text>
+<text top="134" left="38" width="447" height="13" font="4">must be carried out by a qualified service technician authorized by Permobil.</text>
+<text top="586" left="38" width="15" height="12" font="7">60</text>
+<text top="586" left="56" width="76" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#60">Maintenance</a></text>
+</page>
+<page number="61" position="absolute" top="0" left="0" height="629" width="892">
+<text top="38" left="51" width="25" height="19" font="9">5.1</text>
+<text top="38" left="111" width="336" height="19" font="9">Maintenance and inspection schedule</text>
+<text top="69" left="51" width="415" height="13" font="4">Permobil recommends compliance with the following maintenance and</text>
+<text top="85" left="51" width="434" height="13" font="4">inspection schedule. Contact your authorized dealer for all service-related</text>
+<text top="101" left="51" width="115" height="13" font="4">needs or questions.</text>
+<text top="134" left="60" width="232" height="13" font="19">Maintenance and inspection schedule</text>
+<text top="134" left="488" width="31" height="13" font="19">Daily</text>
+<text top="134" left="581" width="45" height="13" font="19">Weekly</text>
+<text top="134" left="679" width="50" height="13" font="19">Monthly</text>
+<text top="134" left="785" width="38" height="13" font="19">Yearly</text>
+<text top="156" left="60" width="338" height="13" font="4">Check battery level indicator and charge the wheelchair if</text>
+<text top="172" left="60" width="63" height="13" font="4">necessary.</text>
+<text top="195" left="60" width="365" height="13" font="4">Make sure that the joystick panel and other control panels are</text>
+<text top="211" left="60" width="81" height="13" font="4">not damaged.</text>
+<text top="242" left="60" width="336" height="13" font="4">Make sure that all removable parts are securely fastened.</text>
+<text top="280" left="60" width="363" height="13" font="4">Check positioning belts for wear and make sure buckles work.</text>
+<text top="311" left="60" width="363" height="13" font="4">If the wheelchair is equipped with pneumatic tires, check tires</text>
+<text top="327" left="60" width="146" height="13" font="4">and inflate as necessary.</text>
+<text top="350" left="60" width="367" height="13" font="4">If the wheelchair is equipped with lights and turn signals, make</text>
+<text top="366" left="60" width="238" height="13" font="4">sure that they are operational and clean.</text>
+<text top="397" left="60" width="218" height="13" font="4">Clean the wheelchair and upholstery.</text>
+<text top="436" left="60" width="343" height="13" font="4">Check upholstery, seating, and postural supports for wear.</text>
+<text top="467" left="60" width="357" height="13" font="4">Check that the freewheel mode and the freewheel lever work</text>
+<text top="483" left="60" width="51" height="13" font="4">properly.</text>
+<text top="507" left="60" width="377" height="13" font="4">Complete inspection, safety check, and service performed by an</text>
+<text top="523" left="60" width="172" height="13" font="4">authorized wheelchair dealer.</text>
+<text top="586" left="763" width="76" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#60">Maintenance </a>-</text>
+<text top="586" left="843" width="12" height="12" font="7">61</text>
+</page>
+<page number="62" position="absolute" top="0" left="0" height="629" width="892">
+<text top="38" left="38" width="27" height="19" font="9">5.2</text>
+<text top="38" left="98" width="78" height="19" font="9">Cleaning</text>
+<text top="69" left="38" width="450" height="13" font="4">Regular care and maintenance will prevent unnecessary wear and damage to</text>
+<text top="85" left="38" width="439" height="13" font="4">your Permobil product. Turn off the power before you clean the wheelchair.</text>
+<text top="114" left="38" width="35" height="16" font="3">5.2.1</text>
+<text top="114" left="98" width="111" height="16" font="3">Metal surfaces</text>
+<text top="140" left="38" width="421" height="13" font="4">Due to the high quality powder coating, optimum corrosion protection is</text>
+<text top="156" left="38" width="400" height="13" font="4">guaranteed. Ideally, use a soft cloth or sponge, hot water, and a mild</text>
+<text top="173" left="38" width="435" height="13" font="4">detergent for normal cleaning. Wipe down carefully with a cloth and water,</text>
+<text top="189" left="38" width="67" height="13" font="4">and dry off.</text>
+<text top="225" left="38" width="423" height="13" font="4">Remove scuff marks from semi-matte surfaces with soft wax. Follow the</text>
+<text top="241" left="38" width="341" height="13" font="4">instructions provided by the manufacturer of the soft wax.</text>
+<text top="277" left="38" width="443" height="13" font="4">Remove scuff marks and scratches from shiny surfaces with car polish. You</text>
+<text top="294" left="38" width="440" height="13" font="4">can use either liquid or paste car polish. After you have polished, apply soft</text>
+<text top="310" left="38" width="259" height="13" font="4">car wax to restore the original surface gloss.</text>
+<text top="339" left="38" width="37" height="16" font="3">5.2.2</text>
+<text top="339" left="98" width="59" height="16" font="3">Plastics</text>
+<text top="365" left="38" width="442" height="13" font="4">For normal cleaning, wash plastic surfaces with a soft cloth, mild detergent,</text>
+<text top="381" left="38" width="455" height="13" font="4">and hot water. Rinse thoroughly and dry with a soft cloth. Do not use solvents</text>
+<text top="398" left="38" width="168" height="13" font="4">or abrasive kitchen cleaners.</text>
+<text top="426" left="38" width="37" height="16" font="3">5.2.3</text>
+<text top="426" left="98" width="203" height="16" font="3">Upholstery, cloth, and vinyl</text>
+<text top="453" left="38" width="433" height="13" font="4">For normal cleaning, wash the upholstery with lukewarm water and a mild,</text>
+<text top="469" left="38" width="431" height="13" font="4">non-abrasive soap. Use a soft cloth or brush. Wipe off any water or soapy</text>
+<text top="485" left="38" width="408" height="13" font="4">water residues with a clean, dry cloth. Let the surface dry. Repeat this</text>
+<text top="502" left="38" width="427" height="13" font="4">procedure to remove stubborn dirt or stains. Ink spots can sometimes be</text>
+<text top="518" left="38" width="349" height="13" font="4">removed with soap and water followed by isopropyl alcohol.</text>
+<text top="586" left="38" width="14" height="12" font="7">62</text>
+<text top="586" left="55" width="76" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#60">Maintenance</a></text>
+</page>
+<page number="63" position="absolute" top="0" left="0" height="629" width="892">
+<text top="43" left="51" width="455" height="13" font="4">Do not use any other cleaning methods than those listed here. Other cleaning</text>
+<text top="59" left="51" width="451" height="13" font="4">methods can attack and degrade the vinyl and can also void the wheelchair’s</text>
+<text top="75" left="51" width="54" height="13" font="4">warranty.</text>
+<text top="111" left="51" width="453" height="13" font="4">If necessary, you can remove the cover before cleaning. See also the washing</text>
+<text top="127" left="51" width="236" height="13" font="4">instructions on the upholstery materials.</text>
+<text top="160" left="51" width="28" height="19" font="9">5.3</text>
+<text top="160" left="111" width="257" height="19" font="9">Inflating the drive wheel tires</text>
+<text top="190" left="51" width="447" height="13" font="4">Only drive the wheelchair with the correct tire pressure. The tire pressure for</text>
+<text top="206" left="51" width="459" height="13" font="4">the drive wheel tires is 250 kPa (35 psi). Permobil recommends that you check</text>
+<text top="222" left="51" width="437" height="13" font="4">the tire pressure weekly and after any significant change in temperature or</text>
+<text top="239" left="51" width="48" height="13" font="4">altitude.</text>
+<text top="259" left="51" width="459" height="13" font="4">Incorrect tire pressure can make the wheelchair unstable and difficult to drive.</text>
+<text top="275" left="51" width="434" height="13" font="4">It can also result in abnormal wear, punctures, a shorter driving range, and</text>
+<text top="291" left="51" width="184" height="13" font="4">damage to the wheel assembly.</text>
+<text top="327" left="51" width="254" height="13" font="4">This is how you inflate the drive wheel tires.</text>
+<text top="346" left="51" width="9" height="13" font="8">1.</text>
+<text top="346" left="75" width="335" height="13" font="4">Unscrew and remove the valve cap from the tire air valve.</text>
+<text top="365" left="51" width="11" height="13" font="8">2.</text>
+<text top="365" left="75" width="389" height="13" font="4">Connect the compressed air nozzle to the valve and adjust the tire</text>
+<text top="381" left="75" width="188" height="13" font="4">pressure to the prescribed level.</text>
+<text top="400" left="51" width="11" height="13" font="8">3.</text>
+<text top="400" left="75" width="136" height="13" font="4">Put the valve cap back.</text>
+<text top="477" left="51" width="28" height="19" font="9">5.4</text>
+<text top="477" left="111" width="138" height="19" font="9">Positioning belt</text>
+<text top="508" left="51" width="439" height="13" font="4">Check the condition of the positioning belt regularly in case any damage or</text>
+<text top="524" left="51" width="455" height="13" font="4">wear has occurred. If signs of damage or wear appear, replace the positioning</text>
+<text top="540" left="51" width="273" height="13" font="4">belt immediately through your Permobil dealer.</text>
+<text top="586" left="761" width="76" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#60">Maintenance </a>-</text>
+<text top="586" left="841" width="14" height="12" font="7">63</text>
+</page>
+<page number="64" position="absolute" top="0" left="0" height="629" width="892">
+<text top="37" left="38" width="12" height="21" font="6">6</text>
+<text top="37" left="72" width="155" height="21" font="6">Troubleshooting</text>
+<text top="69" left="38" width="448" height="13" font="4">The following troubleshooting guide describes a number of faults and events</text>
+<text top="86" left="38" width="418" height="13" font="4">which can occur when you use the wheelchair, together with suggested</text>
+<text top="102" left="38" width="57" height="13" font="4">remedies.</text>
+<text top="122" left="38" width="443" height="13" font="4">Note that the guide cannot describe all the problems and events which may</text>
+<text top="138" left="38" width="413" height="13" font="4">occur and you should always contact your service provider or Permobil</text>
+<text top="154" left="38" width="426" height="13" font="4">technical support if you need additional assistance. Troubleshooting and</text>
+<text top="170" left="38" width="443" height="13" font="4">repairs of electronics must always be performed by qualified personnel with</text>
+<text top="186" left="38" width="282" height="13" font="4">good knowledge of the wheelchair’s electronics.</text>
+<text top="225" left="155" width="35" height="13" font="19">Event</text>
+<text top="224" left="395" width="91" height="13" font="19">Possible cause</text>
+<text top="224" left="683" width="49" height="13" font="19">Remedy</text>
+<text top="322" left="47" width="178" height="13" font="4">The wheelchair does not start.</text>
+<text top="255" left="315" width="171" height="13" font="4">The batteries are discharged.</text>
+<text top="255" left="583" width="124" height="13" font="4">Charge the batteries.</text>
+<text top="285" left="315" width="245" height="13" font="4">The cable connection to the control panel</text>
+<text top="301" left="315" width="95" height="13" font="4">has come loose.</text>
+<text top="285" left="583" width="212" height="13" font="4">Insert the cable in the control panel.</text>
+<text top="329" left="315" width="220" height="13" font="4">The main circuit breaker is turned off.</text>
+<text top="327" left="583" width="217" height="13" font="4">Turn on the main circuit breaker. See</text>
+<text top="343" left="583" width="51" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#38">page 38.</a></text>
+<text top="374" left="315" width="215" height="13" font="4">The main circuit breaker has tripped.</text>
+<text top="372" left="583" width="238" height="13" font="4">Reset the main circuit breaker once. See</text>
+<text top="388" left="583" width="51" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#38">page 38.</a></text>
+<text top="449" left="47" width="206" height="13" font="4">The wheelchair cannot be charged.</text>
+<text top="418" left="315" width="220" height="13" font="4">The main circuit breaker is turned off.</text>
+<text top="416" left="583" width="217" height="13" font="4">Turn on the main circuit breaker. See</text>
+<text top="432" left="583" width="51" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#38">page 38.</a></text>
+<text top="463" left="315" width="237" height="13" font="4">The charging circuit breaker has tripped.</text>
+<text top="463" left="583" width="224" height="13" font="4">Wait five minutes. The charging circuit</text>
+<text top="479" left="583" width="186" height="13" font="4">breaker will automatically reset.</text>
+<text top="586" left="38" width="14" height="12" font="7">64</text>
+<text top="586" left="56" width="92" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#64">Troubleshooting</a></text>
+</page>
+<page number="65" position="absolute" top="0" left="0" height="629" width="892">
+<text top="48" left="168" width="35" height="13" font="19">Event</text>
+<text top="46" left="407" width="91" height="13" font="19">Possible cause</text>
+<text top="46" left="696" width="49" height="13" font="19">Remedy</text>
+<text top="166" left="60" width="194" height="13" font="4">The wheelchair cannot be driven.</text>
+<text top="77" left="328" width="198" height="13" font="4">The battery charger is connected.</text>
+<text top="77" left="596" width="186" height="13" font="4">Disconnect the battery charger.</text>
+<text top="107" left="328" width="216" height="13" font="4">The wheelchair is in freewheel mode.</text>
+<text top="107" left="596" width="210" height="13" font="4">Exit freewheel mode and restart the</text>
+<text top="123" left="596" width="67" height="13" font="4">wheelchair.</text>
+<text top="151" left="328" width="148" height="13" font="4">The wheelchair is locked.</text>
+<text top="151" left="596" width="134" height="13" font="4">Unlock the wheelchair.</text>
+<text top="179" left="328" width="193" height="13" font="4">A seat function has triggered the</text>
+<text top="195" left="328" width="134" height="13" font="4">automatic drive inhibit.</text>
+<text top="179" left="596" width="234" height="13" font="4">Make sure that the backrest and the leg</text>
+<text top="195" left="596" width="241" height="13" font="4">rest are not tilted and that the seat is not</text>
+<text top="212" left="596" width="82" height="13" font="4">tilted or lifted.</text>
+<text top="239" left="328" width="201" height="13" font="4">The motors have gotten too warm.</text>
+<text top="239" left="596" width="232" height="13" font="4">Turn off the wheelchair and wait for the</text>
+<text top="256" left="596" width="124" height="13" font="4">motors to cool down.</text>
+<text top="284" left="60" width="238" height="13" font="4">The wheelchair switches itself off after a</text>
+<text top="300" left="60" width="200" height="13" font="4">certain period of inactivity (20–30</text>
+<text top="316" left="60" width="54" height="13" font="4">minutes).</text>
+<text top="283" left="328" width="199" height="13" font="4">The energy saving mode has been</text>
+<text top="300" left="328" width="58" height="13" font="4">activated.</text>
+<text top="283" left="596" width="250" height="13" font="4">Press the start button on the control panel</text>
+<text top="300" left="596" width="185" height="13" font="4">to turn on the wheelchair again.</text>
+<text top="352" left="60" width="237" height="13" font="4">The wheelchair stops while being driven.</text>
+<text top="345" left="328" width="215" height="13" font="4">The main circuit breaker has tripped.</text>
+<text top="343" left="596" width="238" height="13" font="4">Reset the main circuit breaker once. See</text>
+<text top="359" left="596" width="51" height="13" font="4"><a href="permobil_m3-corpus_owner.pdf.html#38">page 38.</a></text>
+<text top="397" left="60" width="214" height="13" font="4">The wheelchair can only be driven at</text>
+<text top="413" left="60" width="91" height="13" font="4">reduced speed.</text>
+<text top="390" left="328" width="193" height="13" font="4">A seat function has triggered the</text>
+<text top="406" left="328" width="165" height="13" font="4">automatic speed restriction.</text>
+<text top="390" left="596" width="234" height="13" font="4">Make sure that the backrest and the leg</text>
+<text top="406" left="596" width="241" height="13" font="4">rest are not tilted and that the seat is not</text>
+<text top="422" left="596" width="82" height="13" font="4">tilted or lifted.</text>
+<text top="586" left="745" width="93" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#64">Troubleshooting </a>-</text>
+<text top="586" left="841" width="14" height="12" font="7">65</text>
+</page>
+<page number="66" position="absolute" top="0" left="0" height="629" width="892">
+<text top="37" left="38" width="11" height="21" font="6">7</text>
+<text top="37" left="72" width="191" height="21" font="6">General information</text>
+<text top="70" left="38" width="453" height="13" font="4">This chapter contains information about warranty, standards and regulations,</text>
+<text top="86" left="38" width="431" height="13" font="4">reporting incidents, scrapping and recycling, and technical specifications.</text>
+<text top="118" left="38" width="23" height="19" font="9">7.1</text>
+<text top="118" left="98" width="82" height="19" font="9">Warranty</text>
+<text top="148" left="38" width="404" height="13" font="4">All power wheelchairs are supplied with a two-year product warranty.</text>
+<text top="165" left="38" width="354" height="13" font="4">Batteries and charger are supplied with a one-year warranty.</text>
+<text top="185" left="38" width="441" height="13" font="4">Product Warranty Information sets forth the conditions of the warranty. For</text>
+<text top="201" left="38" width="305" height="13" font="4">further information about applicable warranties, see</text>
+<text top="217" left="38" width="268" height="13" font="4">https://permobilus.com/support/warranties/.</text>
+<text top="249" left="38" width="26" height="19" font="9">7.2</text>
+<text top="249" left="98" width="233" height="19" font="9">Standards and regulations</text>
+<text top="280" left="38" width="275" height="13" font="4">This product fulfills the following requirements:</text>
+<text top="299" left="38" width="387" height="13" font="4">• Electrically powered wheelchairs, scooters and their chargers –</text>
+<text top="315" left="55" width="254" height="13" font="4">Requirements and test methods (EN 12184)</text>
+<text top="334" left="38" width="232" height="13" font="4">• Wheelchair standard series ISO 7176</text>
+<text top="352" left="38" width="364" height="13" font="4">• U.S. Food and Drug Administration’s regulation 21 CFR 820</text>
+<text top="371" left="38" width="260" height="13" font="4">• Medical Device Regulation (EU) 2017/745</text>
+<text top="404" left="38" width="27" height="19" font="9">7.3</text>
+<text top="404" left="98" width="173" height="19" font="9">Reporting incidents</text>
+<text top="434" left="38" width="426" height="13" font="4">If a serious incident occurs, you must contact a competent authority and</text>
+<text top="450" left="38" width="168" height="13" font="4">Permobil by phone or e-mail.</text>
+<text top="482" left="38" width="27" height="19" font="9">7.4</text>
+<text top="482" left="98" width="212" height="19" font="9">Scrapping and recycling</text>
+<text top="513" left="38" width="416" height="13" font="4">Contact Permobil for information about scrapping agreements in force.</text>
+<text top="586" left="38" width="14" height="12" font="7">66</text>
+<text top="586" left="55" width="112" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#66">General information</a></text>
+</page>
+<page number="67" position="absolute" top="0" left="0" height="629" width="892">
+<text top="38" left="51" width="26" height="19" font="9">7.5</text>
+<text top="38" left="111" width="255" height="19" font="9">EU declaration of conformity</text>
+<text top="69" left="51" width="452" height="13" font="4">Hereby, Permobil declares that the radio equipment type Power Platform is in</text>
+<text top="85" left="51" width="448" height="13" font="4">compliance with Directive 2014/53/EU. The full text of the EU declaration of</text>
+<text top="101" left="51" width="327" height="13" font="4">conformity is available at the following internet address:</text>
+<text top="117" left="51" width="410" height="13" font="4">https://legal.permobil.com/declaration-of-conformity/M3_Corpus.pdf</text>
+<text top="586" left="727" width="112" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#66">General information </a>-</text>
+<text top="586" left="841" width="13" height="12" font="7">67</text>
+</page>
+<page number="68" position="absolute" top="0" left="0" height="629" width="892">
+	<fontspec id="21" size="8" family="MZFBCE+GTAmerica-Lt" color="#000000"/>
+<text top="38" left="38" width="27" height="19" font="9">7.6</text>
+<text top="38" left="98" width="215" height="19" font="9">Technical specifications</text>
+<text top="104" left="46" width="149" height="13" font="4">Mass of the heaviest part</text>
+<text top="105" left="448" width="139" height="13" font="4">Backrest 7.5 kg (16.5 lb)</text>
+<text top="133" left="46" width="65" height="13" font="4">Pivot width</text>
+<text top="134" left="448" width="85" height="13" font="4">1100 mm (43&#34;)</text>
+<text top="161" left="46" width="155" height="13" font="4">Minimum turning diameter</text>
+<text top="162" left="448" width="84" height="13" font="4">1120 mm (44&#34;)</text>
+<text top="190" left="46" width="196" height="13" font="4">Required width of angled corridor</text>
+<text top="190" left="448" width="81" height="13" font="4">830 mm (33&#34;)</text>
+<text top="218" left="46" width="177" height="13" font="4">Required doorway entry depth</text>
+<text top="219" left="448" width="84" height="13" font="4">1140 mm (45&#34;)</text>
+<text top="246" left="46" width="236" height="13" font="4">Required corridor width for side opening</text>
+<text top="247" left="448" width="80" height="13" font="4">700 mm (28&#34;)</text>
+<text top="275" left="46" width="105" height="13" font="4">Ground clearance</text>
+<text top="275" left="448" width="66" height="13" font="4">80 mm (3&#34;)</text>
+<text top="303" left="46" width="351" height="13" font="4">Ability to negotiate obstacles (approach distance 0 cm [0&#34;])</text>
+<text top="303" left="448" width="65" height="13" font="4">50 mm (2&#34;)</text>
+<text top="332" left="46" width="366" height="13" font="4">Ability to negotiate obstacles (approach distance 50 cm [20&#34;])</text>
+<text top="332" left="448" width="64" height="13" font="4">75 mm (3&#34;)</text>
+<text top="361" left="46" width="98" height="13" font="4">Battery cycle life</text>
+<text top="361" left="448" width="64" height="13" font="4">450 cycles</text>
+<text top="389" left="46" width="193" height="13" font="4">Battery type and nominal voltage</text>
+<text top="389" left="448" width="364" height="13" font="4">Sealed lead acid, 2 x 12 V, group 34; Sealed lead acid, 2 x 12 V,</text>
+<text top="405" left="448" width="52" height="13" font="4">group 24</text>
+<text top="434" left="46" width="130" height="13" font="4">Occupant mass group</text>
+<text top="434" left="448" width="10" height="13" font="4">III</text>
+<text top="463" left="46" width="233" height="13" font="4">Maximum speed (forward on horizontal)</text>
+<text top="463" left="448" width="97" height="13" font="4">10 km/h (6 mph)</text>
+<text top="491" left="46" width="214" height="13" font="4">Theoretical continuous driving range</text>
+<text top="492" left="260" width="3" height="8" font="21">1</text>
+<text top="492" left="448" width="78" height="13" font="4">29 km (18 mi)</text>
+<text top="517" left="38" width="8" height="12" font="5">1.</text>
+<text top="517" left="65" width="461" height="12" font="5">Actual driving range will vary based on driving conditions, battery conditions, and terrain.</text>
+<text top="586" left="38" width="14" height="12" font="7">68</text>
+<text top="586" left="55" width="112" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#66">General information</a></text>
+</page>
+<page number="69" position="absolute" top="0" left="0" height="629" width="892">
+<text top="37" left="51" width="345" height="21" font="6">How to contact your production unit</text>
+<text top="77" left="61" width="115" height="13" font="19">Sundsvall, Sweden</text>
+<text top="77" left="433" width="90" height="13" font="19">Nashville, USA</text>
+<text top="99" left="115" width="48" height="13" font="4">PU SUN</text>
+<text top="99" left="487" width="47" height="13" font="4">PU NAS</text>
+<text top="119" left="115" width="72" height="13" font="4">Permobil AB</text>
+<text top="119" left="487" width="76" height="13" font="4">Permobil Inc.</text>
+<text top="138" left="115" width="92" height="13" font="4">Klökanvägen 16</text>
+<text top="139" left="487" width="93" height="13" font="4">300 Duke Drive</text>
+<text top="160" left="115" width="99" height="13" font="4">863 41 Sundsvall</text>
+<text top="160" left="487" width="117" height="13" font="4">Lebanon, TN 37090</text>
+<text top="180" left="115" width="47" height="13" font="4">Sweden</text>
+<text top="180" left="487" width="26" height="13" font="4">USA</text>
+<text top="202" left="115" width="101" height="13" font="4">+46 60 59 59 00</text>
+<text top="202" left="487" width="102" height="13" font="4">+1 800 736 0925</text>
+<text top="227" left="115" width="99" height="13" font="4">+46 60 57 52 50</text>
+<text top="227" left="487" width="99" height="13" font="4">+1 800 231 3256</text>
+<text top="250" left="115" width="114" height="13" font="4">info@permobil.com</text>
+<text top="250" left="487" width="137" height="13" font="4">support@permobil.com</text>
+<text top="274" left="115" width="112" height="13" font="4">www.permobil.com</text>
+<text top="274" left="487" width="112" height="13" font="4">www.permobil.com</text>
+<text top="586" left="641" width="197" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#69">How to contact your production unit </a>-</text>
+<text top="586" left="841" width="14" height="12" font="7">69</text>
+</page>
+<page number="70" position="absolute" top="0" left="0" height="629" width="892">
+<text top="37" left="38" width="305" height="21" font="6">How to contact your local office</text>
+<text top="78" left="49" width="184" height="13" font="19">Hungary, South Africa, Turkey</text>
+<text top="78" left="439" width="171" height="13" font="19">Ireland and United Kingdom</text>
+<text top="102" left="103" width="72" height="13" font="4">Permobil AB</text>
+<text top="102" left="493" width="77" height="13" font="4">Permobil Ltd.</text>
+<text top="125" left="103" width="92" height="13" font="4">Klökanvägen 16</text>
+<text top="125" left="493" width="217" height="13" font="4">Unit 7, Polaris Centre, 41 Brownfields</text>
+<text top="147" left="103" width="99" height="13" font="4">863 41 Sundsvall</text>
+<text top="146" left="493" width="214" height="13" font="4">Welwyn Garden City, Herts, AL7 1AN</text>
+<text top="169" left="103" width="47" height="13" font="4">Sweden</text>
+<text top="168" left="493" width="95" height="13" font="4">United Kingdom</text>
+<text top="192" left="103" width="101" height="13" font="4">+46 60 59 59 00</text>
+<text top="192" left="493" width="107" height="13" font="4">+44 1484 722 888</text>
+<text top="217" left="493" width="106" height="13" font="4">+44 1484 723 013</text>
+<text top="240" left="103" width="114" height="13" font="4">info@permobil.com</text>
+<text top="240" left="493" width="103" height="13" font="4">info@permobil.uk</text>
+<text top="264" left="103" width="112" height="13" font="4">www.permobil.com</text>
+<text top="264" left="493" width="112" height="13" font="4">www.permobil.com</text>
+<text top="289" left="103" width="48" height="13" font="4">PU SUN</text>
+<text top="289" left="493" width="48" height="13" font="4">PU SUN</text>
+<text top="586" left="38" width="14" height="12" font="7">70</text>
+<text top="586" left="55" width="175" height="12" font="5">- <a href="permobil_m3-corpus_owner.pdf.html#70">How to contact your local office</a></text>
+</page>
+<page number="71" position="absolute" top="0" left="0" height="629" width="892">
+	<fontspec id="22" size="13" family="UPEGUS+ArialUnicodeMS" color="#000000"/>
+<text top="42" left="61" width="141" height="13" font="19">Hong Kong and Taiwan</text>
+<text top="42" left="452" width="220" height="13" font="19">India, Malaysia, Singapore, Thailand</text>
+<text top="67" left="115" width="52" height="13" font="4">Permobil</text>
+<text top="67" left="505" width="52" height="13" font="4">Permobil</text>
+<text top="89" left="115" width="165" height="13" font="4">No.128 Tian Mu Road West/</text>
+<text top="90" left="505" width="110" height="13" font="4">8 Viewbrook Close</text>
+<text top="112" left="115" width="134" height="13" font="22">上海市静安区天目西路</text>
+<text top="111" left="250" width="20" height="13" font="4">128</text>
+<text top="112" left="270" width="13" height="13" font="22">号</text>
+<text top="110" left="505" width="135" height="13" font="4">Seven Hills, NSW, 2147</text>
+<text top="131" left="115" width="55" height="13" font="4">Shanghai</text>
+<text top="132" left="505" width="52" height="13" font="4">Australia</text>
+<text top="152" left="115" width="35" height="13" font="4">China</text>
+<text top="174" left="115" width="107" height="13" font="4">+86 4000 178 179</text>
+<text top="174" left="505" width="108" height="13" font="4">+61 1300 845 483</text>
+<text top="198" left="115" width="146" height="13" font="4">info.apac@permobil.com</text>
+<text top="198" left="505" width="146" height="13" font="4">info.apac@permobil.com</text>
+<text top="222" left="115" width="112" height="13" font="4">www.permobil.com</text>
+<text top="222" left="505" width="112" height="13" font="4">www.permobil.com</text>
+<text top="247" left="115" width="48" height="13" font="4">PU SUN</text>
+<text top="247" left="505" width="48" height="13" font="4">PU SUN</text>
+<text top="586" left="666" width="175" height="12" font="5"><a href="permobil_m3-corpus_owner.pdf.html#70">How to contact your local office </a>-</text>
+<text top="586" left="844" width="11" height="12" font="7">71</text>
+</page>
+<page number="72" position="absolute" top="0" left="0" height="629" width="892">
+</page>
+<page number="73" position="absolute" top="0" left="0" height="629" width="892">
+<text top="436" left="465" width="208" height="12" font="5">Dealer’s address and telephone number</text>
+</page>
+<page number="74" position="absolute" top="0" left="0" height="629" width="892">
+	<fontspec id="23" size="27" family="MNCRLI+GTAmerica-Bl" color="#ffffff"/>
+	<fontspec id="24" size="13" family="YCKHJC+TimesNewRomanPSMT" color="#000000"/>
+	<fontspec id="25" size="21" family="UWCRPG+GTAmerica-Th" color="#ffffff"/>
+<text top="518" left="552" width="256" height="27" font="23"><b>www.permobil.com</b></text>
+<text top="523" left="89" width="7" height="12" font="24">7</text>
+<text top="523" left="109" width="40" height="12" font="24">330818</text>
+<text top="523" left="162" width="40" height="12" font="24">382207</text>
+<text top="404" left="85" width="154" height="21" font="25">337305 eng-UK</text>
+</page>
+<outline>
+<item page="4">1 Introduction </item>
+<item page="5">2 Overview </item>
+<outline>
+<item page="6">2.1 Wheelchair specification </item>
+<item page="7">2.2 Tool bag </item>
+<item page="8">2.3 General control panel </item>
+<item page="9">2.4 Omni2 </item>
+<item page="10">2.5 Connected wheelchair </item>
+<item page="11">2.6 Lights and reflectors </item>
+<item page="12">2.7 Wheels </item>
+<item page="13">2.8 Tie-down points </item>
+<item page="14">2.9 Serial number label </item>
+<item page="15">2.10 Accessories </item>
+<item page="16">2.11 Spare parts </item>
+<item page="17">2.12 User manual </item>
+</outline>
+<item page="18">3 Safety </item>
+<outline>
+<item page="18">3.1 Types of warning signs </item>
+<item page="18">3.2 Warning signs </item>
+<item page="22">3.3 Labels </item>
+</outline>
+<item page="24">4 Wheelchair usage </item>
+<outline>
+<item page="24">4.1 Driving the wheelchair </item>
+<item page="27">4.2 Seat functions </item>
+<item page="32">4.3 Charging the batteries </item>
+<item page="32">4.4 Freewheel mode </item>
+<item page="33">4.5 Vehicle transportation </item>
+<item page="36">4.6 Air transportation </item>
+<item page="37">4.7 Rail transportation </item>
+<item page="38">4.8 Main circuit breaker </item>
+<item page="38">4.9 Wheelchair storage </item>
+<item page="39">4.10 Manual adjustments </item>
+<outline>
+<item page="39">4.10.1 Headrest </item>
+<item page="41">4.10.2 Headrest with link hardware </item>
+<item page="43">4.10.3 Backrest tilt </item>
+<item page="44">4.10.4 Removing the backrest </item>
+<item page="44">4.10.5 Armrest </item>
+<item page="49">4.10.6 Leg rest tilt </item>
+<item page="49">4.10.7 Footplates </item>
+<item page="51">4.10.8 Lumbar support </item>
+<item page="52">4.10.9 Trunk support </item>
+<item page="53">4.10.10 Knee support </item>
+<item page="54">4.10.11 Rotational panel holder </item>
+<item page="57">4.10.12 Parallel panel holder </item>
+<item page="59">4.10.13 Positioning belt </item>
+</outline>
+</outline>
+<item page="60">5 Maintenance </item>
+<outline>
+<item page="61">5.1 Maintenance and inspection schedule </item>
+<item page="62">5.2 Cleaning </item>
+<item page="63">5.3 Inflating the drive wheel tires </item>
+<item page="63">5.4 Positioning belt </item>
+</outline>
+<item page="64">6 Troubleshooting </item>
+<item page="66">7 General information </item>
+<outline>
+<item page="66">7.1 Warranty </item>
+<item page="66">7.2 Standards and regulations </item>
+<item page="66">7.3 Reporting incidents </item>
+<item page="66">7.4 Scrapping and recycling </item>
+<item page="67">7.5 EU declaration of conformity </item>
+<item page="68">7.6 Technical specifications </item>
+</outline>
+</outline>
+</pdf2xml>

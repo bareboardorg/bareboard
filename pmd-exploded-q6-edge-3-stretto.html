@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exploded View: Quantum Q6 Edge 3 Stretto &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="Every assembly of the Invacare TDX SP2 exploded to the component level, from Invacare&amp;rsquo;s own Spare Parts Catalogue: 210 plates with part numbers and a plain-language line for every part.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Exploded View: Quantum Q6 Edge 3 Stretto">
+<meta property="og:description" content="Every assembly of the Invacare TDX SP2 exploded to the component level, from Invacare&amp;rsquo;s own Spare Parts Catalogue: 210 plates with part numbers and a plain-language line for every part.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-exploded-q6-edge-3-stretto.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <h1>Exploded View: Quantum Q6 Edge 3 Stretto</h1>
+    <p class="lede">The whole Q6 Edge 3 Stretto, taken apart by the people who built it. Quantum&rsquo;s <strong>Illustrated Parts Breakdown</strong> for this chair runs 140 printed pages and explodes 70 assemblies into numbered parts. Every diagram below is Quantum&rsquo;s own page, followed by the book&rsquo;s parts table with a plain-language line added for every part.</p>
+    <p><strong>Coverage: full IPB.</strong> Every assembly in the book that carries a parts list is here: 70 assemblies, 609 parts. The book&rsquo;s two appendices &mdash; a pages index and a parts index &mdash; carry no new assemblies; they live in the linked book.</p>
+  </section>
+
+  <section>
+    <h2>The source</h2>
+    <p><strong>Guide:</strong> Quantum Rehab Illustrated Parts Breakdown for the Q6 Edge&reg; 3 Stretto power chair.</p>
+    <p><strong>Document:</strong> INFMANU5120 Rev. B &mdash; 152 PDF pages (cover, contents, 140 printed pages, two appendix indexes), Australian edition (the book&rsquo;s own footer reads &ldquo;Q6 Edge&reg; 3 Stretto IPB (S/N JF3), AU&rdquo;; exported Tue Jun 23 2020).</p>
+    <p><strong>Full guide (PDF, in this site&rsquo;s library):</strong> <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3-stretto_parts.pdf">quantum_q6-edge-3-stretto_parts.pdf</a></p>
+    <p>Two parts in the book have no part number printed &mdash; the power-chair warranty insert sheet and one blank decal &mdash; so their rows are here with an em dash where the number would go. The Owner&rsquo;s Package and Decal Package list parts with no diagram callout; the book marks those &ldquo;*N/A&rdquo;, and the tables keep that mark. Nineteen rows are parent assemblies covering a range of callouts (A1&ndash;A4 and the like): the book sells the whole assembly under one number, and the table says so in the callout. The front-caster damper rows carry the book&rsquo;s own note: &ldquo;***Must Be Replaced In Pairs***&rdquo;.</p>
+  </section>
+
+  <section>
+    <h2>The maker&rsquo;s own warnings</h2>
+    <p>This breakdown prints no warning paragraphs. On Quantum&rsquo;s chairs the safety warnings are decals, and the book lists them as parts in the Decal Package assembly. The warning decals in this book include:</p>
+<ul>
+      <li>*N/A &middot; DWR1234L957 &middot; DECAL,WARNING,DEFLATE TIRE COMPLETELY,L-1234-957</li>
+      <li>*N/A &middot; DWR1235L521 &middot; DECAL,WARNING,CONTROLLER CORD PLACEMENT,L-1235-521</li>
+      <li>*N/A &middot; DWR1235L515 &middot; DECAL,WARNING,BATTERY WARNINGS,L-1235-515</li>
+      <li>*N/A &middot; DWR1235L512 &middot; DECAL,WARNING,EMI-RFI,20V/M,L-1235-512</li>
+    </ul>
+    <p>If a warning decal on your chair is peeling or unreadable, it is a replaceable part &mdash; its number is in that table. A warning you cannot read cannot warn you.</p>
+  </section>
+
+  <section>
+    <h2>Build order</h2>
+    <p>The assemblies are laid out in the order you would build the chair: frame first, batteries last. Every step is one exploded view from the maker&rsquo;s guide, followed by its parts table. The <strong>Callout</strong> column is the label printed on the diagram. The <strong>Part number</strong> column is the maker&rsquo;s own number &mdash; the number a parts desk cannot argue with.</p>
+    <ul>
+      <li><strong>Frame:</strong> <a href="#step-1">Step 1: Main Frame, Rear Door, and Wire Guide Shrouds, Q6 Edge 3 Stretto</a></li>
+      <li><strong>Motors and gearboxes:</strong> <a href="#step-2">Step 2: Drive Motor, 3 Spoke Hub, Curtis, Q6 Edge 3 Stretto</a> &middot; <a href="#step-3">Step 3: Drive Motor, 5 Spoke Hub, Curtis, Q6 Edge 3 Stretto</a> &middot; <a href="#step-4">Step 4: Drive Motor, 3 Spoke Hub, P&amp;G, Q6 Edge 3 Stretto</a> &middot; <a href="#step-5">Step 5: Drive Motor, 5 Spoke Hub, P&amp;G, Q6 Edge 3 Stretto</a></li>
+      <li><strong>Wheels and casters:</strong> <a href="#step-6">Step 6: Front Caster Assembly, 5" Wheels, Q6 Edge 3 Stretto</a> &middot; <a href="#step-7">Step 7: Front Caster Assembly, 6" Wheels, Q6 Edge 3 Stretto</a> &middot; <a href="#step-8">Step 8: Rear Caster Assy, Q6 Edge 3 Stretto</a> &middot; <a href="#step-9">Step 9: Flat-free Drive Wheel, 5-Spoke, Black Rim/Black Tire, Q6 Edge 3 Stretto</a> &middot; <a href="#step-10">Step 10: Pneumatic Drive Wheel, 5-Spoke, Black Rim/Black Tire, Q6 Edge 3 Stretto</a> &middot; <a href="#step-11">Step 11: Painted Wheel Inserts, All Quantum Colors</a> &middot; <a href="#step-12">Step 12: Flat-free Drive Wheel, 3-Spoke Hub w/ Lug Cap</a> &middot; <a href="#step-13">Step 13: Pneumatic Drive Wheel, 3-Spoke Hub w/ Lug Cap</a></li>
+      <li><strong>Seating:</strong> <a href="#step-14">Step 14: Seat Interfaces, Q6 Edge 3 Stretto</a> &middot; <a href="#step-15">Step 15: I-Level Power Base Components, Edge 3 Stretto</a> &middot; <a href="#step-16">Step 16: I-Level Base Cable &amp; Push Block Assy - Edge 3 Stretto</a></li>
+      <li><strong>Electronics and controller:</strong> <a href="#step-17">Step 17: Q-Logic 3 Joystick Assy&#x27;s</a> &middot; <a href="#step-18">Step 18: NE/NE+ Joystick Assy&#x27;s</a> &middot; <a href="#step-19">Step 19: VR2 Joystick Assemblies</a> &middot; <a href="#step-20">Step 20: Aftermarket Joystick Knobs</a> &middot; <a href="#step-21">Step 21: Q-Logic 1 / Stand Alone / NE / NE+ Joystick Overlays</a> &middot; <a href="#step-22">Step 22: Q-Logic Joystick Knobs</a> &middot; <a href="#step-23">Step 23: PG Joystick Overlays</a> &middot; <a href="#step-24">Step 24: Q-Logic 2 &amp; 3 Joystick Shrouds</a> &middot; <a href="#step-25">Step 25: NE + Joystick Bottom Housing w/Bus Cable</a> &middot; <a href="#step-26">Step 26: Q-Logic 2 &amp;3 Joystick Bottom Housing w/Bus Cable</a> &middot; <a href="#step-27">Step 27: Q-Logic 3 Base Electronics Harnesses and Modules, Q6 Edge 3 Stretto</a> &middot; <a href="#step-28">Step 28: Q-Logic 3 SD Cards for Q6 Edge 3 Stretto, 6.25MPH Program</a> &middot; <a href="#step-29">Step 29: NE+, 4MPH Motor Program, Electronic Master Assemblies, Q6 Edge 3 Stretto</a> &middot; <a href="#step-30">Step 30: NE+, 4MPH Motor Program, Power Modules, Q6 Edge 3 Stretto</a> &middot; <a href="#step-31">Step 31: NE+, Harnesses and Hardware, 4MPH Motor Program, Q6 Edge 3 Stretto</a> &middot; <a href="#step-32">Step 32: NE+, 6.25MPH Motor Program, Electronic Master Assemblies, Q6 Edge 3 Stretto</a> &middot; <a href="#step-33">Step 33: NE+, 6.25MPH Motor Program, Power Modules, Q6 Edge 3 Stretto</a> &middot; <a href="#step-34">Step 34: NE+, Harnesses &amp; Hardware, 6.25MPH Motor Program, Q6 Edge 3 Stretto</a> &middot; <a href="#step-35">Step 35: NE, 4MPH Motor Program, Electronic Master Asemblies, Q6 Edge 3 Stretto</a> &middot; <a href="#step-36">Step 36: NE, 4MPH Motor Program, Power Modules, Q6 Edge 3 Stretto</a> &middot; <a href="#step-37">Step 37: NE, Harnesses and Hardware, 4MPH Motor Program, Q6 Edge 3 Stretto</a> &middot; <a href="#step-38">Step 38: NE, 6.25MPH Motor Program, Electronic Master Assemblies, Q6 Edge 3 Stretto</a> &middot; <a href="#step-39">Step 39: NE, 6.25MPH Motor Program, Power Modules, Q6 Edge 3 Stretto</a> &middot; <a href="#step-40">Step 40: NE, Harnesses and Hardware, 6.25MPH Motor Program, Q6 Edge 3 Stretto</a> &middot; <a href="#step-41">Step 41: VR2 Electronics, 4MPH Motor Program, Static Seating, Q6 Edge 3 Stretto</a> &middot; <a href="#step-42">Step 42: VR2 Electronics, 4MPH Motor Program, 1 Actuator, Q6 Edge 3 Stretto</a> &middot; <a href="#step-43">Step 43: VR2 Electronics, 4MPH Motor Program, 2 Actuator, Q6 Edge 3 Stretto</a> &middot; <a href="#step-44">Step 44: VR2 Electronics, 6MPH Motor Program, Static Seating, Q6 Edge 3 Stretto</a> &middot; <a href="#step-45">Step 45: VR2 Electronics, 6MPH Motor Program, 1 Actuator, Q6 Edge 3 Stretto</a> &middot; <a href="#step-46">Step 46: VR2 Electronics, 6MPH Motor Program, 2 Actuator, Q6 Edge 3 Stretto</a> &middot; <a href="#step-47">Step 47: Swing-away Joystick Bracket &amp; Components, Version 3</a> &middot; <a href="#step-48">Step 48: Swing-away &amp; Multi-axis Mount Matrix, Rehab Seat, Version 2</a> &middot; <a href="#step-49">Step 49: Swing-away &amp; Multi-axis Mount Matrix, Captain Seat, Version 2</a> &middot; <a href="#step-50">Step 50: Swing-away Joystick Bracket Components, Version 2</a> &middot; <a href="#step-51">Step 51: Multi-Axis Joystick Bracket Components, Version 2</a> &middot; <a href="#step-52">Step 52: Retract 4 Swing-away Joystick Bracket for Curtis Joysticks</a> &middot; <a href="#step-53">Step 53: Stealth Swing-away / Flip Down Joystick Brackets &amp; Mounts</a> &middot; <a href="#step-54">Step 54: Fixed Joystick Mounts, Quantum Joysticks</a> &middot; <a href="#step-55">Step 55: Joystick Receiver Mounts, Quantum</a></li>
+      <li><strong>Batteries and charger:</strong> <a href="#step-56">Step 56: 8 Amp UPG Charger Assy, AGM / GEL Selectable</a> &middot; <a href="#step-57">Step 57: 5 Amp UPG Charger Assy, AGM / GEL Selectable, AU Cord</a> &middot; <a href="#step-58">Step 58: Interceptor, NF-22, GEL, Battery Assy</a> &middot; <a href="#step-59">Step 59: Interceptor 40AH Gel Battery</a> &middot; <a href="#step-60">Step 60: 40AH Battery Stop - Q6 Edge 3 Stretto</a> &middot; <a href="#step-61">Step 61: 55AH Batter Stop - Q6 Edge 3 Stretto</a></li>
+      <li><strong>Covers, decals and accessories:</strong> <a href="#step-62">Step 62: Center Shroud w/ Painted Inserts , Q6 Edge 3 Stretto</a> &middot; <a href="#step-63">Step 63: Front Battery Door, Q6 Edge 3 Stretto</a> &middot; <a href="#step-64">Step 64: Front Battery Door Shrouds, Q6 Edge 3 Stretto</a> &middot; <a href="#step-65">Step 65: Rear Door Shroud, Q6 Edge 3 Stretto</a> &middot; <a href="#step-66">Step 66: Rear Door Inserts, Q6 Edge 3 Stretto</a> &middot; <a href="#step-67">Step 67: Fenders, No Lights, Q6 Edge 3 Stretto</a> &middot; <a href="#step-68">Step 68: Fenders w/ Lights, Q6 Edge 3 Stretto</a> &middot; <a href="#step-69">Step 69: Owner&#x27;s Package, Australia, Q6 Edge 3 Stretto</a> &middot; <a href="#step-70">Step 70: Decal Package, Q6 Edge 3 Stretto</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Stage 1 — Frame</h2>
+    <p>Start with the skeleton. Every other system bolts to the frame, so it goes together first.</p>
+    <h3 id="step-1">Step 1 &mdash; Main Frame, Rear Door, and Wire Guide Shrouds, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p6.jpg" alt="Main Frame, Rear Door, and Wire Guide Shrouds, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 1.</strong> Main Frame, Rear Door, and Wire Guide Shrouds, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>MEC1807747</td><td>MAIN FRAME ASSEMBLY,Q6EDGE 3 STRETTO</td><td>1</td><td>Part of the chair's skeleton — everything else bolts to it.</td></tr>
+        <tr><td>B1</td><td>MEC1804708</td><td>EDGE MINI BATTERY DOOR SIDE HINGE ASSEMBLY</td><td>1</td><td>Holds the batteries in place on the frame.</td></tr>
+        <tr><td>C1</td><td>SCRSHFH1190</td><td>SCREW,SHFH,BLACK ZINC,M6-1.0 X 10MM,W/NYLON PATCH</td><td>3</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>D1</td><td>HDW135288</td><td>WIRE CLIP,REUSABLE,BLACK,PLASTIC,(MICRO PLASTICS:NM22LCC1000B)</td><td>1</td><td>Part of the frame — the structure everything else bolts to.</td></tr>
+        <tr><td>E1</td><td>HDW156648</td><td>SCREW,SFHCS,M3 X 0.5 X 8MM,BLACK ZINC,CLASS 10.9</td><td>1</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>F1</td><td>DGN1809721</td><td>SIDE WIRE GUIDE, RIGHT, WITH REFLECTOR</td><td>1</td><td>Part of the frame — the structure everything else bolts to.</td></tr>
+        <tr><td>G1</td><td>DGN1809719</td><td>SIDE WIRE GUIDE, LEFT, WITH REFLECTOR</td><td>1</td><td>Part of the frame — the structure everything else bolts to.</td></tr>
+        <tr><td>H1</td><td>SCRPPH1304</td><td>SCREW,PPH,BLACK ZINC,M4-.7 X 6MM</td><td>6</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>I1</td><td>HDW132884</td><td>SCREW,SHOULDER,SLOTTED,M3X0.5,4 OD X 6 LG</td><td>1</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>J1</td><td>DGN1807737</td><td>REAR WIRE GUIDE COVER, STRETTO</td><td>1</td><td>Part of the frame — the structure everything else bolts to.</td></tr>
+        <tr><td>K1</td><td>SCRPPH1036</td><td>SCREW, PAN HEAD, TYPE H, M4X0.7 X 8, FT, ISO 7045, CL 4.8, BZ</td><td>1</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Stage 2 — Motors and gearboxes</h2>
+    <p>The motor and gearbox on each side are the muscles of the chair. One pair per side.</p>
+    <h3 id="step-2">Step 2 &mdash; Drive Motor, 3 Spoke Hub, Curtis, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p14.jpg" alt="Drive Motor, 3 Spoke Hub, Curtis, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 2.</strong> Drive Motor, 3 Spoke Hub, Curtis, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1a</td><td>MOT1809962-05</td><td>MOTOR ASM,EDGE MINI,LINIX,HUB AND LEVER,26:1,3-POST,CURTIS,RIGHT</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>A1b</td><td>MOT1809963-05</td><td>MOTOR ASM,EDGE MINI,LINIX,HUB AND LEVER,26:1,3-POST,CURTIS,LEFT</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>B1</td><td>MEC1711547</td><td>MOTOR SUSPENSION ASSEMBLY</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>C1</td><td>MEC1909081</td><td>MOTOR MOUNT,ASSY,LINIX TO STRETTO</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>D1a</td><td>MEC1710112</td><td>EDGE MINI MOTOR MOUNT ASSEMBLY, RIGHT</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>D1b</td><td>MEC1710119</td><td>EDGE MINI MOTOR MOUNT ASSEMBLY, LEFT</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>E1</td><td>FRMASMB8691</td><td>FREEWHEEL,ASSY,RELEASE HANDLE GRIP,YELLOW,B-1160-051</td><td>1</td><td>The lever that disconnects the motor so the chair can be pushed by hand.</td></tr>
+        <tr><td>F1</td><td>MEC1807297</td><td>12.5" 3 SPOKE WHEEL HUB ASSEMBLY</td><td>1</td><td>Rolls on the ground and carries the chair's weight.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-3">Step 3 &mdash; Drive Motor, 5 Spoke Hub, Curtis, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p16.jpg" alt="Drive Motor, 5 Spoke Hub, Curtis, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 3.</strong> Drive Motor, 5 Spoke Hub, Curtis, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1a</td><td>MOT1809962-01</td><td>MOTOR ASM,EDGE MINI,LINIX,HUB AND LEVER,29:1,5-POST,CURTIS,RIGHT</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>A1b</td><td>MOT1809963-01</td><td>MOTOR ASM,EDGE MINI,LINIX,HUB AND LEVER,29:1,5-POST,CURTIS,LEFT</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>B1</td><td>MEC1711547</td><td>MOTOR SUSPENSION ASSEMBLY</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>C1</td><td>MEC1909081</td><td>MOTOR MOUNT,ASSY,LINIX TO STRETTO</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>D1a</td><td>MEC1710112</td><td>EDGE MINI MOTOR MOUNT ASSEMBLY, RIGHT</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>D1b</td><td>MEC1710119</td><td>EDGE MINI MOTOR MOUNT ASSEMBLY, LEFT</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>E1</td><td>FRMASMB8691</td><td>FREEWHEEL,ASSY,RELEASE HANDLE GRIP,YELLOW,B-1160-051</td><td>1</td><td>The lever that disconnects the motor so the chair can be pushed by hand.</td></tr>
+        <tr><td>F1</td><td>MEC145417</td><td>HUB ASSEMBLY</td><td>1</td><td>Part of the motor and gearbox set that pushes the chair.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-4">Step 4 &mdash; Drive Motor, 3 Spoke Hub, P&amp;G, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p18.jpg" alt="Drive Motor, 3 Spoke Hub, P&amp;G, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 4.</strong> Drive Motor, 3 Spoke Hub, P&amp;G, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1a</td><td>MOT1809962-06</td><td>MOTOR ASM,EDGE MINI,LINIX,HUB AND LEVER,26:1,3-POST,R-NET,RIGHT</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>A1b</td><td>MOT1809963-06</td><td>MOTOR ASM,EDGE MINI,LINIX,HUB AND LEVER,26:1,3-POST,R-NET,LEFT</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>B1</td><td>MEC1711547</td><td>MOTOR SUSPENSION ASSEMBLY</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>C1</td><td>MEC1909081</td><td>MOTOR MOUNT,ASSY,LINIX TO STRETTO</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>D1a</td><td>MEC1710112</td><td>EDGE MINI MOTOR MOUNT ASSEMBLY, RIGHT</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>D1b</td><td>MEC1710119</td><td>EDGE MINI MOTOR MOUNT ASSEMBLY, LEFT</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>E1</td><td>FRMASMB8691</td><td>FREEWHEEL,ASSY,RELEASE HANDLE GRIP,YELLOW,B-1160-051</td><td>1</td><td>The lever that disconnects the motor so the chair can be pushed by hand.</td></tr>
+        <tr><td>F1</td><td>MEC1807297</td><td>12.5" 3 SPOKE WHEEL HUB ASSEMBLY</td><td>1</td><td>Rolls on the ground and carries the chair's weight.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-5">Step 5 &mdash; Drive Motor, 5 Spoke Hub, P&amp;G, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p20.jpg" alt="Drive Motor, 5 Spoke Hub, P&amp;G, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 5.</strong> Drive Motor, 5 Spoke Hub, P&amp;G, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1a</td><td>MOT1809962-02</td><td>MOTOR ASM,EDGE MINI,LINIX,HUB AND LEVER,29:1,5-POST, R-NET,RIGHT</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>A1b</td><td>MOT1809963-02</td><td>MOTOR ASM,EDGE MINI,LINIX,HUB AND LEVER,29:1, 5-POST,R-NET, LEFT</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>B1</td><td>MEC1711547</td><td>MOTOR SUSPENSION ASSEMBLY</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>C1</td><td>MEC1909081</td><td>MOTOR MOUNT,ASSY,LINIX TO STRETTO</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>D1a</td><td>MEC1710112</td><td>EDGE MINI MOTOR MOUNT ASSEMBLY, RIGHT</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>D1b</td><td>MEC1710119</td><td>EDGE MINI MOTOR MOUNT ASSEMBLY, LEFT</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>E1</td><td>FRMASMB8691</td><td>FREEWHEEL,ASSY,RELEASE HANDLE GRIP,YELLOW,B-1160-051</td><td>1</td><td>The lever that disconnects the motor so the chair can be pushed by hand.</td></tr>
+        <tr><td>F1</td><td>MEC145417</td><td>HUB ASSEMBLY</td><td>1</td><td>Part of the motor and gearbox set that pushes the chair.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Stage 3 — Wheels and casters</h2>
+    <p>Wheels next: the big drive wheels in the middle, the small swiveling casters at the corners.</p>
+    <h3 id="step-6">Step 6 &mdash; Front Caster Assembly, 5" Wheels, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p8.jpg" alt="Front Caster Assembly, 5" Wheels, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 6.</strong> Front Caster Assembly, 5" Wheels, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1a</td><td>MEC1808962</td><td>CASTER ARM ASSEMBLY, 5", FRONT RIGHT, BLACK RIM/BLACK TIRE</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>A1b</td><td>MEC1808960</td><td>CASTER ARM ASSEMBLY, 5", FRONT LEFT, BLACK RIM/BLACK TIRE</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>B1a</td><td>MEC1810800</td><td>CASTER ASSEMBLY, 5", BLACK RIM / BLACK TIRE, RIGHT</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>B1b</td><td>MEC1810801</td><td>CASTER ASSEMBLY, 5", BLACK RIM / BLACK TIRE, LEFT</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>C1</td><td>WHL140383</td><td>WHEEL,ASSY,CASTER,FLAT FREE,BLACK RIM/BLACK TIRE,5" X 1.75",W/BEARINGS &amp; SPACER,E-1202-</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>D1</td><td>MEC122534</td><td>CASTER BEARING KIT</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>E1</td><td>MEC1802830-01</td><td>EDGE MINI FRONT SUSPENSION ASSEMBLY, BLACK AND GOLD</td><td>1</td><td>Lets the wheels ride over bumps while the seat stays level.</td></tr>
+        <tr><td>F1</td><td>DWR1062C058</td><td>SUSPENSION,DAMPER SHOCK,W/10MM BALL ENDS,60MM STROKE,COMPRESSION,C-1062-058 ***Must Be Replaced In Pairs***</td><td>1</td><td>A shock absorber. It smooths bumps so the ride doesn't jar you.</td></tr>
+        <tr><td>G1</td><td>NUTNJAM1020</td><td>NUT,NYLOCK JAM,BLACK ZINC,M8-1.25</td><td>1</td><td>Threads onto a bolt to clamp parts together.</td></tr>
+        <tr><td>H1</td><td>DGN1808787</td><td>PLASTIC CAP, CASTER ARM</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>I1</td><td>HDW1803914</td><td>SCREW, PAN HEAD, TYPE H, M3X0.5 X 6, ISO 7045, CL 4.8, BZ</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-7">Step 7 &mdash; Front Caster Assembly, 6" Wheels, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p10.jpg" alt="Front Caster Assembly, 6" Wheels, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 7.</strong> Front Caster Assembly, 6" Wheels, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1a</td><td>MEC1901932-A</td><td>CASTER ASSEMBLY, 6", BLACK RIM / BLACK TIRE, RIGHT</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>A1b</td><td>MEC1901930-A</td><td>CASTER ASSEMBLY, 6", BLACK RIM / BLACK TIRE, LEFT</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>B1</td><td>WHLASMB7110039</td><td>WHEEL,ASSY,LOW IMPACT,BLACK RIM/BLACK TIRE,6" X 2",W/BEARINGS &amp; SPACER,E-1202-039</td><td>1</td><td>A complete wheel — tire and hub together.</td></tr>
+        <tr><td>C1</td><td>MEC122534</td><td>CASTER BEARING KIT</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>D1</td><td>MEC1802830-01</td><td>EDGE MINI FRONT SUSPENSION ASSEMBLY, BLACK AND GOLD</td><td>1</td><td>Lets the wheels ride over bumps while the seat stays level.</td></tr>
+        <tr><td>E1</td><td>DWR1062C058</td><td>SUSPENSION,DAMPER SHOCK,W/10MM BALL ENDS,60MM STROKE,COMPRESSION,C-1062-058 ***Must Be Replaced In Pairs***</td><td>1</td><td>A shock absorber. It smooths bumps so the ride doesn't jar you.</td></tr>
+        <tr><td>F1</td><td>NUTNJAM1020</td><td>NUT,NYLOCK JAM,BLACK ZINC,M8-1.25</td><td>1</td><td>Threads onto a bolt to clamp parts together.</td></tr>
+        <tr><td>G1</td><td>DGN1808787</td><td>PLASTIC CAP, CASTER ARM</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>H1</td><td>HDW1803914</td><td>SCREW, PAN HEAD, TYPE H, M3X0.5 X 6, ISO 7045, CL 4.8, BZ</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-8">Step 8 &mdash; Rear Caster Assy, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p12.jpg" alt="Rear Caster Assy, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 8.</strong> Rear Caster Assy, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>MEC1808955-A</td><td>CASTER ARM ASSEMBLY, 6", REAR RIGHT, BLACK RIM/BLACK TIRE, BLACK CASTER ARM</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>B1</td><td>MEC1808958-A</td><td>CASTER ARM ASSEMBLY, 6", REAR LEFT, BLACK RIM/BLACK TIRE, BLACK CASTER ARM</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>C1</td><td>MEC1901932-A</td><td>CASTER ASSEMBLY, 6", BLACK RIM / BLACK TIRE, RIGHT</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>D1</td><td>MEC1901930-A</td><td>CASTER ASSEMBLY, 6", BLACK RIM / BLACK TIRE, LEFT</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>E1</td><td>WHLASMB7110039</td><td>WHEEL,ASSY,LOW IMPACT,BLACK RIM/BLACK TIRE,6" X 2",W/BEARINGS &amp; SPACER,E-1202-039</td><td>1</td><td>A complete wheel — tire and hub together.</td></tr>
+        <tr><td>F1</td><td>MEC122534</td><td>CASTER BEARING KIT</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>G1</td><td>MEC1809761-01</td><td>EDGE MINI BACK SUSPENSION ASSEMBLY, BLACK AND GOLD</td><td>1</td><td>Lets the wheels ride over bumps while the seat stays level.</td></tr>
+        <tr><td>H1</td><td>DGN1808787</td><td>PLASTIC CAP, CASTER ARM</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>I1</td><td>HDW1803914</td><td>SCREW, PAN HEAD, TYPE H, M3X0.5 X 6, ISO 7045, CL 4.8, BZ</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-9">Step 9 &mdash; Flat-free Drive Wheel, 5-Spoke, Black Rim/Black Tire, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p98.jpg" alt="Flat-free Drive Wheel, 5-Spoke, Black Rim/Black Tire, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 9.</strong> Flat-free Drive Wheel, 5-Spoke, Black Rim/Black Tire, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>WHL1703588</td><td>WHEEL,ASSY,FLAT FREE,14" X 3" DRIVE,BLACK RIM/BLACK TIRE,E-1203-043</td><td>1</td><td>A complete wheel — tire and hub together.</td></tr>
+        <tr><td>B1</td><td>TIR8110024</td><td>TIRE,FLAT FREE,BLACK,14" OD,3" W,C-248 POWERTRAX TREAD,(GALLOP: 5508018 YT57)</td><td>1</td><td>Part of the wheel set the chair rolls on.</td></tr>
+        <tr><td>C1</td><td>WHL1703586</td><td>WHEEL,ASSY,RIM,BLACK,ALUMINUM,8",5 SPOKE,D-1203-071</td><td>1</td><td>Rolls on the ground and carries the chair's weight.</td></tr>
+        <tr><td>D1</td><td>MEC145417</td><td>HUB ASSEMBLY</td><td>1</td><td>Part of the wheel set the chair rolls on.</td></tr>
+        <tr><td>E1</td><td>DWR1005B049</td><td>NUT,LUG,ZINC,5/16-24,B-1005-049</td><td>5</td><td>Threads onto a bolt to clamp parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-10">Step 10 &mdash; Pneumatic Drive Wheel, 5-Spoke, Black Rim/Black Tire, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p100.jpg" alt="Pneumatic Drive Wheel, 5-Spoke, Black Rim/Black Tire, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 10.</strong> Pneumatic Drive Wheel, 5-Spoke, Black Rim/Black Tire, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>WHL1704507</td><td>WHEEL,ASSY,PNEUMATIC,14" X 3" DRIVE,BLACK RIM/BLACK TIRE,E-1203-051</td><td>1</td><td>A complete wheel — tire and hub together.</td></tr>
+        <tr><td>B1</td><td>TIR8110026</td><td>TIRE,PNEUMATIC,BLACK,14" OD,3" W,C-248-5 TREAD</td><td>1</td><td>Part of the wheel set the chair rolls on.</td></tr>
+        <tr><td>C1</td><td>TUBSTND1002</td><td>TUBE,300-8,ANGLED VALVE W/CAP</td><td>1</td><td>Part of the wheel set the chair rolls on.</td></tr>
+        <tr><td>D1</td><td>WHL1703586</td><td>WHEEL,ASSY,RIM,BLACK,ALUMINUM,8",5 SPOKE,D-1203-071</td><td>1</td><td>Rolls on the ground and carries the chair's weight.</td></tr>
+        <tr><td>E1</td><td>MEC145417</td><td>HUB ASSEMBLY</td><td>1</td><td>Part of the wheel set the chair rolls on.</td></tr>
+        <tr><td>F1</td><td>DWR1005B049</td><td>NUT,LUG,ZINC,5/16-24,B-1005-049</td><td>5</td><td>Threads onto a bolt to clamp parts together.</td></tr>
+        <tr><td>G1</td><td>PLSINDV1003</td><td>CAP,BLACK,VALVE</td><td>1</td><td>Part of the wheel set the chair rolls on.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-11">Step 11 &mdash; Painted Wheel Inserts, All Quantum Colors</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p102.jpg" alt="Painted Wheel Inserts, All Quantum Colors — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 11.</strong> Painted Wheel Inserts, All Quantum Colors &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>DGN164245-PBK1</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-BLK-01 (BACK IN BLACK/BLACK)</td><td>1</td><td>The big powered wheel. The motors turn these — they push the chair.</td></tr>
+        <tr><td>B1</td><td>DGN164245-PBK3</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-BLK-03 (NIGHT TRAIN)</td><td>1</td><td>The big powered wheel. The motors turn these — they push the chair.</td></tr>
+        <tr><td>C1</td><td>DGN164245-PSL3</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-SIL-03 (GREY STREET)</td><td>1</td><td>The big powered wheel. The motors turn these — they push the chair.</td></tr>
+        <tr><td>D1</td><td>DGN164245-PSL7</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-SIL-07 (SILVER BULLET)</td><td>1</td><td>The big powered wheel. The motors turn these — they push the chair.</td></tr>
+        <tr><td>E1</td><td>DGN164245-PWH2</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-WHT-02 (WHITE SATIN)</td><td>1</td><td>The big powered wheel. The motors turn these — they push the chair.</td></tr>
+        <tr><td>F1</td><td>DGN164245-PRD1</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-RED-01 (RED CORVETTE/CANDY APPLE RED)</td><td>1</td><td>The big powered wheel. The motors turn these — they push the chair.</td></tr>
+        <tr><td>G1</td><td>DGN164245-PRD4</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-RED-04(CHERRY BOMB)</td><td>1</td><td>The big powered wheel. The motors turn these — they push the chair.</td></tr>
+        <tr><td>H1</td><td>DGN164245-PPK3</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-PNK-03 (PRETTY IN PINK)</td><td>1</td><td>The big powered wheel. The motors turn these — they push the chair.</td></tr>
+        <tr><td>I1</td><td>DGN164245-PPK4</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-PNK-04(RASPBERRY BERET)</td><td>1</td><td>The big powered wheel. The motors turn these — they push the chair.</td></tr>
+        <tr><td>J1</td><td>DGN164245-PPR7</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-PRP-07(SUGAR PLUM)</td><td>1</td><td>The big powered wheel. The motors turn these — they push the chair.</td></tr>
+        <tr><td>K1</td><td>DGN164245-PPR5</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-PRP-05 (DEEP PURPLE)</td><td>1</td><td>The big powered wheel. The motors turn these — they push the chair.</td></tr>
+        <tr><td>L1</td><td>DGN164245-PBU10</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-BLU-10 (MIDNIGHT BLUE)</td><td>1</td><td>The big powered wheel. The motors turn these — they push the chair.</td></tr>
+        <tr><td>M1</td><td>DGN164245-PBU9</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-BLU-09 (ELECTRIC BLUE/TRUE BLUE)</td><td>1</td><td>The big powered wheel. The motors turn these — they push the chair.</td></tr>
+        <tr><td>N1</td><td>DGN164245-PBU11</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-BLU-11(BLUE JEAN)</td><td>1</td><td>The big powered wheel. The motors turn these — they push the chair.</td></tr>
+        <tr><td>O1</td><td>DGN164245-PGN11</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-GRN-11(GREEN MACHINE)</td><td>1</td><td>The big powered wheel. The motors turn these — they push the chair.</td></tr>
+        <tr><td>P1</td><td>DGN164245-PGN8</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-GRN-08 (MILITARY GREEN)</td><td>1</td><td>The big powered wheel. The motors turn these — they push the chair.</td></tr>
+        <tr><td>Q1</td><td>DGN164245-PGN7</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-GRN-07 (LIME LIGHT)</td><td>1</td><td>The big powered wheel. The motors turn these — they push the chair.</td></tr>
+        <tr><td>R1</td><td>DGN164245-PYL3</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-YEL-03 (YELLOW BLAZE/ORION YELLOW)</td><td>1</td><td>The big powered wheel. The motors turn these — they push the chair.</td></tr>
+        <tr><td>S1</td><td>DGN164245-PYL4</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-YEL-04(LEMON CRUSH)</td><td>1</td><td>The big powered wheel. The motors turn these — they push the chair.</td></tr>
+        <tr><td>T1</td><td>DGN164245-POR6</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-ORN-06 (ORANGE CRUSH)</td><td>1</td><td>The big powered wheel. The motors turn these — they push the chair.</td></tr>
+        <tr><td>U1</td><td>DGN164245-POR7</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-ORN-07(EVOLUTION ORANGE)</td><td>1</td><td>The big powered wheel. The motors turn these — they push the chair.</td></tr>
+        <tr><td>V1</td><td>DGN164245-WCB1</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PWT-CBN-01 (CARBON FIBER)</td><td>1</td><td>The big powered wheel. The motors turn these — they push the chair.</td></tr>
+        <tr><td>W1</td><td>DGN164245-WCM7</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PWT-CMO-07 (MILITARY DIGITAL CAMO)</td><td>1</td><td>The big powered wheel. The motors turn these — they push the chair.</td></tr>
+        <tr><td>X1</td><td>DGN164245-WFL2</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PWT-FLG-02 (FADED GLORY)</td><td>1</td><td>The big powered wheel. The motors turn these — they push the chair.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-12">Step 12 &mdash; Flat-free Drive Wheel, 3-Spoke Hub w/ Lug Cap</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p104.jpg" alt="Flat-free Drive Wheel, 3-Spoke Hub w/ Lug Cap — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 12.</strong> Flat-free Drive Wheel, 3-Spoke Hub w/ Lug Cap &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>WHL1807050</td><td>12.5" TIRE ASSEMBLY, FLAT FREE</td><td>1</td><td>Part of the wheel set the chair rolls on.</td></tr>
+        <tr><td>B1</td><td>MEC1807297</td><td>12.5" 3 SPOKE WHEEL HUB ASSEMBLY</td><td>1</td><td>Rolls on the ground and carries the chair's weight.</td></tr>
+        <tr><td>C1</td><td>DWR1005B049</td><td>NUT,LUG,ZINC,5/16-24,B-1005-049</td><td>3</td><td>Threads onto a bolt to clamp parts together.</td></tr>
+        <tr><td>D1</td><td>DGN1806985</td><td>RIM LUG CAP, EDGE MINI</td><td>1</td><td>Part of the wheel set the chair rolls on.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-13">Step 13 &mdash; Pneumatic Drive Wheel, 3-Spoke Hub w/ Lug Cap</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p106.jpg" alt="Pneumatic Drive Wheel, 3-Spoke Hub w/ Lug Cap — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 13.</strong> Pneumatic Drive Wheel, 3-Spoke Hub w/ Lug Cap &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>WHL1806954</td><td>12.5" TIRE ASSEMBLY, PNEUMATIC</td><td>1</td><td>Part of the wheel set the chair rolls on.</td></tr>
+        <tr><td>B1</td><td>MEC1807297</td><td>12.5" 3 SPOKE WHEEL HUB ASSEMBLY</td><td>1</td><td>Rolls on the ground and carries the chair's weight.</td></tr>
+        <tr><td>C1</td><td>DWR1005B049</td><td>NUT,LUG,ZINC,5/16-24,B-1005-049</td><td>3</td><td>Threads onto a bolt to clamp parts together.</td></tr>
+        <tr><td>D1</td><td>DGN1806985</td><td>RIM LUG CAP, EDGE MINI</td><td>1</td><td>Part of the wheel set the chair rolls on.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Stage 4 — Seating</h2>
+    <p>Seating goes on once the base rolls. This is the system that holds the rider — fit is safety here.</p>
+    <h3 id="step-14">Step 14 &mdash; Seat Interfaces, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p92.jpg" alt="Seat Interfaces, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 14.</strong> Seat Interfaces, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1 - A4</td><td>MEC1900194</td><td>SEAT INTERFACE,ASSY,CONTOUR / TB3 SEAT,EDGE MINI</td><td>1</td><td>The platform the seat sits on and bolts to.</td></tr>
+        <tr><td>A1</td><td>BRK8110003</td><td>MOUNTING BRACKET,SEAT INTERFACE,UNIVERSAL,BRK8110003</td><td>4</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>A2</td><td>MEC142133</td><td>MOUNTING BRACKET,ASSY,UNIVERSAL TRANSIT SECUREMENT LOOP W/DECALS</td><td>2</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>A3</td><td>HDW142810</td><td>SCREW, SOCKET HEAD, M10 X 50, ISO 4762, CL 12.9, BZ, PVTP</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>A4</td><td>SCR8110003</td><td>SCREW, SOCKET HEAD, M10X1.5 X 25, ISO 4762, CL 12.9, BZ, PVTP</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>B1 - B5</td><td>MEC1900196</td><td>SEAT INTERFACE,ASSY,TB FLEX SEAT,EDGE MINI</td><td>1</td><td>The platform the seat sits on and bolts to.</td></tr>
+        <tr><td>B1</td><td>MEC1804226</td><td>EDGE MINI, TB FLEX, SEATING INTERFACE, BACK</td><td>2</td><td>Part of the seating — the system that holds the rider.</td></tr>
+        <tr><td>B2</td><td>MEC1808704</td><td>SEAT INTERFACE BRACKET, EDGE MINI</td><td>2</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>B3</td><td>MEC142133</td><td>MOUNTING BRACKET,ASSY,UNIVERSAL TRANSIT SECUREMENT LOOP W/DECALS</td><td>2</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>B4</td><td>HDW142810</td><td>SCREW, SOCKET HEAD, M10 X 50, ISO 4762, CL 12.9, BZ, PVTP</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>B5</td><td>SCR8110003</td><td>SCREW, SOCKET HEAD, M10X1.5 X 25, ISO 4762, CL 12.9, BZ, PVTP</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>C1 - C7</td><td>MEC1900195</td><td>SEAT INTERFACE,ASSY,TB3.5 TILT,EDGE MINI</td><td>1</td><td>Tilts the whole seat backward or forward without changing the sitting angle.</td></tr>
+        <tr><td>C1</td><td>MEC1809730</td><td>EDGE MINI TB3.5 TILT BRACKET, RIGHT</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>C2</td><td>MEC1809731</td><td>EDGE MINI TB3.5 SEATING INTERFACE, LEFT</td><td>1</td><td>Part of the seating — the system that holds the rider.</td></tr>
+        <tr><td>C3</td><td>MEC1808718</td><td>TB3 TILT SPACER, EDGE MINI</td><td>4</td><td>Tilts the whole seat backward or forward without changing the sitting angle.</td></tr>
+        <tr><td>C4</td><td>SCRSHCS1340</td><td>SCREW,SHCS,BLACK ZINC,M10-1.5 X 20MM,GR 10.9,W/PATCH</td><td>8</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>C5</td><td>HDW133681</td><td>SCREW, SOCKET HEAD, M10X1.5 X 16, ISO 4762, CL 12.9, BZ, PVTP</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>C6</td><td>HDW142810</td><td>SCREW, SOCKET HEAD, M10 X 50, ISO 4762, CL 12.9, BZ, PVTP</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>C7</td><td>MEC142133</td><td>MOUNTING BRACKET,ASSY,UNIVERSAL TRANSIT SECUREMENT LOOP W/DECALS</td><td>2</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-15">Step 15 &mdash; I-Level Power Base Components, Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p108.jpg" alt="I-Level Power Base Components, Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 15.</strong> I-Level Power Base Components, Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1 - B3</td><td>MEC1900823</td><td>ILEVEL,ASSY,Q6EDGE 3 STRETTO</td><td>1</td><td>The iLevel seat lift. It raises the seat so you can reach things and talk eye to eye.</td></tr>
+        <tr><td>A1</td><td>MEC1900337</td><td>ILEVEL ATTACHMENT ASSEMB, RIGHT</td><td>1</td><td>The iLevel seat lift. It raises the seat so you can reach things and talk eye to eye.</td></tr>
+        <tr><td>A2</td><td>MEC1900336</td><td>ILEVEL ATTACHMENT ASSEMB, LEFT</td><td>1</td><td>The iLevel seat lift. It raises the seat so you can reach things and talk eye to eye.</td></tr>
+        <tr><td>A3</td><td>MEC1900335</td><td>RIGHT CASTER ARM ILEVEL ASSM</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>A4</td><td>MEC1900333</td><td>LEFT CASTER ARM ILEVEL ASSM</td><td>1</td><td>The small swivel wheel. It is not powered; it follows wherever the chair turns.</td></tr>
+        <tr><td>A5</td><td>ELE145674</td><td>HARNESS,ILEVEL BASE SUSPENSION LOCK SIGNAL CURTIS,Q6EDGE</td><td>1</td><td>Lets the wheels ride over bumps while the seat stays level.</td></tr>
+        <tr><td>A6</td><td>LAB1906474</td><td>DECAL, I-LEVEL SIDE RAIL LABEL</td><td>2</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>A7</td><td>PLSTIE1004</td><td>TIE WRAP,BLACK,8"</td><td>2</td><td>Part of the seating — the system that holds the rider.</td></tr>
+        <tr><td>B1</td><td>MEC1900288</td><td>ILEVEL SWITCH PLATE, RIGHT</td><td>1</td><td>Turns a function on or off.</td></tr>
+        <tr><td>B2</td><td>MEC1810306</td><td>ILEVEL, SWITCH PLATE, LEFT</td><td>1</td><td>Turns a function on or off.</td></tr>
+        <tr><td>B3</td><td>HDW154800</td><td>SCREW, FLAT HEAD, M4X0.7 X 10, ISO 10642, CL 10.9, BZ, PVTP</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-16">Step 16 &mdash; I-Level Base Cable &amp; Push Block Assy - Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p110.jpg" alt="I-Level Base Cable &amp; Push Block Assy - Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 16.</strong> I-Level Base Cable &amp; Push Block Assy - Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1 - B1</td><td>MEC1906776</td><td>ILEVEL,ASSY,TRU-BALANCE 3 POWER ADJUSTABLE SEAT LIFT W/ILEVEL,STRETTO</td><td>1</td><td>The iLevel seat lift. It raises the seat so you can reach things and talk eye to eye.</td></tr>
+        <tr><td>A1</td><td>HDW147454</td><td>SCREW,SHCS,M4-0.7 X 6MM LG,CLASS 10.9,BLACK ZINC,NYLON PATCH</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>B1</td><td>MEC148171</td><td>ILEVEL CABLE,ASSY,W/MOUNTING BLOCK,TRU-BALANCE 3 POWER ADJUSTABLE SEAT LIFT W/ILEVEL</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Stage 5 — Electronics and controller</h2>
+    <p>The electronics wire the chair together: controller, joystick, and the cables between them.</p>
+    <h3 id="step-17">Step 17 &mdash; Q-Logic 3 Joystick Assy&#x27;s</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p22.jpg" alt="Q-Logic 3 Joystick Assy's — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 17.</strong> Q-Logic 3 Joystick Assy's &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>CTL143976</td><td>EXPANDABLE CONTROLLER W/ JOYSTICK AND LCD COLOR DISPLAY, Q-LOGIC 3, 4-KEY, (CURTIS: 17949700-02-0009)</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>B1</td><td>CTL143977</td><td>EXPANDABLE CONTROLLER W/ JOYSTICK AND LCD COLOR DISPLAY AND LIGHTS, Q-LOGIC 3, 4- KEY, (CURTIS: 17949700-02-0109)</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>C1</td><td>FRMASMB10617</td><td>JOYSTICK MOUNTING BRACKET,ASSY,CURTIS,INLINE</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>D1</td><td>DGN124309</td><td>SPEED WHEEL,KNOB,CURTIS Q-LOGIC 2,BLACK,PLASTIC,DGN124309,(CURTIS: 17949367-01)</td><td>1</td><td>Rolls on the ground and carries the chair's weight.</td></tr>
+        <tr><td>E1</td><td>DGN154742</td><td>JOYSTICK, KNOB, Q-LOGIC 3, 6.35MM-ID, (CURTIS: 17519114-01)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>F1</td><td>ELE144006</td><td>ELECTRONIC, BOTTOM HOUSING, JOYSTICK MODULE Q-LOGIC 3,W/ BUS CABLE Q-LOGIC 3, (CURTIS: 17949366-02)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-fault-codes-qlogic.html">Q-Logic, translated</a> — what the Q-Logic hand control&rsquo;s screens and fault codes mean (site lesson).</p>
+    <h3 id="step-18">Step 18 &mdash; NE/NE+ Joystick Assy&#x27;s</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p24.jpg" alt="NE/NE+ Joystick Assy's — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 18.</strong> NE/NE+ Joystick Assy's &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>CTLDC1554</td><td>CONTROLLER,JOYSTICK MODULE,CURTIS,NE,4 KEY,H-1111-263,(CURTIS: 378692019)</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>B1</td><td>CTLDC1560</td><td>CONTROLLER,JOYSTICK MODULE,CURTIS NE PLUS,6 KEY,SWITCH JACKS AND ACTUATORS,H-1111- 268,(CURTIS: 17905700)</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>C1</td><td>CTLDC1561</td><td>CONTROLLER,JOYSTICK MODULE,CURTIS NE PLUS,8 KEY,SWITCH JACKS,ACTUATORS,AND LIGHTS,H-1111-269,(CURTIS: 17906700)</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>D1</td><td>FRMASMB12744</td><td>JOYSTICK MOUNTING BRACKET,ASSY,NE/NE PLUS CONTROLLER,INLINE</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-19">Step 19 &mdash; VR2 Joystick Assemblies</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p26.jpg" alt="VR2 Joystick Assemblies — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 19.</strong> VR2 Joystick Assemblies &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>CTLDC1463</td><td>CONTROLLER,JOYSTICK MODULE,4 KEY,VR2,H-1111-015,(P&amp;G: D50677)</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>B1</td><td>CTLDC1498</td><td>CONTROLLER,JOYSTICK MODULE,6 KEY,VR2,H-1111-063,(P&amp;G: D50680)</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>C1</td><td>CTLDC1505</td><td>CONTROLLER,JOYSTICK MODULE,9 KEY,ACTUATORS &amp; LIGHTS,VR2,H-1010-130,(P&amp;G: D50871)</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>D1</td><td>FRMASMB9532</td><td>JOYSTICK MOUNTING BRACKET,ASSY,GC/VR2 CONTROLLER,INLINE</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-20">Step 20 &mdash; Aftermarket Joystick Knobs</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p28.jpg" alt="Aftermarket Joystick Knobs — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 20.</strong> Aftermarket Joystick Knobs &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ACCASMB1856</td><td>P&amp;G JOYSTICK KNOB,ASSY,JAZZY,SOFT BALL</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B1</td><td>ACCASMB1857</td><td>P&amp;G JOYSTICK KNOB,ASSY,JAZZY,EXTENDED I-HANDLE</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>C1</td><td>ACCASMB1858</td><td>P&amp;G JOYSTICK KNOB,ASSY,JAZZY,T BAR</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>D1</td><td>ACCASMB1859</td><td>P&amp;G JOYSTICK KNOB,ASSY,JAZZY,BALL</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>E1</td><td>ACCASMB1860</td><td>P&amp;G JOYSTICK KNOB,ASSY,JAZZY,MUSHROOM</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>F1</td><td>ACCASMB1861</td><td>P&amp;G JOYSTICK KNOB,ASSY,JAZZY,CHIN CUP</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>G1</td><td>ACCASMB1862</td><td>P&amp;G JOYSTICK KNOB,ASSY,JAZZY,REMOTE STANDARD</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>H1</td><td>PLSKNCP1057</td><td>JOYSTICK KNOB,3",GOAL POST,W/FLEX SHAFT,FOR 1/4" STEM,(BP: PC101B)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>I1</td><td>PLSKNCP1058</td><td>JOYSTICK KNOB,4",GOAL POST,W/FLEX SHAFT,FOR 1/4" STEM,(BP: PC102B)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-21">Step 21 &mdash; Q-Logic 1 / Stand Alone / NE / NE+ Joystick Overlays</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p30.jpg" alt="Q-Logic 1 / Stand Alone / NE / NE+ Joystick Overlays — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 21.</strong> Q-Logic 1 / Stand Alone / NE / NE+ Joystick Overlays &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>KITASMB1728</td><td>KIT,ASSY,Q-LOGIC CONTROLLER KEYPAD REPLACEMENT,W/INSTALLATION INSTRUCTIONS</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>B1</td><td>KITASMB1729</td><td>KIT,ASSY,Q-LOGIC CONTROLLER W/LIGHTS KEYPAD REPLACEMENT,W/INSTALLATION INSTRUCTIONS</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>C1</td><td>KITASMB1730</td><td>KIT,ASSY,Q-LOGIC STAND ALONE CONTROLLER KEYPAD REPLACEMENT,W/INSTALLATION INSTRUCTIONS</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>D1</td><td>KIT152913</td><td>KIT,ASSY,NE/NE PLUS CONTROLLER,4 KEY KEYPAD REPLACEMENT,W/INSTALLATION INSTRUCTIONS</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>E1</td><td>KIT152914</td><td>KIT,ASSY,NE/NE PLUS CONTROLLER,6 KEY KEYPAD REPLACEMENT,W/INSTALLATION INSTRUCTIONS</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>F1</td><td>KIT152915</td><td>KIT,ASSY,NE/NE PLUS CONTROLLER,8 KEY KEYPAD REPLACEMENT,W/INSTALLATION INSTRUCTIONS</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-fault-codes-qlogic.html">Q-Logic, translated</a> — what the Q-Logic hand control&rsquo;s screens and fault codes mean (site lesson).</p>
+    <h3 id="step-22">Step 22 &mdash; Q-Logic Joystick Knobs</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p32.jpg" alt="Q-Logic Joystick Knobs — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 22.</strong> Q-Logic Joystick Knobs &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>DGN154742</td><td>JOYSTICK, KNOB, Q-LOGIC 3, 6.35MM-ID, (CURTIS: 17519114-01)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B1</td><td>DGN124309</td><td>SPEED WHEEL,KNOB,CURTIS Q-LOGIC 2,BLACK,PLASTIC,DGN124309,(CURTIS: 17949367-01)</td><td>1</td><td>Rolls on the ground and carries the chair's weight.</td></tr>
+        <tr><td>C1</td><td>DGN124308</td><td>JOYSTICK,KNOB,CURTIS,STANDARD,6.35MM-ID,DGN124308,(CURTIS: 37381)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>D1</td><td>KIT152919</td><td>KIT,ASSY,Q-LOGIC 2 CONTROLLER,ON/OFF/MODE TOGGLE REPLACEMENT,W/INSTALLATION INSTRUCTIONS</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>E1</td><td>PLSINDV1252</td><td>ELECTRONIC,KNOB,BLACK,PLASTIC,SPEED WHEEL,(CURTIS: 17856352-A)</td><td>1</td><td>Rolls on the ground and carries the chair's weight.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-fault-codes-qlogic.html">Q-Logic, translated</a> — what the Q-Logic hand control&rsquo;s screens and fault codes mean (site lesson).</p>
+    <h3 id="step-23">Step 23 &mdash; PG Joystick Overlays</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p34.jpg" alt="PG Joystick Overlays — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 23.</strong> PG Joystick Overlays &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>TECSERV1064</td><td>ELECTRONIC,REMOTE PLUS JOYSTICK,3 KEY TEMPLATE,(PGDT: 73903)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B1</td><td>RECPART1085</td><td>ELECTRONIC,KEYPAD,REMOTE PLUS,3 KEY,PROFILED,(PGDT: P76347)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>C1</td><td>TECSERV1065</td><td>ELECTRONIC,REMOTE PLUS JOYSTICK,7 KEY TEMPLATE,(P&amp;G: P73907)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>D1</td><td>RECPART1071</td><td>ELECTRONIC,KEYPAD,VSI,4 KEY,(PGDT: 222-P75736)</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>E1</td><td>RECPART1061</td><td>ELECTRONIC,KEYPAD,VSI,6 KEY,(PGDT: 222-P75735)</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>F1</td><td>RECPART1066</td><td>ELECTRONIC,KEYPAD,VSI,6 KEY W/LIGHTS,(PGDT: 222-P76522)</td><td>1</td><td>A light, so others can see the chair and you can see where you are going.</td></tr>
+        <tr><td>G1</td><td>RECPART1067</td><td>ELECTRONIC,KEYPAD,VSI,3 KEY,REAR,(PGDT: 222-SA76710)</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>H1</td><td>RECPART1129</td><td>ELECTRONIC,KEYPAD,VR2 CONTROLLER,4 KEY,(PG: P77909)</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>I1</td><td>RECPART1130</td><td>ELECTRONIC,KEYPAD,VR2 CONTROLLER,6 KEY,(PG: P77910)</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>J1</td><td>DWR1111H199</td><td>ELECTRONIC,KEYPAD,GC CONTROLLER,2 KEY,H-1111-199,(PGDT: P78238)</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-24">Step 24 &mdash; Q-Logic 2 &amp; 3 Joystick Shrouds</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p36.jpg" alt="Q-Logic 2 &amp; 3 Joystick Shrouds — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 24.</strong> Q-Logic 2 &amp; 3 Joystick Shrouds &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>DGN124307</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,BLACK SOFT-TOUCH PAINT,(CURTIS: 17949365-02)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>A2</td><td>DGN124336-PBK1</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-BLK-01 (BACK IN BLACK/BLACK)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>A3</td><td>DGN124336-PSL1</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-SIL-01 (SILVER)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>A4</td><td>DGN124336-PRD1</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-RED-01 (RED CORVETTE/CANDY APPLE RED)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>A5</td><td>DGN124336-PPK1</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-PNK-01 (PEARL PINK)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>A6</td><td>DGN124336-PPR4</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-PRP-04 (SAPPHIRE BLUE)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>A7</td><td>DGN124336-PBU9</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-BLU-09 (ELECTRIC BLUE/TRUE BLUE)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>A8</td><td>DGN124336-PBU1</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-BLU-01 (VIPER BLUE)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>A9</td><td>DGN124336-PGN5</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-GRN-05 (EMERALD GREEN)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>A10</td><td>DGN124336-PYL3</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-YEL-03 (YELLOW BLAZE/ORION YELLOW)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>A11</td><td>DGN124336-POR4</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-ORN-04 (SUNBURST ORANGE)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B1</td><td>DGN124307</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,BLACK SOFT-TOUCH PAINT,(CURTIS: 17949365-02)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B2</td><td>DGN124336-PBK1</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-BLK-01 (BACK IN BLACK/BLACK)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B3</td><td>DGN124336-PBK3</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-BLK-03 (NIGHT TRAIN)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B4</td><td>DGN124336-PSL3</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-SIL-03 (GREY STREET)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B5</td><td>DGN124336-PSL7</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-SIL-07 (SILVER BULLET)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B6</td><td>DGN124336-PWH2</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-WHT-02 (WHITE SATIN)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B7</td><td>DGN124336-PRD1</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-RED-01 (RED CORVETTE/CANDY APPLE RED)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B8</td><td>DGN124336-PRD4</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-RED-04 (CHERRY BOMB)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B9</td><td>DGN124336-PPK3</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-PNK-03 (PRETTY IN PINK)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B10</td><td>DGN124336-PPK4</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-PNK-04 (RASPBERRY BERET)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B11</td><td>DGN124336-PPR7</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-PRP-07 (SUGAR PLUM)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B12</td><td>DGN124336-PPR5</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-PRP-05 (DEEP PURPLE)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B13</td><td>DGN124336-PBU10</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-BLU-10 (MIDNIGHT BLUE)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B14</td><td>DGN124336-PBU9</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-BLU-09 (ELECTRIC BLUE/TRUE BLUE)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B15</td><td>DGN124336-PBU11</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-BLU-11 (BLUE JEAN)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B16</td><td>DGN124336-PGN11</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-GRN-11 (GREEN MACHINE)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B17</td><td>DGN124336-PGN8</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-GRN-08 (MILITARY GREEN)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B18</td><td>DGN124336-PGN7</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-GRN-07 (LIME LIGHT)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B19</td><td>DGN124336-PYL3</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-YEL-03 (YELLOW BLAZE/ORION YELLOW)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B20</td><td>DGN124336-PYL4</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-YEL-04 (LEMON CRUSH)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B21</td><td>DGN124336-POR6</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-ORN-06 (ORANGE CRUSH)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B22</td><td>DGN124336-POR7</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-ORN-07 (EVOLUTION ORANGE)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B23</td><td>DGN124336-WCB1</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PWT-CBN-01 (CARBON FIBER)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B24</td><td>DGN124336-WCM7</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PWT-CMO-07 (MILITARY DIGITAL CAMO)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B25</td><td>DGN124336-WFL2</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PWT-FLG-02 (FADED GLORY)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-fault-codes-qlogic.html">Q-Logic, translated</a> — what the Q-Logic hand control&rsquo;s screens and fault codes mean (site lesson).</p>
+    <h3 id="step-25">Step 25 &mdash; NE + Joystick Bottom Housing w/Bus Cable</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p38.jpg" alt="NE + Joystick Bottom Housing w/Bus Cable — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 25.</strong> NE + Joystick Bottom Housing w/Bus Cable &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>DWR1111C003</td><td>JOYSTICK REPLACEMENT BOTTOM,W/HARNESS,NE+ W/JACKS,C-1111-003,(CURTIS: 17906705)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-26">Step 26 &mdash; Q-Logic 2 &amp;3 Joystick Bottom Housing w/Bus Cable</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p40.jpg" alt="Q-Logic 2 &amp;3 Joystick Bottom Housing w/Bus Cable — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 26.</strong> Q-Logic 2 &amp;3 Joystick Bottom Housing w/Bus Cable &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ELE124313</td><td>Q-LOGIC 2 BOTTOM HOUSING,JOYSTICK MODULE,W/BUS CABLE</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B1</td><td>ELE144006</td><td>ELECTRONIC, BOTTOM HOUSING, JOYSTICK MODULE Q-LOGIC 3,W/ BUS CABLE Q-LOGIC 3, (CURTIS: 17949366-02)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-fault-codes-qlogic.html">Q-Logic, translated</a> — what the Q-Logic hand control&rsquo;s screens and fault codes mean (site lesson).</p>
+    <h3 id="step-27">Step 27 &mdash; Q-Logic 3 Base Electronics Harnesses and Modules, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p42.jpg" alt="Q-Logic 3 Base Electronics Harnesses and Modules, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 27.</strong> Q-Logic 3 Base Electronics Harnesses and Modules, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>CTL143978</td><td>POWER MODULE, Q-LOGIC 3,120 AMP, (CURTIS: 17930700-3509)</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>B1</td><td>SCRPPH1390</td><td>SCREW,PPH,BLACK ZINC,M5-.8 X 35MM</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>C1</td><td>ELECBRK1020</td><td>ELECTRONIC,CIRCUIT BREAKER,70 AMP,AUTO-RESET</td><td>1</td><td>A sacrificial link: it blows or trips to protect the wiring if too much current flows.</td></tr>
+        <tr><td>D1</td><td>HDW142473</td><td>SCREW,SHCS,BLACK ZINC,M6-1.0 X 18MM,ISO 4762 CLASS 12.9,W/NYLON PATCH</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>E1</td><td>ELE1810039</td><td>ELECTRONIC,HARNESS,POWER CABLE,Q6EDGE 3 STRETTO,W/CABLE TIES</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>F1</td><td>ELE1709864</td><td>HARNESS, BATTERY, FWD, FLEX CABLE</td><td>2</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+        <tr><td>G1</td><td>DWR1265H021</td><td>ELECTRONIC,HARNESS,POWER TAKE OFF(PTO)/INHIBIT,CURTIS,H-1265-021</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>H1</td><td>DGN1901203</td><td>OVER-MOLD RUN RECEPTACLE, 4-CIRCUIT</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>I1</td><td>HAR144005</td><td>HARNESS, BUS EXTENSION CABLE, Q-LOGIC 3, 0.410 METER,MALE/FEMALE, (CURTIS: 17881362-01- 01)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>J1</td><td>PLSTIE1004</td><td>TIE WRAP,BLACK,8"</td><td>5</td><td>Part of the electronics that control the chair.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-fault-codes-qlogic.html">Q-Logic, translated</a> — what the Q-Logic hand control&rsquo;s screens and fault codes mean (site lesson).</p>
+    <h3 id="step-28">Step 28 &mdash; Q-Logic 3 SD Cards for Q6 Edge 3 Stretto, 6.25MPH Program</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p44.jpg" alt="Q-Logic 3 SD Cards for Q6 Edge 3 Stretto, 6.25MPH Program — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 28.</strong> Q-Logic 3 SD Cards for Q6 Edge 3 Stretto, 6.25MPH Program &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ELE1908264</td><td>SERVICEABLE ASSEMBLY, SD CARD, Q6EDGE 3 STRETTO 12 INCH TIRES, PROGRAM,6.25MPH LINIX MOTORS,Q-LOGIC 3, STATIC SEATING</td><td>1</td><td>Stores the chair's settings and fault history.</td></tr>
+        <tr><td>B1</td><td>ELE1908260</td><td>SERVICEABLE ASSEMBLY, SD CARD, Q6EDGE 3 STRETTO 12 INCH TIRES, PROGRAM,6.25MPH LINIX MOTORS,Q-LOGIC 3, POWER POSITIONING.</td><td>1</td><td>Stores the chair's settings and fault history.</td></tr>
+        <tr><td>C1</td><td>ELE1908263</td><td>SERVICEABLE ASSEMBLY, SD CARD, Q6EDGE 3 STRETTO 14 INCH TIRES, PROGRAM,6.25MPH LINIX MOTORS,Q-LOGIC 3, STATIC SEATING</td><td>1</td><td>Stores the chair's settings and fault history.</td></tr>
+        <tr><td>D1</td><td>ELE1908262</td><td>SERVICEABLE ASSEMBLY, SD CARD, Q6EDGE 3 STRETTO 14 INCH TIRES, PROGRAM,6.25MPH LINIX MOTORS,Q-LOGIC 3, POWER POSITIONING.</td><td>1</td><td>Stores the chair's settings and fault history.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-fault-codes-qlogic.html">Q-Logic, translated</a> — what the Q-Logic hand control&rsquo;s screens and fault codes mean (site lesson).</p>
+    <h3 id="step-29">Step 29 &mdash; NE+, 4MPH Motor Program, Electronic Master Assemblies, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p46.jpg" alt="NE+, 4MPH Motor Program, Electronic Master Assemblies, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 29.</strong> NE+, 4MPH Motor Program, Electronic Master Assemblies, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ELE1904854</td><td>ELECTRONIC,ASSY,NE PLUS,12" TIRES,4 MPH MOTORS,Q6EDGE 3 STRETTO,STATIC,RUN PLUG</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>B1</td><td>ELE1904844</td><td>ELECTRONIC,ASSY,NE PLUS,12" TIRES,4 MPH MOTORS,Q6EDGE 3 STRETTO,STATIC / PTO</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>C1</td><td>ELE1907980</td><td>ELECTRONIC,ASSY,NE PLUS,12" TIRES,4 MPH MOTORS,Q6EDGE 3 STRETTO,STATIC (w/ fender light pto)</td><td>1</td><td>A light, so others can see the chair and you can see where you are going.</td></tr>
+        <tr><td>D1</td><td>ELE1904859</td><td>ELECTRONIC,ASSY,NE PLUS,12" TIRES,4 MPH MOTORS,Q6EDGE 3 STRETTO,POWER POSITIONING,RUN PLUG</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>E1</td><td>ELE1904847</td><td>ELECTRONIC,ASSY,NE PLUS,12" TIRES,4 MPH MOTORS,Q6EDGE 3 STRETTO,POWER POSITIONING / PTO</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>F1</td><td>ELE1907981</td><td>ELECTRONIC,ASSY,NE PLUS,12" TIRES,4 MPH MOTORS,Q6EDGE 3 STRETTO,POWER POSITIONING (w/ fender light pto)</td><td>1</td><td>A light, so others can see the chair and you can see where you are going.</td></tr>
+        <tr><td>G1</td><td>ELE1904860</td><td>ELECTRONIC,ASSY,NE PLUS,14" TIRES,4 MPH MOTORS,Q6EDGE 3 STRETTO,STATIC,RUN PLUG</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>H1</td><td>ELE1904852</td><td>ELECTRONIC,ASSY,NE PLUS,14" TIRES,4 MPH MOTORS,Q6EDGE 3 STRETTO,STATIC / PTO</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>I1</td><td>ELE1907982</td><td>ELECTRONIC,ASSY,NE PLUS,14" TIRES,4 MPH MOTORS,Q6EDGE 3 STRETTO,STATIC (w/ fender light pto)</td><td>1</td><td>A light, so others can see the chair and you can see where you are going.</td></tr>
+        <tr><td>J1</td><td>ELE1904862</td><td>ELECTRONIC,ASSY,NE PLUS,14" TIRES,4 MPH MOTORS,Q6EDGE 3 STRETTO,POWER POSITIONING,RUN PLUG</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>K1</td><td>ELE1904853</td><td>ELECTRONIC,ASSY,NE PLUS,14" TIRES,4 MPH MOTORS,Q6EDGE 3 STRETTO,POWER POSITIONING / PTO</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>L1</td><td>ELE1907983</td><td>ELECTRONIC,ASSY,NE PLUS,14" TIRES,4 MPH MOTORS,Q6EDGE 3 STRETTO,POWER POSITIONING (w/ fender light pto)</td><td>1</td><td>A light, so others can see the chair and you can see where you are going.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-30">Step 30 &mdash; NE+, 4MPH Motor Program, Power Modules, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p48.jpg" alt="NE+, 4MPH Motor Program, Power Modules, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 30.</strong> NE+, 4MPH Motor Program, Power Modules, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>CTL1906829</td><td>CONTROLLER,NE PLUS,ASSY,75 AMP,12" TIRES, 4 MPH PROGRAM,Q6EDGE 3 STRETTO</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>B1</td><td>CTL1906830</td><td>CONTROLLER,NE PLUS,ASSY,75 AMP,12" TIRES, 4 MPH PROGRAM,Q6EDGE 3 STRETTO,POWER POSITIONING</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>C1</td><td>CTL1906831</td><td>CONTROLLER,NE PLUS,ASSY,75 AMP,14" TIRES, 4 MPH PROGRAM,Q6EDGE 3 STRETTO</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>D1</td><td>CTL1906832</td><td>CONTROLLER,NE PLUS,ASSY,75 AMP,14" TIRES, 4 MPH PROGRAM,Q6EDGE 3 STRETTO,POWER POSITIONING</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-31">Step 31 &mdash; NE+, Harnesses and Hardware, 4MPH Motor Program, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p50.jpg" alt="NE+, Harnesses and Hardware, 4MPH Motor Program, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 31.</strong> NE+, Harnesses and Hardware, 4MPH Motor Program, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>SCRPPH1390</td><td>SCREW,PPH,BLACK ZINC,M5-.8 X 35MM</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>B1</td><td>ELE1709864</td><td>HARNESS, BATTERY, FWD, FLEX CABLE</td><td>2</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+        <tr><td>C1</td><td>PLSTIE1004</td><td>TIE WRAP,BLACK,8"</td><td>5</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>D1</td><td>DWR1111H065</td><td>ELECTRONIC,HARNESS,BUS EXTENSION CABLE,CURTIS,0.410 METER,MALE/FEMALE,H-1111- 065,(CURTIS: 17881303)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>E1</td><td>DWR1265H021</td><td>ELECTRONIC,HARNESS,POWER TAKE OFF(PTO)/INHIBIT,CURTIS,H-1265-021</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>F1</td><td>DWR1265H027</td><td>ELECTRONIC,HARNESS,RUN PLUG,Q-LOGIC</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>G1</td><td>ELE1907903</td><td>HARNESS, PTO INTERFACE, QL2/NE+ TO 4 PIN MOLEX</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>H1</td><td>ELE1810039</td><td>ELECTRONIC,HARNESS,POWER CABLE,Q6EDGE 3 STRETTO,W/CABLE TIES</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>I1</td><td>ELECBRK1020</td><td>ELECTRONIC,CIRCUIT BREAKER,70 AMP,AUTO-RESET</td><td>1</td><td>A sacrificial link: it blows or trips to protect the wiring if too much current flows.</td></tr>
+        <tr><td>J1</td><td>HDW142473</td><td>SCREW,SHCS,BLACK ZINC,M6-1.0 X 18MM,ISO 4762 CLASS 12.9,W/NYLON PATCH</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-32">Step 32 &mdash; NE+, 6.25MPH Motor Program, Electronic Master Assemblies, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p52.jpg" alt="NE+, 6.25MPH Motor Program, Electronic Master Assemblies, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 32.</strong> NE+, 6.25MPH Motor Program, Electronic Master Assemblies, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ELE1902878</td><td>ELECTRONIC,ASSY,NE PLUS,12" TIRES,6.25 MPH MOTORS,Q6EDGE 3 STRETTO,STATIC,RUN PLUG</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>B1</td><td>ELE1902880</td><td>ELECTRONIC,ASSY,NE PLUS,12" TIRES,6.25 MPH MOTORS,Q6EDGE 3 STRETTO,STATIC,PTO</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>C1</td><td>ELE1907976</td><td>ELECTRONIC,ASSY,NE PLUS,12" TIRES,6.25 MPH MOTORS,Q6EDGE 3 STRETTO,STATIC (w/ fender light pto)</td><td>1</td><td>A light, so others can see the chair and you can see where you are going.</td></tr>
+        <tr><td>D1</td><td>ELE1902879</td><td>ELECTRONIC,ASSY,NE PLUS,12" TIRES,6.25 MPH MOTORS,Q6EDGE 3 STRETTO,POWER POSITIONING,RUN PLUG</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>E1</td><td>ELE1902881</td><td>ELECTRONIC,ASSY,NE PLUS,12" TIRES,6.25 MPH MOTORS,Q6EDGE 3 STRETTO,POWER POSITIONING,PTO</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>F1</td><td>ELE1907977</td><td>ELECTRONIC,ASSY,NE PLUS,12" TIRES,6.25 MPH MOTORS,Q6EDGE 3 STRETTO,POWER POSITIONING (w/ fender light pto)</td><td>1</td><td>A light, so others can see the chair and you can see where you are going.</td></tr>
+        <tr><td>G1</td><td>ELE1904838</td><td>ELECTRONIC,ASSY,NE PLUS,14" TIRES,6.25 MPH MOTORS,Q6EDGE 3 STRETTO,STATIC,RUN PLUG</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>H1</td><td>ELE1904840</td><td>ELECTRONIC,ASSY,NE PLUS,14" TIRES,6.25 MPH MOTORS,Q6EDGE 3 STRETTO,STATIC,PTO</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>I1</td><td>ELE1907978</td><td>ELECTRONIC,ASSY,NE PLUS,14" TIRES,6.25 MPH MOTORS,Q6EDGE 3 STRETTO,STATIC (w/ fender light pto)</td><td>1</td><td>A light, so others can see the chair and you can see where you are going.</td></tr>
+        <tr><td>J1</td><td>ELE1904839</td><td>ELECTRONIC,ASSY,NE PLUS,14" TIRES,6.25 MPH MOTORS,Q6EDGE 3 STRETTO,POWER POSITIONING,RUN PLUG</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>K1</td><td>ELE1904841</td><td>ELECTRONIC,ASSY,NE PLUS,14" TIRES,6.25 MPH MOTORS,Q6EDGE 3 STRETTO,POWER POSITIONING,PTO</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>L1</td><td>ELE1907979</td><td>ELECTRONIC,ASSY,NE PLUS,14" TIRES,6.25 MPH MOTORS,Q6EDGE 3 STRETTO,POWER POSITIONING (w/ fender light pto)</td><td>1</td><td>A light, so others can see the chair and you can see where you are going.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-33">Step 33 &mdash; NE+, 6.25MPH Motor Program, Power Modules, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p54.jpg" alt="NE+, 6.25MPH Motor Program, Power Modules, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 33.</strong> NE+, 6.25MPH Motor Program, Power Modules, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>CTL1906825</td><td>CONTROLLER,NE PLUS,ASSY,75 AMP,12" TIRES, 6.25 MPH PROGRAM,Q6EDGE 3 STRETTO</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>B1</td><td>CTL1906826</td><td>CONTROLLER,NE PLUS,ASSY,75 AMP,12" TIRES, 6.25 MPH PROGRAM,Q6EDGE 3 STRETTO,POWER POSITIONING</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>C1</td><td>CTL1906827</td><td>CONTROLLER,NE PLUS,ASSY,75 AMP,14" TIRES, 6.25 MPH PROGRAM,Q6EDGE 3 STRETTO</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>D1</td><td>CTL1906828</td><td>CONTROLLER,NE PLUS,ASSY,75 AMP,14" TIRES, 6.25 MPH PROGRAM,Q6EDGE 3 STRETTO,POWER POSITIONING</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-34">Step 34 &mdash; NE+, Harnesses &amp; Hardware, 6.25MPH Motor Program, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p56.jpg" alt="NE+, Harnesses &amp; Hardware, 6.25MPH Motor Program, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 34.</strong> NE+, Harnesses &amp; Hardware, 6.25MPH Motor Program, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>SCRPPH1390</td><td>SCREW,PPH,BLACK ZINC,M5-.8 X 35MM</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>B1</td><td>ELE1709864</td><td>HARNESS, BATTERY, FWD, FLEX CABLE</td><td>2</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+        <tr><td>C1</td><td>PLSTIE1004</td><td>TIE WRAP,BLACK,8"</td><td>5</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>D1</td><td>DWR1111H065</td><td>ELECTRONIC,HARNESS,BUS EXTENSION CABLE,CURTIS,0.410 METER,MALE/FEMALE,H-1111- 065,(CURTIS: 17881303)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>E1</td><td>DWR1265H021</td><td>ELECTRONIC,HARNESS,POWER TAKE OFF(PTO)/INHIBIT,CURTIS,H-1265-021</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>F1</td><td>DWR1265H027</td><td>ELECTRONIC,HARNESS,RUN PLUG,Q-LOGIC</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>G1</td><td>ELE1907903</td><td>HARNESS, PTO INTERFACE, QL2/NE+ TO 4 PIN MOLEX</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>H1</td><td>ELE1810039</td><td>ELECTRONIC,HARNESS,POWER CABLE,Q6EDGE 3 STRETTO,W/CABLE TIES</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>I1</td><td>ELECBRK1020</td><td>ELECTRONIC,CIRCUIT BREAKER,70 AMP,AUTO-RESET</td><td>1</td><td>A sacrificial link: it blows or trips to protect the wiring if too much current flows.</td></tr>
+        <tr><td>J1</td><td>HDW142473</td><td>SCREW,SHCS,BLACK ZINC,M6-1.0 X 18MM,ISO 4762 CLASS 12.9,W/NYLON PATCH</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-35">Step 35 &mdash; NE, 4MPH Motor Program, Electronic Master Asemblies, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p58.jpg" alt="NE, 4MPH Motor Program, Electronic Master Asemblies, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 35.</strong> NE, 4MPH Motor Program, Electronic Master Asemblies, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ELE1904903</td><td>ELECTRONIC,ASSY,NE,12" TIRES,4 MPH MOTORS,Q6EDGE 3 STRETTO,RUN PLUG</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>B1</td><td>ELE1907986</td><td>ELECTRONIC,ASSY,NE,12" TIRES,4 MPH MOTORS,Q6EDGE 3 STRETTO (w/ fender light pto)</td><td>1</td><td>A light, so others can see the chair and you can see where you are going.</td></tr>
+        <tr><td>C1</td><td>ELE1904905</td><td>ELECTRONIC,ASSY,NE,12" TIRES,4 MPH MOTORS,Q6EDGE 3 STRETTO,PTO</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>D1</td><td>ELE1904904</td><td>ELECTRONIC,ASSY,NE,14" TIRES,4 MPH MOTORS,Q6EDGE 3 STRETTO,RUN PLUG</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>E1</td><td>ELE1907987</td><td>ELECTRONIC,ASSY,NE,14" TIRES,4 MPH MOTORS,Q6EDGE 3 STRETTO (w/ fender light pto)</td><td>1</td><td>A light, so others can see the chair and you can see where you are going.</td></tr>
+        <tr><td>F1</td><td>ELE1904906</td><td>ELECTRONIC,ASSY,NE,14" TIRES,4 MPH MOTORS,Q6EDGE 3 STRETTO,PTO</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-36">Step 36 &mdash; NE, 4MPH Motor Program, Power Modules, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p60.jpg" alt="NE, 4MPH Motor Program, Power Modules, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 36.</strong> NE, 4MPH Motor Program, Power Modules, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>CTL1906835</td><td>CONTROLLER,NE,ASSY,75 AMP,12" TIRES, 4 MPH PROGRAM,Q6EDGE 3 STRETTO</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>B1</td><td>CTL1906836</td><td>CONTROLLER,NE,ASSY,75 AMP,14" TIRES, 4 MPH PROGRAM,Q6EDGE 3 STRETTO</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-37">Step 37 &mdash; NE, Harnesses and Hardware, 4MPH Motor Program, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p62.jpg" alt="NE, Harnesses and Hardware, 4MPH Motor Program, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 37.</strong> NE, Harnesses and Hardware, 4MPH Motor Program, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>SCRPPH1390</td><td>SCREW,PPH,BLACK ZINC,M5-.8 X 35MM</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>B1</td><td>ELE1709864</td><td>HARNESS, BATTERY, FWD, FLEX CABLE</td><td>2</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+        <tr><td>C1</td><td>PLSTIE1004</td><td>TIE WRAP,BLACK,8"</td><td>5</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>D1</td><td>DWR1111H065</td><td>ELECTRONIC,HARNESS,BUS EXTENSION CABLE,CURTIS,0.410 METER,MALE/FEMALE,H-1111- 065,(CURTIS: 17881303)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>E1</td><td>DWR1265H055</td><td>ELECTRONIC,HARNESS,INTERMEDIATE,OFFBOARD CHARGER,NE,H-1265-055</td><td>1</td><td>Refills the batteries from a wall outlet.</td></tr>
+        <tr><td>F1</td><td>DWR1265H057</td><td>ELECTRONIC,HARNESS,PTO ONLY,NE,H-1265-057</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>G1</td><td>DWR1265H061</td><td>ELECTRONIC,HARNESS,RUN PLUG,NE,CURTIS,H-1265-061</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>H1</td><td>ELE1907905</td><td>HARNESS, PTO INTERFACE, NE TO 4 PIN MOLEX</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>I1</td><td>ELE1810039</td><td>ELECTRONIC,HARNESS,POWER CABLE,Q6EDGE 3 STRETTO,W/CABLE TIES</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>J1</td><td>ELECBRK1020</td><td>ELECTRONIC,CIRCUIT BREAKER,70 AMP,AUTO-RESET</td><td>1</td><td>A sacrificial link: it blows or trips to protect the wiring if too much current flows.</td></tr>
+        <tr><td>K1</td><td>HDW142473</td><td>SCREW,SHCS,BLACK ZINC,M6-1.0 X 18MM,ISO 4762 CLASS 12.9,W/NYLON PATCH</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-38">Step 38 &mdash; NE, 6.25MPH Motor Program, Electronic Master Assemblies, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p64.jpg" alt="NE, 6.25MPH Motor Program, Electronic Master Assemblies, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 38.</strong> NE, 6.25MPH Motor Program, Electronic Master Assemblies, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ELE1902882</td><td>ELECTRONIC,ASSY,NE,12" TIRES,6.25 MPH MOTORS,Q6EDGE 3 STRETTO,RUN PLUG</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>B1</td><td>ELE1907984</td><td>ELECTRONIC,ASSY,NE,12" TIRES,6.25 MPH MOTORS,Q6EDGE 3 STRETTO (w/ fender light pto)</td><td>1</td><td>A light, so others can see the chair and you can see where you are going.</td></tr>
+        <tr><td>C1</td><td>ELE1902883</td><td>ELECTRONIC,ASSY,NE,12" TIRES,6.25 MPH MOTORS,Q6EDGE 3 STRETTO,W/PTO</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>D1</td><td>ELE1904902</td><td>ELECTRONIC,ASSY,NE,14" TIRES,6.25 MPH MOTORS,Q6EDGE 3 STRETTO,RUN PLUG</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>E1</td><td>ELE1907985</td><td>ELECTRONIC,ASSY,NE,14" TIRES,6.25 MPH MOTORS,Q6EDGE 3 STRETTO (w/ fender light pto)</td><td>1</td><td>A light, so others can see the chair and you can see where you are going.</td></tr>
+        <tr><td>F1</td><td>ELE1902884</td><td>ELECTRONIC,ASSY,NE,14" TIRES,6.25 MPH MOTORS,Q6EDGE 3 STRETTO,PTO</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-39">Step 39 &mdash; NE, 6.25MPH Motor Program, Power Modules, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p66.jpg" alt="NE, 6.25MPH Motor Program, Power Modules, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 39.</strong> NE, 6.25MPH Motor Program, Power Modules, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>CTL1906833</td><td>CONTROLLER,NE,ASSY,75 AMP,12" TIRES, 6.25 MPH PROGRAM,Q6EDGE 3 STRETTO</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>B1</td><td>CTL1906834</td><td>CONTROLLER,NE,ASSY,75 AMP,14" TIRES, 6.25 MPH PROGRAM,Q6EDGE 3 STRETTO</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-40">Step 40 &mdash; NE, Harnesses and Hardware, 6.25MPH Motor Program, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p68.jpg" alt="NE, Harnesses and Hardware, 6.25MPH Motor Program, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 40.</strong> NE, Harnesses and Hardware, 6.25MPH Motor Program, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>SCRPPH1390</td><td>SCREW,PPH,BLACK ZINC,M5-.8 X 35MM</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>B1</td><td>ELE1709864</td><td>HARNESS, BATTERY, FWD, FLEX CABLE</td><td>2</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+        <tr><td>C1</td><td>PLSTIE1004</td><td>TIE WRAP,BLACK,8"</td><td>5</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>D1</td><td>DWR1111H065</td><td>ELECTRONIC,HARNESS,BUS EXTENSION CABLE,CURTIS,0.410 METER,MALE/FEMALE,H-1111- 065,(CURTIS: 17881303)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>E1</td><td>DWR1265H055</td><td>ELECTRONIC,HARNESS,INTERMEDIATE,OFFBOARD CHARGER,NE,H-1265-055</td><td>1</td><td>Refills the batteries from a wall outlet.</td></tr>
+        <tr><td>F1</td><td>DWR1265H057</td><td>ELECTRONIC,HARNESS,PTO ONLY,NE,H-1265-057</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>G1</td><td>DWR1265H061</td><td>ELECTRONIC,HARNESS,RUN PLUG,NE,CURTIS,H-1265-061</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>H1</td><td>ELE1907905</td><td>HARNESS, PTO INTERFACE, NE TO 4 PIN MOLEX</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>I1</td><td>ELE1810039</td><td>ELECTRONIC,HARNESS,POWER CABLE,Q6EDGE 3 STRETTO,W/CABLE TIES</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>J1</td><td>ELECBRK1020</td><td>ELECTRONIC,CIRCUIT BREAKER,70 AMP,AUTO-RESET</td><td>1</td><td>A sacrificial link: it blows or trips to protect the wiring if too much current flows.</td></tr>
+        <tr><td>K1</td><td>HDW142473</td><td>SCREW,SHCS,BLACK ZINC,M6-1.0 X 18MM,ISO 4762 CLASS 12.9,W/NYLON PATCH</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-41">Step 41 &mdash; VR2 Electronics, 4MPH Motor Program, Static Seating, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p70.jpg" alt="VR2 Electronics, 4MPH Motor Program, Static Seating, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 41.</strong> VR2 Electronics, 4MPH Motor Program, Static Seating, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1a - A7</td><td>ELE1907025</td><td>ELECTRONIC,ASSY,VR2,12" TIRES,4 MPH MOTORS,Q6EDGE 3 STRETTO</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>A1b - A7</td><td>ELE1907028</td><td>ELECTRONIC,ASSY,VR2,14" TIRES,4 MPH MOTORS,Q6EDGE 3 STRETTO</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>A1a</td><td>CTL1907015</td><td>CONTROLLER,VR2,ASSY,90 AMP,12" TIRES, 4 MPH,Q6EDGE 3 STRETTO</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>A1b</td><td>CTL1907017</td><td>CONTROLLER,VR2,ASSY,90 AMP,14" TIRES, 4 MPH,Q6EDGE 3 STRETTO</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>A2</td><td>SCRPPH1390</td><td>SCREW,PPH,BLACK ZINC,M5-.8 X 35MM</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>A3</td><td>ELE1808608</td><td>HARNESS, BATTERY INTERFACE, RNET, EDGE MINI</td><td>1</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+        <tr><td>A4</td><td>ELE1709864</td><td>HARNESS, BATTERY, FWD, FLEX CABLE</td><td>2</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+        <tr><td>A5</td><td>DWR1010H128</td><td>ELECTRONIC,HARNESS,VR2 EXTENSION CABLE,H-1010-128,(P&amp;G: SA77974)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A6</td><td>DWR1116H054</td><td>ELECTRONIC,HARNESS,RUN PLUG,3 PIN,VR2,H-1116-054</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A7</td><td>PLSTIE1004</td><td>TIE WRAP,BLACK,8"</td><td>5</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>B1</td><td>ELECBRK1020</td><td>ELECTRONIC,CIRCUIT BREAKER,70 AMP,AUTO-RESET</td><td>1</td><td>A sacrificial link: it blows or trips to protect the wiring if too much current flows.</td></tr>
+        <tr><td>C1</td><td>HDW142473</td><td>SCREW,SHCS,BLACK ZINC,M6-1.0 X 18MM,ISO 4762 CLASS 12.9,W/NYLON PATCH</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-42">Step 42 &mdash; VR2 Electronics, 4MPH Motor Program, 1 Actuator, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p72.jpg" alt="VR2 Electronics, 4MPH Motor Program, 1 Actuator, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 42.</strong> VR2 Electronics, 4MPH Motor Program, 1 Actuator, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1a - A9</td><td>ELE1907026</td><td>ELECTRONIC,ASSY,VR2,12" TIRES,4 MPH MOTORS,Q6EDGE 3 STRETTO,1 ACTUATOR</td><td>1</td><td>A small electric pusher that tilts, reclines, lifts, or moves part of the seat.</td></tr>
+        <tr><td>A1b - A9</td><td>ELE1907029</td><td>ELECTRONIC,ASSY,VR2,14" TIRES,4 MPH MOTORS,Q6EDGE 3 STRETTO,1 ACTUATOR</td><td>1</td><td>A small electric pusher that tilts, reclines, lifts, or moves part of the seat.</td></tr>
+        <tr><td>A1a</td><td>CTL1907016</td><td>CONTROLLER,VR2,ASSY,90 AMP,12" TIRES, 4 MPH,Q6EDGE 3 STRETTO,POWER POSITIONING</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>A1b</td><td>CTL1907018</td><td>CONTROLLER,VR2,ASSY,90 AMP,14" TIRES, 4 MPH,Q6EDGE 3 STRETTO,POWER POSITIONING</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>A2</td><td>SCRPPH1390</td><td>SCREW,PPH,BLACK ZINC,M5-.8 X 35MM</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>A3</td><td>ELE1808608</td><td>HARNESS, BATTERY INTERFACE, RNET, EDGE MINI</td><td>1</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+        <tr><td>A4</td><td>ELE1709864</td><td>HARNESS, BATTERY, FWD, FLEX CABLE</td><td>2</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+        <tr><td>A5</td><td>DWR1010H128</td><td>ELECTRONIC,HARNESS,VR2 EXTENSION CABLE,H-1010-128,(P&amp;G: SA77974)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A6</td><td>DWR1361H078</td><td>ELECTRONIC,HARNESS,EURO SEAT TILT ACTUATOR,VR2,H-1361-078</td><td>1</td><td>A small electric pusher that tilts, reclines, lifts, or moves part of the seat.</td></tr>
+        <tr><td>A7</td><td>DWR1265H030</td><td>ELECTRONIC,HARNESS,POWER TAKE OFF(PTO)/INHIBIT,VR2,H-1265-030</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A8</td><td>DWR1361H038</td><td>ELECTRONIC,HARNESS,RUN PLUG,SURE SEAL,SYNERGY TILT,H-1361-038</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A9</td><td>PLSTIE1004</td><td>TIE WRAP,BLACK,8"</td><td>5</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>B1</td><td>ELECBRK1020</td><td>ELECTRONIC,CIRCUIT BREAKER,70 AMP,AUTO-RESET</td><td>1</td><td>A sacrificial link: it blows or trips to protect the wiring if too much current flows.</td></tr>
+        <tr><td>C1</td><td>HDW142473</td><td>SCREW,SHCS,BLACK ZINC,M6-1.0 X 18MM,ISO 4762 CLASS 12.9,W/NYLON PATCH</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-43">Step 43 &mdash; VR2 Electronics, 4MPH Motor Program, 2 Actuator, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p74.jpg" alt="VR2 Electronics, 4MPH Motor Program, 2 Actuator, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 43.</strong> VR2 Electronics, 4MPH Motor Program, 2 Actuator, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1a - A9</td><td>ELE1907027</td><td>ELECTRONIC,ASSY,VR2,12" TIRES,4 MPH MOTORS,Q6EDGE 3 STRETTO,2 ACTUATOR</td><td>1</td><td>A small electric pusher that tilts, reclines, lifts, or moves part of the seat.</td></tr>
+        <tr><td>A1b - A9</td><td>ELE1907030</td><td>ELECTRONIC,ASSY,VR2,14" TIRES,4 MPH MOTORS,Q6EDGE 3 STRETTO,2 ACTUATOR</td><td>1</td><td>A small electric pusher that tilts, reclines, lifts, or moves part of the seat.</td></tr>
+        <tr><td>A1a</td><td>CTL1907016</td><td>CONTROLLER,VR2,ASSY,90 AMP,12" TIRES, 4 MPH,Q6EDGE 3 STRETTO,POWER POSITIONING</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>A1b</td><td>CTL1907018</td><td>CONTROLLER,VR2,ASSY,90 AMP,14" TIRES, 4 MPH,Q6EDGE 3 STRETTO,POWER POSITIONING</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>A2</td><td>SCRPPH1390</td><td>SCREW,PPH,BLACK ZINC,M5-.8 X 35MM</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>A3</td><td>ELE1808608</td><td>HARNESS, BATTERY INTERFACE, RNET, EDGE MINI</td><td>1</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+        <tr><td>A4</td><td>ELE1709864</td><td>HARNESS, BATTERY, FWD, FLEX CABLE</td><td>2</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+        <tr><td>A5</td><td>DWR1010H128</td><td>ELECTRONIC,HARNESS,VR2 EXTENSION CABLE,H-1010-128,(P&amp;G: SA77974)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A6</td><td>DWR1361H078</td><td>ELECTRONIC,HARNESS,EURO SEAT TILT ACTUATOR,VR2,H-1361-078</td><td>2</td><td>A small electric pusher that tilts, reclines, lifts, or moves part of the seat.</td></tr>
+        <tr><td>A7</td><td>DWR1265H030</td><td>ELECTRONIC,HARNESS,POWER TAKE OFF(PTO)/INHIBIT,VR2,H-1265-030</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A8</td><td>DWR1361H038</td><td>ELECTRONIC,HARNESS,RUN PLUG,SURE SEAL,SYNERGY TILT,H-1361-038</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A9</td><td>PLSTIE1004</td><td>TIE WRAP,BLACK,8"</td><td>5</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>B1</td><td>ELECBRK1020</td><td>ELECTRONIC,CIRCUIT BREAKER,70 AMP,AUTO-RESET</td><td>1</td><td>A sacrificial link: it blows or trips to protect the wiring if too much current flows.</td></tr>
+        <tr><td>C1</td><td>HDW142473</td><td>SCREW,SHCS,BLACK ZINC,M6-1.0 X 18MM,ISO 4762 CLASS 12.9,W/NYLON PATCH</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-44">Step 44 &mdash; VR2 Electronics, 6MPH Motor Program, Static Seating, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p76.jpg" alt="VR2 Electronics, 6MPH Motor Program, Static Seating, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 44.</strong> VR2 Electronics, 6MPH Motor Program, Static Seating, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1a - A7</td><td>ELE1907019</td><td>ELECTRONIC,ASSY,VR2,12" TIRES,6.25 MPH MOTORS,Q6EDGE 3 STRETTO</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>A1b - A7</td><td>ELE1907022</td><td>ELECTRONIC,ASSY,VR2,14" TIRES,6.25 MPH MOTORS,Q6EDGE 3 STRETTO</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>A1a</td><td>CTL1907011</td><td>CONTROLLER,VR2,ASSY,90 AMP,12" TIRES, 6.25 MPH,Q6EDGE 3 STRETTO</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>A1b</td><td>CTL1907013</td><td>CONTROLLER,VR2,ASSY,90 AMP,14" TIRES, 6.25 MPH,Q6EDGE 3 STRETTO</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>A2</td><td>SCRPPH1390</td><td>SCREW,PPH,BLACK ZINC,M5-.8 X 35MM</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>A3</td><td>ELE1808608</td><td>HARNESS, BATTERY INTERFACE, RNET, EDGE MINI</td><td>1</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+        <tr><td>A4</td><td>ELE1709864</td><td>HARNESS, BATTERY, FWD, FLEX CABLE</td><td>2</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+        <tr><td>A5</td><td>DWR1010H128</td><td>ELECTRONIC,HARNESS,VR2 EXTENSION CABLE,H-1010-128,(P&amp;G: SA77974)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A6</td><td>DWR1116H054</td><td>ELECTRONIC,HARNESS,RUN PLUG,3 PIN,VR2,H-1116-054</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A7</td><td>PLSTIE1004</td><td>TIE WRAP,BLACK,8"</td><td>5</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>B1</td><td>ELECBRK1020</td><td>ELECTRONIC,CIRCUIT BREAKER,70 AMP,AUTO-RESET</td><td>1</td><td>A sacrificial link: it blows or trips to protect the wiring if too much current flows.</td></tr>
+        <tr><td>C1</td><td>HDW142473</td><td>SCREW,SHCS,BLACK ZINC,M6-1.0 X 18MM,ISO 4762 CLASS 12.9,W/NYLON PATCH</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-45">Step 45 &mdash; VR2 Electronics, 6MPH Motor Program, 1 Actuator, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p78.jpg" alt="VR2 Electronics, 6MPH Motor Program, 1 Actuator, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 45.</strong> VR2 Electronics, 6MPH Motor Program, 1 Actuator, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1a - A9</td><td>ELE1907020</td><td>ELECTRONIC,ASSY,VR2,12" TIRES,6.25 MPH MOTORS,Q6EDGE 3 STRETTO,1 ACTUATOR</td><td>1</td><td>A small electric pusher that tilts, reclines, lifts, or moves part of the seat.</td></tr>
+        <tr><td>A1b - A9</td><td>ELE1907023</td><td>ELECTRONIC,ASSY,VR2,14" TIRES,6.25 MPH MOTORS,Q6EDGE 3 STRETTO,1 ACTUATOR</td><td>1</td><td>A small electric pusher that tilts, reclines, lifts, or moves part of the seat.</td></tr>
+        <tr><td>A1a</td><td>CTL1907012</td><td>CONTROLLER,VR2,ASSY,90 AMP,12" TIRES, 6.25 MPH,Q6EDGE 3 STRETTO,POWER POSITIONING</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>A1b</td><td>CTL1907014</td><td>CONTROLLER,VR2,ASSY,90 AMP,14" TIRES, 6.25 MPH,Q6EDGE 3 STRETTO,POWER POSITIONING</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>A2</td><td>SCRPPH1390</td><td>SCREW,PPH,BLACK ZINC,M5-.8 X 35MM</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>A3</td><td>ELE1808608</td><td>HARNESS, BATTERY INTERFACE, RNET, EDGE MINI</td><td>1</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+        <tr><td>A4</td><td>ELE1709864</td><td>HARNESS, BATTERY, FWD, FLEX CABLE</td><td>2</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+        <tr><td>A5</td><td>DWR1010H128</td><td>ELECTRONIC,HARNESS,VR2 EXTENSION CABLE,H-1010-128,(P&amp;G: SA77974)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A6</td><td>DWR1361H078</td><td>ELECTRONIC,HARNESS,EURO SEAT TILT ACTUATOR,VR2,H-1361-078</td><td>1</td><td>A small electric pusher that tilts, reclines, lifts, or moves part of the seat.</td></tr>
+        <tr><td>A7</td><td>DWR1265H030</td><td>ELECTRONIC,HARNESS,POWER TAKE OFF(PTO)/INHIBIT,VR2,H-1265-030</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A8</td><td>DWR1361H038</td><td>ELECTRONIC,HARNESS,RUN PLUG,SURE SEAL,SYNERGY TILT,H-1361-038</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A9</td><td>PLSTIE1004</td><td>TIE WRAP,BLACK,8"</td><td>5</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>B1</td><td>ELECBRK1020</td><td>ELECTRONIC,CIRCUIT BREAKER,70 AMP,AUTO-RESET</td><td>1</td><td>A sacrificial link: it blows or trips to protect the wiring if too much current flows.</td></tr>
+        <tr><td>C1</td><td>HDW142473</td><td>SCREW,SHCS,BLACK ZINC,M6-1.0 X 18MM,ISO 4762 CLASS 12.9,W/NYLON PATCH</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-46">Step 46 &mdash; VR2 Electronics, 6MPH Motor Program, 2 Actuator, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p80.jpg" alt="VR2 Electronics, 6MPH Motor Program, 2 Actuator, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 46.</strong> VR2 Electronics, 6MPH Motor Program, 2 Actuator, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1a - A9</td><td>ELE1907021</td><td>ELECTRONIC,ASSY,VR2,12" TIRES,6.25 MPH MOTORS,Q6EDGE 3 STRETTO,2 ACTUATOR</td><td>1</td><td>A small electric pusher that tilts, reclines, lifts, or moves part of the seat.</td></tr>
+        <tr><td>A1b - A9</td><td>ELE1907024</td><td>ELECTRONIC,ASSY,VR2,14" TIRES,6.25 MPH MOTORS,Q6EDGE 3 STRETTO,2 ACTUATOR</td><td>1</td><td>A small electric pusher that tilts, reclines, lifts, or moves part of the seat.</td></tr>
+        <tr><td>A1a</td><td>CTL1907012</td><td>CONTROLLER,VR2,ASSY,90 AMP,12" TIRES, 6.25 MPH,Q6EDGE 3 STRETTO,POWER POSITIONING</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>A1b</td><td>CTL1907014</td><td>CONTROLLER,VR2,ASSY,90 AMP,14" TIRES, 6.25 MPH,Q6EDGE 3 STRETTO,POWER POSITIONING</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>A2</td><td>SCRPPH1390</td><td>SCREW,PPH,BLACK ZINC,M5-.8 X 35MM</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>A3</td><td>ELE1808608</td><td>HARNESS, BATTERY INTERFACE, RNET, EDGE MINI</td><td>1</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+        <tr><td>A4</td><td>ELE1709864</td><td>HARNESS, BATTERY, FWD, FLEX CABLE</td><td>2</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+        <tr><td>A5</td><td>DWR1010H128</td><td>ELECTRONIC,HARNESS,VR2 EXTENSION CABLE,H-1010-128,(P&amp;G: SA77974)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A6</td><td>DWR1361H078</td><td>ELECTRONIC,HARNESS,EURO SEAT TILT ACTUATOR,VR2,H-1361-078</td><td>2</td><td>A small electric pusher that tilts, reclines, lifts, or moves part of the seat.</td></tr>
+        <tr><td>A7</td><td>DWR1265H030</td><td>ELECTRONIC,HARNESS,POWER TAKE OFF(PTO)/INHIBIT,VR2,H-1265-030</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A8</td><td>DWR1361H038</td><td>ELECTRONIC,HARNESS,RUN PLUG,SURE SEAL,SYNERGY TILT,H-1361-038</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A9</td><td>PLSTIE1004</td><td>TIE WRAP,BLACK,8"</td><td>5</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>B1</td><td>ELECBRK1020</td><td>ELECTRONIC,CIRCUIT BREAKER,70 AMP,AUTO-RESET</td><td>1</td><td>A sacrificial link: it blows or trips to protect the wiring if too much current flows.</td></tr>
+        <tr><td>C1</td><td>HDW142473</td><td>SCREW,SHCS,BLACK ZINC,M6-1.0 X 18MM,ISO 4762 CLASS 12.9,W/NYLON PATCH</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-47">Step 47 &mdash; Swing-away Joystick Bracket &amp; Components, Version 3</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p124.jpg" alt="Swing-away Joystick Bracket &amp; Components, Version 3 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 47.</strong> Swing-away Joystick Bracket &amp; Components, Version 3 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ACC1908434</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,Q-LOGIC</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B1</td><td>ACC1908435</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,Q-LOGIC CONTOURED SEAT</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>C1</td><td>ACC1908437</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,NE / NE PLUS</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>D1</td><td>ACC1908438</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,NE / NE PLUS CONTOURED SEAT</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>E1</td><td>ACC1908439</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,VSI / VR2 / GC3 / R-NET</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>F1</td><td>ACC1908440</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,VSI / VR2 / GC3 / R-NET CONTOURED SEAT</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>G1</td><td>DWR1111C002</td><td>SPACER,CURTIS NE/NE PLUS MOUNT BRACKET,C-1111-002</td><td>2</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>H1</td><td>SCRPPH1384</td><td>SCREW,PPH,BLACK ZINC,M5-.8 X 20MM</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>I1</td><td>SCRPPH1279</td><td>SCREW,PPH,BLACK ZINC CHROMATE,M5-.8 X 16MM</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>J1</td><td>SCRPPH1384</td><td>SCREW,PPH,BLACK ZINC,M5-.8 X 20MM</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>K1</td><td>MEC146133</td><td>ARMREST ADAPTER ASSEMBLY</td><td>1</td><td>Supports your arms and helps with transfers.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-48">Step 48 &mdash; Swing-away &amp; Multi-axis Mount Matrix, Rehab Seat, Version 2</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p126.jpg" alt="Swing-away &amp; Multi-axis Mount Matrix, Rehab Seat, Version 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 48.</strong> Swing-away &amp; Multi-axis Mount Matrix, Rehab Seat, Version 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ACC142525</td><td>JOYSTICK MOUNT,ASSY,SWING AWAY,INLINE,RIGHT,Q-LOGIC 2</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B1</td><td>ACC142524</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,INLINE,LEFT,Q-LOGIC 2</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>C1</td><td>ACC142527</td><td>JOYSTICK MOUNT,ASSY,SWING AWAY,INLINE,RIGHT,NE/NE PLUS</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>D1</td><td>ACC142526</td><td>JOYSTICK MOUNT,ASSY,SWING AWAY,INLINE,LEFT,NE/NE PLUS</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>E1</td><td>ACC142530</td><td>JOYSTICK MOUNT,ASSY,SWING AWAY,INLINE,RIGHT,PG DRIVES</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>F1</td><td>ACC142529</td><td>JOYSTICK MOUNT,ASSY,SWING AWAY,INLINE,LEFT,PG DRIVES</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>G1</td><td>ACC142533</td><td>JOYSTICK MOUNT,ASSY,SWING AWAY,INLINE,RIGHT,SHARK</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>H1</td><td>ACC142532</td><td>JOYSTICK MOUNT,ASSY,SWING AWAY,INLINE,LEFT,SHARK</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>I1</td><td>ACC142739</td><td>JOYSTICK MOUNT,ASSY,SWING AWAY,INLINE,RIGHT,STANDALONE</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>J1</td><td>ACC142738</td><td>JOYSTICK MOUNT,ASSY,SWING AWAY,INLINE,LEFT,STANDALONE</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>K1</td><td>ACC142743</td><td>JOYSTICK MOUNT,ASSY,SWING AWAY,OFFSET,RIGHT,Q-LOGIC</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>L1</td><td>ACC142742</td><td>JOYSTICK MOUNT,ASSY,SWING AWAY,OFFSET,LEFT,Q-LOGIC</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>M1</td><td>ACC142748</td><td>JOYSTICK MOUNT,ASSY,SWING AWAY,OFFSET,RIGHT,NE/NE PLUS</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>N1</td><td>ACC142747</td><td>JOYSTICK MOUNT,ASSY,SWING AWAY,OFFSET,LEFT,NE/NE PLUS</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>O1</td><td>ACC142750</td><td>JOYSTICK MOUNT,ASSY,SWING AWAY,OFFSET,RIGHT,PG DRIVES</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>P1</td><td>ACC142749</td><td>JOYSTICK MOUNT,ASSY,SWING AWAY,OFFSET,LEFT,PG DRIVES</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>Q1</td><td>ACC142752</td><td>JOYSTICK MOUNT,ASSY,SWING AWAY,OFFSET,RIGHT,SHARK</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>R1</td><td>ACC142751</td><td>JOYSTICK MOUNT,ASSY,SWING AWAY,OFFSET,LEFT,SHARK</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>S1</td><td>ACC142746</td><td>JOYSTICK MOUNT,ASSY,SWING AWAY,OFFSET,RIGHT,STANDALONE</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>T1</td><td>ACC142745</td><td>JOYSTICK MOUNT,ASSY,SWING AWAY,OFFSET,LEFT,STANDALONE</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>U1</td><td>ACC131216</td><td>JOYSTICK MOUNT,ASSY,MULTI-AXIS,Q-LOGIC</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>V1</td><td>ACC142528</td><td>JOYSTICK MOUNT,ASSY,MULTI-AXIS,NE/NE PLUS</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>W1</td><td>ACC142531</td><td>JOYSTICK MOUNT,ASSY,MULTI-AXIS,PG DRIVES</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>X1</td><td>ACC142534</td><td>JOYSTICK MOUNT,ASSY,MULTI-AXIS,SHARK</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>Y1</td><td>ACC142740</td><td>JOYSTICK MOUNT,ASSY,MULTI-AXIS,STANDALONE</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-49">Step 49 &mdash; Swing-away &amp; Multi-axis Mount Matrix, Captain Seat, Version 2</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p128.jpg" alt="Swing-away &amp; Multi-axis Mount Matrix, Captain Seat, Version 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 49.</strong> Swing-away &amp; Multi-axis Mount Matrix, Captain Seat, Version 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ACC148357</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,INLINE,RIGHT,Q-LOGIC,CAPTAINS SEAT</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B1</td><td>ACC148356</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,INLINE,LEFT,Q-LOGIC,CAPTAINS SEAT</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>C1</td><td>ACC148361</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,INLINE,RIGHT,NE/NE PLUS,CAPTAINS SEAT</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>D1</td><td>ACC148360</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,INLINE,LEFT,NE/NE PLUS,CAPTAINS SEAT</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>E1</td><td>ACC148365</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,INLINE,RIGHT,VSI/VR2/GC3/R-NET,CAPTAINS SEAT</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>F1</td><td>ACC148364</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,INLINE,LEFT,VSI/VR2/GC3/R-NET,CAPTAINS SEAT</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>G1</td><td>ACC148369</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,INLINE,RIGHT,SHARK,CAPTAINS SEAT</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>H1</td><td>ACC148368</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,INLINE,LEFT,SHARK,CAPTAINS SEAT</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>I1</td><td>ACC148359</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,OFFSET,RIGHT,Q-LOGIC,CAPTAINS SEAT</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>J1</td><td>ACC148358</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,OFFSET,LEFT,Q-LOGIC,CAPTAINS SEAT</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>K1</td><td>ACC148363</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,OFFSET,RIGHT,NE/NE PLUS,CAPTAINS SEAT</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>L1</td><td>ACC148362</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,OFFSET,LEFT,NE/NE PLUS,CAPTAINS SEAT</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>M1</td><td>ACC148367</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,OFFSET,RIGHT,VSI/VR2/GC3/R-NET,CAPTAINS SEAT</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>N1</td><td>ACC148366</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,OFFSET,LEFT,VSI/VR2/GC3/R-NET,CAPTAINS SEAT</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>O1</td><td>ACC148371</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,OFFSET,RIGHT,SHARK,CAPTAINS SEAT</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>P1</td><td>ACC148370</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,OFFSET,LEFT,SHARK,CAPTAINS SEAT</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-50">Step 50 &mdash; Swing-away Joystick Bracket Components, Version 2</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p130.jpg" alt="Swing-away Joystick Bracket Components, Version 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 50.</strong> Swing-away Joystick Bracket Components, Version 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ACC131586</td><td>SWING AWAY JOYSTICK MOUNT,ASSY,INLINE,RIGHT</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B1</td><td>ACC124921</td><td>SWING AWAY JOYSTICK MOUNT,ASSY,INLINE,LEFT</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>C1</td><td>MEC1712220</td><td>SWING-AWAY ASSEMBLY, EXTENDED OFFSET, RIGHT</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>D1</td><td>MEC1712217</td><td>SWING-AWAY ASSEMBLY, EXTENDED OFFSET, LEFT</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>E1</td><td>SCRPPH1279</td><td>SCREW,PPH,BLACK ZINC CHROMATE,M5-.8 X 16MM</td><td>1</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>F1</td><td>SCRPPH1384</td><td>SCREW,PPH,BLACK ZINC,M5-.8 X 20MM</td><td>1</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>G1</td><td>SCRPPH1036</td><td>SCREW, PAN HEAD, TYPE H, M4X0.7 X 8, FT, ISO 7045, CL 4.8, BZ</td><td>1</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>H1</td><td>DWR1111C002</td><td>SPACER,CURTIS NE/NE PLUS MOUNT BRACKET,C-1111-002</td><td>2</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>I1</td><td>DWR1010B089</td><td>SPACER,FLIGHT MOUNT BRACKET,B-1010-089</td><td>2</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>J1</td><td>MEC146133</td><td>ARMREST ADAPTER ASSEMBLY</td><td>1</td><td>Supports your arms and helps with transfers.</td></tr>
+        <tr><td>K1</td><td>MEC142426</td><td>MOUNTING BRACKET,ASSY,STAND ALONE JOYSTICK</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-51">Step 51 &mdash; Multi-Axis Joystick Bracket Components, Version 2</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p132.jpg" alt="Multi-Axis Joystick Bracket Components, Version 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 51.</strong> Multi-Axis Joystick Bracket Components, Version 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ACC124132</td><td>MULTI-AXIS JOYSTICK ASSEMBLY</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B1</td><td>MEC124133</td><td>MULTI-AXIS JOYSTICK PLATE WELDMENT</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>C1</td><td>SCRPPH1097</td><td>SCREW,PPH,BLACK ZINC,M5-.8 X 12MM</td><td>1</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>D1</td><td>SCRPPH1384</td><td>SCREW,PPH,BLACK ZINC,M5-.8 X 20MM</td><td>1</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>E1</td><td>SCRPPH1036</td><td>SCREW, PAN HEAD, TYPE H, M4X0.7 X 8, FT, ISO 7045, CL 4.8, BZ</td><td>1</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>F1</td><td>DWR1111C002</td><td>SPACER,CURTIS NE/NE PLUS MOUNT BRACKET,C-1111-002</td><td>2</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>G1</td><td>DWR1010B089</td><td>SPACER,FLIGHT MOUNT BRACKET,B-1010-089</td><td>2</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>H1</td><td>MEC138180</td><td>STAND ALONE WELDMENT</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-52">Step 52 &mdash; Retract 4 Swing-away Joystick Bracket for Curtis Joysticks</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p134.jpg" alt="Retract 4 Swing-away Joystick Bracket for Curtis Joysticks — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 52.</strong> Retract 4 Swing-away Joystick Bracket for Curtis Joysticks &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>MEC138860</td><td>SWING AWAY JOYSTICK MOUNT,ASSY,RETRACT 4,Q-LOGIC</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B1</td><td>MEC138876</td><td>SWING AWAY JOYSTICK MOUNT,ASSY,RETRACT 4,NE/NE PLUS</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>C1</td><td>SCRSFH1005</td><td>SCREW,SHFH,BLACK ZINC,M5-.8 X 14MM</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>D1</td><td>SCRSHFH1053</td><td>SCREW,SHFH,BLACK ZINC,M5-.8 X 20MM</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-53">Step 53 &mdash; Stealth Swing-away / Flip Down Joystick Brackets &amp; Mounts</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p136.jpg" alt="Stealth Swing-away / Flip Down Joystick Brackets &amp; Mounts — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 53.</strong> Stealth Swing-away / Flip Down Joystick Brackets &amp; Mounts &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ST-TWBM480QL-Q</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY/FLIP DOWN,NE/NE PLUS/Q- LOGIC,W/MOUNTING HARDWARE</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B1</td><td>ST-TWBM480CJ-Q</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY/FLIP DOWN,STANDALONE,W/MOUNTING HARDWARE</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>C1</td><td>ST-ARM250T-Q</td><td>JOYSTICK MOUNT,ASSY,HEIGHT ADJUSTABLE,W/TRACK HARDWARE</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>D1</td><td>ST-ARM250C-Q</td><td>JOYSTICK MOUNT,ASSY,HEIGHT ADJUSTABLE,W/CLAMP HARDWARE</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-54">Step 54 &mdash; Fixed Joystick Mounts, Quantum Joysticks</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p138.jpg" alt="Fixed Joystick Mounts, Quantum Joysticks — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 54.</strong> Fixed Joystick Mounts, Quantum Joysticks &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>FRMASMB10617</td><td>JOYSTICK MOUNTING BRACKET,ASSY,CURTIS,INLINE</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B1</td><td>FRMASMB12744</td><td>JOYSTICK MOUNTING BRACKET,ASSY,NE/NE PLUS CONTROLLER,INLINE</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>C1</td><td>FRMASMB2066</td><td>FIXED INLINE JOYSTICK MOUNT,ASSY,REMOTE PLUS</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>D1</td><td>FRMASMB4767</td><td>JOYSTICK MOUNTING BRACKET,ASSY,VSI CONTROLLER,INLINERIGHT,C-1010-193</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>E1</td><td>FRMASMB9532</td><td>JOYSTICK MOUNTING BRACKET,ASSY,GC/VR2 CONTROLLER,INLINE</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>F1</td><td>SCRSHFH1015</td><td>SCREW,SHFH,BLACK ZINC,M5-.8 X 12MM,GRADE 10.9</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>G1</td><td>SCRSHFH1053</td><td>SCREW,SHFH,BLACK ZINC,M5-.8 X 20MM</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>H1</td><td>DWR1111C002</td><td>SPACER,CURTIS NE/NE PLUS MOUNT BRACKET,C-1111-002</td><td>2</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>I1</td><td>SCRPPH1006</td><td>SCREW,PPH,BLACK ZINC,8-32 X 0.500",GRADE 2</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>J1</td><td>SCRPPH1122</td><td>SCREW,PPH,BLACK ZINC,M5-.8 X 18MM</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-55">Step 55 &mdash; Joystick Receiver Mounts, Quantum</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p140.jpg" alt="Joystick Receiver Mounts, Quantum — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 55.</strong> Joystick Receiver Mounts, Quantum &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>FRMASMB16062</td><td>JOYSTICK RECEIVER MOUNT,ASSY,UNIVERSAL,ADJUSTABLE BLOCK,D-1000-313</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>B1</td><td>ST-ARM250C-Q</td><td>JOYSTICK MOUNT,ASSY,HEIGHT ADJUSTABLE,W/CLAMP HARDWARE</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>C1</td><td>MEC1809294</td><td>JOYSTICK RECEIVER MOUNT,ASSY,W/MOUNTING HARDWARE,ADJUSTABLE HANDLE</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>D1</td><td>ST-ARM250T-Q</td><td>JOYSTICK MOUNT,ASSY,HEIGHT ADJUSTABLE,W/TRACK HARDWARE</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>E1</td><td>ACC123525</td><td>JOYSTICK RECEIVER MOUNT,ASSY,W/ACCESSORY BLOCK,TRUBALANCE 3</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>F1</td><td>ACC1806853</td><td>JOYSTICK RECEIVER MOUNT,ASSY,W/MOUNTING HARDWARE,TRU-BALANCE 3 ARMREST</td><td>1</td><td>Supports your arms and helps with transfers.</td></tr>
+        <tr><td>G1</td><td>MEC146133</td><td>ARMREST ADAPTER ASSEMBLY</td><td>1</td><td>Supports your arms and helps with transfers.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Stage 6 — Batteries and charger</h2>
+    <p>Batteries last — they are the heaviest parts, and everything electrical depends on them.</p>
+    <h3 id="step-56">Step 56 &mdash; 8 Amp UPG Charger Assy, AGM / GEL Selectable</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p112.jpg" alt="8 Amp UPG Charger Assy, AGM / GEL Selectable — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 56.</strong> 8 Amp UPG Charger Assy, AGM / GEL Selectable &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ELE1803440</td><td>CHARGER, OFFBOARD, LOW INHIBIT, AC 100V-240V, DC 28.6-29.6V @8A, AGM/GEL SELECTABLE, WITH USA CORDSET</td><td>1</td><td>Refills the batteries from a wall outlet.</td></tr>
+        <tr><td>B1</td><td>HARUSHD1065</td><td>ELECTRONIC,HARNESS,POWER CORD,IEC - USA,H-1000-128</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>C1</td><td>HARUSHD2041</td><td>ELECTRONIC,HARNESS, POWER CORD,AC W/UK PLUG,H-1020-049</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>D1</td><td>HARUSHD2160</td><td>ELECTRONIC,HARNESS,POWER CORD,IEC - EUROPE PLUG</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>E1</td><td>DWR1000H174</td><td>ELECTRONIC,HARNESS,AC POWER CORD,INSULATED BLADES,AUSTRALIA,H-1000-174</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-batteries.html">Batteries &amp; Chargers</a> — the pair, the break-in, and the voltages that decide how long they live (site lesson).</p>
+    <h3 id="step-57">Step 57 &mdash; 5 Amp UPG Charger Assy, AGM / GEL Selectable, AU Cord</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p114.jpg" alt="5 Amp UPG Charger Assy, AGM / GEL Selectable, AU Cord — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 57.</strong> 5 Amp UPG Charger Assy, AGM / GEL Selectable, AU Cord &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ELE1803473</td><td>CHARGER, OFFBOARD, LOW INHIBIT, AC 100V-240V, DC 28.6-29.6V @5A, AGM/GEL SELECTABLE. WITH AUSTRALIA CORDSET</td><td>1</td><td>Refills the batteries from a wall outlet.</td></tr>
+        <tr><td>B1</td><td>DWR1000H174</td><td>ELECTRONIC,HARNESS,AC POWER CORD,INSULATED BLADES,AUSTRALIA,H-1000-174</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-batteries.html">Batteries &amp; Chargers</a> — the pair, the break-in, and the voltages that decide how long they live (site lesson).</p>
+    <h3 id="step-58">Step 58 &mdash; Interceptor, NF-22, GEL, Battery Assy</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p116.jpg" alt="Interceptor, NF-22, GEL, Battery Assy — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 58.</strong> Interceptor, NF-22, GEL, Battery Assy &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>BAT1704613-P</td><td>BATTERY,PACKAGED,INTERCEPTOR,GEL,55AH,NF-22,(YAHENG: 6-EVF-55)</td><td>1</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-batteries.html">Batteries &amp; Chargers</a> — the pair, the break-in, and the voltages that decide how long they live (site lesson).</p>
+    <h3 id="step-59">Step 59 &mdash; Interceptor 40AH Gel Battery</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p118.jpg" alt="Interceptor 40AH Gel Battery — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 59.</strong> Interceptor 40AH Gel Battery &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>BAT1704612-P</td><td>BATTERY,PACKAGED,INTERCEPTOR,GEL,40AH/3HR,(YAHENG: 6-EVF-40)</td><td>1</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-batteries.html">Batteries &amp; Chargers</a> — the pair, the break-in, and the voltages that decide how long they live (site lesson).</p>
+    <h3 id="step-60">Step 60 &mdash; 40AH Battery Stop - Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p120.jpg" alt="40AH Battery Stop - Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 60.</strong> 40AH Battery Stop - Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>MEC1907164</td><td>40AH BATTERY STOP ASSEMBLY</td><td>1</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-batteries.html">Batteries &amp; Chargers</a> — the pair, the break-in, and the voltages that decide how long they live (site lesson).</p>
+    <h3 id="step-61">Step 61 &mdash; 55AH Batter Stop - Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p122.jpg" alt="55AH Batter Stop - Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 61.</strong> 55AH Batter Stop - Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>MEC1907165</td><td>55AH BATTERY STOP ASSEMBLY</td><td>1</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-batteries.html">Batteries &amp; Chargers</a> — the pair, the break-in, and the voltages that decide how long they live (site lesson).</p>
+  </section>
+
+  <section>
+    <h2>Stage 7 — Covers, decals and accessories</h2>
+    <p>Covers, decals, and accessories finish the chair.</p>
+    <h3 id="step-62">Step 62 &mdash; Center Shroud w/ Painted Inserts , Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p82.jpg" alt="Center Shroud w/ Painted Inserts , Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 62.</strong> Center Shroud w/ Painted Inserts , Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>DGN1905007-PBK1</td><td>SHROUD,ASSY,BACK IN BLACK,Q6EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B1</td><td>DGN1905007-PBK3</td><td>SHROUD,ASSY,NIGHT TRAIN,Q6EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>C1</td><td>DGN1905007-PSL3</td><td>SHROUD,ASSY,GREY STREET,Q6EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>D1</td><td>DGN1905007-PWT2</td><td>SHROUD,ASSY,WHITE SATIN,Q6EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>E1</td><td>DGN1905007-PRD1</td><td>SHROUD,ASSY,RED CORVETTE,Q6EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>F1</td><td>DGN1905007-PRD4</td><td>SHROUD,ASSY,CHERRY BOMB,Q6EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>G1</td><td>DGN1905007-PPK3</td><td>SHROUD,ASSY,PRETTY IN PINK,Q6EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>H1</td><td>DGN1905007-PPK4</td><td>SHROUD,ASSY,RASPBERRY BERET,Q6EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>I1</td><td>DGN1905007-PPR7</td><td>SHROUD,ASSY,SUGAR PLUM,Q6EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>J1</td><td>DGN1905007-PPR5</td><td>SHROUD,ASSY,DEEP PURPLE,Q6EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>K1</td><td>DGN1905007-</td><td>SHROUD,ASSY,MIDNIGHT BLUE,Q6EDGE 3 STRETTO PBU10</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>L1</td><td>DGN1905007-PBU9</td><td>SHROUD,ASSY,ELECTRIC BLUE,Q6EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>M1</td><td>DGN1905007-</td><td>SHROUD,ASSY,BLUE JEAN,Q6EDGE 3 STRETTO PBU11</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>N1</td><td>DGN1905007-</td><td>SHROUD,ASSY,GREEN MACHINE,Q6EDGE 3 STRETTO PGN11</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>O1</td><td>DGN1905007-PGN8</td><td>SHROUD,ASSY,MILITARY GREEN,Q6EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>P1</td><td>DGN1905007-PYL4</td><td>SHROUD,ASSY,LEMON CRUSH,Q6EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>Q1</td><td>DGN1905007-POR7</td><td>SHROUD,ASSY,EVOLUTION ORANGE,Q6EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>R1</td><td>LAB1906475</td><td>DECAL,NAME,EDGE 3 STRETTO</td><td>2</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-63">Step 63 &mdash; Front Battery Door, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p84.jpg" alt="Front Battery Door, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 63.</strong> Front Battery Door, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>MEC1809866</td><td>EDGE MINI FRONT BATTERY DOOR ASSEMBLY</td><td>1</td><td>Holds the batteries in place on the frame.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-64">Step 64 &mdash; Front Battery Door Shrouds, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p86.jpg" alt="Front Battery Door Shrouds, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 64.</strong> Front Battery Door Shrouds, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>DGN1806326-PBK1</td><td>FRONT SHROUD WITH INSERTS,BACK IN BLACK,PPW-BLK-01,EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B1</td><td>DGN1806326-PBK3</td><td>FRONT SHROUD WITH INSERTS,NIGHT TRAIN,PPW-BLK-03,EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>C1</td><td>DGN1806326-PSL3</td><td>FRONT SHROUD WITH INSERTS,GREY STREET,PPW-SIL-03,EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>D1</td><td>DGN1806326-PWT2</td><td>FRONT SHROUD WITH INSERTS,WHITE SATIN,PPW-WHT-02,EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>E1</td><td>DGN1806326-PRD1</td><td>FRONT SHROUD WITH INSERTS,RED CORVETTE,PPW-RED-01,EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>F1</td><td>DGN1806326-PRD4</td><td>FRONT SHROUD WITH INSERTS,CHERRY BOMB,PPW-RED-04,EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>G1</td><td>DGN1806326-PPK3</td><td>FRONT SHROUD WITH INSERTS,PRETTY IN PINK,PPW-PNK-03,EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>H1</td><td>DGN1806326-PPK4</td><td>FRONT SHROUD WITH INSERTS,RASPBERRY BERET,PPW-PNK-04,EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>I1</td><td>DGN1806326-PPR7</td><td>FRONT SHROUD WITH INSERTS,SUGAR PLUM,PPW-PRP-07,EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>J1</td><td>DGN1806326-PPR5</td><td>FRONT SHROUD WITH INSERTS,DEEP PURPLE,PPW-PRP-05,EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>K1</td><td>DGN1806326-</td><td>FRONT SHROUD WITH INSERTS,MIDNIGHT BLUE,PPW-BLU-10,EDGE 3 STRETTO PBU10</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>L1</td><td>DGN1806326-PBU9</td><td>FRONT SHROUD WITH INSERTS,ELECTRIC BLUE,PPW-BLU-09,EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>M1</td><td>DGN1806326-</td><td>FRONT SHROUD WITH INSERTS,BLUE JEAN,PPW-BLU-11,EDGE 320 STRETTO PBU11</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>N1</td><td>DGN1806326-</td><td>FRONT SHROUD WITH INSERTS,GREEN MACHINE,PPW-GRN-11,EDGE 3 STRETTO PGN11</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>O1</td><td>DGN1806326-PGN8</td><td>FRONT SHROUD WITH INSERTS,MILITARY GREEN,PPW-GRN-08,EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>P1</td><td>DGN1806326-PYL4</td><td>FRONT SHROUD WITH INSERTS,LEMON CRUSH,PPW-YEL-04,EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>Q1</td><td>DGN1806326-POR7</td><td>FRONT SHROUD WITH INSERTS,EVOLUTION ORANGE,PPW-ORN-07,EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>R1</td><td>SCRPPH1036</td><td>SCREW, PAN HEAD, TYPE H, M4X0.7 X 8, FT, ISO 7045, CL 4.8, BZ</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-65">Step 65 &mdash; Rear Door Shroud, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p88.jpg" alt="Rear Door Shroud, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 65.</strong> Rear Door Shroud, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>DGN1810045</td><td>SHROUD,ASSY,REAR DOOR W/REFLECTORS,Q6 EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B1</td><td>DGN1810046</td><td>SHROUD,ASSY,REAR DOOR W/LIGHTS,Q6 EDGE 3 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-66">Step 66 &mdash; Rear Door Inserts, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p90.jpg" alt="Rear Door Inserts, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 66.</strong> Rear Door Inserts, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>DGN1806334-PBK1</td><td>REAR SHROUD WITH INSERTS,BACK IN BLACK,PPW-BLK-01,EDGE 320 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B1</td><td>DGN1806334-PBK3</td><td>REAR SHROUD WITH INSERTS,NIGHT TRAIN,PPW-BLK-03,EDGE 320 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>C1</td><td>DGN1806334-PSL3</td><td>REAR SHROUD WITH INSERTS,GREY STREET,PPW-SIL-03,EDGE 320 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>D1</td><td>DGN1806334-PWT2</td><td>REAR SHROUD WITH INSERTS,WHITE SATIN,PPW-WHT-02,EDGE 320 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>E1</td><td>DGN1806334-PRD1</td><td>REAR SHROUD WITH INSERTS,RED CORVETTE,PPW-RED-01,EDGE 320 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>F1</td><td>DGN1806334-PRD4</td><td>REAR SHROUD WITH INSERTS,CHERRY BOMB,PPW-RED-04,EDGE 320 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>G1</td><td>DGN1806334-PPK3</td><td>REAR SHROUD WITH INSERTS,PRETTY IN PINK,PPW-PNK-03,EDGE 320 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>H1</td><td>DGN1806334-PPK4</td><td>REAR SHROUD WITH INSERTS,RASPBERRY BERET,PPW-PNK-04,EDGE 320 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>I1</td><td>DGN1806334-PPR7</td><td>REAR SHROUD WITH INSERTS,SUGAR PLUM,PPW-PRP-07,EDGE 320 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>J1</td><td>DGN1806334-PPR5</td><td>REAR SHROUD WITH INSERTS,DEEP PURPLE,PPW-PRP-05,EDGE 320 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>K1</td><td>DGN1806334-</td><td>REAR SHROUD WITH INSERTS,MIDNIGHT BLUE,PPW-BLU-10,EDGE 320 STRETTO PBU10</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>L1</td><td>DGN1806334-PBU9</td><td>REAR SHROUD WITH INSERTS,ELECTRIC BLUE,PPW-BLU-09,EDGE 320 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>M1</td><td>DGN1806334-</td><td>REAR SHROUD WITH INSERTS,BLUE JEAN,PPW-BLU-11,EDGE 320 STRETTO PBU11</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>N1</td><td>DGN1806334-</td><td>REAR SHROUD WITH INSERTS,GREEN MACHINE,PPW-GRN-11,EDGE 320 STRETTO PGN11</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>O1</td><td>DGN1806334-PGN8</td><td>REAR SHROUD WITH INSERTS,MILITARY GREEN,PPW-GRN-08,EDGE 320 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>P1</td><td>DGN1806334-PYL4</td><td>REAR SHROUD WITH INSERTS,LEMON CRUSH,PPW-YEL-04,EDGE 320 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>Q1</td><td>DGN1806334-POR7</td><td>REAR SHROUD WITH INSERTS,EVOLUTION ORANGE,PPW-ORN-07,EDGE 320 STRETTO</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>R1</td><td>SCRPPH1036</td><td>SCREW, PAN HEAD, TYPE H, M4X0.7 X 8, FT, ISO 7045, CL 4.8, BZ</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-67">Step 67 &mdash; Fenders, No Lights, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p94.jpg" alt="Fenders, No Lights, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 67.</strong> Fenders, No Lights, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1 - C1</td><td>DGN1810047</td><td>FENDER,ASSY,STANDARD,Q6 EDGE MINI</td><td>1</td><td>A finishing part or accessory from the maker's catalog.</td></tr>
+        <tr><td>A1</td><td>DGN1807521</td><td>FENDER, 12.5-14 INCH, RIGHT</td><td>1</td><td>A finishing part or accessory from the maker's catalog.</td></tr>
+        <tr><td>B1</td><td>DGN1807053</td><td>FENDER, 12.5-14 INCH, LEFT</td><td>1</td><td>A finishing part or accessory from the maker's catalog.</td></tr>
+        <tr><td>C1</td><td>SCRPPH1036</td><td>SCREW, PAN HEAD, TYPE H, M4X0.7 X 8, FT, ISO 7045, CL 4.8, BZ</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-68">Step 68 &mdash; Fenders w/ Lights, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p96.jpg" alt="Fenders w/ Lights, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 68.</strong> Fenders w/ Lights, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1 - D1</td><td>DGN1810041</td><td>FENDER,ASSY,SWITCH LIGHTS,Q6EDGE MINI</td><td>1</td><td>Turns a function on or off.</td></tr>
+        <tr><td>A1</td><td>DGN1807524</td><td>FENDER, 12.5-14 INCH, RIGHT, LIGHT MODULE ASSEMBLY</td><td>1</td><td>A light, so others can see the chair and you can see where you are going.</td></tr>
+        <tr><td>B1</td><td>DGN1807056</td><td>FENDER, 12.5-14 INCH, LEFT, LIGHT MODULE ASSEMBLY</td><td>1</td><td>A light, so others can see the chair and you can see where you are going.</td></tr>
+        <tr><td>C1</td><td>SCRPPH1036</td><td>SCREW, PAN HEAD, TYPE H, M4X0.7 X 8, FT, ISO 7045, CL 4.8, BZ</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>D1</td><td>MEC1808044</td><td>FENDER LIGHT MODULE ASSEMBLY, BACK DOOR</td><td>1</td><td>A light, so others can see the chair and you can see where you are going.</td></tr>
+        <tr><td>E1</td><td>ELE160183</td><td>ELECTRONIC,ASSY,SWITCH,BLACK,EGG,W/LIGHT SYMBOL,W/DUAL LOCK</td><td>1</td><td>Turns a function on or off.</td></tr>
+        <tr><td>F1</td><td>ELE1907905</td><td>HARNESS, PTO INTERFACE, NE TO 4 PIN MOLEX</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>G1</td><td>ELE1907903</td><td>HARNESS, PTO INTERFACE, QL2/NE+ TO 4 PIN MOLEX</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-69">Step 69 &mdash; Owner&#x27;s Package, Australia, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p142.jpg" alt="Owner's Package, Australia, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 69.</strong> Owner's Package, Australia, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>*N/A</td><td>INFMANU3992</td><td>MANUAL,CONSUMER SAFETY GUIDE,POWERCHAIR</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>*N/A</td><td>&mdash;</td><td>MANUAL,PRODUCT INSERT SHEET,POWER CHAIR WARRANTY,AUSTRALIA</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>*N/A</td><td>INFMANU3658</td><td>MANUAL,TRANSIT SECUREMENT SYSTEM,POWERCHAIR</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>*N/A</td><td>INFINFB4034</td><td>MANUAL,INTERACTIVE ASSIST,CUSTOMER INFORMATION PRODUCT INSERT SHEET,ENGLISH/FRENCH</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>*N/A</td><td>INFINFB4124</td><td>MANUAL,PRODUCT INSERT,SPECIFICATIONS,Q6 EDGE 3 STRETTO,ENGLISH</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>*N/A</td><td>INFMANU5113</td><td>MANUAL,OWNER'S,Q6 EDGE 3 STRETTO,ENGLISH</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-70">Step 70 &mdash; Decal Package, Q6 Edge 3 Stretto</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q6-edge-3-stretto/q6-edge-3-stretto-p144.jpg" alt="Decal Package, Q6 Edge 3 Stretto — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 70.</strong> Decal Package, Q6 Edge 3 Stretto &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>*N/A</td><td>DWR1234L957</td><td>DECAL,WARNING,DEFLATE TIRE COMPLETELY,L-1234-957</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*N/A</td><td>DWR1234L799</td><td>DECAL,ICON,1'' X 2.5'',WEATHER/MANUAL/LOOSE GARMENT,L-1234-799</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>*N/A</td><td>DWR1235L521</td><td>DECAL,WARNING,CONTROLLER CORD PLACEMENT,L-1235-521</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*N/A</td><td>DEC8120018</td><td>DECAL,NOT RATED FOR OCCUPIED TRANSPORT,POWER CHAIR</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*N/A</td><td>LAB148325</td><td>DECAL,READ OWNERS MANUAL, 19.1 DIAMETER</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>*N/A</td><td>DWR1235L515</td><td>DECAL,WARNING,BATTERY WARNINGS,L-1235-515</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*N/A</td><td>DWR1235L678</td><td>DECAL,BATTERY CONNECTION,1.6" X 2.3",QUANTUM623,L-1235-678</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*N/A</td><td>DWR1235L512</td><td>DECAL,WARNING,EMI-RFI,20V/M,L-1235-512</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*N/A</td><td>DWR1235L638</td><td>DECAL,ICON,JAZZY FREEWHEEL,UP-DRIVE/DOWN-NEUTRAL,L-1235-638</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*N/A</td><td>&mdash;</td><td>DECAL,THERMAL TRANSFER POLYESTER,1" X 3",3M 7871</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>*N/A</td><td>LAB1906475</td><td>DECAL,NAME,EDGE 3 STRETTO</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>What this page is</h2>
+    <p>Every diagram and every part number above comes from Quantum&rsquo;s own IPB &mdash; nothing redrawn, nothing guessed. The &lsquo;What this part does&rsquo; column is ours. If a part on your chair does not match the book, your chair is a different revision &mdash; check the document number before you order.</p>
+    <p><a href="/pmd-exploded.html">&larr; All exploded views</a> &middot; <a href="/pmd.html">PMD section</a></p>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>
