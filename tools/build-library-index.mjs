@@ -14,7 +14,10 @@
          their metadata overrides filename inference and scanned rows).
 
    Output record: {title, maker, model, platform, category, doc_type,
-                   url, source_url, bytes, link_only}
+                   url, source_url, bytes, link_only, basis}
+   basis is the rights-gate sentence for the record (why it may be
+   published/linked). Manifests and KNOWN carry real basis sentences;
+   anything else defaults to UNVERIFIED_BASIS below.
    category is one of: manual schematic documentation datasheet
                        lawsuit fda fcc other
    url is the local path (leading slash) or null; link-only records carry
@@ -22,11 +25,13 @@
 import { existsSync, readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join, relative, sep } from "node:path";
 import { fileURLToPath } from "node:url";
+import { decodeEntities } from "./html-entities.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const outPath = join(root, "data", "library-index.json");
 const manifestsDir = join(root, "..", "bareboard-library-manifests");
 const checkOnly = process.argv.includes("--check");
+const UNVERIFIED_BASIS = "UNVERIFIED \u2014 provenance not established";
 
 const CATEGORIES = ["manual", "schematic", "documentation", "datasheet",
   "lawsuit", "fda", "fcc", "other"];
@@ -34,19 +39,6 @@ const CAT_RANK = Object.fromEntries(CATEGORIES.map((c, i) => [c, i]));
 
 /* ---------- small helpers ---------- */
 
-function decodeEntities(s) {
-  const named = {
-    amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " ",
-    mdash: "\u2014", ndash: "\u2013", rsquo: "\u2019", lsquo: "\u2018",
-    rdquo: "\u201d", ldquo: "\u201c", hellip: "\u2026", middot: "\u00b7",
-    copy: "\u00a9", reg: "\u00ae", trade: "\u2122", deg: "\u00b0",
-    times: "\u00d7", micro: "\u00b5", Omega: "\u03a9", omega: "\u03c9",
-  };
-  return String(s)
-    .replace(/&#x([0-9a-fA-F]+);/g, (_, h) => String.fromCodePoint(parseInt(h, 16)))
-    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(parseInt(d, 10)))
-    .replace(/&([a-zA-Z]+);/g, (m, n) => (n in named ? named[n] : m));
-}
 function stripTags(s) {
   return decodeEntities(String(s).replace(/<[^>]*>/g, " ")).replace(/\s+/g, " ").trim();
 }
@@ -103,71 +95,97 @@ const KNOWN = {
   "/library/collected-public-docs/mandt-blackhat2016-demystifying-sep.pdf": {
     title: "Demystifying the Secure Enclave Processor — Black Hat USA 2016 (Mandt et al.)",
     maker: "Apple", model: "Secure Enclave Processor (SEP)", platform: "Apple",
-    category: "documentation", doc_type: "Conference paper (PDF)" },
+    category: "documentation", doc_type: "Conference paper (PDF)",
+    source_url: "https://blackhat.com/docs/us-16/materials/us-16-Mandt-Demystifying-The-Secure-Enclave-Processor.pdf",
+    basis: "Held from the archive.org mirror: no open license on file. Hosted on the site as a publicly published conference paper; license basis not yet established." },
   "/library/collected-public-docs/pangu-mosec2020-attack-secure-boot-of-sep.pdf": {
     title: "Attack Secure Boot of SEP — MOSEC 2020 (Team Pangu)",
     maker: "Apple", model: "Secure Enclave Processor (SEP)", platform: "Apple",
-    category: "documentation", doc_type: "Conference paper (PDF)" },
+    category: "documentation", doc_type: "Conference paper (PDF)",
+    source_url: "https://github.com/windknown/presentations/blob/master/Attack_Secure_Boot_of_SEP.pdf",
+    basis: "Held from the archive.org mirror: no open license on file (the author's repository carries no license). Hosted on the site as a publicly published conference paper; license basis not yet established." },
   "/library/collected-public-docs/buhren-blackhat2020-amd-psp.pdf": {
     title: "All You Ever Wanted to Know About the AMD PSP — Black Hat USA 2020 (Buhren et al.)",
     maker: "AMD", model: "Platform Security Processor (PSP)", platform: "AMD",
-    category: "documentation", doc_type: "Conference paper (PDF)" },
+    category: "documentation", doc_type: "Conference paper (PDF)",
+    source_url: "https://github.com/PSPReverse/psp-docs/blob/master/Presentations/BlackHat2020/us-20-BuhrenEichner-All-you-ever-wanted-to-know-about-the-AMD-Platform-Security-Processor-and-were-Afraid-to-Emulate.pdf",
+    basis: "Openly licensed (GPL-3.0): the authors' repository PSPReverse/psp-docs distributes this PDF under the GNU GPL v3, which permits verbatim redistribution with attribution." },
   "/library/collected-public-docs/skochinsky-recon2014-intel-me-secrets.pdf": {
     title: "Intel ME Secrets — REcon 2014 (Skochinsky)",
     maker: "Intel", model: "Management Engine (ME/CSME)", platform: "Intel",
-    category: "documentation", doc_type: "Conference paper (PDF)" },
+    category: "documentation", doc_type: "Conference paper (PDF)",
+    source_url: "https://gaspar-ilom.github.io/heads-wiki/PDFs/Recon_2014_Skochinsky.pdf",
+    basis: "Held from the archive.org mirror: no open license on file - every slide carries '(c) 2014 Igor Skochinsky'. Hosted on the site as a publicly published conference paper; license basis not yet established." },
   "/library/collected-public-docs/kioxia-xg6-product-brief.pdf": {
     title: "XG6 Client NVMe SSD Product Brief",
     maker: "Kioxia", model: "XG6", platform: "Storage",
-    category: "documentation", doc_type: "Product brief (PDF)" },
+    category: "documentation", doc_type: "Product brief (PDF)",
+    basis: "Manufacturer-published document, posted with attribution under fair use." },
   "/library/collected-public-docs/skhynix-h9tq27adftmcur-emcp-spec.pdf": {
     title: "H9TQ27ADFTMCUR eMCP Specification",
     maker: "SK hynix", model: "H9TQ27ADFTMCUR", platform: "Storage",
-    category: "datasheet", doc_type: "Specification (PDF)" },
+    category: "datasheet", doc_type: "Specification (PDF)",
+    basis: "Manufacturer-published document, posted with attribution under fair use." },
   "/library/original-docs/apple-sep-public-reference.md": {
     title: "Apple Secure Enclave — Public Reference",
     maker: "Apple", model: "Secure Enclave Processor (SEP)", platform: "Apple",
-    category: "documentation", doc_type: "Original reference (Markdown)" },
+    category: "documentation", doc_type: "Original reference (Markdown)",
+    basis: "Original work by BareBoard." },
   "/library/original-docs/amd-psp-public-reference.md": {
     title: "AMD PSP — Public Reference",
     maker: "AMD", model: "Platform Security Processor (PSP)", platform: "AMD",
-    category: "documentation", doc_type: "Original reference (Markdown)" },
+    category: "documentation", doc_type: "Original reference (Markdown)",
+    basis: "Original work by BareBoard." },
   "/library/original-docs/intel-csme-public-reference.md": {
     title: "Intel ME/CSME — Public Reference",
     maker: "Intel", model: "Management Engine (ME/CSME)", platform: "Intel",
-    category: "documentation", doc_type: "Original reference (Markdown)" },
+    category: "documentation", doc_type: "Original reference (Markdown)",
+    basis: "Original work by BareBoard." },
   "/library/original-docs/apple-pmic-identification-guide.md": {
     title: "Apple PMIC Identification Guide",
     maker: "Apple", model: "PMIC (multiple)", platform: "Apple",
-    category: "documentation", doc_type: "Original guide (Markdown)" },
+    category: "documentation", doc_type: "Original guide (Markdown)",
+    basis: "Original work by BareBoard." },
   "/library/original-docs/bareboard-10-most-wanted-devices.md": {
     title: "The 10 Most Wanted Devices (full draft)",
     maker: "BareBoard", model: null, platform: "Most Wanted",
-    category: "documentation", doc_type: "Original document (Markdown)" },
+    category: "documentation", doc_type: "Original document (Markdown)",
+    basis: "Original work by BareBoard." },
   "/library/original-docs/bareboard-watchmen-tool-audit.md": {
     title: "Watchmen Tool Audit Framework",
     maker: "BareBoard", model: null, platform: "Watchmen",
-    category: "documentation", doc_type: "Original document (Markdown)" },
+    category: "documentation", doc_type: "Original document (Markdown)",
+    basis: "Original work by BareBoard." },
   "/library/original-docs/bareboard-registry-draft.md": {
     title: "Registry — Tiered Documentation Registry (draft)",
     maker: "BareBoard", model: null, platform: "Registry",
-    category: "documentation", doc_type: "Original document (Markdown)" },
+    category: "documentation", doc_type: "Original document (Markdown)",
+    basis: "Original work by BareBoard." },
   "/library/original-docs/hot100-methodology-notes.md": {
     title: "Hot 100 Methodology Notes",
     maker: "BareBoard", model: null, platform: "Hot 100",
-    category: "documentation", doc_type: "Original document (Markdown)" },
+    category: "documentation", doc_type: "Original document (Markdown)",
+    basis: "Original work by BareBoard." },
   "/library/trackers/most-wanted-tracker.csv": {
     title: "Most Wanted Tracker",
     maker: "BareBoard", model: null, platform: "Most Wanted",
-    category: "other", doc_type: "Tracker (CSV)" },
+    category: "other", doc_type: "Tracker (CSV)",
+    basis: "Original work by BareBoard." },
+  "/library/collected-public-docs/pmd/permobil_m3-corpus_owner.pdf.xml": {
+    title: "M3 Corpus User Manual - text extraction (pdf2xml)",
+    maker: "Permobil", model: "M3 Corpus", platform: "Power Mobility (PMD)",
+    category: "manual", doc_type: "Text extraction (XML)",
+    basis: "Derived file: machine text extraction (pdf2xml) of a manufacturer-published document (Permobil M3 Corpus owner manual), posted with attribution under fair use." },
   "/datasheets/NCP302150.pdf": {
     title: "NCP302150 Datasheet",
     maker: "onsemi", model: "NCP302150", platform: "Power",
-    category: "datasheet", doc_type: "Datasheet (PDF)" },
+    category: "datasheet", doc_type: "Datasheet (PDF)",
+    basis: "Manufacturer-published document, posted with attribution under fair use." },
   "/datasheets/W25Q16JW.pdf": {
     title: "W25Q16JW Datasheet",
     maker: "Winbond", model: "W25Q16JW", platform: "Memory",
-    category: "datasheet", doc_type: "Datasheet (PDF)" },
+    category: "datasheet", doc_type: "Datasheet (PDF)",
+    basis: "Manufacturer-published document, posted with attribution under fair use." },
 };
 
 const EXT_DOC_TYPE = {
@@ -187,12 +205,13 @@ function addRecord(r, preferIncoming) {
   const base = {
     title: null, maker: null, model: null, platform: null,
     category: "other", doc_type: null, url: null, source_url: null,
-    bytes: null,
+    bytes: null, basis: UNVERIFIED_BASIS,
   };
   const rec = { ...base, ...Object.fromEntries(
     Object.entries(r).filter(([, v]) => v !== undefined && v !== "")) };
   rec.category = normalizeCategory(rec.category) || "other";
   rec.link_only = !rec.url;
+  if (!rec.basis) rec.basis = UNVERIFIED_BASIS;
   const k = keyOf(rec);
   const existing = records.get(k);
   if (!existing) { records.set(k, rec); return; }
@@ -240,8 +259,9 @@ for (const baseDir of ["library/collected-public-docs", "library/original-docs",
           : "documentation"),
       doc_type: known.doc_type || EXT_DOC_TYPE[ext] || (ext ? ext.slice(1).toUpperCase() : null),
       url,
-      source_url: null,
+      source_url: known.source_url || null,
       bytes: statSync(abs).size,
+      basis: known.basis || UNVERIFIED_BASIS,
     }, false);
     localCount++;
   }
@@ -426,6 +446,7 @@ function manifestRecord(raw) {
     url: url || null,
     source_url: source_url || null,
     bytes,
+    basis: pick(raw, ["basis"]) || UNVERIFIED_BASIS,
   };
 }
 let manifestFiles = 0, manifestRecords = 0;
@@ -475,6 +496,7 @@ for (const d of docs) {
     errors.push(d.title + ": local url does not exist: " + d.url);
   if (!d.url && !d.source_url) errors.push(d.title + ": neither url nor source_url");
   if (d.link_only !== !d.url) errors.push(d.title + ": link_only flag inconsistent");
+  if (!d.basis) errors.push(d.title + ": missing basis");
 }
 if (errors.length) {
   console.error("INVALID library index:");
