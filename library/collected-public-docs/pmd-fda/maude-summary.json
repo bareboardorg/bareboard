@@ -1,0 +1,171 @@
+{
+ "source": "openFDA device/event (MAUDE), product_code ITI (powered wheelchair), queried 2026-11-11",
+ "method": "Counts per FDA manufacturer-name variant (exact phrase). Breakdowns use the largest single variant per maker to avoid double counting; variant totals may overlap slightly across makers' name spellings.",
+ "overall_ITI": {
+  "total_reports_ITI": 30647,
+  "by_event_type": {
+   "Malfunction": 26801,
+   "Injury": 3034,
+   "Other": 368,
+   "": 255,
+   "Death": 189
+  }
+ },
+ "makers": {
+  "Pride Mobility Products (incl. Quantum Rehab)": {
+   "total_reports_all_name_variants": 3101,
+   "name_field_used": "device.manufacturer_d_name",
+   "variant_counts": {
+    "PRIDE MOBILITY PRODUCTS CORP": 177,
+    "PRIDE MOBILITY PRODUCTS CORPORATION": 146,
+    "PRIDE MOBILITY PRODUCTS": 1382,
+    "PRIDE MOBILITY": 1396
+   },
+   "main_variant": "PRIDE MOBILITY",
+   "main_variant_reports": 1396,
+   "reports_by_event_type_main_variant": {
+    "Injury": 971,
+    "Other": 177,
+    "Malfunction": 168,
+    "Death": 57,
+    "": 23
+   },
+   "top_product_problems_main_variant": {
+    "Appropriate Device Problem Term/Code Not Available": 769,
+    "Fire": 114,
+    "Device Operates Differently Than Expected": 56,
+    "Insufficient Device Problem Information": 49,
+    "Device Tipped Over": 42,
+    "Unintended System Motion": 41,
+    "Break": 40,
+    "Use of Device Problem": 32,
+    "Unknown (for use when the device problem is not known)": 31,
+    "Detachment Of Device Component": 30,
+    "Unintended Movement": 30,
+    "Smoking": 29
+   },
+   "death_reports_main_variant": 57
+  },
+  "Permobil": {
+   "total_reports_all_name_variants": 1967,
+   "name_field_used": "device.manufacturer_d_name",
+   "variant_counts": {
+    "PERMOBIL INC": 549,
+    "PERMOBIL AB": 153,
+    "PERMOBIL": 716,
+    "PERMOBIL, INC.": 549
+   },
+   "main_variant": "PERMOBIL",
+   "main_variant_reports": 716,
+   "reports_by_event_type_main_variant": {
+    "Injury": 349,
+    "Malfunction": 331,
+    "Death": 21,
+    "": 8,
+    "Other": 7
+   },
+   "top_product_problems_main_variant": {
+    "Break": 142,
+    "Mechanical Problem": 108,
+    "Adverse Event Without Identified Device or Use Problem": 93,
+    "Unintended Movement": 87,
+    "Fracture": 71,
+    "Detachment of Device or Device Component": 52,
+    "Detachment Of Device Component": 41,
+    "Unintended System Motion": 41,
+    "Unintended Collision": 35,
+    "Device Tipped Over": 34,
+    "Use of Device Problem": 32,
+    "Electrical /Electronic Property Problem": 23
+   },
+   "death_reports_main_variant": 21
+  },
+  "Sunrise Medical": {
+   "total_reports_all_name_variants": 746,
+   "name_field_used": "device.manufacturer_d_name",
+   "variant_counts": {
+    "SUNRISE MEDICAL INC": 27,
+    "SUNRISE MEDICAL HHG INC": 1,
+    "SUNRISE MEDICAL": 715,
+    "SUNRISE MEDICAL LLC": 3
+   },
+   "main_variant": "SUNRISE MEDICAL",
+   "main_variant_reports": 715,
+   "reports_by_event_type_main_variant": {
+    "Malfunction": 511,
+    "Injury": 169,
+    "Other": 20,
+    "Death": 12,
+    "": 3
+   },
+   "top_product_problems_main_variant": {
+    "Component(s), broken": 208,
+    "Self-Activation or Keying": 83,
+    "Unintended System Motion": 72,
+    "Break": 39,
+    "Detachment Of Device Component": 37,
+    "Unintended Collision": 30,
+    "Use of Device Problem": 30,
+    "Device Tipped Over": 29,
+    "Adverse Event Without Identified Device or Use Problem": 25,
+    "Unintended Movement": 24,
+    "Mechanical Problem": 23,
+    "Sticking": 22
+   },
+   "death_reports_main_variant": 12
+  },
+  "Invacare": {
+   "total_reports_all_name_variants": 24583,
+   "name_field_used": "device.manufacturer_d_name",
+   "variant_counts": {
+    "INVACARE CORPORATION": 114,
+    "INVACARE CORP": 300,
+    "INVACARE": 24169
+   },
+   "main_variant": "INVACARE",
+   "main_variant_reports": 24169,
+   "reports_by_event_type_main_variant": {
+    "Malfunction": 23211,
+    "Injury": 667,
+    "": 132,
+    "Other": 113,
+    "Death": 46
+   },
+   "top_product_problems_main_variant": {
+    "Device Operates Differently Than Expected": 5008,
+    "Break": 3386,
+    "Mechanical Problem": 1774,
+    "Leak/Splash": 1479,
+    "Bent": 1004,
+    "Device Inoperable": 992,
+    "Sticking": 951,
+    "Device Slipped": 900,
+    "Device Displays Incorrect Message": 877,
+    "Loss of Power": 833,
+    "Device Stops Intermittently": 817,
+    "Detachment Of Device Component": 767
+   },
+   "death_reports_main_variant": 46
+  },
+  "WHILL": {
+   "total_reports_all_name_variants": 3,
+   "name_field_used": "device.manufacturer_d_name",
+   "variant_counts": {
+    "WHILL INC": 1,
+    "WHILL, INC.": 1,
+    "WHILL": 1
+   },
+   "main_variant": "WHILL INC",
+   "main_variant_reports": 1,
+   "reports_by_event_type_main_variant": {
+    "Injury": 1
+   },
+   "top_product_problems_main_variant": {
+    "Battery Problem": 1,
+    "Complete Loss of Power": 1,
+    "Defective Component": 1
+   },
+   "death_reports_main_variant": 0
+  }
+ }
+}

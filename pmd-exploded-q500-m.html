@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exploded View: Sunrise Quickie Q500 M &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="Sunrise Medical publishes no parts breakdown for the Quickie Q500 M. This page reproduces the labeled overview diagram the maker gives owners (Fig. 3.1, eleven parts), names the gap, and quotes the manual&amp;rsquo;s own spare-parts rule verbatim.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Exploded View: Sunrise Quickie Q500 M">
+<meta property="og:description" content="Sunrise Medical publishes no parts breakdown for the Quickie Q500 M. This page reproduces the labeled overview diagram the maker gives owners (Fig. 3.1, eleven parts), names the gap, and quotes the manual&amp;rsquo;s own spare-parts rule verbatim.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-exploded-q500-m.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Exploded View: Sunrise Quickie Q500 M</h1>
+    <p class="lede">This page is different, and the difference is the story. Sunrise Medical does <strong>not</strong> publish an Illustrated Parts Breakdown or a parts catalogue for the Quickie Q500 M &mdash; not for owners, not openly at all. Their service instructions say it in one line: <em>&ldquo;For spare parts please refer to separate manuals.&rdquo;</em> No exploded views, no part numbers, no way to order a caster bearing without a dealer in the middle.</p>
+    <p><strong>Coverage: manual-only.</strong> What Sunrise does publish is the labeled overview in the General Manual &mdash; Fig. 3.1, eleven numbered parts, showing the Q500 M itself: the mid-wheel-drive chair, the big drive wheels under the seat, a small castor at each corner, and the suspension system the manual calls the range&rsquo;s distinctive feature. That is everything the maker gives the person who rides in it. We reproduce that diagram exactly, and we name the gap exactly: every assembly-level breakdown for this chair is a source gap until Sunrise publishes one. The Q500 M shares its manual with the smaller Q400 M; the European edition of the same manual covers the whole Q500 family &mdash; M, F, and R &mdash; and labels it in twelve parts, adding a Side Cushion as part 4.</p>
+  </section>
+
+  <section>
+    <h2>The sources</h2>
+    <p><strong>Guide 1:</strong> General Manual &mdash; Quickie Q500 M / Q400 M, document P/N 248035, Revision H, Sunrise Medical (US) LLC<br>
+    <strong>Full guide (PDF, in this site&rsquo;s library):</strong> <a href="/library/collected-public-docs/pmd/sunrise_quickie-q500m-q400m_general-manual_248035-rev-h.pdf">sunrise_quickie-q500m-q400m_general-manual_248035-rev-h.pdf</a></p>
+    <p><strong>Guide 2:</strong> Instructions for Use &mdash; Quickie Q500 M/F/R, Revision B, Sunrise Medical (European edition). <strong>Link-only:</strong> no downloadable PDF of this edition was found; the full text was verified from the public copy on the manual aggregator Libble at <a href="https://www.libble.eu/sunrise-medical-quickie-q500/online-manual-851966/?page=0008">libble.eu/sunrise-medical-quickie-q500 (p. 8, the overview figure)</a>. Its specification table (p. 35) is the source for the Q500 M numbers below, and its Fig. 3.1 labels the M, F, and R chairs in one figure, in twelve parts.</p>
+    <p><strong>Guide 3:</strong> Service Instructions &mdash; Quickie Q400 / Q500 / Q700 F/R, document 000690852.01, Revision B, Sunrise Medical (40 pages).<br>
+    <strong>Full guide (PDF, in this site&rsquo;s library):</strong> <a href="/library/collected-public-docs/pmd/sunrise_quickie-q400-q500-q700-fr_service-instructions_000690852-rev-b.pdf">sunrise_quickie-q400-q500-q700-fr_service-instructions_000690852-rev-b.pdf</a> (also posted on Sunrise Medical&rsquo;s own document asset bank at <a href="https://www.sunrisedice.com/asset-bank/assetfile/52975.pdf">sunrisedice.com/asset-bank/assetfile/52975.pdf</a>). It covers the F and R bases only &mdash; it says so on its own cover &mdash; not the M base.</p>
+    <p>An older printing of the US manual, Revision G, is also in public circulation; this page is built from Revision H, the edition held in the library, with the numbers cross-checked against Revision B.</p>
+  </section>
+  <section>
+    <h2>The maker&rsquo;s own warnings, word for word</h2>
+    <p>Sunrise prints these in the Q500 M / Q400 M General Manual (Rev. H) and in the Q400/Q500/Q700 F/R Service Instructions (Rev. B). Word for word &mdash; including the one that explains why this page cannot give you part numbers:</p>
+    <blockquote><p>For spare parts please refer to separate manuals. Please only use genuine spare parts supplied by Sunrise Medical, failure to do so may result in the invalidation of your warranty.</p></blockquote>
+    <blockquote><p>The intended lifetime of the wheelchair is five (5) years. Please DO NOT use or fit any third party components to the wheelchair unless they are officially approved by Sunrise Medical.</p></blockquote>
+    <blockquote><p>Follow the instructions carefully next to these warning symbols! Not paying careful attention to these instructions could result in physical injury or damage to the wheelchair or the environment.</p></blockquote>
+    <blockquote><p>The signs, symbols, and instructions affixed to the wheelchair comprise part of the safety facilities. They must never be covered or removed. They must remain present and clearly legible throughout the entire lifespan of the wheelchair.</p></blockquote>
+    <blockquote><p>Avoid physical contact with the wheelchair&rsquo;s motors at all times. Motors are continuously in motion during use and can reach high temperatures. After use, the motors will cool down slowly. Physical contact could cause burns. Allow the motors after using at least 30 minutes to cool down.</p></blockquote>
+    <blockquote><p>Do not fit car batteries to the wheelchair. Fit only deep cycle, maintenance free mobility batteries.</p></blockquote>
+    <blockquote><p>Be extra cautious to reduce the risk of dropping a metal tool onto the battery. It could spark or short circuit the battery or other electrical parts that may cause an explosion.</p></blockquote>
+    <blockquote><p>We recommend the use of Sunrise Medical authorized spare parts only.</p></blockquote>
+    <p><em>Verbatim from the General Manual, sections 1.0, 2.0, 2.1, 2.2, 6.1, and 8.3; the spare-parts rule from the Service Instructions, section 4.0.</em></p>
+  </section>
+
+  <section>
+    <h2>Build order</h2>
+    <p>The assemblies are laid out in the order you would build the chair: frame first, batteries last. Every step is one labeled diagram from the maker&rsquo;s guide, followed by its parts table. The <strong>Callout</strong> column is the number printed on the diagram. There is no part-number column on this page &mdash; Sunrise publishes no part numbers for this chair, and we do not invent them.</p>
+    <ul>
+      <li><strong>Frame:</strong> <a href="#step-1">Step 1: The Q500 M, labeled by Sunrise</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Stage 1 — Frame</h2>
+    <p>Start with the skeleton. Every other system bolts to the frame, so it goes together first. The photograph is the Q500 M itself, mid-wheel drive: the drive wheels are the big wheels under the seat, and the small wheels at the front and back corners are castors.</p>
+    <h3 id="step-1">Step 1 &mdash; The Q500 M, labeled by Sunrise</h3>
+    <figure>
+      <img src="/img/pmd-exploded/q500-m/q500-m-fig31.jpg" alt="The Q500 M, labeled by Sunrise — Fig. 3.1 from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 1.</strong> The Q500 M, labeled by Sunrise &mdash; Fig. 3.1 reproduced from the manufacturer&rsquo;s guide (source above). The same eleven callouts label the chair.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Part (maker&rsquo;s label)</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>1. Headrest</td><td>Supports your head. It adjusts so your head rests in a comfortable position.</td></tr>
+        <tr><td>2. Joystick</td><td>The hand control you drive with: push it the way you want to go. It is the joystick module of the chair&rsquo;s R-net control system &mdash; <a href="/pmd-fault-codes.html">what its fault codes mean is on this site</a>.</td></tr>
+        <tr><td>3. Arm Rest</td><td>Supports your arms, and helps you transfer in and out of the chair.</td></tr>
+        <tr><td>4. Seat Cushion</td><td>The cushion you sit on, part of the Sedeo seating system.</td></tr>
+        <tr><td>5. Leg Rest</td><td>Supports your legs. Powered versions tilt to change their angle.</td></tr>
+        <tr><td>6. Front Caster</td><td>The small swivel wheel at the front corner. It is not powered &mdash; it follows where the chair turns.</td></tr>
+        <tr><td>7. Drive Wheel</td><td>The big powered wheel. The motor turns this one. On the Q500 M it sits under the seat, in the middle &mdash; that is what mid-wheel drive means.</td></tr>
+        <tr><td>8. Rear Caster</td><td>The small swivel wheel at the back corner. It is not powered &mdash; it follows where the chair turns and keeps the chair steady.</td></tr>
+        <tr><td>9. Motors</td><td>Two electric motors, one for each drive wheel. They get hot in use &mdash; see the maker&rsquo;s warning above, and give them 30 minutes to cool before you touch them.</td></tr>
+        <tr><td>10. Battery Box</td><td>The box that holds the two 12-volt batteries. Together they make the 24 volts the chair runs on &mdash; <a href="/pmd-batteries.html">the battery lesson is on this site</a>.</td></tr>
+        <tr><td>11. Back Upholstery</td><td>The fabric back of the seat. It supports your back.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>The chair in numbers, from the manuals&rsquo; own tables</h2>
+    <p>All of these come from the Q500 M specification table in the European edition (Rev. B, p. 35) and section 10.0 of the US edition (Rev. H):</p>
+    <ul>
+      <li><strong>Maximum user weight:</strong> 136 kg (300 lbs) with Sedeo Lite seating; 160 kg (350 lbs) with Sedeo Pro seating.</li>
+      <li><strong>Maximum speed:</strong> 6&ndash;12.5 km/h (4&ndash;7.7 mph). <strong>Maximum safe slope:</strong> 8&deg;.</li>
+      <li><strong>Standard:</strong> EN 12184, Class B.</li>
+      <li><strong>Batteries:</strong> two 12-volt deep-cycle gel batteries in series (24 V total). The manual lists three fitted sizes: 50 Ah AGM, 60 Ah GEL, or 80 Ah GEL (C20 rating), always as a matched pair.</li>
+      <li><strong>Size:</strong> total length 1,100&ndash;1,130 mm with Sedeo Lite and a central footplate, or 1,280 mm with Sedeo Pro and swingaway hangers; total width 610&ndash;620 mm with 13-inch drive wheels.</li>
+      <li><strong>Range (80 Ah batteries):</strong> 32.5&ndash;40 km at 6 km/h; 25&ndash;32.5 km at 12.5 km/h.</li>
+      <li><strong>Turning radius:</strong> 560&ndash;630 mm. <strong>Ground clearance:</strong> 90 mm. <strong>Obstacle climbing:</strong> 75&ndash;100 mm.</li>
+      <li><strong>Weight:</strong> 130&ndash;138 kg in basic configuration, without batteries.</li>
+    </ul>
+    <p><strong>If the chair will not move</strong>, the manual&rsquo;s own troubleshooting list (section 9.0) is six checks before you call anyone: are the batteries charged; switch the chair off and back on; are the battery plugs all securely in place; is the freewheel switch in the DRIVE position; where is the speed regulator set; is the controller locked. Anything beyond that, the manual sends you to the separate controller booklet &mdash; <a href="/pmd-fault-codes.html">the R-net fault codes, translated, are on this site</a>.</p>
+  </section>
+
+  <section>
+    <h2>What the service documents add, and where they stop</h2>
+    <p>The Service Instructions (000690852.01 Rev. B) are written for technicians, and they are honest about their own limits: <em>&ldquo;This manual contains the instructions for repairs and general maintenance of the Q400/Q500/Q700 F and R bases.&rdquo;</em> The M base is not in it. What it does cover, for the F and R bases &mdash; including the Q500 F and Q500 R, the Q500 M&rsquo;s siblings &mdash; is real work: removing the castor wheel from its fork, the fork from the castor arm, the drive wheel from the base, the motor from the base, the battery cover, the brake lever, the brake, and the motor brush &mdash; and one procedure that is Q700-only, the removal of the castor damper. It also lists the tools the work needs (flathead and crosshead screwdrivers, ring spanners 13/16/17/19, open-ended spanners 13/22/24, sockets 16/22, hex keys 1.5/2.5/3/4/5/6, a gear puller, and pliers).</p>
+    <p>No service document written for the M base was found in public in this run. The Q700 M has one &mdash; a swing-arm installation sheet, document 248013 &mdash; but no Q500 M equivalent surfaced. The one M-specific procedure in the owner manuals is in the European edition, section 6.6, for disconnecting the batteries for air transport: on mid-wheel drive, release the two handle screws under the front of the seat frame, flip the seat frame backwards, and disconnect the 2-pin Anderson connectors from each battery.</p>
+  </section>
+
+  <section>
+    <h2>What is missing, in the open</h2>
+    <p>Frame, drive, seating, and electronics breakdowns for this chair: <strong>not published by the maker</strong>. That is not a gap in our research &mdash; it is the gate, documented. No Illustrated Parts Breakdown or parts catalogue for the Q500 M is published openly by Sunrise; the service instructions that do exist cover the F and R bases and exclude the M; and the separate spare-parts manuals the service instructions point to are not published openly either. The serial number label &mdash; Fig. 2.1 in the manual, which says it is located on the right side of the base, on the bottom rear of the battery box &mdash; is the one key you hold: every part on this chair is orderable by a dealer using it. Until Sunrise publishes the breakdown, a dealer&rsquo;s parts screen is the only copy &mdash; and anything a dealer can see for your chair, you are entitled to ask them to show you.</p>
+    <p><a href="/pmd-exploded.html">&larr; All exploded views</a> &middot; <a href="/pmd.html">PMD section</a></p>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

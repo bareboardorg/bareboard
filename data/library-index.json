@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "generated": "2026-11-11",
-  "total": 602,
+  "generated": "2026-11-17",
+  "total": 617,
   "counts": {
-    "manual": 166,
+    "manual": 176,
     "schematic": 10,
     "documentation": 13,
     "datasheet": 125,
     "lawsuit": 30,
-    "fda": 169,
+    "fda": 170,
     "fcc": 88,
-    "other": 1
+    "other": 5
   },
   "documents": [
     {
@@ -357,7 +357,7 @@
       "category": "manual",
       "doc_type": "technical",
       "url": "/library/collected-public-docs/pmd/dynamic-controls_dx2-acs2_technical.pdf",
-      "source_url": null,
+      "source_url": "https://dynamiccontrols.com/wp-content/uploads/2025/09/dx2-rema_b-acs2-installation-manual-issue2.pdf",
       "bytes": 2848011,
       "link_only": false
     },
@@ -381,7 +381,7 @@
       "category": "manual",
       "doc_type": "technical",
       "url": "/library/collected-public-docs/pmd/dynamic-controls_dx2-rem42x_technical.pdf",
-      "source_url": null,
+      "source_url": "https://dynamiccontrols.com/wp-content/uploads/2025/09/dx2-rem42x-installation-manual-iss1.pdf",
       "bytes": 2831564,
       "link_only": false
     },
@@ -434,6 +434,30 @@
       "link_only": false
     },
     {
+      "title": "Invacare AVIVA FX Power Wheelchair Base User Manual (60101916-A, 2020)",
+      "maker": "Invacare",
+      "model": "AVIVA FX (IFX-20R, IFX-20SP, IFX-20MP, IFX-20C)",
+      "platform": "PMD",
+      "category": "manual",
+      "doc_type": "owner",
+      "url": null,
+      "source_url": "https://www.manualslib.com/manual/2109310/Invacare-Aviva-Fx.html",
+      "bytes": null,
+      "link_only": true
+    },
+    {
+      "title": "Invacare AVIVA FX Series Service Manual (1675507-A, 2023)",
+      "maker": "Invacare",
+      "model": "AVIVA FX",
+      "platform": "PMD",
+      "category": "manual",
+      "doc_type": "service",
+      "url": null,
+      "source_url": "https://manuals.plus/m/d332d20f0fb0e3f426dc9017aec7e22e253e4ea9413ac67ddd61d3e91e9af003.pdf",
+      "bytes": null,
+      "link_only": true
+    },
+    {
       "title": "Invacare LiNX Controls System Service Manual",
       "maker": "Invacare",
       "model": "LiNX",
@@ -453,7 +477,7 @@
       "category": "manual",
       "doc_type": "owner",
       "url": "/library/collected-public-docs/pmd/invacare_tdx-sp2_owner.pdf",
-      "source_url": null,
+      "source_url": "https://www.invacare.co.uk/sites/uk/files/csv_migration/product_docs/technical_docs/DTEC011190_1578997~P.pdf",
       "bytes": 5641116,
       "link_only": false
     },
@@ -506,6 +530,30 @@
       "link_only": false
     },
     {
+      "title": "Permobil F3 Corpus User Manual",
+      "maker": "Permobil",
+      "model": "F3 Corpus",
+      "platform": "PMD",
+      "category": "manual",
+      "doc_type": "owner",
+      "url": "/library/collected-public-docs/pmd/permobil_f3-corpus_owner.pdf",
+      "source_url": "https://permobilwebcdn.azureedge.net/media/fwpdf2zb/f3_corpus_model_version_3-user_manual-eng-us-340050.pdf",
+      "bytes": 1851669,
+      "link_only": false
+    },
+    {
+      "title": "Permobil F5 Corpus User Manual",
+      "maker": "Permobil",
+      "model": "F5 Corpus",
+      "platform": "PMD",
+      "category": "manual",
+      "doc_type": "owner",
+      "url": "/library/collected-public-docs/pmd/permobil_f5-corpus_owner.pdf",
+      "source_url": "https://permobilwebcdn.azureedge.net/media/tr2daytm/f5_corpus_model_version_2-user_manual-eng-uk-335322.pdf",
+      "bytes": 1907946,
+      "link_only": false
+    },
+    {
       "title": "Permobil F5 Corpus VS User Manual",
       "maker": "Permobil",
       "model": "F5 Corpus VS",
@@ -527,6 +575,18 @@
       "url": "/library/collected-public-docs/pmd/permobil_m3-corpus_owner.pdf",
       "source_url": null,
       "bytes": 2232409,
+      "link_only": false
+    },
+    {
+      "title": "Permobil M5 Corpus User Manual",
+      "maker": "Permobil",
+      "model": "M5 Corpus",
+      "platform": "PMD",
+      "category": "manual",
+      "doc_type": "owner",
+      "url": "/library/collected-public-docs/pmd/permobil_m5-corpus_owner.pdf",
+      "source_url": "https://permobilwebcdn.azureedge.net/media/0tgnef5y/m5_corpus_model_version_3-user_manual-eng-aus-340220-pdf.pdf",
+      "bytes": 2227940,
       "link_only": false
     },
     {
@@ -674,6 +734,18 @@
       "link_only": true
     },
     {
+      "title": "Pride Jazzy 600 ES Owner's Manual",
+      "maker": "Pride Mobility",
+      "model": "Jazzy 600 ES",
+      "platform": "PMD",
+      "category": "manual",
+      "doc_type": "owner",
+      "url": "/library/collected-public-docs/pmd/pride_jazzy-600-es_owner.pdf",
+      "source_url": "https://www.gomobility.ie/wp-content/uploads/2019/08/Jazzy-600-ES-Owners-Manual.pdf",
+      "bytes": 7822456,
+      "link_only": false
+    },
+    {
       "title": "Pride Jazzy 600 Illustrated Parts Breakdown (INFMANU2831 Rev.J)",
       "maker": "Pride Mobility",
       "model": "Jazzy 600",
@@ -722,6 +794,18 @@
       "link_only": false
     },
     {
+      "title": "Pride Jazzy Air 2 Owner's Manual",
+      "maker": "Pride Mobility",
+      "model": "Jazzy Air 2",
+      "platform": "PMD",
+      "category": "manual",
+      "doc_type": "owner",
+      "url": "/library/collected-public-docs/pmd/pride_jazzy-air-2_owner.pdf",
+      "source_url": "https://determined-curie.31-97-77-231.plesk.page/wp-content/uploads/2025/07/US_UK_AU_Jazzy-Air-Series_om_RevC_Nov23_4922-1_compressed.pdf",
+      "bytes": 3834748,
+      "link_only": false
+    },
+    {
       "title": "Quantum 6000 Illustrated Parts Breakdown (INFMANU3160 Rev.B)",
       "maker": "Quantum Rehab (Pride Mobility)",
       "model": "Quantum 6000",
@@ -753,7 +837,7 @@
       "category": "manual",
       "doc_type": "parts",
       "url": null,
-      "source_url": "https://documents.cdn.ifixit.com/Unx1eUseqQjmBc61.pdf",
+      "source_url": "https://www.ifixit.com/Document/Unx1eUseqQjmBc61/edge-20-illustrated-parks-breakdown.pdf",
       "bytes": null,
       "link_only": true
     },
@@ -830,6 +914,78 @@
       "link_only": true
     },
     {
+      "title": "Sunrise Medical Q7ME Swing Arm Installation (Q700M base)",
+      "maker": "Sunrise Medical (US) LLC",
+      "model": "Quickie Q700M",
+      "platform": "PMD",
+      "category": "manual",
+      "doc_type": "service",
+      "url": "/library/collected-public-docs/pmd/sunrise_quickie-q700m_swing-arm-installation_248013-rev-a.pdf",
+      "source_url": "https://cdn.southwestmedical.com/uploads/application/pdf/5/9/59242e26-ee3d-537c-a9b4-5f31f3ed9041.pdf",
+      "bytes": 222504,
+      "link_only": false
+    },
+    {
+      "title": "Sunrise Medical Quickie Pulse 6 Owner's Manual",
+      "maker": "Sunrise Medical",
+      "model": "Quickie Pulse 6 (6 BC, 6 SC, 6 CC)",
+      "platform": "PMD",
+      "category": "manual",
+      "doc_type": "owner",
+      "url": "/library/collected-public-docs/pmd/sunrise_quickie-pulse-6_owner.pdf",
+      "source_url": "https://openboxmedical.s3.us-west-1.amazonaws.com/2c15fcc6fbcf4601abdaae4239f3d656/pulse6-cc-manual.pdf",
+      "bytes": 4435589,
+      "link_only": false
+    },
+    {
+      "title": "Sunrise Medical Quickie Q400 / Q500 / Q700 F/R Service Instructions",
+      "maker": "Sunrise Medical",
+      "model": "Quickie Q400 / Q500 / Q700 F/R",
+      "platform": "PMD",
+      "category": "manual",
+      "doc_type": "service",
+      "url": "/library/collected-public-docs/pmd/sunrise_quickie-q400-q500-q700-fr_service-instructions_000690852-rev-b.pdf",
+      "source_url": "https://www.sunrisedice.com/asset-bank/assetfile/52975.pdf",
+      "bytes": 4636039,
+      "link_only": false
+    },
+    {
+      "title": "Sunrise Medical Quickie Q500 M / Q400 M General Manual",
+      "maker": "Sunrise Medical (US) LLC",
+      "model": "Quickie Q500 M / Q400 M",
+      "platform": "PMD",
+      "category": "manual",
+      "doc_type": "owner",
+      "url": "/library/collected-public-docs/pmd/sunrise_quickie-q500m-q400m_general-manual_248035-rev-h.pdf",
+      "source_url": "https://store-v42yjnf5.mybigcommerce.com/content/Sunrise/248035-en-Print.pdf",
+      "bytes": 1961534,
+      "link_only": false
+    },
+    {
+      "title": "Sunrise Medical Quickie Q500 M/F/R Instructions for Use (European edition)",
+      "maker": "Sunrise Medical",
+      "model": "Quickie Q500 M / Q500 F / Q500 R",
+      "platform": "PMD",
+      "category": "manual",
+      "doc_type": "owner",
+      "url": null,
+      "source_url": "https://www.libble.eu/sunrise-medical-quickie-q500/online-manual-851966/?page=0008",
+      "bytes": null,
+      "link_only": true
+    },
+    {
+      "title": "Sunrise Medical Quickie Q700 M/F/R Instructions for Use",
+      "maker": "Sunrise Medical",
+      "model": "Quickie Q700 M / Q700 F / Q700 R",
+      "platform": "PMD",
+      "category": "manual",
+      "doc_type": "owner",
+      "url": "/library/collected-public-docs/pmd/sunrise_quickie-q700-mfr_instructions-rev-e.pdf",
+      "source_url": "https://www.batterytrader.com/pub/documents/Quickie-Q700-Owners-Manual.pdf",
+      "bytes": 22711355,
+      "link_only": false
+    },
+    {
       "title": "Sunrise Quickie Power Wheelchair Driving Controls & Electronic Components Reference Guide (MK-100166 Rev.C)",
       "maker": "Sunrise Medical (Quickie)",
       "model": "QM-7 / Pulse / S-636 series",
@@ -873,7 +1029,7 @@
       "category": "manual",
       "doc_type": "owner",
       "url": "/library/collected-public-docs/pmd/sunrise_quickie-s636-s646_owner.pdf",
-      "source_url": null,
+      "source_url": "https://www.sunrisemedical.com/getattachment/2583e7b3-15b5-438a-a244-973056d91951/Quickie%C2%AE-S-636-S-646-SE-Owner-s-Manual.aspx",
       "bytes": 24910187,
       "link_only": false
     },
@@ -887,42 +1043,6 @@
       "url": "/library/collected-public-docs/pmd/permobil_m3-corpus_owner.pdf.xml",
       "source_url": null,
       "bytes": 190188,
-      "link_only": false
-    },
-    {
-      "title": "pride jazzy 600 es owner",
-      "maker": null,
-      "model": null,
-      "platform": "Power Mobility (PMD)",
-      "category": "manual",
-      "doc_type": "PDF",
-      "url": "/library/collected-public-docs/pmd/pride_jazzy-600-es_owner.pdf",
-      "source_url": null,
-      "bytes": 7822456,
-      "link_only": false
-    },
-    {
-      "title": "pride jazzy air 2 owner",
-      "maker": null,
-      "model": null,
-      "platform": "Power Mobility (PMD)",
-      "category": "manual",
-      "doc_type": "PDF",
-      "url": "/library/collected-public-docs/pmd/pride_jazzy-air-2_owner.pdf",
-      "source_url": null,
-      "bytes": 3834748,
-      "link_only": false
-    },
-    {
-      "title": "sunrise quickie pulse 6 owner",
-      "maker": null,
-      "model": null,
-      "platform": "Power Mobility (PMD)",
-      "category": "manual",
-      "doc_type": "PDF",
-      "url": "/library/collected-public-docs/pmd/sunrise_quickie-pulse-6_owner.pdf",
-      "source_url": null,
-      "bytes": 4435589,
       "link_only": false
     },
     {
@@ -5450,6 +5570,18 @@
       "link_only": true
     },
     {
+      "title": "AMYPOWER ALL TRACK SERIES POWER WHEELCHAIR (K092225)",
+      "maker": "Amylior, Inc.",
+      "model": "AMYPOWER ALL TRACK SERIES POWER WHEELCHAIR",
+      "platform": null,
+      "category": "fda",
+      "doc_type": "fda-510k",
+      "url": null,
+      "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K092225",
+      "bytes": 0,
+      "link_only": true
+    },
+    {
       "title": "ARROW MICRO COMPUTER CONTROL (K885212)",
       "maker": "Invacare Corp.",
       "model": "ARROW MICRO COMPUTER CONTROL",
@@ -7235,6 +7367,54 @@
       "url": "/library/trackers/most-wanted-tracker.csv",
       "source_url": null,
       "bytes": 4184,
+      "link_only": false
+    },
+    {
+      "title": "Amylior Alltrack M3 Order Form (MKT.F113 | OF | PD-A20602 | R01, November 2025)",
+      "maker": "Amylior Inc.",
+      "model": "Alltrack M3",
+      "platform": "PMD",
+      "category": "other",
+      "doc_type": "order-form",
+      "url": "/library/collected-public-docs/pmd/amylior_alltrack-m3_order-form_2025-11.pdf",
+      "source_url": "https://www.manitobapossible.ca/s/Alltrack-M3-FINAL-Feb-2026.pdf",
+      "bytes": 1828609,
+      "link_only": false
+    },
+    {
+      "title": "Amylior Alltrack M3/M3HD Owner's Manual (OM | PD-A20601 | 1000896 | R03)",
+      "maker": "Amylior Inc.",
+      "model": "Alltrack M3 / M3-HD",
+      "platform": "PMD",
+      "category": "other",
+      "doc_type": "owners-manual",
+      "url": "/library/collected-public-docs/pmd/amylior_alltrack-m3-m3hd_owners-manual_r03.pdf",
+      "source_url": "https://www.cubro.co.nz/assets/ln/d33071e9-b686-4297-b5d6-ca930f71b12d/m3userguidecompressedpdf.pdf",
+      "bytes": 9113074,
+      "link_only": false
+    },
+    {
+      "title": "Amylior Alltrack Series Brochure (BR | PD-A20602 | 1002408 | R03)",
+      "maker": "Amylior Inc.",
+      "model": "Alltrack Series",
+      "platform": "PMD",
+      "category": "other",
+      "doc_type": "brochure",
+      "url": "/library/collected-public-docs/pmd/amylior_alltrack-series_brochure_r03.pdf",
+      "source_url": "https://www.calgarycoop.com/wp-content/uploads/2025/01/BR_PD-A20602_1002408_R03_Alltrack_CA-EN_web-1.pdf",
+      "bytes": 15784108,
+      "link_only": false
+    },
+    {
+      "title": "Amylior Livre de pièces (Parts Book), Section 3 — Bases motorisées (PM | P24026 | R09)",
+      "maker": "Amylior Inc.",
+      "model": "Alltrack Series (M3 base §3.1.3)",
+      "platform": "PMD",
+      "category": "other",
+      "doc_type": "parts-book",
+      "url": "/library/collected-public-docs/pmd/amylior_alltrack-m3_parts-book-sec-3_fr-r09.pdf",
+      "source_url": "https://amylior.com/wp-content/uploads/bsk-pdf-manager/Amylior_Livre_de_piece_R09_sec_3_FR-CA_web.pdf",
+      "bytes": 34500311,
       "link_only": false
     }
   ]

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exploded View: Amylior Alltrack M3 &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="Amylior publishes a full parts book for the Alltrack M3 base: five drive variants, every part numbered. This page reproduces Section 3.1.3 of the maker&rsquo;s Livre de pi&egrave;ces (R09) with the owner&rsquo;s manual overview.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Exploded View: Amylior Alltrack M3">
+<meta property="og:description" content="Amylior publishes a full parts book for the Alltrack M3 base: five drive variants, every part numbered. This page reproduces Section 3.1.3 of the maker&rsquo;s Livre de pi&egrave;ces (R09) with the owner&rsquo;s manual overview.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-exploded-alltrack-m3.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="finder">
+                <ul class="finder-col">
+                <li class="finder-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Exploded View: Amylior Alltrack M3</h1>
+    <p class="lede">The Alltrack M3 is Amylior&rsquo;s mid-wheel-drive complex-rehab chair: a Canadian-built power base (Vaudreuil-Dorion, Quebec) with a patented six-wheel Dual Action Suspension, PG Drives VR2 or R-net electronics, and a 300 lb capacity. It is also the rare chair whose maker publishes the full parts book openly, on its own website &mdash; every suspension arm, motor, wheel, and battery-box part, numbered. The catch is that the book is in French only. This page reproduces Section 3.1.3 of Amylior&rsquo;s <em>Livre de pi&egrave;ces</em> &mdash; the M3 powered base in all five of its drive configurations &mdash; with every part number, plus the labeled overview from the owner&rsquo;s manual.</p>
+    <p><strong>Coverage: full IPB.</strong> The maker&rsquo;s parts book for this base is complete and public: five exploded diagrams, 136 numbered parts. The maker&rsquo;s descriptions are in French, as printed; the plain-English column next to them is ours. What the book does not cover &mdash; seating, electronics, the M3-HD &mdash; is named at the bottom of the page, not hidden.</p>
+  </section>
+
+  <section>
+    <h2>The sources</h2>
+    <p><strong>Guide 1:</strong> <em>Livre de pi&egrave;ces</em> (Parts Book), Section 3 &mdash; Bases motoris&eacute;es, document PM | P24026 | R09, section updated 2026/06/15, Amylior Inc. (71 pages, French). Section 3.1.3, &ldquo;La s&eacute;rie Alltrack M&rdquo;, is the M3 base: five subsections, 3.1.3.1&ndash;3.1.3.5.<br>
+    <strong>Full record (PDF, in this site&rsquo;s library):</strong> <a href="/library/collected-public-docs/pmd/amylior_alltrack-m3_parts-book-sec-3_fr-r09.pdf">amylior_alltrack-m3_parts-book-sec-3_fr-r09.pdf</a> (also at Amylior: <a href="https://amylior.com/wp-content/uploads/bsk-pdf-manager/Amylior_Livre_de_piece_R09_sec_3_FR-CA_web.pdf">amylior.com &mdash; Livre de pi&egrave;ces R09, Section 3</a>).</p>
+    <p><strong>Guide 2:</strong> Owner&rsquo;s Manual &mdash; ALLTRACK M3/M3HD Power Wheelchair, document OM | PD-A20601 | 1000896 | R03, Amylior Inc. (60 pages; covers the M3 and the M3-HD).<br>
+    <strong>Full record (PDF, in this site&rsquo;s library):</strong> <a href="/library/collected-public-docs/pmd/amylior_alltrack-m3-m3hd_owners-manual_r03.pdf">amylior_alltrack-m3-m3hd_owners-manual_r03.pdf</a> (a dealer repost of Amylior&rsquo;s published manual, from <a href="https://www.cubro.co.nz/assets/ln/d33071e9-b686-4297-b5d6-ca930f71b12d/m3userguidecompressedpdf.pdf">Cubro NZ</a>; also readable at <a href="https://www.manualslib.com/manual/4190071/Amylior-Alltrack-M3.html">ManualsLib</a>).</p>
+    <p><strong>Guide 3:</strong> FDA 510(k) summary K092225 &mdash; AMYPOWER ALL TRACK SERIES POWER WHEELCHAIR, Amylior Inc., cleared 9 October 2009 (Class II, product code ITI; predicates: Invacare Storm TDX, K023589, and Invacare Storm, K940051).<br>
+    <strong>Link-only:</strong> no copy of the summary is held in this site&rsquo;s library &mdash; the summary PDF is not posted by the FDA at its standard paths (checked 2026-11-17: cdrh_docs/pdf09, pdf10, and pdf all return 404). The record is at the FDA: <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K092225">accessdata.fda.gov &mdash; 510(k) K092225</a>.</p>
+    <p><strong>Guide 4:</strong> Alltrack Series brochure, document BR | PD-A20602 | 1002408 | R03, Amylior Inc. (24 pages), and Alltrack M3 order form, document MKT.F113 | OF | PD-A20602 | R01, November 2025 (15 pages) &mdash; used to corroborate the specifications and the option list.<br>
+    <strong>Full record (PDFs, in this site&rsquo;s library):</strong> <a href="/library/collected-public-docs/pmd/amylior_alltrack-series_brochure_r03.pdf">amylior_alltrack-series_brochure_r03.pdf</a> and <a href="/library/collected-public-docs/pmd/amylior_alltrack-m3_order-form_2025-11.pdf">amylior_alltrack-m3_order-form_2025-11.pdf</a>.</p>
+    <p>The chair&rsquo;s fault codes are translated on this site: <a href="/pmd-fault-codes.html#vr2">VR2 fault codes, translated</a> and <a href="/pmd-fault-codes.html#rnet">R-net fault codes, translated</a>. The battery lesson is on this site: <a href="/pmd-batteries.html">Batteries &amp; chargers</a>.</p>
+  </section>
+
+  <section>
+    <h2>The maker&rsquo;s own warnings</h2>
+    <p>Amylior prints these in the Alltrack M3 Owner&rsquo;s Manual (OM | PD-A20601 | 1000896 | R03), Section VI, General Warnings. The wording below is the maker&rsquo;s own, quoted word for word.</p>
+    <ul>
+      <li><strong>Read the warnings.</strong> &ldquo;Read all warnings in this section. If you do not comply with these warnings, a fall, tip-over or loss of control may occur and cause severe injury to you or others.&rdquo;</li>
+      <li><strong>Get trained first.</strong> &ldquo;Before using this power wheelchair, you should be trained in its safe use by your health care professional.&rdquo;</li>
+      <li><strong>Wear the positioning strap.</strong> &ldquo;ALWAYS wear a positioning strap.&rdquo;</li>
+      <li><strong>Check the joystick every time.</strong> &ldquo;DO NOT use your power wheelchair if the joystick does not spring back to the neutral position.&rdquo; &ldquo;DO NOT use your power wheelchair if the joystick rubber gaiter is ripped or damaged.&rdquo;</li>
+      <li><strong>Stay under the weight limit.</strong> &ldquo;The user and items carried should NEVER exceed the total weight capacity identified on your power wheelchair.&rdquo; Going over the limit is likely to damage the seat, the power seating options, the frame, or the fasteners, and may cause severe injury.</li>
+      <li><strong>Do not modify the chair.</strong> &ldquo;NEVER make any customizations, changes or modifications to any part of your Alltrack power wheelchair unless explicitly authorized by AMYLIOR. Doing so will void the warranty and may create a safety hazard.&rdquo;</li>
+      <li><strong>Freewheel and brake release levers.</strong> &ldquo;DO NOT engage or disengage freewheel/brake release levers unless power to the wheelchair is off.&rdquo; &ldquo;Make sure both levers are completely engaged before turning power on to ensure proper control of the wheelchair.&rdquo; With the levers disengaged the chair has no braking ability.</li>
+      <li><strong>Turn it off when parked.</strong> &ldquo;ALWAYS turn off all power to your wheelchair when you are parked, even for a moment.&rdquo; That stops accidental movement from contact with the joystick and unintended movement from EMI sources.</li>
+      <li><strong>Keep it out of water.</strong> &ldquo;Your power wheelchair is not designed for use in a heavy rain storm, or in snowy or icy conditions.&rdquo; &ldquo;NEVER take your power wheelchair into a shower, tub, pool or sauna.&rdquo;</li>
+      <li><strong>Transport without the WC19 option.</strong> &ldquo;NEVER allow anyone to sit in the wheelchair while it is secured in a moving vehicle&rdquo; unless the chair has the WC19-ISO occupied-transport option. The built-in brackets are for securing an unoccupied chair only.</li>
+    </ul>
+    <p><em>Quoted from the Owner&rsquo;s Manual, Section VI (pp. 10&ndash;16).</em></p>
+  </section>
+
+  <section>
+    <h2>How to read this page</h2>
+    <p><strong>The parts book is French only.</strong> No English edition of Amylior&rsquo;s parts book was found in public. The <strong>Maker&rsquo;s description</strong> column reproduces the book&rsquo;s French text exactly as printed &mdash; those short labels are the part names, and they are what you quote to a parts desk. The <strong>What this part does</strong> column is our plain-English explanation of each part.</p>
+    <p><strong>Colour codes.</strong> Parts whose number ends in <strong>-XXX*</strong> take a colour suffix: add the code for your chair&rsquo;s colour to the part number (the book&rsquo;s example: S-XXXX-BAO). The codes are PRISMA (noir Prismacolor, black), BAO (noir opale m&eacute;tallique, metallic opal black), BOR (orange br&ucirc;l&eacute; m&eacute;tallique, metallic burnt orange), CBU (bleu bonbon, candy blue), CRE (rouge bonbon, candy red), GMC (gris charbon, charcoal grey), MLP (mauve minuit, midnight mauve), MWT (blanc mat, matte white), BLK (noir lustr&eacute;, gloss black), MYG (vert militaire, military green), MYT (sable militaire, military sand), OPM (orange &eacute;tincelant, sparkling orange), PKP (rose perl&eacute;, pearl pink), RZB (violine, violet), SBM (noir mat, matte black), SVM (argent m&eacute;tallis&eacute;, metallic silver).</p>
+    <p><strong>Effective dates.</strong> The <strong>Effective</strong> column is the date from which that part applies, as printed in the book. Where a part was superseded, the book lists the newer number with its later date.</p>
+    <p><strong>Which of the five sections is your chair?</strong> The book is organized by base generation and motor type. Generation 1 is the original M3 base; Generation 2 is the current base. The motor type is on the motor&rsquo;s own label: SRG04 (gear release), SRG06 (brake release), SRG01 (brake release), or LiNX (brake release, with encoder). Gear-release motors have freewheel release levers; brake-release motors have brake release levers &mdash; the owner&rsquo;s manual shows both (Section III, callouts 7 and 11).</p>
+    <p><strong>Not illustrated.</strong> Rows marked &ldquo;not illustrated&rdquo; are parts the book lists in its tables with no callout on the diagram &mdash; hardware kits and pivot kits that are ordered by number alone.</p>
+    <p><strong>Availability.</strong> Each page of the book carries a legend &mdash; COURANT (current), DISPONIBLE (available), DISCONTINU&Eacute; (discontinued) &mdash; marking each part&rsquo;s status. Those marks did not survive text extraction, so per-part status is not reproduced here; check the book itself before ordering.</p>
+  </section>
+
+  <section>
+    <h2>Build order</h2>
+    <p>The assemblies are laid out in the order you would build the chair: the whole chair first, then the powered base in its five drive configurations. Every step is one labeled figure from the maker&rsquo;s guides, followed by its parts table. The <strong>Callout</strong> column is the number printed on the diagram.</p>
+    <ul>
+      <li><strong>The whole chair:</strong> <a href="#step-1">Step 1: The Alltrack M3, labeled by Amylior</a></li>
+      <li><strong>The powered base, Generation 1:</strong> <a href="#step-2">Step 2: Mid-wheel drive, Generation 1, gear-release motor SRG04</a></li>
+      <li><strong>The powered base, Generation 2:</strong> <a href="#step-3">Step 3: Mid-wheel drive, Generation 2, gear-release motor SRG04</a> &middot; <a href="#step-4">Step 4: Mid-wheel drive, Generation 2, brake-release motor SRG06</a> &middot; <a href="#step-5">Step 5: Mid-wheel drive, Generation 2, brake-release motor SRG01</a> &middot; <a href="#step-6">Step 6: Mid-wheel drive, Generation 2, brake-release LiNX motor with encoder</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Stage 1 &mdash; The whole chair</h2>
+    <p>Start with the chair itself. The owner&rsquo;s manual labels the M3 once, with fifteen numbered parts, and that is the map for everything that follows: the seat and its frame sit on the powered base, the drive wheels sit in the middle, and the casters sit at the front and back.</p>
+    <h3 id="step-1">Step 1 &mdash; The Alltrack M3, labeled by Amylior</h3>
+    <figure>
+      <img src="/img/pmd-exploded/alltrack-m3/alltrack-m3-overview.jpg" alt="The Alltrack M3, labeled by Amylior — overview from the owner's manual" loading="lazy">
+      <figcaption><strong>Fig. 1.</strong> The Alltrack M3, labeled by Amylior &mdash; overview reproduced from the owner&rsquo;s manual (Section III, p. 6).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part (maker&rsquo;s label)</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Joystick</td><td>The hand control you drive with: push it the way you want to go. On this chair it is a VR2 or R-net joystick &mdash; <a href="/pmd-fault-codes.html#vr2">VR2 fault codes</a> and <a href="/pmd-fault-codes.html#rnet">R-net fault codes</a> are translated on this site.</td></tr>
+        <tr><td>2</td><td>Backrest</td><td>The padded back you lean against; part of the seating system.</td></tr>
+        <tr><td>3</td><td>Front Riggings</td><td>The legrest assemblies at the front that support your legs and feet.</td></tr>
+        <tr><td>4</td><td>Foot Platform</td><td>The one-piece foot platform your feet rest on.</td></tr>
+        <tr><td>5</td><td>Seat Pan</td><td>The flat pan under the seat cushion; the cushion sits on it.</td></tr>
+        <tr><td>6</td><td>Base Frame</td><td>The powered base &mdash; the frame that holds the motors, batteries, and suspension. Steps 2&ndash;6 take it apart.</td></tr>
+        <tr><td>7</td><td>Freewheel Release Levers (optional motors)</td><td>The levers that disconnect the motor gears so the chair can be pushed by hand. Only on gear-release motors (Steps 2 and 3).</td></tr>
+        <tr><td>8</td><td>Caster Fork</td><td>The fork that holds a caster wheel and lets it swivel.</td></tr>
+        <tr><td>9</td><td>Caster Tire</td><td>The small unpowered wheel at the front or back. It is not powered &mdash; it follows where the chair turns.</td></tr>
+        <tr><td>10</td><td>Drive Wheel</td><td>The big powered wheel, 12.5 or 14 inches. On the M3 it sits in the middle &mdash; that is what mid-wheel drive means.</td></tr>
+        <tr><td>11</td><td>Brake Release Levers (std motors)</td><td>The levers that release the motor brakes so the chair can be pushed by hand. On the standard brake-release motors (Steps 4&ndash;6).</td></tr>
+        <tr><td>12</td><td>Seat Frame</td><td>The frame the seat pan and backrest mount to, on top of the base.</td></tr>
+        <tr><td>13</td><td>Armrest</td><td>Supports your arm, and helps you transfer in and out of the chair.</td></tr>
+        <tr><td>14</td><td>Push Handle</td><td>The handle at the back that an attendant pushes with.</td></tr>
+        <tr><td>15</td><td>Headrest</td><td>Supports your head.</td></tr>
+      </tbody>
+    </table>
+    <p>The manual&rsquo;s own note on this figure: &ldquo;All features may not be available with selected power wheelchair configurations or compatible with another feature. For additional details, please contact your authorized supplier who can also provide more information on accessories available.&rdquo;</p>
+  </section>
+
+  <section>
+    <h2>Stage 2 &mdash; The powered base</h2>
+    <p>One base, five drive configurations. Each section below is one subsection of the parts book: the same base frame, suspension, and battery box, fitted with a different motor and release mechanism. Find your motor on its label, then read the section that matches it. Generation 1 is the original M3 base; Generation 2 is the current base, with the revised suspension arms and battery box.</p>
+    <h3 id="step-2">Step 2 &mdash; Mid-wheel drive, Generation 1, gear-release motor SRG04</h3>
+    <p>Parts Book, Section 3.1.3.1 (diagram p. A, table p. B). The original M3 base: the shock kit is the 250 lb&middot;in medium kit, the suspension arms are the Generation 1 arms, and the battery box comes in compact (Group 22 or 24) and full-size (Group 24) versions.</p>
+    <figure>
+      <img src="/img/pmd-exploded/alltrack-m3/alltrack-m3-3-1-3-1.jpg" alt="Mid-wheel drive, Generation 1, gear-release motor SRG04 — exploded view from the manufacturer's parts book" loading="lazy">
+      <figcaption><strong>Fig. 2.</strong> Mid-wheel drive, Generation 1, gear-release motor SRG04 &mdash; exploded view reproduced from the manufacturer&rsquo;s parts book (Section 3.1.3.1).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker&rsquo;s description (French, as printed)</th><th>Effective</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>1&ndash;8</td><td>C-10225</td><td>KIT, AMORTISSEUR, 250 LB*PO, MOYEN, TRACTION MEDIANE</td><td>2015-08-01</td><td>The shock absorber kit for the suspension &mdash; 250 lb&middot;in, medium. Callouts 1&ndash;8 are the shock and its mounting hardware.</td></tr>
+        <tr><td>9A</td><td>C-10177</td><td>BRAS DE SUSPENSION ARRIERE GAUCHE, TRACTION MEDIANE G1</td><td>2015-08-01</td><td>The left rear suspension arm. It holds the drive wheel and lets it move up and down over bumps.</td></tr>
+        <tr><td>9B</td><td>C-10175</td><td>BRAS DE SUSPENSION ARRIERE DROIT, TRACTION MEDIANE G1</td><td>2015-08-01</td><td>The right rear suspension arm. It holds the drive wheel and lets it move up and down over bumps.</td></tr>
+        <tr><td>10</td><td>A10193</td><td>FOURCHE POUR ROUE 6 PO ET 8 PO</td><td>2015-08-01</td><td>The caster fork, for 6-inch or 8-inch caster wheels. It holds the caster wheel and lets it swivel.</td></tr>
+        <tr><td>11</td><td>J00024</td><td>ROUE SOLIDE, 6 PO X 2 PO, GRISE</td><td>2015-08-01</td><td>A small solid (flat-free) caster wheel, 6 by 2 inches, grey.</td></tr>
+        <tr><td>12A, 13A, 18A</td><td>C-10295</td><td>ASSEMBLAGE DE JANTE POUR ROUE 12 PO ET 14 PO</td><td>2015-08-01</td><td>The metal rim the drive tire mounts on, for 12-inch and 14-inch wheels.</td></tr>
+        <tr><td>12B, 13B, 18B</td><td>C-10228</td><td>ASSEMBLAGE DE JANTE POUR ROUE 14 PO X 4 PO</td><td>2015-08-01</td><td>The metal rim the drive tire mounts on, for 14-by-4-inch wheels.</td></tr>
+        <tr><td>12A, 13A, 15B, 17E, 18A</td><td>C-10229</td><td>ASSEMBLAGE, ROUE 14 X 3, CHAMBRE A AIR GRIS</td><td>2015-08-01</td><td>A complete drive wheel, 14 by 3 inches &mdash; grey treaded tire with inner tube and rim together.</td></tr>
+        <tr><td>12A, 13A, 17F, 18A</td><td>C-10230</td><td>ASSEMBLAGE, ROUE 14 X 3, ANTICREVAISON GRIS</td><td>2015-08-01</td><td>A complete drive wheel, 14 by 3 inches &mdash; grey flat-free tire and rim together.</td></tr>
+        <tr><td>12A, 13A, 15B, 17G, 18A</td><td>C-00340</td><td>ASSEMBLAGE, ROUE 14 X 3, CHAMBRE A AIR, NOIR</td><td>2016-08-12</td><td>A complete drive wheel, 14 by 3 inches &mdash; black treaded tire with inner tube and rim together.</td></tr>
+        <tr><td>12A, 13A, 17H, 18A</td><td>C-00341</td><td>ASSEMBLAGE,ROUE 14 X 3,ANTICREVAISON,PNEU NOIR</td><td>2016-08-12</td><td>A complete drive wheel, 14 by 3 inches &mdash; black flat-free tire and rim together.</td></tr>
+        <tr><td>15A</td><td>GP-384736</td><td>CHAMBRE A AIR POUR ROUE MOTRICE 12 PO X 2 PO</td><td>2015-08-01</td><td>The air tube inside a 12-by-2-inch pneumatic drive tire.</td></tr>
+        <tr><td>15B</td><td>GP-384739</td><td>CHAMBRE A AIR POUR ROUE MOTRICE 14 PO X 3 PO</td><td>2015-08-01</td><td>The air tube inside a 14-by-3-inch pneumatic drive tire.</td></tr>
+        <tr><td>15C</td><td>J00029</td><td>CHAMBRE A AIR POUR ROUE MOTRICE 14 PO X 4 PO</td><td>2015-08-01</td><td>The air tube inside a 14-by-4-inch pneumatic drive tire.</td></tr>
+        <tr><td>16</td><td>GP-200135</td><td>&Eacute;CROU-BARRETTE CONIQUE</td><td>2015-08-01</td><td>A tapered bar nut that locks the wheel assembly to its axle.</td></tr>
+        <tr><td>17A</td><td>GP-384706</td><td>PNEU A CRAMPON 12 PO X 2 PO, GRIS</td><td>2015-08-01</td><td>The rubber treaded tire, 12 by 2 inches, grey. It grips the ground.</td></tr>
+        <tr><td>17B</td><td>J00057</td><td>PNEU A CRAMPON 12 PO X 2 PO, AVEC ANTI-CREVAISON, GRIS</td><td>2015-08-01</td><td>The rubber treaded tire, 12 by 2 inches, grey, with flat-free insert.</td></tr>
+        <tr><td>17E</td><td>GP-384709</td><td>PNEU A CRAMPON 14 PO X 3 PO, GRIS</td><td>2015-08-01</td><td>The rubber treaded tire, 14 by 3 inches, grey. It grips the ground.</td></tr>
+        <tr><td>17F</td><td>GP-5808003</td><td>PNEU A CRAMPON 14 PO X 3 PO, AVEC ANTI-CREVAISON, GRIS</td><td>2015-08-01</td><td>The rubber treaded tire, 14 by 3 inches, grey, with flat-free insert.</td></tr>
+        <tr><td>17I</td><td>J00028</td><td>PNEU A CRAMPON 14 PO X 4 PO, GRIS</td><td>2015-08-01</td><td>The rubber treaded tire, 14 by 4 inches, grey. It grips the ground.</td></tr>
+        <tr><td>17J</td><td>J00030</td><td>PNEU A CRAMPON 14 PO X 4 PO, AVEC ANTI-CREVAISON, GRIS</td><td>2015-08-01</td><td>The rubber treaded tire, 14 by 4 inches, grey, with flat-free insert.</td></tr>
+        <tr><td>19</td><td>S-0097</td><td>KIT D&rsquo;INSTALLATION D&rsquo;AILE DE ROUE MOTRICE, PAIRE</td><td>2015-08-01</td><td>The fender (mudguard) kit over the drive wheels, left and right as a pair.</td></tr>
+        <tr><td>20, 21</td><td>S-0006</td><td>KIT DE REMPLACEMENT POUR BROSSES DE MOTEUR 4 POLES</td><td>2015-08-01</td><td>Replacement carbon brushes for a 4-pole motor &mdash; the parts that wear out and carry current to the spinning motor.</td></tr>
+        <tr><td>20, 21, 23A, 24A</td><td>R00038</td><td>5.9/6.5 MPH MOTEUR STANDARD GAUCHE POUR FAUTEUIL TRACTION MEDIANE</td><td>2015-08-01</td><td>The left standard drive motor, 5.9/6.5 mph, for a mid-wheel-drive chair. One of the two motors that turn the drive wheels.</td></tr>
+        <tr><td>20, 21, 23A, 24B</td><td>R00037</td><td>5.9/6.5 MPH MOTEUR STANDARD DROITE POUR FAUTEUIL TRACTION MEDIANE</td><td>2015-08-01</td><td>The right standard drive motor, 5.9/6.5 mph, for a mid-wheel-drive chair. One of the two motors that turn the drive wheels.</td></tr>
+        <tr><td>22A</td><td>C-1093</td><td>ASSEMBLAGE POUR TIGE DE FREIN GAUCHE POUR TRACTION MEDIANE G1</td><td>2015-08-01</td><td>The left brake-rod assembly for a Generation 1 mid-wheel-drive chair. It connects the brake-release lever to the motor brake.</td></tr>
+        <tr><td>22B</td><td>C-1095</td><td>ASSEMBLAGE POUR TIGE DE FREIN DROITE POUR TRACTION MEDIANE G1</td><td>2015-08-01</td><td>The right brake-rod assembly for a Generation 1 mid-wheel-drive chair. It connects the brake-release lever to the motor brake.</td></tr>
+        <tr><td>23A</td><td>S-0013</td><td>ASSEMBLAGE DE MOYEU DE ROUE STANDARD</td><td>2015-08-01</td><td>The standard wheel hub the drive wheel bolts to.</td></tr>
+        <tr><td>23B</td><td>S-0031</td><td>ASSEMBLAGE DE MOYEU DE ROUE 14 PO X 4 PO</td><td>2015-08-01</td><td>The wheel hub for 14-by-4-inch wheels.</td></tr>
+        <tr><td>25</td><td>A10193</td><td>FOURCHE POUR ROUE 6 PO ET 8 PO</td><td>2015-08-01</td><td>The caster fork, for 6-inch or 8-inch caster wheels. It holds the caster wheel and lets it swivel.</td></tr>
+        <tr><td>26, 27, 28</td><td>S-0064</td><td>ASSEMBLAGE D&rsquo;ESSIEU POUR ROUE 6 PO ET 8 PO</td><td>2015-08-01</td><td>The axle assembly a 6-inch or 8-inch caster wheel spins on.</td></tr>
+        <tr><td>29A</td><td>J00024</td><td>ROUE SOLIDE, 6 PO X 2 PO, GRISE</td><td>2015-08-01</td><td>A small solid (flat-free) caster wheel, 6 by 2 inches, grey.</td></tr>
+        <tr><td>29C</td><td>GP-400700</td><td>ROUE PNEUMATIQUE, 8 PO X 2 PO, GRISE</td><td>2015-08-01</td><td>A small air-filled caster wheel, 8 by 2 inches, grey.</td></tr>
+        <tr><td>29E</td><td>GP-400702</td><td>ROUE PNEUMATIQUE AVEC BANDE ANTI-CREVAISON, 8 PO X 2 PO, GRISE</td><td>2015-08-01</td><td>A small air-filled caster wheel, 8 by 2 inches, grey, with a flat-free strip.</td></tr>
+        <tr><td>30, 32&ndash;34, 37, 38</td><td>S-0035</td><td>ASSEMBLAGE DE QUINCAILLERIE POUR FOURCHES</td><td>2015-08-01</td><td>The bolts, washers, and nuts that hold a caster fork together.</td></tr>
+        <tr><td>31A</td><td>C-10171</td><td>BRAS DE SUSPENSION AVANT GAUCHE, TRACTION MEDIANE</td><td>2015-08-01</td><td>The left front suspension arm. It holds a caster and lets it move over bumps.</td></tr>
+        <tr><td>31B</td><td>C-10173</td><td>BRAS DE SUSPENSION AVANT DROIT, TRACTION MEDIANE</td><td>2015-08-01</td><td>The right front suspension arm. It holds a caster and lets it move over bumps.</td></tr>
+        <tr><td>35A, 36A</td><td>C-10121</td><td>INSTALLATION DE COMPARTIMENT A BATTERIES G1 COMPACT POUR GP22</td><td>2015-08-01</td><td>The Generation 1 battery box assembly, compact size, for Group 22 batteries. It holds the two batteries under the seat.</td></tr>
+        <tr><td>35B, 36B</td><td>C-10201</td><td>INSTALLATION DE COMPARTIMENT A BATTERIES G1 COMPACT POUR GP24</td><td>2015-08-01</td><td>The Generation 1 battery box assembly, compact size, for Group 24 batteries. It holds the two batteries under the seat.</td></tr>
+        <tr><td>35C, 36C</td><td>C-10115</td><td>INSTALLATION DE COMPARTIMENT A BATTERIES G1 PLEINE GRANDEUR POUR GP24</td><td>2015-08-01</td><td>The Generation 1 battery box assembly, full size, for Group 24 batteries. It holds the two batteries under the seat.</td></tr>
+        <tr><td>36A</td><td>C-1086</td><td>CAPOT POUR MODULE AVANT, COMPARTIMENT A BATTERIES COMPACT POUR GP22</td><td>2015-08-01</td><td>The cover over the front electronics module, for the compact Group 22 battery box.</td></tr>
+        <tr><td>36B</td><td>C-10198</td><td>CAPOT POUR MODULE AVANT, COMPARTIMENT A BATTERIES COMPACT POUR GP24</td><td>2015-08-01</td><td>The cover over the front electronics module, for the compact Group 24 battery box.</td></tr>
+        <tr><td>36C</td><td>C-1085</td><td>CAPOT POUR MODULE AVANT, COMPARTIMENT A BATTERIES PLEINE GRANDEUR POUR GP24</td><td>2015-08-01</td><td>The cover over the front electronics module, for the full-size Group 24 battery box.</td></tr>
+        <tr><td>38</td><td>K00058</td><td>CAPUCHON DE TUBE DE FOURCHE DE ROUE</td><td>2015-08-01</td><td>The cap on top of a caster fork tube.</td></tr>
+        <tr><td>Not illustrated</td><td>S-0017</td><td>KIT POUR POINTS DE PIVOT SUR TRACTION MEDIANE</td><td>2015-08-01</td><td>The pivot-point hardware kit for the mid-wheel-drive suspension.</td></tr>
+        <tr><td>Not illustrated</td><td>S-0063</td><td>KIT DE QUINCAILLERIE POUR INSTALLATION DE MOTEUR</td><td>2015-08-01</td><td>The bolts and hardware that mount a motor to the base.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-3">Step 3 &mdash; Mid-wheel drive, Generation 2, gear-release motor SRG04</h3>
+    <p>Parts Book, Section 3.1.3.2 (diagram p. A, table p. B). The current base with the SRG04 gear-release motor: the shock kit is the 200 lb&middot;in soft kit, the suspension arms are the Generation 2 arms (which take a colour suffix), and the battery box is the Generation 2 compact or full-size box.</p>
+    <figure>
+      <img src="/img/pmd-exploded/alltrack-m3/alltrack-m3-3-1-3-2.jpg" alt="Mid-wheel drive, Generation 2, gear-release motor SRG04 — exploded view from the manufacturer's parts book" loading="lazy">
+      <figcaption><strong>Fig. 3.</strong> Mid-wheel drive, Generation 2, gear-release motor SRG04 &mdash; exploded view reproduced from the manufacturer&rsquo;s parts book (Section 3.1.3.2).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker&rsquo;s description (French, as printed)</th><th>Effective</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>1&ndash;6</td><td>1004390</td><td>KIT LIEN, MEDIANE</td><td>2023-01-01</td><td>The linkage kit that ties the mid-wheel-drive suspension together.</td></tr>
+        <tr><td>7&ndash;12</td><td>S-0050</td><td>KIT, AMORTISSEUR, 200 LB*PO, SOUPLE</td><td>2015-08-01</td><td>The shock absorber kit for the suspension &mdash; 200 lb&middot;in, soft. Callouts 7&ndash;12 are the shock and its mounting hardware.</td></tr>
+        <tr><td>13A</td><td>S-0056-XXX*</td><td>BRAS DE SUSPENSION ARRIERE GAUCHE, TRACTION MEDIANE G2</td><td>2015-08-01</td><td>The left rear suspension arm, Generation 2. It holds the drive wheel and lets it move up and down over bumps. Add your colour code to the part number.</td></tr>
+        <tr><td>13B</td><td>S-0055-XXX*</td><td>BRAS DE SUSPENSION ARRIERE DROIT, TRACTION MEDIANE G2</td><td>2015-08-01</td><td>The right rear suspension arm, Generation 2. It holds the drive wheel and lets it move up and down over bumps. Add your colour code to the part number.</td></tr>
+        <tr><td>14</td><td>A10193</td><td>FOURCHE POUR ROUE 6 PO ET 8 PO</td><td>2015-02-26</td><td>The caster fork, for 6-inch or 8-inch caster wheels. It holds the caster wheel and lets it swivel.</td></tr>
+        <tr><td>15, 16</td><td>S-0006</td><td>KIT DE REMPLACEMENT POUR BROSSES DE MOTEUR 4 POLES</td><td>2011-01-17</td><td>Replacement carbon brushes for a 4-pole motor &mdash; the parts that wear out and carry current to the spinning motor.</td></tr>
+        <tr><td>15, 16, 17A, 18A</td><td>R00038</td><td>5.9/6.5 MPH MOTEUR STANDARD GAUCHE POUR FAUTEUIL TRACTION MEDIANE</td><td>2008-04-30</td><td>The left standard drive motor, 5.9/6.5 mph, for a mid-wheel-drive chair. One of the two motors that turn the drive wheels.</td></tr>
+        <tr><td>15, 16, 17A, 18B</td><td>R00037</td><td>5.9/6.5 MPH MOTEUR STANDARD DROITE POUR FAUTEUIL TRACTION MEDIANE</td><td>2008-04-30</td><td>The right standard drive motor, 5.9/6.5 mph, for a mid-wheel-drive chair. One of the two motors that turn the drive wheels.</td></tr>
+        <tr><td>17A</td><td>S-0013</td><td>ASSEMBLAGE DE MOYEU DE ROUE STANDARD</td><td>2015-08-01</td><td>The standard wheel hub the drive wheel bolts to.</td></tr>
+        <tr><td>17B</td><td>S-0031</td><td>ASSEMBLAGE DE MOYEU DE ROUE 14 PO X 4 PO</td><td>2015-08-01</td><td>The wheel hub for 14-by-4-inch wheels.</td></tr>
+        <tr><td>19A</td><td>S-0047</td><td>ASSEMBLAGE POUR TIGE DE FREIN GAUCHE POUR TRACTION MEDIANE G2</td><td>2015-08-01</td><td>The left brake-rod assembly for a Generation 2 mid-wheel-drive chair. It connects the brake-release lever to the motor brake.</td></tr>
+        <tr><td>19B</td><td>S-0046</td><td>ASSEMBLAGE POUR TIGE DE FREIN DROITE POUR TRACTION MEDIANE G2</td><td>2015-08-01</td><td>The right brake-rod assembly for a Generation 2 mid-wheel-drive chair. It connects the brake-release lever to the motor brake.</td></tr>
+        <tr><td>20A</td><td>S-0054-XXX*</td><td>BRAS DE SUSPENSION AVANT GAUCHE, TRACTION MEDIANE G2</td><td>2015-08-01</td><td>The left front suspension arm, Generation 2. It holds a caster and lets it move over bumps. Add your colour code to the part number.</td></tr>
+        <tr><td>20B</td><td>S-0053-XXX*</td><td>BRAS DE SUSPENSION AVANT DROIT, TRACTION MEDIANE G2</td><td>2015-08-01</td><td>The right front suspension arm, Generation 2. It holds a caster and lets it move over bumps. Add your colour code to the part number.</td></tr>
+        <tr><td>21, 23&ndash;27</td><td>S-0035</td><td>ASSEMBLAGE DE QUINCAILLERIE POUR FOURCHES</td><td>2015-12-30</td><td>The bolts, washers, and nuts that hold a caster fork together.</td></tr>
+        <tr><td>22</td><td>A10193</td><td>FOURCHE POUR ROUE 6 PO ET 8 PO</td><td>2015-02-26</td><td>The caster fork, for 6-inch or 8-inch caster wheels. It holds the caster wheel and lets it swivel.</td></tr>
+        <tr><td>27</td><td>K00058</td><td>CAPUCHON DE TUBE DE FOURCHE DE ROUE</td><td>2015-08-01</td><td>The cap on top of a caster fork tube.</td></tr>
+        <tr><td>28A</td><td>S-0044</td><td>INSTALLATION DE COMPARTIMENT A BATTERIES G2 COMPACT POUR GP22</td><td>2015-08-01</td><td>The Generation 2 battery box assembly, compact size, for Group 22 batteries. It holds the two batteries under the seat.</td></tr>
+        <tr><td>28B</td><td>S-0079</td><td>INSTALLATION DE COMPARTIMENT A BATTERIES G2 COMPACT POUR GP24</td><td>2015-08-01</td><td>The Generation 2 battery box assembly, compact size, for Group 24 batteries. It holds the two batteries under the seat.</td></tr>
+        <tr><td>28C</td><td>S-0043</td><td>INSTALLATION DE COMPARTIMENT A BATTERIES G2 PLEINE GRANDEUR POUR GP24</td><td>2015-08-01</td><td>The Generation 2 battery box assembly, full size, for Group 24 batteries. It holds the two batteries under the seat.</td></tr>
+        <tr><td>28D</td><td>S-0079-SMART</td><td>INSTALLATION DE COMPARTIMENT A BATTERIES G2 COMPACT POUR GP24, SMARTT</td><td>2023-10-02</td><td>The Generation 2 battery box assembly, compact size, for Group 24 batteries, for chairs with the SmartT telematics unit.</td></tr>
+        <tr><td>Not illustrated</td><td>S-0033</td><td>KIT POUR POINTS DE PIVOT SUR TRACTION MEDIANE</td><td>2012-03-21</td><td>The pivot-point hardware kit for the mid-wheel-drive suspension.</td></tr>
+        <tr><td>Not illustrated</td><td>S-0063</td><td>KIT DE QUINCAILLERIE POUR INSTALLATION DE MOTEUR</td><td>2008-04-03</td><td>The bolts and hardware that mount a motor to the base.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-4">Step 4 &mdash; Mid-wheel drive, Generation 2, brake-release motor SRG06</h3>
+    <p>Parts Book, Section 3.1.3.3 (diagram p. A, table p. B). The current base with the SRG06 brake-release motor. The brake-release levers work on the motor brake directly, and the rear suspension arms are the SRG06-generation arms.</p>
+    <figure>
+      <img src="/img/pmd-exploded/alltrack-m3/alltrack-m3-3-1-3-3.jpg" alt="Mid-wheel drive, Generation 2, brake-release motor SRG06 — exploded view from the manufacturer's parts book" loading="lazy">
+      <figcaption><strong>Fig. 4.</strong> Mid-wheel drive, Generation 2, brake-release motor SRG06 &mdash; exploded view reproduced from the manufacturer&rsquo;s parts book (Section 3.1.3.3).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker&rsquo;s description (French, as printed)</th><th>Effective</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>1&ndash;6</td><td>1004390</td><td>KIT LIEN, MEDIANE</td><td>2023-01-01</td><td>The linkage kit that ties the mid-wheel-drive suspension together.</td></tr>
+        <tr><td>7&ndash;14</td><td>S-0050</td><td>KIT, AMORTISSEUR, 200 LB*PO, SOUPLE</td><td>2015-08-01</td><td>The shock absorber kit for the suspension &mdash; 200 lb&middot;in, soft. Callouts 7&ndash;14 are the shock and its mounting hardware.</td></tr>
+        <tr><td>15A</td><td>S-0069-XXX*</td><td>BRAS DE SUSPENSION ARRIERE GAUCHE, TRACTION MEDIANE G2</td><td>2015-08-01</td><td>The left rear suspension arm, Generation 2. It holds the drive wheel and lets it move up and down over bumps. Add your colour code to the part number.</td></tr>
+        <tr><td>15B</td><td>S-0068-XXX*</td><td>BRAS DE SUSPENSION ARRIERE DROIT, TRACTION MEDIANE G2</td><td>2015-08-01</td><td>The right rear suspension arm, Generation 2. It holds the drive wheel and lets it move up and down over bumps. Add your colour code to the part number.</td></tr>
+        <tr><td>16</td><td>A10193</td><td>FOURCHE POUR ROUE 6 PO ET 8 PO</td><td>2015-02-26</td><td>The caster fork, for 6-inch or 8-inch caster wheels. It holds the caster wheel and lets it swivel.</td></tr>
+        <tr><td>17, 18</td><td>S-0006</td><td>KIT DE REMPLACEMENT POUR BROSSES DE MOTEUR 4 POLES</td><td>2011-01-17</td><td>Replacement carbon brushes for a 4-pole motor &mdash; the parts that wear out and carry current to the spinning motor.</td></tr>
+        <tr><td>17, 18, 19A, 20A</td><td>R00049</td><td>5.9/6.5 MPH MOTEUR STANDARD GAUCHE POUR FAUTEUIL TRACTION MEDIANE</td><td>2008-04-30</td><td>The left standard drive motor, 5.9/6.5 mph, for a mid-wheel-drive chair. One of the two motors that turn the drive wheels.</td></tr>
+        <tr><td>17, 18, 19B, 20A</td><td>R00050</td><td>5.9/6.5 MPH MOTEUR STANDARD DROITE POUR FAUTEUIL TRACTION MEDIANE</td><td>2008-04-30</td><td>The right standard drive motor, 5.9/6.5 mph, for a mid-wheel-drive chair. One of the two motors that turn the drive wheels.</td></tr>
+        <tr><td>19A</td><td>S-0013</td><td>ASSEMBLAGE DE MOYEU DE ROUE STANDARD</td><td>2015-08-01</td><td>The standard wheel hub the drive wheel bolts to.</td></tr>
+        <tr><td>19B</td><td>S-0031</td><td>ASSEMBLAGE DE MOYEU DE ROUE 14 PO X 4 PO</td><td>2015-08-01</td><td>The wheel hub for 14-by-4-inch wheels.</td></tr>
+        <tr><td>21</td><td>A10193</td><td>FOURCHE POUR ROUE 6 PO ET 8 PO</td><td>2015-02-26</td><td>The caster fork, for 6-inch or 8-inch caster wheels. It holds the caster wheel and lets it swivel.</td></tr>
+        <tr><td>22, 24&ndash;28</td><td>S-0035</td><td>ASSEMBLAGE DE QUINCAILLERIE POUR FOURCHES</td><td>2015-12-30</td><td>The bolts, washers, and nuts that hold a caster fork together.</td></tr>
+        <tr><td>23A</td><td>S-0067-XXX*</td><td>BRAS DE SUSPENSION AVANT GAUCHE, TRACTION MEDIANE G2</td><td>2015-08-01</td><td>The left front suspension arm, Generation 2. It holds a caster and lets it move over bumps. Add your colour code to the part number.</td></tr>
+        <tr><td>23B</td><td>S-0066-XXX*</td><td>BRAS DE SUSPENSION AVANT DROIT, TRACTION MEDIANE G2</td><td>2015-08-01</td><td>The right front suspension arm, Generation 2. It holds a caster and lets it move over bumps. Add your colour code to the part number.</td></tr>
+        <tr><td>28</td><td>K00058</td><td>CAPUCHON DE TUBE DE FOURCHE DE ROUE</td><td>2015-08-01</td><td>The cap on top of a caster fork tube.</td></tr>
+        <tr><td>29A</td><td>S-0044</td><td>INSTALLATION DE COMPARTIMENT A BATTERIES G2 COMPACT POUR GP22</td><td>2015-08-01</td><td>The Generation 2 battery box assembly, compact size, for Group 22 batteries. It holds the two batteries under the seat.</td></tr>
+        <tr><td>29B</td><td>S-0079</td><td>INSTALLATION DE COMPARTIMENT A BATTERIES G2 COMPACT POUR GP24</td><td>2015-08-01</td><td>The Generation 2 battery box assembly, compact size, for Group 24 batteries. It holds the two batteries under the seat.</td></tr>
+        <tr><td>29C</td><td>S-0043</td><td>PIECE DE SERVICE, BAC A BATTERIE, PLEINE GRANDEUR, G2</td><td>2015-08-01</td><td>The full-size battery tray, Generation 2, as a service part. It holds the two batteries under the seat.</td></tr>
+        <tr><td>Not illustrated</td><td>S-0076</td><td>KIT POUR POINTS DE PIVOT SUR TRACTION MEDIANE</td><td>2012-03-21</td><td>The pivot-point hardware kit for the mid-wheel-drive suspension.</td></tr>
+        <tr><td>Not illustrated</td><td>S-0078</td><td>KIT DE QUINCAILLERIE POUR INSTALLATION DE MOTEUR</td><td>2015-08-01</td><td>The bolts and hardware that mount a motor to the base.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-5">Step 5 &mdash; Mid-wheel drive, Generation 2, brake-release motor SRG01</h3>
+    <p>Parts Book, Section 3.1.3.4 (diagram p. A, table p. B). The current base with the SRG01 brake-release motor: three shock options (soft 200, medium 250, firm 350 lb&middot;in), a separate brake lever part, and a brush-and-cap kit made for the SRG01 motor. The narrow N2221 battery tray appears here for the 21-inch-wide base.</p>
+    <figure>
+      <img src="/img/pmd-exploded/alltrack-m3/alltrack-m3-3-1-3-4.jpg" alt="Mid-wheel drive, Generation 2, brake-release motor SRG01 — exploded view from the manufacturer's parts book" loading="lazy">
+      <figcaption><strong>Fig. 5.</strong> Mid-wheel drive, Generation 2, brake-release motor SRG01 &mdash; exploded view reproduced from the manufacturer&rsquo;s parts book (Section 3.1.3.4).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker&rsquo;s description (French, as printed)</th><th>Effective</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>1&ndash;6</td><td>1004390</td><td>KIT LIEN, MEDIANE</td><td>2023-01-01</td><td>The linkage kit that ties the mid-wheel-drive suspension together.</td></tr>
+        <tr><td>7&ndash;14A</td><td>S-0050</td><td>KIT, AMORTISSEUR, 200 LB*PO, SOUPLE</td><td>2015-08-01</td><td>The shock absorber kit for the suspension &mdash; 200 lb&middot;in, soft. Callouts 7&ndash;14 are the shock and its mounting hardware.</td></tr>
+        <tr><td>7&ndash;14B</td><td>S-0051</td><td>KIT, AMORTISSEUR, 250 LB*PO, MOYEN</td><td>2021-12-15</td><td>The shock absorber kit for the suspension &mdash; 250 lb&middot;in, medium. The middle of the three shock options.</td></tr>
+        <tr><td>7&ndash;14C</td><td>S-0052</td><td>KIT, AMORTISSEUR, 350 LB*PO, FERME</td><td>2021-12-15</td><td>The shock absorber kit for the suspension &mdash; 350 lb&middot;in, firm. The stiffest of the three shock options.</td></tr>
+        <tr><td>15A</td><td>S-0056-XXX*</td><td>BRAS DE SUSPENSION ARRIERE GAUCHE, TRACTION MEDIANE G2</td><td>2017-07-13</td><td>The left rear suspension arm, Generation 2. It holds the drive wheel and lets it move up and down over bumps. Add your colour code to the part number.</td></tr>
+        <tr><td>15B</td><td>S-0055-XXX*</td><td>BRAS DE SUSPENSION ARRIERE DROIT, TRACTION MEDIANE G2</td><td>2017-07-13</td><td>The right rear suspension arm, Generation 2. It holds the drive wheel and lets it move up and down over bumps. Add your colour code to the part number.</td></tr>
+        <tr><td>16</td><td>A10193</td><td>FOURCHE POUR ROUE 6 PO ET 8 PO</td><td>2015-02-26</td><td>The caster fork, for 6-inch or 8-inch caster wheels. It holds the caster wheel and lets it swivel.</td></tr>
+        <tr><td>17</td><td>1004418</td><td>LEVIER DE FREIN, MOTEUR SRG-01</td><td>2023-03-13</td><td>The brake lever for an SRG-01 motor. It releases the motor brake so the chair can be pushed by hand.</td></tr>
+        <tr><td>18&ndash;19</td><td>1004420</td><td>KIT DE REMPLACEMENT BROSSES ET CAPUCHONS POUR MOTEUR 4 POLES, SRG-01</td><td>2023-03-29</td><td>Replacement brushes and caps for an SRG-01 4-pole motor &mdash; the parts that wear out and carry current to the spinning motor.</td></tr>
+        <tr><td>17&ndash;19, 20A, 21A</td><td>1002457</td><td>5.9/6.5 MPH MOTEUR STANDARD GAUCHE POUR FAUTEUIL TRACTION MEDIANE</td><td>2021-01-04</td><td>The left standard drive motor, 5.9/6.5 mph, for a mid-wheel-drive chair. One of the two motors that turn the drive wheels.</td></tr>
+        <tr><td>17&ndash;19, 20A, 21B</td><td>1002458</td><td>5.9/6.5 MPH MOTEUR STANDARD DROITE POUR FAUTEUIL TRACTION MEDIANE</td><td>2021-01-04</td><td>The right standard drive motor, 5.9/6.5 mph, for a mid-wheel-drive chair. One of the two motors that turn the drive wheels.</td></tr>
+        <tr><td>20A</td><td>S-0013</td><td>ASSEMBLAGE DE MOYEU DE ROUE STANDARD</td><td>2015-08-01</td><td>The standard wheel hub the drive wheel bolts to.</td></tr>
+        <tr><td>20B</td><td>S-0031</td><td>ASSEMBLAGE DE MOYEU DE ROUE 14 PO X 4 PO</td><td>2015-08-01</td><td>The wheel hub for 14-by-4-inch wheels.</td></tr>
+        <tr><td>22</td><td>A10193</td><td>FOURCHE POUR ROUE 6 PO ET 8 PO</td><td>2015-02-26</td><td>The caster fork, for 6-inch or 8-inch caster wheels. It holds the caster wheel and lets it swivel.</td></tr>
+        <tr><td>23, 25&ndash;29</td><td>S-0035</td><td>ASSEMBLAGE DE QUINCAILLERIE POUR FOURCHES</td><td>2015-12-30</td><td>The bolts, washers, and nuts that hold a caster fork together.</td></tr>
+        <tr><td>24A</td><td>S-0054-XXX*</td><td>BRAS DE SUSPENSION AVANT GAUCHE, TRACTION MEDIANE G2</td><td>2017-07-13</td><td>The left front suspension arm, Generation 2. It holds a caster and lets it move over bumps. Add your colour code to the part number.</td></tr>
+        <tr><td>24B</td><td>S-0053-XXX*</td><td>BRAS DE SUSPENSION AVANT DROIT, TRACTION MEDIANE G2</td><td>2017-07-13</td><td>The right front suspension arm, Generation 2. It holds a caster and lets it move over bumps. Add your colour code to the part number.</td></tr>
+        <tr><td>29</td><td>K00058</td><td>CAPUCHON DE TUBE DE FOURCHE DE ROUE</td><td>2015-08-01</td><td>The cap on top of a caster fork tube.</td></tr>
+        <tr><td>30A</td><td>S-0044</td><td>INSTALLATION DE COMPARTIMENT A BATTERIES G2 COMPACT POUR GP22</td><td>2015-08-01</td><td>The Generation 2 battery box assembly, compact size, for Group 22 batteries. It holds the two batteries under the seat.</td></tr>
+        <tr><td>30B</td><td>S-0079</td><td>INSTALLATION DE COMPARTIMENT A BATTERIES G2 COMPACT POUR GP24</td><td>2015-08-01</td><td>The Generation 2 battery box assembly, compact size, for Group 24 batteries. It holds the two batteries under the seat.</td></tr>
+        <tr><td>30C</td><td>S-0043</td><td>PIECE DE SERVICE, BAC A BATTERIE, PLEINE GRANDEUR, G2</td><td>2015-08-01</td><td>The full-size battery tray, Generation 2, as a service part. It holds the two batteries under the seat.</td></tr>
+        <tr><td>30D</td><td>1003818</td><td>KIT, BAC A BATTERIE ETROIT N2221, G2</td><td>2021-12-15</td><td>The narrow battery tray kit, Generation 2, for the 21-inch-wide N2221 base.</td></tr>
+        <tr><td>Not illustrated</td><td>S-0033</td><td>KIT POUR POINTS DE PIVOT SUR TRACTION MEDIANE</td><td>2015-11-17</td><td>The pivot-point hardware kit for the mid-wheel-drive suspension.</td></tr>
+        <tr><td>Not illustrated</td><td>S-0063</td><td>KIT DE QUINCAILLERIE POUR INSTALLATION DE MOTEUR</td><td>2008-04-03</td><td>The bolts and hardware that mount a motor to the base.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-6">Step 6 &mdash; Mid-wheel drive, Generation 2, brake-release LiNX motor with encoder</h3>
+    <p>Parts Book, Section 3.1.3.5 (diagram p. A, table p. B). The newest configuration, marked &ldquo;Nouveau&rdquo; (new) in the book&rsquo;s contents: the current base with LiNX motors that carry an encoder &mdash; a sensor on the motor that reports how fast it is turning, which the LiNX electronics use for traction and stability control. The LiNX motor part numbers are effective 2026-04-21.</p>
+    <figure>
+      <img src="/img/pmd-exploded/alltrack-m3/alltrack-m3-3-1-3-5.jpg" alt="Mid-wheel drive, Generation 2, brake-release LiNX motor with encoder — exploded view from the manufacturer's parts book" loading="lazy">
+      <figcaption><strong>Fig. 6.</strong> Mid-wheel drive, Generation 2, brake-release LiNX motor with encoder &mdash; exploded view reproduced from the manufacturer&rsquo;s parts book (Section 3.1.3.5).</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker&rsquo;s description (French, as printed)</th><th>Effective</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>1&ndash;6</td><td>1004390</td><td>KIT LIEN, MEDIANE</td><td>2023-01-01</td><td>The linkage kit that ties the mid-wheel-drive suspension together.</td></tr>
+        <tr><td>7&ndash;14A</td><td>S-0050</td><td>KIT, AMORTISSEUR, 200 LB*PO, SOUPLE</td><td>2015-08-01</td><td>The shock absorber kit for the suspension &mdash; 200 lb&middot;in, soft. Callouts 7&ndash;14 are the shock and its mounting hardware.</td></tr>
+        <tr><td>7&ndash;14B</td><td>S-0051</td><td>KIT, AMORTISSEUR, 250 LB*PO, MOYEN</td><td>2021-12-15</td><td>The shock absorber kit for the suspension &mdash; 250 lb&middot;in, medium. The middle of the three shock options.</td></tr>
+        <tr><td>7&ndash;14C</td><td>S-0052</td><td>KIT, AMORTISSEUR, 350 LB*PO, FERME</td><td>2021-12-15</td><td>The shock absorber kit for the suspension &mdash; 350 lb&middot;in, firm. The stiffest of the three shock options.</td></tr>
+        <tr><td>15A</td><td>S-0056-XXX*</td><td>BRAS DE SUSPENSION ARRIERE GAUCHE, TRACTION MEDIANE G2</td><td>2017-07-13</td><td>The left rear suspension arm, Generation 2. It holds the drive wheel and lets it move up and down over bumps. Add your colour code to the part number.</td></tr>
+        <tr><td>15B</td><td>S-0055-XXX*</td><td>BRAS DE SUSPENSION ARRIERE DROIT, TRACTION MEDIANE G2</td><td>2017-07-13</td><td>The right rear suspension arm, Generation 2. It holds the drive wheel and lets it move up and down over bumps. Add your colour code to the part number.</td></tr>
+        <tr><td>16</td><td>A10193</td><td>FOURCHE POUR ROUE 6 PO ET 8 PO</td><td>2015-02-26</td><td>The caster fork, for 6-inch or 8-inch caster wheels. It holds the caster wheel and lets it swivel.</td></tr>
+        <tr><td>17A, 18A</td><td>1005973</td><td>MOTEUR 4 POLES, 6.5 MPH_10 KMH, LINIX, PROP-G_MED-D, ENCODEUR</td><td>2026-04-21</td><td>A 4-pole drive motor with a LiNX encoder, 6.5 mph (10 km/h). The encoder is a sensor that reports how fast the motor is turning. One of the two motors that turn the drive wheels.</td></tr>
+        <tr><td>17A, 18B</td><td>1005974</td><td>MOTEUR 4 POLES, 6.5 MPH_10 KMH, LINIX, PROP-D_MED-G, ENCODEUR</td><td>2026-04-21</td><td>A 4-pole drive motor with a LiNX encoder, 6.5 mph (10 km/h). The encoder is a sensor that reports how fast the motor is turning. One of the two motors that turn the drive wheels.</td></tr>
+        <tr><td>17B, 18A</td><td>1005975</td><td>MOTEUR 4 POLES, 6.5 MPH_10 KMH, LINIX, PROP-G_MED-D, 14X4, ENCODEUR</td><td>2026-04-21</td><td>A 4-pole drive motor with a LiNX encoder, 6.5 mph (10 km/h), for 14-by-4-inch wheels. One of the two motors that turn the drive wheels.</td></tr>
+        <tr><td>17B, 18B</td><td>1005976</td><td>MOTEUR 4 POLES, 6.5 MPH_10 KMH, LINIX, PROP-D_MED-G, 14X4, ENCODEUR</td><td>2026-04-21</td><td>A 4-pole drive motor with a LiNX encoder, 6.5 mph (10 km/h), for 14-by-4-inch wheels. One of the two motors that turn the drive wheels.</td></tr>
+        <tr><td>17A</td><td>S-0013</td><td>ASSEMBLAGE DE MOYEU DE ROUE STANDARD</td><td>2015-08-01</td><td>The standard wheel hub the drive wheel bolts to.</td></tr>
+        <tr><td>17B</td><td>S-0031</td><td>ASSEMBLAGE DE MOYEU DE ROUE 14 PO X 4 PO</td><td>2015-08-01</td><td>The wheel hub for 14-by-4-inch wheels.</td></tr>
+        <tr><td>19</td><td>A10193</td><td>FOURCHE POUR ROUE 6 PO ET 8 PO</td><td>2015-02-26</td><td>The caster fork, for 6-inch or 8-inch caster wheels. It holds the caster wheel and lets it swivel.</td></tr>
+        <tr><td>20, 22&ndash;26</td><td>S-0035</td><td>ASSEMBLAGE DE QUINCAILLERIE POUR FOURCHES</td><td>2015-12-30</td><td>The bolts, washers, and nuts that hold a caster fork together.</td></tr>
+        <tr><td>21A</td><td>S-0054-XXX*</td><td>BRAS DE SUSPENSION AVANT GAUCHE, TRACTION MEDIANE G2</td><td>2017-07-13</td><td>The left front suspension arm, Generation 2. It holds a caster and lets it move over bumps. Add your colour code to the part number.</td></tr>
+        <tr><td>21B</td><td>S-0053-XXX*</td><td>BRAS DE SUSPENSION AVANT DROIT, TRACTION MEDIANE G2</td><td>2017-07-13</td><td>The right front suspension arm, Generation 2. It holds a caster and lets it move over bumps. Add your colour code to the part number.</td></tr>
+        <tr><td>26</td><td>K00058</td><td>CAPUCHON DE TUBE DE FOURCHE DE ROUE</td><td>2015-08-01</td><td>The cap on top of a caster fork tube.</td></tr>
+        <tr><td>27A</td><td>S-0044</td><td>INSTALLATION DE COMPARTIMENT A BATTERIES G2 COMPACT POUR GP22</td><td>2015-08-01</td><td>The Generation 2 battery box assembly, compact size, for Group 22 batteries. It holds the two batteries under the seat.</td></tr>
+        <tr><td>27B</td><td>S-0079</td><td>INSTALLATION DE COMPARTIMENT A BATTERIES G2 COMPACT POUR GP24</td><td>2015-08-01</td><td>The Generation 2 battery box assembly, compact size, for Group 24 batteries. It holds the two batteries under the seat.</td></tr>
+        <tr><td>27C</td><td>S-0043</td><td>PIECE DE SERVICE, BAC A BATTERIE, PLEINE GRANDEUR, G2</td><td>2015-08-01</td><td>The full-size battery tray, Generation 2, as a service part. It holds the two batteries under the seat.</td></tr>
+        <tr><td>27D</td><td>1003818</td><td>KIT, BAC A BATTERIE ETROIT N2221, G2</td><td>2021-12-15</td><td>The narrow battery tray kit, Generation 2, for the 21-inch-wide N2221 base.</td></tr>
+        <tr><td>Not illustrated</td><td>S-0033</td><td>KIT POUR POINTS DE PIVOT SUR TRACTION MEDIANE</td><td>2015-11-17</td><td>The pivot-point hardware kit for the mid-wheel-drive suspension.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>The chair in numbers, from the manual&rsquo;s own tables</h2>
+    <p>All of these come from the Owner&rsquo;s Manual&rsquo;s Product Specifications (Section XIII, pp. 46&ndash;47) and its description of the chair (Section III, p. 5). Where the manual gives a figure for the M3-HD as well, it is marked HD.</p>
+    <ul>
+      <li><strong>Maximum user weight:</strong> 300 lb (136 kg) for the M3; 450 lb (205 kg) for the M3-HD; 400 lb (181 kg) for the elevating seat on the M3-HD.</li>
+      <li><strong>Maximum speed:</strong> 6.5 mph (10 km/h) standard; 5.4 mph (9 km/h) as an option on the M3-HD.</li>
+      <li><strong>Range (theoretical, without recharging):</strong> Group 24 batteries: 42 miles (68.5 km); Group 22 batteries: 30.5 miles (49.2 km).</li>
+      <li><strong>Batteries:</strong> two 12-volt deep-cycle AGM or Gel batteries, Group 22NF (50 Ah) or Group 24 (70 Ah); 8-amp off-board charger. (The manual&rsquo;s specification table misprints &ldquo;AGM&rdquo; as &ldquo;AMG&rdquo;.) <a href="/pmd-batteries.html">The battery lesson is on this site</a>.</li>
+      <li><strong>Electronics:</strong> PG Drives VR2 (non-expandable, 90 A) or R-net (expandable, 90 A or 120 A).</li>
+      <li><strong>Suspension:</strong> patented Dual Action Suspension &mdash; fully independent six-wheel interactive suspension with vertical shock absorption.</li>
+      <li><strong>Base size:</strong> base length 35.125 in (890 mm); base width 23.375 in (595 mm) with Group 22 batteries, 25.375 in (645 mm) with Group 24; the narrow N2221 base is 21 in (535 mm) wide, the N2424 is 23.375 in.</li>
+      <li><strong>Base turning radius:</strong> 20 in (510 mm).</li>
+      <li><strong>Overall length with legrest:</strong> 46 in (1170 mm). <strong>Overall height (floor to top of back canes):</strong> 31.5&ndash;46.25 in (800&ndash;1175 mm).</li>
+      <li><strong>Ground clearance:</strong> 3.5 in (90 mm) with 14-inch drive wheels; 2.875 in (75 mm) with 12.5-inch drive wheels.</li>
+      <li><strong>Stability:</strong> static stability 20&deg; downhill, 20&deg; uphill, 10&deg; sideways; dynamic stability uphill 10&deg; (8&deg; for the N2221 narrow base).</li>
+      <li><strong>Climbable obstacle:</strong> Group 24: 2.75 in (70 mm); Group 22: 2.95 in (75 mm); N2221: 2.95 in (75 mm).</li>
+      <li><strong>Seat-to-floor height:</strong> 15.5&ndash;18.75 in (395&ndash;475 mm) with power tilt or seat elevate; 17.5&ndash;18.25 in (445&ndash;465 mm) with combined tilt and elevate. Seat elevate: 11 in (280 mm); driving while elevated runs at 25% of maximum speed.</li>
+      <li><strong>Wheels:</strong> drive wheels 12.5 or 14 inches; casters 6 or 8 inches.</li>
+      <li><strong>Weight:</strong> base 126 lb (57 kg) for the N2221, 128 lb (58 kg) for the 23.375-inch base, 133 lb (60 kg) for the 25.375-inch base; batteries 2 &times; 36.6 lb (16.6 kg) for Group 22NF, 2 &times; 54 lb (24.5 kg) for Group 24.</li>
+      <li><strong>Operating conditions:</strong> &minus;13&deg;F to +122&deg;F (&minus;25&deg;C to +50&deg;C), dry heat. Storage: &minus;40&deg;F to +149&deg;F (&minus;40&deg;C to +65&deg;C), charge monthly.</li>
+      <li><strong>Service life:</strong> five years, per the manual.</li>
+      <li><strong>Class:</strong> Class B. <strong>US codes (HCPCS):</strong> K0848 / K0856 / K0861 (M3); K0850 / K0858 / K0862 (M3-HD).</li>
+    </ul>
+    <p><strong>If the chair will not move</strong>, the manual&rsquo;s troubleshooting guide for power seating is on p. 40 and its maintenance chapter is Section XI (pp. 43&ndash;45) &mdash; and the VR2 and R-net fault codes are translated on this site: <a href="/pmd-fault-codes.html#vr2">VR2 fault codes</a> &middot; <a href="/pmd-fault-codes.html#rnet">R-net fault codes</a>.</p>
+  </section>
+
+  <section>
+    <h2>What the parts book covers, and where it stops</h2>
+    <p>This page reproduces Section 3.1.3 of the parts book only &mdash; the M3 powered base. The same book covers the rest of the Alltrack family in other sections: the Alltrack P (§3.1.1), P R (§3.1.2), R (§3.1.5), R HD (§3.1.6), HD (§3.1.7), and the M3-HD (§3.1.4) each have their own base sections, and the covers for all mid-wheel-drive Generation 2 chairs are in §3.1.8 and the tires in §3.1.9. Seating systems and electronics (joysticks, power modules, harnesses) live in other sections of the full parts book, which this file &mdash; Section 3, motorized bases only &mdash; does not contain.</p>
+    <p>No separate Amylior service manual for the Alltrack M3 was found in public; the parts book is the service document. The owner&rsquo;s manual points to Amylior&rsquo;s Instruction Guides (on amylior.com, under Support / For Pros) for adjustments, maintenance, and repairs.</p>
+  </section>
+
+  <section>
+    <h2>The record on this chair</h2>
+    <p>The Alltrack series was cleared by the FDA on 9 October 2009 as the AMYPOWER ALL TRACK SERIES POWER WHEELCHAIR (510(k) K092225), a Class II powered wheelchair (21 CFR 890.3860, product code ITI), substantially equivalent to the Invacare Storm TDX (K023589) and the Invacare Storm (K940051). Its stated intended use is mobility for persons limited to a sitting position. The clearance covers the Alltrack series; the M3 is the mid-wheel-drive member of that series, sold in the US under HCPCS codes K0848, K0856, and K0861.</p>
+    <p>No recall for Amylior or the Alltrack appears in the FDA enforcement database (checked 2026-11-17).</p>
+  </section>
+
+  <section>
+    <h2>What is missing, in the open</h2>
+    <p><strong>An English parts book.</strong> Amylior publishes this parts book in French only, and no English edition was found in public. Every description on this page is therefore the book&rsquo;s French text, with our English explanation beside it. If Amylior publishes an English edition, this page gains it.</p>
+    <p><strong>The M3-HD.</strong> The heavy-duty M3-HD has its own section of the same book (§3.1.4) and its own base configurations; it is not covered here. The owner&rsquo;s manual covers both chairs, and the specifications above mark the HD figures where they differ.</p>
+    <p><strong>Per-part availability.</strong> The book marks each part current, available, or discontinued, but those marks could not be reproduced from the document&rsquo;s text layer. Check the book itself before ordering.</p>
+    <p><strong>The serial number.</strong> The owner&rsquo;s manual (Section I) shows the serial-number label on the back of the base, under the seat. The first two digits of the serial number are the last two digits of the year of production. That label is the one key you hold: every part on this chair is orderable by a dealer using it &mdash; and now you have the numbers to check their work.</p>
+    <p><a href="/pmd-exploded.html">&larr; All exploded views</a> &middot; <a href="/pmd.html">PMD section</a></p>
+  </section>
+</main>
+
+
+<script src="/nav.js" defer></script>
+<script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>
