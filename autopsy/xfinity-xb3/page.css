@@ -1,46 +1,219 @@
-:root { color-scheme: light; }
-  * { box-sizing: border-box; }
-  body { background: #ffffff; color: #1b1b1b; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.7; margin: 0; padding: 0; }
-  main { max-width: 760px; margin: 0 auto; padding: 48px 24px 96px; }
-  .lede { color: #555; }
-  h1 { font-size: 2.4rem; line-height: 1.15; letter-spacing: -0.02em; margin: 0.4em 0 0.15em; }
-  .subtitle { font-size: 1.25rem; font-weight: 600; color: #333; margin: 0 0 1em; }
-  h2 { font-size: 1.6rem; letter-spacing: -0.01em; margin: 2.2em 0 0.8em; }
-  h3 { font-size: 1.25rem; margin: 1.8em 0 0.6em; }
-  h4 { font-size: 1.05rem; margin: 1.8em 0 0.5em; }
-  p { margin: 0 0 1em; }
-  hr { border: 0; border-top: 1px solid #e6e6e6; margin: 2em 0; }
-  table { width: 100%; border-collapse: collapse; margin: 1.2em 0 1.6em; font-size: 0.93rem; line-height: 1.55; }
-  th, td { text-align: left; vertical-align: top; padding: 10px 12px; border: 1px solid #e6e6e6; }
-  th { background: #fafafa; font-weight: 600; }
-  a { color: #0b57d0; }
-  code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.88em; background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
-  ul, ol { margin: 0 0 1em; padding-left: 1.4em; }
-  li { margin-bottom: 0.4em; }
-  figure { margin: 1.8em 0; }
-  figure img { max-width: 100%; height: auto; border: 1px solid #e6e6e6; border-radius: 6px; display: block; }
-  figcaption { font-size: 0.85rem; color: #555; margin-top: 0.5em; }
+/* Standalone autopsy page — self-contained styles for the Xfinity XB3
+   full autopsy. This page does not load the site stylesheet, so it
+   carries everything it needs: type, tables, figures, and the page
+   furniture. */
 
-  /* Honeypot: invisible to humans, visible to scrapers. Points at /tarpit/. */
-  .hp-link {
-    position: absolute !important; width: 1px !important; height: 1px !important;
-    padding: 0 !important; margin: -1px !important; overflow: hidden !important;
-    clip: rect(0, 0, 0, 0) !important; clip-path: inset(50%) !important;
-    white-space: nowrap !important; border: 0 !important; pointer-events: none !important;
-  }
+:root {
+  color-scheme: light;
+}
 
-.bb-quote { margin: 2.2em 0 1.2em; padding: .2em 0 .2em 1em; border-left: 3px solid #ddd; color: #555; font-style: italic; }
-.bb-quote p { margin: .25em 0; }
-.bb-quote .bb-quote-by { font-style: normal; font-size: .85em; color: #888; }
+* {
+  box-sizing: border-box;
+}
 
-/* These elements originally carried inline style attributes; the page's
-   CSP blocks style attributes, so their rules live here instead. */
-nav[aria-label="On this page"] { background: #fafafa; border: 1px solid #e6e6e6; border-radius: 8px; padding: 1.2em 1.5em; margin: 1.5em 0; }
-nav[aria-label="On this page"] > p { margin: 0 0 0.6em; font-weight: 600; }
-nav[aria-label="On this page"] ol { margin: 0; columns: 2; column-gap: 2em; font-size: 0.92rem; }
+/* System font stack: OS font names the browser must resolve — external
+   interface names, kept as-is. */
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #1b1b1b;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.7;
+}
 
-/* Same CSP fix, for this page's remaining inline styles that had
-   no rule yet (the nav styles above were already moved here). */
-.bb-pre-diagram { background:#fafafa; border:1px solid #e6e6e6; border-radius:6px; padding:1.2em; overflow-x:auto; font-size:0.82rem; line-height:1.5; }
-.bb-footer-note { margin-top:3rem; padding-top:1.5rem; border-top:1px solid #e6e6e6; font-size:0.9rem; color:#555; }
-.bb-colophon { opacity:0.5; font-size:0.8rem; margin-top:1.2rem; }
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+}
+
+/* Type scale and rhythm. */
+h1 {
+  margin: 0.4em 0 0.15em;
+  font-size: 2.4rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  margin: 2.2em 0 0.8em;
+  font-size: 1.6rem;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  margin: 1.8em 0 0.6em;
+  font-size: 1.25rem;
+}
+
+h4 {
+  margin: 1.8em 0 0.5em;
+  font-size: 1.05rem;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+.lede {
+  color: #555;
+}
+
+.subtitle {
+  margin: 0 0 1em;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+a {
+  color: #0b57d0;
+}
+
+hr {
+  margin: 2em 0;
+  border: 0;
+  border-top: 1px solid #e6e6e6;
+}
+
+ul,
+ol {
+  margin: 0 0 1em;
+  padding-left: 1.4em;
+}
+
+li {
+  margin-bottom: 0.4em;
+}
+
+code {
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #f5f5f5;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.88em;
+}
+
+/* Tables and figures. */
+table {
+  width: 100%;
+  margin: 1.2em 0 1.6em;
+  border-collapse: collapse;
+  font-size: 0.93rem;
+  line-height: 1.55;
+}
+
+th,
+td {
+  padding: 10px 12px;
+  border: 1px solid #e6e6e6;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #fafafa;
+  font-weight: 600;
+}
+
+figure {
+  margin: 1.8em 0;
+}
+
+figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+}
+
+figcaption {
+  margin-top: 0.5em;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* "On this page" box. These elements used to carry inline style
+   attributes; the page's CSP blocks style attributes, so their rules
+   live here instead. */
+nav[aria-label="On this page"] {
+  margin: 1.5em 0;
+  padding: 1.2em 1.5em;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+nav[aria-label="On this page"] > p {
+  margin: 0 0 0.6em;
+  font-weight: 600;
+}
+
+nav[aria-label="On this page"] ol {
+  margin: 0;
+  columns: 2;
+  column-gap: 2em;
+  font-size: 0.92rem;
+}
+
+/* The same CSP fix for this page's remaining inline styles that had no
+   rule yet (the nav styles above were already moved here). */
+.bb-pre-diagram {
+  padding: 1.2em;
+  overflow-x: auto;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+  background: #fafafa;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.bb-footer-note {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e6e6e6;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.bb-colophon {
+  margin-top: 1.2rem;
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+/* Pull quote. */
+.bb-quote {
+  margin: 2.2em 0 1.2em;
+  padding: 0.2em 0 0.2em 1em;
+  border-left: 3px solid #ddd;
+  color: #555;
+  font-style: italic;
+}
+
+.bb-quote p {
+  margin: 0.25em 0;
+}
+
+.bb-quote .bb-quote-by {
+  font-style: normal;
+  font-size: 0.85em;
+  color: #888;
+}
+
+/* Honeypot: invisible to humans, visible to scrapers. Points at /tarpit/. */
+.hp-link {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  pointer-events: none !important;
+}

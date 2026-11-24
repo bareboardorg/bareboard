@@ -1,12 +1,19 @@
-/* BareBoard multilingual switcher - runtime translation edition.
-   No dictionary files: when a visitor picks a language, the page's own
-   strings are translated live in their browser (Google Translate endpoint,
-   allowed by the pages' CSP connect-src) and cached in their localStorage,
-   so new or edited content translates itself and nothing on the server
-   needs updating. If translation is unreachable, the page stays in English.
-   Picker UI: frosted-glass panel with live search and keyboard navigation,
-   matching the site's own glass nav. Language is chosen by the visitor
-   (browser setting + manual menu), never by IP or location. */
+/* Multilingual switcher — runtime translation edition.
+ *
+ * No dictionary files ship with the site. When a visitor picks a
+ * language, the page's own strings are translated live in their
+ * browser — requests go to the public translate.googleapis.com
+ * endpoint, allowed by the pages' CSP connect-src — and the results
+ * are cached in their localStorage. New or edited content translates
+ * itself; nothing on the server needs updating. If translation is
+ * unreachable, the page stays in English.
+ *
+ * The picker is a frosted-glass panel with live search and keyboard
+ * navigation, matching the site's own glass nav. Language is chosen by
+ * the visitor (browser setting plus manual menu), never by IP or
+ * location. Placed low and quiet: language choice lives in the footer,
+ * in its own end bar, as a quiet text control — never in the top nav.
+ */
 (function () {
   "use strict";
 
@@ -263,254 +270,324 @@
     { code: "zh-TW", name: "繁體中文", en: "Traditional Chinese", dir: "ltr" },
     { code: "zu", name: "isiZulu", en: "Zulu", dir: "ltr" }
   ];
+
   var SKIP_TAGS = { SCRIPT: 1, STYLE: 1, CODE: 1, PRE: 1, TEXTAREA: 1, NOSCRIPT: 1 };
-  var originals = []; // {node, text} or {el, attr, text}
-  var current = "en";
-  var origTitle = null;
+  var ATTRIBUTE_TARGETS = ["alt", "title", "aria-label", "placeholder"];
+
+  /* The page's English, remembered node by node. Translations are
+     always computed from the remembered English, never from text that
+     is already translated — that is what makes switching languages
+     twice, or back to English, exact. */
+  var englishMemory = new WeakMap(); // node -> Map(attrName|null -> original text)
+  var currentLang = "en";
+  var pageTitleEnglish = null;
   var picker = null;
 
-  function norm(s) { return s.replace(/\s+/g, " ").trim(); }
+  function squashed(text) {
+    return (text || "").replace(/\s+/g, " ").trim();
+  }
 
-  function remember(node, attr) {
-    for (var i = 0; i < originals.length; i++) {
-      if (originals[i].node === node && originals[i].attr === attr) return;
+  function memorize(node, attr) {
+    var perNode = englishMemory.get(node);
+    if (!perNode) {
+      perNode = new Map();
+      englishMemory.set(node, perNode);
     }
-    originals.push({ node: node, attr: attr, text: attr ? node.getAttribute(attr) : node.nodeValue });
+    if (perNode.has(attr)) return;
+    perNode.set(attr, attr ? node.getAttribute(attr) : node.nodeValue);
   }
 
-  function restore() {
-    for (var i = 0; i < originals.length; i++) {
-      var o = originals[i];
-      if (o.attr) { o.node.setAttribute(o.attr, o.text); }
-      else { o.node.nodeValue = o.text; }
-    }
-  }
-
-
-  /* ---- Runtime translation engine ------------------------------------
-     Strings are collected exactly the way the old dictionary engine did
-     (same walker, same skips, same attributes), deduplicated, served from
-     the visitor's localStorage cache when possible, and otherwise fetched
-     in batches from the translation endpoint. Results are applied as each
-     batch lands and written back to the cache. */
-  var ENDPOINT = window.BB_TRANSLATE_ENDPOINT ||
-    "https://translate.googleapis.com/translate_a/single";
-  var cache = {};       // norm key -> translation for cacheLang
-  var cacheLang = null; // language the in-memory cache belongs to
-  var jobSeq = 0;       // bumped on every setLang; stale batches check it
-  var saveTimer = null;
-
-  function cacheLoad(code) {
-    cache = {};
-    cacheLang = code;
-    try {
-      var raw = localStorage.getItem("bb-tcache-v1-" + code);
-      if (raw) cache = JSON.parse(raw) || {};
-    } catch (e) {}
-  }
-
-  function cacheSave() {
-    if (!cacheLang || saveTimer) return;
-    saveTimer = setTimeout(function () {
-      saveTimer = null;
-      try {
-        var raw = JSON.stringify(cache);
-        if (raw.length < 4500000) {
-          localStorage.setItem("bb-tcache-v1-" + cacheLang, raw);
-        }
-      } catch (e) { /* quota or privacy mode: in-memory cache still works */ }
-    }, 400);
-  }
-
-  function sourceText(node, attr) {
-    for (var i = 0; i < originals.length; i++) {
-      if (originals[i].node === node && originals[i].attr === attr) {
-        return originals[i].text;
-      }
-    }
+  function englishOf(node, attr) {
+    var perNode = englishMemory.get(node);
+    if (perNode && perNode.has(attr)) return perNode.get(attr);
     return attr ? node.getAttribute(attr) : node.nodeValue;
   }
 
-  function collectTargets() {
+  function restoreEnglish() {
+    /* WeakMap contents cannot be enumerated, so the restorable set is
+       tracked separately as translation proceeds. */
+    for (var i = 0; i < memorized.length; i++) {
+      var entry = memorized[i];
+      if (entry.attr) entry.node.setAttribute(entry.attr, entry.text);
+      else entry.node.nodeValue = entry.text;
+    }
+  }
+  var memorized = []; // {node, attr, text} — every node ever translated
+
+  function rememberForRestore(node, attr) {
+    memorize(node, attr);
+    for (var i = 0; i < memorized.length; i++) {
+      if (memorized[i].node === node && memorized[i].attr === attr) return;
+    }
+    memorized.push({ node: node, attr: attr, text: englishOf(node, attr) });
+  }
+
+  /* ---- The translation engine ----
+     Strings are gathered from the live page (text nodes plus the four
+     translated attributes), deduplicated, served from the visitor's
+     localStorage cache when possible, and otherwise fetched in batches
+     from the translation endpoint. Results land as each batch returns
+     and are written back to the cache. */
+  /* External interface name: this endpoint host and path must stay
+     exactly as-is — translation requests go nowhere else. */
+  var ENDPOINT = window.BB_TRANSLATE_ENDPOINT ||
+    "https://translate.googleapis.com/translate_a/single";
+  var translationCache = {}; // squashed English -> translation, for cacheLang
+  var cacheLang = null;
+  var runId = 0; // bumped on every setLang; stale batches check it
+  var savePending = null;
+
+  function loadCache(code) {
+    translationCache = {};
+    cacheLang = code;
+    try {
+      var raw = localStorage.getItem("bb-tcache-v1-" + code);
+      if (raw) translationCache = JSON.parse(raw) || {};
+    } catch (e) { /* no stored cache: start empty */ }
+  }
+
+  function saveCacheSoon() {
+    if (!cacheLang || savePending) return;
+    savePending = setTimeout(function () {
+      savePending = null;
+      try {
+        var raw = JSON.stringify(translationCache);
+        if (raw.length < 4500000) {
+          localStorage.setItem("bb-tcache-v1-" + cacheLang, raw);
+        }
+      } catch (e) { /* quota or privacy mode: the in-memory cache still works */ }
+    }, 400);
+  }
+
+  function underSkippedAncestor(node) {
+    var parent = node.parentNode;
+    while (parent && parent.nodeType === 1) {
+      if (SKIP_TAGS[parent.tagName]) return true;
+      if (parent.classList && parent.classList.contains("bb-lang")) return true;
+      parent = parent.parentNode;
+    }
+    return false;
+  }
+
+  function gatherTargets() {
     var targets = [];
     var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
       acceptNode: function (node) {
-        var p = node.parentNode;
-        while (p && p.nodeType === 1) {
-          if (SKIP_TAGS[p.tagName]) return NodeFilter.FILTER_REJECT;
-          if (p.classList && p.classList.contains("bb-lang")) return NodeFilter.FILTER_REJECT;
-          p = p.parentNode;
-        }
-        return norm(node.nodeValue || "") ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+        if (underSkippedAncestor(node)) return NodeFilter.FILTER_REJECT;
+        return squashed(node.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
       }
     });
-    var n;
-    while ((n = walker.nextNode())) {
-      targets.push({ kind: "text", node: n, key: norm(sourceText(n, null) || "") });
+    var textNode;
+    while ((textNode = walker.nextNode())) {
+      targets.push({
+        kind: "text", node: textNode,
+        key: squashed(englishOf(textNode, null))
+      });
     }
-    var attrs = ["alt", "title", "aria-label", "placeholder"];
-    var els = document.body.querySelectorAll("[alt],[title],[aria-label],[placeholder]");
-    els.forEach(function (el) {
+    var elements = document.body.querySelectorAll("[alt],[title],[aria-label],[placeholder]");
+    elements.forEach(function (el) {
       if (el.closest && el.closest(".bb-lang")) return;
-      attrs.forEach(function (a) {
-        if (!el.hasAttribute(a)) return;
-        var key = norm(sourceText(el, a) || "");
-        if (key) targets.push({ kind: "attr", el: el, attr: a, key: key });
+      ATTRIBUTE_TARGETS.forEach(function (attr) {
+        if (!el.hasAttribute(attr)) return;
+        var key = squashed(englishOf(el, attr));
+        if (key) targets.push({ kind: "attr", el: el, attr: attr, key: key });
       });
     });
-    if (origTitle === null) origTitle = document.title || "";
-    var tKey = norm(origTitle);
-    if (tKey) targets.push({ kind: "title", key: tKey });
+    if (pageTitleEnglish === null) pageTitleEnglish = document.title || "";
+    var titleKey = squashed(pageTitleEnglish);
+    if (titleKey) targets.push({ kind: "title", key: titleKey });
     return targets;
   }
 
-  function applyOne(t, translated) {
-    if (t.kind === "text") {
-      var raw = t.node.nodeValue;
-      var lead = raw.match(/^\s*/)[0];
-      var trail = raw.match(/\s*$/)[0];
-      remember(t.node, null);
-      t.node.nodeValue = lead + translated + trail;
-    } else if (t.kind === "attr") {
-      remember(t.el, t.attr);
-      t.el.setAttribute(t.attr, translated);
-    } else if (t.kind === "title") {
+  function putTranslation(target, translated) {
+    if (target.kind === "text") {
+      var raw = target.node.nodeValue;
+      var leading = raw.match(/^\s*/)[0];
+      var trailing = raw.match(/\s*$/)[0];
+      rememberForRestore(target.node, null);
+      target.node.nodeValue = leading + translated + trailing;
+    } else if (target.kind === "attr") {
+      rememberForRestore(target.el, target.attr);
+      target.el.setAttribute(target.attr, translated);
+    } else if (target.kind === "title") {
       document.title = translated;
     }
   }
 
-  /* The endpoint splits its answer into segments at sentence and line
+  /* The endpoint answers in segments split at sentence and line
      boundaries; the segment sources concatenate back into exactly the
      text that was sent. Walking the segments and matching their sources
      against each input line recovers every line's translation even when
-     a translation itself contains line breaks. Any line that cannot be
-     matched this way is reported as failed and retried on its own. */
-  function assignSegments(segs, texts) {
-    var parts = {}, failed = [];
-    var li = 0, accSrc = "", accTr = "", broken = false;
-    for (var s = 0; s < segs.length && li < texts.length && !broken; s++) {
-      accSrc += segs[s][1];
-      accTr += segs[s][0];
-      while (li < texts.length) {
-        var exp = texts[li] + (li < texts.length - 1 ? "\n" : "");
-        if (accSrc === exp) {
-          parts[li] = (li < texts.length - 1) ? accTr.replace(/\n$/, "") : accTr;
-          accSrc = ""; accTr = ""; li++;
-        } else if (accSrc.length < exp.length && exp.indexOf(accSrc) === 0) {
-          break; // segment boundary has not reached the line end yet
-        } else { broken = true; break; }
+     a translation itself contains line breaks. A line that cannot be
+     matched is reported as failed and retried on its own. */
+  function matchSegments(segments, lines) {
+    var matched = {};
+    var line = 0;
+    var src = "";
+    var tr = "";
+    var diverged = false;
+    for (var s = 0; s < segments.length && line < lines.length && !diverged; s++) {
+      src += segments[s][1];
+      tr += segments[s][0];
+      var keepGoing = true;
+      while (keepGoing && line < lines.length) {
+        var last = line === lines.length - 1;
+        var want = lines[line] + (last ? "" : "\n");
+        if (src === want) {
+          matched[line] = last ? tr : tr.replace(/\n$/, "");
+          src = "";
+          tr = "";
+          line++;
+        } else if (want.indexOf(src) === 0) {
+          keepGoing = false; // the line has not fully arrived yet
+        } else {
+          diverged = true; // sources no longer line up: nothing more can match
+          keepGoing = false;
+        }
       }
     }
-    for (var i = li; i < texts.length; i++) failed.push(i);
-    return { parts: parts, failed: failed };
+    var failed = [];
+    for (var i = line; i < lines.length; i++) failed.push(i);
+    return { parts: matched, failed: failed };
   }
 
-  function fetchBatch(texts, code) {
+  function requestBatch(lines, code) {
+    /* Query keys and values are the endpoint's required interface:
+       client, source/target languages, result type, query text. */
     var url = ENDPOINT + "?client=gtx&sl=en&tl=" + encodeURIComponent(code) +
-      "&dt=t&q=" + encodeURIComponent(texts.join("\n"));
-    return fetch(url).then(function (r) {
-      if (!r.ok) throw new Error(r.status);
-      return r.json();
+      "&dt=t&q=" + encodeURIComponent(lines.join("\n"));
+    return fetch(url).then(function (response) {
+      if (!response.ok) throw new Error(response.status);
+      return response.json();
     }).then(function (data) {
-      var segs = [];
-      (data[0] || []).forEach(function (seg) {
-        if (seg && seg[0] != null && seg[1] != null) segs.push([seg[0], seg[1]]);
+      var segments = [];
+      (data[0] || []).forEach(function (segment) {
+        if (segment && segment[0] != null && segment[1] != null) {
+          segments.push([segment[0], segment[1]]);
+        }
       });
-      if (!segs.length && texts.length) throw new Error("empty response");
-      return assignSegments(segs, texts);
+      if (segments.length === 0 && lines.length) throw new Error("empty response");
+      return matchSegments(segments, lines);
     });
   }
 
-  function fetchOne(k, code, seq) {
-    return fetchBatch([k], code).then(function (res) {
-      if (res.parts[0]) { cache[k] = res.parts[0]; cacheSave(); }
-    }).catch(function () { /* unreachable: string stays English */ });
-  }
-
-  function applyReady(byKey) {
-    Object.keys(byKey).forEach(function (k) {
-      if (!cache[k]) return;
-      byKey[k].forEach(function (t) { applyOne(t, cache[k]); });
-      delete byKey[k];
-    });
-  }
-
-  function translateMissing(missing, code, seq, byKey) {
-    var chunks = [];
-    var cur = [], curLen = 0;
-    missing.forEach(function (k) {
-      if (cur.length && (cur.length >= 40 || curLen + k.length > 4000)) {
-        chunks.push(cur); cur = []; curLen = 0;
+  function requestSingle(key, code) {
+    return requestBatch([key], code).then(function (result) {
+      if (result.parts[0]) {
+        translationCache[key] = result.parts[0];
+        saveCacheSoon();
       }
-      cur.push(k); curLen += k.length + 1;
+    }).catch(function () { /* unreachable: the string stays English */ });
+  }
+
+  function flushCached(waiting) {
+    Object.keys(waiting).forEach(function (key) {
+      if (!translationCache[key]) return;
+      waiting[key].forEach(function (target) { putTranslation(target, translationCache[key]); });
+      delete waiting[key];
     });
-    if (cur.length) chunks.push(cur);
+  }
+
+  function fetchMissing(keys, code, run, waiting) {
+    /* Batches stay small enough for a URL: at most 40 strings and
+       about 4000 characters each. */
+    var batches = [];
+    var batch = [];
+    var batchLen = 0;
+    keys.forEach(function (key) {
+      if (batch.length && (batch.length >= 40 || batchLen + key.length > 4000)) {
+        batches.push(batch);
+        batch = [];
+        batchLen = 0;
+      }
+      batch.push(key);
+      batchLen += key.length + 1;
+    });
+    if (batch.length) batches.push(batch);
+
     var chain = Promise.resolve();
-    chunks.forEach(function (chunk) {
+    batches.forEach(function (lines) {
       chain = chain.then(function () {
-        if (seq !== jobSeq) return;
-        return fetchBatch(chunk, code).then(function (res) {
-          Object.keys(res.parts).forEach(function (i) {
-            if (res.parts[i]) cache[chunk[i]] = res.parts[i];
+        if (run !== runId) return;
+        return requestBatch(lines, code).then(function (result) {
+          Object.keys(result.parts).forEach(function (i) {
+            if (result.parts[i]) translationCache[lines[i]] = result.parts[i];
           });
-          cacheSave();
-          var inner = Promise.resolve();
-          res.failed.forEach(function (i) {
-            inner = inner.then(function () {
-              if (seq !== jobSeq) return;
-              return fetchOne(chunk[i], code, seq);
+          saveCacheSoon();
+          var retries = Promise.resolve();
+          result.failed.forEach(function (i) {
+            retries = retries.then(function () {
+              if (run !== runId) return;
+              return requestSingle(lines[i], code);
             });
           });
-          return inner;
+          return retries;
         }).catch(function () {
-          var inner = Promise.resolve();
-          chunk.forEach(function (k) {
-            inner = inner.then(function () {
-              if (seq !== jobSeq) return;
-              return fetchOne(k, code, seq);
+          /* The whole batch failed: retry each string alone so one bad
+             string cannot sink the rest. */
+          var retries = Promise.resolve();
+          lines.forEach(function (key) {
+            retries = retries.then(function () {
+              if (run !== runId) return;
+              return requestSingle(key, code);
             });
           });
-          return inner;
+          return retries;
         }).then(function () {
-          if (seq === jobSeq && current === code) applyReady(byKey);
+          if (run === runId && currentLang === code) flushCached(waiting);
         });
       });
     });
     return chain;
   }
 
-  function runTranslation(code, seq) {
-    var targets = collectTargets();
-    var byKey = {};
-    targets.forEach(function (t) {
-      if (!t.key) return;
-      if (cache[t.key]) applyOne(t, cache[t.key]);
-      else (byKey[t.key] = byKey[t.key] || []).push(t);
+  function translatePage(code, run) {
+    var targets = gatherTargets();
+    var waiting = {};
+    targets.forEach(function (target) {
+      if (!target.key) return;
+      if (translationCache[target.key]) putTranslation(target, translationCache[target.key]);
+      else (waiting[target.key] = waiting[target.key] || []).push(target);
     });
-    var missing = Object.keys(byKey);
-    if (!missing.length) return;
-    translateMissing(missing, code, seq, byKey);
+    var missing = Object.keys(waiting);
+    if (missing.length === 0) return;
+    fetchMissing(missing, code, run, waiting);
   }
 
-  function retranslatePass() {
-    if (current !== "en") runTranslation(current, jobSeq);
+  function retranslate() {
+    if (currentLang !== "en") translatePage(currentLang, runId);
+  }
+
+  function findLang(code) {
+    for (var i = 0; i < LANGS.length; i++) {
+      if (LANGS[i].code === code) return LANGS[i];
+    }
+    return null;
   }
 
   function setLang(code, save) {
-    var meta = null;
-    LANGS.forEach(function (l) { if (l.code === code) meta = l; });
-    if (!meta) { code = "en"; meta = LANGS[0]; }
-    current = code;
-    jobSeq++;
-    if (save) { try { localStorage.setItem("bb-lang", code); } catch (e) {} }
+    var meta = findLang(code);
+    if (!meta) {
+      code = "en";
+      meta = LANGS[0];
+    }
+    currentLang = code;
+    runId++;
+    if (save) {
+      try { localStorage.setItem("bb-lang", code); } catch (e) {}
+    }
     document.documentElement.setAttribute("lang", code === "zh" ? "zh-CN" : code);
     document.documentElement.setAttribute("dir", meta.dir);
-    if (picker) updatePicker();
-    restore();
-    if (origTitle !== null) document.title = origTitle;
-    if (code === "en") { cache = {}; cacheLang = null; return; }
-    cacheLoad(code);
-    runTranslation(code, jobSeq);
+    if (picker) refreshPicker();
+    restoreEnglish();
+    if (pageTitleEnglish !== null) document.title = pageTitleEnglish;
+    if (code === "en") {
+      translationCache = {};
+      cacheLang = null;
+      return;
+    }
+    loadCache(code);
+    translatePage(code, runId);
   }
 
   var GLOBE = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg>';
@@ -518,39 +595,50 @@
   var MAG = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20.5 20.5-4.6-4.6"/></svg>';
   var CHECK = '<svg class="bb-lang-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12.5 10 18 19.5 6.5"/></svg>';
 
-  function foldStr(s) {
-    return (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+  function foldForSearch(text) {
+    return (text || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
   }
 
-  function visibleItems() {
-    return picker.items.filter(function (it) { return !it.el.hidden; });
+  function shownItems() {
+    return picker.items.filter(function (item) { return !item.el.hidden; });
   }
 
-  function setActive(n) {
-    var vis = visibleItems();
-    picker.items.forEach(function (it) { it.el.classList.remove("active"); });
-    if (!vis.length) { picker.activeEl = null; return; }
-    var i = ((n % vis.length) + vis.length) % vis.length;
-    var el = vis[i].el;
+  function highlight(n) {
+    var visible = shownItems();
+    picker.items.forEach(function (item) { item.el.classList.remove("active"); });
+    if (visible.length === 0) {
+      picker.activeEl = null;
+      return;
+    }
+    var at = ((n % visible.length) + visible.length) % visible.length;
+    var el = visible[at].el;
     el.classList.add("active");
     picker.activeEl = el;
     picker.input.setAttribute("aria-activedescendant", el.id);
     try { el.scrollIntoView({ block: "nearest" }); } catch (e) {}
   }
 
-  function filterList() {
-    var q = foldStr(picker.input.value.trim());
+  function applyFilter() {
+    var query = foldForSearch(picker.input.value.trim());
     var shown = 0;
-    picker.items.forEach(function (it) {
-      var hit = !q || it.fName.indexOf(q) !== -1 || it.fEn.indexOf(q) !== -1 ||
-        it.code.toLowerCase().indexOf(q) === 0;
-      it.el.hidden = !hit;
+    picker.items.forEach(function (item) {
+      var hit = !query ||
+        item.fName.indexOf(query) !== -1 ||
+        item.fEn.indexOf(query) !== -1 ||
+        item.code.toLowerCase().indexOf(query) === 0;
+      item.el.hidden = !hit;
       if (hit) shown++;
     });
     picker.emptyEl.hidden = shown !== 0;
-    var vis = visibleItems();
-    var ci = vis.findIndex(function (v) { return v.code === current; });
-    setActive(ci >= 0 ? ci : 0);
+    var visible = shownItems();
+    var currentAt = -1;
+    for (var i = 0; i < visible.length; i++) {
+      if (visible[i].code === currentLang) {
+        currentAt = i;
+        break;
+      }
+    }
+    highlight(currentAt >= 0 ? currentAt : 0);
   }
 
   function openPicker() {
@@ -560,76 +648,85 @@
     picker.btn.setAttribute("aria-expanded", "true");
     picker.veil.classList.add("show");
     picker.input.value = "";
-    filterList();
-    var cur = null;
-    picker.items.forEach(function (it) { if (it.code === current) cur = it; });
-    if (cur) setTimeout(function () { try { cur.el.scrollIntoView({ block: "center" }); } catch (e) {} }, 70);
+    applyFilter();
+    var currentItem = null;
+    picker.items.forEach(function (item) {
+      if (item.code === currentLang) currentItem = item;
+    });
+    if (currentItem) {
+      setTimeout(function () {
+        try { currentItem.el.scrollIntoView({ block: "center" }); } catch (e) {}
+      }, 70);
+    }
     picker.wrap.classList.add("bb-anim");
     setTimeout(function () { picker.wrap.classList.remove("bb-anim"); }, 700);
-    try { picker.input.focus({ preventScroll: true }); } catch (e) { picker.input.focus(); }
+    try {
+      picker.input.focus({ preventScroll: true });
+    } catch (e) {
+      picker.input.focus();
+    }
   }
 
-  function closePicker(refocus) {
+  function closePicker(refocusButton) {
     if (!picker || !picker.open) return;
     picker.open = false;
     picker.wrap.classList.remove("open");
     picker.btn.setAttribute("aria-expanded", "false");
     picker.veil.classList.remove("show");
-    if (refocus) { try { picker.btn.focus({ preventScroll: true }); } catch (e) {} }
+    if (refocusButton) {
+      try { picker.btn.focus({ preventScroll: true }); } catch (e) {}
+    }
   }
 
-  function updatePicker() {
-    var meta = null;
-    LANGS.forEach(function (l) { if (l.code === current) meta = l; });
-    if (!meta) meta = LANGS[0];
+  function refreshPicker() {
+    var meta = findLang(currentLang) || LANGS[0];
     picker.btnName.textContent = meta.name;
-    picker.items.forEach(function (it) {
-      var on = it.code === current;
-      it.el.classList.toggle("current", on);
-      it.el.setAttribute("aria-selected", on ? "true" : "false");
+    picker.items.forEach(function (item) {
+      var on = item.code === currentLang;
+      item.el.classList.toggle("current", on);
+      item.el.setAttribute("aria-selected", on ? "true" : "false");
     });
   }
 
-  function buildSelector() {
+  function buildPicker() {
     var wrap = document.createElement("div");
     wrap.className = "bb-lang";
-    /* Situated the Apple way: language choice lives in the footer, in its
-       own end bar, as a quiet text control - never in the top nav. */
-    var footerEl = document.querySelector("footer");
-    if (footerEl) {
+    var footer = document.querySelector("footer");
+    if (footer) {
       var bar = document.createElement("div");
       bar.className = "bb-footer-bar";
       wrap.classList.add("bb-foot");
       bar.appendChild(wrap);
-      footerEl.appendChild(bar);
+      footer.appendChild(bar);
     } else {
-      var host = document.querySelector(".nav-inner") || document.querySelector("header") || document.body;
+      var host = document.querySelector(".nav-inner") ||
+        document.querySelector("header") || document.body;
       host.appendChild(wrap);
     }
 
-    var btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "bb-lang-btn";
-    btn.setAttribute("aria-haspopup", "listbox");
-    btn.setAttribute("aria-expanded", "false");
-    btn.setAttribute("aria-label", "Language");
-    btn.innerHTML = GLOBE;
-    var btnName = document.createElement("span");
-    btnName.className = "bb-lang-btn-name";
-    btnName.textContent = "English";
-    btn.appendChild(btnName);
-    var chevWrap = document.createElement("span");
-    chevWrap.innerHTML = CHEV;
-    btn.appendChild(chevWrap.firstChild);
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "bb-lang-btn";
+    button.setAttribute("aria-haspopup", "listbox");
+    button.setAttribute("aria-expanded", "false");
+    button.setAttribute("aria-label", "Language");
+    button.innerHTML = GLOBE;
+    var buttonName = document.createElement("span");
+    buttonName.className = "bb-lang-btn-name";
+    buttonName.textContent = "English";
+    button.appendChild(buttonName);
+    var chevronHolder = document.createElement("span");
+    chevronHolder.innerHTML = CHEV;
+    button.appendChild(chevronHolder.firstChild);
 
     var panel = document.createElement("div");
     panel.className = "bb-lang-panel";
     panel.setAttribute("role", "dialog");
     panel.setAttribute("aria-label", "Choose a language");
 
-    var search = document.createElement("div");
-    search.className = "bb-lang-search";
-    search.innerHTML = MAG;
+    var searchRow = document.createElement("div");
+    searchRow.className = "bb-lang-search";
+    searchRow.innerHTML = MAG;
     var input = document.createElement("input");
     input.type = "text";
     input.className = "bb-lang-input";
@@ -640,8 +737,8 @@
     input.setAttribute("aria-controls", "bb-lang-list");
     input.setAttribute("autocomplete", "off");
     input.setAttribute("spellcheck", "false");
-    search.appendChild(input);
-    panel.appendChild(search);
+    searchRow.appendChild(input);
+    panel.appendChild(searchRow);
 
     var list = document.createElement("ul");
     list.className = "bb-lang-list";
@@ -661,88 +758,117 @@
     document.body.appendChild(veil);
 
     picker = {
-      wrap: wrap, btn: btn, btnName: btnName, panel: panel, input: input,
-      list: list, emptyEl: empty, veil: veil, items: [], open: false, activeEl: null
+      wrap: wrap, btn: button, btnName: buttonName, panel: panel,
+      input: input, list: list, emptyEl: empty, veil: veil,
+      items: [], open: false, activeEl: null
     };
 
-    LANGS.forEach(function (l, i) {
-      var li = document.createElement("li");
-      li.className = "bb-lang-item";
-      li.id = "bb-lang-opt-" + l.code;
-      li.setAttribute("role", "option");
-      li.setAttribute("aria-selected", "false");
-      li.setAttribute("data-code", l.code);
-      li.style.setProperty("--i", Math.min(i, 14));
-      var nm = document.createElement("span");
-      nm.className = "bb-lang-name";
-      nm.textContent = l.name;
-      li.appendChild(nm);
-      if (l.en && l.en !== l.name) {
-        var en = document.createElement("span");
-        en.className = "bb-lang-en";
-        en.textContent = l.en;
-        li.appendChild(en);
+    LANGS.forEach(function (lang, i) {
+      var row = document.createElement("li");
+      row.className = "bb-lang-item";
+      row.id = "bb-lang-opt-" + lang.code;
+      row.setAttribute("role", "option");
+      row.setAttribute("aria-selected", "false");
+      row.setAttribute("data-code", lang.code);
+      row.style.setProperty("--i", Math.min(i, 14));
+      var native = document.createElement("span");
+      native.className = "bb-lang-name";
+      native.textContent = lang.name;
+      row.appendChild(native);
+      if (lang.en && lang.en !== lang.name) {
+        var english = document.createElement("span");
+        english.className = "bb-lang-en";
+        english.textContent = lang.en;
+        row.appendChild(english);
       }
-      var ck = document.createElement("span");
-      ck.innerHTML = CHECK;
-      li.appendChild(ck.firstChild);
-      list.appendChild(li);
+      var checkHolder = document.createElement("span");
+      checkHolder.innerHTML = CHECK;
+      row.appendChild(checkHolder.firstChild);
+      list.appendChild(row);
       picker.items.push({
-        code: l.code, el: li,
-        fName: foldStr(l.name), fEn: foldStr(l.en || "")
+        code: lang.code, el: row,
+        fName: foldForSearch(lang.name), fEn: foldForSearch(lang.en || "")
       });
     });
 
-    btn.addEventListener("click", function () {
-      if (picker.open) closePicker(false); else openPicker();
+    button.addEventListener("click", function () {
+      if (picker.open) closePicker(false);
+      else openPicker();
     });
-    input.addEventListener("input", filterList);
-    input.addEventListener("keydown", function (ev) {
-      var vis = visibleItems();
-      var idx = vis.findIndex(function (v) { return v.el === picker.activeEl; });
-      if (ev.key === "ArrowDown") { ev.preventDefault(); setActive(idx + 1); }
-      else if (ev.key === "ArrowUp") { ev.preventDefault(); setActive(idx - 1); }
-      else if (ev.key === "Enter") {
-        ev.preventDefault();
-        if (picker.activeEl) { setLang(picker.activeEl.getAttribute("data-code"), true); closePicker(true); }
-      } else if (ev.key === "Escape") { ev.preventDefault(); closePicker(true); }
+    input.addEventListener("input", applyFilter);
+    input.addEventListener("keydown", function (event) {
+      var visible = shownItems();
+      var at = -1;
+      for (var i = 0; i < visible.length; i++) {
+        if (visible[i].el === picker.activeEl) {
+          at = i;
+          break;
+        }
+      }
+      if (event.key === "ArrowDown") {
+        event.preventDefault();
+        highlight(at + 1);
+      } else if (event.key === "ArrowUp") {
+        event.preventDefault();
+        highlight(at - 1);
+      } else if (event.key === "Enter") {
+        event.preventDefault();
+        if (picker.activeEl) {
+          setLang(picker.activeEl.getAttribute("data-code"), true);
+          closePicker(true);
+        }
+      } else if (event.key === "Escape") {
+        event.preventDefault();
+        closePicker(true);
+      }
     });
-    list.addEventListener("click", function (ev) {
-      var li = ev.target.closest ? ev.target.closest(".bb-lang-item") : null;
-      if (li) { setLang(li.getAttribute("data-code"), true); closePicker(true); }
+    list.addEventListener("click", function (event) {
+      var row = event.target.closest ? event.target.closest(".bb-lang-item") : null;
+      if (row) {
+        setLang(row.getAttribute("data-code"), true);
+        closePicker(true);
+      }
     });
-    list.addEventListener("mousemove", function (ev) {
-      var li = ev.target.closest ? ev.target.closest(".bb-lang-item") : null;
-      if (li && li !== picker.activeEl && !li.hidden) {
-        var vis = visibleItems();
-        setActive(vis.findIndex(function (v) { return v.el === li; }));
+    list.addEventListener("mousemove", function (event) {
+      var row = event.target.closest ? event.target.closest(".bb-lang-item") : null;
+      if (row && row !== picker.activeEl && !row.hidden) {
+        var visible = shownItems();
+        var at = -1;
+        for (var i = 0; i < visible.length; i++) {
+          if (visible[i].el === row) {
+            at = i;
+            break;
+          }
+        }
+        highlight(at);
       }
     });
     veil.addEventListener("click", function () { closePicker(false); });
-    document.addEventListener("mousedown", function (ev) {
-      if (picker.open && !wrap.contains(ev.target)) closePicker(false);
+    document.addEventListener("mousedown", function (event) {
+      if (picker.open && !wrap.contains(event.target)) closePicker(false);
     });
-    document.addEventListener("keydown", function (ev) {
-      if (ev.key === "Escape" && picker.open) closePicker(true);
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && picker.open) closePicker(true);
     });
 
-    wrap.appendChild(btn);
+    wrap.appendChild(button);
     wrap.appendChild(panel);
-    updatePicker();
+    refreshPicker();
   }
 
   function init() {
-    buildSelector();
+    buildPicker();
     var saved = null;
     try { saved = localStorage.getItem("bb-lang"); } catch (e) {}
-    var rawTag = (navigator.language || "en").toLowerCase();
-    var auto = rawTag.split("-")[0];
-    // Filipino browsers may report a 3-letter tag; check the full tag first.
-    var initial = saved || (LANGS.some(function (l) { return l.code === rawTag; }) ? rawTag : auto) || "en";
-    var known = LANGS.some(function (l) { return l.code === initial; });
-    setLang(known ? initial : "en", false);
-    // Late-inserted content (nav/search scripts) gets a second pass.
-    setTimeout(function () { retranslatePass(); }, 600);
+    var browserTag = (navigator.language || "en").toLowerCase();
+    var primary = browserTag.split("-")[0];
+    /* Browsers may report a 3-letter tag (e.g. Filipino); the full tag
+       is checked first, then the primary part. */
+    var initial = saved ||
+      (findLang(browserTag) ? browserTag : primary) || "en";
+    setLang(findLang(initial) ? initial : "en", false);
+    /* Late-inserted content (nav/search scripts) gets a second pass. */
+    setTimeout(function () { retranslate(); }, 600);
   }
 
   if (document.readyState === "loading") {

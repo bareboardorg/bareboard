@@ -1,113 +1,112 @@
-/* BareBoard datasheet index — search + category filters.
-   Scoped to the "Complete datasheet index" section only (#all-datasheets). */
+/* Datasheet index — search box plus category pills over the
+   "Complete datasheet index" section (#all-datasheets) on datasheets.html.
+   Everything filtered here is already in the page; there is no fetch. */
 (function () {
-  'use strict';
+  "use strict";
 
-  var root = document.getElementById('all-datasheets');
-  var searchInput = document.getElementById('ds-search');
-  var catFilter = document.getElementById('ds-cat-filter');
-  var countEl = document.getElementById('ds-count');
-  var noResults = document.getElementById('ds-no-results');
-  if (!root || !searchInput || !catFilter) return;
+  var root = document.getElementById("all-datasheets");
+  var searchBox = document.getElementById("ds-search");
+  var pillBar = document.getElementById("ds-cat-filter");
+  var countLine = document.getElementById("ds-count");
+  var emptyNote = document.getElementById("ds-no-results");
+  if (!root || !searchBox || !pillBar) return;
 
-  // Collect category sections (direct child <section> elements with tables).
-  var sections = Array.prototype.slice.call(
-    root.querySelectorAll(':scope > section[id]')
-  ).filter(function (s) {
-    return s.querySelector('table.datasheet-table');
-  });
-
-  var state = { q: '', cat: 'all' };
-
-  // Build category buttons from the sections' own headings.
-  var allBtn = document.createElement('button');
-  allBtn.type = 'button';
-  allBtn.dataset.cat = 'all';
-  allBtn.className = 'active';
-  allBtn.setAttribute('aria-pressed', 'true');
-  catFilter.appendChild(allBtn);
-  sections.forEach(function (s) {
-    var h = s.querySelector('h2');
-    var label = h ? h.textContent.replace(/\s*\(\d+\)\s*$/, '').trim() : s.id;
-    var btn = document.createElement('button');
-    btn.type = 'button';
-    btn.dataset.cat = s.id;
-    btn.textContent = label;
-    btn.setAttribute('aria-pressed', 'false');
-    catFilter.appendChild(btn);
-  });
-  var buttons = Array.prototype.slice.call(catFilter.querySelectorAll('button'));
-
-  catFilter.addEventListener('click', function (e) {
-    var btn = e.target.closest('button');
-    if (!btn) return;
-    state.cat = btn.dataset.cat;
-    buttons.forEach(function (b) {
-      var on = b === btn;
-      b.classList.toggle('active', on);
-      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+  /* One category per direct child <section> that holds a datasheet table. */
+  var categories = Array.prototype.slice.call(root.querySelectorAll(":scope > section[id]"))
+    .filter(function (section) {
+      return section.querySelector("table.datasheet-table");
     });
-    apply();
-  });
 
-  searchInput.addEventListener('input', function () {
-    state.q = searchInput.value.trim().toLowerCase();
-    apply();
-  });
+  var selectedCat = "all";
+  var query = "";
 
-  function rowText(tr) {
-    return (tr.textContent || '').toLowerCase();
+  function headingBase(heading) {
+    return heading.textContent.replace(/\s*\(\d+(\/\d+)?\)\s*$/, "").trim();
   }
 
-  function apply() {
-    var q = state.q;
-    var totalVisible = 0;
-    var totalRows = 0;
+  function makePill(cat, label, pressed) {
+    var pill = document.createElement("button");
+    pill.type = "button";
+    pill.dataset.cat = cat;
+    pill.className = pressed ? "active" : "";
+    pill.setAttribute("aria-pressed", pressed ? "true" : "false");
+    if (label !== null) pill.textContent = label;
+    return pill;
+  }
 
-    sections.forEach(function (s) {
-      var showSection = state.cat === 'all' || state.cat === s.id;
+  /* The "all" pill intentionally carries no label: that is how the page
+     has always rendered it (an empty first pill), and the rewrite keeps
+     the page looking exactly the same. */
+  pillBar.appendChild(makePill("all", null, true));
+  categories.forEach(function (section) {
+    var heading = section.querySelector("h2");
+    var label = heading ? headingBase(heading) : section.id;
+    pillBar.appendChild(makePill(section.id, label, false));
+  });
+  var pills = Array.prototype.slice.call(pillBar.querySelectorAll("button"));
+
+  pillBar.addEventListener("click", function (event) {
+    var pill = event.target.closest("button");
+    if (!pill) return;
+    selectedCat = pill.dataset.cat;
+    pills.forEach(function (other) {
+      var on = other === pill;
+      other.classList.toggle("active", on);
+      other.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+    refresh();
+  });
+
+  searchBox.addEventListener("input", function () {
+    query = searchBox.value.trim().toLowerCase();
+    refresh();
+  });
+
+  function refresh() {
+    var shownTotal = 0;
+    var rowTotal = 0;
+
+    categories.forEach(function (section) {
+      var inCategory = selectedCat === "all" || selectedCat === section.id;
       var rows = Array.prototype.slice.call(
-        s.querySelectorAll('table.datasheet-table tbody tr')
-      );
-      var visibleInSection = 0;
-      rows.forEach(function (tr) {
-        totalRows++;
-        var matchQ = !q || rowText(tr).indexOf(q) !== -1;
-        var show = showSection && matchQ;
-        tr.hidden = !show;
-        if (show) visibleInSection++;
+        section.querySelectorAll("table.datasheet-table tbody tr"));
+      var shownHere = 0;
+      rows.forEach(function (row) {
+        rowTotal++;
+        var textMatch = !query || (row.textContent || "").toLowerCase().indexOf(query) !== -1;
+        var show = inCategory && textMatch;
+        row.hidden = !show;
+        if (show) shownHere++;
       });
-      // Keep section visible only if it has visible rows.
-      s.hidden = visibleInSection === 0;
-      // Update the count in the section heading: "Name (visible/total)".
-      var h = s.querySelector('h2');
-      if (h) {
-        var base = h.textContent.replace(/\s*\(\d+(\/\d+)?\)\s*$/, '').trim();
-        if (visibleInSection !== rows.length) {
-          h.textContent = base + ' (' + visibleInSection + '/' + rows.length + ')';
-        } else {
-          h.textContent = base + ' (' + rows.length + ')';
-        }
+      /* A section with no visible rows hides itself entirely. */
+      section.hidden = shownHere === 0;
+      var heading = section.querySelector("h2");
+      if (heading) {
+        var base = headingBase(heading);
+        heading.textContent = shownHere !== rows.length
+          ? base + " (" + shownHere + "/" + rows.length + ")"
+          : base + " (" + rows.length + ")";
       }
-      totalVisible += visibleInSection;
+      shownTotal += shownHere;
     });
 
-    // The prose-only "no public datasheet" note: show when browsing All
-    // or when the search matches its text; never counted in totals.
-    var note = document.getElementById('no-public-datasheet');
+    /* The prose-only "no public datasheet" note is not a category table:
+       it shows while browsing All (or its own id) when the query matches
+       its text, and it is never counted in the totals. */
+    var note = document.getElementById("no-public-datasheet");
     if (note) {
-      var showNote = (state.cat === 'all' || state.cat === 'no-public-datasheet') &&
-        (!q || (note.textContent || '').toLowerCase().indexOf(q) !== -1);
-      note.hidden = !showNote;
+      var noteInCat = selectedCat === "all" || selectedCat === "no-public-datasheet";
+      var noteMatches = !query || (note.textContent || "").toLowerCase().indexOf(query) !== -1;
+      note.hidden = !(noteInCat && noteMatches);
     }
 
-    if (countEl) {
-      countEl.textContent = q || state.cat !== 'all'
-        ? 'Showing ' + totalVisible + ' of ' + totalRows + ' datasheets'
-        : totalRows + ' datasheets indexed';
+    if (countLine) {
+      countLine.textContent = (query || selectedCat !== "all")
+        ? "Showing " + shownTotal + " of " + rowTotal + " datasheets"
+        : rowTotal + " datasheets indexed";
     }
-    if (noResults) noResults.hidden = totalVisible !== 0;
+    if (emptyNote) emptyNote.hidden = shownTotal !== 0;
   }
 
-  apply();
+  refresh();
 })();

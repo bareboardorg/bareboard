@@ -1,71 +1,80 @@
-/* BareBoard Devices — Finder-style column browser. No frameworks, no build step. */
+/* Devices — the column browser on devices/index.html.
+   No frameworks, no build step. */
 
+/* The frame: a rounded card that scrolls sideways when the columns
+   outgrow it. */
 .col-browser {
-  margin-top: 2.5rem;
+  -webkit-overflow-scrolling: touch;
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 12px;
-  background: var(--surface);
+  margin-top: 2.5rem;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
 }
 
 .col-strip {
-  display: flex;
   align-items: stretch;
+  display: flex;
   min-height: 22rem;
 }
 
+/* A column is only as wide as its longest word — no wrapping — between
+   a floor and a ceiling. */
 .browser-col {
-  /* James's rule: smallest width that fits the longest word, no wrapping. */
-  width: max-content;
-  min-width: 11rem;
-  max-width: 24rem;
-  flex: 0 0 auto;
   border-right: 1px solid var(--line);
   display: flex;
+  flex: 0 0 auto;
   flex-direction: column;
+  max-width: 24rem;
+  min-width: 11rem;
+  width: max-content;
 }
 
-.browser-col:last-child { border-right: 0; }
+.browser-col:last-child {
+  border-right: 0;
+}
 
 .col-head {
-  padding: 0.55rem 0.9rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--tertiary);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--tertiary);
-  border-bottom: 1px solid var(--line);
-  white-space: nowrap;
   overflow: hidden;
+  padding: 0.55rem 0.9rem;
   text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .col-rows {
   list-style: none;
-  padding: 0.35rem;
   overflow-y: auto;
+  padding: 0.35rem;
 }
 
+/* Rows: label left, chevron right, picked row tinted. */
 .col-row {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1.25rem;
-  width: 100%;
-  padding: 0.42rem 0.6rem;
+  background: transparent;
   border: 0;
   border-radius: 7px;
-  background: transparent;
   color: var(--text);
+  cursor: pointer;
+  display: flex;
   font: inherit;
   font-size: 0.92rem;
+  gap: 1.25rem;
+  justify-content: space-between;
+  padding: 0.42rem 0.6rem;
   text-align: left;
   white-space: nowrap;
-  cursor: pointer;
+  width: 100%;
 }
 
-.col-row:hover { background: rgba(0, 102, 204, 0.07); }
+.col-row:hover {
+  background: rgba(0, 102, 204, 0.07);
+}
 
 .col-row[aria-selected="true"] {
   background: rgba(0, 102, 204, 0.13);
@@ -79,31 +88,35 @@
   line-height: 1;
 }
 
-.col-row[aria-selected="true"] .chev { color: var(--accent-ink); }
-
-.col-empty {
-  padding: 0.42rem 0.6rem;
-  font-size: 0.9rem;
-  color: var(--tertiary);
-  white-space: nowrap;
-  font-style: italic;
+.col-row[aria-selected="true"] .chev {
+  color: var(--accent-ink);
 }
 
-/* Preview column — our take on Finder's preview pane. */
-.col-preview { padding: 1.1rem 1.2rem; }
+.col-empty {
+  color: var(--tertiary);
+  font-size: 0.9rem;
+  font-style: italic;
+  padding: 0.42rem 0.6rem;
+  white-space: nowrap;
+}
+
+/* Preview column — the detail pane for the selected device. */
+.col-preview {
+  padding: 1.1rem 1.2rem;
+}
 
 .preview-status {
+  background: rgba(26, 127, 55, 0.1);
+  border: 1px solid rgba(26, 127, 55, 0.25);
+  border-radius: 999px;
+  color: #1a7f37;
   display: inline-block;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #1a7f37;
-  background: rgba(26, 127, 55, 0.1);
-  border: 1px solid rgba(26, 127, 55, 0.25);
-  border-radius: 999px;
-  padding: 0.18rem 0.7rem;
   margin-bottom: 0.8rem;
+  padding: 0.18rem 0.7rem;
+  text-transform: uppercase;
 }
 
 .col-preview h2 {
@@ -114,8 +127,8 @@
 }
 
 .col-preview p {
-  font-size: 0.92rem;
   color: var(--secondary);
+  font-size: 0.92rem;
   margin-bottom: 0.9rem;
   white-space: normal;
 }
@@ -126,14 +139,16 @@
 }
 
 .col-preview .facts li {
-  font-size: 0.88rem;
-  color: var(--text);
-  padding: 0.28rem 0;
   border-top: 1px solid var(--line);
+  color: var(--text);
+  font-size: 0.88rem;
+  padding: 0.28rem 0;
   white-space: normal;
 }
 
-.col-preview .facts li:last-child { border-bottom: 1px solid var(--line); }
+.col-preview .facts li:last-child {
+  border-bottom: 1px solid var(--line);
+}
 
 .preview-link {
   display: inline-block;
@@ -142,12 +157,17 @@
 }
 
 .bench-note {
-  margin-top: 1.75rem;
-  font-size: 0.9rem;
   color: var(--secondary);
+  font-size: 0.9rem;
+  margin-top: 1.75rem;
 }
 
 @media (max-width: 560px) {
-  .col-strip { min-height: 18rem; }
-  .browser-col { min-width: 9.5rem; }
+  .col-strip {
+    min-height: 18rem;
+  }
+
+  .browser-col {
+    min-width: 9.5rem;
+  }
 }

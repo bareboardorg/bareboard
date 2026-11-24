@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "generated": "2026-11-17",
-  "total": 617,
+  "generated": "2026-11-23",
+  "total": 633,
   "counts": {
-    "manual": 176,
+    "manual": 187,
     "schematic": 10,
     "documentation": 13,
-    "datasheet": 125,
+    "datasheet": 126,
     "lawsuit": 30,
     "fda": 170,
     "fcc": 88,
-    "other": 5
+    "other": 9
   },
   "documents": [
     {
@@ -560,14 +560,92 @@
       "link_only": false
     },
     {
-      "title": "Permobil C300 Service Manual (partial excerpt, 4 pp.)",
+      "title": "Jazzy 1450 / Quantum 1450 Product Specifications Sheet (INFINFB3028 Rev. H, April 2023)",
+      "maker": "Quantum Rehab / Pride Mobility Products Corp.",
+      "model": "Jazzy 1450",
+      "platform": "PMD",
+      "category": "manual",
+      "doc_type": "technical",
+      "url": "/library/collected-public-docs/pmd/pride_jazzy-1450_specs.pdf",
+      "source_url": "https://quantumrehab.eu/wp-content/uploads/2025/11/INFINFB3028_US_QJ1450_Specifications_RevH_April23.pdf",
+      "bytes": 160525,
+      "basis": "Manufacturer-published document, posted with attribution under fair use.",
+      "link_only": false
+    },
+    {
+      "title": "Jazzy 1450 Product Brochure (Pride Mobility)",
+      "maker": "Pride Mobility Products Corp.",
+      "model": "Jazzy 1450",
+      "platform": "PMD",
+      "category": "manual",
+      "doc_type": "technical",
+      "url": "/library/collected-public-docs/pmd/pride_jazzy-1450_brochure.pdf",
+      "source_url": "https://nmaccess.com/wp-content/uploads/2020/08/Jazzy-1450-Brochure-1.pdf",
+      "bytes": 267978,
+      "basis": "Manufacturer-published document, posted with attribution under fair use.",
+      "link_only": false
+    },
+    {
+      "title": "Jazzy EVO 613 / 613 Li Specifications (Pride Mobility)",
+      "maker": "Pride Mobility Products Corp.",
+      "model": "Jazzy EVO 613",
+      "platform": "PMD",
+      "category": "manual",
+      "doc_type": "technical",
+      "url": "/library/collected-public-docs/pmd/pride_jazzy-evo-613_specs.pdf",
+      "source_url": "https://www.hoveround.com/media/attachments/j/a/jazzy-evo-613-specs.pdf",
+      "bytes": 908470,
+      "basis": "Manufacturer-published document, posted with attribution under fair use.",
+      "link_only": false
+    },
+    {
+      "title": "Jazzy EVO 613 / EVO 613 Li Owner's Manual (INFMANU5239 Rev. B, April 2022)",
+      "maker": "Pride Mobility Products Corp.",
+      "model": "Jazzy EVO 613",
+      "platform": "PMD",
+      "category": "manual",
+      "doc_type": "owner",
+      "url": "/library/collected-public-docs/pmd/pride_jazzy-evo-613_owner.pdf",
+      "source_url": "https://pride-mobility.nl/wp-content/uploads/2025/07/US_UK_CA_AU_Jazzy-EVO-Series_om_RevB_Apr22_5239.pdf",
+      "bytes": 5663819,
+      "basis": "Manufacturer-published document, posted with attribution under fair use.",
+      "link_only": false
+    },
+    {
+      "title": "Permobil C300 Corpus 3G Specification Sheet (C300C3G012213)",
+      "maker": "Permobil",
+      "model": "C300 Corpus 3G",
+      "platform": "PMD",
+      "category": "manual",
+      "doc_type": "technical",
+      "url": "/library/collected-public-docs/pmd/permobil_c300-corpus-3g_specs.pdf",
+      "source_url": "https://ilsau.com.au/wp-content/uploads/2014/04/Permobil-C300-Corpus3G.pdf",
+      "bytes": 1043666,
+      "basis": "Manufacturer-published document, posted with attribution under fair use.",
+      "link_only": false
+    },
+    {
+      "title": "Permobil C300 PS Specification Sheet (C300PS100508)",
+      "maker": "Permobil",
+      "model": "C300 PS",
+      "platform": "PMD",
+      "category": "manual",
+      "doc_type": "technical",
+      "url": "/library/collected-public-docs/pmd/permobil_c300-ps_specs.pdf",
+      "source_url": "http://mediequip.net/wp-content/uploads/2015/07/PermobilC300_PS.pdf",
+      "bytes": 1082707,
+      "basis": "Manufacturer-published document, posted with attribution under fair use.",
+      "link_only": false
+    },
+    {
+      "title": "Permobil C300 Service Manual (UK Edition no. 3)",
       "maker": "Permobil",
       "model": "C300",
       "platform": "PMD",
       "category": "manual",
       "doc_type": "service",
       "url": "/library/collected-public-docs/pmd/permobil_c300_service.pdf",
-      "source_url": null,
+      "source_url": "https://uploads.strikinglycdn.com/files/86c7c4e1-23d0-4f2b-9000-fcea0e60ce8b/sijesamowatonej.pdf",
       "bytes": 100112,
       "basis": "Manufacturer-published document, posted with attribution under fair use.",
       "link_only": false
@@ -872,6 +950,58 @@
       "link_only": false
     },
     {
+      "title": "Q6 Edge sell sheet (Q6EDGE-2-18-14, February 2014)",
+      "maker": "Quantum Rehab",
+      "model": "Q6 Edge",
+      "platform": "PMD",
+      "category": "manual",
+      "doc_type": "technical",
+      "url": "/library/collected-public-docs/pmd/quantum_q6-edge_sell-sheet.pdf",
+      "source_url": "http://proyectamosautonomia.com/images/movilidad/motorizadas/adultos/quantum_q6_edge_adult/brochure.pdf",
+      "bytes": 1082381,
+      "basis": "Manufacturer-published document, posted with attribution under fair use.",
+      "link_only": false
+    },
+    {
+      "title": "Q6 Edge Series Owner's Manual (INFMANU4037 Rev. D, August 2011)",
+      "maker": "Pride Mobility Products Corp.",
+      "model": "Q6 Edge",
+      "platform": "PMD",
+      "category": "manual",
+      "doc_type": "owner",
+      "url": "/library/collected-public-docs/pmd/quantum_q6-edge_owner.pdf",
+      "source_url": "https://alliedmedical.co.nz/cdn/shop/files/Q6_Edge_User_Manual.pdf?v=11259289486578642526",
+      "bytes": 5495131,
+      "basis": "Manufacturer-published document, posted with attribution under fair use.",
+      "link_only": false
+    },
+    {
+      "title": "Quantum 4Front 2 / 4Front 2 HD IPB (S/N JF6/JF7, INFMANU5204 Rev.D)",
+      "maker": "Quantum Rehab (Pride Mobility)",
+      "model": "4Front 2",
+      "platform": "PMD",
+      "category": "manual",
+      "doc_type": "parts",
+      "url": "/library/collected-public-docs/pmd/quantum_4front-2_ipb.pdf",
+      "source_url": "https://alliedmedical.co.nz/cdn/shop/files/4Front_2_and_4Front_2_HD_IPB.pdf?v=4112177546926890086",
+      "bytes": 7487981,
+      "basis": "Manufacturer-published document, posted with attribution under fair use.",
+      "link_only": false
+    },
+    {
+      "title": "Quantum 4Front Owner's Manual (INFMANU4864 Rev E, Feb 2020)",
+      "maker": "Quantum Rehab (Pride Mobility)",
+      "model": "4Front 2",
+      "platform": "PMD",
+      "category": "manual",
+      "doc_type": "owner",
+      "url": "/library/collected-public-docs/pmd/quantum_4front-2_owner.pdf",
+      "source_url": "https://www.quantumrehab.com/pdf/owners-manuals/us_uk_au_quantum_4front_om.pdf",
+      "bytes": 12032555,
+      "basis": "Manufacturer-published document, posted with attribution under fair use.",
+      "link_only": false
+    },
+    {
       "title": "Quantum 6000 Illustrated Parts Breakdown (INFMANU3160 Rev.B)",
       "maker": "Quantum Rehab (Pride Mobility)",
       "model": "Quantum 6000",
@@ -987,6 +1117,19 @@
       "bytes": null,
       "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
+    },
+    {
+      "title": "Quantum/Jazzy 1450 Series Owner's Manual (INFMANU4342 Rev. C, January 2020)",
+      "maker": "Pride Mobility Products Corp.",
+      "model": "Jazzy 1450",
+      "platform": "PMD",
+      "category": "manual",
+      "doc_type": "owner",
+      "url": "/library/collected-public-docs/pmd/pride_jazzy-1450_owner.pdf",
+      "source_url": "https://www.freedomhme.com/uploads/userfiles/files/documents/products/tinywow_compress_420975.pdf",
+      "bytes": 4241657,
+      "basis": "Manufacturer-published document, posted with attribution under fair use.",
+      "link_only": false
     },
     {
       "title": "Sunrise Medical Q7ME Swing Arm Installation (Q700M base)",
@@ -2134,13 +2277,13 @@
     },
     {
       "title": "Samsung S3C6410X RISC Microprocessor User's Manual",
-      "maker": "S3C6410X Rev 1.20",
+      "maker": "S3C6410X Rev 1.10",
       "model": null,
       "platform": "Vintage & Retro",
       "category": "manual",
       "doc_type": "Rare manual · 1990–2014 · few mirrors",
       "url": null,
-      "source_url": "https://archive.org/download/bareboard-manufacturer-docs/082-samsung-s3c6410x-risc-microprocessor-user-s-manual.pdf",
+      "source_url": "https://archive.org/details/pdfy-2BVXSEqkGL4DqlAN",
       "bytes": null,
       "basis": "UNVERIFIED — provenance not established",
       "link_only": true
@@ -2856,6 +2999,19 @@
       "doc_type": "Connectors / standards",
       "url": null,
       "source_url": "https://www.jst-connector.com/datasheet/jst-connector/B2B-XH-A.pdf",
+      "bytes": null,
+      "basis": "UNVERIFIED — provenance not established",
+      "link_only": true
+    },
+    {
+      "title": "USB Type-C specification",
+      "maker": "USB-IF",
+      "model": null,
+      "platform": "Connectors & Standards",
+      "category": "datasheet",
+      "doc_type": "Connectors / standards",
+      "url": null,
+      "source_url": "https://www.usb.org/documents",
       "bytes": null,
       "basis": "UNVERIFIED — provenance not established",
       "link_only": true
@@ -3921,7 +4077,7 @@
       "category": "datasheet",
       "doc_type": "Rare manual · 1990–2014 · few mirrors",
       "url": null,
-      "source_url": "https://archive.org/download/bareboard-manufacturer-docs/055-cyrix-mii-preliminary-data-sheet-jan-1999.pdf",
+      "source_url": "https://archive.org/details/bitsavers_cyrixCyrixheet199901_685696",
       "bytes": null,
       "basis": "UNVERIFIED — provenance not established",
       "link_only": true
@@ -4508,7 +4664,7 @@
       "url": null,
       "source_url": "https://www.seyfarth.com/news-insights/judge-denies-industry-challenge-to-massachusetts-data-access-law.html",
       "bytes": null,
-      "basis": "Public record: court opinion, published by the court.",
+      "basis": "Public record: court opinion; source is counsel's analysis (seyfarth.com), not the court.",
       "link_only": true
     },
     {
@@ -4560,7 +4716,7 @@
       "url": null,
       "source_url": "https://www.cohenmilstein.com/case-study/re-apple-inc-device-performance-litigation/",
       "bytes": null,
-      "basis": "Public record: court-filed settlement, published by the court.",
+      "basis": "Public record: court-filed settlement; source is plaintiffs' firm page (cohenmilstein.com), not the court.",
       "link_only": true
     },
     {
@@ -4573,7 +4729,7 @@
       "url": null,
       "source_url": "https://openclassactions.com/settlements/john-deere-right-to-repair-class-action-settlement.php",
       "bytes": null,
-      "basis": "Public record: court-filed settlement, published by the court.",
+      "basis": "Public record: court-filed settlement; source is a third-party aggregator summary (openclassactions.com), not the court.",
       "link_only": true
     },
     {
@@ -5211,6 +5367,19 @@
       "source_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf17/K170507.pdf",
       "bytes": 556307,
       "basis": "Public record: FDA 510(k) premarket notification (K170507), published by the FDA.",
+      "link_only": false
+    },
+    {
+      "title": "JAZZY 600 (K042612)",
+      "maker": "Pride Mobility Products Corp.",
+      "model": "JAZZY 600",
+      "platform": "Power Mobility (PMD)",
+      "category": "fda",
+      "doc_type": "fda-510k",
+      "url": "/library/collected-public-docs/pmd-fda/K042612.pdf",
+      "source_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf4/K042612.pdf",
+      "bytes": 273624,
+      "basis": "Public record: FDA 510(k) premarket notification (K042612), published by the FDA.",
       "link_only": false
     },
     {
@@ -6225,19 +6394,6 @@
       "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K945936",
       "bytes": 0,
       "basis": "Public record: FDA 510(k) premarket notification (K945936), published by the FDA.",
-      "link_only": true
-    },
-    {
-      "title": "JAZZY 600 (K042612)",
-      "maker": "Pride Mobility Products Corp.",
-      "model": "JAZZY 600",
-      "platform": null,
-      "category": "fda",
-      "doc_type": "fda-510k",
-      "url": null,
-      "source_url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K042612",
-      "bytes": 0,
-      "basis": "Public record: FDA 510(k) premarket notification (K042612), published by the FDA.",
       "link_only": true
     },
     {
@@ -8022,15 +8178,67 @@
       "link_only": false
     },
     {
-      "title": "Amylior Livre de pièces (Parts Book), Section 3 — Bases motorisées (PM | P24026 | R09)",
+      "title": "Amylior Livre de pièces (Parts Book), Section 3 — Bases motorisées (PM | P24026 | R09) - Part 1 of 2 (pages 1-36)",
       "maker": "Amylior Inc.",
       "model": "Alltrack Series (M3 base §3.1.3)",
       "platform": "PMD",
       "category": "other",
       "doc_type": "parts-book",
-      "url": "/library/collected-public-docs/pmd/amylior_alltrack-m3_parts-book-sec-3_fr-r09.pdf",
+      "url": "/library/collected-public-docs/pmd/amylior_alltrack-m3_parts-book-sec-3_fr-r09-part1.pdf",
       "source_url": "https://amylior.com/wp-content/uploads/bsk-pdf-manager/Amylior_Livre_de_piece_R09_sec_3_FR-CA_web.pdf",
-      "bytes": 34500311,
+      "bytes": 18564519,
+      "basis": "Manufacturer-published document, posted with attribution under fair use.",
+      "link_only": false
+    },
+    {
+      "title": "Amylior Livre de pièces (Parts Book), Section 3 — Bases motorisées (PM | P24026 | R09) - Part 2 of 2 (pages 37-71)",
+      "maker": "Amylior Inc.",
+      "model": "Alltrack Series (M3 base §3.1.3)",
+      "platform": "PMD",
+      "category": "other",
+      "doc_type": "parts-book",
+      "url": "/library/collected-public-docs/pmd/amylior_alltrack-m3_parts-book-sec-3_fr-r09-part2.pdf",
+      "source_url": "https://amylior.com/wp-content/uploads/bsk-pdf-manager/Amylior_Livre_de_piece_R09_sec_3_FR-CA_web.pdf",
+      "bytes": 16279821,
+      "basis": "Manufacturer-published document, posted with attribution under fair use.",
+      "link_only": false
+    },
+    {
+      "title": "Jazzy 614 HD Specifications (sell sheet, CA053119, May 2019)",
+      "maker": "Pride Mobility Products Corp.",
+      "model": "Jazzy 614 HD",
+      "platform": "PMD",
+      "category": "other",
+      "doc_type": "specs",
+      "url": "/library/collected-public-docs/pmd/pride_jazzy-614-hd_specs.pdf",
+      "source_url": "https://www.pridemobility.com/pdf/brochures/canada/english_pdf/ca_jazzy_614_hd_ss_e.pdf",
+      "bytes": 280839,
+      "basis": "Manufacturer-published document, posted with attribution under fair use.",
+      "link_only": false
+    },
+    {
+      "title": "Jazzy EVO 613 Quick Ship Order Form (INFINFB4362 Rev. A, 13 Aug 2021)",
+      "maker": "Pride Mobility Products Corp.",
+      "model": "Jazzy EVO 613",
+      "platform": "PMD",
+      "category": "other",
+      "doc_type": "order-form",
+      "url": "/library/collected-public-docs/pmd/pride_jazzy-evo-613_order-form.pdf",
+      "source_url": "https://cdn.southwestmedical.com/manual/jazzy_evo_613_li_order_form.pdf",
+      "bytes": 1083159,
+      "basis": "Manufacturer-published document, posted with attribution under fair use.",
+      "link_only": false
+    },
+    {
+      "title": "Q1450 (S/N JC4) Illustrated Parts Breakdown, Australia (INFMANU5144 Rev. A, 2020)",
+      "maker": "Quantum Rehab / Pride Mobility Products Corp.",
+      "model": "Jazzy 1450",
+      "platform": "PMD",
+      "category": "other",
+      "doc_type": "ipb",
+      "url": "/library/collected-public-docs/pmd/pride_jazzy-1450_ipb.pdf",
+      "source_url": "https://alliedmedical.co.nz/cdn/shop/files/Q1450_IPB.pdf?v=4560405209312707844",
+      "bytes": 6372087,
       "basis": "Manufacturer-published document, posted with attribution under fair use.",
       "link_only": false
     }

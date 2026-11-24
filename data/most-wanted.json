@@ -1,9 +1,13 @@
 {
   "version": 1,
-  "updated": "2026-11-05",
+  "updated": "2026-11-20",
   "about": "The Most Wanted board as data. This JSON is the registry of record for the board; most-wanted.html renders its board from this file client-side (most-wanted.js); the static list in the page is the no-JS fallback. most-wanted-tracker.csv is generated from it by tools/build-tracker.mjs. Community entries arrive as submissions (see submission.schema.json and README.md in this folder) and are merged here on acceptance.",
   "formula": {
-    "weights": { "rarity": 0.5, "darkness": 0.3, "reach": 0.2 },
+    "weights": {
+      "rarity": 0.5,
+      "darkness": 0.3,
+      "reach": 0.2
+    },
     "scale": "each component scored 0-10; score = 0.5*rarity + 0.3*darkness + 0.2*reach",
     "note": "Component scores are published per entry when the board has assigned them; null means not yet scored in public. Priority is the board's editorial band and is what the page displays."
   },
@@ -14,19 +18,32 @@
     "No bounties for sealed (NDA) documents - that is a market for stolen trade secrets.",
     "Circumvention material is never listed and never a target."
   ],
-  "statuses": ["wanted", "claimed", "on-the-bench", "documented"],
+  "statuses": [
+    "wanted",
+    "claimed",
+    "on-the-bench",
+    "documented"
+  ],
   "entries": [
     {
       "id": "humane-ai-pin",
       "name": "Humane AI Pin",
       "category": "wearable",
-      "soughtFor": "Wearable from a startup founded in 2018. HP acquired the company in a $116M deal in February 2025 and shut the servers down, bricking every Pin. Snapdragon-based wearable with almost no public board-level documentation.",
+      "soughtFor": "Wearable from a startup founded in 2018. HP bought most of Humane's assets — its CosmOS software, 300+ patents, and staff — for $116M in February 2025, and Humane shut the AI Pin servers down on February 28, 2025, killing cloud functions (offline functions such as the battery check still worked). Snapdragon-based wearable with almost no public board-level documentation.",
       "whyItMatters": "documents an entire product category's rise and fall at the silicon level.",
       "priority": "HIGH PRIORITY",
-      "scores": { "rarity": null, "darkness": null, "reach": null },
+      "scores": {
+        "rarity": null,
+        "darkness": null,
+        "reach": null
+      },
       "status": "wanted",
       "claim": null,
-      "links": { "device": null, "autopsy": null, "fcc": null },
+      "links": {
+        "device": null,
+        "autopsy": null,
+        "fcc": null
+      },
       "source": "board",
       "history": []
     },
@@ -37,10 +54,18 @@
       "soughtFor": "MediaTek-powered AI handheld. iFixit's Chip ID teardown has identified the main silicon; board-level detail on its power design and component choices is still thin.",
       "whyItMatters": "independent examination of heavily marketed AI hardware.",
       "priority": "HIGH PRIORITY",
-      "scores": { "rarity": null, "darkness": null, "reach": null },
+      "scores": {
+        "rarity": null,
+        "darkness": null,
+        "reach": null
+      },
       "status": "wanted",
       "claim": null,
-      "links": { "device": null, "autopsy": null, "fcc": null },
+      "links": {
+        "device": null,
+        "autopsy": null,
+        "fcc": null
+      },
       "source": "board",
       "history": []
     },
@@ -51,10 +76,18 @@
       "soughtFor": "Dual-chip (M2 + R1) spatial computer. Apple publishes nothing about the board; iFixit's Chip ID guide (February 2024) identified the main silicon, but board-level documentation is still thin and the display stack is unique.",
       "whyItMatters": "the most complex consumer board of its generation, still barely documented beyond chip identification.",
       "priority": "HIGH PRIORITY",
-      "scores": { "rarity": null, "darkness": null, "reach": null },
+      "scores": {
+        "rarity": null,
+        "darkness": null,
+        "reach": null
+      },
       "status": "wanted",
       "claim": null,
-      "links": { "device": null, "autopsy": null, "fcc": null },
+      "links": {
+        "device": null,
+        "autopsy": null,
+        "fcc": null
+      },
       "source": "board",
       "history": []
     },
@@ -62,13 +95,21 @@
       "id": "nintendo-switch-2",
       "name": "Nintendo Switch 2",
       "category": "console",
-      "soughtFor": "New generation hardware; its Tegra T239 silicon was identified in June 2025, but board layout and repairability characteristics are still undocumented.",
+      "soughtFor": "New generation hardware; its Tegra T239 silicon was identified in April 2025, but board layout and repairability characteristics are still undocumented.",
       "whyItMatters": "baseline documentation before revisions and cost-downs change the design.",
       "priority": "HIGH PRIORITY",
-      "scores": { "rarity": null, "darkness": null, "reach": null },
+      "scores": {
+        "rarity": null,
+        "darkness": null,
+        "reach": null
+      },
       "status": "wanted",
       "claim": null,
-      "links": { "device": null, "autopsy": null, "fcc": null },
+      "links": {
+        "device": null,
+        "autopsy": null,
+        "fcc": null
+      },
       "source": "board",
       "history": []
     },
@@ -79,10 +120,18 @@
       "soughtFor": "Discontinued headset with pancake-lens optics and Snapdragon XR2+ board. Units are vanishing; the display assembly deserves recording.",
       "whyItMatters": "preservation of a short-lived premium design.",
       "priority": "ELEVATED",
-      "scores": { "rarity": null, "darkness": null, "reach": null },
+      "scores": {
+        "rarity": null,
+        "darkness": null,
+        "reach": null
+      },
       "status": "wanted",
       "claim": null,
-      "links": { "device": null, "autopsy": null, "fcc": null },
+      "links": {
+        "device": null,
+        "autopsy": null,
+        "fcc": null
+      },
       "source": "board",
       "history": []
     },
@@ -93,10 +142,18 @@
       "soughtFor": "FPV drone with OcuSync video pipeline and tight firmware lockdown.",
       "whyItMatters": "independent examination of video transmission hardware the manufacturer keeps closed.",
       "priority": "ELEVATED",
-      "scores": { "rarity": null, "darkness": null, "reach": null },
+      "scores": {
+        "rarity": null,
+        "darkness": null,
+        "reach": null
+      },
       "status": "wanted",
       "claim": null,
-      "links": { "device": null, "autopsy": null, "fcc": null },
+      "links": {
+        "device": null,
+        "autopsy": null,
+        "fcc": null
+      },
       "source": "board",
       "history": []
     },
@@ -107,10 +164,18 @@
       "soughtFor": "Home robot, rare in the wild, with an unknown sensor and compute stack.",
       "whyItMatters": "almost no public hardware analysis of a shipping home robot.",
       "priority": "ELEVATED",
-      "scores": { "rarity": null, "darkness": null, "reach": null },
+      "scores": {
+        "rarity": null,
+        "darkness": null,
+        "reach": null
+      },
       "status": "wanted",
       "claim": null,
-      "links": { "device": null, "autopsy": null, "fcc": null },
+      "links": {
+        "device": null,
+        "autopsy": null,
+        "fcc": null
+      },
       "source": "board",
       "history": []
     },
@@ -121,10 +186,18 @@
       "soughtFor": "Extremely compact wearable; TechInsights has published a teardown of this generation, but no open board-level documentation exists.",
       "whyItMatters": "miniaturization techniques worth studying and recording.",
       "priority": "ELEVATED",
-      "scores": { "rarity": null, "darkness": null, "reach": null },
+      "scores": {
+        "rarity": null,
+        "darkness": null,
+        "reach": null
+      },
       "status": "wanted",
       "claim": null,
-      "links": { "device": null, "autopsy": null, "fcc": null },
+      "links": {
+        "device": null,
+        "autopsy": null,
+        "fcc": null
+      },
       "source": "board",
       "history": []
     },
@@ -135,10 +208,18 @@
       "soughtFor": "Subscription-linked exercise hardware.",
       "whyItMatters": "documents the connected-hardware category where software decisions can limit hardware you own.",
       "priority": "STANDARD",
-      "scores": { "rarity": null, "darkness": null, "reach": null },
+      "scores": {
+        "rarity": null,
+        "darkness": null,
+        "reach": null
+      },
       "status": "wanted",
       "claim": null,
-      "links": { "device": null, "autopsy": null, "fcc": null },
+      "links": {
+        "device": null,
+        "autopsy": null,
+        "fcc": null
+      },
       "source": "board",
       "history": []
     },
@@ -149,10 +230,18 @@
       "soughtFor": "Valve handheld with some existing coverage.",
       "whyItMatters": "the HDR OLED panel supply chain and revised board layout deserve a complete record.",
       "priority": "STANDARD",
-      "scores": { "rarity": null, "darkness": null, "reach": null },
+      "scores": {
+        "rarity": null,
+        "darkness": null,
+        "reach": null
+      },
       "status": "wanted",
       "claim": null,
-      "links": { "device": null, "autopsy": null, "fcc": null },
+      "links": {
+        "device": null,
+        "autopsy": null,
+        "fcc": null
+      },
       "source": "board",
       "history": []
     }

@@ -1,5 +1,11 @@
-/* BareBoard Devices — column browser logic. Categories are the ten
-   BareBoard device families; devices land here as they come off the bench. */
+/* Devices — the column browser on devices/index.html.
+ *
+ * Three columns: families, the devices in the picked family, and a
+ * detail pane for the picked device. The family list is the ten
+ * BareBoard device families; devices appear here as they come off the
+ * bench. The device entries below are the site's documentary content —
+ * titles, blurbs, and facts as published — kept exactly as written;
+ * the browsing code around them is fresh. */
 (function () {
   "use strict";
 
@@ -566,109 +572,109 @@
   var strip = document.getElementById("col-strip");
   if (!strip) return;
 
-  var selectedCategory = null;
-  var selectedDevice = null;
+  var pickedFamily = null;
+  var pickedDevice = null;
 
-  function el(tag, cls, text) {
-    var n = document.createElement(tag);
-    if (cls) n.className = cls;
-    if (text != null) n.textContent = text;
-    return n;
+  function node(tag, className, text) {
+    var made = document.createElement(tag);
+    if (className) made.className = className;
+    if (text !== null && text !== undefined) made.textContent = text;
+    return made;
   }
 
-  function clearFrom() {
-    while (strip.firstChild) strip.removeChild(strip.firstChild);
+  /* One selectable row: a label plus a chevron, marked with whether it
+     is the current pick. Clicks are handled by delegation on the strip,
+     so rows carry which family/device they stand for. */
+  function rowButton(label, selected, kind, index) {
+    var button = node("button", "col-row");
+    button.type = "button";
+    button.setAttribute("aria-selected", selected ? "true" : "false");
+    button.setAttribute("data-kind", kind);
+    button.setAttribute("data-index", String(index));
+    button.appendChild(node("span", null, label));
+    var chevron = node("span", "chev", "\u203a");
+    chevron.setAttribute("aria-hidden", "true");
+    button.appendChild(chevron);
+    return button;
   }
 
-  function makeColumn(headText) {
-    var col = el("section", "browser-col");
-    col.appendChild(el("div", "col-head", headText));
-    return col;
+  function columnShell(heading) {
+    var column = node("section", "browser-col");
+    column.appendChild(node("div", "col-head", heading));
+    return column;
   }
 
-  function renderCategoryColumn() {
-    var col = makeColumn("Categories");
-    var list = el("ul", "col-rows");
-    CATEGORIES.forEach(function (cat) {
-      var li = document.createElement("li");
-      var btn = el("button", "col-row", null);
-      btn.type = "button";
-      btn.setAttribute("aria-selected", cat === selectedCategory ? "true" : "false");
-      var label = el("span", null, cat.name);
-      var chev = el("span", "chev", "\u203a");
-      chev.setAttribute("aria-hidden", "true");
-      btn.appendChild(label);
-      btn.appendChild(chev);
-      btn.addEventListener("click", function () {
-        selectedCategory = cat;
-        selectedDevice = null;
-        render();
-      });
-      li.appendChild(btn);
-      list.appendChild(li);
+  function familyColumn() {
+    var column = columnShell("Categories");
+    var rows = node("ul", "col-rows");
+    CATEGORIES.forEach(function (family, index) {
+      var item = document.createElement("li");
+      item.appendChild(rowButton(family.name, family === pickedFamily, "family", index));
+      rows.appendChild(item);
     });
-    col.appendChild(list);
-    return col;
+    column.appendChild(rows);
+    return column;
   }
 
-  function renderDeviceColumn(cat) {
-    var col = makeColumn(cat.name);
-    var list = el("ul", "col-rows");
-    if (cat.devices.length === 0) {
-      var li = document.createElement("li");
-      li.appendChild(el("div", "col-empty", "Nothing on the bench yet."));
-      list.appendChild(li);
+  function deviceColumn(family) {
+    var column = columnShell(family.name);
+    var rows = node("ul", "col-rows");
+    if (family.devices.length === 0) {
+      var empty = document.createElement("li");
+      empty.appendChild(node("div", "col-empty", "Nothing on the bench yet."));
+      rows.appendChild(empty);
     } else {
-      cat.devices.forEach(function (dev) {
-        var li = document.createElement("li");
-        var btn = el("button", "col-row", null);
-        btn.type = "button";
-        btn.setAttribute("aria-selected", dev === selectedDevice ? "true" : "false");
-        var label = el("span", null, dev.name);
-        var chev = el("span", "chev", "\u203a");
-        chev.setAttribute("aria-hidden", "true");
-        btn.appendChild(label);
-        btn.appendChild(chev);
-        btn.addEventListener("click", function () {
-          selectedDevice = dev;
-          render();
-        });
-        li.appendChild(btn);
-        list.appendChild(li);
+      family.devices.forEach(function (device, index) {
+        var item = document.createElement("li");
+        item.appendChild(rowButton(device.name, device === pickedDevice, "device", index));
+        rows.appendChild(item);
       });
     }
-    col.appendChild(list);
-    return col;
+    column.appendChild(rows);
+    return column;
   }
 
-  function renderPreviewColumn(dev) {
-    var col = makeColumn("Preview");
-    var pane = el("div", "col-preview");
-    pane.appendChild(el("span", "preview-status", dev.status));
-    pane.appendChild(el("h2", null, dev.title));
-    pane.appendChild(el("p", null, dev.blurb));
-    var facts = el("ul", "facts");
-    dev.facts.forEach(function (f) {
-      facts.appendChild(el("li", null, f));
+  function detailColumn(device) {
+    var column = columnShell("Preview");
+    var pane = node("div", "col-preview");
+    pane.appendChild(node("span", "preview-status", device.status));
+    pane.appendChild(node("h2", null, device.title));
+    pane.appendChild(node("p", null, device.blurb));
+    var facts = node("ul", "facts");
+    device.facts.forEach(function (fact) {
+      facts.appendChild(node("li", null, fact));
     });
     pane.appendChild(facts);
-    var link = el("a", "preview-link", "Read the full report \u2192");
-    link.href = dev.url;
-    pane.appendChild(link);
-    col.appendChild(pane);
-    return col;
+    var readMore = node("a", "preview-link", "Read the full report \u2192");
+    readMore.href = device.url;
+    pane.appendChild(readMore);
+    column.appendChild(pane);
+    return column;
   }
 
-  function render() {
-    clearFrom();
-    strip.appendChild(renderCategoryColumn());
-    if (selectedCategory) {
-      strip.appendChild(renderDeviceColumn(selectedCategory));
-      if (selectedDevice) {
-        strip.appendChild(renderPreviewColumn(selectedDevice));
-      }
+  function redraw() {
+    while (strip.firstChild) strip.removeChild(strip.firstChild);
+    strip.appendChild(familyColumn());
+    if (pickedFamily) {
+      strip.appendChild(deviceColumn(pickedFamily));
+      if (pickedDevice) strip.appendChild(detailColumn(pickedDevice));
     }
   }
 
-  render();
+  /* One listener for the whole strip: a family pick resets the device
+     pick; a device pick only changes the detail pane. */
+  strip.addEventListener("click", function (event) {
+    var button = event.target.closest ? event.target.closest("button.col-row") : null;
+    if (!button || !strip.contains(button)) return;
+    var index = Number(button.getAttribute("data-index"));
+    if (button.getAttribute("data-kind") === "family") {
+      pickedFamily = CATEGORIES[index];
+      pickedDevice = null;
+    } else if (pickedFamily) {
+      pickedDevice = pickedFamily.devices[index];
+    }
+    redraw();
+  });
+
+  redraw();
 })();
