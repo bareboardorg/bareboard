@@ -1,0 +1,6 @@
+# TrueSmith allowlist: names the code must speak, with reasons.
+# One entry per line: the name, then the reason it must stay.
+# Entries without a reason are ignored.
+apple - the -apple-system font keyword is a platform interface value the CSS must use; also the manufacturer name as a data key in the library builder, where the site documents this maker
+nintendo - manufacturer name as a data key; the site documents this maker
+sony - manufacturer name as a data key; the site documents this maker

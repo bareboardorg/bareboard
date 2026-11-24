@@ -1,49 +1,55 @@
-/* repair.js — render the BareBoard Repair Guides (repair-guides.json), worst score first */
+/* Repair Guides — fills #repair-cards from repair-guides.json.
+   Guides are shown worst repairability score first, so the devices that
+   fight their owners hardest are the first thing a visitor sees. */
 (function () {
   "use strict";
-  function esc(s) {
-    return String(s == null ? "" : s)
-      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
-  }
-  function scoreBadge(score) {
-    var cls = score <= 3 ? "score-bad" : (score <= 6 ? "score-mid" : "score-ok");
-    return '<span class="badge ' + cls + '">' + esc(String(score)) + "/10</span>";
-  }
-  function list(items) {
-    if (!items || !items.length) return "";
-    return "<ul>" + items.map(function (i) { return "<li>" + esc(i) + "</li>"; }).join("") + "</ul>";
-  }
-  var wrap = document.getElementById("repair-cards");
 
-  function sources(srcs) {
-    if (!srcs || !srcs.length) return "";
-    var items = srcs.map(function (s) {
-      return '<li><a href="' + esc(s.url) + '" rel="noopener">' + esc(s.label || s.url) + "</a></li>";
-    }).join("");
-    return '<h3>Sources</h3><ul>' + items + "</ul>";
+  var container = document.getElementById("repair-cards");
+
+  function scorePill(score) {
+    var tier = score <= 3 ? "score-bad" : score <= 6 ? "score-mid" : "score-ok";
+    return '<span class="badge ' + tier + '">' + BB.esc(String(score)) + "/10</span>";
+  }
+
+  function bulletList(items) {
+    if (!items || items.length === 0) return "";
+    return "<ul>" + items.map(function (item) {
+      return "<li>" + BB.esc(item) + "</li>";
+    }).join("") + "</ul>";
+  }
+
+  function sourceList(refs) {
+    if (!refs || refs.length === 0) return "";
+    var rows = refs.map(function (ref) {
+      return '<li><a href="' + BB.esc(ref.url) + '" rel="noopener">' +
+        BB.esc(ref.label || ref.url) + "</a></li>";
+    });
+    return "<h3>Sources</h3><ul>" + rows.join("") + "</ul>";
+  }
+
+  function card(guide) {
+    return '<article class="card">' +
+      '<span class="kicker">' + BB.esc(guide.manufacturer) + " &middot; " + BB.esc(String(guide.year)) + "</span>" +
+      "<h2>" + BB.esc(guide.device) + " " + scorePill(guide.ifixit_score) + "</h2>" +
+      '<p class="src">' + BB.esc(guide.score_note || "") + " (score: " + BB.esc(guide.score_source || "iFixit") + ")</p>" +
+      "<h3>Anti-repair tactics</h3>" + bulletList(guide.anti_repair_design) +
+      "<h3>Tools needed</h3>" + bulletList(guide.tools_needed) +
+      sourceList(guide.sources) +
+      "</article>";
   }
 
   fetch("repair-guides.json", { credentials: "same-origin" })
-    .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .then(function (response) {
+      if (!response.ok) throw new Error("HTTP " + response.status);
+      return response.json();
+    })
     .then(function (data) {
-      var guides = (data.guides || []).slice().sort(function (a, b) {
+      var guides = ((data && data.guides) || []).slice().sort(function (a, b) {
         return a.ifixit_score - b.ifixit_score;
       });
-      var html = "";
-      guides.forEach(function (g) {
-        html += '<article class="card">' +
-          '<span class="kicker">' + esc(g.manufacturer) + " &middot; " + esc(String(g.year)) + "</span>" +
-          "<h2>" + esc(g.device) + " " + scoreBadge(g.ifixit_score) + "</h2>" +
-          '<p class="src">' + esc(g.score_note || "") + " (score: " + esc(g.score_source || "iFixit") + ")</p>" +
-          "<h3>Anti-repair tactics</h3>" + list(g.anti_repair_design) +
-          "<h3>Tools needed</h3>" + list(g.tools_needed) +
-          sources(g.sources) +
-          "</article>";
-      });
-      wrap.innerHTML = html || "<p>No guides found.</p>";
+      container.innerHTML = guides.map(card).join("") || "<p>No guides found.</p>";
     })
     .catch(function (err) {
-      wrap.innerHTML = "<p>Could not load repair-guides.json (" + esc(err.message) + ").</p>";
+      container.innerHTML = "<p>Could not load repair-guides.json (" + BB.esc(err.message) + ").</p>";
     });
 })();

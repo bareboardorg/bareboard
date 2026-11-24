@@ -1,59 +1,62 @@
 #!/usr/bin/env node
 /* Build data/library-index.json — the unified index behind library-hub.html.
    Dependency-free. Usage: node tools/build-library-index.mjs [--check]
-   --check builds and validates in memory only, without writing the JSON.
+   With --check the index is built and validated in memory only.
 
-   Sources, merged in this order (later sources win on shared keys):
-     1. Local library files on disk:
-          library/collected-public-docs/**, library/original-docs/,
-          library/trackers/, datasheets/
+   Four sources feed the index, merged in order (later sources win when
+   they speak about the same document):
+     1. Library files on disk: library/collected-public-docs/**,
+        library/original-docs/, library/trackers/, datasheets/.
      2. The Datasheet Index tables in datasheets.html (mostly link-only).
      3. The Rare Manuals entries in rare-manuals.html (link-only).
-     4. Collection manifests in ../bareboard-library-manifests/**.json
-        (PMD / FCC / FDA / lawsuit crews drop these as collection lands;
-         their metadata overrides filename inference and scanned rows).
+     4. Collection manifests in ../bareboard-library-manifests/**.json,
+        dropped by the collection crews as material lands; their metadata
+        overrides filename inference and scanned rows.
 
-   Output record: {title, maker, model, platform, category, doc_type,
-                   url, source_url, bytes, link_only, basis}
-   basis is the rights-gate sentence for the record (why it may be
-   published/linked). Manifests and KNOWN carry real basis sentences;
-   anything else defaults to UNVERIFIED_BASIS below.
-   category is one of: manual schematic documentation datasheet
-                       lawsuit fda fcc other
-   url is the local path (leading slash) or null; link-only records carry
-   source_url instead. Deterministic: same inputs -> same documents array. */
+   Each output record carries {title, maker, model, platform, category,
+   doc_type, url, source_url, bytes, link_only, basis}. basis is the
+   rights-gate sentence for the record — why it may be published or
+   linked. Manifests and the KNOWN table carry real basis sentences;
+   anything else gets UNVERIFIED_BASIS. category is one of manual,
+   schematic, documentation, datasheet, lawsuit, fda, fcc, other. url is
+   the local path (leading slash) or null; link-only records carry
+   source_url instead. Same inputs always produce the same array. */
 import { existsSync, readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join, relative, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { decodeEntities } from "./html-entities.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const outPath = join(root, "data", "library-index.json");
+const outFile = join(root, "data", "library-index.json");
 const manifestsDir = join(root, "..", "bareboard-library-manifests");
 const checkOnly = process.argv.includes("--check");
 const UNVERIFIED_BASIS = "UNVERIFIED \u2014 provenance not established";
 
 const CATEGORIES = ["manual", "schematic", "documentation", "datasheet",
   "lawsuit", "fda", "fcc", "other"];
-const CAT_RANK = Object.fromEntries(CATEGORIES.map((c, i) => [c, i]));
+const CATEGORY_ORDER = new Map(CATEGORIES.map((name, i) => [name, i]));
 
-/* ---------- small helpers ---------- */
+/* ---------- text helpers ---------- */
 
-function stripTags(s) {
-  return decodeEntities(String(s).replace(/<[^>]*>/g, " ")).replace(/\s+/g, " ").trim();
-}
-function humanizeFilename(name) {
-  return name.replace(/\.[a-z0-9]+$/i, "").replace(/[-_]+/g, " ").replace(/\s+/g, " ").trim();
-}
-function cmpStr(a, b) {
-  const x = String(a == null ? "" : a).toLowerCase();
-  const y = String(b == null ? "" : b).toLowerCase();
-  return x < y ? -1 : x > y ? 1 : 0;
+function plainText(fragment) {
+  const withoutTags = String(fragment).replace(/<[^>]*>/g, " ");
+  return decodeEntities(withoutTags).replace(/\s+/g, " ").trim();
 }
 
-/* ---------- category / platform inference ---------- */
+function titleFromFilename(name) {
+  return name.replace(/\.[a-z0-9]+$/i, "").replace(/[-_]+/g, " ")
+    .replace(/\s+/g, " ").trim();
+}
 
-const CATEGORY_ALIASES = [
+function compareText(a, b) {
+  const left = String(a == null ? "" : a).toLowerCase();
+  const right = String(b == null ? "" : b).toLowerCase();
+  return left < right ? -1 : left > right ? 1 : 0;
+}
+
+/* ---------- category handling ---------- */
+
+const CATEGORY_SYNONYMS = [
   ["manual", ["manual", "manuals", "user-manual", "service-manual", "owner-manual",
     "owners-manual", "instruction-manual", "handbook", "operator-manual"]],
   ["schematic", ["schematic", "schematics", "schema", "schemas", "boardview", "layout"]],
@@ -64,32 +67,38 @@ const CATEGORY_ALIASES = [
   ["fda", ["fda", "510k", "510(k)", "fda-filing", "fda-clearance", "premarket", "fda-record"]],
   ["fcc", ["fcc", "fcc-filing", "fcc-grant", "grant", "equipment-authorization", "fcc-record"]],
 ];
-function normalizeCategory(v) {
-  if (!v) return null;
-  const s = String(v).toLowerCase().trim().replace(/[\s_]+/g, "-");
-  if (CATEGORIES.includes(s)) return s;
-  for (const [cat, aliases] of CATEGORY_ALIASES) if (aliases.includes(s)) return cat;
-  for (const [cat, aliases] of CATEGORY_ALIASES)
-    if (aliases.some(a => s.includes(a))) return cat;
+
+function normalizeCategory(value) {
+  if (!value) return null;
+  const cleaned = String(value).toLowerCase().trim().replace(/[\s_]+/g, "-");
+  if (CATEGORIES.includes(cleaned)) return cleaned;
+  for (const [category, words] of CATEGORY_SYNONYMS) {
+    if (words.includes(cleaned)) return category;
+  }
+  for (const [category, words] of CATEGORY_SYNONYMS) {
+    if (words.some((word) => cleaned.includes(word))) return category;
+  }
   return "other";
 }
-function inferFromPath(relPath) {
-  const tokens = relPath.toLowerCase().split(/[/\-_]+/);
+
+function guessFromPath(relPath) {
+  const parts = relPath.toLowerCase().split(/[/\-_]+/);
+  const has = (test) => parts.some(test);
   let category = null;
-  if (tokens.some(t => t.startsWith("fcc"))) category = "fcc";
-  else if (tokens.some(t => t.startsWith("fda"))) category = "fda";
-  else if (tokens.some(t => t.includes("lawsuit") || t.includes("litigation"))) category = "lawsuit";
-  else if (tokens.some(t => t.includes("schematic"))) category = "schematic";
-  else if (tokens.some(t => t.includes("datasheet"))) category = "datasheet";
-  else if (tokens.some(t => t.includes("manual"))) category = "manual";
+  if (has((t) => t.startsWith("fcc"))) category = "fcc";
+  else if (has((t) => t.startsWith("fda"))) category = "fda";
+  else if (has((t) => t.includes("lawsuit") || t.includes("litigation"))) category = "lawsuit";
+  else if (has((t) => t.includes("schematic"))) category = "schematic";
+  else if (has((t) => t.includes("datasheet"))) category = "datasheet";
+  else if (has((t) => t.includes("manual"))) category = "manual";
   let platform = null;
-  if (tokens.includes("pmd")) platform = "Power Mobility (PMD)";
+  if (parts.includes("pmd")) platform = "Power Mobility (PMD)";
   else if (category === "lawsuit") platform = "Legal";
   return { category, platform };
 }
 
-/* Curated metadata for the documents already in the library (titles and
-   descriptions as published on library.html / datasheets.html). Manifest
+/* Curated metadata for documents already in the library — titles and
+   descriptions as published on library.html / datasheets.html. Manifest
    records override these when collection crews land richer data. */
 const KNOWN = {
   "/library/collected-public-docs/mandt-blackhat2016-demystifying-sep.pdf": {
@@ -188,88 +197,109 @@ const KNOWN = {
     basis: "Manufacturer-published document, posted with attribution under fair use." },
 };
 
-const EXT_DOC_TYPE = {
+const TYPE_BY_EXTENSION = {
   ".pdf": "PDF", ".md": "Markdown", ".csv": "CSV", ".html": "HTML",
   ".txt": "Text", ".zip": "Archive",
 };
 
-/* ---------- record store with dedupe/merge ---------- */
+/* ---------- the record store ---------- */
 
-const records = new Map(); // key -> record
-function keyOf(r) {
-  if (r.url) return "u:" + r.url;
-  if (r.source_url) return "s:" + r.source_url;
-  return "t:" + [r.title, r.maker, r.model].map(v => String(v || "").toLowerCase()).join("|");
+const EMPTY_RECORD = {
+  title: null, maker: null, model: null, platform: null,
+  category: "other", doc_type: null, url: null, source_url: null,
+  bytes: null, basis: UNVERIFIED_BASIS,
+};
+const MERGE_FIELDS = Object.keys(EMPTY_RECORD);
+const records = new Map(); // dedupe key -> record
+
+function dedupeKey(record) {
+  if (record.url) return "u:" + record.url;
+  if (record.source_url) return "s:" + record.source_url;
+  return "t:" + [record.title, record.maker, record.model]
+    .map((v) => String(v || "").toLowerCase()).join("|");
 }
-function addRecord(r, preferIncoming) {
-  const base = {
-    title: null, maker: null, model: null, platform: null,
-    category: "other", doc_type: null, url: null, source_url: null,
-    bytes: null, basis: UNVERIFIED_BASIS,
-  };
-  const rec = { ...base, ...Object.fromEntries(
-    Object.entries(r).filter(([, v]) => v !== undefined && v !== "")) };
-  rec.category = normalizeCategory(rec.category) || "other";
-  rec.link_only = !rec.url;
-  if (!rec.basis) rec.basis = UNVERIFIED_BASIS;
-  const k = keyOf(rec);
-  const existing = records.get(k);
-  if (!existing) { records.set(k, rec); return; }
-  // Merge: fill gaps; prefer the incoming record only when asked (manifests).
-  for (const f of Object.keys(base)) {
-    if (preferIncoming) {
-      if (rec[f] !== null && rec[f] !== undefined) existing[f] = rec[f];
-    } else if (existing[f] === null || existing[f] === undefined) {
-      if (rec[f] !== null && rec[f] !== undefined) existing[f] = rec[f];
+
+function hasValue(value) {
+  return value !== null && value !== undefined;
+}
+
+/* Normalize one incoming record, then either store it or merge it into the
+   record already held under its key. Merging fills gaps; when
+   incomingWins is set (manifests), incoming values overwrite. */
+function storeRecord(incoming, incomingWins) {
+  const record = { ...EMPTY_RECORD };
+  for (const [field, value] of Object.entries(incoming)) {
+    if (value !== undefined && value !== "") record[field] = value;
+  }
+  record.category = normalizeCategory(record.category) || "other";
+  record.link_only = !record.url;
+  if (!record.basis) record.basis = UNVERIFIED_BASIS;
+  const key = dedupeKey(record);
+  const held = records.get(key);
+  if (!held) {
+    records.set(key, record);
+    return;
+  }
+  for (const field of MERGE_FIELDS) {
+    if (incomingWins) {
+      if (hasValue(record[field])) held[field] = record[field];
+    } else if (!hasValue(held[field]) && hasValue(record[field])) {
+      held[field] = record[field];
     }
   }
-  existing.link_only = !existing.url;
+  held.link_only = !held.url;
 }
 
 /* ---------- source 1: local files ---------- */
 
-function walk(dir) {
-  const out = [];
-  if (!existsSync(dir)) return out;
+function listFiles(dir) {
+  if (!existsSync(dir)) return [];
+  const found = [];
   for (const name of readdirSync(dir).sort()) {
     if (name.startsWith(".")) continue;
-    const p = join(dir, name);
-    if (statSync(p).isDirectory()) out.push(...walk(p));
-    else out.push(p);
+    const full = join(dir, name);
+    if (statSync(full).isDirectory()) found.push(...listFiles(full));
+    else found.push(full);
   }
-  return out;
+  return found;
 }
-let localCount = 0;
+
+let localFiles = 0;
 for (const baseDir of ["library/collected-public-docs", "library/original-docs",
-                       "library/trackers", "datasheets"]) {
-  for (const abs of walk(join(root, baseDir))) {
+  "library/trackers", "datasheets"]) {
+  for (const abs of listFiles(join(root, baseDir))) {
     const rel = relative(root, abs).split(sep).join("/");
     const url = "/" + rel;
-    const ext = (rel.match(/\.[a-z0-9]+$/i) || [""])[0].toLowerCase();
-    const inferred = inferFromPath(rel);
-    const known = KNOWN[url] || {};
-    addRecord({
-      title: known.title || humanizeFilename(rel.split("/").pop()),
-      maker: known.maker || null,
-      model: known.model !== undefined ? known.model : null,
-      platform: known.platform || inferred.platform,
-      category: known.category || inferred.category ||
-        (baseDir === "datasheets" ? "datasheet"
-          : inferred.platform === "Power Mobility (PMD)" ? "manual"
-          : "documentation"),
-      doc_type: known.doc_type || EXT_DOC_TYPE[ext] || (ext ? ext.slice(1).toUpperCase() : null),
+    const extMatch = rel.match(/\.[a-z0-9]+$/i);
+    const ext = extMatch ? extMatch[0].toLowerCase() : "";
+    const guessed = guessFromPath(rel);
+    const curated = KNOWN[url] || {};
+    let category = curated.category || guessed.category;
+    if (!category) {
+      if (baseDir === "datasheets") category = "datasheet";
+      else if (guessed.platform === "Power Mobility (PMD)") category = "manual";
+      else category = "documentation";
+    }
+    storeRecord({
+      title: curated.title || titleFromFilename(rel.split("/").pop()),
+      maker: curated.maker || null,
+      model: curated.model !== undefined ? curated.model : null,
+      platform: curated.platform || guessed.platform,
+      category,
+      doc_type: curated.doc_type || TYPE_BY_EXTENSION[ext] ||
+        (ext ? ext.slice(1).toUpperCase() : null),
       url,
-      source_url: known.source_url || null,
+      source_url: curated.source_url || null,
       bytes: statSync(abs).size,
-      basis: known.basis || UNVERIFIED_BASIS,
+      basis: curated.basis || UNVERIFIED_BASIS,
     }, false);
-    localCount++;
+    localFiles++;
   }
 }
 
 /* ---------- source 2: datasheets.html tables ---------- */
 
-const SECTION_PLATFORM = {
+const PLATFORM_BY_SECTION = {
   "microcontrollers": "Microcontrollers",
   "single-board-computers-dev-boards-schematics": "Single-Board Computers",
   "common-ics": "Common ICs",
@@ -285,48 +315,62 @@ const SECTION_PLATFORM = {
   "connectors-standards": "Connectors & Standards",
   "no-public-datasheet": "No Public Datasheet",
 };
-let dsParsed = 0, dsSkipped = 0;
+
+let datasheetRows = 0;
+let unlinkedRows = 0;
 {
   const html = readFileSync(join(root, "datasheets.html"), "utf8");
-  const tokenRe = /<section id="([^"]+)"|<\/section>|<h2[^>]*>([\s\S]*?)<\/h2>|<table[^>]*class="[^"]*datasheet-table[^"]*"|<\/table>|<tr>([\s\S]*?)<\/tr>/g;
-  const stack = []; // {id, heading}
-  let inTable = false;
-  let m;
-  while ((m = tokenRe.exec(html)) !== null) {
-    if (m[1] !== undefined) stack.push({ id: m[1], heading: null });
-    else if (m[0] === "</section>") stack.pop();
-    else if (m[2] !== undefined) {
-      if (stack.length) stack[stack.length - 1].heading =
-        stripTags(m[2]).replace(/\s*\(\d+\)\s*$/, "").trim();
-    } else if (m[0].startsWith("<table")) inTable = true;
-    else if (m[0] === "</table>") inTable = false;
-    else if (m[3] !== undefined && inTable && stack.length) {
-      const cells = [...m[3].matchAll(/<td>([\s\S]*?)<\/td>/g)].map(c => c[1]);
+  /* Walk the page token by token, tracking which section each table row
+     belongs to and what that section's heading says. */
+  const tokenPattern = /<section id="([^"]+)"|<\/section>|<h2[^>]*>([\s\S]*?)<\/h2>|<table[^>]*class="[^"]*datasheet-table[^"]*"|<\/table>|<tr>([\s\S]*?)<\/tr>/g;
+  const openSections = [];
+  let insideTable = false;
+  let token;
+  while ((token = tokenPattern.exec(html)) !== null) {
+    const [whole, sectionId, headingHtml, rowHtml] = token;
+    if (sectionId !== undefined) {
+      openSections.push({ id: sectionId, heading: null });
+    } else if (whole === "</section>") {
+      openSections.pop();
+    } else if (headingHtml !== undefined) {
+      if (openSections.length > 0) {
+        const top = openSections[openSections.length - 1];
+        top.heading = plainText(headingHtml).replace(/\s*\(\d+\)\s*$/, "").trim();
+      }
+    } else if (whole.startsWith("<table")) {
+      insideTable = true;
+    } else if (whole === "</table>") {
+      insideTable = false;
+    } else if (rowHtml !== undefined && insideTable && openSections.length > 0) {
+      const cells = [...rowHtml.matchAll(/<td>([\s\S]*?)<\/td>/g)].map((c) => c[1]);
       if (cells.length < 3) continue;
-      const linkM = m[3].match(/<a href="([^"]+)"/);
-      if (!linkM) { dsSkipped++; continue; }
-      const href = decodeEntities(linkM[1]);
-      const sec = stack[stack.length - 1];
-      const isLocal = href.startsWith("/");
-      addRecord({
-        title: stripTags(cells[0]),
-        maker: stripTags(cells[1]) || null,
+      const link = rowHtml.match(/<a href="([^"]+)"/);
+      if (!link) {
+        unlinkedRows++;
+        continue;
+      }
+      const href = decodeEntities(link[1]);
+      const section = openSections[openSections.length - 1];
+      const local = href.startsWith("/");
+      storeRecord({
+        title: plainText(cells[0]),
+        maker: plainText(cells[1]) || null,
         model: null,
-        platform: SECTION_PLATFORM[sec.id] || sec.heading || null,
-        category: sec.id.includes("schematic") ? "schematic" : "datasheet",
-        doc_type: sec.heading || "Datasheet index",
-        url: isLocal ? href : null,
-        source_url: isLocal ? null : href,
+        platform: PLATFORM_BY_SECTION[section.id] || section.heading || null,
+        category: section.id.includes("schematic") ? "schematic" : "datasheet",
+        doc_type: section.heading || "Datasheet index",
+        url: local ? href : null,
+        source_url: local ? null : href,
         bytes: null,
       }, false);
-      dsParsed++;
+      datasheetRows++;
     }
   }
 }
 
 /* ---------- source 3: rare-manuals.html entries ---------- */
 
-const RM_PLATFORM_RULES = [
+const VINTAGE_PLATFORMS = [
   [/intellivision|mattel/i, "Intellivision"], [/osborne/i, "Osborne"],
   [/kaypro|non linear/i, "Kaypro"], [/apple|macintosh/i, "Apple"],
   [/\bibm\b|international business/i, "IBM PC"], [/commodore|amiga/i, "Commodore"],
@@ -336,78 +380,98 @@ const RM_PLATFORM_RULES = [
   [/acorn/i, "Acorn"], [/next/i, "NeXT"], [/sun micro/i, "Sun"],
   [/\bdec\b|digital equipment/i, "DEC"], [/xerox/i, "Xerox"],
 ];
-let rmParsed = 0;
+const RARITY_WORDS = {
+  onlyknowncopy: "only known copy",
+  fewmirrors: "few mirrors",
+  severalmirrors: "several mirrors",
+};
+
+let manualEntries = 0;
 {
   const html = readFileSync(join(root, "rare-manuals.html"), "utf8");
   const chunks = html.split('<article class="manual-entry"').slice(1);
   for (const chunk of chunks) {
     const body = chunk.split("</article>")[0];
-    const h3 = body.match(/<h3>([\s\S]*?)<\/h3>/);
-    if (!h3) continue;
-    const title = stripTags(h3[1].replace(/<span class="rank">[\s\S]*?<\/span>/, "")
+    const heading = body.match(/<h3>([\s\S]*?)<\/h3>/);
+    if (!heading) continue;
+    const title = plainText(heading[1]
+      .replace(/<span class="rank">[\s\S]*?<\/span>/, "")
       .replace(/<span class="rarity[^"]*">[\s\S]*?<\/span>/, ""));
     if (!title) continue;
     const decade = (chunk.match(/data-decade="([^"]+)"/) || [])[1] || null;
-    const rarityRaw = (chunk.match(/data-rarity="([^"]+)"/) || [])[1] || null;
-    const rarity = { onlyknowncopy: "only known copy", fewmirrors: "few mirrors",
-      severalmirrors: "several mirrors" }[rarityRaw] || rarityRaw;
-    const makerM = body.match(/<strong>Manufacturer:<\/strong>(.*?)<\/p>/);
-    let maker = makerM ? stripTags(makerM[1]) : null;
+    const rarityKey = (chunk.match(/data-rarity="([^"]+)"/) || [])[1] || null;
+    const rarity = RARITY_WORDS[rarityKey] || rarityKey;
+    let maker = null;
     let model = null;
-    if (maker) {
-      const pm = maker.match(/\(([^)]*)\)/);
-      if (pm) { model = pm[1].replace(/^Model\s+/i, ""); maker = maker.replace(/\s*\([^)]*\)/, "").trim(); }
+    const makerMatch = body.match(/<strong>Manufacturer:<\/strong>(.*?)<\/p>/);
+    if (makerMatch) {
+      maker = plainText(makerMatch[1]);
+      const paren = maker.match(/\(([^)]*)\)/);
+      if (paren) {
+        model = paren[1].replace(/^Model\s+/i, "");
+        maker = maker.replace(/\s*\([^)]*\)/, "").trim();
+      }
     }
-    const srcM = body.match(/<a href="([^"]+)"[^>]*>\s*Public source\s*<\/a>/);
+    const sourceLink = body.match(/<a href="([^"]+)"[^>]*>\s*Public source\s*<\/a>/);
     const category = /schematics?\b/i.test(title) ? "schematic"
       : /datasheet|data sheet/i.test(title) ? "datasheet" : "manual";
     let platform = "Vintage & Retro";
-    for (const [re, name] of RM_PLATFORM_RULES) {
-      if (re.test((maker || "") + " " + title)) { platform = name; break; }
+    const haystack = (maker || "") + " " + title;
+    for (const [pattern, name] of VINTAGE_PLATFORMS) {
+      if (pattern.test(haystack)) {
+        platform = name;
+        break;
+      }
     }
-    addRecord({
-      title,
-      maker,
-      model,
-      platform,
-      category,
-      doc_type: "Rare manual" + (decade ? " · " + decade : "") + (rarity ? " · " + rarity : ""),
+    let docType = "Rare manual";
+    if (decade) docType += " · " + decade;
+    if (rarity) docType += " · " + rarity;
+    storeRecord({
+      title, maker, model, platform, category,
+      doc_type: docType,
       url: null,
-      source_url: srcM ? decodeEntities(srcM[1]) : null,
+      source_url: sourceLink ? decodeEntities(sourceLink[1]) : null,
       bytes: null,
     }, false);
-    rmParsed++;
+    manualEntries++;
   }
 }
 
 /* ---------- source 4: collection manifests ---------- */
 
-function pick(obj, names) {
-  for (const n of names) {
-    if (obj[n] !== undefined && obj[n] !== null && obj[n] !== "") return obj[n];
+function firstPresent(obj, names) {
+  for (const name of names) {
+    const value = obj[name];
+    if (value !== undefined && value !== null && value !== "") return value;
   }
   return null;
 }
+
 /* The collection crews' manifests use their own field names: lawsuits carry
    case_name, FCC records carry product/grantee, FDA records carry device and
    k_number, and none of the three carries a category. Map those fields here
    so manifest metadata lands in the index instead of failing validation. */
-function inferCategoryFromDocType(dt) {
-  if (!dt) return null;
-  const s = String(dt).toLowerCase();
-  if (s.startsWith("fcc")) return "fcc";
-  if (s.startsWith("fda")) return "fda";
+function categoryFromDocType(docType) {
+  if (!docType) return null;
+  const text = String(docType).toLowerCase();
+  if (text.startsWith("fcc")) return "fcc";
+  if (text.startsWith("fda")) return "fda";
   if (["opinion", "order", "legislation", "settlement", "testimony",
-       "agency-action", "exemption-ruling", "complaint", "decision",
-       "brief", "filing"].includes(s)) return "lawsuit";
+    "agency-action", "exemption-ruling", "complaint", "decision",
+    "brief", "filing"].includes(text)) return "lawsuit";
   if (["parts", "technical", "owner", "fault-codes", "service",
-       "programming", "user-manual", "service-manual"].includes(s)) return "manual";
+    "programming", "user-manual", "service-manual"].includes(text)) return "manual";
   return null;
 }
-function manifestRecord(raw) {
-  let url = pick(raw, ["url", "local_path", "path", "file", "href"]);
-  let source_url = pick(raw, ["source_url", "source", "original_url", "external_url", "link"]);
-  if (url && /^https?:\/\//i.test(url)) { if (!source_url) source_url = url; url = null; }
+
+function manifestToRecord(raw) {
+  let url = firstPresent(raw, ["url", "local_path", "path", "file", "href"]);
+  let sourceUrl = firstPresent(raw,
+    ["source_url", "source", "original_url", "external_url", "link"]);
+  if (url && /^https?:\/\//i.test(url)) {
+    if (!sourceUrl) sourceUrl = url;
+    url = null;
+  }
   if (url) {
     url = String(url);
     if (!url.startsWith("/")) {
@@ -415,66 +479,84 @@ function manifestRecord(raw) {
         ? "/" + url.replace(/^\.?\//, "")
         : "/library/collected-public-docs/" + url;
     }
-    url = url.split("/").map(seg => seg === "" ? "" : seg).join("/").replace(/\/{2,}/g, "/");
+    url = url.replace(/\/{2,}/g, "/");
   }
-  if (source_url && !/^https?:\/\//i.test(source_url)) source_url = null;
-  let bytes = pick(raw, ["bytes", "size", "file_size"]);
+  if (sourceUrl && !/^https?:\/\//i.test(sourceUrl)) sourceUrl = null;
+  let bytes = firstPresent(raw, ["bytes", "size", "file_size"]);
   bytes = typeof bytes === "number" ? bytes : null;
   if (url && bytes === null) {
     const abs = join(root, url.replace(/^\//, ""));
     if (existsSync(abs)) bytes = statSync(abs).size;
   }
-  let title = pick(raw, ["title", "name", "document", "doc_title", "case_name", "product"]);
+  let title = firstPresent(raw,
+    ["title", "name", "document", "doc_title", "case_name", "product"]);
   if (!title && raw.device) {
     title = String(raw.device);
-    const k = pick(raw, ["k_number", "k", "510k"]);
-    if (k) title += " (" + k + ")";
+    const kNumber = firstPresent(raw, ["k_number", "k", "510k"]);
+    if (kNumber) title += " (" + kNumber + ")";
   }
-  const doc_type = pick(raw, ["doc_type", "format", "file_type"]);
-  // normalizeCategory returns "other" for unknown values; treat that as no
-  // signal so the doc_type inference below can classify the record.
-  const pickedCat = pick(raw, ["category", "kind", "doc_category"]) || pick(raw, ["type"]);
-  const normCat = pickedCat ? normalizeCategory(pickedCat) : null;
-  const rawCategory = (normCat && normCat !== "other") ? normCat : null;
+  const docType = firstPresent(raw, ["doc_type", "format", "file_type"]);
+  /* normalizeCategory answers "other" for unknown values; treat that as no
+     signal so the doc-type inference below can classify the record. */
+  const stated = firstPresent(raw, ["category", "kind", "doc_category"]) ||
+    firstPresent(raw, ["type"]);
+  const normalized = stated ? normalizeCategory(stated) : null;
+  const category = (normalized && normalized !== "other") ? normalized : null;
   return {
     title,
-    maker: pick(raw, ["maker", "manufacturer", "vendor", "brand", "company", "grantee"]),
-    model: pick(raw, ["model", "device", "product", "part", "part_number"]),
-    platform: pick(raw, ["platform", "system", "family"]),
-    category: rawCategory || inferCategoryFromDocType(doc_type),
-    doc_type,
+    maker: firstPresent(raw, ["maker", "manufacturer", "vendor", "brand", "company", "grantee"]),
+    model: firstPresent(raw, ["model", "device", "product", "part", "part_number"]),
+    platform: firstPresent(raw, ["platform", "system", "family"]),
+    category: category || categoryFromDocType(docType),
+    doc_type: docType,
     url: url || null,
-    source_url: source_url || null,
+    source_url: sourceUrl || null,
     bytes,
-    basis: pick(raw, ["basis"]) || UNVERIFIED_BASIS,
+    basis: firstPresent(raw, ["basis"]) || UNVERIFIED_BASIS,
   };
 }
-let manifestFiles = 0, manifestRecords = 0;
+
+let manifestFiles = 0;
+let manifestRecords = 0;
 if (existsSync(manifestsDir)) {
-  for (const abs of walk(manifestsDir)) {
+  for (const abs of listFiles(manifestsDir)) {
     if (!abs.endsWith(".json")) continue;
     manifestFiles++;
     let parsed;
-    try { parsed = JSON.parse(readFileSync(abs, "utf8")); }
-    catch (e) { console.error(`WARN: unparseable manifest ${abs}: ${e.message}`); continue; }
+    try {
+      parsed = JSON.parse(readFileSync(abs, "utf8"));
+    } catch (err) {
+      console.error(`WARN: unparseable manifest ${abs}: ${err.message}`);
+      continue;
+    }
     let list = null;
-    if (Array.isArray(parsed)) list = parsed;
-    else if (parsed && typeof parsed === "object") {
-      for (const k of ["documents", "records", "items", "docs", "entries"]) {
-        if (Array.isArray(parsed[k])) { list = parsed[k]; break; }
+    if (Array.isArray(parsed)) {
+      list = parsed;
+    } else if (parsed && typeof parsed === "object") {
+      for (const key of ["documents", "records", "items", "docs", "entries"]) {
+        if (Array.isArray(parsed[key])) {
+          list = parsed[key];
+          break;
+        }
       }
       if (!list) {
-        const vals = Object.values(parsed).filter(v => v && typeof v === "object" && !Array.isArray(v));
-        if (vals.length) list = vals;
+        const values = Object.values(parsed)
+          .filter((v) => v && typeof v === "object" && !Array.isArray(v));
+        if (values.length > 0) list = values;
       }
     }
-    if (!list) { console.error(`WARN: no record list found in manifest ${abs}`); continue; }
+    if (!list) {
+      console.error(`WARN: no record list found in manifest ${abs}`);
+      continue;
+    }
     for (const raw of list) {
       if (!raw || typeof raw !== "object") continue;
-      const rec = manifestRecord(raw);
-      if (!rec.title && !rec.url && !rec.source_url) continue;
-      if (!rec.title && rec.url) rec.title = humanizeFilename(rec.url.split("/").pop());
-      addRecord(rec, true);
+      const record = manifestToRecord(raw);
+      if (!record.title && !record.url && !record.source_url) continue;
+      if (!record.title && record.url) {
+        record.title = titleFromFilename(record.url.split("/").pop());
+      }
+      storeRecord(record, true);
       manifestRecords++;
     }
   }
@@ -483,44 +565,53 @@ if (existsSync(manifestsDir)) {
 /* ---------- sort, validate, write ---------- */
 
 const docs = [...records.values()].sort((a, b) =>
-  (CAT_RANK[a.category] - CAT_RANK[b.category]) ||
-  cmpStr(a.platform || "\uffff", b.platform || "\uffff") ||
-  cmpStr(a.title, b.title) ||
-  cmpStr(a.url || a.source_url, b.url || b.source_url));
+  (CATEGORY_ORDER.get(a.category) - CATEGORY_ORDER.get(b.category)) ||
+  compareText(a.platform || "\uffff", b.platform || "\uffff") ||
+  compareText(a.title, b.title) ||
+  compareText(a.url || a.source_url, b.url || b.source_url));
 
-const errors = [];
-for (const d of docs) {
-  if (!d.title) errors.push("record missing title: " + JSON.stringify(d).slice(0, 120));
-  if (!CATEGORIES.includes(d.category)) errors.push(d.title + ": bad category " + d.category);
-  if (d.url && !existsSync(join(root, d.url.replace(/^\//, ""))))
-    errors.push(d.title + ": local url does not exist: " + d.url);
-  if (!d.url && !d.source_url) errors.push(d.title + ": neither url nor source_url");
-  if (d.link_only !== !d.url) errors.push(d.title + ": link_only flag inconsistent");
-  if (!d.basis) errors.push(d.title + ": missing basis");
+const problems = [];
+for (const doc of docs) {
+  if (!doc.title) {
+    problems.push("record missing title: " + JSON.stringify(doc).slice(0, 120));
+  }
+  if (!CATEGORIES.includes(doc.category)) {
+    problems.push(doc.title + ": bad category " + doc.category);
+  }
+  if (doc.url && !existsSync(join(root, doc.url.replace(/^\//, "")))) {
+    problems.push(doc.title + ": local url does not exist: " + doc.url);
+  }
+  if (!doc.url && !doc.source_url) {
+    problems.push(doc.title + ": neither url nor source_url");
+  }
+  if (doc.link_only !== !doc.url) {
+    problems.push(doc.title + ": link_only flag inconsistent");
+  }
+  if (!doc.basis) problems.push(doc.title + ": missing basis");
 }
-if (errors.length) {
+if (problems.length > 0) {
   console.error("INVALID library index:");
-  for (const e of errors) console.error(" - " + e);
+  for (const message of problems) console.error(" - " + message);
   process.exit(1);
 }
 
 const counts = {};
-for (const c of CATEGORIES) counts[c] = 0;
-for (const d of docs) counts[d.category]++;
+for (const category of CATEGORIES) counts[category] = 0;
+for (const doc of docs) counts[doc.category]++;
 
-const out = {
+const output = {
   version: 1,
   generated: new Date().toISOString().slice(0, 10),
   total: docs.length,
   counts,
   documents: docs,
 };
-if (!checkOnly) writeFileSync(outPath, JSON.stringify(out, null, 2) + "\n");
+if (!checkOnly) writeFileSync(outFile, JSON.stringify(output, null, 2) + "\n");
 
-const local = docs.filter(d => d.url).length;
-console.log(`OK: ${docs.length} documents (${local} local, ${docs.length - local} link-only)` +
-  (checkOnly ? " (check only)" : `; wrote ${outPath}`));
-console.log("by category: " + CATEGORIES.map(c => `${c}=${counts[c]}`).join(" "));
-console.log(`sources: ${localCount} local files, ${dsParsed} datasheet rows ` +
-  `(${dsSkipped} unlinked rows skipped), ${rmParsed} rare manuals, ` +
+const localDocs = docs.filter((d) => d.url).length;
+console.log(`OK: ${docs.length} documents (${localDocs} local, ${docs.length - localDocs} link-only)` +
+  (checkOnly ? " (check only)" : `; wrote ${outFile}`));
+console.log("by category: " + CATEGORIES.map((c) => `${c}=${counts[c]}`).join(" "));
+console.log(`sources: ${localFiles} local files, ${datasheetRows} datasheet rows ` +
+  `(${unlinkedRows} unlinked rows skipped), ${manualEntries} rare manuals, ` +
   `${manifestRecords} manifest records from ${manifestFiles} manifest file(s)`);

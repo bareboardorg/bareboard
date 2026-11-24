@@ -1,42 +1,44 @@
-/* protocols.js — render the Protocol Reverse Engineering notes (protocol-re-notes.json) */
+/* Protocol Reverse Engineering notes — fills #proto-cards from
+   protocol-re-notes.json, one card per protocol.
+ *
+ * This script is included on many pages, but only protocols.html has the
+ * container, so it quietly does nothing everywhere else. */
 (function () {
   "use strict";
-  function esc(s) {
-    return String(s == null ? "" : s)
-      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
-  }
-  function evBadge(ev) {
-    return '<span class="badge ' + (ev === "confirmed" ? "b-confirmed" : "b-likely") + '">' + esc(ev) + "</span>";
-  }
-  var wrap = document.getElementById("proto-cards");
 
-  function resources(res) {
-    if (!res || !res.length) return "";
-    var items = res.map(function (r) {
-      return '<li><a href="' + esc(r.url) + '" rel="noopener">' + esc(r.name) + "</a>" +
-        (r.note ? ' <span class="src">' + esc(r.note) + "</span>" : "") + "</li>";
-    }).join("");
-    return "<h3>Community resources</h3><ul>" + items + "</ul>";
+  var container = document.getElementById("proto-cards");
+  if (!container) return;
+
+  function resourceList(items) {
+    if (!items || items.length === 0) return "";
+    var rows = items.map(function (item) {
+      var out = '<li><a href="' + BB.esc(item.url) + '" rel="noopener">' + BB.esc(item.name) + "</a>";
+      if (item.note) out += ' <span class="src">' + BB.esc(item.note) + "</span>";
+      return out + "</li>";
+    });
+    return "<h3>Community resources</h3><ul>" + rows.join("") + "</ul>";
   }
 
-  fetch("protocol-re-notes.json", { credentials: "same-origin" })
-    .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-    .then(function (data) {
-      var html = "";
-      (data.entries || []).forEach(function (e) {
-        html += '<article class="card">' +
-          '<span class="kicker">' + esc(e.company) + "</span>" +
-          "<h2>" + esc(e.protocol) + " " + evBadge(e.evidence) + "</h2>" +
-          "<p>" + esc(e.what_it_does) + "</p>" +
-          "<h3>Reverse engineered</h3><p>" + esc(e.reverse_engineered) + "</p>" +
-          (e.still_unknown ? "<h3>Still unknown</h3><p>" + esc(e.still_unknown) + "</p>" : "") +
-          resources(e.resources) +
-          "</article>";
-      });
-      wrap.innerHTML = html || "<p>No protocols found.</p>";
-    })
-    .catch(function (err) {
-      wrap.innerHTML = "<p>Could not load protocol-re-notes.json (" + esc(err.message) + ").</p>";
+  function card(entry) {
+    var unknown = entry.still_unknown
+      ? "<h3>Still unknown</h3><p>" + BB.esc(entry.still_unknown) + "</p>"
+      : "";
+    return '<article class="card">' +
+      '<span class="kicker">' + BB.esc(entry.company) + "</span>" +
+      "<h2>" + BB.esc(entry.protocol) + " " + BB.evBadge(entry.evidence) + "</h2>" +
+      "<p>" + BB.esc(entry.what_it_does) + "</p>" +
+      "<h3>Reverse engineered</h3><p>" + BB.esc(entry.reverse_engineered) + "</p>" +
+      unknown +
+      resourceList(entry.resources) +
+      "</article>";
+  }
+
+  BB.loadJson("protocol-re-notes.json",
+    function (data) {
+      var entries = (data && data.entries) || [];
+      container.innerHTML = entries.map(card).join("") || "<p>No protocols found.</p>";
+    },
+    function (err) {
+      container.innerHTML = "<p>Could not load protocol-re-notes.json (" + BB.esc(err.message) + ").</p>";
     });
 })();
