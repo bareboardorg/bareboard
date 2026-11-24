@@ -1,40 +1,38 @@
-/* Most Wanted — render the board from /data/most-wanted.json.
-   The JSON is the registry of record; the static list in most-wanted.html
-   is the no-JS fallback and is replaced by this render when the fetch
-   succeeds. On any failure the static list stays — the board never blanks.
-   No fetch leaves the origin; CSP connect-src 'self' covers it. */
+/* Most Wanted board — fills #mw-board from /data/most-wanted.json.
+ *
+ * most-wanted.html already carries a static list for visitors without
+ * JavaScript. When the JSON loads, this replaces that list with the live
+ * registry. When anything fails, the static list simply stays put: the
+ * board is never left blank by a failed request. The fetch never leaves
+ * this origin. */
 (function () {
-  'use strict';
+  "use strict";
 
-  var list = document.getElementById('mw-board');
-  if (!list) return;
+  var board = document.getElementById("mw-board");
+  if (!board) return;
 
-  function esc(s) {
-    return String(s == null ? '' : s)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;');
+  function renderEntry(entry) {
+    var rows = [
+      ["Sought for:", entry.soughtFor],
+      ["Why it matters:", entry.whyItMatters],
+      ["Priority:", entry.priority]
+    ];
+    var body = rows.map(function (row) {
+      return "<p><strong>" + row[0] + "</strong> " + BB.esc(row[1]) + "</p>";
+    }).join("");
+    return "<li><h3>" + BB.esc(entry.name) + "</h3>" + body + "</li>";
   }
 
-  function entryHtml(e) {
-    return '<li>' +
-      '<h3>' + esc(e.name) + '</h3>' +
-      '<p><strong>Sought for:</strong> ' + esc(e.soughtFor) + '</p>' +
-      '<p><strong>Why it matters:</strong> ' + esc(e.whyItMatters) + '</p>' +
-      '<p><strong>Priority:</strong> ' + esc(e.priority) + '</p>' +
-      '</li>';
-  }
-
-  fetch('/data/most-wanted.json')
-    .then(function (r) {
-      if (!r.ok) throw new Error('most-wanted.json: HTTP ' + r.status);
-      return r.json();
+  fetch("/data/most-wanted.json")
+    .then(function (response) {
+      if (!response.ok) throw new Error("most-wanted.json: HTTP " + response.status);
+      return response.json();
     })
-    .then(function (board) {
-      if (!board || !Array.isArray(board.entries) || board.entries.length === 0) return;
-      list.innerHTML = board.entries.map(entryHtml).join('');
-      list.setAttribute('data-rendered-from', 'data/most-wanted.json');
+    .then(function (data) {
+      var entries = data && data.entries;
+      if (!Array.isArray(entries) || entries.length === 0) return;
+      board.innerHTML = entries.map(renderEntry).join("");
+      board.setAttribute("data-rendered-from", "data/most-wanted.json");
     })
-    .catch(function () { /* static fallback stays */ });
+    .catch(function () { /* leave the static list in place */ });
 })();

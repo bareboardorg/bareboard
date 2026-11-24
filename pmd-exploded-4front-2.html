@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+  <meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exploded View: Quantum 4Front 2 / 4Front 2 HD &mdash; PMD &mdash; BareBoard</title>
+<meta name="description" content="Every assembly of the Quantum 4Front 2 and 4Front 2 HD exploded to the component level, from Quantum&rsquo;s own Illustrated Parts Breakdown (INFMANU5204 Rev. D): 42 assemblies and 460 parts &mdash; Q-Logic 3 electronics, Linix drive motors, Group 24 batteries &mdash; with a plain-language line for every part.">
+<meta name="theme-color" content="#fbfbfc">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BareBoard">
+<meta property="og:title" content="Exploded View: Quantum 4Front 2 / 4Front 2 HD">
+<meta property="og:description" content="Every assembly of the Quantum 4Front 2 and 4Front 2 HD exploded to the component level, from Quantum&rsquo;s own Illustrated Parts Breakdown (INFMANU5204 Rev. D): 42 assemblies and 460 parts &mdash; Q-Logic 3 electronics, Linix drive motors, Group 24 batteries &mdash; with a plain-language line for every part.">
+<meta property="og:url" content="https://www.bareboard.org/pmd-exploded-4front-2.html">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "BareBoard Protocol Reverse Engineering",
+  "description": "Closed protocols the community has reverse engineered, with open resources."
+}
+</script>
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">GPU</li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+</ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <h1>Exploded View: Quantum 4Front 2 / 4Front 2 HD</h1>
+    <p class="lede">The whole 4Front 2, taken apart by the people who built it. Quantum&rsquo;s <strong>Illustrated Parts Breakdown</strong> for this chair covers two models &mdash; the 4Front 2 and the heavier-duty 4Front 2 HD &mdash; in one book of 94 pages, exploding 42 assemblies into numbered parts. Every diagram below is Quantum&rsquo;s own page, followed by the book&rsquo;s parts table with a plain-language line added for every part. Where the two models differ, the book says so in the part name &mdash; the HD suspension packages, the HD drive motors, the HD drive programs, and the HD badge decal are all called out below.</p>
+    <p><strong>Coverage: full IPB.</strong> Every assembly in the book that carries a parts list is here: 42 assemblies, 460 parts. The book&rsquo;s last pages are its two appendices &mdash; a pages index and a parts index &mdash; which carry no new parts and are used here to check the tables, not repeated as steps. The book&rsquo;s cover plate is a caster-arm diagram with no parts list, so it is not a step either.</p>
+  </section>
+
+  <section>
+    <h2>The chair in numbers</h2>
+    <p>From the owner&rsquo;s manual and the parts book &mdash; the numbers the maker itself prints:</p>
+    <ul>
+      <li><strong>Drive:</strong> front-wheel drive &mdash; the big powered wheels sit at the front, swivelling caster wheels trail at the rear, and small anti-tip wheels sit ahead of the drive wheels. Two motor/brake assemblies, one per side.</li>
+      <li><strong>Motors:</strong> Linix motors, 5 mph &mdash; or 6.25 mph with the anti-tips drive program (the book&rsquo;s Q-Logic 3 SD card listings name both speeds).</li>
+      <li><strong>Drive wheels:</strong> 14 in &times; 3 in, flat-free or pneumatic &mdash; or 14 in &times; 4 in with knobby tires.</li>
+      <li><strong>Rear casters:</strong> 9 in flat-free wheels, 215 mm tires.</li>
+      <li><strong>Anti-tip wheels:</strong> 100 mm, with bearings and spacer.</li>
+      <li><strong>Batteries:</strong> two 12 V batteries &mdash; Group 24 AGM, 69.2 Ah (C/5), handles removed (MK) &mdash; or a Group 24 gel option the book lists as a pair. Always replace both together.</li>
+      <li><strong>Charger:</strong> 8 amp offboard CTE charger, with US, UK, EU, and AU power cords listed.</li>
+      <li><strong>Controller:</strong> Q-Logic 3, with EX, 3e, and stand-alone joystick options.</li>
+    </ul>
+    <p>The full specification table &mdash; weight capacity, range, turning radius, seat sizes &mdash; lives in the product-insert specification sheets the book lists in the Owner&rsquo;s Package (INFINFB4329 for the 4Front 2, INFINFB4335 for the 4Front 2 HD). Those sheets are not in the library yet, so those numbers are <strong>not</strong> stated here rather than guessed. If you hold a copy, the library would take it.</p>
+  </section>
+
+  <section>
+    <h2>The source</h2>
+    <p><strong>Guide:</strong> Quantum Rehab Illustrated Parts Breakdown for the 4Front 2 and 4Front 2 HD power chairs.</p>
+    <p><strong>Document:</strong> INFMANU5204 Rev. D &mdash; 94 pages, US edition (the book&rsquo;s own footer reads &ldquo;4Front 2 / 4Front 2 HD IPB (S/N JF6,JF7), US&rdquo;; Documoto export 2022-04-26). An Australian edition, INFMANU5263 Rev. A, also exists; this page follows the newer US Rev. D.</p>
+    <p><strong>Full guide (PDF, in this site&rsquo;s library):</strong> <a href="/library/collected-public-docs/pmd/quantum_4front-2_ipb.pdf">quantum_4front-2_ipb.pdf</a> &mdash; also at the dealer repost it was collected from, <a href="https://alliedmedical.co.nz/cdn/shop/files/4Front_2_and_4Front_2_HD_IPB.pdf?v=4112177546926890086">alliedmedical.co.nz</a>.</p>
+    <p><strong>Owner&rsquo;s manual (PDF, in this site&rsquo;s library):</strong> <a href="/library/collected-public-docs/pmd/quantum_4front-2_owner.pdf">quantum_4front-2_owner.pdf</a> &mdash; INFMANU4864 Rev. E, February 2020, 28 pages, from Quantum&rsquo;s own site.</p>
+    <p>The book is honest about its own scope, in its introduction: &ldquo;An IPB is a graphically portrayed parts listing of product components which have been deemed to have serviceable, maintenance significance.&rdquo; Items are also listed by parent assembly: &ldquo;The parent assembly reference number is A1 &mdash; A5. That part contains all of the items listed as and contained within A1, A2, A3, A4, &amp; A5. As long as these subcomponents have a callout associated with them, they can be selected for replacement or quote.&rdquo; Parent rows below keep the book&rsquo;s own callout ranges (A1 &ndash; A6 and the like). This US edition prints no price column &mdash; its tables are Item, Part No., Name, and Qty only. The book also prints 14 &ldquo;web link&rdquo; rows inside its tables &mdash; pointers to separate Quantum breakdowns for joystick shrouds, mounts, knobs, SD cards, and the backup camera. Those rows are cross-references, not parts, and are not counted in the 460. The book prints its Q-Logic 3 SD Cards plate twice, under Joysticks and under Electronics, with identical rows; both steps are reproduced as printed. One row&rsquo;s part number is blank in the book&rsquo;s table (Joystick Receiver Mounts, E1); the number ACC123525 is taken from the book&rsquo;s own Appendix B parts index, which lists it on that plate&rsquo;s page and nowhere else in the table &mdash; the index and the table agree everywhere else, checked row by row.</p>
+    <p><strong>Publishing basis:</strong> our own original writing, plus facts &mdash; part numbers, names, and quantities &mdash; from the manufacturer&rsquo;s published guide (facts are free for all to use, <em>Feist v. Rural Telephone</em>). The diagrams are the manufacturer&rsquo;s, reproduced with attribution; nothing is redrawn or presented as ours.</p>
+  </section>
+
+  <section>
+    <h2>The maker&rsquo;s own warnings, word for word</h2>
+    <p>The parts book prints no warning paragraphs. On Quantum&rsquo;s chairs the safety warnings are decals, and the book lists them as parts in the Decal Package assembly. The warning and caution decals in this book include:</p>
+<ul>
+      <li>DWR1234L957 &middot; DECAL,WARNING,DEFLATE TIRE COMPLETELY,L-1234-957</li>
+      <li>DWR1235L515 &middot; DECAL,WARNING,BATTERY WARNINGS,L-1235-515</li>
+      <li>DWR1235L516 &middot; DECAL,WARNING,DEFLATE TIRE COMPLETELY,FRENCH,L-1235-516</li>
+      <li>DWR1235L520 &middot; DECAL,CAUTION,EXTENSION CORD/GROUNDING PRONG,L-1235-520</li>
+      <li>DWR1235L521 &middot; DECAL,WARNING,CONTROLLER CORD PLACEMENT,L-1235-521</li>
+      <li>LAB2005393 &middot; DECAL,4FRONT REAR CASTER NUT WARNING LABEL</li>
+    </ul>
+    <p>If a warning decal on your chair is peeling or unreadable, it is a replaceable part &mdash; its number is in that table. A warning you cannot read cannot warn you.</p>
+    <p>The owner&rsquo;s manual (INFMANU4864 Rev. E) states the safety rules in its own words. These are quoted verbatim:</p>
+    <blockquote>&ldquo;Do not operate your new power chair for the first time without completely reading and understanding this owner&rsquo;s manual.&rdquo;</blockquote>
+    <blockquote>&ldquo;Do not remove the anti-tip wheels.&rdquo;</blockquote>
+    <blockquote>&ldquo;Place unit on level ground and stand to one side when changing from drive mode to freewheel mode or freewheel mode to drive mode.&rdquo;</blockquote>
+    <blockquote>&ldquo;The spring tension on your power chair was factory set to meet the needs of the demographic majority of users. Do not adjust the tension of any spring on your power chair.&rdquo;</blockquote>
+    <blockquote>&ldquo;Do not replace batteries when seat is occupied.&rdquo;</blockquote>
+    <blockquote>&ldquo;Do not mix old and new batteries. Always replace both batteries at the same time.&rdquo;</blockquote>
+    <blockquote>&ldquo;Keep tools and other metal objects away from the battery terminals. Contact with tools can cause electrical shock.&rdquo;</blockquote>
+    <blockquote>&ldquo;Battery posts, terminals, and related accessories contain lead and lead compounds. Wear goggles and gloves when handling batteries and wash hands after handling.&rdquo;</blockquote>
+    <blockquote>&ldquo;The batteries in your power chair should only be serviced or replaced by a Quantum Rehab Provider or a qualified technician.&rdquo;</blockquote>
+    <blockquote>&ldquo;CAUTION! Federal law restricts this device to sale by or on the order of a physician or other certified personnel licensed by the law of the State (US only) or region in which this personnel practices to use or order the use of the device.&rdquo;</blockquote>
+    <p>The manual also says there are more warnings in the Consumer Safety Guide (INFMANU5075) that ships with the chair. That guide is not in the library yet; its warnings are not paraphrased here.</p>
+  </section>
+
+  <section>
+    <h2>The full record: an open FDA recall</h2>
+    <p>This chair has an open Class 2 FDA recall, and it matters to every owner, because it is about the chair stopping without warning. The FDA record (recall event 99286, initiated June 25, 2026, posted July 31, 2026, status open and classified) covers the 4Front 2 (recall Z-2841-2026) and the 4Front 2 HD (recall Z-2851-2026); the FDA recall record lists 510(k) K143383 for the recall. The manufacturer&rsquo;s reason, as the FDA records it: if the &ldquo;Remind Me Later&rdquo; option is selected for user reminders, reminder pop-up messages may appear while the wheelchair is in use; if this occurs while driving, the wheelchair may perform an unexpected park brake stop, which may result in fall or injury; if it occurs while not driving, the control system may crash and remain in pre-operational mode. The fix is a software update to Q-Logic version 2.0.13 or later, and owners were told to disable &ldquo;Remind Me Later&rdquo; immediately and contact their dealer to schedule the update. Quantity in commerce: 1,102 units for the 2 HD record.</p>
+    <p><strong>Sources:</strong> FDA recall record Z-2851-2026, preserved copy in this site&rsquo;s library: <a href="/library/collected-public-docs/pmd-fda/recall_Z-2851-2026.html">recall_Z-2851-2026.html</a>. FDA recall record Z-2841-2026 (4Front 2): <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=221193">FDA accessdata</a> &mdash; no library copy held yet.</p>
+  </section>
+
+  <section>
+    <h2>Contents</h2>
+    <p>The assemblies are laid out in the book&rsquo;s own order, under its 17 numbered sections. Every step is one exploded view from the maker&rsquo;s guide, followed by its parts table. The <strong>Callout</strong> column is the label printed on the diagram. The <strong>Part number</strong> column is the maker&rsquo;s own number &mdash; the number a parts desk cannot argue with. The IPB page for each step is printed with it.</p>
+    <ul>
+      <li><strong>1. Main Frame Assy:</strong> <a href="#step-1">Step 1: Main Frame Assembly, 4Front 2</a></li>
+      <li><strong>2. Anti-tip Assy:</strong> <a href="#step-2">Step 2: Anti-tip Assembly, 4Front 2</a></li>
+      <li><strong>3. Suspension Assy's:</strong> <a href="#step-3">Step 3: Suspension Spring Packages, 4Front 2</a></li>
+      <li><strong>4. Rear Caster Arm Assy:</strong> <a href="#step-4">Step 4: Rear Caster Arm and Wheel, 4Front 2</a></li>
+      <li><strong>5. Drive Motor &amp; Motor Mount Assy's:</strong> <a href="#step-5">Step 5: Drive Motor &amp; Motor Mount Assy w/ Hub, 4Front 2</a></li>
+      <li><strong>6. Q-Logic 3 Joysticks:</strong> <a href="#step-6">Step 6: Q-Logic 3 EX Joystick Assemblies</a> &middot; <a href="#step-7">Step 7: Q-Logic 3e Joystick Assemblies, 4Front 2</a> &middot; <a href="#step-8">Step 8: Q-Logic 3 Stand Alone Joystick Assy</a> &middot; <a href="#step-9">Step 9: Q-Logic 3 SD Cards, 4Front 2 (USA, Canada, Australia, Europe)</a> &middot; <a href="#step-10">Step 10: Q-Logic 2 &amp; 3 Joystick Shrouds</a> &middot; <a href="#step-11">Step 11: Aftermarket Joystick Knobs - Curtis and P&amp;G</a></li>
+      <li><strong>7. Q-Logic 3 Electronics Assy's:</strong> <a href="#step-12">Step 12: QL3 Electronics, Standard Fenders / No PTO QBC, 4Front 2</a> &middot; <a href="#step-13">Step 13: QL3 Electronics, Light Fenders / PTO QBC, 4Front 2</a> &middot; <a href="#step-14">Step 14: QL3 Electronics, Manual Recline, Standard Fender / No PTO QBC, 4Front 2</a> &middot; <a href="#step-15">Step 15: Q-Logic 3 LM, AM1, &amp; LAM2, 4Front 2</a> &middot; <a href="#step-16">Step 16: Q-Logic 3 SD Cards, 4Front 2 (USA, Canada, Australia, Europe)</a></li>
+      <li><strong>8. Base Mounted Light Assy's:</strong> <a href="#step-17">Step 17: Base Mounted Light Assemblies, 4Front 2</a></li>
+      <li><strong>9. Shroud Assy's &amp; Battery Access Brackets:</strong> <a href="#step-18">Step 18: Complete Shroud Assemblies, 4Front 2</a> &middot; <a href="#step-19">Step 19: Painted Caster Arm Top Cover and Cap, 4Front 2</a> &middot; <a href="#step-20">Step 20: Front Door Shroud and Battery Access Bracket Assemblies, 4Front 2</a> &middot; <a href="#step-21">Step 21: Rear Shroud Assembly with and without Lighting, 4Front 2</a></li>
+      <li><strong>10. Fender Assy's:</strong> <a href="#step-22">Step 22: Standard Fenders, 4Front 2</a> &middot; <a href="#step-23">Step 23: Lighting Fenders w/ 4 Pin Module, 4Front Series</a></li>
+      <li><strong>11. PTO Backup Camera:</strong> <a href="#step-24">Step 24: PTO Backup Camera Module, QL3, 4Front 2</a> &middot; <a href="#step-25">Step 25: Quantum Backup Camera, Standard Mount, and Headrest Mount</a> &middot; <a href="#step-26">Step 26: Quantum Backup Camera Display Mounts</a></li>
+      <li><strong>12. Seat Mount Assy's:</strong> <a href="#step-27">Step 27: Seat Interfaces, 4Front 2</a></li>
+      <li><strong>13. Drive Wheel Assy's:</strong> <a href="#step-28">Step 28: Flat-free Drive Wheel, 5 Spoke Black Rim / Black Tire, 4Front 2</a> &middot; <a href="#step-29">Step 29: Pneumatic Drive Wheel, 5 Spoke Black Rim / Black Tire, 4Front 2</a> &middot; <a href="#step-30">Step 30: Painted Rim Inserts</a> &middot; <a href="#step-31">Step 31: Flat-free Drive Wheel, 5 Spoke, Black Rim / Black "Knobby" Tire, 14" x 4", 4Front 2</a> &middot; <a href="#step-32">Step 32: Pneumatic Drive Wheel, 5 Spoke, Black Rim / Black "Knobby" Tire, 14" x 4", 4Front 2</a></li>
+      <li><strong>14. Batteries:</strong> <a href="#step-33">Step 33: Group 24 AGM Battery, No Handles, Flush Mount, MK</a> &middot; <a href="#step-34">Step 34: Group 34 Flush Mount Terminal Battery</a></li>
+      <li><strong>15. Battery Charger:</strong> <a href="#step-35">Step 35: Amp CTE Charger</a></li>
+      <li><strong>16. Joystick Mounts &amp; Receivers:</strong> <a href="#step-36">Step 36: Basic Swing-away Joystick Mount, Q-Logic</a> &middot; <a href="#step-37">Step 37: Version 3 Swing-away Joystick Bracket &amp; Components</a> &middot; <a href="#step-38">Step 38: Retract 4 Swing-away Joystick Bracket for Curtis Joysticks</a> &middot; <a href="#step-39">Step 39: Stealth Swing-away / Flip Down Joystick Brackets &amp; Mounts</a> &middot; <a href="#step-40">Step 40: Joystick Receiver Mounts, Quantum</a></li>
+      <li><strong>17. Owner's &amp; Decal Packages:</strong> <a href="#step-41">Step 41: Owner&#x27;s Package, 4Front 2</a> &middot; <a href="#step-42">Step 42: Decal Package, 4Front 2</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Section 1 &mdash; Main Frame Assy</h2>
+    <h3 id="step-1">Step 1 &mdash; Main Frame Assembly, 4Front 2</h3>
+    <p>IPB pages 1&ndash;2.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p5.jpg" alt="Main Frame Assembly, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 1.</strong> Main Frame Assembly, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 1&ndash;2.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>MEC2003762</td><td>MAIN FRAME ASSEMBLY,4FRONT 2</td><td>1</td><td>Part of the chair's skeleton — everything else bolts to it.</td></tr>
+        <tr><td>B1</td><td>DGN2003761</td><td>SIDE SHROUD ASSEM, WITH REFLECTOR, RIGHT</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>C1</td><td>DGN1611522</td><td>SIDE SHROUD ASSEM, WITH REFLECTOR, LEFT</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>D1</td><td>SCRPPH1036</td><td>SCREW, PAN HEAD, TYPE H, M4X0.7 X 8, FT, ISO 7045, CL 4.8, BZ</td><td>1</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>E1</td><td>ELE2002741</td><td>POWER SWITCH HARNESS ASSEMBLY</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>F1</td><td>SCR8110001</td><td>SCREW, SOCKET HEAD, M6X1.0 X 14, ISO 4762, CL 12.9, BZ, PVTP</td><td>1</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>G1</td><td>MEC2002740</td><td>POWER SWITCH BRACKET</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>H1</td><td>SCR8120014</td><td>SCREW, HEX HEAD, M6X1.0 X 12, ISO 4017, CL 10.9, BZ, PVTP</td><td>1</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>I1</td><td>STP8120001</td><td>STRAP,BATTERY PULL</td><td>1</td><td>A strap you pull to lift the battery out.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Section 2 &mdash; Anti-tip Assy</h2>
+    <h3 id="step-2">Step 2 &mdash; Anti-tip Assembly, 4Front 2</h3>
+    <p>IPB pages 3&ndash;4.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p7.jpg" alt="Anti-tip Assembly, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 2.</strong> Anti-tip Assembly, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 3&ndash;4.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1a</td><td>MEC1705020</td><td>ANTI-TIP MOUNT ASSEMBLY, RIGHT</td><td>1</td><td>Part of the frame — the structure everything else bolts to.</td></tr>
+        <tr><td>A1b</td><td>MEC1705019</td><td>ANTI-TIP MOUNT ASSEMBLY, LEFT</td><td>1</td><td>Part of the frame — the structure everything else bolts to.</td></tr>
+        <tr><td>B1</td><td>WHLASMB1523</td><td>WHEEL,ASSY,ANTI-TIP,100MM OD X 23.76MM TH,W/BEARINGS &amp; SPACER,C-1505-032</td><td>1</td><td>A small wheel at the front that stops the chair tipping backward.</td></tr>
+        <tr><td>C1</td><td>NUTACRN1012</td><td>NUT, ACORN, M8X1.25, DIN 1587, CL 6, BZ</td><td>1</td><td>Threads onto a bolt to clamp parts together.</td></tr>
+        <tr><td>D1</td><td>HDW138262</td><td>WASHER, FLAT, 8.4 ID X 16 OD X 1.6 THK, ISO 7089-8-200 HV, BZ</td><td>1</td><td>Sits under a bolt head or nut to spread the clamping force.</td></tr>
+        <tr><td>E1</td><td>HDW1703666</td><td>HARDWARE,ASSY,ANTI-TIP SECUREMENT,QUANTUM 4FRONT</td><td>2</td><td>Part of the frame — the structure everything else bolts to.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Section 3 &mdash; Suspension Assy's</h2>
+    <h3 id="step-3">Step 3 &mdash; Suspension Spring Packages, 4Front 2</h3>
+    <p>IPB pages 5&ndash;6.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p9.jpg" alt="Suspension Spring Packages, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 3.</strong> Suspension Spring Packages, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 5&ndash;6.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1a</td><td>MEC2003018</td><td>SUSPENSION,ASSY,QUANTUM 4FRONT 2,MEDIUM</td><td>1</td><td>Lets the wheels ride over bumps while the seat stays level.</td></tr>
+        <tr><td>A1b</td><td>MEC2003019</td><td>SUSPENSION,ASSY,QUANTUM 4FRONT 2,STANDARD</td><td>1</td><td>Lets the wheels ride over bumps while the seat stays level.</td></tr>
+        <tr><td>A1c</td><td>MEC2003020</td><td>SUSPENSION,ASSY,QUANTUM 4FRONT 2,LIFT</td><td>1</td><td>Lets the wheels ride over bumps while the seat stays level.</td></tr>
+        <tr><td>A1d</td><td>MEC2103773</td><td>SUSPENSION,ASSY,QUANTUM 4FRONT 2,NO ANTI-TIP</td><td>1</td><td>Lets the wheels ride over bumps while the seat stays level.</td></tr>
+        <tr><td>A1e</td><td>MEC2003021</td><td>SUSPENSION,ASSY,QUANTUM 4FRONT 2,HD</td><td>1</td><td>Lets the wheels ride over bumps while the seat stays level.</td></tr>
+        <tr><td>B1a</td><td>MEC2100694</td><td>SUSPENSION SERVICE ASSEMBLY,FRONT,MEDIUM PACKAGE,4FRONT2</td><td>1</td><td>Lets the wheels ride over bumps while the seat stays level.</td></tr>
+        <tr><td>B1b</td><td>MEC2100695</td><td>SUSPENSION SERVICE ASSEMBLY,FRONT,STANDARD PACKAGE,4FRONT2</td><td>1</td><td>Lets the wheels ride over bumps while the seat stays level.</td></tr>
+        <tr><td>B1c</td><td>MEC2100696</td><td>SUSPENSION SERVICE ASSEMBLY,FRONT,LIFT PACKAGE,4FRONT2</td><td>1</td><td>Lets the wheels ride over bumps while the seat stays level.</td></tr>
+        <tr><td>B1d</td><td>MEC2100698</td><td>SUSPENSION SERVICE ASSEMBLY,FRONT,HD PACKAGE,4FRONT2</td><td>1</td><td>Lets the wheels ride over bumps while the seat stays level.</td></tr>
+        <tr><td>C1a</td><td>MEC2100699</td><td>SUSPENSION SERVICE ASSEMBLY,REAR,MEDIUM PACKAGE,4FRONT2</td><td>1</td><td>Lets the wheels ride over bumps while the seat stays level.</td></tr>
+        <tr><td>C1b</td><td>MEC2100700</td><td>SUSPENSION SERVICE ASSEMBLY,REAR,STANDARD / LIFT PACKAGE,4FRONT2</td><td>1</td><td>Lets the wheels ride over bumps while the seat stays level.</td></tr>
+        <tr><td>C1c</td><td>MEC2100701</td><td>SUSPENSION SERVICE ASSEMBLY,REAR,HD PACKAGE,4FRONT2</td><td>1</td><td>Lets the wheels ride over bumps while the seat stays level.</td></tr>
+        <tr><td>D1</td><td>MEC1810323</td><td>PIVOT PIN</td><td>8</td><td>A pin the suspension pivots on — it lets the arm swing while staying attached.</td></tr>
+        <tr><td>E1</td><td>MEC168447</td><td>PIN CAP</td><td>2</td><td>A cap that covers the end of a pin.</td></tr>
+        <tr><td>F1a</td><td>MEC1804451</td><td>PIVOT PIN COVER, RIGHT</td><td>2</td><td>A cover over the suspension pivot pin.</td></tr>
+        <tr><td>F1b</td><td>MEC1804271</td><td>PIVOT PIN COVER, LEFT</td><td>2</td><td>A cover over the suspension pivot pin.</td></tr>
+        <tr><td>G1</td><td>MEC1703423</td><td>PIVOT PIN COVER</td><td>2</td><td>A cover over the suspension pivot pin.</td></tr>
+        <tr><td>H1</td><td>HDW120030</td><td>SCREW, FLAT HEAD, M5X0.8 X 12, ISO 10642, CL 10.9, BZ, PVTP</td><td>10</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Section 4 &mdash; Rear Caster Arm Assy</h2>
+    <h3 id="step-4">Step 4 &mdash; Rear Caster Arm and Wheel, 4Front 2</h3>
+    <p>IPB pages 7&ndash;8.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p11.jpg" alt="Rear Caster Arm and Wheel, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 4.</strong> Rear Caster Arm and Wheel, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 7&ndash;8.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1a</td><td>MEC2102653</td><td>CASTER ARM SERVICE ASSEMBLY, RIGHT, 4FRONT 2</td><td>1</td><td>The arm that holds the rear caster wheel to the frame.</td></tr>
+        <tr><td>A1b</td><td>MEC2102652</td><td>CASTER ARM SERVICE ASSEMBLY, LEFT, 4FRONT 2</td><td>1</td><td>The arm that holds the rear caster wheel to the frame.</td></tr>
+        <tr><td>B1</td><td>MEC1908272</td><td>AXLE BRACE ASSEMBLY</td><td>1</td><td>A brace that stiffens the axle mount.</td></tr>
+        <tr><td>C1</td><td>MEC1810323</td><td>PIVOT PIN</td><td>1</td><td>A pin the suspension pivots on — it lets the arm swing while staying attached.</td></tr>
+        <tr><td>D1a</td><td>MEC1804451</td><td>PIVOT PIN COVER, RIGHT</td><td>1</td><td>A cover over the suspension pivot pin.</td></tr>
+        <tr><td>D1b</td><td>MEC1804271</td><td>PIVOT PIN COVER, LEFT</td><td>1</td><td>A cover over the suspension pivot pin.</td></tr>
+        <tr><td>E1</td><td>HDW120030</td><td>SCREW, FLAT HEAD, M5X0.8 X 12, ISO 10642, CL 10.9, BZ, PVTP</td><td>1</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>F1</td><td>WHL1703592</td><td>WHEEL,ASSY,FLAT FREE,9" CASTER,BLACK RIM/BLACK TIRE,D-1202-030</td><td>1</td><td>A complete wheel — tire and hub together.</td></tr>
+        <tr><td>G1</td><td>TIR8110009</td><td>TIRE,FLAT FREE,BLACK,215MM OD,70MM W,C9210 TREAD,(GALLOP: 5504006)</td><td>1</td><td>A solid tire that cannot go flat — it grips the ground and cushions the ride.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Section 5 &mdash; Drive Motor &amp; Motor Mount Assy's</h2>
+    <h3 id="step-5">Step 5 &mdash; Drive Motor &amp; Motor Mount Assy w/ Hub, 4Front 2</h3>
+    <p>IPB pages 9&ndash;10.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p13.jpg" alt="Drive Motor &amp; Motor Mount Assy w/ Hub, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 5.</strong> Drive Motor &amp; Motor Mount Assy w/ Hub, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 9&ndash;10.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1a</td><td>MOT1714330-05</td><td>FWD HD RIGHT MTR, 5 POST HUB, 4FRONT 2</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>A1b</td><td>MOT1714331-05</td><td>FWD HD LEFT MTR, 5 POST HUB, 4FRONT 2</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>B1a</td><td>MOT1714330-06</td><td>FWD HD RIGHT MTR, 5 POST HUB, 4FRONT 2 HD</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>B1b</td><td>MOT1714331-06</td><td>FWD HD LEFT MTR, 5 POST HUB, 4FRONT 2 HD</td><td>1</td><td>Turns battery power into spinning force that moves the chair.</td></tr>
+        <tr><td>C1a</td><td>MEC160250</td><td>MOTOR MOUNT ASSEMBLY, RIGHT</td><td>1</td><td>The mount that holds the drive motor to the frame.</td></tr>
+        <tr><td>C1b</td><td>MEC160251</td><td>MOTOR MOUNT ASSEMBLY, LEFT</td><td>1</td><td>The mount that holds the drive motor to the frame.</td></tr>
+        <tr><td>D1</td><td>FRMASMB8691</td><td>FREEWHEEL,ASSY,RELEASE HANDLE GRIP,YELLOW,B-1160-051</td><td>1</td><td>The lever that disconnects the motor so the chair can be pushed by hand.</td></tr>
+        <tr><td>E1</td><td>MOT1901488</td><td>NUT, LOCK, M12X1.75, DIN 985, CL 8, ZN, PVTP</td><td>1</td><td>Threads onto a bolt to clamp parts together.</td></tr>
+        <tr><td>F1</td><td>MOT1901490</td><td>WASHER,FLAT,ZINC,13MM ID X 24MM OD X 2.5MM TH</td><td>1</td><td>Sits under a bolt head or nut to spread the clamping force.</td></tr>
+        <tr><td>G1</td><td>MEC1714220</td><td>LINIX HD HUB ASSEMBLY</td><td>1</td><td>The hub the drive wheel bolts onto — it carries the wheel on the motor shaft.</td></tr>
+        <tr><td>H1</td><td>INDPART2431</td><td>KEY,WOODRUFF,#606,0.1875 X 0.740</td><td>1</td><td>A small wedge that locks the hub to the motor shaft so they turn together.</td></tr>
+        <tr><td>I1</td><td>MEC1908272</td><td>AXLE BRACE ASSEMBLY</td><td>1</td><td>A brace that stiffens the axle mount.</td></tr>
+        <tr><td>J1</td><td>HDW120030</td><td>SCREW, FLAT HEAD, M5X0.8 X 12, ISO 10642, CL 10.9, BZ, PVTP</td><td>1</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>K1</td><td>MEC168447</td><td>PIN CAP</td><td>1</td><td>A cap that covers the end of a pin.</td></tr>
+        <tr><td>L1</td><td>MEC1810323</td><td>PIVOT PIN</td><td>1</td><td>A pin the suspension pivots on — it lets the arm swing while staying attached.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Section 6 &mdash; Q-Logic 3 Joysticks</h2>
+    <h3 id="step-6">Step 6 &mdash; Q-Logic 3 EX Joystick Assemblies</h3>
+    <p>IPB pages 11&ndash;12.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p15.jpg" alt="Q-Logic 3 EX Joystick Assemblies — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 6.</strong> Q-Logic 3 EX Joystick Assemblies &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 11&ndash;12.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>CTL143976</td><td>EXPANDABLE CONTROLLER W/ JOYSTICK AND LCD COLOR DISPLAY, Q-LOGIC 3, 4-KEY, (CURTIS: 17949700-02-0009)</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>B1</td><td>CTL143977</td><td>EXPANDABLE CONTROLLER W/ JOYSTICK AND LCD COLOR DISPLAY AND LIGHTS, Q-LOGIC 3, 4-KEY, (CURTIS: 17949700-02-0109)</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>C1</td><td>DGN124307</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,BLACK SOFT-TOUCH PAINT,(CURTIS: 17949365-02)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>D1</td><td>FRMASMB10617</td><td>JOYSTICK MOUNTING BRACKET,ASSY,CURTIS,INLINE</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>E1</td><td>DGN124309</td><td>SPEED WHEEL,KNOB,CURTIS Q-LOGIC 2,BLACK,PLASTIC,DGN124309,(CURTIS: 17949367-01)</td><td>1</td><td>The stick-top you hold to drive.</td></tr>
+        <tr><td>F1</td><td>DGN154742</td><td>JOYSTICK, KNOB, Q-LOGIC 3, 6.35MM-ID, (CURTIS: 17519114-01)</td><td>1</td><td>The stick-top you hold to drive.</td></tr>
+        <tr><td>G1</td><td>RECPART1006</td><td>RECON,JOYSTICK RUBBER BOOT,(P&amp;G: 283-77.10.004)</td><td>1</td><td>A rubber cover that keeps dust and water out of the joystick.</td></tr>
+        <tr><td>H1</td><td>ELE144006</td><td>ELECTRONIC, BOTTOM HOUSING, JOYSTICK MODULE Q-LOGIC 3,W/ BUS CABLE Q-LOGIC 3, (CURTIS: 17949366-02)</td><td>1</td><td>The bottom shell of the joystick — it holds the joystick's electronics.</td></tr>
+        <tr><td>I1</td><td>KIT1902931</td><td>Q-LOGIC 3 HANDCONTROL LIGHT SPRING OPTION KIT WITH INSTALL INSTRUCTIONS</td><td>1</td><td>A spring kit for the joystick's light option.</td></tr>
+        <tr><td>J1</td><td>ELE124312</td><td>ELECTRONIC,JOYSTICK GIMBLE,DIGITAL,Q-LOGIC 2&amp;3</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-fault-codes-qlogic.html">Q-Logic fault codes, translated</a> — what the flash codes on this control system mean</p>
+    <h3 id="step-7">Step 7 &mdash; Q-Logic 3e Joystick Assemblies, 4Front 2</h3>
+    <p>IPB pages 13&ndash;14.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p17.jpg" alt="Q-Logic 3e Joystick Assemblies, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 7.</strong> Q-Logic 3e Joystick Assemblies, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 13&ndash;14.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ELE2102342</td><td>SERVICEABLE ASSEMBLY, Q-LOGIC 3E, 4FRONT 2 WITH ANTI-TIPS PROGRAM, 6.25MPH LINIX MOTORS, STATIC SEATING</td><td>1</td><td>The joystick assembly for this chair setup — the hand control, programmed for this drive speed and seating.</td></tr>
+        <tr><td>B1</td><td>ELE2102341</td><td>SERVICEABLE ASSEMBLY, Q-LOGIC 3E, 4FRONT 2 WITH ANTI-TIPS PROGRAM, 6.25MPH LINIX MOTORS, POWER POSITIONING</td><td>1</td><td>The joystick assembly for this chair setup — the hand control, programmed for this drive speed and seating.</td></tr>
+        <tr><td>C1</td><td>ELE2102344</td><td>SERVICEABLE ASSEMBLY, Q-LOGIC 3E, 4FRONT 2 WITHOUT ANTI-TIPS PROGRAM, 5MPH LINIX MOTORS, STATIC SEATING</td><td>1</td><td>The joystick assembly for this chair setup — the hand control, programmed for this drive speed and seating.</td></tr>
+        <tr><td>D1</td><td>ELE2102343</td><td>SERVICEABLE ASSEMBLY, Q-LOGIC 3E, 4FRONT 2 WITHOUT ANTI-TIPS PROGRAM, 5MPH LINIX MOTORS, POWER POSITIONING</td><td>1</td><td>The joystick assembly for this chair setup — the hand control, programmed for this drive speed and seating.</td></tr>
+        <tr><td>E1</td><td>ELE2105132</td><td>SERVICEABLE ASSEMBLY, Q-LOGIC 3E, 4FRONT 2 HD WITH ANTI-TIPS PROGRAM, 5MPH LINIX MOTORS, STATIC SEATING</td><td>1</td><td>The joystick assembly for this chair setup — the hand control, programmed for this drive speed and seating.</td></tr>
+        <tr><td>F1</td><td>ELE2105131</td><td>SERVICEABLE ASSEMBLY, Q-LOGIC 3E, 4FRONT 2 HD WITH ANTI-TIPS PROGRAM, 5MPH LINIX MOTORS, POWER POSITIONING</td><td>1</td><td>The joystick assembly for this chair setup — the hand control, programmed for this drive speed and seating.</td></tr>
+        <tr><td>G1</td><td>FRMASMB10617</td><td>JOYSTICK MOUNTING BRACKET,ASSY,CURTIS,INLINE</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>H1</td><td>DGN154742</td><td>JOYSTICK, KNOB, Q-LOGIC 3, 6.35MM-ID, (CURTIS: 17519114-01)</td><td>1</td><td>The stick-top you hold to drive.</td></tr>
+        <tr><td>I1</td><td>KIT2008010</td><td>Q-LOGIC 3E KEYPAD REPLACEMENT KIT WITH INSTRUCTIONS</td><td>1</td><td>The button pad on the joystick — it is how you press the chair's functions.</td></tr>
+        <tr><td>J1</td><td>RECPART1006</td><td>RECON,JOYSTICK RUBBER BOOT,(P&amp;G: 283-77.10.004)</td><td>1</td><td>A rubber cover that keeps dust and water out of the joystick.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-fault-codes-qlogic.html">Q-Logic fault codes, translated</a> — what the flash codes on this control system mean</p>
+    <h3 id="step-8">Step 8 &mdash; Q-Logic 3 Stand Alone Joystick Assy</h3>
+    <p>IPB pages 15&ndash;16.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p19.jpg" alt="Q-Logic 3 Stand Alone Joystick Assy — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 8.</strong> Q-Logic 3 Stand Alone Joystick Assy &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 15&ndash;16.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>CTL143980</td><td>STANDALONE JOYSTICK, Q-LOGIC 3, (CURTIS: 17953700-1109)</td><td>1</td><td>The hand control the driver holds: steer, speed, and on/off.</td></tr>
+        <tr><td>A2</td><td>HAR144001</td><td>HARNESS, CHARGER/PROGRAMMER, Q-LOGIC 3, 0.9 METER,(CURTIS: 17880701)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A3</td><td>HAR144003</td><td>HARNESS, SEAT MULTIPLIER Q-LOGIC 3, (CURTIS: 17881360-02-01)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>B1</td><td>FRMASMB11156</td><td>MOUNTING BRACKET,ASSY,STAND ALONE JOYSTICK,SIDE RAIL MOUNT,C-1360-163</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>C1</td><td>FRMASMB10454</td><td>JOYSTICK MOUNTING BRACKET,ASSY,CURTIS STAND ALONE JOYSTICK,MIDLINE,C-1010-263</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>D1</td><td>DGN154742</td><td>JOYSTICK, KNOB, Q-LOGIC 3, 6.35MM-ID, (CURTIS: 17519114-01)</td><td>1</td><td>The stick-top you hold to drive.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-fault-codes-qlogic.html">Q-Logic fault codes, translated</a> — what the flash codes on this control system mean</p>
+    <h3 id="step-9">Step 9 &mdash; Q-Logic 3 SD Cards, 4Front 2 (USA, Canada, Australia, Europe)</h3>
+    <p>IPB pages 17&ndash;18.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p21.jpg" alt="Q-Logic 3 SD Cards, 4Front 2 (USA, Canada, Australia, Europe) — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 9.</strong> Q-Logic 3 SD Cards, 4Front 2 (USA, Canada, Australia, Europe) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 17&ndash;18.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ELE2102336</td><td>SERVICEABLE ASSEMBLY, SD CARD, Q-LOGIC 3, 4FRONT 2 WITH ANTI-TIPS PROGRAM, 6.25MPH LINIX MOTORS, STATIC SEATING.</td><td>1</td><td>A memory card carrying the chair's drive program for this setup — it holds the settings the chair runs on.</td></tr>
+        <tr><td>B1</td><td>ELE2102335</td><td>SERVICEABLE ASSEMBLY, SD CARD, Q-LOGIC 3, 4FRONT 2 WITH ANTI-TIPS PROGRAM, 6.25MPH LINIX MOTORS, POWER POSITIONING.</td><td>1</td><td>A memory card carrying the chair's drive program for this setup — it holds the settings the chair runs on.</td></tr>
+        <tr><td>C1</td><td>ELE2102338</td><td>SERVICEABLE ASSEMBLY, SD CARD, Q-LOGIC 3, 4FRONT 2 WITHOUT ANTI-TIPS PROGRAM, 5MPH LINIX MOTORS, STATIC SEATING.</td><td>1</td><td>A memory card carrying the chair's drive program for this setup — it holds the settings the chair runs on.</td></tr>
+        <tr><td>D1</td><td>ELE2102337</td><td>SERVICEABLE ASSEMBLY, SD CARD, Q-LOGIC 3, 4FRONT 2 WITHOUT ANTI-TIPS PROGRAM, 5MPH LINIX MOTORS, POWER POSITIONING.</td><td>1</td><td>A memory card carrying the chair's drive program for this setup — it holds the settings the chair runs on.</td></tr>
+        <tr><td>E1</td><td>ELE2105128</td><td>SERVICEABLE ASSEMBLY, SD CARD, Q-LOGIC 3, 4FRONT 2 HD WITH ANTI-TIPS PROGRAM, 5MPH LINIX MOTORS, STATIC SEATING.</td><td>1</td><td>A memory card carrying the chair's drive program for this setup — it holds the settings the chair runs on.</td></tr>
+        <tr><td>F1</td><td>ELE2105127</td><td>SERVICEABLE ASSEMBLY, SD CARD, Q-LOGIC 3, 4FRONT 2 HD WITH ANTI-TIPS PROGRAM, 5MPH LINIX MOTORS, POWER POSITIONING.</td><td>1</td><td>A memory card carrying the chair's drive program for this setup — it holds the settings the chair runs on.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-fault-codes-qlogic.html">Q-Logic fault codes, translated</a> — what the flash codes on this control system mean</p>
+    <h3 id="step-10">Step 10 &mdash; Q-Logic 2 &amp; 3 Joystick Shrouds</h3>
+    <p>IPB pages 19&ndash;20.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p23.jpg" alt="Q-Logic 2 &amp; 3 Joystick Shrouds — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 10.</strong> Q-Logic 2 &amp; 3 Joystick Shrouds &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 19&ndash;20.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>DGN124307</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,BLACK SOFT-TOUCH PAINT,(CURTIS: 17949365-02)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>A2</td><td>DGN124336-PBK1</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-BLK-01 (BACK IN BLACK/BLACK)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>A3</td><td>DGN124336-PSL1</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-SIL-01 (SILVER)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>A4</td><td>DGN124336-PRD1</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-RED-01 (RED CORVETTE/CANDY APPLE RED)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>A5</td><td>DGN124336-PPK1</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-PNK-01 (PEARL PINK)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>A6</td><td>DGN124336-PPR4</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-PRP-04 (SAPPHIRE BLUE)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>A7</td><td>DGN124336-PBU9</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-BLU-09 (ELECTRIC BLUE/TRUE BLUE)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>A8</td><td>DGN124336-PBU1</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-BLU-01 (VIPER BLUE)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>A9</td><td>DGN124336-PGN5</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-GRN-05 (EMERALD GREEN)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>A10</td><td>DGN124336-PYL3</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-YEL-03 (YELLOW BLAZE/ORION YELLOW)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>A11</td><td>DGN124336-POR4</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-ORN-04 (SUNBURST ORANGE)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B1</td><td>DGN124307</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,BLACK SOFT-TOUCH PAINT,(CURTIS: 17949365-02)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B2</td><td>DGN124336-PBK1</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-BLK-01 (BACK IN BLACK/BLACK)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B3</td><td>DGN124336-PBK3</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-BLK-03 (NIGHT TRAIN)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B4</td><td>DGN124336-PSL3</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-SIL-03 (GREY STREET)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B5</td><td>DGN124336-PSL7</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-SIL-07 (SILVER BULLET)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B6</td><td>DGN124336-PWH2</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-WHT-02 (WHITE SATIN)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B7</td><td>DGN124336-PRD1</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-RED-01 (RED CORVETTE/CANDY APPLE RED)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B8</td><td>DGN124336-PRD4</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-RED-04 (CHERRY BOMB)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B9</td><td>DGN124336-PPK3</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-PNK-03 (PRETTY IN PINK)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B10</td><td>DGN124336-PPK4</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-PNK-04 (RASPBERRY BERET)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B11</td><td>DGN124336-PPR7</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-PRP-07 (SUGAR PLUM)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B12</td><td>DGN124336-PPR5</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-PRP-05 (DEEP PURPLE)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B13</td><td>DGN124336-PBU10</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-BLU-10 (MIDNIGHT BLUE)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B14</td><td>DGN124336-PBU9</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-BLU-09 (ELECTRIC BLUE/TRUE BLUE)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B15</td><td>DGN124336-PBU11</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-BLU-11 (BLUE JEAN)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B16</td><td>DGN124336-PGN11</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-GRN-11 (GREEN MACHINE)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B17</td><td>DGN124336-PGN8</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-GRN-08 (MILITARY GREEN)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B18</td><td>DGN124336-PGN7</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-GRN-07 (LIME LIGHT)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B19</td><td>DGN124336-PYL3</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-YEL-03 (YELLOW BLAZE/ORION YELLOW)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B20</td><td>DGN124336-PYL4</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-YEL-04 (LEMON CRUSH)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B21</td><td>DGN124336-POR6</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-ORN-06 (ORANGE CRUSH)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B22</td><td>DGN124336-POR7</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PPW-ORN-07 (EVOLUTION ORANGE)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B23</td><td>DGN124336-WCB1</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PWT-CBN-01 (CARBON FIBER)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B24</td><td>DGN124336-WCM7</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PWT-CMO-07 (MILITARY DIGITAL CAMO)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B25</td><td>DGN124336-WFL2</td><td>Q-LOGIC 2/3 JOYSTICK SHROUD,PWT-FLG-02 (FADED GLORY)</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Note on this plate:</strong> The plate notes that power-base color varies by model and some colors listed may not be available on all power bases — check quantumrehab.com for the model-specific breakdown.</p>
+    <p><strong>Go deeper:</strong> <a href="/pmd-fault-codes-qlogic.html">Q-Logic fault codes, translated</a> — what the flash codes on this control system mean</p>
+    <h3 id="step-11">Step 11 &mdash; Aftermarket Joystick Knobs - Curtis and P&amp;G</h3>
+    <p>IPB pages 21&ndash;22.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p25.jpg" alt="Aftermarket Joystick Knobs - Curtis and P&amp;G — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 11.</strong> Aftermarket Joystick Knobs - Curtis and P&amp;G &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 21&ndash;22.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ACCASMB1856</td><td>P&amp;G JOYSTICK KNOB,ASSY,JAZZY,SOFT BALL</td><td>1</td><td>The stick-top you hold to drive.</td></tr>
+        <tr><td>B1</td><td>ACCASMB1857</td><td>P&amp;G JOYSTICK KNOB,ASSY,JAZZY,EXTENDED I-HANDLE</td><td>1</td><td>The stick-top you hold to drive.</td></tr>
+        <tr><td>C1</td><td>ACCASMB1858</td><td>P&amp;G JOYSTICK KNOB,ASSY,JAZZY,T BAR</td><td>1</td><td>The stick-top you hold to drive.</td></tr>
+        <tr><td>D1</td><td>ACCASMB1859</td><td>P&amp;G JOYSTICK KNOB,ASSY,JAZZY,BALL</td><td>1</td><td>The stick-top you hold to drive.</td></tr>
+        <tr><td>E1</td><td>ACCASMB1860</td><td>P&amp;G JOYSTICK KNOB,ASSY,JAZZY,MUSHROOM</td><td>1</td><td>The stick-top you hold to drive.</td></tr>
+        <tr><td>F1</td><td>ACCASMB1861</td><td>P&amp;G JOYSTICK KNOB,ASSY,JAZZY,CHIN CUP</td><td>1</td><td>The stick-top you hold to drive.</td></tr>
+        <tr><td>G1</td><td>ACCASMB1862</td><td>P&amp;G JOYSTICK KNOB,ASSY,JAZZY,REMOTE STANDARD</td><td>1</td><td>The stick-top you hold to drive.</td></tr>
+        <tr><td>H1</td><td>PLSKNCP1057</td><td>JOYSTICK KNOB,3",GOAL POST,W/FLEX SHAFT,FOR 1/4" STEM,(BP: PC101B)</td><td>1</td><td>The stick-top you hold to drive.</td></tr>
+        <tr><td>I1</td><td>PLSKNCP1058</td><td>JOYSTICK KNOB,4",GOAL POST,W/FLEX SHAFT,FOR 1/4" STEM,(BP: PC102B)</td><td>1</td><td>The stick-top you hold to drive.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Section 7 &mdash; Q-Logic 3 Electronics Assy's</h2>
+    <h3 id="step-12">Step 12 &mdash; QL3 Electronics, Standard Fenders / No PTO QBC, 4Front 2</h3>
+    <p>IPB pages 23&ndash;24.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p27.jpg" alt="QL3 Electronics, Standard Fenders / No PTO QBC, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 12.</strong> QL3 Electronics, Standard Fenders / No PTO QBC, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 23&ndash;24.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1 - A6</td><td>ELE2007294</td><td>ELECTRONIC,ASSY,Q-LOGIC 3,QUANTUM 4FRONT 2,RUN PLUG,(NON-EXPANDABLE CAPACITY)</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>A1 - A6</td><td>ELE2007295</td><td>ELECTRONIC,ASSY,Q-LOGIC 3,QUANTUM 4FRONT 2,RUN PLUG,(EXPANDABLE CAPACITY)</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>A1</td><td>CTL143978</td><td>POWER MODULE, Q-LOGIC 3,120 AMP</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>A2</td><td>SCRPPH1382</td><td>SCREW, PAN HEAD, TYPE H, M5X0.8 X 25, ISO 7045, CL 4.8, BZ</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>A3</td><td>ELE1709864</td><td>HARNESS, BATTERY, FWD, FLEX CABLE</td><td>2</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A4</td><td>PLSTIE1004</td><td>TIE WRAP,BLACK,8"</td><td>3</td><td>A plastic tie that bundles cables together so they don't snag.</td></tr>
+        <tr><td>A5</td><td>PLSTIE1001</td><td>CABLE TIE,BLACK PLASTIC,95MM (3.7IN)</td><td>1</td><td>A plastic tie that bundles cables together so they don't snag.</td></tr>
+        <tr><td>A6</td><td>DGN1901203</td><td>OVER-MOLD RUN RECEPTACLE, 4-CIRCUIT</td><td>1</td><td>Where a cable joins. Corrosion here causes many 'dead chair' faults.</td></tr>
+        <tr><td>B1</td><td>ELE2005663</td><td>HARNESS, BATTERY INTERFACE, POWER SWITCH, Q-LOGIC</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>C1</td><td>HAR144005</td><td>HARNESS, BUS EXTENSION CABLE, Q-LOGIC 3, 0.410 METER, MALE/FEMALE, (CURTIS: 17881362-01-01)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>D1</td><td>ELE1910369</td><td>CIRCUIT BREAKER, 70A (GLOSO: E99-070A-99-9G)</td><td>1</td><td>A sacrificial link: it blows or trips to protect the wiring if too much current flows.</td></tr>
+        <tr><td>E1</td><td>SCR8110001</td><td>SCREW, SOCKET HEAD, M6X1.0 X 14, ISO 4762, CL 12.9, BZ, PVTP</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>F1</td><td>MEC167317</td><td>LIGHT MODULE BRACKET</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>G1</td><td>SCRPPH1044</td><td>SCREW, PAN HEAD, TYPE H, M4X0.7 X 12, FT, ISO 7045, CL 4.8, BZ</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-fault-codes-qlogic.html">Q-Logic fault codes, translated</a> — what the flash codes on this control system mean</p>
+    <h3 id="step-13">Step 13 &mdash; QL3 Electronics, Light Fenders / PTO QBC, 4Front 2</h3>
+    <p>IPB pages 25&ndash;26.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p29.jpg" alt="QL3 Electronics, Light Fenders / PTO QBC, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 13.</strong> QL3 Electronics, Light Fenders / PTO QBC, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 25&ndash;26.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1 - A5</td><td>ELE2007298</td><td>ELECTRONIC,ASSY,Q-LOGIC 3,QUANTUM 4FRONT 2,(NON-EXPANDABLE CAPACITY)</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>A1 - A6</td><td>ELE2007294</td><td>ELECTRONIC,ASSY,Q-LOGIC 3,QUANTUM 4FRONT 2,RUN PLUG,(NON-EXPANDABLE CAPACITY)</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>A1 - A5</td><td>ELE2007299</td><td>ELECTRONIC,ASSY,Q-LOGIC 3,QUANTUM 4FRONT 2,(EXPANDABLE CAPACITY)</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>A1 - A6</td><td>ELE2007295</td><td>ELECTRONIC,ASSY,Q-LOGIC 3,QUANTUM 4FRONT 2,RUN PLUG,(EXPANDABLE CAPACITY)</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>A1</td><td>CTL143978</td><td>POWER MODULE, Q-LOGIC 3,120 AMP</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>A2</td><td>SCRPPH1382</td><td>SCREW, PAN HEAD, TYPE H, M5X0.8 X 25, ISO 7045, CL 4.8, BZ</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>A3</td><td>ELE1709864</td><td>HARNESS, BATTERY, FWD, FLEX CABLE</td><td>2</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A4</td><td>PLSTIE1004</td><td>TIE WRAP,BLACK,8"</td><td>3</td><td>A plastic tie that bundles cables together so they don't snag.</td></tr>
+        <tr><td>A5</td><td>PLSTIE1001</td><td>CABLE TIE,BLACK PLASTIC,95MM (3.7IN)</td><td>1</td><td>A plastic tie that bundles cables together so they don't snag.</td></tr>
+        <tr><td>A6</td><td>DGN1901203</td><td>OVER-MOLD RUN RECEPTACLE, 4-CIRCUIT</td><td>1</td><td>Where a cable joins. Corrosion here causes many 'dead chair' faults.</td></tr>
+        <tr><td>B1</td><td>ELE2005663</td><td>HARNESS, BATTERY INTERFACE, POWER SWITCH, Q-LOGIC</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>C1</td><td>HAR144005</td><td>HARNESS, BUS EXTENSION CABLE, Q-LOGIC 3, 0.410 METER, MALE/FEMALE, (CURTIS: 17881362-01-01)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>D1</td><td>ELE1910369</td><td>CIRCUIT BREAKER, 70A (GLOSO: E99-070A-99-9G)</td><td>1</td><td>A sacrificial link: it blows or trips to protect the wiring if too much current flows.</td></tr>
+        <tr><td>E1</td><td>SCR8110001</td><td>SCREW, SOCKET HEAD, M6X1.0 X 14, ISO 4762, CL 12.9, BZ, PVTP</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>F1</td><td>MEC167317</td><td>LIGHT MODULE BRACKET</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>G1</td><td>SCRPPH1044</td><td>SCREW, PAN HEAD, TYPE H, M4X0.7 X 12, FT, ISO 7045, CL 4.8, BZ</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-fault-codes-qlogic.html">Q-Logic fault codes, translated</a> — what the flash codes on this control system mean</p>
+    <h3 id="step-14">Step 14 &mdash; QL3 Electronics, Manual Recline, Standard Fender / No PTO QBC, 4Front 2</h3>
+    <p>IPB pages 27&ndash;28.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p31.jpg" alt="QL3 Electronics, Manual Recline, Standard Fender / No PTO QBC, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 14.</strong> QL3 Electronics, Manual Recline, Standard Fender / No PTO QBC, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 27&ndash;28.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1 - A6</td><td>ELE2007296</td><td>ELECTRONIC,ASSY,Q-LOGIC 3,QUANTUM 4FRONT 2,PTO,(NON-EXPANDABLE CAPACITY)</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>A1</td><td>CTL143978</td><td>POWER MODULE, Q-LOGIC 3,120 AMP</td><td>1</td><td>The chair's brain: takes the joystick's commands and drives the motors.</td></tr>
+        <tr><td>A2</td><td>SCRPPH1382</td><td>SCREW, PAN HEAD, TYPE H, M5X0.8 X 25, ISO 7045, CL 4.8, BZ</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>A3</td><td>ELE1709864</td><td>HARNESS, BATTERY, FWD, FLEX CABLE</td><td>2</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A4</td><td>PLSTIE1004</td><td>TIE WRAP,BLACK,8"</td><td>3</td><td>A plastic tie that bundles cables together so they don't snag.</td></tr>
+        <tr><td>A5</td><td>PLSTIE1001</td><td>CABLE TIE,BLACK PLASTIC,95MM (3.7IN)</td><td>1</td><td>A plastic tie that bundles cables together so they don't snag.</td></tr>
+        <tr><td>A6</td><td>DWR1265H021</td><td>ELECTRONIC,HARNESS,POWER TAKE OFF(PTO)/INHIBIT,CURTIS,H-1265-021</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>B1</td><td>ELE2005663</td><td>HARNESS, BATTERY INTERFACE, POWER SWITCH, Q-LOGIC</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>C1</td><td>HAR144005</td><td>HARNESS, BUS EXTENSION CABLE, Q-LOGIC 3, 0.410 METER, MALE/FEMALE, (CURTIS: 17881362-01-01)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>D1</td><td>ELE1910369</td><td>CIRCUIT BREAKER, 70A (GLOSO: E99-070A-99-9G)</td><td>1</td><td>A sacrificial link: it blows or trips to protect the wiring if too much current flows.</td></tr>
+        <tr><td>E1</td><td>SCR8110001</td><td>SCREW, SOCKET HEAD, M6X1.0 X 14, ISO 4762, CL 12.9, BZ, PVTP</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>F1</td><td>MEC167317</td><td>LIGHT MODULE BRACKET</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>G1</td><td>SCRPPH1044</td><td>SCREW, PAN HEAD, TYPE H, M4X0.7 X 12, FT, ISO 7045, CL 4.8, BZ</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-fault-codes-qlogic.html">Q-Logic fault codes, translated</a> — what the flash codes on this control system mean</p>
+    <h3 id="step-15">Step 15 &mdash; Q-Logic 3 LM, AM1, &amp; LAM2, 4Front 2</h3>
+    <p>IPB pages 29&ndash;30.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p33.jpg" alt="Q-Logic 3 LM, AM1, &amp; LAM2, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 15.</strong> Q-Logic 3 LM, AM1, &amp; LAM2, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 29&ndash;30.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1a - A3</td><td>ELE1702281</td><td>ELECTRONIC,ASSY,LM</td><td>1</td><td>Part of the electronics that control the chair.</td></tr>
+        <tr><td>A1b - A7</td><td>ELE2009405</td><td>ELECTRONIC,ASSY,Q-LOGIC 3/AM1,LIFT,(CONFIGURATION # 04)</td><td>1</td><td>Raises or lowers the seat.</td></tr>
+        <tr><td>A1c - A7</td><td>ELE2009407</td><td>ELECTRONIC,ASSY,Q-LOGIC 3/LAM2,LIFT,(CONFIGURATION # 04)</td><td>1</td><td>Raises or lowers the seat.</td></tr>
+        <tr><td>A1a</td><td>CTL143986</td><td>LIGHT MODULE,Q-LOGIC 3,LM,(CURTIS:17963700-0109)</td><td>1</td><td>A light, so others can see the chair and you can see where you are going.</td></tr>
+        <tr><td>A1b</td><td>CTL143983</td><td>ACTUATOR MODULE, Q-LOGIC 3, AM1, 1 ACTUATOR, (CURTIS: 17963700-1009)</td><td>1</td><td>A small electric pusher that tilts, reclines, lifts, or moves part of the seat.</td></tr>
+        <tr><td>A1c</td><td>CTL143985</td><td>ACTUATOR MODULE,Q-LOGIC 3,LAM2,2 ACTUATOR AND LIGHTS,(CURTIS: 17963700-2109)</td><td>1</td><td>A small electric pusher that tilts, reclines, lifts, or moves part of the seat.</td></tr>
+        <tr><td>A2</td><td>SCRPPH1153</td><td>SCREW, PAN HEAD, TYPE H, M4X0.7 X 20, FT, ISO 7045, CL 4.8, BZ</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>A3</td><td>HAR143994</td><td>HARNESS, BUS EXTENSION CABLE, Q-LOGIC 3, 0.3 METER, FEMALE/FEMALE, (CURTIS: 17881361-01-02)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A4</td><td>PLSTIE1004</td><td>TIE WRAP,BLACK,8"</td><td>1</td><td>A plastic tie that bundles cables together so they don't snag.</td></tr>
+        <tr><td>A5</td><td>ELE133304</td><td>ELECTRONIC,HARNESS,CURLY CABLE EXTENSION CABLE,FRONT MOUNTED,TRU-BALANCE 3 LIFT</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A6</td><td>HAR144004</td><td>HARNESS,BASE MULTIPLIER Q-LOGIC 3</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A7</td><td>MEC1611656</td><td>MULTIPLIER STUD MOUNT ASSEMBLY,PRIMARY</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>B1</td><td>MEC167317</td><td>LIGHT MODULE BRACKET</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>C1</td><td>SCRPPH1044</td><td>SCREW, PAN HEAD, TYPE H, M4X0.7 X 12, FT, ISO 7045, CL 4.8, BZ</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>D1</td><td>HAR144005</td><td>HARNESS, BUS EXTENSION CABLE, Q-LOGIC 3, 0.410 METER, MALE/FEMALE, (CURTIS: 17881362-01-01)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-fault-codes-qlogic.html">Q-Logic fault codes, translated</a> — what the flash codes on this control system mean</p>
+    <h3 id="step-16">Step 16 &mdash; Q-Logic 3 SD Cards, 4Front 2 (USA, Canada, Australia, Europe)</h3>
+    <p>IPB pages 31&ndash;32.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p35.jpg" alt="Q-Logic 3 SD Cards, 4Front 2 (USA, Canada, Australia, Europe) — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 16.</strong> Q-Logic 3 SD Cards, 4Front 2 (USA, Canada, Australia, Europe) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 31&ndash;32.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ELE2102336</td><td>SERVICEABLE ASSEMBLY, SD CARD, Q-LOGIC 3, 4FRONT 2 WITH ANTI-TIPS PROGRAM, 6.25MPH LINIX MOTORS, STATIC SEATING.</td><td>1</td><td>A memory card carrying the chair's drive program for this setup — it holds the settings the chair runs on.</td></tr>
+        <tr><td>B1</td><td>ELE2102335</td><td>SERVICEABLE ASSEMBLY, SD CARD, Q-LOGIC 3, 4FRONT 2 WITH ANTI-TIPS PROGRAM, 6.25MPH LINIX MOTORS, POWER POSITIONING.</td><td>1</td><td>A memory card carrying the chair's drive program for this setup — it holds the settings the chair runs on.</td></tr>
+        <tr><td>C1</td><td>ELE2102338</td><td>SERVICEABLE ASSEMBLY, SD CARD, Q-LOGIC 3, 4FRONT 2 WITHOUT ANTI-TIPS PROGRAM, 5MPH LINIX MOTORS, STATIC SEATING.</td><td>1</td><td>A memory card carrying the chair's drive program for this setup — it holds the settings the chair runs on.</td></tr>
+        <tr><td>D1</td><td>ELE2102337</td><td>SERVICEABLE ASSEMBLY, SD CARD, Q-LOGIC 3, 4FRONT 2 WITHOUT ANTI-TIPS PROGRAM, 5MPH LINIX MOTORS, POWER POSITIONING.</td><td>1</td><td>A memory card carrying the chair's drive program for this setup — it holds the settings the chair runs on.</td></tr>
+        <tr><td>E1</td><td>ELE2105128</td><td>SERVICEABLE ASSEMBLY, SD CARD, Q-LOGIC 3, 4FRONT 2 HD WITH ANTI-TIPS PROGRAM, 5MPH LINIX MOTORS, STATIC SEATING.</td><td>1</td><td>A memory card carrying the chair's drive program for this setup — it holds the settings the chair runs on.</td></tr>
+        <tr><td>F1</td><td>ELE2105127</td><td>SERVICEABLE ASSEMBLY, SD CARD, Q-LOGIC 3, 4FRONT 2 HD WITH ANTI-TIPS PROGRAM, 5MPH LINIX MOTORS, POWER POSITIONING.</td><td>1</td><td>A memory card carrying the chair's drive program for this setup — it holds the settings the chair runs on.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-fault-codes-qlogic.html">Q-Logic fault codes, translated</a> — what the flash codes on this control system mean</p>
+  </section>
+
+  <section>
+    <h2>Section 8 &mdash; Base Mounted Light Assy's</h2>
+    <h3 id="step-17">Step 17 &mdash; Base Mounted Light Assemblies, 4Front 2</h3>
+    <p>IPB pages 33&ndash;34.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p37.jpg" alt="Base Mounted Light Assemblies, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 17.</strong> Base Mounted Light Assemblies, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 33&ndash;34.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1 - A7</td><td>ELE1700035</td><td>LIGHTING,ASSY,FULL BASE MOUNTED,QUANTUM 4FRONT SERIES</td><td>1</td><td>A light, so others can see the chair and you can see where you are going.</td></tr>
+        <tr><td>A1</td><td>ELE1701559</td><td>FWD E-MARK LIGHT ASSEMBLY, FRONT RIGHT</td><td>1</td><td>A light, so others can see the chair and you can see where you are going.</td></tr>
+        <tr><td>A2</td><td>ELE1701560</td><td>FWD E-MARK LIGHT ASSEMBLY, FRONT LEFT</td><td>1</td><td>A light, so others can see the chair and you can see where you are going.</td></tr>
+        <tr><td>A3</td><td>ELE1611828</td><td>HARNESS, LIGHTING, BASE MOUNTED, FWD, Q-LOGIC 3</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A4</td><td>HAR144005</td><td>HARNESS, BUS EXTENSION CABLE, Q-LOGIC 3, 0.410 METER, MALE/FEMALE, (CURTIS: 17881362-01-01)</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>A5</td><td>MEC167317</td><td>LIGHT MODULE BRACKET</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>A6</td><td>SCRPPH1044</td><td>SCREW, PAN HEAD, TYPE H, M4X0.7 X 12, FT, ISO 7045, CL 4.8, BZ</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>A7</td><td>SCRSHCS1259</td><td>SCREW, SOCKET HEAD, M4X0.7 X 10, ISO 4762, CL 12.9, BZ</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>B1a</td><td>ELEASMB7120024</td><td>FULL LIGHT,ASSY,WHITE/AMBER,LED LIGHTS,SYNERGY,FRONT/RIGHT,ELEASMB7120024</td><td>1</td><td>A light, so others can see the chair and you can see where you are going.</td></tr>
+        <tr><td>B1b</td><td>ELEASMB7120023</td><td>FULL LIGHT,ASSY,WHITE/AMBER,LED E-MARKED LIGHTS,SYNERGY,FRONT/LEFT,ELEASMB7120023</td><td>1</td><td>A light, so others can see the chair and you can see where you are going.</td></tr>
+        <tr><td>C1a</td><td>MEC1701453</td><td>LIGHT BRACKET, RIGHT</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>C1b</td><td>MEC1701452</td><td>LIGHT BRACKET, LEFT</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>D1</td><td>DWR1010B161</td><td>SPACER,BLACK,PLASTIC,0.157" ID X 0.866" OD X 0.22" TH,B-1010-161</td><td>2</td><td>A spacer that sets the gap between two parts.</td></tr>
+        <tr><td>E1</td><td>SCRSHCS1117</td><td>SCREW, SOCKET HEAD, M4X0.7 X 30, ISO 4762, CL 10.9, BZ</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>F1</td><td>NUTJAM1062</td><td>NUT, JAM, M4X0.7, ISO 4035, CL 04, BZ</td><td>2</td><td>Threads onto a bolt to clamp parts together.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Section 9 &mdash; Shroud Assy's &amp; Battery Access Brackets</h2>
+    <h3 id="step-18">Step 18 &mdash; Complete Shroud Assemblies, 4Front 2</h3>
+    <p>IPB pages 35&ndash;36.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p39.jpg" alt="Complete Shroud Assemblies, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 18.</strong> Complete Shroud Assemblies, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 35&ndash;36.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>DGN2101587-PBK1</td><td>SHROUD SERVICE ASSEMBLY,COMPLETE,BACK IN BLACK,PPW-BLK-01,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B1</td><td>DGN2101587-PBK3</td><td>SHROUD SERVICE ASSEMBLY,COMPLETE,NIGHT TRAIN,PPW-BLK-03,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>C1</td><td>DGN2101587-PSL3</td><td>SHROUD SERVICE ASSEMBLY,COMPLETE,GREY STREET,PPW-SIL-03,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>D1</td><td>DGN2101587-PWT2</td><td>SHROUD SERVICE ASSEMBLY,COMPLETE,WHITE SATIN,PPW-WHT-02,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>E1</td><td>DGN2101587-PRD1</td><td>SHROUD SERVICE ASSEMBLY,COMPLETE,RED CORVETTE,PPW-RED-01,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>F1</td><td>DGN2101587-PRD4</td><td>SHROUD SERVICE ASSEMBLY,COMPLETE,CHERRY BOMB,PPW-RED-04,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>G1</td><td>DGN2101587-PPK3</td><td>SHROUD SERVICE ASSEMBLY,COMPLETE,PRETTY IN PINK,PPW-PNK-03,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>H1</td><td>DGN2101587-PPK4</td><td>SHROUD SERVICE ASSEMBLY,COMPLETE,RASPBERRY BERET,PPW-PNK-04,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>I1</td><td>DGN2101587-PPR7</td><td>SHROUD SERVICE ASSEMBLY,COMPLETE,SUGAR PLUM,PPW-PRP-07,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>J1</td><td>DGN2101587-PPR5</td><td>SHROUD SERVICE ASSEMBLY,COMPLETE,DEEP PURPLE,PPW-PRP-05,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>K1</td><td>DGN2101587-PBU10</td><td>SHROUD SERVICE ASSEMBLY,COMPLETE,MIDNIGHT BLUE,PPW-BLU-10,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>L1</td><td>DGN2101587-PBU9</td><td>SHROUD SERVICE ASSEMBLY,COMPLETE,ELECTRIC BLUE,PPW-BLU-09,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>M1</td><td>DGN2101587-PBU11</td><td>SHROUD SERVICE ASSEMBLY,COMPLETE,BLUE JEAN,PPW-BLU-11,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>N1</td><td>DGN2101587-PGN11</td><td>SHROUD SERVICE ASSEMBLY,COMPLETE,GREEN MACHINE,PPW-GRN-11,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>O1</td><td>DGN2101587-PGN8</td><td>SHROUD SERVICE ASSEMBLY,COMPLETE,MILITARY GREEN,PPW-GRN-08,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>P1</td><td>DGN2101587-PYL4</td><td>SHROUD SERVICE ASSEMBLY,COMPLETE,LEMON CRUSH,PPW-YEL-04,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>Q1</td><td>DGN2101587-POR7</td><td>SHROUD SERVICE ASSEMBLY,COMPLETE,EVOLUTION ORANGE,PPW-ORN-07,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>R1</td><td>DGN2101587-WCM7</td><td>SHROUD SERVICE ASSEMBLY,COMPLETE,MILITARY DIGITAL CAMO,PPW-CMO-07,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>S1</td><td>DGN2101587-WFL2</td><td>SHROUD SERVICE ASSEMBLY,COMPLETE,FADED GLORY,PPW-FLG-02,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-19">Step 19 &mdash; Painted Caster Arm Top Cover and Cap, 4Front 2</h3>
+    <p>IPB pages 37&ndash;38.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p41.jpg" alt="Painted Caster Arm Top Cover and Cap, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 19.</strong> Painted Caster Arm Top Cover and Cap, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 37&ndash;38.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>DGN2100633-PBK1</td><td>SHROUD SERVICE ASSEMBLY,CASTER ARM COVERS PAINTED W/HARDWARE,PPW-BLK-01,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B1</td><td>DGN2100633-PBK3</td><td>SHROUD SERVICE ASSEMBLY,CASTER ARM COVERS PAINTED W/HARDWARE,PPW-BLK-03,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>C1</td><td>DGN2100633-PSL3</td><td>SHROUD SERVICE ASSEMBLY,CASTER ARM COVERS PAINTED W/HARDWARE,PPW-SIL-03,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>D1</td><td>DGN2100633-PWT2</td><td>SHROUD SERVICE ASSEMBLY,CASTER ARM COVERS PAINTED W/HARDWARE,PPW-WHT-02,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>E1</td><td>DGN2100633-PRD1</td><td>SHROUD SERVICE ASSEMBLY,CASTER ARM COVERS PAINTED W/HARDWARE,PPW-RED-01,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>F1</td><td>DGN2100633-PRD4</td><td>SHROUD SERVICE ASSEMBLY,CASTER ARM COVERS PAINTED W/HARDWARE,PPW-RED-04,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>G1</td><td>DGN2100633-PPK3</td><td>SHROUD SERVICE ASSEMBLY,CASTER ARM COVERS PAINTED W/HARDWARE,PPW-PNK-03,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>H1</td><td>DGN2100633-PPK4</td><td>SHROUD SERVICE ASSEMBLY,CASTER ARM COVERS PAINTED W/HARDWARE,PPW-PNK-04,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>I1</td><td>DGN2100633-PPR7</td><td>SHROUD SERVICE ASSEMBLY,CASTER ARM COVERS PAINTED W/HARDWARE,PPW-PRP-07,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>J1</td><td>DGN2100633-PPR5</td><td>SHROUD SERVICE ASSEMBLY,CASTER ARM COVERS PAINTED W/HARDWARE,PPW-PRP-05,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>K1</td><td>DGN2100633-PBU10</td><td>SHROUD SERVICE ASSEMBLY,CASTER ARM COVERS PAINTED W/HARDWARE,PPW-BLU-10,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>L1</td><td>DGN2100633-PBU9</td><td>SHROUD SERVICE ASSEMBLY,CASTER ARM COVERS PAINTED W/HARDWARE,PPW-BLU-09,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>M1</td><td>DGN2100633-PBU11</td><td>SHROUD SERVICE ASSEMBLY,CASTER ARM COVERS PAINTED W/HARDWARE,PPW-BLU-11,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>N1</td><td>DGN2100633-PGN11</td><td>SHROUD SERVICE ASSEMBLY,CASTER ARM COVERS PAINTED W/HARDWARE,PPW-GRN-11,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>O1</td><td>DGN2100633-PGN8</td><td>SHROUD SERVICE ASSEMBLY,CASTER ARM COVERS PAINTED W/HARDWARE,PPW-GRN-08,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>P1</td><td>DGN2100633-PYL4</td><td>SHROUD SERVICE ASSEMBLY,CASTER ARM COVERS PAINTED W/HARDWARE,PPW-YEL-04,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>Q1</td><td>DGN2100633-POR7</td><td>SHROUD SERVICE ASSEMBLY,CASTER ARM COVERS PAINTED W/HARDWARE,PPW-ORN-07,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>R1</td><td>DGN2100633-WCM7</td><td>SHROUD SERVICE ASSEMBLY,CASTER ARM COVERS PAINTED W/HARDWARE,PWT-CMO-07,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>S1</td><td>DGN2100633-WFL2</td><td>SHROUD SERVICE ASSEMBLY,CASTER ARM COVERS PAINTED W/HARDWARE,PWT-FLG-02,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>T1</td><td>DGN1804274</td><td>CASTER ARM TOP CAP</td><td>1</td><td>The arm that holds the rear caster wheel to the frame.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-20">Step 20 &mdash; Front Door Shroud and Battery Access Bracket Assemblies, 4Front 2</h3>
+    <p>IPB pages 39&ndash;40.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p43.jpg" alt="Front Door Shroud and Battery Access Bracket Assemblies, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 20.</strong> Front Door Shroud and Battery Access Bracket Assemblies, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 39&ndash;40.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>DGN2100631-PBK1</td><td>SHROUD SERVICE ASSEMBLY,FRONT SHROUD PAINTED W/HARDWARE,PPW-BLK-01,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B1</td><td>DGN2100631-PBK3</td><td>SHROUD SERVICE ASSEMBLY,FRONT SHROUD PAINTED W/HARDWARE,PPW-BLK-03,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>C1</td><td>DGN2100631-PSL3</td><td>SHROUD SERVICE ASSEMBLY,FRONT SHROUD PAINTED W/HARDWARE,PPW-SIL-03,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>D1</td><td>DGN2100631-PWT2</td><td>SHROUD SERVICE ASSEMBLY,FRONT SHROUD PAINTED W/HARDWARE,PPW-WHT-02,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>E1</td><td>DGN2100631-PRD1</td><td>SHROUD SERVICE ASSEMBLY,FRONT SHROUD PAINTED W/HARDWARE,PPW-RED-01,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>F1</td><td>DGN2100631-PRD4</td><td>SHROUD SERVICE ASSEMBLY,FRONT SHROUD PAINTED W/HARDWARE,PPW-RED-04,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>G1</td><td>DGN2100631-PPK3</td><td>SHROUD SERVICE ASSEMBLY,FRONT SHROUD PAINTED W/HARDWARE,PPW-PNK-03,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>H1</td><td>DGN2100631-PPK4</td><td>SHROUD SERVICE ASSEMBLY,FRONT SHROUD PAINTED W/HARDWARE,PPW-PNK-04,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>I1</td><td>DGN2100631-PPR7</td><td>SHROUD SERVICE ASSEMBLY,FRONT SHROUD PAINTED W/HARDWARE,PPW-PRP-07,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>J1</td><td>DGN2100631-PPR5</td><td>SHROUD SERVICE ASSEMBLY,FRONT SHROUD PAINTED W/HARDWARE,PPW-PRP-05,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>K1</td><td>DGN2100631-PBU10</td><td>SHROUD SERVICE ASSEMBLY,FRONT SHROUD PAINTED W/HARDWARE,PPW-BLU-10,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>L1</td><td>DGN2100631-PBU9</td><td>SHROUD SERVICE ASSEMBLY,FRONT SHROUD PAINTED W/HARDWARE,PPW-BLU-09,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>M1</td><td>DGN2100631-PBU11</td><td>SHROUD SERVICE ASSEMBLY,FRONT SHROUD PAINTED W/HARDWARE,PPW-BLU-11,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>N1</td><td>DGN2100631-PGN11</td><td>SHROUD SERVICE ASSEMBLY,FRONT SHROUD PAINTED W/HARDWARE,PPW-GRN-11,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>O1</td><td>DGN2100631-PGN8</td><td>SHROUD SERVICE ASSEMBLY,FRONT SHROUD PAINTED W/HARDWARE,PPW-GRN-08,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>P1</td><td>DGN2100631-PYL4</td><td>SHROUD SERVICE ASSEMBLY,FRONT SHROUD PAINTED W/HARDWARE,PPW-YEL-04,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>Q1</td><td>DGN2100631-POR7</td><td>SHROUD SERVICE ASSEMBLY,FRONT SHROUD PAINTED W/HARDWARE,PPW-ORN-07,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>R1</td><td>DGN2100631-WCM7</td><td>SHROUD SERVICE ASSEMBLY,FRONT SHROUD PAINTED W/HARDWARE,PWT-CMO-07,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>S1</td><td>DGN2100631-WFL2</td><td>SHROUD SERVICE ASSEMBLY,FRONT SHROUD PAINTED W/HARDWARE,PWT-FLG-02,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>T1</td><td>MEC169383</td><td>BATTERY DOOR ASSEMBLY</td><td>1</td><td>Holds the batteries in place on the frame.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-21">Step 21 &mdash; Rear Shroud Assembly with and without Lighting, 4Front 2</h3>
+    <p>IPB pages 41&ndash;42.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p45.jpg" alt="Rear Shroud Assembly with and without Lighting, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 21.</strong> Rear Shroud Assembly with and without Lighting, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 41&ndash;42.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>DGN2100632-PBK1</td><td>SHROUD SERVICE ASSEMBLY,REAR SHROUD PAINTED W/HARDWARE,PPW-BLK-01,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>B1</td><td>DGN2100632-PBK3</td><td>SHROUD SERVICE ASSEMBLY,REAR SHROUD PAINTED W/HARDWARE,PPW-BLK-03,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>C1</td><td>DGN2100632-PSL3</td><td>SHROUD SERVICE ASSEMBLY,REAR SHROUD PAINTED W/HARDWARE,PPW-SIL-03,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>D1</td><td>DGN2100632-PWT2</td><td>SHROUD SERVICE ASSEMBLY,REAR SHROUD PAINTED W/HARDWARE,PPW-WHT-02,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>E1</td><td>DGN2100632-PRD1</td><td>SHROUD SERVICE ASSEMBLY,REAR SHROUD PAINTED W/HARDWARE,PPW-RED-01,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>F1</td><td>DGN2100632-PRD4</td><td>SHROUD SERVICE ASSEMBLY,REAR SHROUD PAINTED W/HARDWARE,PPW-RED-04,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>G1</td><td>DGN2100632-PPK3</td><td>SHROUD SERVICE ASSEMBLY,REAR SHROUD PAINTED W/HARDWARE,PPW-PNK-03,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>H1</td><td>DGN2100632-PPK4</td><td>SHROUD SERVICE ASSEMBLY,REAR SHROUD PAINTED W/HARDWARE,PPW-PNK-04,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>I1</td><td>DGN2100632-PPR7</td><td>SHROUD SERVICE ASSEMBLY,REAR SHROUD PAINTED W/HARDWARE,PPW-PRP-07,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>J1</td><td>DGN2100632-PPR5</td><td>SHROUD SERVICE ASSEMBLY,REAR SHROUD PAINTED W/HARDWARE,PPW-PRP-05,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>K1</td><td>DGN2100632-PBU10</td><td>SHROUD SERVICE ASSEMBLY,REAR SHROUD PAINTED W/HARDWARE,PPW-BLU-10,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>L1</td><td>DGN2100632-PBU9</td><td>SHROUD SERVICE ASSEMBLY,REAR SHROUD PAINTED W/HARDWARE,PPW-BLU-09,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>M1</td><td>DGN2100632-PBU11</td><td>SHROUD SERVICE ASSEMBLY,REAR SHROUD PAINTED W/HARDWARE,PPW-BLU-11,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>N1</td><td>DGN2100632-PGN11</td><td>SHROUD SERVICE ASSEMBLY,REAR SHROUD PAINTED W/HARDWARE,PPW-GRN-11,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>O1</td><td>DGN2100632-PGN8</td><td>SHROUD SERVICE ASSEMBLY,REAR SHROUD PAINTED W/HARDWARE,PPW-GRN-08,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>P1</td><td>DGN2100632-PYL4</td><td>SHROUD SERVICE ASSEMBLY,REAR SHROUD PAINTED W/HARDWARE,PPW-YEL-04,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>Q1</td><td>DGN2100632-POR7</td><td>SHROUD SERVICE ASSEMBLY,REAR SHROUD PAINTED W/HARDWARE,PPW-ORN-07,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>R1</td><td>DGN2100632-WCM7</td><td>SHROUD SERVICE ASSEMBLY,REAR SHROUD PAINTED W/HARDWARE,PWT-CMO-07,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>S1</td><td>DGN2100632-WFL2</td><td>SHROUD SERVICE ASSEMBLY,REAR SHROUD PAINTED W/HARDWARE,PWT-FLG-02,4FRONT2</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>T1</td><td>DGN1611517</td><td>FWD REAR DOOR, ASSEMBLY, WITH PLUGS</td><td>1</td><td>A door at the back of the chair — it opens to reach the parts behind it.</td></tr>
+        <tr><td>U1</td><td>DGN1611520</td><td>FWD,REAR DOOR, ASSEMBLY, WITH LIGHTS</td><td>1</td><td>A door at the back of the chair — it opens to reach the parts behind it.</td></tr>
+        <tr><td>V1</td><td>PLSKNCP1056</td><td>KNOB,PLASTIC,M4-.7 X 12MM,KNURLED HEAD,TALL,C-1060-041</td><td>1</td><td>The stick-top you hold to drive.</td></tr>
+        <tr><td>W1</td><td>WASNEOP1003</td><td>WASHER,BLACK,NEOPRENE,3.20MM ID X 7.00MM OD X 1.90MM TH,O-RING</td><td>1</td><td>Sits under a bolt head or nut to spread the clamping force.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Section 10 &mdash; Fender Assy's</h2>
+    <h3 id="step-22">Step 22 &mdash; Standard Fenders, 4Front 2</h3>
+    <p>IPB pages 43&ndash;44.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p47.jpg" alt="Standard Fenders, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 22.</strong> Standard Fenders, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 43&ndash;44.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1 - A3</td><td>DGN1700032</td><td>SHROUD,ASSY,FENDERS,QUANTUM 4FRONT SERIES</td><td>1</td><td>A cover that protects the parts underneath from water, dust, and knocks.</td></tr>
+        <tr><td>A1</td><td>DGN169072</td><td>FENDER, RIGHT, FWD</td><td>1</td><td>A cover over the wheel that keeps spray and debris off the rider.</td></tr>
+        <tr><td>A2</td><td>DGN169073</td><td>FENDER, LEFT, FWD</td><td>1</td><td>A cover over the wheel that keeps spray and debris off the rider.</td></tr>
+        <tr><td>A3</td><td>SCRPPH1036</td><td>SCREW, PAN HEAD, TYPE H, M4X0.7 X 8, FT, ISO 7045, CL 4.8, BZ</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-23">Step 23 &mdash; Lighting Fenders w/ 4 Pin Module, 4Front Series</h3>
+    <p>IPB pages 45&ndash;46.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p49.jpg" alt="Lighting Fenders w/ 4 Pin Module, 4Front Series — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 23.</strong> Lighting Fenders w/ 4 Pin Module, 4Front Series &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 45&ndash;46.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1 - A6</td><td>DGN2004686</td><td>FENDER,ASSY,SWITCH LIGHTS,4FRONT SERIES</td><td>1</td><td>Turns a function on or off.</td></tr>
+        <tr><td>A1</td><td>DGN1700204</td><td>FENDER LIGHT ASSEMBLY, FWD, RIGHT</td><td>1</td><td>A cover over the wheel that keeps spray and debris off the rider.</td></tr>
+        <tr><td>A2</td><td>DGN1700203</td><td>FENDER LIGHT ASSEMBLY, FWD, LEFT</td><td>1</td><td>A cover over the wheel that keeps spray and debris off the rider.</td></tr>
+        <tr><td>A3</td><td>SCRPPH1036</td><td>SCREW, PAN HEAD, TYPE H, M4X0.7 X 8, FT, ISO 7045, CL 4.8, BZ</td><td>6</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>A4</td><td>MEC2004534</td><td>LIGHT MODULE, LED, 4 FRONT, BRACKET ASSEMBLY</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>A5</td><td>MEC167317</td><td>LIGHT MODULE BRACKET</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>A6</td><td>SCRPPH1044</td><td>SCREW, PAN HEAD, TYPE H, M4X0.7 X 12, FT, ISO 7045, CL 4.8, BZ</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>B1</td><td>ELE160183</td><td>ELECTRONIC,ASSY,SWITCH,BLACK,EGG,W/LIGHT SYMBOL,W/DUAL LOCK</td><td>1</td><td>Turns a function on or off.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Section 11 &mdash; PTO Backup Camera</h2>
+    <h3 id="step-24">Step 24 &mdash; PTO Backup Camera Module, QL3, 4Front 2</h3>
+    <p>IPB pages 47&ndash;48.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p51.jpg" alt="PTO Backup Camera Module, QL3, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 24.</strong> PTO Backup Camera Module, QL3, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 47&ndash;48.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1 - A7</td><td>ACC2103121</td><td>QUANTUM BACKUP CAMERA SYSTEM, PTO VERSION,4FRONT 2</td><td>1</td><td>The backup camera system — it shows what's behind the chair on a display.</td></tr>
+        <tr><td>A1</td><td>ELE1908252</td><td>QUANTUM BACKUP CAMERA, PTO MODULE ASSEMBLY</td><td>1</td><td>The module that runs the backup camera.</td></tr>
+        <tr><td>A2</td><td>MEC154602</td><td>MULTIPLIER STUD MOUNT ASSEMBLY</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>A3</td><td>HDW155879</td><td>SCREW,PHILLIPS FLAT HEAD, M4-0.7 X 5MM L, ISO 7046, BLACK ZINC, NYLON PATCH</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>A4</td><td>MEC153354</td><td>MULTIPLIER HOLD DOWN STRAP</td><td>1</td><td>A strap that holds a part down so it cannot shift.</td></tr>
+        <tr><td>A5</td><td>SCRPPH1342</td><td>SCREW,PPH,BLACK ZINC,M3-.5 X 20MM</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>A6</td><td>ELE2004373</td><td>ELECTRONIC,ASSY,EGG SWITCH,BLACK,CAMERA SYMBOL,W/DUAL LOCK</td><td>1</td><td>Turns a function on or off.</td></tr>
+        <tr><td>A7</td><td>PLSTIE1001</td><td>CABLE TIE,BLACK PLASTIC,95MM (3.7IN)</td><td>3</td><td>A plastic tie that bundles cables together so they don't snag.</td></tr>
+        <tr><td>B1</td><td>DGN1901203</td><td>OVER-MOLD RUN RECEPTACLE, 4-CIRCUIT</td><td>1</td><td>Where a cable joins. Corrosion here causes many 'dead chair' faults.</td></tr>
+        <tr><td>C1</td><td>ELE2101000</td><td>HARNESS, 4 PIN MINI-DIN EXTENSION CABLE, L = 1000</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>D1</td><td>ELE2101001</td><td>HARNESS, 4 PIN MINI-DIN EXTENSION CABLE, L = 500</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-fault-codes-qlogic.html">Q-Logic fault codes, translated</a> — what the flash codes on this control system mean</p>
+    <h3 id="step-25">Step 25 &mdash; Quantum Backup Camera, Standard Mount, and Headrest Mount</h3>
+    <p>IPB pages 49&ndash;50.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p53.jpg" alt="Quantum Backup Camera, Standard Mount, and Headrest Mount — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 25.</strong> Quantum Backup Camera, Standard Mount, and Headrest Mount &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 49&ndash;50.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>MEC1910365</td><td>QUANTUM BACKUP CAMERA, BRACKET DUAL LOCK ASSEMBLY</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>B1</td><td>MEC1910373</td><td>STANDARD CAMERA BRACKET, ASSEMBLY</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>C1</td><td>MEC2104227</td><td>QUANTUM BACKUP CAMERA,TRACK MOUNT,ASSEMBLY</td><td>1</td><td>The mount that holds the backup camera on its track.</td></tr>
+        <tr><td>D1</td><td>ELE2101001</td><td>HARNESS, 4 PIN MINI-DIN EXTENSION CABLE, L = 500</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-fault-codes-qlogic.html">Q-Logic fault codes, translated</a> — what the flash codes on this control system mean</p>
+    <h3 id="step-26">Step 26 &mdash; Quantum Backup Camera Display Mounts</h3>
+    <p>IPB pages 51&ndash;52.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p55.jpg" alt="Quantum Backup Camera Display Mounts — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 26.</strong> Quantum Backup Camera Display Mounts &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 51&ndash;52.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>MEC2106123</td><td>QUANTUM BACKUP CAMERA,DISPLAY MOUNT,ASSEMBLY,Q-LOGIC 3</td><td>1</td><td>The mount that holds the backup camera's display.</td></tr>
+        <tr><td>B1</td><td>MEC2106132</td><td>QUANTUM BACKUP CAMERA,DISPLAY MOUNT,ASSEMBLY,NE/NE+</td><td>1</td><td>The mount that holds the backup camera's display.</td></tr>
+        <tr><td>C1</td><td>MEC1906270</td><td>QBC, SCREEN HINGE ASSEMBLY, W/GOOSENECK</td><td>1</td><td>The hinge the backup camera screen folds on.</td></tr>
+        <tr><td>D1</td><td>MEC1907331</td><td>JOYSTICK RECEIVER MOUNT,ASSY,W/MOUNTING HARDWARE,QBC GOOSENECK CLAMP</td><td>1</td><td>A mounting piece that holds the joystick receiver at the right angle.</td></tr>
+        <tr><td>E1</td><td>FRMASMB16062</td><td>JOYSTICK RECEIVER MOUNT,ASSY,UNIVERSAL,ADJUSTABLE BLOCK,D-1000-313</td><td>1</td><td>A mounting piece that holds the joystick receiver at the right angle.</td></tr>
+        <tr><td>F1</td><td>ELE2101000</td><td>HARNESS, 4 PIN MINI-DIN EXTENSION CABLE, L = 1000</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>G1</td><td>ELE2000271</td><td>HARNESS, 4 PIN MINI-DIN EXTENSION CABLE, L = 1400mm</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-fault-codes-qlogic.html">Q-Logic fault codes, translated</a> — what the flash codes on this control system mean</p>
+  </section>
+
+  <section>
+    <h2>Section 12 &mdash; Seat Mount Assy's</h2>
+    <h3 id="step-27">Step 27 &mdash; Seat Interfaces, 4Front 2</h3>
+    <p>IPB pages 53&ndash;54.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p57.jpg" alt="Seat Interfaces, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 27.</strong> Seat Interfaces, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 53&ndash;54.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1 - A2</td><td>MEC1700465</td><td>SEAT INTERFACE,ASSY,TB3,QUANTUM 4FRONT,W/MOUNTING HARDWARE</td><td>1</td><td>The platform the seat sits on and bolts to.</td></tr>
+        <tr><td>A1</td><td>BRK8110003</td><td>MOUNTING BRACKET,SEAT INTERFACE,UNIVERSAL,BRK8110003</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>A2</td><td>HDW1700456</td><td>SCREW, BUTTON HEAD, M10X1.5 X 20, ISO 7380-1, CL 10.9, BZ, PVTP</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>B1 - B2</td><td>MEC1705730</td><td>SEAT INTERFACE,ASSY,TB3.5,QUANTUM 4FRONT,W/MOUNTING HARDWARE</td><td>1</td><td>The platform the seat sits on and bolts to.</td></tr>
+        <tr><td>B1</td><td>MEC131182</td><td>MOUNTING BRACKET,SEAT INTERFACE,TRU-BALANCE 3</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>B2</td><td>HDW1700456</td><td>SCREW, BUTTON HEAD, M10X1.5 X 20, ISO 7380-1, CL 10.9, BZ, PVTP</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>C1 - C2</td><td>MEC1805269</td><td>SEAT INTERFACE,ASSY,TB3 TALL,QUANTUM 4FRONT,W/MOUNTING HARDWARE</td><td>1</td><td>The platform the seat sits on and bolts to.</td></tr>
+        <tr><td>C1</td><td>MEC151481</td><td>SEATING INTERFACE BRACKET, TALL</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>C2</td><td>HDW1700456</td><td>SCREW, BUTTON HEAD, M10X1.5 X 20, ISO 7380-1, CL 10.9, BZ, PVTP</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>D1 - D2</td><td>MEC1707746</td><td>SEAT INTERFACE,ASSY,UNIVERSAL,1-POSITION</td><td>1</td><td>The platform the seat sits on and bolts to.</td></tr>
+        <tr><td>D1</td><td>MEC1707642</td><td>SEAT INTERFACE BRACKET,UNIVERSAL,SINGLE POSITION</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>D2</td><td>HDW1700456</td><td>SCREW, BUTTON HEAD, M10X1.5 X 20, ISO 7380-1, CL 10.9, BZ, PVTP</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>E1 - E2</td><td>MEC1711385</td><td>SEAT INTERFACE ASSY,ANGLE-ADJ,1-POSITION</td><td>1</td><td>The platform the seat sits on and bolts to.</td></tr>
+        <tr><td>E1</td><td>MEC1708208</td><td>SEAT BRACKET WELDMENT,ANGLE ADJUSTABLE,SINGLE POSITION</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>E2</td><td>HDW1700456</td><td>SCREW, BUTTON HEAD, M10X1.5 X 20, ISO 7380-1, CL 10.9, BZ, PVTP</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>F1 - F5</td><td>MEC2009398</td><td>SEAT INTERFACE,ASSY,TB FLEX SEAT,4FRONT 2</td><td>1</td><td>The platform the seat sits on and bolts to.</td></tr>
+        <tr><td>F1</td><td>MEC1800079</td><td>SEAT INTERFACE BRACKET, FRONT LEFT</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>F2</td><td>MEC1800080</td><td>SEAT INTERFACE BRACKET, FRONT RIGHT</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>F3</td><td>MEC2003052</td><td>SEAT INTERFACE BRACKET, REAR LEFT</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>F4</td><td>MEC2003053</td><td>SEAT INTERFACE BRACKET, REAR RIGHT</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>F5</td><td>HDW1700456</td><td>SCREW, BUTTON HEAD, M10X1.5 X 20, ISO 7380-1, CL 10.9, BZ, PVTP</td><td>8</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Section 13 &mdash; Drive Wheel Assy's</h2>
+    <h3 id="step-28">Step 28 &mdash; Flat-free Drive Wheel, 5 Spoke Black Rim / Black Tire, 4Front 2</h3>
+    <p>IPB pages 55&ndash;56.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p59.jpg" alt="Flat-free Drive Wheel, 5 Spoke Black Rim / Black Tire, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 28.</strong> Flat-free Drive Wheel, 5 Spoke Black Rim / Black Tire, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 55&ndash;56.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>WHL1703588</td><td>WHEEL,ASSY,FLAT FREE,14" X 3" DRIVE,BLACK RIM/BLACK TIRE,E-1203-043</td><td>1</td><td>A complete wheel — tire and hub together.</td></tr>
+        <tr><td>B1</td><td>TIR8110024</td><td>TIRE,FLAT FREE,BLACK,14" OD,3" W,C-248 POWERTRAX TREAD,(GALLOP: 5508018 YT57)</td><td>1</td><td>A solid tire that cannot go flat — it grips the ground and cushions the ride.</td></tr>
+        <tr><td>C1</td><td>WHL1703586</td><td>WHEEL,ASSY,RIM,BLACK,ALUMINUM,8",5 SPOKE,D-1203-071</td><td>1</td><td>The metal rim the tire sits on — the tire and hub bolt to it.</td></tr>
+        <tr><td>D1</td><td>MEC1714220</td><td>LINIX HD HUB ASSEMBLY</td><td>1</td><td>The hub the drive wheel bolts onto — it carries the wheel on the motor shaft.</td></tr>
+        <tr><td>E1</td><td>DWR1005B049</td><td>NUT, LUG, 5/16-24, ZINC</td><td>5</td><td>Threads onto a bolt to clamp parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-29">Step 29 &mdash; Pneumatic Drive Wheel, 5 Spoke Black Rim / Black Tire, 4Front 2</h3>
+    <p>IPB pages 57&ndash;58.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p61.jpg" alt="Pneumatic Drive Wheel, 5 Spoke Black Rim / Black Tire, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 29.</strong> Pneumatic Drive Wheel, 5 Spoke Black Rim / Black Tire, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 57&ndash;58.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>WHL1704507</td><td>WHEEL,ASSY,PNEUMATIC,14" X 3" DRIVE,BLACK RIM/BLACK TIRE, E-1203-051</td><td>1</td><td>A solid tire that cannot go flat — it grips the ground and cushions the ride.</td></tr>
+        <tr><td>B1</td><td>TIR8110026</td><td>TIRE,PNEUMATIC,BLACK,14" OD,3" W,C-248-5 TREAD</td><td>1</td><td>A solid tire that cannot go flat — it grips the ground and cushions the ride.</td></tr>
+        <tr><td>C1</td><td>TUBSTND1002</td><td>TUBE,300-8,ANGLED VALVE W/CAP</td><td>1</td><td>An inner tube for a pneumatic tire — it holds the air.</td></tr>
+        <tr><td>D1</td><td>WHL1703586</td><td>WHEEL,ASSY,RIM,BLACK,ALUMINUM,8",5 SPOKE,D-1203-071</td><td>1</td><td>The metal rim the tire sits on — the tire and hub bolt to it.</td></tr>
+        <tr><td>E1</td><td>MEC1714220</td><td>LINIX HD HUB ASSEMBLY</td><td>1</td><td>The hub the drive wheel bolts onto — it carries the wheel on the motor shaft.</td></tr>
+        <tr><td>F1</td><td>DWR1005B049</td><td>NUT, LUG, 5/16-24, ZINC</td><td>5</td><td>Threads onto a bolt to clamp parts together.</td></tr>
+        <tr><td>G1</td><td>MEC1610056</td><td>HUB SPACER</td><td>1</td><td>A spacer that sets the gap between two parts on the wheel hub.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-30">Step 30 &mdash; Painted Rim Inserts</h3>
+    <p>IPB pages 59&ndash;60.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p63.jpg" alt="Painted Rim Inserts — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 30.</strong> Painted Rim Inserts &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 59&ndash;60.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>DGN164245-PBK1</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-BLK-01 (BACK IN BLACK/BLACK)</td><td>1</td><td>A colored trim piece that snaps into the drive wheel rim — looks only, it does nothing mechanical.</td></tr>
+        <tr><td>B1</td><td>DGN164245-PBK3</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-BLK-03 (NIGHT TRAIN)</td><td>1</td><td>A colored trim piece that snaps into the drive wheel rim — looks only, it does nothing mechanical.</td></tr>
+        <tr><td>C1</td><td>DGN164245-PSL3</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-SIL-03 (GREY STREET)</td><td>1</td><td>A colored trim piece that snaps into the drive wheel rim — looks only, it does nothing mechanical.</td></tr>
+        <tr><td>D1</td><td>DGN164245-PSL7</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-SIL-07 (SILVER BULLET)</td><td>1</td><td>A colored trim piece that snaps into the drive wheel rim — looks only, it does nothing mechanical.</td></tr>
+        <tr><td>E1</td><td>DGN164245-PWH2</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-WHT-02 (WHITE SATIN)</td><td>1</td><td>A colored trim piece that snaps into the drive wheel rim — looks only, it does nothing mechanical.</td></tr>
+        <tr><td>F1</td><td>DGN164245-PRD1</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-RED-01 (RED CORVETTE/CANDY APPLE RED)</td><td>1</td><td>A colored trim piece that snaps into the drive wheel rim — looks only, it does nothing mechanical.</td></tr>
+        <tr><td>G1</td><td>DGN164245-PRD4</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-RED-04(CHERRY BOMB)</td><td>1</td><td>A colored trim piece that snaps into the drive wheel rim — looks only, it does nothing mechanical.</td></tr>
+        <tr><td>H1</td><td>DGN164245-PPK3</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-PNK-03 (PRETTY IN PINK)</td><td>1</td><td>A colored trim piece that snaps into the drive wheel rim — looks only, it does nothing mechanical.</td></tr>
+        <tr><td>I1</td><td>DGN164245-PPK4</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-PNK-04(RASPBERRY BERET)</td><td>1</td><td>A colored trim piece that snaps into the drive wheel rim — looks only, it does nothing mechanical.</td></tr>
+        <tr><td>J1</td><td>DGN164245-PPR7</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-PRP-07(SUGAR PLUM)</td><td>1</td><td>A colored trim piece that snaps into the drive wheel rim — looks only, it does nothing mechanical.</td></tr>
+        <tr><td>K1</td><td>DGN164245-PPR5</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-PRP-05 (DEEP PURPLE)</td><td>1</td><td>A colored trim piece that snaps into the drive wheel rim — looks only, it does nothing mechanical.</td></tr>
+        <tr><td>L1</td><td>DGN164245-PBU10</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-BLU-10 (MIDNIGHT BLUE)</td><td>1</td><td>A colored trim piece that snaps into the drive wheel rim — looks only, it does nothing mechanical.</td></tr>
+        <tr><td>M1</td><td>DGN164245-PBU9</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-BLU-09 (ELECTRIC BLUE/TRUE BLUE)</td><td>1</td><td>A colored trim piece that snaps into the drive wheel rim — looks only, it does nothing mechanical.</td></tr>
+        <tr><td>N1</td><td>DGN164245-PBU11</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-BLU-11(BLUE JEAN)</td><td>1</td><td>A colored trim piece that snaps into the drive wheel rim — looks only, it does nothing mechanical.</td></tr>
+        <tr><td>O1</td><td>DGN164245-PGN11</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-GRN-11(GREEN MACHINE)</td><td>1</td><td>A colored trim piece that snaps into the drive wheel rim — looks only, it does nothing mechanical.</td></tr>
+        <tr><td>P1</td><td>DGN164245-PGN8</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-GRN-08 (MILITARY GREEN)</td><td>1</td><td>A colored trim piece that snaps into the drive wheel rim — looks only, it does nothing mechanical.</td></tr>
+        <tr><td>Q1</td><td>DGN164245-PGN7</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-GRN-07 (LIME LIGHT)</td><td>1</td><td>A colored trim piece that snaps into the drive wheel rim — looks only, it does nothing mechanical.</td></tr>
+        <tr><td>R1</td><td>DGN164245-PYL3</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-YEL-03 (YELLOW BLAZE/ORION YELLOW)</td><td>1</td><td>A colored trim piece that snaps into the drive wheel rim — looks only, it does nothing mechanical.</td></tr>
+        <tr><td>S1</td><td>DGN164245-PYL4</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-YEL-04(LEMON CRUSH)</td><td>1</td><td>A colored trim piece that snaps into the drive wheel rim — looks only, it does nothing mechanical.</td></tr>
+        <tr><td>T1</td><td>DGN164245-POR6</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-ORN-06 (ORANGE CRUSH)</td><td>1</td><td>A colored trim piece that snaps into the drive wheel rim — looks only, it does nothing mechanical.</td></tr>
+        <tr><td>U1</td><td>DGN164245-POR7</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PPW-ORN-07(EVOLUTION ORANGE)</td><td>1</td><td>A colored trim piece that snaps into the drive wheel rim — looks only, it does nothing mechanical.</td></tr>
+        <tr><td>V1</td><td>DGN164245-WCB1</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PWT-CBN-01 (CARBON FIBER)</td><td>1</td><td>A colored trim piece that snaps into the drive wheel rim — looks only, it does nothing mechanical.</td></tr>
+        <tr><td>W1</td><td>DGN164245-WCM7</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PWT-CMO-07 (MILITARY DIGITAL CAMO)</td><td>1</td><td>A colored trim piece that snaps into the drive wheel rim — looks only, it does nothing mechanical.</td></tr>
+        <tr><td>X1</td><td>DGN164245-WFL2</td><td>DRIVE WHEEL COLOR INSERT, WITH ADHESIVE TAPE, PWT-FLG-02 (FADED GLORY)</td><td>1</td><td>A colored trim piece that snaps into the drive wheel rim — looks only, it does nothing mechanical.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-31">Step 31 &mdash; Flat-free Drive Wheel, 5 Spoke, Black Rim / Black "Knobby" Tire, 14" x 4", 4Front 2</h3>
+    <p>IPB pages 61&ndash;62.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p65.jpg" alt="Flat-free Drive Wheel, 5 Spoke, Black Rim / Black "Knobby" Tire, 14" x 4", 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 31.</strong> Flat-free Drive Wheel, 5 Spoke, Black Rim / Black "Knobby" Tire, 14" x 4", 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 61&ndash;62.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>WHL1903913</td><td>WHEEL ASSY, FLAT FREE BLACK 14 X 4 DRIVE BLACK RIM/BLACK TIRE, COMMUNITY USE</td><td>1</td><td>A solid tire that cannot go flat — it grips the ground and cushions the ride.</td></tr>
+        <tr><td>B1</td><td>TIR8110019</td><td>TIRE,FLAT FREE,BLACK,14" OD,4" W,C166 KNOBBY TREAD,(GALLOP: 114292)</td><td>1</td><td>The stick-top you hold to drive.</td></tr>
+        <tr><td>C1</td><td>MEC1714220</td><td>LINIX HD HUB ASSEMBLY</td><td>1</td><td>The hub the drive wheel bolts onto — it carries the wheel on the motor shaft.</td></tr>
+        <tr><td>D1</td><td>DWR1005B049</td><td>NUT, LUG, 5/16-24, ZINC</td><td>5</td><td>Threads onto a bolt to clamp parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-32">Step 32 &mdash; Pneumatic Drive Wheel, 5 Spoke, Black Rim / Black "Knobby" Tire, 14" x 4", 4Front 2</h3>
+    <p>IPB pages 63&ndash;64.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p67.jpg" alt="Pneumatic Drive Wheel, 5 Spoke, Black Rim / Black "Knobby" Tire, 14" x 4", 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 32.</strong> Pneumatic Drive Wheel, 5 Spoke, Black Rim / Black "Knobby" Tire, 14" x 4", 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 63&ndash;64.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>WHL1903914</td><td>WHEEL ASSY, PNEUMATIC BLACK 14 X 4 DRIVE BLACK RIM/BLACK TIRE, COMMUNITY USE</td><td>1</td><td>A solid tire that cannot go flat — it grips the ground and cushions the ride.</td></tr>
+        <tr><td>B1</td><td>TIR8110017</td><td>TIRE,PNEUMATIC,BLACK,14" OD, 4" W,C166 KNOBBY TREAD,(GALLOP: RP265087)</td><td>1</td><td>The stick-top you hold to drive.</td></tr>
+        <tr><td>C1</td><td>TUBSTND1043</td><td>TIRE,TUBE,4.00-6,90 DEGREE VALVE STEM,(TAG: 163265)</td><td>1</td><td>An inner tube for a pneumatic tire — it holds the air.</td></tr>
+        <tr><td>D1</td><td>PLSINDV1003</td><td>CAP,BLACK,VALVE</td><td>1</td><td>The valve you pump air through — it holds the air in the tire.</td></tr>
+        <tr><td>E1</td><td>MEC1714220</td><td>LINIX HD HUB ASSEMBLY</td><td>1</td><td>The hub the drive wheel bolts onto — it carries the wheel on the motor shaft.</td></tr>
+        <tr><td>F1</td><td>DWR1005B049</td><td>NUT, LUG, 5/16-24, ZINC</td><td>5</td><td>Threads onto a bolt to clamp parts together.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Section 14 &mdash; Batteries</h2>
+    <h3 id="step-33">Step 33 &mdash; Group 24 AGM Battery, No Handles, Flush Mount, MK</h3>
+    <p>IPB pages 65&ndash;66.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p69.jpg" alt="Group 24 AGM Battery, No Handles, Flush Mount, MK — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 33.</strong> Group 24 AGM Battery, No Handles, Flush Mount, MK &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 65&ndash;66.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>BAT1712207</td><td>BATTERY, AGM, 12V, 69.2AH (C/5),GROUP 24, HANDLES REMOVED</td><td>1</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-batteries.html">Batteries &amp; chargers</a> — how the chair&rsquo;s batteries work and how to keep them alive</p>
+    <h3 id="step-34">Step 34 &mdash; Group 34 Flush Mount Terminal Battery</h3>
+    <p>IPB pages 67&ndash;68.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p71.jpg" alt="Group 34 Flush Mount Terminal Battery — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 34.</strong> Group 34 Flush Mount Terminal Battery &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 67&ndash;68.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1 - A2</td><td>BATGEL1006</td><td>BATTERY,GEL,GROUP 34,W/FLUSH MOUNT TERMINALS,H-1000-140</td><td>1</td><td>Stores the energy the whole chair runs on. Batteries are heavy and always work as a matched pair.</td></tr>
+        <tr><td>A1</td><td>SCRHHCS1667</td><td>SCREW,HHCS,STAINLESS STEEL,1/4-20 X 0.50"</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>A2</td><td>WASLOCK1084</td><td>WASHER,LOCK,STAINLESS STEEL,0.25" ID X 0.4375" OD X 0.0625" TH</td><td>2</td><td>Sits under a bolt head or nut to spread the clamping force.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-batteries.html">Batteries &amp; chargers</a> — how the chair&rsquo;s batteries work and how to keep them alive</p>
+  </section>
+
+  <section>
+    <h2>Section 15 &mdash; Battery Charger</h2>
+    <h3 id="step-35">Step 35 &mdash; Amp CTE Charger</h3>
+    <p>IPB pages 69&ndash;70.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p73.jpg" alt="Amp CTE Charger — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 35.</strong> Amp CTE Charger &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 69&ndash;70.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ELE2000091</td><td>CHARGER, OFFBOARD, LOW INHIBIT, 8A W/ USA POWERCORD</td><td>1</td><td>Refills the batteries from a wall outlet.</td></tr>
+        <tr><td>B1</td><td>ELEASMB5670</td><td>CHARGER, OFFBOARD, LOW INHIBIT, 8A W/ UK POWERCORD</td><td>1</td><td>Refills the batteries from a wall outlet.</td></tr>
+        <tr><td>C1</td><td>ELEASMB5671</td><td>CHARGER, OFFBOARD, LOW INHIBIT, 8A W/ EU POWERCORD</td><td>1</td><td>Refills the batteries from a wall outlet.</td></tr>
+        <tr><td>D1</td><td>ELEASMB5672</td><td>CHARGER, OFFBOARD, LOW INHIBIT, 8A W/ AU POWERCORD</td><td>1</td><td>Refills the batteries from a wall outlet.</td></tr>
+        <tr><td>E1</td><td>HARUSHD1065</td><td>ELECTRONIC,HARNESS,POWER CORD,IEC - USA</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>F1</td><td>HARUSHD2041</td><td>ELECTRONIC,HARNESS, POWER CORD,AC W/UK PLUG,H-1020-049</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>G1</td><td>HARUSHD2160</td><td>ELECTRONIC,HARNESS,POWER CORD,IEC - EUROPE PLUG</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+        <tr><td>H1</td><td>DWR1000H174</td><td>ELECTRONIC,HARNESS,AC POWER CORD,INSULATED BLADES,AUSTRALIA</td><td>1</td><td>Carries power or signals between parts of the chair.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-batteries.html">Batteries &amp; chargers</a> — how the chair&rsquo;s batteries work and how to keep them alive</p>
+  </section>
+
+  <section>
+    <h2>Section 16 &mdash; Joystick Mounts &amp; Receivers</h2>
+    <h3 id="step-36">Step 36 &mdash; Basic Swing-away Joystick Mount, Q-Logic</h3>
+    <p>IPB pages 71&ndash;72.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p75.jpg" alt="Basic Swing-away Joystick Mount, Q-Logic — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 36.</strong> Basic Swing-away Joystick Mount, Q-Logic &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 71&ndash;72.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1a</td><td>ACC2201041</td><td>JOYSTICK MOUNTING BRACKET,ASSY,BASIC SWING AWAY,LEFT,Q-LOGIC</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>A1b</td><td>ACC2201042</td><td>JOYSTICK MOUNTING BRACKET,ASSY,BASIC SWING AWAY,RIGHT,Q-LOGIC</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>B1a</td><td>ACC2201043</td><td>JOYSTICK MOUNTING BRACKET,ASSY,BASIC SWING AWAY,LEFT,Q-LOGIC,CONTOURED SEAT</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>B1b</td><td>ACC2201044</td><td>JOYSTICK MOUNTING BRACKET,ASSY,BASIC SWING AWAY,RIGHT,Q-LOGIC,CONTOURED SEAT</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Go deeper:</strong> <a href="/pmd-fault-codes-qlogic.html">Q-Logic fault codes, translated</a> — what the flash codes on this control system mean</p>
+    <h3 id="step-37">Step 37 &mdash; Version 3 Swing-away Joystick Bracket &amp; Components</h3>
+    <p>IPB pages 73&ndash;74.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p77.jpg" alt="Version 3 Swing-away Joystick Bracket &amp; Components — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 37.</strong> Version 3 Swing-away Joystick Bracket &amp; Components &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 73&ndash;74.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ACC1908434</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,Q-LOGIC</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>B1</td><td>ACC1908435</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,Q-LOGIC CONTOURED SEAT</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>C1</td><td>ACC1908437</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,NE / NE PLUS</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>D1</td><td>ACC1908438</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,NE / NE PLUS CONTOURED SEAT</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>E1</td><td>ACC1908439</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,VSI / VR2 / GC3 / R-NET</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>F1</td><td>ACC1908440</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY,VSI / VR2 / GC3 / R-NET CONTOURED SEAT</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>G1</td><td>DWR1111C002</td><td>SPACER,CURTIS NE/NE PLUS MOUNT BRACKET,C-1111-002</td><td>2</td><td>A spacer that sets the gap between two parts.</td></tr>
+        <tr><td>H1</td><td>SCRPPH1384</td><td>SCREW, PAN HEAD, TYPE H, M5X0.8 X 20, ISO 7045, CL 4.8, BZ</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>I1</td><td>SCRPPH1279</td><td>SCREW, PAN HEAD, TYPE H, M5X0.8 X 16, ISO 7045, CL 4.8, BZ</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>J1</td><td>SCRPPH1384</td><td>SCREW, PAN HEAD, TYPE H, M5X0.8 X 20, ISO 7045, CL 4.8, BZ</td><td>2</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>K1</td><td>MEC146133</td><td>ARMREST ADAPTER ASSEMBLY</td><td>1</td><td>An adapter that lets an armrest mount to the chair.</td></tr>
+        <tr><td>L1</td><td>KIT2103246</td><td>TIMING BELT SERVICE ASSEMBLY, SWING AWAY JOYSTICK MOUNT</td><td>1</td><td>A toothed belt that transfers motion inside the swing-away joystick mount.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-38">Step 38 &mdash; Retract 4 Swing-away Joystick Bracket for Curtis Joysticks</h3>
+    <p>IPB pages 75&ndash;76.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p79.jpg" alt="Retract 4 Swing-away Joystick Bracket for Curtis Joysticks — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 38.</strong> Retract 4 Swing-away Joystick Bracket for Curtis Joysticks &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 75&ndash;76.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>MEC138860</td><td>SWING AWAY JOYSTICK MOUNT,ASSY,RETRACT 4,Q-LOGIC</td><td>1</td><td>A mounting piece that holds the joystick at the right angle.</td></tr>
+        <tr><td>B1</td><td>MEC138876</td><td>SWING AWAY JOYSTICK MOUNT,ASSY,RETRACT 4,NE/NE PLUS</td><td>1</td><td>A mounting piece that holds the joystick at the right angle.</td></tr>
+        <tr><td>C1</td><td>SCRSFH1005</td><td>SCREW,SHFH,BLACK ZINC,M5-.8 X 14MM</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+        <tr><td>D1</td><td>SCRSHFH1053</td><td>SCREW, FLAT HEAD, M5X0.8 X 20, ISO 10642, CL 10.9, BZ</td><td>4</td><td>A threaded fastener that clamps parts together.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-39">Step 39 &mdash; Stealth Swing-away / Flip Down Joystick Brackets &amp; Mounts</h3>
+    <p>IPB pages 77&ndash;78.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p81.jpg" alt="Stealth Swing-away / Flip Down Joystick Brackets &amp; Mounts — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 39.</strong> Stealth Swing-away / Flip Down Joystick Brackets &amp; Mounts &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 77&ndash;78.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>ST-TWBM480QL-Q</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY/FLIP DOWN,NE/NE PLUS/Q-LOGIC,W/MOUNTING HARDWARE</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>B1</td><td>ST-TWBM480CJ-Q</td><td>JOYSTICK MOUNTING BRACKET,ASSY,SWING AWAY/FLIP DOWN,STANDALONE,W/MOUNTING HARDWARE</td><td>1</td><td>A mounting piece that holds another part at the right angle.</td></tr>
+        <tr><td>C1</td><td>ST-ARM250T-Q</td><td>JOYSTICK MOUNT,ASSY,HEIGHT ADJUSTABLE,W/TRACK HARDWARE</td><td>1</td><td>A mounting piece that holds the joystick at the right angle.</td></tr>
+        <tr><td>D1</td><td>ST-ARM250C-Q</td><td>JOYSTICK MOUNT,ASSY,HEIGHT ADJUSTABLE,W/CLAMP HARDWARE</td><td>1</td><td>A mounting piece that holds the joystick at the right angle.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-40">Step 40 &mdash; Joystick Receiver Mounts, Quantum</h3>
+    <p>IPB pages 79&ndash;80.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p83.jpg" alt="Joystick Receiver Mounts, Quantum — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 40.</strong> Joystick Receiver Mounts, Quantum &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 79&ndash;80.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>A1</td><td>FRMASMB16062</td><td>JOYSTICK RECEIVER MOUNT,ASSY,UNIVERSAL,ADJUSTABLE BLOCK,D-1000-313</td><td>1</td><td>A mounting piece that holds the joystick receiver at the right angle.</td></tr>
+        <tr><td>B1</td><td>ST-ARM250C-Q</td><td>JOYSTICK MOUNT,ASSY,HEIGHT ADJUSTABLE,W/CLAMP HARDWARE</td><td>1</td><td>A mounting piece that holds the joystick at the right angle.</td></tr>
+        <tr><td>C1</td><td>MEC1809294</td><td>JOYSTICK RECEIVER MOUNT,ASSY,W/MOUNTING HARDWARE,ADJUSTABLE HANDLE</td><td>1</td><td>A mounting piece that holds the joystick receiver at the right angle.</td></tr>
+        <tr><td>D1</td><td>ST-ARM250T-Q</td><td>JOYSTICK MOUNT,ASSY,HEIGHT ADJUSTABLE,W/TRACK HARDWARE</td><td>1</td><td>A mounting piece that holds the joystick at the right angle.</td></tr>
+        <tr><td>E1</td><td>ACC123525</td><td>JOYSTICK RECEIVER MOUNT,ASSY,W/ACCESSORY BLOCK,TRUBALANCE 3</td><td>1</td><td>A mounting piece that holds the joystick receiver at the right angle.</td></tr>
+        <tr><td>F1</td><td>ACC1800991</td><td>JOYSTICK RECEIVER MOUNT,ASSY,TBFLEX</td><td>1</td><td>A mounting piece that holds the joystick receiver at the right angle.</td></tr>
+        <tr><td>G1</td><td>MEC146133</td><td>ARMREST ADAPTER ASSEMBLY</td><td>1</td><td>An adapter that lets an armrest mount to the chair.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Section 17 &mdash; Owner's &amp; Decal Packages</h2>
+    <h3 id="step-41">Step 41 &mdash; Owner&#x27;s Package, 4Front 2</h3>
+    <p>IPB pages 81&ndash;82.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p85.jpg" alt="Owner's Package, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 41.</strong> Owner's Package, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 81&ndash;82.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>N/A</td><td>INFMANU4864</td><td>MANUAL,OWNER'S,Q4FRONT,ENGLISH</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>N/A</td><td>INFINFB2779</td><td>MANUAL,PRODUCT INSERT SHEET,WARRANTY,DOMESTIC QUANTUM POWER CHAIRS,ENGLISH</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>N/A</td><td>INFMANU5075</td><td>MANUAL,CONSUMER SAFETY GUIDE,QUANTUM</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>N/A</td><td>INFINFB4034</td><td>MANUAL,INTERACTIVE ASSIST,CUSTOMER INFORMATION PRODUCT INSERT SHEET,ENGLISH/FRENCH</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>N/A</td><td>INF152048</td><td>MANUAL,ASSY,QUICK REFERENCE TAG,WITH LANYARD AND RING,GENERIC TRANSIT,US</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>N/A</td><td>INFINFB4329</td><td>MANUAL,PRODUCT INSERT,SPECIFICATIONS,4FRONT 2,ENGLISH</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>N/A</td><td>INFINFB4335</td><td>MANUAL,PRODUCT INSERT,SPECIFICATIONS,4FRONT 2HD,ENGLISH</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+      </tbody>
+    </table>
+    <h3 id="step-42">Step 42 &mdash; Decal Package, 4Front 2</h3>
+    <p>IPB pages 83&ndash;84.</p>
+    <figure>
+      <img src="/img/pmd-exploded/4front-2/4front-2-p87.jpg" alt="Decal Package, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <figcaption><strong>Fig. 42.</strong> Decal Package, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 83&ndash;84.</figcaption>
+    </figure>
+    <table>
+      <thead><tr><th>Callout</th><th>Part number</th><th>Maker's description</th><th>Qty</th><th>What this part does</th></tr></thead>
+      <tbody>
+        <tr><td>N/A</td><td>LAB2005184</td><td>DECAL,4FRONT 2 AESTHETIC</td><td>1</td><td>A printed label stuck on the chair.</td></tr>
+        <tr><td>N/A</td><td>LAB2005185</td><td>DECAL,4FRONT 2 HD AESTHETIC</td><td>1</td><td>A printed label stuck on the chair.</td></tr>
+        <tr><td>N/A</td><td>LAB148325</td><td>DECAL,READ OWNERS MANUAL, 19.1 DIAMETER</td><td>1</td><td>Printed paperwork that ships with the chair.</td></tr>
+        <tr><td>N/A</td><td>LAB1703664</td><td>DECAL,4FRONT BATTERY WIRING DIAGRAM</td><td>1</td><td>A printed wiring diagram stuck on the chair — it shows how the batteries connect.</td></tr>
+        <tr><td>N/A</td><td>DWR1234L957</td><td>DECAL,WARNING,DEFLATE TIRE COMPLETELY,L-1234-957</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>N/A</td><td>DWR1235L515</td><td>DECAL,WARNING,BATTERY WARNINGS,L-1235-515</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>N/A</td><td>DWR1235L516</td><td>DECAL,WARNING,DEFLATE TIRE COMPLETELY,FRENCH,L-1235-516</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>N/A</td><td>DWR1235L520</td><td>DECAL,CAUTION,EXTENSION CORD/GROUNDING PRONG,L-1235-520</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>N/A</td><td>DWR1235L521</td><td>DECAL,WARNING,CONTROLLER CORD PLACEMENT,L-1235-521</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>N/A</td><td>DWR1235L551</td><td>DECAL,ISO,"AGM/GEL CELL/DOT CERTIFIED",L-1235-551</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>N/A</td><td>DWR1235L638</td><td>DECAL,ICON,JAZZY FREEWHEEL,UP-DRIVE/DOWN-NEUTRAL,L-1235-638</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>N/A</td><td>LAB1809139</td><td>HANG TAG,ENGLISH/FRENCH INTERACTIVE ASSIST</td><td>1</td><td>A printed label stuck on the chair.</td></tr>
+        <tr><td>N/A</td><td>LAB2005393</td><td>DECAL,4FRONT REAR CASTER NUT WARNING LABEL</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+        <tr><td>N/A</td><td>LAB2101449</td><td>DECAL,ISO SYMBOL,BATTERY ISOLATION/DISCONNECT</td><td>1</td><td>The maker's printed label. Warning decals carry safety information — keep them readable.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>What this page is</h2>
+    <p>Every diagram and every part number above comes from Quantum&rsquo;s own IPB — nothing redrawn, nothing guessed. The &lsquo;What this part does&rsquo; column is ours. If a part on your chair does not match the book, your chair is a different revision — check the document number before you order.</p>
+    <p><a href="/pmd-exploded.html">&larr; All exploded views</a> &middot; <a href="/pmd.html">PMD section</a></p>
+  </section>
+</main>
+
+<script src="/nav.js" defer></script>
+<script src="/bb-util.js" defer></script><script src="/protocols.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>
