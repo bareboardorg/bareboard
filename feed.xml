@@ -5,7 +5,63 @@
     <link>https://bareboard.org/</link>
     <description>Recent additions to BareBoard, the free hardware education resource.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Why the Military Cannot Fix Its Own Gear</title>
+      <link>https://www.bareboard.org/military-right-to-repair-ndaa.html</link>
+      <guid>https://www.bareboard.org/military-right-to-repair-ndaa.html</guid>
+      <description>Both houses of Congress voted to give the military the right to repair its own equipment in the FY27 defense bill — and the provision looks likely to be stripped for the second year running. The FY26-versus-FY27 distinction, and the record against the “zero examples” claim.</description>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>“Hello Again”: the TPM Attack That Breaks Your PIN Lockout</title>
+      <link>https://www.bareboard.org/tpm-hello-again.html</link>
+      <guid>https://www.bareboard.org/tpm-hello-again.html</guid>
+      <description>Researchers at Technische Universität Berlin showed how to defeat the firmware-TPM lockout protecting Windows Hello and BitLocker PINs (CVE-2026-43613). How fTPM and RPMC work, why a 4-digit PIN is now unsafe, and what to do.</description>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The 16-Pin Connector That Keeps Melting</title>
+      <link>https://www.bareboard.org/gpu-12vhpwr-failure.html</link>
+      <guid>https://www.bareboard.org/gpu-12vhpwr-failure.html</guid>
+      <description>More than ten melted GeForce 16-pin power connectors were reported in November 2026 alone, from the RTX 5090 down to the 5070. What melts, why, the thirty-second inspection, and when a card or power supply can still be saved.</description>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Spot a Fake or Stripped GPU Before You Pay</title>
+      <link>https://www.bareboard.org/gpu-fake-spotting.html</link>
+      <guid>https://www.bareboard.org/gpu-fake-spotting.html</guid>
+      <description>A sawed-in-half Radeon inside a “broken RTX 3090”, counterfeit RTX 4090 corpse cards, and empty 5090 shells: the November 2026 fake-GPU wave, the tells that give a fake away, and the in-person test procedure.</description>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>“Closing Shop”: When the Software Is the Lock</title>
+      <link>https://www.bareboard.org/car-software-locks.html</link>
+      <guid>https://www.bareboard.org/car-software-locks.html</guid>
+      <description>A November 2026 report finds car makers’ repair software wastes an estimated 83 million mechanic hours a year, about $12 billion. The same software-lock pattern, with higher stakes, in wheelchairs.</description>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Texas Right-to-Repair Law: What It Does, and What It Does Not</title>
+      <link>https://www.bareboard.org/texas-right-to-repair.html</link>
+      <guid>https://www.bareboard.org/texas-right-to-repair.html</guid>
+      <description>Texas HB 2963 took effect September 1, 2026: the largest state consumer-electronics repair law yet. Its one-year grace period, its remote-authorization loophole, and — said plainly — the fact that it does not cover wheelchairs or medical devices at all.</description>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The DMCA Medical-Device Repair Exemption Is Under Threat</title>
+      <link>https://www.bareboard.org/dmca-1201-medical-devices.html</link>
+      <guid>https://www.bareboard.org/dmca-1201-medical-devices.html</guid>
+      <description>The Copyright Office has singled out the medical-device repair exemption in its tenth triennial DMCA Section 1201 proceeding. First-round comments are due December 7, 2026. What the exemption does, and what losing it would mean.</description>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Repair Economics: Why Fixing What You Have Is Now the Rational Move</title>
+      <link>https://www.bareboard.org/repair-economics.html</link>
+      <guid>https://www.bareboard.org/repair-economics.html</guid>
+      <description>AI data centers ate the memory supply: DRAM up 400% since 2024, an RTX 5090 at about $4,900 against a $1,999 price, a DDR5 kit up sevenfold. The November 2026 numbers, and what they do to the repair-or-replace decision.</description>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Quantum Q6 Edge 3, Opened — Every Part, Named</title>
       <link>https://www.bareboard.org/pmd-q6-edge-3.html</link>
@@ -123,62 +179,6 @@
       <link>https://bareboard.org/obsolescence.html</link>
       <guid>https://bareboard.org/obsolescence.html</guid>
       <description>7 documented cases of updates and policies bricking or degrading owned hardware, each with evidence URLs and outcomes.</description>
-      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Repair Guides</title>
-      <link>https://bareboard.org/repair.html</link>
-      <guid>https://bareboard.org/repair.html</guid>
-      <description>19 devices ranked by repair hostility with iFixit scores, anti-repair tactics, and tools needed — worst first.</description>
-      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Protocol Reverse Engineering</title>
-      <link>https://bareboard.org/protocols.html</link>
-      <guid>https://bareboard.org/protocols.html</guid>
-      <description>7 closed protocols the community has reverse engineered, plus a 14-technique firmware access playbook and simple entry points using everyday ports.</description>
-      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Start Here</title>
-      <link>https://bareboard.org/start-here.html</link>
-      <guid>https://bareboard.org/start-here.html</guid>
-      <description>A beginner's guide for zero technology skill: what to buy for under $15, a first project that opens nothing, and a plain-language glossary.</description>
-      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Datasheet Index Search</title>
-      <link>https://bareboard.org/datasheets.html</link>
-      <guid>https://bareboard.org/datasheets.html</guid>
-      <description>101 component datasheets now searchable with category filters and photos.</description>
-      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>New IoT Device Pages</title>
-      <link>https://bareboard.org/devices/</link>
-      <guid>https://bareboard.org/devices/</guid>
-      <description>Echo Dot 5th Gen, Nest Mini 2nd Gen, Wyze Cam v3, Kasa HS103, Sonoff Basic R3, and Raspberry Pi Pico W — each with FCC ID, chip identification, and non-destructive firmware access.</description>
-      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>FCC IDs on Teardowns</title>
-      <link>https://bareboard.org/autopsy/</link>
-      <guid>https://bareboard.org/autopsy/</guid>
-      <description>Every teardown page now lists the device's FCC ID after the mission statement, linking to public filings.</description>
-      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>The BareBoard Hot 100</title>
-      <link>https://bareboard.org/hot-100.html</link>
-      <guid>https://bareboard.org/hot-100.html</guid>
-      <description>The 100 devices that matter most to hardware education, ranked by editorial judgment. Every entry sourced — no invented sales data, no fake metrics.</description>
-      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Legal Framework</title>
-      <link>https://bareboard.org/terms.html</link>
-      <guid>https://bareboard.org/terms.html</guid>
-      <description>Terms, DMCA, Copyright, and Privacy policies published.</description>
       <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
     </item>
   </channel>

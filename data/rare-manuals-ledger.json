@@ -1,0 +1,41 @@
+{
+  "generated": "2026-11-25",
+  "source": "~/workspace/rare-manuals-worklist.json \u2014 entries whose public source was verified present by the audit/collection crews; only these entries carry a verified note. Other rare-manual rows get the standard link-only basis from the page's own Public source link, never a fabricated verification.",
+  "entries": [
+    {
+      "file": "003-trident-tvga9440agi-user-s-manual-ver-3-july-1994.pdf",
+      "source_url": "https://manuals.plus/m/1e72961d1d6329a66442f9ab0df46d31c2a4ab449a062e167a47f542e73c94fd",
+      "verified": "verified present 2026-11-25: full manual text, July 1994, P/N 430-02003-703 (curl is bot-walled; verified via text fetch)"
+    },
+    {
+      "file": "018-gp2x-caanoo-user-manual-v1-0-english.pdf",
+      "source_url": "https://www.video-games-museum.com/screenshots/Caanoo/doc/Caanoo User Manual (English).pdf",
+      "verified": "verified present 2026-11-22, full text extracts cleanly (1,611 lines), BUT this is Version 1.1, not the v1.0 the worklist seeks; model GPX-CAANOO-CA100/CA101(B)"
+    },
+    {
+      "file": "032-mips-r8000-microprocessor-chip-set-tfp-user-s-manual-revision-3-0.pdf",
+      "source_url": "https://archive.irixnet.org/sgistuff/hardware/other/documents/R8000_chipset.html",
+      "verified": "verified present 2026-11-24: R8000 chipset transcription; revision unstated on the page, could not confirm Rev 3.0"
+    },
+    {
+      "file": "052-rendition-verite-v2200-technical-specification-revision-b-january-1998.pdf",
+      "source_url": "https://wiki.preterhuman.net/Rendition_V%C3%A9rit%C3%A9_V2200_Product_Brief",
+      "verified": "verified present 2026-11-24: V2200 Product Brief ONLY, not the full Rev B Technical Specification; no public copy of the full spec could be found"
+    },
+    {
+      "file": "069-intel-pxa27x-processor-family-optimization-guide.pdf",
+      "source_url": "https://git.nox-rhea.org/Retro/Awesome-Retro-Docs/raw/commit/58ca4eb420bd4ede13e34da88be847c51e7f36c2/MCU/pxa270/optimization.pdf",
+      "verified": "verified present 2026-11-22: full text, title 'Intel PXA27x Processor Family Optimization Guide', August 2004, Order Number 280004-002"
+    },
+    {
+      "file": "076-neuros-osd-abbreviated-user-guide-2page.pdf",
+      "source_url": "https://manualmachine.com/neuros/osd/10140680-quick-start-guide/",
+      "verified": "verified present 2026-11-22: full text of Neuros OSD Quick Start Guide, 09/2006 (the 6-page doc in the worklist entry); Abbreviated Users Guide also at https://www.manualslib.com/manual/807824/Neuros-Osd.html and https://cdn2.guidespdf.com/view/677/677518-osd.pdf"
+    },
+    {
+      "file": "081-sun-spot-owner-s-manual-august-2008.pdf",
+      "source_url": "https://sunspotdev.org/docs/Blue/SunSPOT-OwnersManual.pdf",
+      "verified": "verified present 2026-11-24, re-verified HTTP 200 2026-11-25: exact match, Blue Release 4.0, August 2008, Part No. 820-1249-10, Doc Rev 1.8"
+    }
+  ]
+}

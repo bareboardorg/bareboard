@@ -1,9 +1,9 @@
 {
   "version": 1,
   "generated": "2026-11-25",
-  "total": 631,
+  "total": 632,
   "counts": {
-    "manual": 187,
+    "manual": 188,
     "schematic": 10,
     "documentation": 10,
     "datasheet": 126,
@@ -23,7 +23,7 @@
       "url": null,
       "source_url": "https://archive.org/details/AcornComputersBBCCircuitDiagram",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -36,7 +36,7 @@
       "url": null,
       "source_url": "https://mirrors.pdp-11.net/_misc/chrisacorns.computinghistory.org.uk/docs/Acorn/Manuals/Acorn_BBCSMOct85_Sec1.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -49,7 +49,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/045-apple-messagepad-2000-user-s-manual.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -62,7 +62,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/035-apple-the-66-most-asked-questions-regarding-pippin.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -75,7 +75,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/048-newton-programmer-s-guide-2-1-os-addendum.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -88,7 +88,7 @@
       "url": null,
       "source_url": "https://documents.cdn.ifixit.com/RFKgPiMcbvOKomaC.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -101,7 +101,7 @@
       "url": null,
       "source_url": "http://www.atariverse.com/files/technical/Atari%20400-800%20Field%20Service%20Manual%20(Updated).pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -114,7 +114,7 @@
       "url": null,
       "source_url": "https://archive.org/details/atari520st1040stservicemanual",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -127,7 +127,7 @@
       "url": null,
       "source_url": "https://archive.org/stream/Atari_800XL_Field_Service_Manual/Atari_800XL_Field_Service_Manual_djvu.txt",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -140,7 +140,7 @@
       "url": null,
       "source_url": "https://mirrors.pdp-11.net/_atari/www.atarimania.com/documents/Atari_5200_Field_Service_Manual.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -153,7 +153,7 @@
       "url": null,
       "source_url": "https://archive.org/download/1541Manual/1541_Manual_text.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -166,7 +166,7 @@
       "url": null,
       "source_url": "https://archive.org/stream/Amiga_Computer_Model_1000_Assembly_Level_Repair_1985_Commodore/Amiga_Computer_Model_1000_Assembly_Level_Repair_1985_Commodore_djvu.txt",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -179,7 +179,7 @@
       "url": null,
       "source_url": "https://archive.org/download/commodore-tech-topics-Orval_Bair-Collection/A1000%20Service%20Manual_text.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -192,7 +192,7 @@
       "url": null,
       "source_url": "https://ia601501.us.archive.org/18/items/Commodore_1541_Troubleshooting_and_Repair_Guide/Commodore_1541_Troubleshooting_and_Repair_Guide.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -205,7 +205,7 @@
       "url": null,
       "source_url": "https://archive.org/download/Service_Manual_Model_C64_Computer_1985-02_Commodore_PN-314001-02/Service_Manual_Model_C64_Computer_1985-02_Commodore_PN-314001-02_text.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -218,7 +218,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/040-alpha-21164-microprocessor-hardware-reference-manual.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -231,8 +231,21 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/088-alpha-axp-architecture-reference-manual-2nd-edition-1995-richard-l-sit.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
+    },
+    {
+      "title": "GP2X Caanoo User Manual v1.1 (English)",
+      "maker": "GamePark Holdings",
+      "model": "GP2X Caanoo",
+      "platform": "Gaming & entertainment",
+      "category": "manual",
+      "doc_type": "User manual (PDF, 54 pages)",
+      "url": "/library/collected-public-docs/018-gp2x-caanoo-user-manual-v1-1-english.pdf",
+      "source_url": "https://www.video-games-museum.com/screenshots/Caanoo/doc/Caanoo%20User%20Manual%20(English).pdf",
+      "bytes": 39861366,
+      "basis": "Manufacturer-published document, posted with attribution under fair use. Collected 2026-11-25: the surviving public copy is v1.1, not the v1.0 the worklist seeks — the file name says so, and page 1 reads 'User Manual Version 1.1'.",
+      "link_only": false
     },
     {
       "title": "PA-RISC 1.1 Architecture and Instruction Set Reference Manual, Third Edition",
@@ -244,7 +257,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/087-pa-risc-1-1-architecture-and-instruction-set-reference-manual-third-ed.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -257,7 +270,7 @@
       "url": null,
       "source_url": "https://retrolib.info/_bitsavers/pdf/ibm/pc/SA38-0037-00_Personal_Computer_Family_Service_Information_Manual_Jul89.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -270,7 +283,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/037-powerpc-601-risc-microprocessor-user-s-manual-mpr601um-01-1995.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -283,7 +296,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/051-powerpc-604e-risc-microprocessor-user-s-manual-with-supplement-for-pow.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -296,7 +309,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/050-powerpc-750-risc-microprocessor-user-s-manual.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -309,7 +322,7 @@
       "url": null,
       "source_url": "https://manuals.plus/m/f106386d5e0d0cddb39f0136d87edb997342217da5eba44e355da668c010e5e1.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -322,7 +335,7 @@
       "url": null,
       "source_url": "https://archive.org/details/19820602KeyboardComponentPlans?view=theater&ui=embed&wrapper=false",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -335,7 +348,7 @@
       "url": null,
       "source_url": "https://mirrors.pdp-11.net/_misc__/retrocmp.de/kaypro/1984_1484-C_KayproTechnicalManual.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -348,7 +361,7 @@
       "url": null,
       "source_url": "https://github.com/xtacocorex/ntc_chip_docs/raw/refs/heads/master/chip_docs.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -361,7 +374,7 @@
       "url": null,
       "source_url": "https://oldsilicon.com/portables/osborne-1/docs/Osborne1TechnicalManual.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1284,7 +1297,7 @@
       "url": null,
       "source_url": "https://k1.spdns.de/Vintage/Sinclair/82/Sinclair%20ZX%20Spectrum/Repair/ZX%20Spectrum%20Service%20Manual%20(OCRed).pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1297,7 +1310,7 @@
       "url": null,
       "source_url": "https://sunspotdev.org/docs/Blue/SunSPOT-OwnersManual.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document. verified present 2026-11-24, re-verified HTTP 200 2026-11-25: exact match, Blue Release 4.0, August 2008, Part No. 820-1249-10, Doc Rev 1.8",
       "link_only": true
     },
     {
@@ -1310,7 +1323,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/093-ultrasparc-user-s-manual-ultrasparc-i-ultrasparc-ii.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1323,7 +1336,7 @@
       "url": null,
       "source_url": "https://mirrors.pdp-11.net/_misc/electrickery.hosting.philpem.me.uk/comp/trs80-4p/doc/Model_4_Technical_Reference_Manual_1985_Tandy.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1336,7 +1349,7 @@
       "url": null,
       "source_url": "https://ia600901.us.archive.org/14/items/TRS80Model4PServiceManual/TRS80%20Model%204P%20Service%20Manual.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1349,7 +1362,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/083-omap4460-pandaboard-es-system-reference-manual-doc-21054-rev-0-1-sept.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1362,7 +1375,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/019-stellaris-lm4f120-launchpad-evaluation-board-user-s-manual-rev-a-augus.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1375,7 +1388,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/039-6x86-data-book-order-94175-01-march-1996.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1388,7 +1401,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/044-80c51-based-8-bit-microcontrollers-data-book-philips-semiconductors-19.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1401,7 +1414,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/001-advanced-gravis-ultrasound-lowlevel-toolkit-v2-22-21-december-1994.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1414,7 +1427,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/054-alpha-21264-ev67-hardware-reference-manual.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1427,7 +1440,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/005-am186er-and-am188er-microcontrollers-user-s-manual-rev-b-order-21684.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1440,7 +1453,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/041-am5x86-microprocessor-family-amd-order-no-19751c.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1453,7 +1466,7 @@
       "url": null,
       "source_url": "https://mpetroff.net/2015/05/amazon-dash-button-teardown/",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1466,7 +1479,7 @@
       "url": null,
       "source_url": "https://archive.org/stream/anki_vector_SDK_docs/anki_vector.touch_djvu.txt",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1479,7 +1492,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/063-arm7tdmi-technical-reference-manual-arm-ddi-0029g-1994-2001.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1492,7 +1505,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/078-at91sam7s-ek-evaluation-board-user-guide-6112c-atarm-01-feb-07.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1505,7 +1518,7 @@
       "url": null,
       "source_url": "https://www.manual.nz/bq/aquaris-e4-5-ubuntu-ed/manual?p=11",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1518,7 +1531,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/031-chrontel-ch92c64-dual-graphics-clock-generator-rev-1-4-5-12-94.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1531,7 +1544,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/025-crosspoint-cp20k-fpga-data-book-nov-1992.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1544,7 +1557,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/066-crusoe-tm5500-tm5800-system-design-guide-july-17-2002.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1557,7 +1570,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/056-cyrix-mediagx-mmx-enhanced-processor-data-book-revision-2-0-addendum.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1570,7 +1583,7 @@
       "url": null,
       "source_url": "https://www.fccpdf.com/2AEWM/2AEWMDQR002001/3442987.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1583,7 +1596,7 @@
       "url": null,
       "source_url": "https://www.fccpdf.com/2AF9A/2AF9A01011L/4437819.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1596,7 +1609,7 @@
       "url": null,
       "source_url": "https://static.datasheets.com/docs/pdfs/2018/2/18/7/54/36/374/arrowd_/manual/dragonboard820c.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1609,7 +1622,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/090-ess-es1868-audiodrive-solution-product-brief-document-sam0009c-may-199.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1622,7 +1635,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/042-exponential-technology-x704-technical-summary-advance-information-1996.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1635,7 +1648,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/021-fast-advanced-schottky-ttl-logic-databook-1990-doc-400023.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1648,7 +1661,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/095-geode-gxm-processor-databook-integrated-x86-solution-with-mmx-support.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1661,7 +1674,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/060-geode-sc2200-thin-client-on-a-chip-databook.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1674,7 +1687,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/047-glide-reference-manual-v2-4-printed-07-30-97.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1687,7 +1700,7 @@
       "url": null,
       "source_url": "https://www.video-games-museum.com/screenshots/Caanoo/doc/Caanoo%20User%20Manual%20(English).pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document. verified present 2026-11-22, full text extracts cleanly (1,611 lines), BUT this is Version 1.1, not the v1.0 the worklist seeks; model GPX-CAANOO-CA100/CA101(B)",
       "link_only": true
     },
     {
@@ -1700,7 +1713,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/098-gp2x-user-guide-version-1-2.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1713,7 +1726,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/064-handspring-springboard-compatibility-an-17.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1726,7 +1739,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/061-handspring-springboard-module-testing-an-01.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1739,7 +1752,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/030-i960-ca-microprocessor-user-s-manual-order-270710-002-1992.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1752,7 +1765,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/091-idt-winchip-c6-processor-data-book.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1765,7 +1778,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/002-idt79r3071-idt79r3081-riscontroller-hardware-user-s-manual-revision-2.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1778,7 +1791,7 @@
       "url": null,
       "source_url": "https://www.sigmaelectronica.net/manuals/edisonbreakout_hg_331190006.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1791,7 +1804,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/020-intel-edison-kit-for-arduino-hardware-guide-doc-331191-004-december-20.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1804,7 +1817,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/084-intel-galileo-board-user-guide-order-number-330237-002us-june-2014.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1817,7 +1830,7 @@
       "url": null,
       "source_url": "https://www.farnell.com/datasheets/2237386.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1830,7 +1843,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/068-intel-pxa255-processor-developer-s-manual.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1843,7 +1856,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/075-intel-pxa27x-processor-family-developer-s-manual.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1856,7 +1869,7 @@
       "url": null,
       "source_url": "https://git.nox-rhea.org/Retro/Awesome-Retro-Docs/raw/commit/58ca4eb420bd4ede13e34da88be847c51e7f36c2/MCU/pxa270/optimization.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document. verified present 2026-11-22: full text, title 'Intel PXA27x Processor Family Optimization Guide', August 2004, Order Number 280004-002",
       "link_only": true
     },
     {
@@ -1869,7 +1882,7 @@
       "url": null,
       "source_url": "https://cdrdv2-public.intel.com/333582/quark-d2000-customer-reference-board.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1882,7 +1895,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/067-intel-xscale-microarchitecture-user-s-manual-for-the-pxa255-processor.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1895,7 +1908,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/079-jennic-jn5139-ek020-802-15-4-jennet-starter-kit-user-guide-jn-ug-3040.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1908,7 +1921,7 @@
       "url": null,
       "source_url": "https://github.com/devsparx/jibo_hw_notes/blob/HEAD/README.md",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1921,7 +1934,7 @@
       "url": null,
       "source_url": "https://github.com/devsparx/jibo-sdk-recreation/blob/HEAD/docs/setup-editor.md",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1934,7 +1947,7 @@
       "url": null,
       "source_url": "https://ghc.wtf/writing/freedom-for-jibo/",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1947,7 +1960,7 @@
       "url": null,
       "source_url": "http://docs.freekuri.com/",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1960,7 +1973,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/080-magiceyes-pollux-data-book.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1973,7 +1986,7 @@
       "url": null,
       "source_url": "https://manuals.plus/m/18556de3bf28ac9a701a17c3a5e2f9a1ee2fcbbe851536e3019787cde6784179.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1986,7 +1999,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/089-mips-r10000-microprocessor-user-s-manual-version-2-0.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -1999,7 +2012,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/028-mips-r4000-microprocessor-user-s-manual-preliminary-1992.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2012,7 +2025,7 @@
       "url": null,
       "source_url": "https://archive.irixnet.org/sgistuff/hardware/other/documents/R8000_chipset.html",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document. verified present 2026-11-24: R8000 chipset transcription; revision unstated on the page, could not confirm Rev 3.0",
       "link_only": true
     },
     {
@@ -2025,7 +2038,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/092-mpc603e-ec603e-risc-microprocessors-user-s-manual.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2038,7 +2051,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/097-mpc860-powerquicc-family-user-s-manual-revision-3.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2051,7 +2064,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/013-mpr-mib-mote-user-s-manual-doc-7430-0021-01-rev-a.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2064,7 +2077,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/065-nec-vr10000-vr12000-series-64-32-bit-microprocessor-user-s-manual.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2077,7 +2090,7 @@
       "url": null,
       "source_url": "https://manualmachine.com/neuros/osd/10140680-quick-start-guide/",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document. verified present 2026-11-22: full text of Neuros OSD Quick Start Guide, 09/2006 (the 6-page doc in the worklist entry); Abbreviated Users Guide also at https://www.manualslib.com/manual/807824/Neuros-Osd.html and https://cdn2.guidespdf.com/view/677/677518-osd.pdf",
       "link_only": true
     },
     {
@@ -2090,7 +2103,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/008-number-nine-ticket-to-ride-iv-128-bit-svga-2d-3d-graphics-controller-p.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2103,7 +2116,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/086-oak-technology-oti-087-local-bus-vga-controller-databook-february-1993.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2116,7 +2129,7 @@
       "url": null,
       "source_url": "https://github.com/facebookarchive/riftdk2",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2129,7 +2142,7 @@
       "url": null,
       "source_url": "https://github.com/OSVR/OSVR-HDK",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2142,7 +2155,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/058-parallax-sx-key-blitz-development-system-manual-v1-1.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2155,7 +2168,7 @@
       "url": null,
       "source_url": "https://github.com/coredevices/pebbleos/blob/HEAD/docs/boards/asterix/index.md",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2168,7 +2181,7 @@
       "url": null,
       "source_url": "https://developer.repebble.com/guides/tools-and-resources/hardware-information/",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2181,7 +2194,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/077-philips-semiconductors-lpc2101-02-03-user-manual.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2194,7 +2207,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/009-pic16c54b-rev-a-silicon-errata-sheet-ds30453b-1998.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2207,7 +2220,7 @@
       "url": null,
       "source_url": "https://www.scribd.com/document/266210475/AraMDK-0-2",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2220,7 +2233,7 @@
       "url": null,
       "source_url": "https://wiki.preterhuman.net/Rendition_V%C3%A9rit%C3%A9_V2200_Product_Brief",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document. verified present 2026-11-24: V2200 Product Brief ONLY, not the full Rev B Technical Specification; no public copy of the full spec could be found",
       "link_only": true
     },
     {
@@ -2233,7 +2246,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/085-riotboard-user-manual-v1-0-2014.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2246,7 +2259,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/022-ross-technology-sparc-risc-user-s-guide-2nd-edition-february-1990.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2259,7 +2272,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/043-s3-trio64-graphics-accelerator-product-overview-february-1996.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2272,7 +2285,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/070-samsung-s3c2440a-32-bit-cmos-microcontroller-user-s-manual.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2285,7 +2298,7 @@
       "url": null,
       "source_url": "https://archive.org/details/pdfy-2BVXSEqkGL4DqlAN",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2298,7 +2311,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/038-sierra-semiconductor-sc15064-falcon-rev-2-1.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2311,7 +2324,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/010-sis5595-pci-system-i-o-chipset-preliminary-specification-november-2-19.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2324,7 +2337,7 @@
       "url": null,
       "source_url": "https://diit.cz/sites/default/files/sulon_q_headset_gdc_sneak_peek_faq.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2337,7 +2350,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/062-the-handy-board-technical-reference-fred-g-martin-november-15-2000.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2350,7 +2363,7 @@
       "url": null,
       "source_url": "https://fccpdf.com/2AELZ/2AELZ-1000/2623903.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2363,7 +2376,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/071-transmeta-efficeon-processor-family-comparison-tm8300-tm8600-tm8800-tm.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2376,7 +2389,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/072-transmeta-efficeon-tm8600-processor-product-sheet.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2389,7 +2402,7 @@
       "url": null,
       "source_url": "https://manuals.plus/m/1e72961d1d6329a66442f9ab0df46d31c2a4ab449a062e167a47f542e73c94fd",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document. verified present 2026-11-25: full manual text, July 1994, P/N 430-02003-703 (curl is bot-walled; verified via text fetch)",
       "link_only": true
     },
     {
@@ -2402,7 +2415,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/099-twr-mcf51cn-user-s-manual-rev-1-2-feb-2011.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2415,7 +2428,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/059-voodoo2-specification-revision-1-16-updated-12-1-99.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2428,7 +2441,7 @@
       "url": null,
       "source_url": "https://www.fccpdf.com/2AE23/2AE23-ZANO1/2742926.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2441,7 +2454,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/029-zilog-microprocessors-and-peripherals-databook-1992-volume-i.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2454,7 +2467,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/024-commodore-a4000-service-addendum-incl-schematics.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2519,7 +2532,7 @@
       "url": null,
       "source_url": "https://github.com/leapmotion/ProjectNorthStar",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2532,7 +2545,7 @@
       "url": null,
       "source_url": "https://raw.githubusercontent.com/MinnowBoard-org/design-files/0a0659e57f7bbdc8b4bfdb16ac43b72196b267e7/minnowboard-turbot-quad-core/F400_R302/Turbot_B_Quad_Core_F400_R302-SchematicRev200.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2545,7 +2558,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/016-openmoko-gta01b-neo1973-schematics-gta01bv4-rc0.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2558,7 +2571,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/017-openmoko-gta02-neo-freerunner-schematics.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -2571,7 +2584,7 @@
       "url": null,
       "source_url": "http://cholla.mmto.org/h5/pc2_h5/ORANGE_PI-PC2-V1_2_schematic.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -3793,7 +3806,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/100-stellaris-lm3s9b96-microcontroller-data-sheet-rev-n-oct-2012-spms008.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -3910,7 +3923,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/034-8xc196mc-industrial-motor-control-microcontroller-datasheet-order-2709.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -3923,7 +3936,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/094-ali-m1541-m1542-aladdin-v-socket-7-north-bridge-preliminary-datasheet.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -3936,7 +3949,7 @@
       "url": null,
       "source_url": "https://no.infinite-electronic.net/datasheet/6b-A000116.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -3949,7 +3962,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/096-atmega103-l-datasheet-0945g-09-01-september-2001.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -3962,7 +3975,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/006-aureal-vortex-au8820-pci-based-ac-97-digital-audio-processor-datasheet.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -3975,7 +3988,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/046-brooktree-bt848-848a-849a-single-chip-video-capture-for-pci-data-sheet.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -3988,7 +4001,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/036-crystal-semiconductor-cs4232-plug-and-play-audio-system-datasheet-docu.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -4001,7 +4014,7 @@
       "url": null,
       "source_url": "https://media.ic-find.com/datasheets/5a0cd857e656ae073edc554a2c65f8a2.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -4014,7 +4027,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/026-cyrix-cx486dlc-data-sheet-may-1992-preliminary.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -4027,7 +4040,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/027-cyrix-cx486slc-data-sheet-feb-1992-preliminary.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -4040,7 +4053,7 @@
       "url": null,
       "source_url": "https://archive.org/details/bitsavers_cyrixCyrixheet199901_685696",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -4053,7 +4066,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/057-idt-winchip-2b-processor-data-sheet.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -4066,7 +4079,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/015-magiceyes-mp2520f-application-processor-data-sheet.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -4079,7 +4092,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/023-oak-technology-oti-077-vga-controller-datasheet.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -4092,7 +4105,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/049-opti-82c931-plug-and-play-integrated-audio-controller-datasheet-august.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -4105,7 +4118,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/053-rise-mp6-microprocessor-data-sheet-for-windows-systems.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -4118,7 +4131,7 @@
       "url": null,
       "source_url": "https://www.component-world.nl/datasheets/27/SIP-KITNXB001.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -4131,7 +4144,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/004-sierra-semiconductor-sc18000-sc18005-multimedia-system-controller-data.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -4144,7 +4157,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/014-sigmatel-stmp35xx-d-major-audio-system-on-chip-product-data-sheet.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -4157,7 +4170,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/007-sis-5597-5598-pentium-pci-isa-chipset-preliminary-datasheet-april-15-1.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -4170,7 +4183,7 @@
       "url": null,
       "source_url": "https://tz.micro-processor.hk/parts-file/9c-dev-14281.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -4183,7 +4196,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/073-via-c3-nehemiah-processor-datasheet-revision-1-13.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -4196,7 +4209,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/074-via-eden-esp-processor-datasheet-version-1-79.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -4209,7 +4222,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/012-via-vt82c686a-super-south-bridge-datasheet-revision-1-1-april-15-1999.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -4222,7 +4235,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/011-winbond-w83977f-af-enhanced-i-o-controller-datasheet-march-1998-rev-0.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {
@@ -4235,7 +4248,7 @@
       "url": null,
       "source_url": "https://archive.org/download/bareboard-manufacturer-docs/033-yamaha-ymf262-fm-operator-type-l3-opl3-datasheet-november-1994.pdf",
       "bytes": null,
-      "basis": "UNVERIFIED — provenance not established",
+      "basis": "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.",
       "link_only": true
     },
     {

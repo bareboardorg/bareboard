@@ -43,6 +43,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.bareboard.org/car-software-locks.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.bareboard.org/changelog.html</loc>
     <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -295,10 +301,22 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.bareboard.org/dmca-1201-medical-devices.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.bareboard.org/dmca.html</loc>
     <lastmod>2026-11-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.bareboard.org/domains.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.bareboard.org/eras.html</loc>
@@ -317,6 +335,18 @@
     <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://www.bareboard.org/gpu-12vhpwr-failure.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bareboard.org/gpu-fake-spotting.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.bareboard.org/gpu-repair.html</loc>
@@ -763,6 +793,12 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://www.bareboard.org/military-right-to-repair-ndaa.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.bareboard.org/most-wanted.html</loc>
     <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -1123,6 +1159,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.bareboard.org/repair-economics.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.bareboard.org/repair-rights.html</loc>
     <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -1163,6 +1205,18 @@
     <lastmod>2026-11-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.bareboard.org/texas-right-to-repair.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.bareboard.org/tpm-hello-again.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.bareboard.org/watchmen.html</loc>
