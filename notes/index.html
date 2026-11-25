@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
   <meta name="tdm-reservation" content="1">
@@ -29,85 +29,119 @@
     <nav aria-label="Primary">
       <ul>
         <li><a href="/" class="brand-word">BareBoard</a></li>
-        <li class="has-children">
-          <a href="/devices/" aria-haspopup="true" aria-expanded="false">Devices</a>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
           <div class="col-panel">
             <div class="dropdown-inner">
-              <ul class="dropdown-col">
-                <li><a href="/devices/nintendo-switch/">Nintendo Switch</a></li>
-                <li><a href="/devices/playstation/">PlayStation</a></li>
-                <li><a href="/devices/raspberry-pi/">Raspberry Pi</a></li>
-                <li><a href="/devices/esp32/">ESP32</a></li>
-                <li><a href="/devices/ti-84-plus/">TI-84 Plus</a></li>
-                <li><a href="/devices/xfinity-xb3/">Xfinity XB3</a></li>
-              </ul>
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
             </div>
           </div></li>
-        <li class="has-children">
-          <a href="/autopsy/" aria-haspopup="true" aria-expanded="false">Teardowns</a>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
           <div class="col-panel">
             <div class="dropdown-inner">
-              <ul class="dropdown-col">
-                <li><a href="/autopsy/xfinity-xb3/">Xfinity XB3</a></li>
-              </ul>
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
             </div>
           </div></li>
-        <li class="has-children">
-          <a href="/datasheets.html" aria-haspopup="true" aria-expanded="false">Resources</a>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
           <div class="col-panel">
             <div class="dropdown-inner">
-              <ul class="dropdown-col">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
                 <li><a href="/datasheets.html">Datasheet Index</a></li>
-                <li><a href="/datasheets.html#cables">Cable Reference</a></li>
-                <li><a href="/notes/">Bench Notes</a></li>
                 <li><a href="/chips.html">Chip Database</a></li>
                 <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
                 <li><a href="/repair.html">Repair Guides</a></li>
-                <li><a href="/protocols.html">Protocol RE</a></li>
-              </ul>
+                </ul>
+              </div>
             </div>
           </div></li>
-        <li><a href="/hot-100.html">Hot 100</a></li>
-        <li><a href="/most-wanted.html">Most Wanted</a></li>
-        <li class="has-children">
-          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
           <div class="col-panel">
             <div class="dropdown-inner">
-              <ul class="dropdown-col">
-                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
-                <li><a href="/watchmen.html#methodology">Methodology</a></li>
-                <li><a href="/watchmen.html#tools">The bench</a></li>
-                <li><a href="/watchmen.html#corrections">Corrections</a></li>
-              </ul>
-            </div>
-          </div></li>
-                <li class="has-children">
-          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
-          <div class="col-panel">
-            <div class="dropdown-inner">
-              <ul class="dropdown-col">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
                 <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
                 <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
                 <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
                 <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
-              </ul>
+                </ul>
+              </div>
             </div>
           </div></li>
-<li class="has-children">
-          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
           <div class="col-panel">
             <div class="dropdown-inner">
-              <ul class="dropdown-col">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Support</li>
                 <li><a href="/support.html#mission">Mission</a></li>
                 <li><a href="/support.html#chip-in">Donate</a></li>
                 <li><a href="/support.html#allies">Allies</a></li>
-              </ul>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
             </div>
           </div></li>
-        <li class="nav-search-item">
-          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
-        </li>
-              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
           <div class="col-panel">
             <div class="dropdown-inner">
               <div class="colnav">
@@ -126,6 +160,9 @@
               </div>
             </div>
           </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
 </ul>
     </nav>
   </div>

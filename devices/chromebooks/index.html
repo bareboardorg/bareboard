@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
   <meta name="tdm-reservation" content="1">
@@ -29,92 +29,119 @@
     <nav aria-label="Primary">
       <ul>
         <li><a href="/" class="brand-word">BareBoard</a></li>
-        <li><a href="/devices/">Devices</a></li>
-        <li class="has-children">
-          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
           <div class="col-panel">
             <div class="dropdown-inner">
-              <ul class="dropdown-col">
-                <li><a href="/about.html#how-we-work">How we work</a></li>
-                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
                 <li><a href="/datasheets.html">Datasheet Index</a></li>
-                <li><a href="/notes/">Bench Notes</a></li>
                 <li><a href="/chips.html">Chip Database</a></li>
                 <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
                 <li><a href="/repair.html">Repair Guides</a></li>
-                <li><a href="/protocols.html">Protocol RE</a></li>
-              </ul>
+                </ul>
+              </div>
             </div>
           </div></li>
-        <li class="has-children">
-          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
           <div class="col-panel">
             <div class="dropdown-inner">
-              <ul class="dropdown-col">
-                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
-                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
-                <li><a href="/hot-100.html">Game Consoles</a></li>
-                <li><a href="/hot-100.html">Media Streamers</a></li>
-                <li><a href="/hot-100.html">Networking Gear</a></li>
-                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
-                <li><a href="/hot-100.html">Other</a></li>
-                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
-                <li><a href="/hot-100.html">Phones</a></li>
-                <li><a href="/hot-100.html">Printers</a></li>
-                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
-                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
-                <li><a href="/hot-100.html">Wearables</a></li>
-              </ul>
-            </div>
-          </div></li>
-<li class="has-children">
-          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
-          <div class="col-panel">
-            <div class="dropdown-inner">
-              <ul class="dropdown-col">
-                <li><a href="/most-wanted.html#board">The board</a></li>
-              </ul>
-            </div>
-          </div></li>
-                <li class="has-children">
-          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
-          <div class="col-panel">
-            <div class="dropdown-inner">
-              <ul class="dropdown-col">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
                 <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
                 <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
                 <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
                 <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
-              </ul>
+                </ul>
+              </div>
             </div>
           </div></li>
-<li class="has-children">
-          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
           <div class="col-panel">
             <div class="dropdown-inner">
-              <ul class="dropdown-col">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Support</li>
                 <li><a href="/support.html#mission">Mission</a></li>
                 <li><a href="/support.html#chip-in">Donate</a></li>
                 <li><a href="/support.html#allies">Allies</a></li>
-              </ul>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
             </div>
           </div></li>
-        <li class="has-children">
-          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
           <div class="col-panel">
             <div class="dropdown-inner">
-              <ul class="dropdown-col">
-                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
-                <li><a href="/watchmen.html#methodology">Methodology</a></li>
-                <li><a href="/watchmen.html#tools">The bench</a></li>
-                <li><a href="/watchmen.html#corrections">Corrections</a></li>
-              </ul>
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
             </div>
           </div></li>
-        <li class="nav-search-item">
-          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
-        </li>
-              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
           <div class="col-panel">
             <div class="dropdown-inner">
               <div class="colnav">
@@ -133,6 +160,9 @@
               </div>
             </div>
           </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
 </ul>
     </nav>
   </div>
@@ -236,7 +266,7 @@
   <section>
     <h2 id="chips">Key chips &amp; components</h2>
     <ul>
-      <li><strong>Intel N-series / Celeron SoCs</strong> &mdash; Intel publishes datasheets for its embedded lines through its public documentation library; the N100-class is documented at family level. Datasheet status: indexed for related Intel parts in this site&rsquo;s <a href="/datasheets.html">Datasheet Index</a>; model-specific briefs are collection targets.</li>
+      <li><strong>Intel N-series / Celeron SoCs</strong> &mdash; Intel publishes datasheets for its embedded lines through its public documentation library; the N100-class is documented at family level. Datasheet status: no Intel N-series datasheet is indexed yet in this site&rsquo;s <a href="/datasheets.html">Datasheet Index</a>; model-specific briefs are collection targets.</li>
       <li><strong>MediaTek Kompanio</strong> &mdash; product briefs public, full datasheets not. Collection target logged.</li>
       <li><strong>Google H1 / Titan C2 security chip</strong> &mdash; documented by the Chromium project&rsquo;s public CCD (Case Closed Debugging) documentation; the chip is the write-protect authority on modern boards.</li>
       <li><strong>coreboot + depthcharge</strong> &mdash; the open-source firmware stack most Chromebooks ship; source and board documentation are public in the Chromium project &mdash; the only mass-market computer whose boot firmware you can read.</li>
@@ -268,7 +298,7 @@
         <tr><td>2016&ndash;2019</td><td>Early models reach their Auto Update Expiration dates and stop receiving updates while fully functional &mdash; schools, the biggest buyers, are hit first and hardest.</td><td>Google AUE policy list; US PIRG reporting</td></tr>
         <tr><td>2023-04</td><td>US PIRG&rsquo;s &ldquo;Chromebook Churn&rdquo; report calculates that doubling Chromebook lifespans would cut emissions and save US schools $1.8 billion &mdash; naming expiring software support, glued batteries, and parts scarcity as the mechanisms.</td><td>US PIRG Education Fund, &ldquo;Chromebook Churn,&rdquo; April 2023</td></tr>
         <tr><td>2023-09-14</td><td>Google announces 10 years of automatic updates for Chromebooks &mdash; for platforms released from 2021 onward, counted from platform release &mdash; the longest update commitment of any consumer OS at the time.</td><td>Google announcement, Sept. 14, 2023</td></tr>
-        <tr><td>2022-02</td><td>Google launches a Chromebook repair program for schools with Acer, HP, and Lenovo, publishing repair guides for common models so district IT can fix fleets in-house.</td><td>Google for Education, Feb. 2022</td></tr>
+        <tr><td>2022-02</td><td>Google launches a Chromebook repair program for schools with Acer and Lenovo, publishing repair guides for common models so district IT can fix fleets in-house.</td><td>Google for Education, Feb. 2022</td></tr>
       </tbody>
     </table>
     <h3>Did you know</h3>
@@ -282,9 +312,9 @@
     <h2 id="documents">Documents &amp; deep dive</h2>
     <p>Every document this page rests on, linked. Site library copies first, then the public record at the source.</p>
     <ul>
-      <li><strong>The Chromium project documentation</strong> (Google) &mdash; board documentation, firmware design, write-protect and CCD mechanics: the primary source this page&rsquo;s exploded view and firmware claims rest on.</li>
+      <li><strong>The Chromium project documentation</strong> (Google) &mdash; board documentation, firmware design, <a href="https://www.chromium.org/chromium-os/developer-library/reference/security/write-protection/">write-protect and CCD mechanics</a>: the primary source this page&rsquo;s exploded view and firmware claims rest on.</li>
       <li><strong>FCC filings</strong> per OEM and model &mdash; internal photos: <a href="https://fccid.io">fccid.io</a>.</li>
-      <li><strong>US PIRG, &ldquo;Chromebook Churn&rdquo;</strong> (April 2023) &mdash; the lifespan/e-waste analysis cited in the record.</li>
+      <li><a href="https://pirg.org/edfund/media-center/new-chromebook-churn-report-highlights-problems-of-short-lived-laptops-in-schools/">US PIRG, &ldquo;Chromebook Churn&rdquo;</a> (April 2023) &mdash; the lifespan/e-waste analysis cited in the record.</li>
       <li><a href="/datasheets.html">BareBoard Datasheet Index</a> &mdash; Intel-family and support-component datasheets held on this site.</li>
     </ul>
   </section>

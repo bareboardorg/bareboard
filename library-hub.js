@@ -131,17 +131,13 @@
   });
 
   if (countLine) countLine.textContent = "Loading the index\u2026";
-  fetch("/data/library-index.json")
-    .then(function (response) {
-      if (!response.ok) throw new Error("index fetch failed: " + response.status);
-      return response.json();
-    })
-    .then(function (data) {
+  BB.loadJson("/data/library-index.json",
+    function (data) {
       docs = (data && data.documents) || [];
       buildFilters();
       render();
-    })
-    .catch(function () {
+    },
+    function () {
       if (countLine) {
         countLine.textContent = "The index could not be loaded. " +
           "Browse the shelves instead: The Library, the Datasheet Index, " +

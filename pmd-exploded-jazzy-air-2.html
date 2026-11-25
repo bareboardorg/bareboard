@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
   <meta name="tdm-reservation" content="1">
@@ -24,9 +24,9 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "BareBoard Protocol Reverse Engineering",
-  "description": "Closed protocols the community has reverse engineered, with open resources."
+  "@type": "WebPage",
+  "name": "Exploded View: Pride Jazzy Air 2 — PMD",
+  "description": "Every assembly of the Pride Jazzy Air 2 exploded to the component level, from Pride&rsquo;s own Illustrated Parts Breakdown (INFMANU4980): diagrams, callouts, part numbers, and a plain-language line for every part."
 }
 </script>
 <link rel="stylesheet" href="/i18n.css">
@@ -99,6 +99,7 @@
               <div class="colnav">
                 <ul class="colnav-col">
                 <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
                 <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
                 <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
                 <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
@@ -148,7 +149,7 @@
               </div>
             </div>
           </div></li>
-              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
           <div class="col-panel">
             <div class="dropdown-inner">
               <div class="colnav">
@@ -167,8 +168,19 @@
               </div>
             </div>
           </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
 </ul>
     </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
   </div>
 </header>
 
@@ -216,7 +228,7 @@
     <p>Start with the skeleton. Every other system bolts to the frame, so it goes together first.</p>
     <h3 id="step-1">Step 1 &mdash; Frame Assembly — Main Frame Assembly</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p4.jpg" alt="Frame Assembly — Main Frame Assembly — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p4.jpg" width="1164" height="1600" alt="Frame Assembly — Main Frame Assembly — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 1.</strong> Frame Assembly — Main Frame Assembly &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -232,7 +244,7 @@
     <p><em>Maker&rsquo;s note, from the guide: *D1 Not Shown.</em></p>
     <h3 id="step-2">Step 2 &mdash; Frame Assembly — Rear Articulating Beam</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p8.jpg" alt="Frame Assembly — Rear Articulating Beam — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p8.jpg" width="1164" height="1600" alt="Frame Assembly — Rear Articulating Beam — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 2.</strong> Frame Assembly — Rear Articulating Beam &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -252,7 +264,7 @@
     <p>The motor and gearbox on each side are the muscles of the chair. One pair per side.</p>
     <h3 id="step-3">Step 3 &mdash; Frame Assembly — Front Caster Arm with Motor</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p6.jpg" alt="Frame Assembly — Front Caster Arm with Motor — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p6.jpg" width="1164" height="1600" alt="Frame Assembly — Front Caster Arm with Motor — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 3.</strong> Frame Assembly — Front Caster Arm with Motor &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -276,7 +288,7 @@
     <p>Wheels next: the big drive wheels in the middle, the small swiveling casters at the corners.</p>
     <h3 id="step-4">Step 4 &mdash; Drive Wheel Assembly</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p25.jpg" alt="Drive Wheel Assembly — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p25.jpg" width="1165" height="1600" alt="Drive Wheel Assembly — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 4.</strong> Drive Wheel Assembly &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -291,7 +303,7 @@
     <p>Seating goes on once the base rolls. This is the system that holds the rider — fit is safety here.</p>
     <h3 id="step-5">Step 5 &mdash; Foot Platform, Seat Interface &amp; Under Seat Storage</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p14.jpg" alt="Foot Platform, Seat Interface &amp; Under Seat Storage — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p14.jpg" width="1164" height="1600" alt="Foot Platform, Seat Interface &amp; Under Seat Storage — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 5.</strong> Foot Platform, Seat Interface &amp; Under Seat Storage &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -305,7 +317,7 @@
     </table>
     <h3 id="step-6">Step 6 &mdash; Mounting Plate for Foot Riggings</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p15.jpg" alt="Mounting Plate for Foot Riggings — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p15.jpg" width="1167" height="1600" alt="Mounting Plate for Foot Riggings — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 6.</strong> Mounting Plate for Foot Riggings &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -319,7 +331,7 @@
     </table>
     <h3 id="step-7">Step 7 &mdash; Seat Assembly</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p16.jpg" alt="Seat Assembly — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p16.jpg" width="1164" height="1600" alt="Seat Assembly — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 7.</strong> Seat Assembly &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -346,7 +358,7 @@
     <p>The electronics wire the chair together: controller, joystick, and the cables between them.</p>
     <h3 id="step-8">Step 8 &mdash; Electronics Assembly</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p10.jpg" alt="Electronics Assembly — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p10.jpg" width="1164" height="1600" alt="Electronics Assembly — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 8.</strong> Electronics Assembly &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -372,7 +384,7 @@
     <p><em>Maker&rsquo;s note, from the guide: *A1 Includes all components.</em></p>
     <h3 id="step-9">Step 9 &mdash; Joystick, Actuator Switch &amp; Light Switch</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p12.jpg" alt="Joystick, Actuator Switch &amp; Light Switch — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p12.jpg" width="1164" height="1600" alt="Joystick, Actuator Switch &amp; Light Switch — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 9.</strong> Joystick, Actuator Switch &amp; Light Switch &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -392,7 +404,7 @@
     <p>Batteries last — they are the heaviest parts, and everything electrical depends on them.</p>
     <h3 id="step-10">Step 10 &mdash; Charger</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p13.jpg" alt="Charger — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p13.jpg" width="1167" height="1600" alt="Charger — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 10.</strong> Charger &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -409,7 +421,7 @@
     <p>Covers, decals, and accessories finish the chair.</p>
     <h3 id="step-11">Step 11 &mdash; Shroud Assembly</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p18.jpg" alt="Shroud Assembly — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p18.jpg" width="1164" height="1600" alt="Shroud Assembly — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 11.</strong> Shroud Assembly &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -434,7 +446,7 @@
     </table>
     <h3 id="step-12">Step 12 &mdash; Accessories — Cane/Crutch Holder</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p20.jpg" alt="Accessories — Cane/Crutch Holder — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p20.jpg" width="1164" height="1600" alt="Accessories — Cane/Crutch Holder — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 12.</strong> Accessories — Cane/Crutch Holder &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -446,7 +458,7 @@
     </table>
     <h3 id="step-13">Step 13 &mdash; Accessories — Oxygen Holder</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p21.jpg" alt="Accessories — Oxygen Holder — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p21.jpg" width="1166" height="1600" alt="Accessories — Oxygen Holder — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 13.</strong> Accessories — Oxygen Holder &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -458,7 +470,7 @@
     </table>
     <h3 id="step-14">Step 14 &mdash; Accessories — Rear Basket</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p22.jpg" alt="Accessories — Rear Basket — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p22.jpg" width="1164" height="1600" alt="Accessories — Rear Basket — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 14.</strong> Accessories — Rear Basket &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -471,7 +483,7 @@
     </table>
     <h3 id="step-15">Step 15 &mdash; Accessories — Walker Holder</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p23.jpg" alt="Accessories — Walker Holder — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p23.jpg" width="1168" height="1600" alt="Accessories — Walker Holder — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 15.</strong> Accessories — Walker Holder &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -483,7 +495,7 @@
     </table>
     <h3 id="step-16">Step 16 &mdash; Accessories — Docking Device Assembly</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p24.jpg" alt="Accessories — Docking Device Assembly — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p24.jpg" width="1166" height="1600" alt="Accessories — Docking Device Assembly — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 16.</strong> Accessories — Docking Device Assembly &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -494,7 +506,7 @@
     </table>
     <h3 id="step-17">Step 17 &mdash; Owner’s Package</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p26.jpg" alt="Owner’s Package — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p26.jpg" width="1164" height="1600" alt="Owner’s Package — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 17.</strong> Owner’s Package &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -512,7 +524,7 @@
     </table>
     <h3 id="step-18">Step 18 &mdash; Decal Package</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p27.jpg" alt="Decal Package — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-air-2/jazzy-air-2-p27.jpg" width="1164" height="1600" alt="Decal Package — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 18.</strong> Decal Package &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -538,10 +550,30 @@
     <p>Every diagram and every part number above comes from Pride&rsquo;s own IPB &mdash; nothing is redrawn and nothing is guessed. The &ldquo;What this part does&rdquo; column is ours, written in plain language. If a row ever disagrees with the diagram, the guide wins &mdash; and the guide is one click away in the source block.</p>
     <p><a href="/pmd-exploded.html">&larr; All exploded views</a> &middot; <a href="/pmd.html">PMD section</a></p>
   </section>
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a> &middot; <a href="/terms.html">The Tee-O-Ess</a> &middot; <a href="/dmca.html">DMCA</a> &middot; <a href="/copyright.html">Copyright</a> &middot; <a href="/privacy.html">Privacy</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
 </main>
 
 <script src="/nav.js" defer></script>
-<script src="/bb-util.js" defer></script><script src="/protocols.js" defer></script>
+<script src="/search.js" defer></script>
+
 <script src="/i18n.js" defer></script>
 </body>
 </html>

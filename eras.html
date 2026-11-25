@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org thumb.wikimedia.org; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
   <meta name="tdm-reservation" content="1">
@@ -90,6 +90,7 @@
               <div class="colnav">
                 <ul class="colnav-col">
                 <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
                 <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
                 <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
                 <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
@@ -139,7 +140,7 @@
               </div>
             </div>
           </div></li>
-              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
           <div class="col-panel">
             <div class="dropdown-inner">
               <div class="colnav">
@@ -158,8 +159,19 @@
               </div>
             </div>
           </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
 </ul>
     </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
   </div>
 </header>
 
@@ -175,14 +187,14 @@ civic, infrastructure, transport, financial, consumer, industrial), and <strong>
 And one rule stands above all of them: <strong>an era never makes a sealed document fair
 game.</strong></div>
 
-<h2>📂 The 1980s — The Open-Silicon &amp; Blueprint Era (1980–1989)</h2>
+<h2>The 1980s — The Open-Silicon &amp; Blueprint Era (1980–1989)</h2>
 <p><strong>What changed:</strong> chips shipped with full public datasheets; the IBM PC Technical Reference &mdash; sold separately, not in the box &mdash; included complete circuit diagrams; repair manuals were public; parts were through-hole and probe-able.</p>
 <p><strong>What it means for repair:</strong> repair was normal, expected, documented.
 The golden age.</p>
 <p><strong>What BareBoard does:</strong> preserves this documentation before it vanishes.
 The Library's first shelf exists because of this era.</p>
 
-<h2>📂 The 1990s — The Obfuscation &amp; Encapsulation Era (1990–1999)</h2>
+<h2>The 1990s — The Obfuscation &amp; Encapsulation Era (1990–1999)</h2>
 <p><strong>What changed:</strong> surface-mount components, multi-layer boards, PCI
 configuration spaces; game consoles add security chips; baseband processors reach phones (2G GSM); firmware becomes a replaceable
 blob; service manuals stop shipping with the product and go internal.</p>
@@ -191,26 +203,26 @@ Repair becomes a specialty instead of a given.</p>
 <p><strong>What BareBoard does:</strong> autopsies the transition — the last devices you
 could fully understand, and the first you couldn't.</p>
 
-<h2>📂 The 2000s — The Hyper-Integration &amp; Mobile Dawn Era (2000–2009)</h2>
+<h2>The 2000s — The Hyper-Integration &amp; Mobile Dawn Era (2000–2009)</h2>
 <p><strong>What changed:</strong> whole boards collapse into system-on-chips; baseband
 and application processors merge into single-chip smartphone SoCs; SSD controllers seal their flash translation layers; probing
 live signals needs real (and expensive) gear.</p>
 <p><strong>What it means for repair:</strong> the "chip" you could read a datasheet for is
 now a city you can't map.</p>
-<p><strong>What BareBoard does:</strong> the <a href="/watchmen.html">Watchmen</a><a href="/watchmen.html#amassed-bench">W³ R2</a> board —
+<p><strong>What BareBoard does:</strong> the <a href="/watchmen.html#amassed-bench">Watchmen W³ R2</a> board —
 audit the tools that can still see inside, and trust only the open ones.</p>
 
-<h2>📂 The 2010s — The Multi-Ring &amp; SoC Era (2010–2019)</h2>
+<h2>The 2010s — The Multi-Ring &amp; SoC Era (2010–2019)</h2>
 <p><strong>What changed:</strong> hidden management cores run beneath the OS (<a href="/library/original-docs/intel-csme-public-reference.md">Intel CSME</a>,
 <a href="/library/original-docs/amd-psp-public-reference.md">AMD PSP</a>, <a href="/library/original-docs/apple-sep-public-reference.md">Apple's Secure Enclave</a>); hardware parts-pairing locks components to boards; the
 sealed register map becomes a business model.</p>
 <p><strong>What it means for repair:</strong> documentation isn't just missing — it's
-deliberately withheld. The Registry's 🟠 column is mostly this decade.</p>
+deliberately withheld. The Registry's sealed column is mostly this decade.</p>
 <p><strong>What BareBoard does:</strong> compiles original references from public research
 (the SEP, PSP, and CSME manuals in the <a href="/library.html">Library</a>). We document
 the phenomenon honestly. We never chase the sealed documents.</p>
 
-<h2>📂 The 2020s — The Multi-Die &amp; Security Mesh Era (2020–today)</h2>
+<h2>The 2020s — The Multi-Die &amp; Security Mesh Era (2020–today)</h2>
 <p><strong>What changed:</strong> chiplets and interposers, security modules welded to
 boards, real-time sensor silicon (e.g. the Apple Vision Pro's R1), anti-circumvention
 design as a default.</p>
@@ -221,7 +233,7 @@ board lives here. Nominate a device, autopsy a retired unit, publish verified fi
 
 <div class="notice"><strong>Where an entry lives is decided by what it <em>is</em>
 (section), who it <em>matters to</em> (domain), and what state it's in (status).
-The decade tells you when. Start browsing: <a href="/hot-100.html">Hot 100</a> ·
+The decade tells you when. Start browsing: <a href="/hot-100.html">Top 100</a> ·
 <a href="/most-wanted.html">Most Wanted</a> · <a href="/registry.html">Registry</a>.</strong></div>
 
   <blockquote class="bb-quote"><p>&ldquo;Nobody who uses XML knows what they are doing.&rdquo;</p><p class="bb-quote-by">&mdash; Chris Wenham</p></blockquote>

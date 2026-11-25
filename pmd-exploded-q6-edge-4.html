@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
   <meta name="tdm-reservation" content="1">
@@ -24,9 +24,9 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "BareBoard Protocol Reverse Engineering",
-  "description": "Closed protocols the community has reverse engineered, with open resources."
+  "@type": "WebPage",
+  "name": "Exploded View: Quantum Q6 Edge 4 — PMD",
+  "description": "Every assembly of the Quantum Q6 Edge 4 exploded to the component level, from Quantum’s own Illustrated Parts Breakdown (INFMANU5556 Rev. B): 110 assemblies and 1,025 parts — Q-Logic 3 and QLNES electronics, iLevel, drive motors, batteries — with a plain-language line for every part."
 }
 </script>
 <link rel="stylesheet" href="/i18n.css">
@@ -99,6 +99,7 @@
               <div class="colnav">
                 <ul class="colnav-col">
                 <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
                 <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
                 <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
                 <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
@@ -148,7 +149,7 @@
               </div>
             </div>
           </div></li>
-              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
           <div class="col-panel">
             <div class="dropdown-inner">
               <div class="colnav">
@@ -167,8 +168,19 @@
               </div>
             </div>
           </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
 </ul>
     </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
   </div>
 </header>
 <main>
@@ -215,7 +227,7 @@
     <p>Start with the skeleton. Every other system bolts to the frame, so it goes together first.</p>
     <h3 id="step-1">Step 1 &mdash; Partial Kit Assembly - Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p7.jpg" alt="Partial Kit Assembly - Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p7.jpg" width="1236" height="1600" alt="Partial Kit Assembly - Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 1.</strong> Partial Kit Assembly - Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -226,7 +238,7 @@
     </table>
     <h3 id="step-2">Step 2 &mdash; Rear Door Assembly and Latches - Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p9.jpg" alt="Rear Door Assembly and Latches - Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p9.jpg" width="1236" height="1600" alt="Rear Door Assembly and Latches - Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 2.</strong> Rear Door Assembly and Latches - Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -243,7 +255,7 @@
     </table>
     <h3 id="step-3">Step 3 &mdash; Suspension Assemblies, Excludes TRU Balance® 4 Anterior Tilt, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p15.jpg" alt="Suspension Assemblies, Excludes TRU Balance® 4 Anterior Tilt, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p15.jpg" width="1236" height="1600" alt="Suspension Assemblies, Excludes TRU Balance® 4 Anterior Tilt, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 3.</strong> Suspension Assemblies, Excludes TRU Balance® 4 Anterior Tilt, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -259,7 +271,7 @@
     </table>
     <h3 id="step-4">Step 4 &mdash; Suspension Assemblies, for TRU Balance® 4 Anterior Tilt, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p17.jpg" alt="Suspension Assemblies, for TRU Balance® 4 Anterior Tilt, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p17.jpg" width="1236" height="1600" alt="Suspension Assemblies, for TRU Balance® 4 Anterior Tilt, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 4.</strong> Suspension Assemblies, for TRU Balance® 4 Anterior Tilt, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -274,7 +286,7 @@
     </table>
     <h3 id="step-5">Step 5 &mdash; Suspension Assemblies, for TRU Balance® 4 Anterior Tilt, Occupied Transit, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p19.jpg" alt="Suspension Assemblies, for TRU Balance® 4 Anterior Tilt, Occupied Transit, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p19.jpg" width="1236" height="1600" alt="Suspension Assemblies, for TRU Balance® 4 Anterior Tilt, Occupied Transit, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 5.</strong> Suspension Assemblies, for TRU Balance® 4 Anterior Tilt, Occupied Transit, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -295,7 +307,7 @@
     <p>The motor and gearbox on each side are the muscles of the chair. One pair per side.</p>
     <h3 id="step-6">Step 6 &mdash; Standard Motor Assemblies, 7 MPH, 4 Pole, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p21.jpg" alt="Standard Motor Assemblies, 7 MPH, 4 Pole, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p21.jpg" width="1236" height="1600" alt="Standard Motor Assemblies, 7 MPH, 4 Pole, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 6.</strong> Standard Motor Assemblies, 7 MPH, 4 Pole, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -318,7 +330,7 @@
     </table>
     <h3 id="step-7">Step 7 &mdash; Encoder Motor Assemblies, 7 MPH, 4 Pole, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p23.jpg" alt="Encoder Motor Assemblies, 7 MPH, 4 Pole, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p23.jpg" width="1236" height="1600" alt="Encoder Motor Assemblies, 7 MPH, 4 Pole, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 7.</strong> Encoder Motor Assemblies, 7 MPH, 4 Pole, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -341,7 +353,7 @@
     </table>
     <h3 id="step-8">Step 8 &mdash; Motor Mount and Motor Pivot Spring, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p25.jpg" alt="Motor Mount and Motor Pivot Spring, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p25.jpg" width="1236" height="1600" alt="Motor Mount and Motor Pivot Spring, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 8.</strong> Motor Mount and Motor Pivot Spring, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -359,7 +371,7 @@
     <p>Wheels next: the big drive wheels in the middle, the small swiveling casters at the corners.</p>
     <h3 id="step-9">Step 9 &mdash; Front Caster Arm, Fork, and Wheel - Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p11.jpg" alt="Front Caster Arm, Fork, and Wheel - Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p11.jpg" width="1236" height="1600" alt="Front Caster Arm, Fork, and Wheel - Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 9.</strong> Front Caster Arm, Fork, and Wheel - Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -385,7 +397,7 @@
     </table>
     <h3 id="step-10">Step 10 &mdash; Rear Caster Arm, Fork, and Wheel - Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p13.jpg" alt="Rear Caster Arm, Fork, and Wheel - Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p13.jpg" width="1236" height="1600" alt="Rear Caster Arm, Fork, and Wheel - Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 10.</strong> Rear Caster Arm, Fork, and Wheel - Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -411,7 +423,7 @@
     </table>
     <h3 id="step-11">Step 11 &mdash; Flat-free Drive Wheel, 5-Spoke, Black Rim / Black Tire</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p171.jpg" alt="Flat-free Drive Wheel, 5-Spoke, Black Rim / Black Tire — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p171.jpg" width="1236" height="1600" alt="Flat-free Drive Wheel, 5-Spoke, Black Rim / Black Tire — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 11.</strong> Flat-free Drive Wheel, 5-Spoke, Black Rim / Black Tire &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -425,7 +437,7 @@
     </table>
     <h3 id="step-12">Step 12 &mdash; Pneumatic Drive Wheel, 5-Spoke, Black Rim / Black Tire</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p173.jpg" alt="Pneumatic Drive Wheel, 5-Spoke, Black Rim / Black Tire — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p173.jpg" width="1236" height="1600" alt="Pneumatic Drive Wheel, 5-Spoke, Black Rim / Black Tire — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 12.</strong> Pneumatic Drive Wheel, 5-Spoke, Black Rim / Black Tire &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -440,7 +452,7 @@
     </table>
     <h3 id="step-13">Step 13 &mdash; Flat-free Drive Wheel, 5 Spoke, Black Rim / Black "Knobby" Tire, 14" x 4"</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p175.jpg" alt="Flat-free Drive Wheel, 5 Spoke, Black Rim / Black "Knobby" Tire, 14" x 4" — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p175.jpg" width="1236" height="1600" alt="Flat-free Drive Wheel, 5 Spoke, Black Rim / Black "Knobby" Tire, 14" x 4" — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 13.</strong> Flat-free Drive Wheel, 5 Spoke, Black Rim / Black "Knobby" Tire, 14" x 4" &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -458,7 +470,7 @@
     <p>Seating goes on once the base rolls. This is the system that holds the rider — fit is safety here.</p>
     <h3 id="step-14">Step 14 &mdash; TRU Balance® 3.5 Tilt Seat Interface, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p149.jpg" alt="TRU Balance® 3.5 Tilt Seat Interface, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p149.jpg" width="1236" height="1600" alt="TRU Balance® 3.5 Tilt Seat Interface, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 14.</strong> TRU Balance® 3.5 Tilt Seat Interface, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -483,7 +495,7 @@
     </table>
     <h3 id="step-15">Step 15 &mdash; TRU Balance® 3.5 Tilt Seat Interface, Occupied Transit, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p151.jpg" alt="TRU Balance® 3.5 Tilt Seat Interface, Occupied Transit, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p151.jpg" width="1236" height="1600" alt="TRU Balance® 3.5 Tilt Seat Interface, Occupied Transit, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 15.</strong> TRU Balance® 3.5 Tilt Seat Interface, Occupied Transit, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -509,7 +521,7 @@
     </table>
     <h3 id="step-16">Step 16 &mdash; REAC Lift Seat Towers and Hardware, Universal Lift, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p153.jpg" alt="REAC Lift Seat Towers and Hardware, Universal Lift, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p153.jpg" width="1236" height="1600" alt="REAC Lift Seat Towers and Hardware, Universal Lift, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 16.</strong> REAC Lift Seat Towers and Hardware, Universal Lift, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -529,7 +541,7 @@
     </table>
     <h3 id="step-17">Step 17 &mdash; REAC Lift Seat Towers and Hardware, Universal Lift, Occupied Transit, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p155.jpg" alt="REAC Lift Seat Towers and Hardware, Universal Lift, Occupied Transit, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p155.jpg" width="1236" height="1600" alt="REAC Lift Seat Towers and Hardware, Universal Lift, Occupied Transit, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 17.</strong> REAC Lift Seat Towers and Hardware, Universal Lift, Occupied Transit, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -550,7 +562,7 @@
     </table>
     <h3 id="step-18">Step 18 &mdash; TRU Balance® 4 Lift and Tilt Seat Interface, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p157.jpg" alt="TRU Balance® 4 Lift and Tilt Seat Interface, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p157.jpg" width="1236" height="1600" alt="TRU Balance® 4 Lift and Tilt Seat Interface, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 18.</strong> TRU Balance® 4 Lift and Tilt Seat Interface, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -570,7 +582,7 @@
     </table>
     <h3 id="step-19">Step 19 &mdash; TRU Balance® 4 Lift and Tilt Seat Interface, Occupied Transit, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p159.jpg" alt="TRU Balance® 4 Lift and Tilt Seat Interface, Occupied Transit, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p159.jpg" width="1236" height="1600" alt="TRU Balance® 4 Lift and Tilt Seat Interface, Occupied Transit, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 19.</strong> TRU Balance® 4 Lift and Tilt Seat Interface, Occupied Transit, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -591,7 +603,7 @@
     </table>
     <h3 id="step-20">Step 20 &mdash; TRU Balance® Flex Static Seat Interface, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p161.jpg" alt="TRU Balance® Flex Static Seat Interface, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p161.jpg" width="1236" height="1600" alt="TRU Balance® Flex Static Seat Interface, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 20.</strong> TRU Balance® Flex Static Seat Interface, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -608,7 +620,7 @@
     </table>
     <h3 id="step-21">Step 21 &mdash; TRU Balance® Flex Pediatric Seat Interface, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p163.jpg" alt="TRU Balance® Flex Pediatric Seat Interface, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p163.jpg" width="1236" height="1600" alt="TRU Balance® Flex Pediatric Seat Interface, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 21.</strong> TRU Balance® Flex Pediatric Seat Interface, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -627,7 +639,7 @@
     </table>
     <h3 id="step-22">Step 22 &mdash; TRU Balance® Flex Static Seat Interface, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p165.jpg" alt="TRU Balance® Flex Static Seat Interface, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p165.jpg" width="1236" height="1600" alt="TRU Balance® Flex Static Seat Interface, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 22.</strong> TRU Balance® Flex Static Seat Interface, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -644,7 +656,7 @@
     </table>
     <h3 id="step-23">Step 23 &mdash; REAC Lift Seat Towers and Hardware, Universal Lift, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p167.jpg" alt="REAC Lift Seat Towers and Hardware, Universal Lift, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p167.jpg" width="1236" height="1600" alt="REAC Lift Seat Towers and Hardware, Universal Lift, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 23.</strong> REAC Lift Seat Towers and Hardware, Universal Lift, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -664,7 +676,7 @@
     </table>
     <h3 id="step-24">Step 24 &mdash; REAC Lift Seat Towers and Hardware, Universal Lift, Occupied Transit, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p169.jpg" alt="REAC Lift Seat Towers and Hardware, Universal Lift, Occupied Transit, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p169.jpg" width="1236" height="1600" alt="REAC Lift Seat Towers and Hardware, Universal Lift, Occupied Transit, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 24.</strong> REAC Lift Seat Towers and Hardware, Universal Lift, Occupied Transit, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -685,7 +697,7 @@
     </table>
     <h3 id="step-25">Step 25 &mdash; iLevel® Base Components, TRU Balance® 3, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p233.jpg" alt="iLevel® Base Components, TRU Balance® 3, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p233.jpg" width="1236" height="1600" alt="iLevel® Base Components, TRU Balance® 3, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 25.</strong> iLevel® Base Components, TRU Balance® 3, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -714,7 +726,7 @@
     </table>
     <h3 id="step-26">Step 26 &mdash; iLevel® Cable &amp; Mounting Block Assy, Q6 Edge® 4, TRU Balance® 3</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p235.jpg" alt="iLevel® Cable &amp; Mounting Block Assy, Q6 Edge® 4, TRU Balance® 3 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p235.jpg" width="1236" height="1600" alt="iLevel® Cable &amp; Mounting Block Assy, Q6 Edge® 4, TRU Balance® 3 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 26.</strong> iLevel® Cable &amp; Mounting Block Assy, Q6 Edge® 4, TRU Balance® 3 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -729,7 +741,7 @@
     </table>
     <h3 id="step-27">Step 27 &mdash; iLevel® Base Components, TRU Balance® 4, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p238.jpg" alt="iLevel® Base Components, TRU Balance® 4, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p238.jpg" width="1236" height="1600" alt="iLevel® Base Components, TRU Balance® 4, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 27.</strong> iLevel® Base Components, TRU Balance® 4, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -757,7 +769,7 @@
     </table>
     <h3 id="step-28">Step 28 &mdash; iLevel® Seat Engagement Assy &amp; Cable, Q6 Edge® 4, TRU Balance® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p241.jpg" alt="iLevel® Seat Engagement Assy &amp; Cable, Q6 Edge® 4, TRU Balance® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p241.jpg" width="1236" height="1600" alt="iLevel® Seat Engagement Assy &amp; Cable, Q6 Edge® 4, TRU Balance® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 28.</strong> iLevel® Seat Engagement Assy &amp; Cable, Q6 Edge® 4, TRU Balance® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -781,7 +793,7 @@
     <p>The electronics wire the chair together: controller, joystick, and the cables between them.</p>
     <h3 id="step-29">Step 29 &mdash; Q-Logic 3 EX Joystick Assemblies, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p27.jpg" alt="Q-Logic 3 EX Joystick Assemblies, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p27.jpg" width="1236" height="1600" alt="Q-Logic 3 EX Joystick Assemblies, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 29.</strong> Q-Logic 3 EX Joystick Assemblies, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -797,7 +809,7 @@
     </table>
     <h3 id="step-30">Step 30 &mdash; Q-Logic 3 EX Joystick Component Replacement</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p29.jpg" alt="Q-Logic 3 EX Joystick Component Replacement — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p29.jpg" width="1236" height="1600" alt="Q-Logic 3 EX Joystick Component Replacement — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 30.</strong> Q-Logic 3 EX Joystick Component Replacement &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -813,7 +825,7 @@
     </table>
     <h3 id="step-31">Step 31 &mdash; Q-Logic 3 Joystick Shrouds, Q6 Edge® 4 Color Options</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p31.jpg" alt="Q-Logic 3 Joystick Shrouds, Q6 Edge® 4 Color Options — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p31.jpg" width="1236" height="1600" alt="Q-Logic 3 Joystick Shrouds, Q6 Edge® 4 Color Options — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 31.</strong> Q-Logic 3 Joystick Shrouds, Q6 Edge® 4 Color Options &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -840,7 +852,7 @@
     </table>
     <h3 id="step-32">Step 32 &mdash; Q-Logic 3e Joystick Assy&#x27;s, 7 mph Motors, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p33.jpg" alt="Q-Logic 3e Joystick Assy's, 7 mph Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p33.jpg" width="1236" height="1600" alt="Q-Logic 3e Joystick Assy's, 7 mph Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 32.</strong> Q-Logic 3e Joystick Assy's, 7 mph Motors, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -857,7 +869,7 @@
     </table>
     <h3 id="step-33">Step 33 &mdash; Q-Logic 3 Stand Alone Joystick Assy</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p35.jpg" alt="Q-Logic 3 Stand Alone Joystick Assy — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p35.jpg" width="1236" height="1600" alt="Q-Logic 3 Stand Alone Joystick Assy — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 33.</strong> Q-Logic 3 Stand Alone Joystick Assy &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -873,7 +885,7 @@
     </table>
     <h3 id="step-34">Step 34 &mdash; QLNES Joysticks, 7 mph Motors, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p37.jpg" alt="QLNES Joysticks, 7 mph Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p37.jpg" width="1236" height="1600" alt="QLNES Joysticks, 7 mph Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 34.</strong> QLNES Joysticks, 7 mph Motors, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -893,7 +905,7 @@
     </table>
     <h3 id="step-35">Step 35 &mdash; Aftermarket Joystick Knobs - Curtis and P&amp;G</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p39.jpg" alt="Aftermarket Joystick Knobs - Curtis and P&amp;G — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p39.jpg" width="1236" height="1600" alt="Aftermarket Joystick Knobs - Curtis and P&amp;G — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 35.</strong> Aftermarket Joystick Knobs - Curtis and P&amp;G &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -912,7 +924,7 @@
     </table>
     <h3 id="step-36">Step 36 &mdash; Q-Logic 3 Power Module and Run Plug for Standard Motors, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p41.jpg" alt="Q-Logic 3 Power Module and Run Plug for Standard Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p41.jpg" width="1236" height="1600" alt="Q-Logic 3 Power Module and Run Plug for Standard Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 36.</strong> Q-Logic 3 Power Module and Run Plug for Standard Motors, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -928,7 +940,7 @@
     </table>
     <h3 id="step-37">Step 37 &mdash; Q-Logic 3 Power Module and Run Plug for Accu-Trac Motors, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p43.jpg" alt="Q-Logic 3 Power Module and Run Plug for Accu-Trac Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p43.jpg" width="1236" height="1600" alt="Q-Logic 3 Power Module and Run Plug for Accu-Trac Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 37.</strong> Q-Logic 3 Power Module and Run Plug for Accu-Trac Motors, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -945,7 +957,7 @@
     </table>
     <h3 id="step-38">Step 38 &mdash; Q-Logic 3 Power Module and Run Plug for Standard Motors, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p45.jpg" alt="Q-Logic 3 Power Module and Run Plug for Standard Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p45.jpg" width="1236" height="1600" alt="Q-Logic 3 Power Module and Run Plug for Standard Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 38.</strong> Q-Logic 3 Power Module and Run Plug for Standard Motors, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -961,7 +973,7 @@
     </table>
     <h3 id="step-39">Step 39 &mdash; Q-Logic 3 Power Module and Run Plug for Accu-Trac Motors, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p47.jpg" alt="Q-Logic 3 Power Module and Run Plug for Accu-Trac Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p47.jpg" width="1236" height="1600" alt="Q-Logic 3 Power Module and Run Plug for Accu-Trac Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 39.</strong> Q-Logic 3 Power Module and Run Plug for Accu-Trac Motors, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -978,7 +990,7 @@
     </table>
     <h3 id="step-40">Step 40 &mdash; Q-Logic 3 Power Module and PTO Harness for Standard Motors and Manual Recline, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p49.jpg" alt="Q-Logic 3 Power Module and PTO Harness for Standard Motors and Manual Recline, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p49.jpg" width="1236" height="1600" alt="Q-Logic 3 Power Module and PTO Harness for Standard Motors and Manual Recline, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 40.</strong> Q-Logic 3 Power Module and PTO Harness for Standard Motors and Manual Recline, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -994,7 +1006,7 @@
     </table>
     <h3 id="step-41">Step 41 &mdash; Q-Logic 3 Power Module and PTO Harness for Accu-Trac Motors and Manual Recline, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p51.jpg" alt="Q-Logic 3 Power Module and PTO Harness for Accu-Trac Motors and Manual Recline, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p51.jpg" width="1236" height="1600" alt="Q-Logic 3 Power Module and PTO Harness for Accu-Trac Motors and Manual Recline, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 41.</strong> Q-Logic 3 Power Module and PTO Harness for Accu-Trac Motors and Manual Recline, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1010,7 +1022,7 @@
     </table>
     <h3 id="step-42">Step 42 &mdash; Q-Logic 3 Power Module and Run Plug for Standard Motors, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p53.jpg" alt="Q-Logic 3 Power Module and Run Plug for Standard Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p53.jpg" width="1236" height="1600" alt="Q-Logic 3 Power Module and Run Plug for Standard Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 42.</strong> Q-Logic 3 Power Module and Run Plug for Standard Motors, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1026,7 +1038,7 @@
     </table>
     <h3 id="step-43">Step 43 &mdash; Q-Logic 3 Power Module and Run Plug for Accu-Trac Motors, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p55.jpg" alt="Q-Logic 3 Power Module and Run Plug for Accu-Trac Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p55.jpg" width="1236" height="1600" alt="Q-Logic 3 Power Module and Run Plug for Accu-Trac Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 43.</strong> Q-Logic 3 Power Module and Run Plug for Accu-Trac Motors, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1043,7 +1055,7 @@
     </table>
     <h3 id="step-44">Step 44 &mdash; Q-Logic 3 Power Module and PTO Harness for TRU Balance 4 and Standard Motors, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p57.jpg" alt="Q-Logic 3 Power Module and PTO Harness for TRU Balance 4 and Standard Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p57.jpg" width="1236" height="1600" alt="Q-Logic 3 Power Module and PTO Harness for TRU Balance 4 and Standard Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 44.</strong> Q-Logic 3 Power Module and PTO Harness for TRU Balance 4 and Standard Motors, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1060,7 +1072,7 @@
     </table>
     <h3 id="step-45">Step 45 &mdash; Q-Logic 3 Power Module and PTO Harness for TRU Balance 4 and Accu-Trac Motors, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p59.jpg" alt="Q-Logic 3 Power Module and PTO Harness for TRU Balance 4 and Accu-Trac Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p59.jpg" width="1236" height="1600" alt="Q-Logic 3 Power Module and PTO Harness for TRU Balance 4 and Accu-Trac Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 45.</strong> Q-Logic 3 Power Module and PTO Harness for TRU Balance 4 and Accu-Trac Motors, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1077,7 +1089,7 @@
     </table>
     <h3 id="step-46">Step 46 &mdash; Q-Logic 3 Power Module and Run Plug for Standard Motors, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p61.jpg" alt="Q-Logic 3 Power Module and Run Plug for Standard Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p61.jpg" width="1236" height="1600" alt="Q-Logic 3 Power Module and Run Plug for Standard Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 46.</strong> Q-Logic 3 Power Module and Run Plug for Standard Motors, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1093,7 +1105,7 @@
     </table>
     <h3 id="step-47">Step 47 &mdash; Q-Logic 3 Power Module and Run Plug for Accu-Trac Motors, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p63.jpg" alt="Q-Logic 3 Power Module and Run Plug for Accu-Trac Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p63.jpg" width="1236" height="1600" alt="Q-Logic 3 Power Module and Run Plug for Accu-Trac Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 47.</strong> Q-Logic 3 Power Module and Run Plug for Accu-Trac Motors, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1110,7 +1122,7 @@
     </table>
     <h3 id="step-48">Step 48 &mdash; Complete QLNES Electronics, TRU Balance® 3 Seat, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p65.jpg" alt="Complete QLNES Electronics, TRU Balance® 3 Seat, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p65.jpg" width="1236" height="1600" alt="Complete QLNES Electronics, TRU Balance® 3 Seat, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 48.</strong> Complete QLNES Electronics, TRU Balance® 3 Seat, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1124,7 +1136,7 @@
     </table>
     <h3 id="step-49">Step 49 &mdash; Serviceable QLNES Parts, TRU Balance® 3 Seat, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p67.jpg" alt="Serviceable QLNES Parts, TRU Balance® 3 Seat, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p67.jpg" width="1236" height="1600" alt="Serviceable QLNES Parts, TRU Balance® 3 Seat, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 49.</strong> Serviceable QLNES Parts, TRU Balance® 3 Seat, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1144,7 +1156,7 @@
     </table>
     <h3 id="step-50">Step 50 &mdash; Combined Legrest Harness with iLevel®, QLNES on TRU Balance® 3</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p69.jpg" alt="Combined Legrest Harness with iLevel®, QLNES on TRU Balance® 3 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p69.jpg" width="1236" height="1600" alt="Combined Legrest Harness with iLevel®, QLNES on TRU Balance® 3 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 50.</strong> Combined Legrest Harness with iLevel®, QLNES on TRU Balance® 3 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1163,7 +1175,7 @@
     </table>
     <h3 id="step-51">Step 51 &mdash; AFP Harness with iLevel®, QLNES on TRU Balance® 3</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p71.jpg" alt="AFP Harness with iLevel®, QLNES on TRU Balance® 3 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p71.jpg" width="1236" height="1600" alt="AFP Harness with iLevel®, QLNES on TRU Balance® 3 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 51.</strong> AFP Harness with iLevel®, QLNES on TRU Balance® 3 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1177,7 +1189,7 @@
     </table>
     <h3 id="step-52">Step 52 &mdash; iLevel® Intermediate Harness, QLNES Electronics on TRU Balance® 3</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p73.jpg" alt="iLevel® Intermediate Harness, QLNES Electronics on TRU Balance® 3 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p73.jpg" width="1236" height="1600" alt="iLevel® Intermediate Harness, QLNES Electronics on TRU Balance® 3 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 52.</strong> iLevel® Intermediate Harness, QLNES Electronics on TRU Balance® 3 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1190,7 +1202,7 @@
     </table>
     <h3 id="step-53">Step 53 &mdash; Tilt thru Toggle Harness and Switches, TRU Balance® 3</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p75.jpg" alt="Tilt thru Toggle Harness and Switches, TRU Balance® 3 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p75.jpg" width="1236" height="1600" alt="Tilt thru Toggle Harness and Switches, TRU Balance® 3 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 53.</strong> Tilt thru Toggle Harness and Switches, TRU Balance® 3 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1217,7 +1229,7 @@
     </table>
     <h3 id="step-54">Step 54 &mdash; Complete QLNES Electronics, TRU Balance® Flex Seat thru Power Module, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p77.jpg" alt="Complete QLNES Electronics, TRU Balance® Flex Seat thru Power Module, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p77.jpg" width="1236" height="1600" alt="Complete QLNES Electronics, TRU Balance® Flex Seat thru Power Module, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 54.</strong> Complete QLNES Electronics, TRU Balance® Flex Seat thru Power Module, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1233,7 +1245,7 @@
     </table>
     <h3 id="step-55">Step 55 &mdash; Serviceable QLNES Parts, TRU Balance® Flex Seat thru Power Module, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p79.jpg" alt="Serviceable QLNES Parts, TRU Balance® Flex Seat thru Power Module, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p79.jpg" width="1236" height="1600" alt="Serviceable QLNES Parts, TRU Balance® Flex Seat thru Power Module, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 55.</strong> Serviceable QLNES Parts, TRU Balance® Flex Seat thru Power Module, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1252,7 +1264,7 @@
     </table>
     <h3 id="step-56">Step 56 &mdash; AFP Harness, QLNES on TRU Balance® Flex</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p81.jpg" alt="AFP Harness, QLNES on TRU Balance® Flex — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p81.jpg" width="1236" height="1600" alt="AFP Harness, QLNES on TRU Balance® Flex — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 56.</strong> AFP Harness, QLNES on TRU Balance® Flex &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1265,7 +1277,7 @@
     </table>
     <h3 id="step-57">Step 57 &mdash; Combined Legrest Harness and Hardware, QLNES on TRU Balance® Flex</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p83.jpg" alt="Combined Legrest Harness and Hardware, QLNES on TRU Balance® Flex — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p83.jpg" width="1236" height="1600" alt="Combined Legrest Harness and Hardware, QLNES on TRU Balance® Flex — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 57.</strong> Combined Legrest Harness and Hardware, QLNES on TRU Balance® Flex &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1283,7 +1295,7 @@
     </table>
     <h3 id="step-58">Step 58 &mdash; Independent Legrest Harnesses and Hardware, QLNES on TRU Balance® Flex</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p85.jpg" alt="Independent Legrest Harnesses and Hardware, QLNES on TRU Balance® Flex — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p85.jpg" width="1236" height="1600" alt="Independent Legrest Harnesses and Hardware, QLNES on TRU Balance® Flex — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 58.</strong> Independent Legrest Harnesses and Hardware, QLNES on TRU Balance® Flex &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1302,7 +1314,7 @@
     </table>
     <h3 id="step-59">Step 59 &mdash; Back Mounted Inhibit Assembly, TRU Balance® Flex Seating</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p87.jpg" alt="Back Mounted Inhibit Assembly, TRU Balance® Flex Seating — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p87.jpg" width="1236" height="1600" alt="Back Mounted Inhibit Assembly, TRU Balance® Flex Seating — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 59.</strong> Back Mounted Inhibit Assembly, TRU Balance® Flex Seating &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1318,7 +1330,7 @@
     </table>
     <h3 id="step-60">Step 60 &mdash; Complete QLNES Electronics, Q-Captain Seating, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p89.jpg" alt="Complete QLNES Electronics, Q-Captain Seating, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p89.jpg" width="1236" height="1600" alt="Complete QLNES Electronics, Q-Captain Seating, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 60.</strong> Complete QLNES Electronics, Q-Captain Seating, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1331,7 +1343,7 @@
     </table>
     <h3 id="step-61">Step 61 &mdash; Serviceable QLNES Parts, Q-Captain Seat, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p91.jpg" alt="Serviceable QLNES Parts, Q-Captain Seat, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p91.jpg" width="1236" height="1600" alt="Serviceable QLNES Parts, Q-Captain Seat, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 61.</strong> Serviceable QLNES Parts, Q-Captain Seat, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1351,7 +1363,7 @@
     </table>
     <h3 id="step-62">Step 62 &mdash; Accent Light Module and Harnesses, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p94.jpg" alt="Accent Light Module and Harnesses, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p94.jpg" width="1236" height="1600" alt="Accent Light Module and Harnesses, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 62.</strong> Accent Light Module and Harnesses, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1374,7 +1386,7 @@
     </table>
     <h3 id="step-63">Step 63 &mdash; Light Harness for Full Base Lights, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p97.jpg" alt="Light Harness for Full Base Lights, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p97.jpg" width="1236" height="1600" alt="Light Harness for Full Base Lights, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 63.</strong> Light Harness for Full Base Lights, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1390,7 +1402,7 @@
     </table>
     <h3 id="step-64">Step 64 &mdash; Light Module for Full Base Lights, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p99.jpg" alt="Light Module for Full Base Lights, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p99.jpg" width="1236" height="1600" alt="Light Module for Full Base Lights, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 64.</strong> Light Module for Full Base Lights, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1408,7 +1420,7 @@
     </table>
     <h3 id="step-65">Step 65 &mdash; AM3 for Q-Captain Seat, with and without AFP, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p101.jpg" alt="AM3 for Q-Captain Seat, with and without AFP, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p101.jpg" width="1236" height="1600" alt="AM3 for Q-Captain Seat, with and without AFP, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 65.</strong> AM3 for Q-Captain Seat, with and without AFP, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1432,7 +1444,7 @@
     </table>
     <h3 id="step-66">Step 66 &mdash; AM3L for Q-Captain w/ Full Base Lights, with or without AFP, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p103.jpg" alt="AM3L for Q-Captain w/ Full Base Lights, with or without AFP, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p103.jpg" width="1236" height="1600" alt="AM3L for Q-Captain w/ Full Base Lights, with or without AFP, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 66.</strong> AM3L for Q-Captain w/ Full Base Lights, with or without AFP, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1456,7 +1468,7 @@
     </table>
     <h3 id="step-67">Step 67 &mdash; PTO QBC Module and Harnesses, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p177.jpg" alt="PTO QBC Module and Harnesses, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p177.jpg" width="1236" height="1600" alt="PTO QBC Module and Harnesses, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 67.</strong> PTO QBC Module and Harnesses, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1475,7 +1487,7 @@
     </table>
     <h3 id="step-68">Step 68 &mdash; Quantum® Backup Camera, Standard Mount, and Headrest Mount</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p182.jpg" alt="Quantum® Backup Camera, Standard Mount, and Headrest Mount — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p182.jpg" width="1236" height="1600" alt="Quantum® Backup Camera, Standard Mount, and Headrest Mount — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 68.</strong> Quantum® Backup Camera, Standard Mount, and Headrest Mount &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1489,7 +1501,7 @@
     </table>
     <h3 id="step-69">Step 69 &mdash; Quantum® Backup Camera Display Mounts</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p185.jpg" alt="Quantum® Backup Camera Display Mounts — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p185.jpg" width="1236" height="1600" alt="Quantum® Backup Camera Display Mounts — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 69.</strong> Quantum® Backup Camera Display Mounts &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1504,7 +1516,7 @@
     </table>
     <h3 id="step-70">Step 70 &mdash; Egg Switch / Buddy Button Mounting Brackets</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p187.jpg" alt="Egg Switch / Buddy Button Mounting Brackets — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p187.jpg" width="1236" height="1600" alt="Egg Switch / Buddy Button Mounting Brackets — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 70.</strong> Egg Switch / Buddy Button Mounting Brackets &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1519,7 +1531,7 @@
     </table>
     <h3 id="step-71">Step 71 &mdash; Joystick Receiver Mounts, Quantum®</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p189.jpg" alt="Joystick Receiver Mounts, Quantum® — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p189.jpg" width="1236" height="1600" alt="Joystick Receiver Mounts, Quantum® — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 71.</strong> Joystick Receiver Mounts, Quantum® &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1535,7 +1547,7 @@
     </table>
     <h3 id="step-72">Step 72 &mdash; Quantum® Backup Camera Kits</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p191.jpg" alt="Quantum® Backup Camera Kits — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p191.jpg" width="1236" height="1600" alt="Quantum® Backup Camera Kits — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 72.</strong> Quantum® Backup Camera Kits &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1553,7 +1565,7 @@
     </table>
     <h3 id="step-73">Step 73 &mdash; Quantum® Backup Camera Module, Harnesses, and Mounts</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p193.jpg" alt="Quantum® Backup Camera Module, Harnesses, and Mounts — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p193.jpg" width="1236" height="1600" alt="Quantum® Backup Camera Module, Harnesses, and Mounts — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 73.</strong> Quantum® Backup Camera Module, Harnesses, and Mounts &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1571,7 +1583,7 @@
     </table>
     <h3 id="step-74">Step 74 &mdash; Quantum® Backup Camera, Standard Mount, and Headrest Mount</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p195.jpg" alt="Quantum® Backup Camera, Standard Mount, and Headrest Mount — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p195.jpg" width="1236" height="1600" alt="Quantum® Backup Camera, Standard Mount, and Headrest Mount — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 74.</strong> Quantum® Backup Camera, Standard Mount, and Headrest Mount &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1585,7 +1597,7 @@
     </table>
     <h3 id="step-75">Step 75 &mdash; Quantum® Backup Camera Display Mounts</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p197.jpg" alt="Quantum® Backup Camera Display Mounts — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p197.jpg" width="1236" height="1600" alt="Quantum® Backup Camera Display Mounts — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 75.</strong> Quantum® Backup Camera Display Mounts &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1600,7 +1612,7 @@
     </table>
     <h3 id="step-76">Step 76 &mdash; Egg Switch / Buddy Button Mounting Brackets</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p199.jpg" alt="Egg Switch / Buddy Button Mounting Brackets — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p199.jpg" width="1236" height="1600" alt="Egg Switch / Buddy Button Mounting Brackets — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 76.</strong> Egg Switch / Buddy Button Mounting Brackets &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1615,7 +1627,7 @@
     </table>
     <h3 id="step-77">Step 77 &mdash; Joystick Receiver Mounts, Quantum®</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p201.jpg" alt="Joystick Receiver Mounts, Quantum® — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p201.jpg" width="1236" height="1600" alt="Joystick Receiver Mounts, Quantum® — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 77.</strong> Joystick Receiver Mounts, Quantum® &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1631,7 +1643,7 @@
     </table>
     <h3 id="step-78">Step 78 &mdash; Basic Swing-away Joystick Mount, Q-Logic</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p221.jpg" alt="Basic Swing-away Joystick Mount, Q-Logic — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p221.jpg" width="1236" height="1600" alt="Basic Swing-away Joystick Mount, Q-Logic — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 78.</strong> Basic Swing-away Joystick Mount, Q-Logic &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1645,7 +1657,7 @@
     </table>
     <h3 id="step-79">Step 79 &mdash; Chain Driven Swing-away Joystick Mount (Version 3 Swing-away Mount)</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p223.jpg" alt="Chain Driven Swing-away Joystick Mount (Version 3 Swing-away Mount) — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p223.jpg" width="1236" height="1600" alt="Chain Driven Swing-away Joystick Mount (Version 3 Swing-away Mount) — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 79.</strong> Chain Driven Swing-away Joystick Mount (Version 3 Swing-away Mount) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1666,7 +1678,7 @@
     </table>
     <h3 id="step-80">Step 80 &mdash; Version 2 Swing-away Joystick Bracket &amp; Components</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p225.jpg" alt="Version 2 Swing-away Joystick Bracket &amp; Components — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p225.jpg" width="1236" height="1600" alt="Version 2 Swing-away Joystick Bracket &amp; Components — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 80.</strong> Version 2 Swing-away Joystick Bracket &amp; Components &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1687,7 +1699,7 @@
     </table>
     <h3 id="step-81">Step 81 &mdash; Retract 4 Swing-away Joystick Bracket for Curtis Joysticks</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p227.jpg" alt="Retract 4 Swing-away Joystick Bracket for Curtis Joysticks — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p227.jpg" width="1236" height="1600" alt="Retract 4 Swing-away Joystick Bracket for Curtis Joysticks — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 81.</strong> Retract 4 Swing-away Joystick Bracket for Curtis Joysticks &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1701,7 +1713,7 @@
     </table>
     <h3 id="step-82">Step 82 &mdash; Stealth Swing-away / Flip Down Joystick Brackets &amp; Mounts</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p229.jpg" alt="Stealth Swing-away / Flip Down Joystick Brackets &amp; Mounts — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p229.jpg" width="1236" height="1600" alt="Stealth Swing-away / Flip Down Joystick Brackets &amp; Mounts — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 82.</strong> Stealth Swing-away / Flip Down Joystick Brackets &amp; Mounts &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1715,7 +1727,7 @@
     </table>
     <h3 id="step-83">Step 83 &mdash; Joystick Receiver Mounts, Quantum®</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p231.jpg" alt="Joystick Receiver Mounts, Quantum® — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p231.jpg" width="1236" height="1600" alt="Joystick Receiver Mounts, Quantum® — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 83.</strong> Joystick Receiver Mounts, Quantum® &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1736,7 +1748,7 @@
     <p>Batteries last — they are the heaviest parts, and everything electrical depends on them.</p>
     <h3 id="step-84">Step 84 &mdash; Front Door Shroud, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p107.jpg" alt="Front Door Shroud, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p107.jpg" width="1236" height="1600" alt="Front Door Shroud, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 84.</strong> Front Door Shroud, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1748,7 +1760,7 @@
     </table>
     <h3 id="step-85">Step 85 &mdash; Front Door Shroud, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p129.jpg" alt="Front Door Shroud, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p129.jpg" width="1236" height="1600" alt="Front Door Shroud, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 85.</strong> Front Door Shroud, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1760,7 +1772,7 @@
     </table>
     <h3 id="step-86">Step 86 &mdash; Amp, CTE Charger, AU</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p203.jpg" alt="Amp, CTE Charger, AU — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p203.jpg" width="1236" height="1600" alt="Amp, CTE Charger, AU — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 86.</strong> Amp, CTE Charger, AU &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1772,7 +1784,7 @@
     </table>
     <h3 id="step-87">Step 87 &mdash; Amp Phihong Charger, EU</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p205.jpg" alt="Amp Phihong Charger, EU — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p205.jpg" width="1236" height="1600" alt="Amp Phihong Charger, EU — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 87.</strong> Amp Phihong Charger, EU &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1784,7 +1796,7 @@
     </table>
     <h3 id="step-88">Step 88 &mdash; Amp Phihong Charger, UK</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p207.jpg" alt="Amp Phihong Charger, UK — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p207.jpg" width="1236" height="1600" alt="Amp Phihong Charger, UK — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 88.</strong> Amp Phihong Charger, UK &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1796,7 +1808,7 @@
     </table>
     <h3 id="step-89">Step 89 &mdash; Amp Phihong Charger, US / CA</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p209.jpg" alt="Amp Phihong Charger, US / CA — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p209.jpg" width="1236" height="1600" alt="Amp Phihong Charger, US / CA — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 89.</strong> Amp Phihong Charger, US / CA &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1808,7 +1820,7 @@
     </table>
     <h3 id="step-90">Step 90 &mdash; Group 24 AGM Batteries and Battery Cables, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p211.jpg" alt="Group 24 AGM Batteries and Battery Cables, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p211.jpg" width="1236" height="1600" alt="Group 24 AGM Batteries and Battery Cables, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 90.</strong> Group 24 AGM Batteries and Battery Cables, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1827,7 +1839,7 @@
     </table>
     <h3 id="step-91">Step 91 &mdash; Group 24 Lead Carbon Batteries and Battery Cables, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p213.jpg" alt="Group 24 Lead Carbon Batteries and Battery Cables, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p213.jpg" width="1236" height="1600" alt="Group 24 Lead Carbon Batteries and Battery Cables, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 91.</strong> Group 24 Lead Carbon Batteries and Battery Cables, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1846,7 +1858,7 @@
     </table>
     <h3 id="step-92">Step 92 &mdash; Group 24 NANO-SILICA Batteries and Battery Cables, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p215.jpg" alt="Group 24 NANO-SILICA Batteries and Battery Cables, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p215.jpg" width="1236" height="1600" alt="Group 24 NANO-SILICA Batteries and Battery Cables, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 92.</strong> Group 24 NANO-SILICA Batteries and Battery Cables, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1865,7 +1877,7 @@
     </table>
     <h3 id="step-93">Step 93 &mdash; No Battery Option for Group 24 Batteries, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p217.jpg" alt="No Battery Option for Group 24 Batteries, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p217.jpg" width="1236" height="1600" alt="No Battery Option for Group 24 Batteries, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 93.</strong> No Battery Option for Group 24 Batteries, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1882,7 +1894,7 @@
     </table>
     <h3 id="step-94">Step 94 &mdash; Battery Tray and Circuit Breaker, Group 24 Batteries, Standard Motors, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p219.jpg" alt="Battery Tray and Circuit Breaker, Group 24 Batteries, Standard Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p219.jpg" width="1236" height="1600" alt="Battery Tray and Circuit Breaker, Group 24 Batteries, Standard Motors, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 94.</strong> Battery Tray and Circuit Breaker, Group 24 Batteries, Standard Motors, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1902,7 +1914,7 @@
     <p>Covers, decals, and accessories finish the chair.</p>
     <h3 id="step-95">Step 95 &mdash; Complete Shroud Assembly with Lights, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p105.jpg" alt="Complete Shroud Assembly with Lights, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p105.jpg" width="1236" height="1600" alt="Complete Shroud Assembly with Lights, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 95.</strong> Complete Shroud Assembly with Lights, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1929,7 +1941,7 @@
     </table>
     <h3 id="step-96">Step 96 &mdash; Rear Door Assembly, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p109.jpg" alt="Rear Door Assembly, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p109.jpg" width="1236" height="1600" alt="Rear Door Assembly, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 96.</strong> Rear Door Assembly, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1959,7 +1971,7 @@
     </table>
     <h3 id="step-97">Step 97 &mdash; Caster Arm Shrouds with Lights, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p111.jpg" alt="Caster Arm Shrouds with Lights, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p111.jpg" width="1236" height="1600" alt="Caster Arm Shrouds with Lights, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 97.</strong> Caster Arm Shrouds with Lights, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2004,7 +2016,7 @@
     </table>
     <h3 id="step-98">Step 98 &mdash; Fender Shrouds with Lights, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p115.jpg" alt="Fender Shrouds with Lights, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p115.jpg" width="1236" height="1600" alt="Fender Shrouds with Lights, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 98.</strong> Fender Shrouds with Lights, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2049,7 +2061,7 @@
     </table>
     <h3 id="step-99">Step 99 &mdash; Side Shroud Assemblies, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p119.jpg" alt="Side Shroud Assemblies, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p119.jpg" width="1236" height="1600" alt="Side Shroud Assemblies, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 99.</strong> Side Shroud Assemblies, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2093,7 +2105,7 @@
     </table>
     <h3 id="step-100">Step 100 &mdash; Center Shroud, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p123.jpg" alt="Center Shroud, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p123.jpg" width="1236" height="1600" alt="Center Shroud, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 100.</strong> Center Shroud, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2105,7 +2117,7 @@
     </table>
     <h3 id="step-101">Step 101 &mdash; Rear Caster Caps, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p125.jpg" alt="Rear Caster Caps, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p125.jpg" width="1236" height="1600" alt="Rear Caster Caps, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 101.</strong> Rear Caster Caps, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2118,7 +2130,7 @@
     </table>
     <h3 id="step-102">Step 102 &mdash; Complete Shroud Assemblies without Lights, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p127.jpg" alt="Complete Shroud Assemblies without Lights, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p127.jpg" width="1236" height="1600" alt="Complete Shroud Assemblies without Lights, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 102.</strong> Complete Shroud Assemblies without Lights, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2145,7 +2157,7 @@
     </table>
     <h3 id="step-103">Step 103 &mdash; Rear Door Assembly, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p131.jpg" alt="Rear Door Assembly, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p131.jpg" width="1236" height="1600" alt="Rear Door Assembly, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 103.</strong> Rear Door Assembly, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2175,7 +2187,7 @@
     </table>
     <h3 id="step-104">Step 104 &mdash; Caster Arm Shrouds, No Lights, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p133.jpg" alt="Caster Arm Shrouds, No Lights, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p133.jpg" width="1236" height="1600" alt="Caster Arm Shrouds, No Lights, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 104.</strong> Caster Arm Shrouds, No Lights, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2220,7 +2232,7 @@
     </table>
     <h3 id="step-105">Step 105 &mdash; Fender Shrouds, No Lights, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p137.jpg" alt="Fender Shrouds, No Lights, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p137.jpg" width="1236" height="1600" alt="Fender Shrouds, No Lights, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 105.</strong> Fender Shrouds, No Lights, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2265,7 +2277,7 @@
     </table>
     <h3 id="step-106">Step 106 &mdash; Side Shroud Assemblies, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p141.jpg" alt="Side Shroud Assemblies, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p141.jpg" width="1236" height="1600" alt="Side Shroud Assemblies, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 106.</strong> Side Shroud Assemblies, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2309,7 +2321,7 @@
     </table>
     <h3 id="step-107">Step 107 &mdash; Center Shroud, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p145.jpg" alt="Center Shroud, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p145.jpg" width="1236" height="1600" alt="Center Shroud, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 107.</strong> Center Shroud, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2321,7 +2333,7 @@
     </table>
     <h3 id="step-108">Step 108 &mdash; Rear Caster Caps, Q6 Edge® 4</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p147.jpg" alt="Rear Caster Caps, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p147.jpg" width="1236" height="1600" alt="Rear Caster Caps, Q6 Edge® 4 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 108.</strong> Rear Caster Caps, Q6 Edge® 4 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2334,7 +2346,7 @@
     </table>
     <h3 id="step-109">Step 109 &mdash; Owner&#x27;s Package, Q6 Edge® 4, AU</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p244.jpg" alt="Owner's Package, Q6 Edge® 4, AU — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p244.jpg" width="1236" height="1600" alt="Owner's Package, Q6 Edge® 4, AU — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 109.</strong> Owner's Package, Q6 Edge® 4, AU &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2352,7 +2364,7 @@
     </table>
     <h3 id="step-110">Step 110 &mdash; Decal Package, Q6 Edge® 4, AU</h3>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p247.jpg" alt="Decal Package, Q6 Edge® 4, AU — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-4/q6-edge-4-p247.jpg" width="1236" height="1600" alt="Decal Package, Q6 Edge® 4, AU — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 110.</strong> Decal Package, Q6 Edge® 4, AU &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2375,10 +2387,30 @@
     <p>Every diagram and every part number above comes from Quantum&rsquo;s own IPB — nothing redrawn, nothing guessed. The &lsquo;What this part does&rsquo; column is ours. If a part on your chair does not match the book, your chair is a different revision — check the document number before you order.</p>
     <p><a href="/pmd-exploded.html">&larr; All exploded views</a> &middot; <a href="/pmd.html">PMD section</a></p>
   </section>
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a> &middot; <a href="/terms.html">The Tee-O-Ess</a> &middot; <a href="/dmca.html">DMCA</a> &middot; <a href="/copyright.html">Copyright</a> &middot; <a href="/privacy.html">Privacy</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
 </main>
 
 <script src="/nav.js" defer></script>
-<script src="/bb-util.js" defer></script><script src="/protocols.js" defer></script>
+<script src="/search.js" defer></script>
+
 <script src="/i18n.js" defer></script>
 </body>
 </html>

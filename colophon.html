@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
 <meta name="tdm-reservation" content="1">
@@ -84,6 +84,7 @@
               <div class="colnav">
                 <ul class="colnav-col">
                 <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
                 <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
                 <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
                 <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
@@ -133,7 +134,7 @@
               </div>
             </div>
           </div></li>
-              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
           <div class="col-panel">
             <div class="dropdown-inner">
               <div class="colnav">
@@ -152,18 +153,29 @@
               </div>
             </div>
           </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
 </ul>
     </nav>
   </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
 </header>
 
-<main class="content">
+<main>
 <h1>Colophon</h1>
 <p class="lede">How this site is made &mdash; and why it&rsquo;s made this way.</p>
 
 <h2>Hand-built</h2>
-<p>Every page on BareBoard is written by hand as plain HTML, styled by three
-shared stylesheets (<code>/style.css</code>, <code>/mobile.css</code>, and
+<p>Every page on BareBoard is written by hand as plain HTML, styled by shared
+stylesheets (<code>/style.css</code>, <code>/mobile.css</code>, and
 <code>/i18n.css</code>), with a little vanilla JavaScript only where a page needs it.
 There is no framework, no build step, no content management system, and no
 third-party scripts, fonts, or trackers load by default. Outbound links go to cited sources
@@ -176,7 +188,8 @@ language, and some images are hotlinked from their sources.</p>
 reservation, backed by a <code>robots.txt</code> and a
 <code>/.well-known/tdmrep.json</code> declaration. Automated scraping for AI
 model training is prohibited &mdash; the findings here are published for
-humans learning hardware.</p>
+humans learning hardware. How the site answers hostile crawlers is documented
+in <a href="/projects/ai-crawler-defense/">AI crawler defense</a>.</p>
 
 <h2>Free forever</h2>
 <p>BareBoard is a non-commercial, open educational resource. It is hosted on
@@ -191,6 +204,10 @@ are arranged so no single provider can switch it off:
 checked against hardware on the bench, and every page is written to be read by
 humans first. The division of labor is the point of the place:
 <em>we can&rsquo;t open their hardware, so we open our findings.</em></p>
+
+<p>The <a href="/archive.html">Documentation Archive</a> collects the site&rsquo;s
+preserved public documents, and the <a href="/changelog.html">Changelog</a>
+records what changed and when.</p>
 
 <p class="signoff">BareBoard &mdash; free hardware education.</p>
 </main>
@@ -211,7 +228,7 @@ humans first. The division of labor is the point of the place:
         <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
         <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
       </ul>
-      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the Open Source Hardware Association framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
     </div>
   </footer>
 

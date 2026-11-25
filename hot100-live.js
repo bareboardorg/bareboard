@@ -152,16 +152,15 @@
     });
   }
 
-  fetch(grid.getAttribute("data-json") || "/hot100-live.json")
-    .then(function (response) { return response.json(); })
-    .then(function (data) {
+  BB.loadJson(grid.getAttribute("data-json") || "/hot100-live.json",
+    function (data) {
       devices = ((data && data.devices) || []).slice().sort(byRank);
       buildCategoryPills();
       render();
-      if (updatedLine && data.updated) updatedLine.textContent = "Updated " + BB.esc(data.updated);
+      if (updatedLine && data.updated) updatedLine.textContent = "Updated " + data.updated;
       showMethodology(data);
-    })
-    .catch(function () {
+    },
+    function () {
       grid.innerHTML = '<p class="lede">Could not load rankings.</p>';
     });
 })();

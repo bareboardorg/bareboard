@@ -27,16 +27,12 @@
       "</article>";
   }
 
-  fetch("obsolescence-archive.json", { credentials: "same-origin" })
-    .then(function (response) {
-      if (!response.ok) throw new Error("HTTP " + response.status);
-      return response.json();
-    })
-    .then(function (data) {
+  BB.loadJson("obsolescence-archive.json",
+    function (data) {
       var entries = (data && data.entries) || [];
       container.innerHTML = entries.map(card).join("") || "<p>No cases found.</p>";
-    })
-    .catch(function (err) {
+    },
+    function (err) {
       container.innerHTML = "<p>Could not load obsolescence-archive.json (" + BB.esc(err.message) + ").</p>";
     });
 })();

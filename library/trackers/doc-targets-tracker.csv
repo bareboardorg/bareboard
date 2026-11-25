@@ -1,0 +1,24 @@
+id,category,target,doc_type,publicly_available,status,legitimate_source,notes
+R2-01,Ring-2 silicon,Intel CSME/ME (TXE/SPS) register maps + firmware structure,datasheet,No,Gap documented via original reference,me_cleaner; Skochinsky REcon 2014; coreboot intelmetool/ifdtool,Original doc: docs-original/intel-csme-public-reference.md
+R2-02,Ring-2 silicon,Apple SEP mailbox registers + architecture,manual,No (Apple); Yes (public research),Documented via original reference,BH2016 Mandt slides; MOSEC 2020 Pangu slides,Original doc: docs-original/apple-sep-public-reference.md
+R2-03,Ring-2 silicon,AMD PSP firmware structures + boot flow,manual,Partial (spec is NDA; structures are public),Documented via original reference,coreboot PSP Integration Guide; PSPTool; BH2020,Original doc: docs-original/amd-psp-public-reference.md
+PM-01,Apple PMIC,APL1096 / 343S00474 (M1 main PMIC),datasheet,No,Identified; cross-reference strategy,iFixit M1 iMac teardown; TechInsights,Underlying vendor likely Dialog/Renesas
+PM-02,Apple PMIC,APL1097 / 343S00475 (M1 companion PMIC),datasheet,No,Identified,iFixit M1 iMac teardown,Paired with APL1096
+PM-03,Apple PMIC,APL1028 (Apple-marked regulator),datasheet,No,Community-known; unverified in this pass,Repair communities,Verify underlying vendor before relying
+PM-04,Apple PMIC,343S00653 / APL109H (M3 Pro/Max PMIC),datasheet,No,Identified,iFixit M3 Pro Chip ID guide; spares vendors,Boards A2991/A2992/A2993; pair with 343S00652
+PM-05,Apple PMIC,Richtek RT4541GQV (CPU PWM controller on M1 boards),datasheet,Yes,Obtainable,richtek.com; Mouser Richtek docs,Same board as the M1 Apple PMICs
+WL-01,Wireless,339S00763 (Murata Wi-Fi/BT module; Broadcom BCM43xx inside),datasheet,No (module); driver docs Yes,Identified,iFixit M1 iMac teardown; brcmfmac,Target the underlying Broadcom die docs
+WL-02,Wireless,339S00817 (Apple-marked wireless part),datasheet,Unverified,Unverified,Repair-community labeling,Confirm identity before targeting
+WL-03,Wireless,Broadcom BCM43xx MMIO register documentation,manual,No (Broadcom); community docs Yes,Documented,Linux b43/brcmfmac; OpenFWWF; bcm-v4.sipsolutions.net,Broadcom publishes no register docs
+ST-01,Storage,Samsung NVMe VSCs (Polaris/Elpis controllers),manual,No,Tooling documented,nvme-cli; smartmontools; Samsung Magician,Controller codenames are community knowledge
+ST-02,Storage,Kioxia KICM controller register maps (Apple-custom NAND),manual,No,Gap,Kioxia publishes drive-level briefs only,No public controller docs exist
+ST-03,Storage,Kioxia XG/BG/EG client SSD product briefs,datasheet,Yes,Obtainable (XG6 brief preserved),kioxia.com,collected-public-docs/kioxia-xg6-product-brief.pdf
+ST-04,Storage,SK hynix H9HCNNN / H9TQ (eMMC/eMCP/DRAM) datasheets,datasheet,Yes,Obtainable (eMCP spec preserved),SK hynix; JLCPCB part pages; distributors,Most datasheet-friendly target on the list
+DV-01,Device docs,Framework laptop schematics,schematic,Yes,Obtainable,github.com/FrameworkComputer,Mainboard schematics + drawings
+DV-02,Device docs,Raspberry Pi board schematics,schematic,Yes,Obtainable,raspberrypi.org/documentation/hardware/raspberrypi/schematics,Every board version + mechanical drawings
+DV-03,Device docs,Apple Self Service Repair manuals (iPhone/Mac),manual,Yes,Obtainable,Apple Self Service Repair site (official public manuals),NOT the leaked GSX/Asti guides
+DV-04,Device docs,Dell / HP / Lenovo service manuals (HMM),manual,Yes,Obtainable,Dell support site; hp.com/ctg/Manual; Lenovo support,Per-model official PDFs
+DV-05,Device docs,iFixit repair guides,manual,Yes (CC BY-NC-SA),Obtainable,ifixit.com,Thousands of free licensed guides
+EX-01,EXCLUDED,Leaked Apple GSX/Asti technician guides (archive.org collection; Reddit Dropbox links),n/a,Leaked,Excluded - do not collect,,Use Apple official public Self Service Repair manuals instead
+EX-02,EXCLUDED,Apple device schematics / boardview files circulating online,n/a,Leaked,Excluded - do not collect,,Use iFixit chip-ID guides + open-hardware docs instead
+EX-03,EXCLUDED,Intel CSME System Tools (FIT/FPT) and internal-use-only Intel docs,n/a,Internal/leaked,Excluded - do not collect,,me_cleaner + coreboot tooling cover the legitimate need

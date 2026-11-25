@@ -124,7 +124,6 @@ video {
   font-size: 1.1rem;
 }
 
-.search-hint,
 .search-results {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -206,8 +205,7 @@ pre {
 }
 
 /* Tables scroll sideways; they never stretch the page. */
-.table-wrap,
-.table-scroll {
+.table-wrap {
   margin-left: -1.1rem;
   margin-right: -1.1rem;
   padding: 0 1.1rem;
@@ -305,35 +303,7 @@ figure {
   padding: 0.55rem 0.6rem;
 }
 
-/* Most Wanted posters. */
-.wanted-banner {
-  padding: 0.55rem 0.3rem;
-  font-size: 1.25rem;
-  letter-spacing: 0.18em;
-}
-
-.wanted-name {
-  margin-left: 0.8rem;
-  margin-right: 0.8rem;
-  font-size: 1.2rem;
-}
-
-.wanted-for,
-.wanted-why {
-  margin-left: 0.8rem;
-  margin-right: 0.8rem;
-}
-
-/* Atlas, glossary, footer. */
-.atlas-minimap {
-  padding: 0.75rem 0 0;
-}
-
-.atlas-minimap-svg {
-  width: 100%;
-  height: auto;
-}
-
+/* Glossary, footer. */
 .alpha-jump a {
   display: inline-block;
   padding: 0.5rem 0.55rem;

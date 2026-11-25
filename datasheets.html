@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org thumb.wikimedia.org; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org thumb.wikimedia.org; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
   <meta name="tdm-reservation" content="1">
@@ -22,6 +22,14 @@
 <link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
 <link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
 <link rel="stylesheet" href="/i18n.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Datasheet Index",
+  "description": "Every datasheet referenced across BareBoard teardowns, in alphabetical order."
+}
+</script>
 </head>
 <body>
 <header class="site-nav">
@@ -91,6 +99,7 @@
               <div class="colnav">
                 <ul class="colnav-col">
                 <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
                 <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
                 <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
                 <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
@@ -140,7 +149,7 @@
               </div>
             </div>
           </div></li>
-              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
           <div class="col-panel">
             <div class="dropdown-inner">
               <div class="colnav">
@@ -159,8 +168,19 @@
               </div>
             </div>
           </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
 </ul>
     </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
   </div>
 </header>
 
@@ -203,7 +223,7 @@
       <tr><td><a href="https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf" target="_blank" rel="noopener">ESP8266 (ESP8266EX)</a></td><td>Espressif</td><td>Wi-Fi SoC with Tensilica L106 32-bit MCU, 802.11 b/g/n.</td></tr>
       <tr><td><a href="https://www.espressif.com/sites/default/files/documentation/esp32-s2_datasheet_en.pdf" target="_blank" rel="noopener">ESP32-S2</a></td><td>Espressif</td><td>Single-core Xtensa LX7 up to 240 MHz, 2.4 GHz Wi-Fi, USB OTG.</td></tr>
       <tr><td><a href="https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf" target="_blank" rel="noopener">ESP32-C3</a></td><td>Espressif</td><td>RISC-V single-core @160 MHz, 2.4 GHz Wi-Fi + Bluetooth 5 (LE).</td></tr>
-      <tr><td><a href="https://ecksteinimg.de/Datasheet/AI-Thinker/esp-12e_product_specification_v1.0.pdf" target="_blank" rel="noopener">ESP-12E module</a></td><td>Ai-Thinker</td><td>🪞 ESP-12E 802.11 b/g/n Wi-Fi module spec v1.0 (4 MB flash, PCB antenna); hosted on retailer mirror, Ai-Thinker's own portal has no direct PDF link.</td></tr>
+      <tr><td><a href="https://ecksteinimg.de/Datasheet/AI-Thinker/esp-12e_product_specification_v1.0.pdf" target="_blank" rel="noopener">ESP-12E module</a></td><td>Ai-Thinker</td><td>ESP-12E 802.11 b/g/n Wi-Fi module spec v1.0 (4 MB flash, PCB antenna); hosted on retailer mirror, Ai-Thinker's own portal has no direct PDF link.</td></tr>
       <tr><td><a href="https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf" target="_blank" rel="noopener">ATmega328P</a></td><td>Microchip/Atmel</td><td>8-bit AVR, 32 KB Flash, 2 KB SRAM, 23 I/O — the Arduino Uno's MCU.</td></tr>
       <tr><td><a href="https://ww1.microchip.com/downloads/en/devicedoc/atmel-2549-8-bit-avr-microcontroller-atmega640-1280-1281-2560-2561_datasheet.pdf" target="_blank" rel="noopener">ATmega2560</a></td><td>Microchip/Atmel</td><td>8-bit AVR family doc covering ATmega640/1280/1281/2560/2561 — up to 256 KB Flash (Arduino Mega's MCU).</td></tr>
       <tr><td><a href="https://ww1.microchip.com/downloads/en/DeviceDoc/39582b.pdf" target="_blank" rel="noopener">PIC16F877A</a></td><td>Microchip</td><td>8-bit PIC, 14.3 KB Flash, 368 B RAM, 33 I/O lines.</td></tr>
@@ -330,11 +350,11 @@
     <table class="datasheet-table">
       <thead><tr><th>Component</th><th>Manufacturer</th><th>Description</th></tr></thead>
       <tbody>
-      <tr><td><a href="http://crystalfontz.com/controllers/uploaded/SSD1306B_1.1.pdf" target="_blank" rel="noopener">SSD1306 OLED controller</a></td><td>Solomon Systech</td><td>🪞 Single-chip CMOS OLED/PLED driver+controller for 128×64 dot-matrix displays (Rev 1.1, May 2014); no official solomon-systech.com copy exists.</td></tr>
-      <tr><td><a href="https://ia801607.us.archive.org/12/items/data-sheets/Data%20sheets/HD44780u%20LCD%20Controller.pdf" target="_blank" rel="noopener">HD44780 LCD controller</a></td><td>Hitachi/Renesas</td><td>🪞 Dot-matrix LCD controller/driver for alphanumeric character displays (Rev 0.0, Sept 1999; archive.org mirror — original no longer hosted).</td></tr>
-      <tr><td><a href="https://www.orientdisplay.com/wp-content/uploads/2022/08/ST7735_v2.1.pdf" target="_blank" rel="noopener">ST7735 TFT controller</a></td><td>Sitronix</td><td>🪞 262K-color single-chip TFT controller/driver (132×162), SPI + parallel (official v2.1 doc via Orient Display; Sitronix publishes nothing on its own site).</td></tr>
-      <tr><td><a href="https://www.crystalfontz.com/controllers/Sitronix/ST7789V/470/" target="_blank" rel="noopener">ST7789 TFT controller</a></td><td>Sitronix</td><td>🪞 240×320 262K-color single-chip TFT controller/driver with frame memory (official v1.6 doc text via CrystalFontz page).</td></tr>
-      <tr><td><a href="https://jyetech.com/wp-content/uploads/ILI9341_DS_V1.05_20101227.pdf" target="_blank" rel="noopener">ILI9341 TFT controller</a></td><td>Ilitek</td><td>🪞 240×320 262K-color a-Si TFT driver, 8080-series MCU / RGB / SPI (official V1.05 doc; Ilitek does not publish it on ilitek.com.tw).</td></tr>
+      <tr><td><a href="http://crystalfontz.com/controllers/uploaded/SSD1306B_1.1.pdf" target="_blank" rel="noopener">SSD1306 OLED controller</a></td><td>Solomon Systech</td><td>Single-chip CMOS OLED/PLED driver+controller for 128×64 dot-matrix displays (Rev 1.1, May 2014); no official solomon-systech.com copy exists.</td></tr>
+      <tr><td><a href="https://ia801607.us.archive.org/12/items/data-sheets/Data%20sheets/HD44780u%20LCD%20Controller.pdf" target="_blank" rel="noopener">HD44780 LCD controller</a></td><td>Hitachi/Renesas</td><td>Dot-matrix LCD controller/driver for alphanumeric character displays (Rev 0.0, Sept 1999; archive.org mirror — original no longer hosted).</td></tr>
+      <tr><td><a href="https://www.orientdisplay.com/wp-content/uploads/2022/08/ST7735_v2.1.pdf" target="_blank" rel="noopener">ST7735 TFT controller</a></td><td>Sitronix</td><td>262K-color single-chip TFT controller/driver (132×162), SPI + parallel (official v2.1 doc via Orient Display; Sitronix publishes nothing on its own site).</td></tr>
+      <tr><td><a href="https://www.crystalfontz.com/controllers/Sitronix/ST7789V/470/" target="_blank" rel="noopener">ST7789 TFT controller</a></td><td>Sitronix</td><td>240×320 262K-color single-chip TFT controller/driver with frame memory (official v1.6 doc text via CrystalFontz page).</td></tr>
+      <tr><td><a href="https://jyetech.com/wp-content/uploads/ILI9341_DS_V1.05_20101227.pdf" target="_blank" rel="noopener">ILI9341 TFT controller</a></td><td>Ilitek</td><td>240×320 262K-color a-Si TFT driver, 8080-series MCU / RGB / SPI (official V1.05 doc; Ilitek does not publish it on ilitek.com.tw).</td></tr>
       </tbody>
     </table>
   </section>
@@ -343,7 +363,7 @@
     <table class="datasheet-table">
       <thead><tr><th>Component</th><th>Manufacturer</th><th>Description</th></tr></thead>
       <tbody>
-      <tr><td><a href="https://nz.atosn.com/datasheet/1a/A4988SETTR-T.pdf" target="_blank" rel="noopener">A4988</a></td><td>Allegro MicroSystems</td><td>🪞 DMOS microstepping driver with built-in translator, up to 35V / ±2A, full-step to 1/16-step (official 4988-DS Rev. 6 via mirror).</td></tr>
+      <tr><td><a href="https://nz.atosn.com/datasheet/1a/A4988SETTR-T.pdf" target="_blank" rel="noopener">A4988</a></td><td>Allegro MicroSystems</td><td>DMOS microstepping driver with built-in translator, up to 35V / ±2A, full-step to 1/16-step (official 4988-DS Rev. 6 via mirror).</td></tr>
       <tr><td><a href="https://www.ti.com/lit/ds/symlink/drv8825.pdf" target="_blank" rel="noopener">DRV8825</a></td><td>Texas Instruments</td><td>PWM microstepping stepper motor driver, 8.2–45V, up to 2.5A, full-step to 1/32-step.</td></tr>
       <tr><td><a href="https://toshiba.semicon-storage.com/eu/semiconductor/product/motor-driver-ics/stepping-motor-driver-ics/detail.TB6600HG.html" target="_blank" rel="noopener">TB6600 (TB6600HG)</a></td><td>Toshiba</td><td>2-phase bipolar stepping-motor driver IC, 8–42V, up to 4.5A, full-step to 1/16-step (official Toshiba product page; English datasheet PDF is one click away — no stable direct PDF URL found).</td></tr>
       </tbody>
@@ -354,11 +374,11 @@
     <table class="datasheet-table">
       <thead><tr><th>Component</th><th>Manufacturer</th><th>Description</th></tr></thead>
       <tbody>
-      <tr><td><a href="https://robu-prod-media.s3.ap-south-1.amazonaws.com/uploads/2018/11/FT232RL-SSOP-28-USB-Interface-IC-1.pdf" target="_blank" rel="noopener">FT232RL</a></td><td>FTDI</td><td>🪞 Single-chip USB-to-UART bridge, USB 2.0 full-speed, up to 3 Mbaud, integrated EEPROM (official FTDI doc v2.14, FT_000053). Note: ftdichip.com returns HTTP 403 to automated fetches; legacy path was http://www.ftdichip.com/Documents/DataSheets/DS_FT232R.pdf.</td></tr>
-      <tr><td><a href="https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/C193662.pdf" target="_blank" rel="noopener">FT2232H</a></td><td>FTDI</td><td>🪞 Dual-channel USB 2.0 Hi-Speed (480 Mbps) to UART/FIFO/MPSSE IC (official FTDI doc v2.5, FT_000061).</td></tr>
+      <tr><td><a href="https://robu-prod-media.s3.ap-south-1.amazonaws.com/uploads/2018/11/FT232RL-SSOP-28-USB-Interface-IC-1.pdf" target="_blank" rel="noopener">FT232RL</a></td><td>FTDI</td><td>Single-chip USB-to-UART bridge, USB 2.0 full-speed, up to 3 Mbaud, integrated EEPROM (official FTDI doc v2.14, FT_000053). Note: ftdichip.com returns HTTP 403 to automated fetches; legacy path was http://www.ftdichip.com/Documents/DataSheets/DS_FT232R.pdf.</td></tr>
+      <tr><td><a href="https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/C193662.pdf" target="_blank" rel="noopener">FT2232H</a></td><td>FTDI</td><td>Dual-channel USB 2.0 Hi-Speed (480 Mbps) to UART/FIFO/MPSSE IC (official FTDI doc v2.5, FT_000061).</td></tr>
       <tr><td><a href="https://my.mouser.com/datasheet/3/35/1/DS_FT230X.pdf" target="_blank" rel="noopener">FT230X</a></td><td>FTDI</td><td>USB-to-basic-UART IC, up to 3 Mbaud, integrated MTP memory (official FTDI doc v1.7 via Mouser).</td></tr>
       <tr><td><a href="https://pdf.findic.com/ft231xq-r-aOHz1qSd-poEgvmWbZ.pdf" target="_blank" rel="noopener">FT231X</a></td><td>FTDI</td><td>USB-to-full-handshake-UART IC with full modem signals and MTP memory (official FTDI doc v1.2).</td></tr>
-      <tr><td><a href="https://bitsavers.pdp-11.net/components/wch/_dataSheets/CH340DS1.PDF" target="_blank" rel="noopener">CH340G</a></td><td>WCH (Nanjing Qinheng)</td><td>🪞 USB-to-serial UART chip, 50 bps–2 Mbps (official WCH CH340DS1 v2G covering CH340G/C/T/R; also covers CH340C crystal-less variant).</td></tr>
+      <tr><td><a href="https://bitsavers.pdp-11.net/components/wch/_dataSheets/CH340DS1.PDF" target="_blank" rel="noopener">CH340G</a></td><td>WCH (Nanjing Qinheng)</td><td>USB-to-serial UART chip, 50 bps–2 Mbps (official WCH CH340DS1 v2G covering CH340G/C/T/R; also covers CH340C crystal-less variant).</td></tr>
       <tr><td><a href="https://www.silabs.com/documents/public/data-sheets/cp2102.pdf" target="_blank" rel="noopener">CP2102</a></td><td>Silicon Labs</td><td>Single-chip USB-to-UART bridge with integrated transceiver, EEPROM, 3.3V regulator (silabs.com blocks bots — mirror: https://www.datasheets.com/silicon-labs/cp2102/datasheet.pdf).</td></tr>
       <tr><td><a href="https://datasheet.octopart.com/CP2104-F03-GM-Silicon-Labs-datasheet-180781121.pdf" target="_blank" rel="noopener">CP2104</a></td><td>Silicon Labs</td><td>Single-chip USB-to-UART bridge, QFN-24, 5V-tolerant I/O (official Rev 1.2 via distributor).</td></tr>
       <tr><td><a href="https://xonstorage.z8.web.core.windows.net/pdf/prolific_pl2303gt_apr22_xonlink.pdf" target="_blank" rel="noopener">PL2303</a></td><td>Prolific</td><td>USB-to-serial bridge controller family (official Prolific doc via mirror; Prolific publishes no stable public PDF URL on prolific.com.tw).</td></tr>
@@ -385,7 +405,7 @@
     <table class="datasheet-table">
       <thead><tr><th>Component</th><th>Manufacturer</th><th>Description</th></tr></thead>
       <tbody>
-      <tr><td><a href="https://international-download-nvidia-comproxy.boingomedia.com/pdf/tegra/Tegra-X1-whitepaper-v1.0.pdf" target="_blank" rel="noopener">NVIDIA Tegra X1</a></td><td>NVIDIA</td><td>🪞 Official NVIDIA whitepaper "Tegra X1: NVIDIA's New Mobile Superchip" (Jan 2015) with SoC specs appendix. The full Technical Reference Manual is registration-gated on developer.nvidia.com — not public.</td></tr>
+      <tr><td><a href="https://international-download-nvidia-comproxy.boingomedia.com/pdf/tegra/Tegra-X1-whitepaper-v1.0.pdf" target="_blank" rel="noopener">NVIDIA Tegra X1</a></td><td>NVIDIA</td><td>Official NVIDIA whitepaper "Tegra X1: NVIDIA's New Mobile Superchip" (Jan 2015) with SoC specs appendix. The full Technical Reference Manual is registration-gated on developer.nvidia.com — not public.</td></tr>
       </tbody>
     </table>
   </section>
@@ -437,7 +457,7 @@
 <li>
 <strong>BCM53124S</strong> &mdash; Broadcom<br>
 <span class="ds-func">5-port gigabit Ethernet switch</span><br>
-<span class="ds-links"><a href="https://www.broadcom.com/products/ethernet-connectivity/switching/strataxgs/bcm53124">Broadcom product archive</a> &middot; <a href="https://web.archive.org/web/*/https://www.broadcom.com/products/ethernet-connectivity/switching/strataxgs/bcm53124">Archive.org copy</a></span><br>
+<span class="ds-links"><em>No public datasheet found</em> &mdash; Broadcom removed the product page, and the Wayback Machine holds no copy of it.</span><br>
 <span class="ds-device">Found in: <a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></span>
 </li>
 </ul>
@@ -1029,7 +1049,7 @@
     <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
     <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
         <nav>
-      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a> &middot; <a href="/terms.html">The Tee-O-Ess</a> &middot; <a href="/dmca.html">DMCA</a> &middot; <a href="/copyright.html">Copyright</a> &middot; <a href="/privacy.html">Privacy</a>
     </nav>
 
     <div class="legal-framework">
@@ -1047,8 +1067,9 @@
 </main>
 
 <script src="/nav.js" defer></script>
-<script src="/datasheet-index.js" defer></script>
 <script src="/search.js" defer></script>
+<script src="/datasheet-index.js" defer></script>
+
 <script src="/i18n.js" defer></script>
 </body>
 </html>

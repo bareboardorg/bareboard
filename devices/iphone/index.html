@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
   <meta name="tdm-reservation" content="1">
@@ -29,92 +29,119 @@
     <nav aria-label="Primary">
       <ul>
         <li><a href="/" class="brand-word">BareBoard</a></li>
-        <li><a href="/devices/">Devices</a></li>
-        <li class="has-children">
-          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
           <div class="col-panel">
             <div class="dropdown-inner">
-              <ul class="dropdown-col">
-                <li><a href="/about.html#how-we-work">How we work</a></li>
-                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
                 <li><a href="/datasheets.html">Datasheet Index</a></li>
-                <li><a href="/notes/">Bench Notes</a></li>
                 <li><a href="/chips.html">Chip Database</a></li>
                 <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
                 <li><a href="/repair.html">Repair Guides</a></li>
-                <li><a href="/protocols.html">Protocol RE</a></li>
-              </ul>
+                </ul>
+              </div>
             </div>
           </div></li>
-        <li class="has-children">
-          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
           <div class="col-panel">
             <div class="dropdown-inner">
-              <ul class="dropdown-col">
-                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
-                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
-                <li><a href="/hot-100.html">Game Consoles</a></li>
-                <li><a href="/hot-100.html">Media Streamers</a></li>
-                <li><a href="/hot-100.html">Networking Gear</a></li>
-                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
-                <li><a href="/hot-100.html">Other</a></li>
-                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
-                <li><a href="/hot-100.html">Phones</a></li>
-                <li><a href="/hot-100.html">Printers</a></li>
-                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
-                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
-                <li><a href="/hot-100.html">Wearables</a></li>
-              </ul>
-            </div>
-          </div></li>
-<li class="has-children">
-          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
-          <div class="col-panel">
-            <div class="dropdown-inner">
-              <ul class="dropdown-col">
-                <li><a href="/most-wanted.html#board">The board</a></li>
-              </ul>
-            </div>
-          </div></li>
-                <li class="has-children">
-          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
-          <div class="col-panel">
-            <div class="dropdown-inner">
-              <ul class="dropdown-col">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
                 <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
                 <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
                 <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
                 <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
-              </ul>
+                </ul>
+              </div>
             </div>
           </div></li>
-<li class="has-children">
-          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
           <div class="col-panel">
             <div class="dropdown-inner">
-              <ul class="dropdown-col">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Support</li>
                 <li><a href="/support.html#mission">Mission</a></li>
                 <li><a href="/support.html#chip-in">Donate</a></li>
                 <li><a href="/support.html#allies">Allies</a></li>
-              </ul>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
             </div>
           </div></li>
-        <li class="has-children">
-          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
           <div class="col-panel">
             <div class="dropdown-inner">
-              <ul class="dropdown-col">
-                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
-                <li><a href="/watchmen.html#methodology">Methodology</a></li>
-                <li><a href="/watchmen.html#tools">The bench</a></li>
-                <li><a href="/watchmen.html#corrections">Corrections</a></li>
-              </ul>
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
             </div>
           </div></li>
-        <li class="nav-search-item">
-          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
-        </li>
-              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
           <div class="col-panel">
             <div class="dropdown-inner">
               <div class="colnav">
@@ -133,6 +160,9 @@
               </div>
             </div>
           </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
 </ul>
     </nav>
   </div>
@@ -157,7 +187,7 @@
     <h2 id="fcc">FCC ID</h2>
     <p><strong>FCC IDs vary by model and region.</strong> Apple&rsquo;s FCC grantee code is <strong>BCG</strong> &mdash; the first three letters of every Apple FCC ID. An FCC ID is the identifier the Federal Communications Commission (the U.S. radio regulator) assigns to a device approved to transmit radio signals. Modern iPhones do not print it on the case; you find it on the phone itself under Settings &rarr; General &rarr; Legal &amp; Regulatory, or on the box label. Take that exact ID and look it up at <a href="https://fccid.io">fccid.io</a> &mdash; the filings include internal photos that are invaluable for hardware research.</p>
     <p>One filing verified for this page: <a href="https://fccid.io/bcge4030a">FCC ID BCG-E4030A</a> &mdash; an Apple Inc. smartphone filing granted September 14, 2021, covering the phone&rsquo;s Wi-Fi, Bluetooth, cellular, and ultra-wideband radios. It is listed here as a worked example of the lookup method, not as a claim about which retail model name it was sold under.</p>
-    <p><em>Specific model-to-FCC-ID mappings for the full iPhone 12&ndash;16 range are being verified against the filings and will be listed here. Until then, trust the ID on your own phone&rsquo;s label over any list on the internet &mdash; including this one.</em></p>
+    <p><em>Specific model-to-FCC-ID mappings for the full iPhone 12&ndash;17 range are being verified against the filings and will be listed here. Until then, trust the ID on your own phone&rsquo;s label over any list on the internet &mdash; including this one.</em></p>
   </section>
 
   <section>
@@ -237,6 +267,7 @@
       <tr><td>iPhone SE (3rd generation)</td><td>2022</td><td>A15</td><td>Lightning</td><td>Touch ID Home button design</td></tr>
       <tr><td>iPhone 15</td><td>2023</td><td>A16 (base) / A17 Pro (Pro)</td><td>USB-C</td><td>First USB-C iPhone</td></tr>
       <tr><td>iPhone 16</td><td>2024</td><td>A18</td><td>USB-C</td><td>&mdash;</td></tr>
+      <tr><td>iPhone 17</td><td>2025</td><td>A19</td><td>USB-C</td><td>120Hz ProMotion on the base model; 256GB base storage</td></tr>
     </table>
   </section>
 
@@ -244,7 +275,7 @@
     <h2 id="chips">Key Chips</h2>
     <p>Apple does not publish datasheets for its own silicon &mdash; there is no A-series datasheet to link, for anyone, anywhere. What exists publicly is Apple&rsquo;s system-level documentation, linked below. Every chip we could not link to documentation is listed in our collection targets instead of being left silent.</p>
     <ul>
-      <li><strong>A-series SoCs</strong> (A14&ndash;A18 in the models above) &mdash; the SoC (system on a chip: the processor, graphics, memory controller, and more on one piece of silicon) that runs the phone. Apple documents the family&rsquo;s security architecture, not its registers: <a href="https://help.apple.com/pdf/security/en_US/apple-platform-security-guide.pdf">Apple Platform Security Guide (PDF)</a>.</li>
+      <li><strong>A-series SoCs</strong> (A14&ndash;A19 in the models above) &mdash; the SoC (system on a chip: the processor, graphics, memory controller, and more on one piece of silicon) that runs the phone. Apple documents the family&rsquo;s security architecture, not its registers: <a href="https://help.apple.com/pdf/security/en_US/apple-platform-security-guide.pdf">Apple Platform Security Guide (PDF)</a>.</li>
       <li><strong>Secure Enclave</strong> &mdash; a separate, isolated security processor inside the SoC. In plain language: a small safe inside the main chip. It holds the keys that encrypt your data and checks your face or fingerprint, and it keeps working safely even if the main processor is compromised. It is also why biometric parts must be re-linked to it after repair. Apple&rsquo;s own documentation: <a href="https://support.apple.com/en-gb/guide/security/sec59b0b31ff/web">The Secure Enclave &mdash; Apple Support</a>.</li>
       <li><strong>Ultra-wideband: U1 and the second-generation chip (U2)</strong> &mdash; UWB (ultra-wideband) is a radio that measures distance precisely by timing its own pulses, which is how Precision Finding points you at an AirTag. The U1 arrived with iPhone 11; the second-generation chip arrived with iPhone 15. Apple covers the U1 in the <a href="https://help.apple.com/pdf/security/en_US/apple-platform-security-guide.pdf">Platform Security Guide</a>; it publishes no datasheet for either chip.</li>
       <li><strong>Cellular modem &mdash; Qualcomm Snapdragon X-series</strong> &mdash; the modem is the chip that talks to the phone network. Current iPhones use Qualcomm modems, not Apple ones: Snapdragon X55 (iPhone 12), X60 (13), X65 (14), X70 (15), per teardown reporting. Documentation: <a href="https://en.wikipedia.org/wiki/List_of_Qualcomm_Snapdragon_modems">List of Qualcomm Snapdragon modems</a>; model-by-model use: <a href="https://appleinsider.com/articles/26/07/08/all-the-qualcomm-parts-used-in-the-iphone-ipad-apple-watch-and-more">AppleInsider &mdash; Qualcomm parts in iPhone</a>. See also the <a href="/chips.html">chip database</a> and <a href="/datasheets.html">datasheet index</a>.</li>
@@ -315,7 +346,7 @@
       <li><a href="/repair.html">BareBoard repair guides</a></li>
       <li><a href="/repair-rights.html">The Shield &mdash; right-to-repair law</a>, including <a href="/repair-rights.html#electronics-states">electronics by state</a> and <a href="/repair-rights.html#federal">federal law</a></li>
       <li><a href="/devices/">All device hubs</a> &mdash; wave-1 siblings: <a href="/devices/playstation/">PlayStation</a>, <a href="/devices/nintendo-switch/">Nintendo Switch</a>, <a href="/devices/xbox/">Xbox</a>, <a href="/devices/e-readers/">E-readers</a>, <a href="/devices/windows-pcs/">Windows PCs</a>, <a href="/devices/smart-tv/">Smart TVs &amp; streaming</a></li>
-      <li><a href="/datasheets.html">BareBoard datasheet index</a> &middot; <a href="/chips.html">chip database</a> &middot; <a href="/hot-100.html">Hot 100</a> &middot; <a href="/library-hub.html">library hub</a> &middot; <a href="/obsolescence.html">planned obsolescence</a></li>
+      <li><a href="/datasheets.html">BareBoard datasheet index</a> &middot; <a href="/chips.html">chip database</a> &middot; <a href="/hot-100.html">Top 100</a> &middot; <a href="/library-hub.html">library hub</a> &middot; <a href="/obsolescence.html">planned obsolescence</a></li>
       <li><a href="https://support.apple.com/en-us/125146">Apple &mdash; iPhone repair manuals</a> &middot; <a href="https://support.apple.com/en-au/120579">Apple &mdash; Repair Assistant</a> &middot; <a href="https://archive.org/stream/appleservicemanuals/iphone-se-3gen-07300333A-repair_djvu.txt">Apple &mdash; iPhone SE (3rd generation) Repair Manual, archived</a></li>
       <li><a href="https://www.ifixit.com/News/100266/the-end-of-parts-pairing-almost">iFixit &mdash; The end of parts pairing, almost</a> &middot; <a href="https://www.apple.com/tr/environment/pdf/Longevity_by_Design-June_2024-Apple.pdf">Apple &mdash; Longevity, by Design (June 2024)</a></li>
     </ul>

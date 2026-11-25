@@ -24,7 +24,7 @@
  *           Controls LiNX manuals.
  *   [SET]   /pmd-settings.html — the parameter list and ranges from
  *           Curtiss-Wright R-net programming documentation (On-Board
- *           Programming manual SK78571/3 and the R-NET Technical
+ *           Programming manual SK78571/4 and the R-NET Technical
  *           Manual).
  *
  * HONEST LIMITS (mirroring [PMD]): reading is proven. The live WRITE
@@ -87,7 +87,7 @@ const FAULT_TABLES = {
   }
 };
 
-/* Parameters, from [SET] (R-net On-Board Programming SK78571/3 ranges).
+/* Parameters, from [SET] (R-net On-Board Programming SK78571/4 ranges).
    `obj` is the configuration-object index in the project's decode model:
    [READ] records 16 configuration objects read off the bus; v1 maps the
    documented drive/seating parameters onto objects 0–13, object 14 holds
@@ -633,8 +633,7 @@ const app = {
   backup: null,
   values: {},
   paused: false,
-  t0: 0,
-  busRows: 0
+  t0: 0
 };
 
 const HOOKUP = {
@@ -745,7 +744,7 @@ function addBusRow(frame, decoded) {
 }
 
 /* Faults. */
-function buildFaultCard(system, code, entry, moduleShort) {
+function buildFaultCard(code, entry, moduleShort) {
   const card = document.createElement('div');
   card.className = 'pc-fault';
   if (!entry) {
@@ -777,7 +776,7 @@ function renderFaults(list) {
   }
   for (const fault of list) {
     const entry = FAULT_TABLES[fault.system].entries[fault.code];
-    box.appendChild(buildFaultCard(fault.system, fault.code, entry, fault.module));
+    box.appendChild(buildFaultCard(fault.code, entry, fault.module));
   }
 }
 
@@ -808,7 +807,7 @@ function manualLookup() {
   const entry = FAULT_TABLES[system] ? FAULT_TABLES[system].entries[key] : null;
   const box = $('pcManualResult');
   box.innerHTML = '';
-  box.appendChild(buildFaultCard(system, key, entry, null));
+  box.appendChild(buildFaultCard(key, entry, null));
 }
 
 /* Settings. */

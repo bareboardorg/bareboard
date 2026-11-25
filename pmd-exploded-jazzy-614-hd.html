@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
   <meta name="tdm-reservation" content="1">
@@ -24,9 +24,9 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "BareBoard Protocol Reverse Engineering",
-  "description": "Closed protocols the community has reverse engineered, with open resources."
+  "@type": "WebPage",
+  "name": "Exploded View: Pride Jazzy 614 & 614 HD — PMD",
+  "description": "Pride publishes no parts breakdown for the Jazzy 614 or 614 HD. This page reproduces the labeled diagrams from the Pride owners manual, adds the heavy-duty model’s specifications from Pride’s own sell sheet, and names the gap."
 }
 </script>
 <link rel="stylesheet" href="/i18n.css">
@@ -99,6 +99,7 @@
               <div class="colnav">
                 <ul class="colnav-col">
                 <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
                 <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
                 <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
                 <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
@@ -148,7 +149,7 @@
               </div>
             </div>
           </div></li>
-              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
           <div class="col-panel">
             <div class="dropdown-inner">
               <div class="colnav">
@@ -167,8 +168,19 @@
               </div>
             </div>
           </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
 </ul>
     </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
   </div>
 </header>
 
@@ -223,7 +235,7 @@
     <p>Start with the two halves. The chair has two main assemblies: the seat assembly and the power base assembly. The seat assembly is the armrests, seatback, and seat base. The power base assembly is two motor/brake assemblies, two drive wheels, four caster wheels, two batteries, and wiring harnesses. A <strong>caster wheel</strong> is a small wheel that is not powered; it swivels so the chair can turn. A <strong>shroud</strong> is a plastic cover over the base. A <strong>harness</strong> is a bundle of wires with plugs on the ends.</p>
     <h3 id="step-1">Step 1 &mdash; The Jazzy 614 Series, labeled by Pride</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p17.jpg" alt="The Jazzy 614 Series power chair, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p17.jpg" width="1233" height="1595" alt="The Jazzy 614 Series power chair, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 5.</strong> The Jazzy 614 Series Power Chair &mdash; diagram reproduced from the manufacturer&rsquo;s owner&rsquo;s manual (INFMANU3823 Rev. B), page 17.</figcaption>
     </figure>
     <table>
@@ -245,7 +257,7 @@
     </table>
     <h3 id="step-2">Step 2 &mdash; The power base</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p18.jpg" alt="The Jazzy 614 Series power base, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p18.jpg" width="1233" height="1595" alt="The Jazzy 614 Series power base, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 6.</strong> The Jazzy 614 Series Power Base &mdash; diagram reproduced from the manufacturer&rsquo;s owner&rsquo;s manual (INFMANU3823 Rev. B), page 18.</figcaption>
     </figure>
     <table>
@@ -258,7 +270,7 @@
     <h3 id="step-3">Step 3 &mdash; Electrical parts</h3>
     <p>The electrical parts live on or inside the power base. The main circuit breaker is on the front of the base; the power module sits inside the base. The <strong>power module</strong> is the box that connects the joystick to the motors, the batteries, and the off-board charger. The <strong>main circuit breaker</strong> is a safety switch: when the batteries and the motors are heavily strained, it trips to prevent damage. If it trips, let the chair rest for about a minute, push the breaker button back in, turn the controller on, and carry on. If it keeps tripping, call your Pride Provider.</p>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p19.jpg" alt="Jazzy 614 Series electrical components, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p19.jpg" width="1233" height="1595" alt="Jazzy 614 Series electrical components, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 7.</strong> Jazzy 614 Series Electrical Components &mdash; diagram reproduced from the manufacturer&rsquo;s owner&rsquo;s manual (INFMANU3823 Rev. B), page 19.</figcaption>
     </figure>
     <table>
@@ -280,7 +292,7 @@
     <p>Each motor has a manual freewheel lever. The levers let you disconnect the drive motors from the gearboxes so the chair can be pushed by hand. Push both levers down to engage the motors (drive mode); pull both levers up to disengage them (freewheel mode). If a lever is hard to move, rock the chair gently back and forth and try again. Never use your foot on the levers, never stand on them, and never use the lever handles as tie-down points. And remember the warning above: in freewheel mode the brakes are off, so only ever do this on level ground with someone there to hold the chair.</p>
     <h3 id="step-4">Step 4 &mdash; The freewheel levers</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p20.jpg" alt="Freewheel levers in drive mode and freewheel mode — diagram from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p20.jpg" width="1233" height="1595" alt="Freewheel levers in drive mode and freewheel mode — diagram from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 8&ndash;9.</strong> Drive Mode (Drive Engaged) and Freewheel Mode (Drive Disengaged) &mdash; diagram reproduced from the manufacturer&rsquo;s owner&rsquo;s manual (INFMANU3823 Rev. B), page 20.</figcaption>
     </figure>
     <table>
@@ -297,7 +309,7 @@
     <h3 id="step-5">Step 5 &mdash; Assembly view</h3>
     <p>Figure 10 shows the parts of the chair that are designed to be taken apart and put back together by the owner or a carer: the seat, the armrests, the controller, and the foot platform. One rule from the manual: any nylon insert lock nut you remove must be replaced with a new one &mdash; never reuse it, because the nylon insert is damaged by removal and the nut will not hold as tightly.</p>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p21.jpg" alt="Jazzy 614 Series assembly view, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p21.jpg" width="1233" height="1595" alt="Jazzy 614 Series assembly view, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 10.</strong> Jazzy 614 Series Assembly View (Standard Seating System Shown) &mdash; diagram reproduced from the manufacturer&rsquo;s owner&rsquo;s manual (INFMANU3823 Rev. B), page 21.</figcaption>
     </figure>
     <table>
@@ -315,7 +327,7 @@
     <h3 id="step-6">Step 6 &mdash; The Universal Mounting System</h3>
     <p>Most seats attach to the power base with the Universal Mounting System (UMS). Tilt the seat back and slide the rear extrusion onto the rear trapeze bar, lower the front extrusion onto the front trapeze bar until the seat locks into place, and flip the seat latch safety down. Make sure the seat latch safety is flipped down before using your power chair.</p>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p22a.jpg" alt="Universal Mounting System, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p22a.jpg" width="530" height="746" alt="Universal Mounting System, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 11.</strong> Universal Mounting System &mdash; diagram reproduced from the manufacturer&rsquo;s owner&rsquo;s manual (INFMANU3823 Rev. B), page 22.</figcaption>
     </figure>
     <table>
@@ -330,7 +342,7 @@
     <h3 id="step-7">Step 7 &mdash; Controller harness routing</h3>
     <p>Plug the controller connector into the power base, then secure the controller harness to the armrest receiver with one or more wire ties. Lift the armrest straight up before tying the cable down, and route it under the armrest or toward the inside of the armrest pad &mdash; never on the outside.</p>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p22b.jpg" alt="Controller harness routing, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p22b.jpg" width="530" height="452" alt="Controller harness routing, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 12.</strong> Controller Harness Routing &mdash; diagram reproduced from the manufacturer&rsquo;s owner&rsquo;s manual (INFMANU3823 Rev. B), page 22.</figcaption>
     </figure>
     <table>
@@ -342,7 +354,7 @@
     <h3 id="step-8">Step 8 &mdash; Seat height</h3>
     <p>You can change the seat height to one of four positions by raising the front and rear trapeze bars. Raise or lower only one trapeze bar (front or rear) and you also change the seat base angle &mdash; the <strong>dump</strong>, the tilt of the seat. The job needs a metric/standard socket set and ratchet, an adjustable spanner, and thread lock. <strong>Thread lock</strong> is a liquid that stops screws working loose. Turn the controller off, disconnect it, flip up the seat latch safety, squeeze the seat latch, slide the seat forward and off, loosen the setscrews on the seat towers and the screws on the trapeze bars, pull the retaining clips, move the bars, and put it all back &mdash; new thread lock on every screw you removed, retaining clips back in, setscrews tight, seat back on, controller reconnected, harness tied down. Remove the occupant from the chair before making any adjustment.</p>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p23.jpg" alt="Seat height adjustment, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p23.jpg" width="1233" height="1595" alt="Seat height adjustment, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 13&ndash;14.</strong> Seat Height Adjustment &mdash; Seat Latch Safety and Trapeze Bars &mdash; diagram reproduced from the manufacturer&rsquo;s owner&rsquo;s manual (INFMANU3823 Rev. B), page 23. Fig. 13 carries no printed labels.</figcaption>
     </figure>
     <table>
@@ -359,7 +371,7 @@
     <h3 id="step-9">Step 9 &mdash; Seat position</h3>
     <p>You can move the seat forward or rearward by changing the extrusion mounting position: unplug the controller, remove the seat, take both extrusions off the bottom of the seat, and refasten them on a different set of mounting holes. You must move both extrusions the same number of holes, either forward or rearwards.</p>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p24.jpg" alt="Seat position adjustment, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p24.jpg" width="1233" height="1595" alt="Seat position adjustment, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 15.</strong> Seat Position Adjustment &mdash; diagram reproduced from the manufacturer&rsquo;s owner&rsquo;s manual (INFMANU3823 Rev. B), page 24.</figcaption>
     </figure>
     <table>
@@ -371,7 +383,7 @@
     <h3 id="step-10">Step 10 &mdash; Seatback and armrests</h3>
     <p>If your chair has an adjustable seatback, it sets to four angles: 90&deg;, 102&deg;, 105&deg;, or 107&deg;. Remove the adjusting screws from each seat hinge, set the back, and refit the screws. If it has a reclining seat, pull up on the seatback release lever on the right side of the seat base, lean to the angle you want, and release the lever. Each armrest&rsquo;s width changes independently &mdash; loosen the two knobs on each side of the armrest receiver bracket, slide the armrest in or out, and tighten. Changing the armrest width may increase the overall width of your chair.</p>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p25.jpg" alt="Seatback and armrest adjustment, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p25.jpg" width="1233" height="1595" alt="Seatback and armrest adjustment, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 16.</strong> Seatback/Armrest Adjustment &mdash; diagram reproduced from the manufacturer&rsquo;s owner&rsquo;s manual (INFMANU3823 Rev. B), page 25.</figcaption>
     </figure>
     <table>
@@ -387,7 +399,7 @@
     <h3 id="step-11">Step 11 &mdash; Under the armrest</h3>
     <p>You can move the controller in toward or out away from the armrest, or move it to the other armrest for left-hand or right-hand use. Flip the armrest up so it is perpendicular to the floor, loosen the setscrew on the controller bracket, slide the controller to the position you want, and tighten the setscrew. To change sides: turn the controller off, unplug it, cut the wire ties, slide it out, and fit it into the other armrest. Do not place the controller harness where it can be pinched in the seat frame or the power base frame.</p>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p26.jpg" alt="Underside of armrest, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p26.jpg" width="1233" height="1595" alt="Underside of armrest, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 17.</strong> Underside of Armrest &mdash; diagram reproduced from the manufacturer&rsquo;s owner&rsquo;s manual (INFMANU3823 Rev. B), page 26.</figcaption>
     </figure>
     <table>
@@ -401,7 +413,7 @@
     <h3 id="step-12">Step 12 &mdash; The foot platform</h3>
     <p>The foot platform adjusts three ways. Height: remove the hardware from the foot platform bracket, loosen the securement nut one-half turn, raise or lower the platform, refit the hardware, and tighten the nut. Depth: remove the hardware, move the platform in or out, and refit the hardware. Angle: flip the platform up, find the adjustment screw underneath, and turn it to raise or lower the front of the platform.</p>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p27.jpg" alt="Foot platform adjustment, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p27.jpg" width="1233" height="1595" alt="Foot platform adjustment, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 18&ndash;19.</strong> Foot Platform Adjustment and Underside of Foot Platform &mdash; diagram reproduced from the manufacturer&rsquo;s owner&rsquo;s manual (INFMANU3823 Rev. B), page 27.</figcaption>
     </figure>
     <table>
@@ -419,13 +431,13 @@
     <h3 id="step-13">Step 13 &mdash; Battery charging</h3>
     <p>To charge: position the front of the chair next to a standard electrical outlet, switch the controller off, plug the off-board charger into the charger/programming socket on the controller, then plug the charger into the wall. When the batteries are fully charged, unplug the charger from the wall first, then from the controller. Charge 8 to 14 hours after daily use. If you use the chair once a week or less, charge at least once a week for 12 to 14 hours. Never charge for more than 24 hours in one charging cycle. The charger takes the wall voltage of 120 VAC (alternating current) and converts it to 24 VDC (direct current) for the batteries. The charger will not work at all once the batteries have dropped to nearly zero voltage; if that happens, call your Pride Provider. New batteries need breaking in: fully recharge before first use, run the chair gently, recharge for 8 to 14 hours, and repeat &mdash; after four or five charging cycles they reach 100%.</p>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p29.jpg" alt="Battery charging — diagram from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p29.jpg" width="1233" height="1595" alt="Battery charging — diagram from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 20.</strong> Battery Charging &mdash; diagram reproduced from the manufacturer&rsquo;s owner&rsquo;s manual (INFMANU3823 Rev. B), page 29. The diagram carries no printed labels.</figcaption>
     </figure>
     <h3 id="step-14">Step 14 &mdash; The drive wheel, apart</h3>
     <p>If you have pneumatic tyres and you have a flat, you can replace the tube. If your chair has a solid tyre insert, you must replace the entire wheel assembly. The wheels should only be serviced or replaced by an authorised Pride Provider or a qualified technician. The steps, from the manual: turn the controller off, put the chair up on blocks, and if you are changing a pneumatic tyre, completely deflate it before removing the wheel. Remove the drive wheel nut and washer from the axle, pull the wheel off, remove the screws from the rim assembly, and separate the front and rear rim. Replace the tube, or the whole assembly if it is a solid tyre. Reassemble the rims, refit the screws, slide the wheel back onto the axle &mdash; making sure the axle key is in the axle slot &mdash; and refit the nut and washer and tighten them. Inflate pneumatic tyres to the pressure rating printed on each tyre, and take the chair off the blocks.</p>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p35.jpg" alt="Drive wheel and drive wheel disassembled, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p35.jpg" width="1233" height="1595" alt="Drive wheel and drive wheel disassembled, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 21&ndash;22.</strong> Jazzy 614 Series Drive Wheel and Drive Wheel Disassembled &mdash; diagram reproduced from the manufacturer&rsquo;s owner&rsquo;s manual (INFMANU3823 Rev. B), page 35.</figcaption>
     </figure>
     <table>
@@ -445,7 +457,7 @@
     <h3 id="step-15">Step 15 &mdash; Battery installation</h3>
     <p>To replace the batteries: turn the controller off, make sure the chair is in drive mode, pull off the rear shroud, push down on the disconnect release button and unplug the rear battery harness, unfasten the battery strap, and slide the rear battery out. Do the same for the front battery. Fit a battery harness onto each new battery following the wiring diagram on the decal &mdash; red wire to the red positive (+) terminal, black wire to the black negative (&minus;) terminal &mdash; and tighten the fasteners so the connections are secure. Put the batteries back in, fasten the strap around the rear battery, plug each harness into its mating plug on the power base, refit the rear shroud, and charge the batteries. The batteries sit flat in the tray with their terminals facing inward, toward each other. Each battery weighs 38 lb; get help lifting them. Never replace a battery while the seat is occupied, and never mix an old battery with a new one &mdash; replace both at the same time.</p>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p36.jpg" alt="Battery installation, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p36.jpg" width="1233" height="1595" alt="Battery installation, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 23.</strong> Battery Installation &mdash; diagram reproduced from the manufacturer&rsquo;s owner&rsquo;s manual (INFMANU3823 Rev. B), page 36.</figcaption>
     </figure>
     <table>
@@ -463,7 +475,7 @@
     <h3 id="step-16">Step 16 &mdash; Dimensions</h3>
     <p>The manual&rsquo;s dimension drawing gives the chair&rsquo;s size and clearance. Length and width can vary by 3% with manufacturing tolerances.</p>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p40.jpg" alt="Jazzy 614 Series and Jazzy 614HD dimensions and ground clearance — diagram from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-614-hd/jazzy-614-hd-p40.jpg" width="1233" height="1595" alt="Jazzy 614 Series and Jazzy 614HD dimensions and ground clearance — diagram from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 24.</strong> Jazzy 614 Series and Jazzy 614HD Dimensions and Ground Clearance &mdash; diagram reproduced from the manufacturer&rsquo;s owner&rsquo;s manual (INFMANU3823 Rev. B), page 40.</figcaption>
     </figure>
     <table>
@@ -520,11 +532,31 @@
     <p>Motor and gearbox breakdowns, caster and wheel breakdowns, shroud and frame breakdowns, harness part numbers, and an order form with part numbers for this chair: <strong>not published by the maker</strong>. That is not a gap in our research &mdash; it is the gate, documented. Pride distributes parts through its dealers, and the owner&rsquo;s manual is the only public document that names the parts at all. The serial number label on your chair is the one key you hold: every part on this chair is orderable by a dealer using it. Until Pride publishes the breakdown, a dealer&rsquo;s parts screen is the only copy &mdash; and anything a dealer can see for your chair, you are entitled to ask them to show you.</p>
     <p><a href="/pmd-exploded.html">&larr; All exploded views</a> &middot; <a href="/pmd.html">PMD section</a></p>
   </section>
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a> &middot; <a href="/terms.html">The Tee-O-Ess</a> &middot; <a href="/dmca.html">DMCA</a> &middot; <a href="/copyright.html">Copyright</a> &middot; <a href="/privacy.html">Privacy</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
 </main>
 
 
 <script src="/nav.js" defer></script>
-<script src="/bb-util.js" defer></script><script src="/protocols.js" defer></script>
+<script src="/search.js" defer></script>
+
 <script src="/i18n.js" defer></script>
 </body>
 </html>

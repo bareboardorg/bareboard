@@ -23,16 +23,12 @@
     return "<li><h3>" + BB.esc(entry.name) + "</h3>" + body + "</li>";
   }
 
-  fetch("/data/most-wanted.json")
-    .then(function (response) {
-      if (!response.ok) throw new Error("most-wanted.json: HTTP " + response.status);
-      return response.json();
-    })
-    .then(function (data) {
+  BB.loadJson("/data/most-wanted.json",
+    function (data) {
       var entries = data && data.entries;
       if (!Array.isArray(entries) || entries.length === 0) return;
       board.innerHTML = entries.map(renderEntry).join("");
       board.setAttribute("data-rendered-from", "data/most-wanted.json");
-    })
-    .catch(function () { /* leave the static list in place */ });
+    },
+    function () { /* leave the static list in place */ });
 })();

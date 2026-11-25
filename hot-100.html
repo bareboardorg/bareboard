@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org thumb.wikimedia.org; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org thumb.wikimedia.org; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
   <meta name="tdm-reservation" content="1">
@@ -32,9 +32,6 @@
 <link rel="stylesheet" href="/i18n.css">
 </head>
 <body>
-<!-- NOTE: URL stays /hot-100.html so existing links keep working; only the
-     visible name changes. The list returned to a Top 100 on 2026-10-15, ranked by real-world use; nav label is "Top 100"
-     site-wide (see crosslink-spec.md). -->
 <header class="site-nav">
   <div class="nav-inner">
     <nav aria-label="Primary">
@@ -102,6 +99,7 @@
               <div class="colnav">
                 <ul class="colnav-col">
                 <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
                 <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
                 <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
                 <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
@@ -151,7 +149,7 @@
               </div>
             </div>
           </div></li>
-              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
           <div class="col-panel">
             <div class="dropdown-inner">
               <div class="colnav">
@@ -170,8 +168,19 @@
               </div>
             </div>
           </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
 </ul>
     </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
   </div>
 </header>
 
@@ -180,11 +189,8 @@
 <h1>The BareBoard Top 100</h1>
 <p class="tagline bb-tagline-display">The devices that need repair help most, first &mdash; ranked by user demand.</p>
 <p><span id="hot100-updated">Loading...</span></p>
-<p class="lede">Eligibility: devices most sold, most used, and still in rotation. The ranking is user demand &mdash; what needs the most help to let people fix their devices first, scored from published figures: how many need repair, what a breakdown costs them, and how locked out of the repair they are. Every entry carries its sources and a repair guide, or says plainly that none exists.</p>
+<p class="lede">Eligibility: devices most sold, most used, and still in rotation. The ranking is user demand &mdash; what needs the most help to let people fix their devices first, scored from published figures: how many need repair, what a breakdown costs them, and how locked out of the repair they are. Every entry carries its sources, an evidence label, and a repair guide, or says plainly that none exists.</p>
 
-<!-- DATA FIRST: filters and the ranking grid come before any methodology prose.
-     The JS (hot100-live.js) is untouched; it still renders into #hot100-grid,
-     #hot100-filters, #hot100-count, #hot100-updated, and #hot100-methodology. -->
 <div class="filters">
   <label>Search devices <input type="search" id="hot100-search" placeholder="Name, maker, or keyword..." aria-label="Search devices" autocomplete="off" spellcheck="false"></label>
 </div>
@@ -192,7 +198,7 @@
 <p id="hot100-count" aria-live="polite"></p>
 <div id="hot100-grid"><p class="lede">Loading rankings...</p></div>
 <noscript><p class="lede">This list loads with JavaScript. The top 10: Powered Wheelchair, iPhone 12, iPhone 14, iPhone 15 Pro, Samsung Galaxy S24, iPhone SE (2022), Google Pixel 7, Google Pixel 8 Pro, OnePlus 11, Nothing Phone (2).</p></noscript>
-<p class="lede">Every entry carries its sources and an evidence label. Corrections welcome, verified corrections only.</p>
+<p class="lede">Corrections welcome, verified corrections only.</p>
 
 <details class="method bb-mt-2p5rem">
   <summary class="bb-summary-toggle">How the ranking works</summary>
@@ -217,11 +223,8 @@
 <footer>
     <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
     <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
-    <nav aria-label="Primary">
-      <a href="/">Home</a> &middot; <a href="/hot-100.html">Top 100</a> &middot; <a href="/most-wanted.html">Most Wanted</a> &middot; <a href="/watchmen.html">W&sup3;</a> &middot; <a href="/foundry.html">Foundry</a> &middot; <a href="/rare-manuals.html">Rare Manuals</a> &middot; <a href="/support.html">Support</a> &middot; <a href="/terms.html">Legal</a>
-    </nav>
-    <nav aria-label="Reference">
-      <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a> &middot; <a href="/chips.html">Chip Database</a> &middot; <a href="/repair.html">Repair Guides</a> &middot; <a href="/protocols.html">Protocol RE</a> &middot; <a href="/obsolescence.html">Planned Obsolescence</a> &middot; <a href="/dmca.html">DMCA</a> &middot; <a href="/copyright.html">Copyright</a> &middot; <a href="/privacy.html">Privacy</a>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
     </nav>
 
     <div class="legal-framework">
@@ -233,7 +236,7 @@
         <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
         <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
       </ul>
-      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association (OSHWA)</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
     </div>
   </footer>
 </main>

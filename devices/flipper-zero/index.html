@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
 <meta name="tdm-reservation" content="1">
@@ -29,92 +29,119 @@
     <nav aria-label="Primary">
       <ul>
         <li><a href="/" class="brand-word">BareBoard</a></li>
-        <li><a href="/devices/">Devices</a></li>
-        <li class="has-children">
-          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
           <div class="col-panel">
             <div class="dropdown-inner">
-              <ul class="dropdown-col">
-                <li><a href="/about.html#how-we-work">How we work</a></li>
-                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
                 <li><a href="/datasheets.html">Datasheet Index</a></li>
-                <li><a href="/notes/">Bench Notes</a></li>
                 <li><a href="/chips.html">Chip Database</a></li>
                 <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
                 <li><a href="/repair.html">Repair Guides</a></li>
-                <li><a href="/protocols.html">Protocol RE</a></li>
-              </ul>
+                </ul>
+              </div>
             </div>
           </div></li>
-        <li class="has-children">
-          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
           <div class="col-panel">
             <div class="dropdown-inner">
-              <ul class="dropdown-col">
-                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
-                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
-                <li><a href="/hot-100.html">Game Consoles</a></li>
-                <li><a href="/hot-100.html">Media Streamers</a></li>
-                <li><a href="/hot-100.html">Networking Gear</a></li>
-                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
-                <li><a href="/hot-100.html">Other</a></li>
-                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
-                <li><a href="/hot-100.html">Phones</a></li>
-                <li><a href="/hot-100.html">Printers</a></li>
-                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
-                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
-                <li><a href="/hot-100.html">Wearables</a></li>
-              </ul>
-            </div>
-          </div></li>
-<li class="has-children">
-          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
-          <div class="col-panel">
-            <div class="dropdown-inner">
-              <ul class="dropdown-col">
-                <li><a href="/most-wanted.html#board">The board</a></li>
-              </ul>
-            </div>
-          </div></li>
-                <li class="has-children">
-          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
-          <div class="col-panel">
-            <div class="dropdown-inner">
-              <ul class="dropdown-col">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
                 <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
                 <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
                 <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
                 <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
-              </ul>
+                </ul>
+              </div>
             </div>
           </div></li>
-<li class="has-children">
-          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
           <div class="col-panel">
             <div class="dropdown-inner">
-              <ul class="dropdown-col">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Support</li>
                 <li><a href="/support.html#mission">Mission</a></li>
                 <li><a href="/support.html#chip-in">Donate</a></li>
                 <li><a href="/support.html#allies">Allies</a></li>
-              </ul>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
             </div>
           </div></li>
-        <li class="has-children">
-          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
           <div class="col-panel">
             <div class="dropdown-inner">
-              <ul class="dropdown-col">
-                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
-                <li><a href="/watchmen.html#methodology">Methodology</a></li>
-                <li><a href="/watchmen.html#tools">The bench</a></li>
-                <li><a href="/watchmen.html#corrections">Corrections</a></li>
-              </ul>
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
             </div>
           </div></li>
-        <li class="nav-search-item">
-          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
-        </li>
-              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
           <div class="col-panel">
             <div class="dropdown-inner">
               <div class="colnav">
@@ -133,6 +160,9 @@
               </div>
             </div>
           </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
 </ul>
     </nav>
   </div>
@@ -168,7 +198,7 @@
 
   <section>
     <h2 id="fcc">FCC filing</h2>
-    <p><strong>FCC ID: 2A2V6-FZ</strong>, IC 27624-FZ, applicant Flipper Devices Inc, model FZ.1. The radio test report is public record, tested under FCC Part 15 Subpart C.</p>
+    <p><strong>FCC ID: <a href="https://fccid.io/2A2V6-FZ">2A2V6-FZ</a></strong>, IC 27624-FZ, applicant Flipper Devices Inc, model FZ.1. The radio test report is public record, tested under FCC Part 15 Subpart C.</p>
     <ul>
       <li><strong>What the filing includes:</strong> external photos, internal photos, test setup photos, RF test reports, and the user manual — public record at fccid.io.</li>
       <li><strong>What it does not include:</strong> schematics (usually withheld under confidentiality), firmware, bill of materials, or debug documentation. For those, use the official open schematics and firmware below, not the FCC filing.</li>
@@ -181,9 +211,9 @@
     <p>Major ICs are listed here, verified from published specs. A complete passive-component bill of materials (every resistor and capacitor, with values) is not yet transcribed from the official schematic — that list is marked in progress below, not invented.</p>
     <table>
       <tr><th>Part</th><th>Role</th><th>Datasheet / source</th></tr>
-      <tr><td>STM32WB55RG</td><td>Main MCU + Bluetooth LE 5.4. ARM Cortex-M4 at 64 MHz + Cortex-M0+ at 32 MHz, 1024KB Flash, 256KB SRAM.</td><td><a href="http://power.st.com/resource/en/datasheet/stm32wb55rg.pdf">ST Microelectronics STM32WB55 datasheet (PDF)</a></td></tr>
+      <tr><td>STM32WB55RG</td><td>Main MCU + Bluetooth LE 5.4. ARM Cortex-M4 at 64 MHz + Cortex-M0+ at 32 MHz, 1024KB Flash, 256KB SRAM.</td><td><a href="https://power.st.com/resource/en/datasheet/stm32wb55rg.pdf">ST Microelectronics STM32WB55 datasheet (PDF)</a></td></tr>
       <tr><td>TI CC1101</td><td>Sub-GHz transceiver. 315 / 433 / 868 / 915 MHz.</td><td><a href="https://www.ti.com/lit/ds/symlink/cc1101.pdf">Texas Instruments CC1101 datasheet (PDF)</a></td></tr>
-      <tr><td>ST25R3916 family</td><td>NFC front end, 13.56 MHz, ISO-14443A/B, MIFARE, FeliCa, NFC Forum protocols.</td><td>ST Microelectronics ST25R3916 datasheet — search the manufacturer site for ST25R3916.</td></tr>
+      <tr><td>ST25R3916 family</td><td>NFC front end, 13.56 MHz, ISO-14443A/B, MIFARE, FeliCa, NFC Forum protocols.</td><td><a href="https://www.st.com/en/nfc/st25r3916.html">ST Microelectronics ST25R3916 product page</a></td></tr>
       <tr><td>125 kHz RFID coil</td><td>Low-frequency RFID. EM400x, EM410x, EM420x, HIDProx, Indala, T5577.</td><td>See official schematic and docs.flipper.net RFID section.</td></tr>
       <tr><td>Infrared RX / TX</td><td>Infrared capture and replay, 800-950nm.</td><td>See official docs, infrared section.</td></tr>
       <tr><td>128x64 LCD</td><td>1.4-inch monochrome display, backlit.</td><td>See official schematic for the display controller and part number.</td></tr>
@@ -212,7 +242,7 @@
     <ul>
       <li><a href="https://www.bleepingcomputer.com/news/security/flipper-zero-makers-respond-to-canadas-harmful-ban-proposal/amp/">BleepingComputer — Flipper Zero makers respond to Canada&rsquo;s &lsquo;harmful&rsquo; ban proposal</a> (February 2024 announcement, with Flipper Devices response on rolling codes).</li>
       <li>BleepingComputer / Techmeme — Brazil seizing Flipper Zero shipments (ANATEL, March 2023). Source: <a href="https://www.bleepingcomputer.com/news/security/brazil-seizing-flipper-zero-shipments-to-prevent-use-in-crime/">BleepingComputer — Brazil seizing Flipper Zero shipments</a>.</li>
-      <li><a href="https://www.eff.org/deeplinks/2024/03/restricting-flipper-zero-accountability-approach-security-canadian-government">Electronic Frontier Foundation — Restricting Flipper Zero</a>: Flipper Zero devices being seized by Brazil's telecom agency.</li>
+      <li><a href="https://www.eff.org/deeplinks/2024/03/restricting-flipper-zero-accountability-approach-security-canadian-government">Restricting Flipper Zero: an accountability approach to security</a> (EFF, March 2024, on the Canadian proposal).</li>
       <li>Watchmen §16 sources — BleepingComputer Brazil seizure, and <a href="https://www.XDA-developers.com/where-is-the-flipper-zero-banned/">XDA on where Flipper Zero is banned</a>, including CBP seizure and Canada / US stance.</li>
     </ul>
   </section>
@@ -220,13 +250,7 @@
   <section>
     <h2 id="lawsuits">Lawsuits and discovery</h2>
     <p><strong>No court lawsuit against Flipper Devices was found</strong> in Watchmen's check on 2026-10-08, and no court case was found in the public reporting reviewed for this page. The record below is regulatory and marketplace action, not a lawsuit. If a verified court case exists, it belongs here with a citation — do not add one without it.</p>
-    <ul>
-      <li><strong>US CBP, late 2022:</strong> about 15,000 units seized, later released after review.</li>
-      <li><strong>Brazil ANATEL, from March 2023:</strong> shipments seized and certification blocked, with EFF intervention.</li>
-      <li><strong>Amazon, April 2023:</strong> sale banned as a card-skimming device, following the Brazil seizures.</li>
-      <li><strong>Gatwick Airport, September 2023:</strong> confiscation reported in Watchmen.</li>
-      <li><strong>Canada, February 8, 2024:</strong> government announcement proposing to examine a ban on devices associated with copying vehicle-entry signals, explicitly naming Flipper Zero. An announcement and a consultation are not the same as an enacted prohibition.</li>
-    </ul>
+    <p>Each event is dated and sourced in <a href="#record">The Full Record</a> below.</p>
     <p>Flipper Devices' response, as reported: the device cannot hijack cars built after the 1990s, because those use rolling codes, and it cannot actively block the owner's signal to catch the original — a point to check against the specific vehicle and system, not as a blanket rule for every car.</p>
   </section>
 
@@ -237,11 +261,11 @@
     <table>
       <tr><th>Year</th><th>What happened</th><th>Source</th></tr>
       <tr><td>2020</td><td><strong>Kickstarter: $4.8 million.</strong> The Flipper Zero campaign closed in September 2020 having raised about $4.8 million from more than 37,000 backers &mdash; better than 8,000% of its funding goal. The first devices reached backers about 18 months later, in early 2022.</td><td><a href="https://hackaday.com/2020/09/02/flipper-zero-blasts-past-funding-goal-and-into-our-hearts/">Hackaday &mdash; Kickstarter result</a></td></tr>
-      <tr><td>2022</td><td><strong>U.S. Customs seized 15,000 units &mdash; then released them.</strong> In late 2022, U.S. Customs and Border Protection seized a shipment of about 15,000 Flipper Zeros; after review, the shipment was released. (Details in Lawsuits and discovery above.)</td><td><a href="https://www.XDA-developers.com/where-is-the-flipper-zero-banned/">XDA Developers &mdash; where Flipper Zero is banned</a></td></tr>
-      <tr><td>2023</td><td><strong>Brazil: Anatel seized shipments and refused certification.</strong> From early 2023, Brazil&rsquo;s telecom regulator Anatel redirected incoming Flipper Zero purchases to itself and rejected all homologation (certification) requests, stating in its letters that the device had been used to facilitate crime. The EFF argued the refusal blocks a legitimate security-research tool. (Details in Lawsuits and discovery above.)</td><td><a href="https://www.bleepingcomputer.com/news/security/brazil-seizing-flipper-zero-shipments-to-prevent-use-in-crime/">BleepingComputer &mdash; Brazil seizures</a></td></tr>
-      <tr><td>2023</td><td><strong>Amazon banned it as a &ldquo;card skimming device.&rdquo;</strong> In April 2023 Amazon removed Flipper Zero listings, notifying sellers: &ldquo;This product has been identified as a card skimming device. Amazon policy prohibits the sale or listing of card skimming devices.&rdquo; Flipper Devices appealed; the device remained on sale through its own store. This was a marketplace policy decision, not a law. (Details in Lawsuits and discovery above.)</td><td><a href="https://gizmodo.com/amazon-bans-flipper-zero-card-skimming-on-tiktok-1850313284">Gizmodo &mdash; Amazon ban</a></td></tr>
-      <tr><td>2023</td><td><strong>Gatwick Airport confiscation.</strong> On September 27, 2023, airport security staff at London Gatwick confiscated a traveller&rsquo;s Flipper Zero over security concerns &mdash; an individual confiscation, widely reported, not a UK ban. (Details in Lawsuits and discovery above.)</td><td><a href="https://en.wikipedia.org/wiki/Flipper%20Zero">Wikipedia &mdash; Flipper Zero, bans and seizures</a></td></tr>
-      <tr><td>2024</td><td><strong>Canada announced a ban &mdash; then walked it back.</strong> On February 8, 2024, at a national auto-theft summit, Canada announced it would ban devices used to steal cars by copying keyless-entry signals, naming the Flipper Zero. Flipper Devices responded that the device cannot defeat rolling-code systems used since the 1990s. By March 20, 2024, Innovation, Science and Economic Development Canada had shifted position: not an outright ban, but measures to restrict such devices to legitimate actors, with details to follow consultations. (Details in Lawsuits and discovery above.)</td><td><a href="https://www.malwarebytes.com/blog/news/2024/03/canada-revisits-decision-to-ban-flipper-zero?noamp=mobile">Malwarebytes &mdash; Canada revisits the ban</a></td></tr>
+      <tr><td>2022</td><td><strong>U.S. Customs seized 15,000 units &mdash; then released them.</strong> In late 2022, U.S. Customs and Border Protection seized a shipment of about 15,000 Flipper Zeros; after review, the shipment was released.</td><td><a href="https://www.XDA-developers.com/where-is-the-flipper-zero-banned/">XDA Developers &mdash; where Flipper Zero is banned</a></td></tr>
+      <tr><td>2023</td><td><strong>Brazil: Anatel seized shipments and refused certification.</strong> From early 2023, Brazil&rsquo;s telecom regulator Anatel redirected incoming Flipper Zero purchases to itself and rejected all homologation (certification) requests, stating in its letters that the device had been used to facilitate crime. The EFF argued the refusal blocks a legitimate security-research tool.</td><td><a href="https://www.bleepingcomputer.com/news/security/brazil-seizing-flipper-zero-shipments-to-prevent-use-in-crime/">BleepingComputer &mdash; Brazil seizures</a></td></tr>
+      <tr><td>2023</td><td><strong>Amazon banned it as a &ldquo;card skimming device.&rdquo;</strong> In April 2023 Amazon removed Flipper Zero listings, notifying sellers: &ldquo;This product has been identified as a card skimming device. Amazon policy prohibits the sale or listing of card skimming devices.&rdquo; Flipper Devices appealed; the device remained on sale through its own store. This was a marketplace policy decision, not a law.</td><td><a href="https://gizmodo.com/amazon-bans-flipper-zero-card-skimming-on-tiktok-1850313284">Gizmodo &mdash; Amazon ban</a></td></tr>
+      <tr><td>2023</td><td><strong>Gatwick Airport confiscation.</strong> On September 27, 2023, airport security staff at London Gatwick confiscated a traveller&rsquo;s Flipper Zero over security concerns &mdash; an individual confiscation, widely reported, not a UK ban.</td><td><a href="https://en.wikipedia.org/wiki/Flipper%20Zero">Wikipedia &mdash; Flipper Zero, bans and seizures</a></td></tr>
+      <tr><td>2024</td><td><strong>Canada announced a ban &mdash; then walked it back.</strong> On February 8, 2024, at a national auto-theft summit, Canada announced it would ban devices used to steal cars by copying keyless-entry signals, naming the Flipper Zero. Flipper Devices responded that the device cannot defeat rolling-code systems used since the 1990s. By March 20, 2024, Innovation, Science and Economic Development Canada had shifted position: not an outright ban, but measures to restrict such devices to legitimate actors, with details to follow consultations.</td><td><a href="https://www.malwarebytes.com/blog/news/2024/03/canada-revisits-decision-to-ban-flipper-zero?noamp=mobile">Malwarebytes &mdash; Canada revisits the ban</a></td></tr>
     </table>
     <aside class="bb-notice-amber">
       <p><strong>Unverified: &ldquo;Flipper Zero is stealing modern cars.&rdquo;</strong> That the device is a driver of the recent car-theft surge is asserted but not proven. Evidence for the claim: the Canadian government named the device at its February 2024 auto-theft summit, police bulletins have flagged it, and viral videos show it interacting with vehicles and access systems. Evidence against: modern keyless systems use rolling codes &mdash; each press sends a fresh code, so a replayed recording is rejected &mdash; and Flipper Devices states the tool cannot hijack cars built after the 1990s; Malwarebytes noted in March 2024 that there had never been an officially confirmed case of a theft committed with a Flipper Zero, and real-world vehicle theft relies on relay and key-programming equipment costing thousands of dollars. No regulator or court record documents a modern car stolen with one. Sources: <a href="https://www.bleepingcomputer.com/news/security/flipper-zero-makers-respond-to-canadas-harmful-ban-proposal/">BleepingComputer &mdash; Flipper Devices&rsquo; response</a>, <a href="https://www.malwarebytes.com/blog/news/2024/03/canada-revisits-decision-to-ban-flipper-zero?noamp=mobile">Malwarebytes &mdash; Canada revisits the ban</a>.</p>
@@ -262,14 +286,15 @@
     <h2 id="generation">Newer generation — Flipper One is not a successor</h2>
     <p>Flipper One, announced in May 2026, is <strong>not</strong> a newer generation of Flipper Zero. It is a parallel product, marketed in addition to Flipper Zero, focused on networks rather than local protocols.</p>
     <table>
-      <tr><th></th><th>Flipper Zero (this page)</th><th>Flipper One (parallel, in development)</th></tr>
+      <tr><th>Aspect</th><th>Flipper Zero (this page)</th><th>Flipper One (parallel, in development)</th></tr>
       <tr><td>Focus</td><td>Offline protocols: NFC, RFID, sub-GHz, IR, iButton, GPIO</td><td>IP networking: Ethernet, Wi-Fi, routing, VPN, Linux</td></tr>
       <tr><td>Core</td><td>STM32WB55RG microcontroller, CC1101, ST25R3916</td><td>Rockchip RK3576 ARM computer + Raspberry Pi RP2350B co-processor</td></tr>
       <tr><td>Connectivity</td><td>Sub-GHz, NFC, RFID, IR, BLE 5.4, USB-C</td><td>Wi-Fi 6E, dual Gigabit Ethernet, M.2 for 5G modem, USB, HDMI</td></tr>
       <tr><td>System</td><td>Flipper firmware + apps</td><td>Linux / Flipper OS, in development</td></tr>
-      <tr><td>Status</td><td>Available product, $169</td><td>Not yet a finished product for sale; pre-orders opened at $379; crowdfunding planned later in 2026</td></tr>
+      <tr><td>Status</td><td>Available product, $169</td><td>Announced May 21, 2026 (target price $350); Kickstarter launched November 17, 2026 at $399, shipping July 2027</td></tr>
     </table>
     <p><strong>Parts taken out / put in, in focus terms:</strong> One does not swap Zero's CC1101/NFC/IR core for a faster version of the same core — it puts in a full ARM Linux computer, Ethernet, and Wi-Fi 6E, and moves away from Zero's offline-protocol focus. A true Zero successor, if one appears, will get its own exploded view here, with parts taken out and parts put in, part by part.</p>
+    <p>Sources: <a href="https://www.theregister.com/personal-tech/2026/05/21/flipper-one-wants-to-be-the-linux-multi-tool-in-your-pocket/5244165">The Register, May 21, 2026</a> (announcement, $350 target); <a href="https://www.xda-developers.com/flipper-one-launches-kickstarter-trading-nfc-rfid-linux/">XDA Developers, November 17, 2026</a> (Kickstarter $399, shipping July 2027).</p>
   </section>
 
   <section>
@@ -389,7 +414,7 @@
         <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
         <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
       </ul>
-      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association (OSHWA)</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
     </div>
   </footer>
 </main>

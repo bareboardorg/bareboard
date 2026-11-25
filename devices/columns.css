@@ -161,13 +161,3 @@
   font-size: 0.9rem;
   margin-top: 1.75rem;
 }
-
-@media (max-width: 560px) {
-  .col-strip {
-    min-height: 18rem;
-  }
-
-  .browser-col {
-    min-width: 9.5rem;
-  }
-}

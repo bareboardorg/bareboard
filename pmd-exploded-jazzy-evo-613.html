@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
   <meta name="tdm-reservation" content="1">
@@ -24,9 +24,9 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "BareBoard Protocol Reverse Engineering",
-  "description": "Closed protocols the community has reverse engineered, with open resources."
+  "@type": "WebPage",
+  "name": "Exploded View: Pride Jazzy EVO 613 — PMD",
+  "description": "Pride publishes no parts breakdown for the Jazzy EVO 613. This page reproduces the labeled diagrams from the Pride owners manual, adds the part numbers Pride does publish in its order form, and names the gap."
 }
 </script>
 <link rel="stylesheet" href="/i18n.css">
@@ -99,6 +99,7 @@
               <div class="colnav">
                 <ul class="colnav-col">
                 <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
                 <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
                 <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
                 <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
@@ -148,7 +149,7 @@
               </div>
             </div>
           </div></li>
-              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
           <div class="col-panel">
             <div class="dropdown-inner">
               <div class="colnav">
@@ -167,8 +168,19 @@
               </div>
             </div>
           </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
 </ul>
     </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
   </div>
 </header>
 
@@ -222,7 +234,7 @@
     <p>Start with the two halves. The chair has two main assemblies: the seat assembly (A) and the power base assembly (B). The seat assembly is the armrests, seatback, and seat base. The power base assembly is two motor/brake assemblies, two drive wheels, the batteries, and the wiring harnesses.</p>
     <h3 id="step-1">Step 1 &mdash; The Jazzy EVO 613, labeled by Pride</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-evo-613/jazzy-evo-613-p7.jpg" alt="The Jazzy EVO 613, labeled by Pride — overview diagram from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-evo-613/jazzy-evo-613-p7.jpg" width="1236" height="1600" alt="The Jazzy EVO 613, labeled by Pride — overview diagram from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 1.</strong> The Jazzy EVO 613 Power Chair &mdash; diagram reproduced from the manufacturer&rsquo;s owner&rsquo;s manual (INFMANU5239 Rev. B), page 7.</figcaption>
     </figure>
     <table>
@@ -243,7 +255,7 @@
     </table>
     <h3 id="step-2">Step 2 &mdash; The power base</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-evo-613/jazzy-evo-613-p8.jpg" alt="The Jazzy EVO 613 power base, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-evo-613/jazzy-evo-613-p8.jpg" width="1236" height="1600" alt="The Jazzy EVO 613 power base, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 2.</strong> The Jazzy EVO 613 Power Base &mdash; diagram reproduced from the manufacturer&rsquo;s owner&rsquo;s manual (INFMANU5239 Rev. B), page 8.</figcaption>
     </figure>
     <table>
@@ -261,7 +273,7 @@
     <h3 id="step-3">Step 3 &mdash; The power-seat base</h3>
     <p>On chairs ordered with the power elevating seat, the base looks different: the seat post is replaced by a power seat actuator, and the front cover changes shape. Everything else is the same chair.</p>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-evo-613/jazzy-evo-613-p9.jpg" alt="The Jazzy EVO 613 with power seat power base, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-evo-613/jazzy-evo-613-p9.jpg" width="1236" height="1600" alt="The Jazzy EVO 613 with power seat power base, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 3.</strong> The Jazzy EVO 613 with Power Seat Power Base &mdash; diagram reproduced from the manufacturer&rsquo;s owner&rsquo;s manual (INFMANU5239 Rev. B), page 9.</figcaption>
     </figure>
     <table>
@@ -284,7 +296,7 @@
     <p>The electrical parts live on or inside the power base. The main circuit breaker is on the front of the base; the power module sits under the front cover. The power module is the box that connects the joystick to the motors, the batteries, and the off-board charger. If the circuit breaker trips &mdash; it trips when the batteries and motors are heavily strained &mdash; let the chair rest for about a minute, push the breaker button back in, turn the controller on, and carry on. If it keeps tripping, call your Pride Provider.</p>
     <h3 id="step-4">Step 4 &mdash; Electrical parts, SLA batteries</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-evo-613/jazzy-evo-613-p10.jpg" alt="Jazzy EVO 613 with SLA batteries electrical components, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-evo-613/jazzy-evo-613-p10.jpg" width="1236" height="1600" alt="Jazzy EVO 613 with SLA batteries electrical components, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 4.</strong> Jazzy EVO 613 with SLA Batteries Electrical Components &mdash; diagram reproduced from the manufacturer&rsquo;s owner&rsquo;s manual (INFMANU5239 Rev. B), page 10.</figcaption>
     </figure>
     <table>
@@ -300,7 +312,7 @@
     <h3 id="step-5">Step 5 &mdash; Electrical parts, lithium battery</h3>
     <p>The 613 Li has the same five connections in the same places; only the battery is different. <strong>SLA</strong> means sealed lead-acid &mdash; the standard battery type, sealed so it cannot spill. The Li pack is one unit instead of two.</p>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-evo-613/jazzy-evo-613-p11.jpg" alt="Jazzy EVO 613 Li with lithium batteries electrical components, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-evo-613/jazzy-evo-613-p11.jpg" width="1236" height="1600" alt="Jazzy EVO 613 Li with lithium batteries electrical components, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 5.</strong> Jazzy EVO 613 Li with Lithium Batteries Electrical Components &mdash; diagram reproduced from the manufacturer&rsquo;s owner&rsquo;s manual (INFMANU5239 Rev. B), page 11.</figcaption>
     </figure>
     <table>
@@ -320,7 +332,7 @@
     <p>Each motor has a manual freewheel lever. The levers let you disconnect the drive motors from the gearboxes so the chair can be pushed by hand. Pull both levers up to engage the motors (drive mode); push both down to disengage them (freewheel mode). If a lever is hard to move, rock the chair gently back and forth and try again. Never use your foot on the levers, never stand on them, and never use the lever handles as tie-down points. And remember the warning above: in freewheel mode the brakes are off, so only ever do this on level ground with someone there to hold the chair.</p>
     <h3 id="step-6">Step 6 &mdash; The freewheel levers</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-evo-613/jazzy-evo-613-p12.jpg" alt="Freewheel levers in drive mode and freewheel mode, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-evo-613/jazzy-evo-613-p12.jpg" width="1236" height="1600" alt="Freewheel levers in drive mode and freewheel mode, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 6&ndash;7.</strong> Drive Mode (Drive Engaged) and Freewheel Mode (Drive Disengaged) &mdash; diagram reproduced from the manufacturer&rsquo;s owner&rsquo;s manual (INFMANU5239 Rev. B), page 12.</figcaption>
     </figure>
     <table>
@@ -336,7 +348,7 @@
     <p>The seat slides down onto the power base, and the controller fits into one of the armrests and is tightened with the supplied hex key &mdash; a small L-shaped wrench. The controller cable is the fragile part of this job: lift the armrest straight up first, route the cable under the armrest or toward the inside of the armrest pad, never on the outside, and tie it down at the right points so it cannot catch in the wheels, get pinched in the seat frame, or snag in a doorway. Then plug it into the connector on the power base. Never pick the seat frame up by the armrests &mdash; they pivot freely and you can lose control of the seat.</p>
     <h3 id="step-7">Step 7 &mdash; Seat and controller assembly</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-evo-613/jazzy-evo-613-p13.jpg" alt="Seat and controller assembly, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-evo-613/jazzy-evo-613-p13.jpg" width="1236" height="1600" alt="Seat and controller assembly, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 8.</strong> Seat and Controller Assembly &mdash; diagram reproduced from the manufacturer&rsquo;s owner&rsquo;s manual (INFMANU5239 Rev. B), page 13.</figcaption>
     </figure>
     <table>
@@ -357,7 +369,7 @@
     <p>Charging: use only the supplied 3.5-amp off-board charger &mdash; never a car battery charger. Charge 8 to 14 hours after daily use, plus 4 more hours after the charger says it is done, and give the batteries one continuous 48-hour charge once a month. The charger will not work at all once the batteries have dropped below 18 volts; if that happens, call your Pride Provider. The chair also has a charge reminder: if you drive for 8 hours or more, switch off, and do not charge, the left red light on the battery meter will flash 4 times in half-second bursts every time you switch off, until you complete one full charge with the controller switched on throughout.</p>
     <h3 id="step-8">Step 8 &mdash; SLA battery installation</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-evo-613/jazzy-evo-613-p38.jpg" alt="SLA battery installation, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-evo-613/jazzy-evo-613-p38.jpg" width="1236" height="1600" alt="SLA battery installation, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 24.</strong> SLA Battery Installation (Seat Removed for Clarity) &mdash; diagram reproduced from the manufacturer&rsquo;s owner&rsquo;s manual (INFMANU5239 Rev. B), page 38.</figcaption>
     </figure>
     <table>
@@ -372,7 +384,7 @@
     </table>
     <h3 id="step-9">Step 9 &mdash; Lithium battery installation</h3>
     <figure>
-      <img src="/img/pmd-exploded/jazzy-evo-613/jazzy-evo-613-p39.jpg" alt="Lithium battery installation, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/jazzy-evo-613/jazzy-evo-613-p39.jpg" width="1236" height="1600" alt="Lithium battery installation, labeled by Pride — diagram from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 25.</strong> Lithium Battery Installation (Seat Removed for Clarity) &mdash; diagram reproduced from the manufacturer&rsquo;s owner&rsquo;s manual (INFMANU5239 Rev. B), page 39.</figcaption>
     </figure>
     <table>
@@ -470,11 +482,31 @@
     <p>Motor and gearbox breakdowns, caster and wheel breakdowns, shroud and frame breakdowns, and harness part numbers for this chair: <strong>not published by the maker</strong>. That is not a gap in our research &mdash; it is the gate, documented. Pride distributes parts through its dealers, and the order form is the only public document that names part numbers. The serial number label on your chair is the one key you hold: every part on this chair is orderable by a dealer using it. Until Pride publishes the breakdown, a dealer&rsquo;s parts screen is the only copy &mdash; and anything a dealer can see for your chair, you are entitled to ask them to show you.</p>
     <p><a href="/pmd-exploded.html">&larr; All exploded views</a> &middot; <a href="/pmd.html">PMD section</a></p>
   </section>
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a> &middot; <a href="/terms.html">The Tee-O-Ess</a> &middot; <a href="/dmca.html">DMCA</a> &middot; <a href="/copyright.html">Copyright</a> &middot; <a href="/privacy.html">Privacy</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
 </main>
 
 
 <script src="/nav.js" defer></script>
-<script src="/bb-util.js" defer></script><script src="/protocols.js" defer></script>
+<script src="/search.js" defer></script>
+
 <script src="/i18n.js" defer></script>
 </body>
 </html>

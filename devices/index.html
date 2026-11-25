@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'none'; base-uri 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
   <meta name="tdm-reservation" content="1">
@@ -31,92 +31,119 @@
     <nav aria-label="Primary">
       <ul>
         <li><a href="/" class="brand-word">BareBoard</a></li>
-        <li><a href="/devices/" aria-current="page">Devices</a></li>
-        <li class="has-children">
-          <a href="/about.html" aria-haspopup="true" aria-expanded="false">About</a>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
           <div class="col-panel">
             <div class="dropdown-inner">
-              <ul class="dropdown-col">
-                <li><a href="/about.html#how-we-work">How we work</a></li>
-                <li><a href="/about.html#what-this-is-not">What this is not</a></li>
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
                 <li><a href="/datasheets.html">Datasheet Index</a></li>
-                <li><a href="/notes/">Bench Notes</a></li>
                 <li><a href="/chips.html">Chip Database</a></li>
                 <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
                 <li><a href="/repair.html">Repair Guides</a></li>
-                <li><a href="/protocols.html">Protocol RE</a></li>
-              </ul>
+                </ul>
+              </div>
             </div>
           </div></li>
-        <li class="has-children">
-          <a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Hot 100</a>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
           <div class="col-panel">
             <div class="dropdown-inner">
-              <ul class="dropdown-col">
-                <li><a href="/hot-100.html">Cameras &amp; Drones</a></li>
-                <li><a href="/hot-100.html">E-Readers &amp; Tablets</a></li>
-                <li><a href="/hot-100.html">Game Consoles</a></li>
-                <li><a href="/hot-100.html">Media Streamers</a></li>
-                <li><a href="/hot-100.html">Networking Gear</a></li>
-                <li class="dropdown-sub"><a href="/autopsy/xfinity-xb3/">Xfinity XB3 (Arris TG1682G)</a></li>
-                <li><a href="/hot-100.html">Other</a></li>
-                <li><a href="/hot-100.html">PCs &amp; Single-Board</a></li>
-                <li><a href="/hot-100.html">Phones</a></li>
-                <li><a href="/hot-100.html">Printers</a></li>
-                <li><a href="/hot-100.html">Smart Home / IoT</a></li>
-                <li><a href="/hot-100.html">TVs &amp; Displays</a></li>
-                <li><a href="/hot-100.html">Wearables</a></li>
-              </ul>
-            </div>
-          </div></li>
-<li class="has-children">
-          <a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
-          <div class="col-panel">
-            <div class="dropdown-inner">
-              <ul class="dropdown-col">
-                <li><a href="/most-wanted.html#board">The board</a></li>
-              </ul>
-            </div>
-          </div></li>
-                <li class="has-children">
-          <a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
-          <div class="col-panel">
-            <div class="dropdown-inner">
-              <ul class="dropdown-col">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
                 <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
                 <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
                 <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
                 <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
-              </ul>
+                </ul>
+              </div>
             </div>
           </div></li>
-<li class="has-children">
-          <a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
           <div class="col-panel">
             <div class="dropdown-inner">
-              <ul class="dropdown-col">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Support</li>
                 <li><a href="/support.html#mission">Mission</a></li>
                 <li><a href="/support.html#chip-in">Donate</a></li>
                 <li><a href="/support.html#allies">Allies</a></li>
-              </ul>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
             </div>
           </div></li>
-        <li class="has-children">
-          <a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">Watchmen</a>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
           <div class="col-panel">
             <div class="dropdown-inner">
-              <ul class="dropdown-col">
-                <li><a href="/watchmen.html#who-watches">Who watches</a></li>
-                <li><a href="/watchmen.html#methodology">Methodology</a></li>
-                <li><a href="/watchmen.html#tools">The bench</a></li>
-                <li><a href="/watchmen.html#corrections">Corrections</a></li>
-              </ul>
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
             </div>
           </div></li>
-        <li class="nav-search-item">
-          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
-        </li>
-              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
           <div class="col-panel">
             <div class="dropdown-inner">
               <div class="colnav">
@@ -135,6 +162,9 @@
               </div>
             </div>
           </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
 </ul>
     </nav>
   </div>
@@ -173,6 +203,23 @@
       <li><strong><a href="/devices/e-readers/">Kindle &amp; Kobo E-Readers</a></strong> &mdash; E Ink, batteries, and the Kobo&ndash;iFixit repair program</li>
       <li><strong><a href="/devices/windows-pcs/">Windows Laptops, Desktops &amp; Surface</a></strong> &mdash; free factory manuals, board numbers, the glued Surface</li>
       <li><strong><a href="/devices/smart-tv/">Smart TVs &amp; Streaming</a></strong> &mdash; the three-board diagnosis, backlights, $30 stick computers</li>
+      <li><strong><a href="/devices/airpods/">AirPods</a></strong> &mdash; ultrasonically welded, glued, zero screws &mdash; and, in the Pro 2, an FDA-authorized hearing aid</li>
+      <li><strong><a href="/devices/apple-tv/">Apple TV</a></strong> &mdash; fanless A-series box, no user-serviceable anything; the board tour comes from the FCC filing</li>
+      <li><strong><a href="/devices/apple-watch/">Apple Watch</a></strong> &mdash; one resin-potted module; the FCC filing&rsquo;s photographs are the closest thing to a teardown</li>
+      <li><strong><a href="/devices/chromebooks/">Chromebooks</a></strong> &mdash; the school-fleet computer; firmware documentation Google publishes, and a write-protect switch you may flip</li>
+      <li><strong><a href="/devices/cpap/">CPAP Machines</a></strong> &mdash; a blower, two sensors, and a prescription &mdash; the largest recall in medical-device history</li>
+      <li><strong><a href="/devices/dji-drones/">DJI Drones</a></strong> &mdash; the best-documented consumer aircraft ever sold; a live federal case file since December 2025</li>
+      <li><strong><a href="/devices/ebike-controllers/">E-Bike Controllers</a></strong> &mdash; one small box of MOSFETs between you and a 52-volt pack</li>
+      <li><strong><a href="/devices/ev-chargers/">EV Chargers</a></strong> &mdash; not a charger &mdash; a careful switch that negotiates with a one-kilohertz signal</li>
+      <li><strong><a href="/devices/flipper-zero/">Flipper Zero</a></strong> &mdash; $169 pocket multi-tool: RFID, NFC, sub-GHz, IR, iButton, Bluetooth, GPIO; open firmware and schematics</li>
+      <li><strong><a href="/devices/gopro/">GoPro</a></strong> &mdash; a camera built to be crashed; the battery door is the whole repair story</li>
+      <li><strong><a href="/devices/hearing-aids/">Hearing Aids</a></strong> &mdash; a microphone, a fitted amplifier, and a rice-grain speaker &mdash; over the counter since October 17, 2022</li>
+      <li><strong><a href="/devices/ipad/">iPad</a></strong> &mdash; the big iPhone board; first Apple tablet line with a genuine public parts book (May 2025)</li>
+      <li><strong><a href="/devices/mesh-wifi/">Mesh Wi-Fi</a></strong> &mdash; one network name, many radios, and a business model hiding in the wiring closet</li>
+      <li><strong><a href="/devices/robot-vacuums/">Robot Vacuums</a></strong> &mdash; a floor computer that maps your home; camera vs laser, and leaked living-room photos</li>
+      <li><strong><a href="/devices/smart-locks/">Smart Locks</a></strong> &mdash; a motor, a radio, and the deadbolt you already own; FCC photos to DEF CON to fire codes</li>
+      <li><strong><a href="/devices/smart-thermostats/">Smart Thermostats</a></strong> &mdash; a wall computer closing 24-volt relays &mdash; plus a radio that lets your utility reach in</li>
+      <li><strong><a href="/devices/solar-basics/">Solar Basics</a></strong> &mdash; a panel is a diode run backwards by the sun; the whole system, in build order</li>
     </ul>
   </section>
 
@@ -182,28 +229,17 @@
     </div>
   </div>
 
-  <p class="bench-note">Seventeen device hubs on the bench so far. The bench is ours &mdash; the backlog is long, and it grows as fast as we can open things.</p>
+  <p class="bench-note">Thirty-four device hubs on the bench so far. The bench is ours &mdash; the backlog is long, and it grows as fast as we can open things.</p>
 
   <blockquote class="bb-quote"><p>&ldquo;A distributed system is one in which the failure of a computer you didn’t even know existed can render your own computer unusable.&rdquo;</p><p class="bb-quote-by">&mdash; Leslie Lamport</p></blockquote>
 <footer>
     <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
-    <p>BareBoard &mdash; a free educational resource.</p>
-    <nav>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
       <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
     </nav>
 
     <div class="legal-framework">
-      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
-      <ul>
-        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
-        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
-        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
-        <li>All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited.</li>
-        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
-      </ul>
-      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
-    </div>
-      <div class="legal-framework">
       <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
       <ul>
       <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
@@ -214,7 +250,7 @@
       </ul>
       <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
     </div>
-</footer>
+  </footer>
 </main>
 
 <script src="/nav.js" defer></script>

@@ -36,18 +36,34 @@
   }
 
   var DEVICE_HUBS = [
+    link("AirPods", "/devices/airpods/"),
+    link("Apple TV", "/devices/apple-tv/"),
+    link("Apple Watch", "/devices/apple-watch/"),
+    link("Chromebooks", "/devices/chromebooks/"),
+    link("CPAP Machines", "/devices/cpap/"),
+    link("DJI Drones", "/devices/dji-drones/"),
+    link("E-Bike Controllers", "/devices/ebike-controllers/"),
     link("Echo Dot (5th Gen)", "/devices/echo-dot/"),
     link("ESP32 Family", "/devices/esp32/"),
+    link("EV Chargers", "/devices/ev-chargers/"),
     link("Flipper Zero", "/devices/flipper-zero/"),
+    link("GoPro", "/devices/gopro/"),
+    link("Hearing Aids", "/devices/hearing-aids/"),
+    link("iPad", "/devices/ipad/"),
     link("iPhone", "/devices/iphone/"),
     link("Kasa HS103 Smart Plug", "/devices/kasa-hs103/"),
     link("Kindle & Kobo E-Readers", "/devices/e-readers/"),
+    link("Mesh Wi-Fi", "/devices/mesh-wifi/"),
     link("Nest Mini (2nd Gen)", "/devices/nest-mini/"),
     link("Nintendo Switch Family", "/devices/nintendo-switch/"),
     link("Raspberry Pi Pico W", "/devices/pico-w/"),
     link("PlayStation Family", "/devices/playstation/"),
     link("Raspberry Pi Family", "/devices/raspberry-pi/"),
+    link("Robot Vacuums", "/devices/robot-vacuums/"),
+    link("Smart Locks", "/devices/smart-locks/"),
+    link("Smart Thermostats", "/devices/smart-thermostats/"),
     link("Smart TVs & Streaming", "/devices/smart-tv/"),
+    link("Solar Basics", "/devices/solar-basics/"),
     link("Sonoff Basic R3", "/devices/sonoff-basic-r3/"),
     link("TI-84 Plus Family", "/devices/ti-84-plus/"),
     link("Windows Laptops, Desktops & Surface", "/devices/windows-pcs/"),
@@ -98,6 +114,19 @@
 
   function bareHref(href) {
     return (href || "").split("#")[0].split("?")[0];
+  }
+
+  /* Paths compared as pages: /devices/iphone/, /devices/iphone/index.html
+     and /devices/iphone are the same page; / is the home page. */
+  function normalPath(path) {
+    var p = bareHref(path || "");
+    if (p.slice(-10) === "index.html") p = p.slice(0, -10);
+    if (p.length > 1 && p.slice(-1) === "/") p = p.slice(0, -1);
+    return p || "/";
+  }
+
+  function isCurrent(href) {
+    return normalPath(href) === normalPath(window.location.pathname);
   }
 
   /* A item's children: the graph's list first, then any children parsed
@@ -322,6 +351,7 @@
       headLink.className = "colnav-col-head-link";
       headLink.href = headingHref;
       headLink.textContent = heading;
+      if (isCurrent(headingHref)) headLink.setAttribute("aria-current", "page");
       headRow.appendChild(headLink);
     } else {
       headRow.textContent = heading;
@@ -336,6 +366,7 @@
       anchor.textContent = entry.label;
       anchor.setAttribute("data-depth", String(depth));
       anchor.setAttribute("data-idx", String(index));
+      if (isCurrent(entry.href)) anchor.setAttribute("aria-current", "page");
       row.appendChild(anchor);
       column.appendChild(row);
     });
@@ -609,5 +640,14 @@
   /* Clicking outside the nav closes everything. */
   document.addEventListener("click", function (event) {
     if (!event.target.closest(".site-nav")) closeEverything(null);
+  });
+
+  /* Mark the current page's link in the static nav markup. Screen
+     readers announce it; the stylesheet gives it the same quiet
+     highlight as a selected item. */
+  document.querySelectorAll(".site-nav a").forEach(function (anchor) {
+    if (isCurrent(anchor.getAttribute("href"))) {
+      anchor.setAttribute("aria-current", "page");
+    }
   });
 })();

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
   <meta name="tdm-reservation" content="1">
@@ -24,9 +24,9 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "BareBoard Protocol Reverse Engineering",
-  "description": "Closed protocols the community has reverse engineered, with open resources."
+  "@type": "WebPage",
+  "name": "Exploded View: Quantum 4Front 2 / 4Front 2 HD — PMD",
+  "description": "Every assembly of the Quantum 4Front 2 and 4Front 2 HD exploded to the component level, from Quantum’s own Illustrated Parts Breakdown (INFMANU5204 Rev. D): 42 assemblies and 460 parts — Q-Logic 3 electronics, Linix drive motors, Group 24 batteries — with a plain-language line for every part."
 }
 </script>
 <link rel="stylesheet" href="/i18n.css">
@@ -99,6 +99,7 @@
               <div class="colnav">
                 <ul class="colnav-col">
                 <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
                 <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
                 <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
                 <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
@@ -148,7 +149,7 @@
               </div>
             </div>
           </div></li>
-              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
           <div class="col-panel">
             <div class="dropdown-inner">
               <div class="colnav">
@@ -167,8 +168,19 @@
               </div>
             </div>
           </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
 </ul>
     </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
   </div>
 </header>
 <main>
@@ -265,7 +277,7 @@
     <h3 id="step-1">Step 1 &mdash; Main Frame Assembly, 4Front 2</h3>
     <p>IPB pages 1&ndash;2.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p5.jpg" alt="Main Frame Assembly, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p5.jpg" width="1236" height="1600" alt="Main Frame Assembly, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 1.</strong> Main Frame Assembly, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 1&ndash;2.</figcaption>
     </figure>
     <table>
@@ -289,7 +301,7 @@
     <h3 id="step-2">Step 2 &mdash; Anti-tip Assembly, 4Front 2</h3>
     <p>IPB pages 3&ndash;4.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p7.jpg" alt="Anti-tip Assembly, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p7.jpg" width="1236" height="1600" alt="Anti-tip Assembly, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 2.</strong> Anti-tip Assembly, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 3&ndash;4.</figcaption>
     </figure>
     <table>
@@ -310,7 +322,7 @@
     <h3 id="step-3">Step 3 &mdash; Suspension Spring Packages, 4Front 2</h3>
     <p>IPB pages 5&ndash;6.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p9.jpg" alt="Suspension Spring Packages, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p9.jpg" width="1236" height="1600" alt="Suspension Spring Packages, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 3.</strong> Suspension Spring Packages, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 5&ndash;6.</figcaption>
     </figure>
     <table>
@@ -343,7 +355,7 @@
     <h3 id="step-4">Step 4 &mdash; Rear Caster Arm and Wheel, 4Front 2</h3>
     <p>IPB pages 7&ndash;8.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p11.jpg" alt="Rear Caster Arm and Wheel, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p11.jpg" width="1236" height="1600" alt="Rear Caster Arm and Wheel, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 4.</strong> Rear Caster Arm and Wheel, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 7&ndash;8.</figcaption>
     </figure>
     <table>
@@ -367,7 +379,7 @@
     <h3 id="step-5">Step 5 &mdash; Drive Motor &amp; Motor Mount Assy w/ Hub, 4Front 2</h3>
     <p>IPB pages 9&ndash;10.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p13.jpg" alt="Drive Motor &amp; Motor Mount Assy w/ Hub, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p13.jpg" width="1236" height="1600" alt="Drive Motor &amp; Motor Mount Assy w/ Hub, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 5.</strong> Drive Motor &amp; Motor Mount Assy w/ Hub, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 9&ndash;10.</figcaption>
     </figure>
     <table>
@@ -397,7 +409,7 @@
     <h3 id="step-6">Step 6 &mdash; Q-Logic 3 EX Joystick Assemblies</h3>
     <p>IPB pages 11&ndash;12.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p15.jpg" alt="Q-Logic 3 EX Joystick Assemblies — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p15.jpg" width="1236" height="1600" alt="Q-Logic 3 EX Joystick Assemblies — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 6.</strong> Q-Logic 3 EX Joystick Assemblies &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 11&ndash;12.</figcaption>
     </figure>
     <table>
@@ -419,7 +431,7 @@
     <h3 id="step-7">Step 7 &mdash; Q-Logic 3e Joystick Assemblies, 4Front 2</h3>
     <p>IPB pages 13&ndash;14.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p17.jpg" alt="Q-Logic 3e Joystick Assemblies, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p17.jpg" width="1236" height="1600" alt="Q-Logic 3e Joystick Assemblies, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 7.</strong> Q-Logic 3e Joystick Assemblies, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 13&ndash;14.</figcaption>
     </figure>
     <table>
@@ -441,7 +453,7 @@
     <h3 id="step-8">Step 8 &mdash; Q-Logic 3 Stand Alone Joystick Assy</h3>
     <p>IPB pages 15&ndash;16.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p19.jpg" alt="Q-Logic 3 Stand Alone Joystick Assy — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p19.jpg" width="1236" height="1600" alt="Q-Logic 3 Stand Alone Joystick Assy — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 8.</strong> Q-Logic 3 Stand Alone Joystick Assy &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 15&ndash;16.</figcaption>
     </figure>
     <table>
@@ -459,7 +471,7 @@
     <h3 id="step-9">Step 9 &mdash; Q-Logic 3 SD Cards, 4Front 2 (USA, Canada, Australia, Europe)</h3>
     <p>IPB pages 17&ndash;18.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p21.jpg" alt="Q-Logic 3 SD Cards, 4Front 2 (USA, Canada, Australia, Europe) — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p21.jpg" width="1236" height="1600" alt="Q-Logic 3 SD Cards, 4Front 2 (USA, Canada, Australia, Europe) — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 9.</strong> Q-Logic 3 SD Cards, 4Front 2 (USA, Canada, Australia, Europe) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 17&ndash;18.</figcaption>
     </figure>
     <table>
@@ -477,7 +489,7 @@
     <h3 id="step-10">Step 10 &mdash; Q-Logic 2 &amp; 3 Joystick Shrouds</h3>
     <p>IPB pages 19&ndash;20.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p23.jpg" alt="Q-Logic 2 &amp; 3 Joystick Shrouds — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p23.jpg" width="1236" height="1600" alt="Q-Logic 2 &amp; 3 Joystick Shrouds — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 10.</strong> Q-Logic 2 &amp; 3 Joystick Shrouds &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 19&ndash;20.</figcaption>
     </figure>
     <table>
@@ -526,7 +538,7 @@
     <h3 id="step-11">Step 11 &mdash; Aftermarket Joystick Knobs - Curtis and P&amp;G</h3>
     <p>IPB pages 21&ndash;22.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p25.jpg" alt="Aftermarket Joystick Knobs - Curtis and P&amp;G — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p25.jpg" width="1236" height="1600" alt="Aftermarket Joystick Knobs - Curtis and P&amp;G — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 11.</strong> Aftermarket Joystick Knobs - Curtis and P&amp;G &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 21&ndash;22.</figcaption>
     </figure>
     <table>
@@ -550,7 +562,7 @@
     <h3 id="step-12">Step 12 &mdash; QL3 Electronics, Standard Fenders / No PTO QBC, 4Front 2</h3>
     <p>IPB pages 23&ndash;24.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p27.jpg" alt="QL3 Electronics, Standard Fenders / No PTO QBC, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p27.jpg" width="1236" height="1600" alt="QL3 Electronics, Standard Fenders / No PTO QBC, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 12.</strong> QL3 Electronics, Standard Fenders / No PTO QBC, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 23&ndash;24.</figcaption>
     </figure>
     <table>
@@ -576,7 +588,7 @@
     <h3 id="step-13">Step 13 &mdash; QL3 Electronics, Light Fenders / PTO QBC, 4Front 2</h3>
     <p>IPB pages 25&ndash;26.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p29.jpg" alt="QL3 Electronics, Light Fenders / PTO QBC, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p29.jpg" width="1236" height="1600" alt="QL3 Electronics, Light Fenders / PTO QBC, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 13.</strong> QL3 Electronics, Light Fenders / PTO QBC, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 25&ndash;26.</figcaption>
     </figure>
     <table>
@@ -604,7 +616,7 @@
     <h3 id="step-14">Step 14 &mdash; QL3 Electronics, Manual Recline, Standard Fender / No PTO QBC, 4Front 2</h3>
     <p>IPB pages 27&ndash;28.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p31.jpg" alt="QL3 Electronics, Manual Recline, Standard Fender / No PTO QBC, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p31.jpg" width="1236" height="1600" alt="QL3 Electronics, Manual Recline, Standard Fender / No PTO QBC, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 14.</strong> QL3 Electronics, Manual Recline, Standard Fender / No PTO QBC, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 27&ndash;28.</figcaption>
     </figure>
     <table>
@@ -629,7 +641,7 @@
     <h3 id="step-15">Step 15 &mdash; Q-Logic 3 LM, AM1, &amp; LAM2, 4Front 2</h3>
     <p>IPB pages 29&ndash;30.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p33.jpg" alt="Q-Logic 3 LM, AM1, &amp; LAM2, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p33.jpg" width="1236" height="1600" alt="Q-Logic 3 LM, AM1, &amp; LAM2, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 15.</strong> Q-Logic 3 LM, AM1, &amp; LAM2, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 29&ndash;30.</figcaption>
     </figure>
     <table>
@@ -656,7 +668,7 @@
     <h3 id="step-16">Step 16 &mdash; Q-Logic 3 SD Cards, 4Front 2 (USA, Canada, Australia, Europe)</h3>
     <p>IPB pages 31&ndash;32.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p35.jpg" alt="Q-Logic 3 SD Cards, 4Front 2 (USA, Canada, Australia, Europe) — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p35.jpg" width="1236" height="1600" alt="Q-Logic 3 SD Cards, 4Front 2 (USA, Canada, Australia, Europe) — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 16.</strong> Q-Logic 3 SD Cards, 4Front 2 (USA, Canada, Australia, Europe) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 31&ndash;32.</figcaption>
     </figure>
     <table>
@@ -678,7 +690,7 @@
     <h3 id="step-17">Step 17 &mdash; Base Mounted Light Assemblies, 4Front 2</h3>
     <p>IPB pages 33&ndash;34.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p37.jpg" alt="Base Mounted Light Assemblies, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p37.jpg" width="1236" height="1600" alt="Base Mounted Light Assemblies, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 17.</strong> Base Mounted Light Assemblies, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 33&ndash;34.</figcaption>
     </figure>
     <table>
@@ -708,7 +720,7 @@
     <h3 id="step-18">Step 18 &mdash; Complete Shroud Assemblies, 4Front 2</h3>
     <p>IPB pages 35&ndash;36.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p39.jpg" alt="Complete Shroud Assemblies, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p39.jpg" width="1236" height="1600" alt="Complete Shroud Assemblies, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 18.</strong> Complete Shroud Assemblies, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 35&ndash;36.</figcaption>
     </figure>
     <table>
@@ -738,7 +750,7 @@
     <h3 id="step-19">Step 19 &mdash; Painted Caster Arm Top Cover and Cap, 4Front 2</h3>
     <p>IPB pages 37&ndash;38.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p41.jpg" alt="Painted Caster Arm Top Cover and Cap, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p41.jpg" width="1236" height="1600" alt="Painted Caster Arm Top Cover and Cap, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 19.</strong> Painted Caster Arm Top Cover and Cap, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 37&ndash;38.</figcaption>
     </figure>
     <table>
@@ -769,7 +781,7 @@
     <h3 id="step-20">Step 20 &mdash; Front Door Shroud and Battery Access Bracket Assemblies, 4Front 2</h3>
     <p>IPB pages 39&ndash;40.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p43.jpg" alt="Front Door Shroud and Battery Access Bracket Assemblies, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p43.jpg" width="1236" height="1600" alt="Front Door Shroud and Battery Access Bracket Assemblies, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 20.</strong> Front Door Shroud and Battery Access Bracket Assemblies, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 39&ndash;40.</figcaption>
     </figure>
     <table>
@@ -800,7 +812,7 @@
     <h3 id="step-21">Step 21 &mdash; Rear Shroud Assembly with and without Lighting, 4Front 2</h3>
     <p>IPB pages 41&ndash;42.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p45.jpg" alt="Rear Shroud Assembly with and without Lighting, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p45.jpg" width="1236" height="1600" alt="Rear Shroud Assembly with and without Lighting, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 21.</strong> Rear Shroud Assembly with and without Lighting, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 41&ndash;42.</figcaption>
     </figure>
     <table>
@@ -838,7 +850,7 @@
     <h3 id="step-22">Step 22 &mdash; Standard Fenders, 4Front 2</h3>
     <p>IPB pages 43&ndash;44.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p47.jpg" alt="Standard Fenders, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p47.jpg" width="1236" height="1600" alt="Standard Fenders, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 22.</strong> Standard Fenders, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 43&ndash;44.</figcaption>
     </figure>
     <table>
@@ -853,7 +865,7 @@
     <h3 id="step-23">Step 23 &mdash; Lighting Fenders w/ 4 Pin Module, 4Front Series</h3>
     <p>IPB pages 45&ndash;46.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p49.jpg" alt="Lighting Fenders w/ 4 Pin Module, 4Front Series — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p49.jpg" width="1236" height="1600" alt="Lighting Fenders w/ 4 Pin Module, 4Front Series — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 23.</strong> Lighting Fenders w/ 4 Pin Module, 4Front Series &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 45&ndash;46.</figcaption>
     </figure>
     <table>
@@ -876,7 +888,7 @@
     <h3 id="step-24">Step 24 &mdash; PTO Backup Camera Module, QL3, 4Front 2</h3>
     <p>IPB pages 47&ndash;48.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p51.jpg" alt="PTO Backup Camera Module, QL3, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p51.jpg" width="1236" height="1600" alt="PTO Backup Camera Module, QL3, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 24.</strong> PTO Backup Camera Module, QL3, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 47&ndash;48.</figcaption>
     </figure>
     <table>
@@ -899,7 +911,7 @@
     <h3 id="step-25">Step 25 &mdash; Quantum Backup Camera, Standard Mount, and Headrest Mount</h3>
     <p>IPB pages 49&ndash;50.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p53.jpg" alt="Quantum Backup Camera, Standard Mount, and Headrest Mount — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p53.jpg" width="1236" height="1600" alt="Quantum Backup Camera, Standard Mount, and Headrest Mount — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 25.</strong> Quantum Backup Camera, Standard Mount, and Headrest Mount &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 49&ndash;50.</figcaption>
     </figure>
     <table>
@@ -915,7 +927,7 @@
     <h3 id="step-26">Step 26 &mdash; Quantum Backup Camera Display Mounts</h3>
     <p>IPB pages 51&ndash;52.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p55.jpg" alt="Quantum Backup Camera Display Mounts — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p55.jpg" width="1236" height="1600" alt="Quantum Backup Camera Display Mounts — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 26.</strong> Quantum Backup Camera Display Mounts &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 51&ndash;52.</figcaption>
     </figure>
     <table>
@@ -938,7 +950,7 @@
     <h3 id="step-27">Step 27 &mdash; Seat Interfaces, 4Front 2</h3>
     <p>IPB pages 53&ndash;54.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p57.jpg" alt="Seat Interfaces, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p57.jpg" width="1236" height="1600" alt="Seat Interfaces, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 27.</strong> Seat Interfaces, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 53&ndash;54.</figcaption>
     </figure>
     <table>
@@ -974,7 +986,7 @@
     <h3 id="step-28">Step 28 &mdash; Flat-free Drive Wheel, 5 Spoke Black Rim / Black Tire, 4Front 2</h3>
     <p>IPB pages 55&ndash;56.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p59.jpg" alt="Flat-free Drive Wheel, 5 Spoke Black Rim / Black Tire, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p59.jpg" width="1236" height="1600" alt="Flat-free Drive Wheel, 5 Spoke Black Rim / Black Tire, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 28.</strong> Flat-free Drive Wheel, 5 Spoke Black Rim / Black Tire, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 55&ndash;56.</figcaption>
     </figure>
     <table>
@@ -990,7 +1002,7 @@
     <h3 id="step-29">Step 29 &mdash; Pneumatic Drive Wheel, 5 Spoke Black Rim / Black Tire, 4Front 2</h3>
     <p>IPB pages 57&ndash;58.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p61.jpg" alt="Pneumatic Drive Wheel, 5 Spoke Black Rim / Black Tire, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p61.jpg" width="1236" height="1600" alt="Pneumatic Drive Wheel, 5 Spoke Black Rim / Black Tire, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 29.</strong> Pneumatic Drive Wheel, 5 Spoke Black Rim / Black Tire, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 57&ndash;58.</figcaption>
     </figure>
     <table>
@@ -1008,7 +1020,7 @@
     <h3 id="step-30">Step 30 &mdash; Painted Rim Inserts</h3>
     <p>IPB pages 59&ndash;60.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p63.jpg" alt="Painted Rim Inserts — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p63.jpg" width="1236" height="1600" alt="Painted Rim Inserts — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 30.</strong> Painted Rim Inserts &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 59&ndash;60.</figcaption>
     </figure>
     <table>
@@ -1043,7 +1055,7 @@
     <h3 id="step-31">Step 31 &mdash; Flat-free Drive Wheel, 5 Spoke, Black Rim / Black "Knobby" Tire, 14" x 4", 4Front 2</h3>
     <p>IPB pages 61&ndash;62.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p65.jpg" alt="Flat-free Drive Wheel, 5 Spoke, Black Rim / Black "Knobby" Tire, 14" x 4", 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p65.jpg" width="1236" height="1600" alt="Flat-free Drive Wheel, 5 Spoke, Black Rim / Black "Knobby" Tire, 14" x 4", 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 31.</strong> Flat-free Drive Wheel, 5 Spoke, Black Rim / Black "Knobby" Tire, 14" x 4", 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 61&ndash;62.</figcaption>
     </figure>
     <table>
@@ -1058,7 +1070,7 @@
     <h3 id="step-32">Step 32 &mdash; Pneumatic Drive Wheel, 5 Spoke, Black Rim / Black "Knobby" Tire, 14" x 4", 4Front 2</h3>
     <p>IPB pages 63&ndash;64.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p67.jpg" alt="Pneumatic Drive Wheel, 5 Spoke, Black Rim / Black "Knobby" Tire, 14" x 4", 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p67.jpg" width="1236" height="1600" alt="Pneumatic Drive Wheel, 5 Spoke, Black Rim / Black "Knobby" Tire, 14" x 4", 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 32.</strong> Pneumatic Drive Wheel, 5 Spoke, Black Rim / Black "Knobby" Tire, 14" x 4", 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 63&ndash;64.</figcaption>
     </figure>
     <table>
@@ -1079,7 +1091,7 @@
     <h3 id="step-33">Step 33 &mdash; Group 24 AGM Battery, No Handles, Flush Mount, MK</h3>
     <p>IPB pages 65&ndash;66.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p69.jpg" alt="Group 24 AGM Battery, No Handles, Flush Mount, MK — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p69.jpg" width="1236" height="1600" alt="Group 24 AGM Battery, No Handles, Flush Mount, MK — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 33.</strong> Group 24 AGM Battery, No Handles, Flush Mount, MK &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 65&ndash;66.</figcaption>
     </figure>
     <table>
@@ -1092,7 +1104,7 @@
     <h3 id="step-34">Step 34 &mdash; Group 34 Flush Mount Terminal Battery</h3>
     <p>IPB pages 67&ndash;68.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p71.jpg" alt="Group 34 Flush Mount Terminal Battery — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p71.jpg" width="1236" height="1600" alt="Group 34 Flush Mount Terminal Battery — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 34.</strong> Group 34 Flush Mount Terminal Battery &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 67&ndash;68.</figcaption>
     </figure>
     <table>
@@ -1111,7 +1123,7 @@
     <h3 id="step-35">Step 35 &mdash; Amp CTE Charger</h3>
     <p>IPB pages 69&ndash;70.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p73.jpg" alt="Amp CTE Charger — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p73.jpg" width="1236" height="1600" alt="Amp CTE Charger — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 35.</strong> Amp CTE Charger &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 69&ndash;70.</figcaption>
     </figure>
     <table>
@@ -1135,7 +1147,7 @@
     <h3 id="step-36">Step 36 &mdash; Basic Swing-away Joystick Mount, Q-Logic</h3>
     <p>IPB pages 71&ndash;72.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p75.jpg" alt="Basic Swing-away Joystick Mount, Q-Logic — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p75.jpg" width="1236" height="1600" alt="Basic Swing-away Joystick Mount, Q-Logic — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 36.</strong> Basic Swing-away Joystick Mount, Q-Logic &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 71&ndash;72.</figcaption>
     </figure>
     <table>
@@ -1151,7 +1163,7 @@
     <h3 id="step-37">Step 37 &mdash; Version 3 Swing-away Joystick Bracket &amp; Components</h3>
     <p>IPB pages 73&ndash;74.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p77.jpg" alt="Version 3 Swing-away Joystick Bracket &amp; Components — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p77.jpg" width="1236" height="1600" alt="Version 3 Swing-away Joystick Bracket &amp; Components — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 37.</strong> Version 3 Swing-away Joystick Bracket &amp; Components &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 73&ndash;74.</figcaption>
     </figure>
     <table>
@@ -1174,7 +1186,7 @@
     <h3 id="step-38">Step 38 &mdash; Retract 4 Swing-away Joystick Bracket for Curtis Joysticks</h3>
     <p>IPB pages 75&ndash;76.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p79.jpg" alt="Retract 4 Swing-away Joystick Bracket for Curtis Joysticks — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p79.jpg" width="1236" height="1600" alt="Retract 4 Swing-away Joystick Bracket for Curtis Joysticks — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 38.</strong> Retract 4 Swing-away Joystick Bracket for Curtis Joysticks &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 75&ndash;76.</figcaption>
     </figure>
     <table>
@@ -1189,7 +1201,7 @@
     <h3 id="step-39">Step 39 &mdash; Stealth Swing-away / Flip Down Joystick Brackets &amp; Mounts</h3>
     <p>IPB pages 77&ndash;78.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p81.jpg" alt="Stealth Swing-away / Flip Down Joystick Brackets &amp; Mounts — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p81.jpg" width="1236" height="1600" alt="Stealth Swing-away / Flip Down Joystick Brackets &amp; Mounts — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 39.</strong> Stealth Swing-away / Flip Down Joystick Brackets &amp; Mounts &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 77&ndash;78.</figcaption>
     </figure>
     <table>
@@ -1204,7 +1216,7 @@
     <h3 id="step-40">Step 40 &mdash; Joystick Receiver Mounts, Quantum</h3>
     <p>IPB pages 79&ndash;80.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p83.jpg" alt="Joystick Receiver Mounts, Quantum — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p83.jpg" width="1236" height="1600" alt="Joystick Receiver Mounts, Quantum — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 40.</strong> Joystick Receiver Mounts, Quantum &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 79&ndash;80.</figcaption>
     </figure>
     <table>
@@ -1226,7 +1238,7 @@
     <h3 id="step-41">Step 41 &mdash; Owner&#x27;s Package, 4Front 2</h3>
     <p>IPB pages 81&ndash;82.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p85.jpg" alt="Owner's Package, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p85.jpg" width="1236" height="1600" alt="Owner's Package, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 41.</strong> Owner's Package, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 81&ndash;82.</figcaption>
     </figure>
     <table>
@@ -1244,7 +1256,7 @@
     <h3 id="step-42">Step 42 &mdash; Decal Package, 4Front 2</h3>
     <p>IPB pages 83&ndash;84.</p>
     <figure>
-      <img src="/img/pmd-exploded/4front-2/4front-2-p87.jpg" alt="Decal Package, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/4front-2/4front-2-p87.jpg" width="1236" height="1600" alt="Decal Package, 4Front 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 42.</strong> Decal Package, 4Front 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source above). IPB pages 83&ndash;84.</figcaption>
     </figure>
     <table>
@@ -1273,10 +1285,30 @@
     <p>Every diagram and every part number above comes from Quantum&rsquo;s own IPB — nothing redrawn, nothing guessed. The &lsquo;What this part does&rsquo; column is ours. If a part on your chair does not match the book, your chair is a different revision — check the document number before you order.</p>
     <p><a href="/pmd-exploded.html">&larr; All exploded views</a> &middot; <a href="/pmd.html">PMD section</a></p>
   </section>
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a> &middot; <a href="/terms.html">The Tee-O-Ess</a> &middot; <a href="/dmca.html">DMCA</a> &middot; <a href="/copyright.html">Copyright</a> &middot; <a href="/privacy.html">Privacy</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
 </main>
 
 <script src="/nav.js" defer></script>
-<script src="/bb-util.js" defer></script><script src="/protocols.js" defer></script>
+<script src="/search.js" defer></script>
+
 <script src="/i18n.js" defer></script>
 </body>
 </html>

@@ -59,18 +59,14 @@
     control.addEventListener("change", render);
   });
 
-  fetch("chip-database.json", { credentials: "same-origin" })
-    .then(function (response) {
-      if (!response.ok) throw new Error("HTTP " + response.status);
-      return response.json();
-    })
-    .then(function (data) {
+  BB.loadJson("chip-database.json",
+    function (data) {
       entries = (data && data.entries) || [];
       populateOptions(mfrEl, entries.map(function (e) { return e.chip_manufacturer; }));
       populateOptions(funcEl, entries.map(function (e) { return e["function"]; }));
       render();
-    })
-    .catch(function (err) {
+    },
+    function (err) {
       rowsEl.innerHTML = '<tr><td colspan="6">Could not load chip-database.json (' +
         BB.esc(err.message) + ").</td></tr>";
     });

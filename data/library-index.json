@@ -1295,7 +1295,7 @@
       "category": "manual",
       "doc_type": "Rare manual · 1990–2014 · few mirrors",
       "url": null,
-      "source_url": "https://archive.org/download/bareboard-manufacturer-docs/081-sun-spot-owner-s-manual-august-2008.pdf",
+      "source_url": "https://sunspotdev.org/docs/Blue/SunSPOT-OwnersManual.pdf",
       "bytes": null,
       "basis": "UNVERIFIED — provenance not established",
       "link_only": true
@@ -1685,7 +1685,7 @@
       "category": "manual",
       "doc_type": "Rare manual · 1990–2014 · only known copy",
       "url": null,
-      "source_url": "https://archive.org/download/bareboard-manufacturer-docs/018-gp2x-caanoo-user-manual-v1-0-english.pdf",
+      "source_url": "https://www.video-games-museum.com/screenshots/Caanoo/doc/Caanoo%20User%20Manual%20(English).pdf",
       "bytes": null,
       "basis": "UNVERIFIED — provenance not established",
       "link_only": true
@@ -1854,7 +1854,7 @@
       "category": "manual",
       "doc_type": "Rare manual · 1990–2014 · few mirrors",
       "url": null,
-      "source_url": "https://archive.org/download/bareboard-manufacturer-docs/069-intel-pxa27x-processor-family-optimization-guide.pdf",
+      "source_url": "https://git.nox-rhea.org/Retro/Awesome-Retro-Docs/raw/commit/58ca4eb420bd4ede13e34da88be847c51e7f36c2/MCU/pxa270/optimization.pdf",
       "bytes": null,
       "basis": "UNVERIFIED — provenance not established",
       "link_only": true
@@ -1932,7 +1932,7 @@
       "category": "manual",
       "doc_type": "Rare manual · 2015–2026 · few mirrors",
       "url": null,
-      "source_url": "https://github.com/mkemka/jibo-unlock-notes/blob/HEAD/README.md",
+      "source_url": "https://ghc.wtf/writing/freedom-for-jibo/",
       "bytes": null,
       "basis": "UNVERIFIED — provenance not established",
       "link_only": true
@@ -2010,7 +2010,7 @@
       "category": "manual",
       "doc_type": "Rare manual · 1990–2014 · few mirrors",
       "url": null,
-      "source_url": "https://archive.org/download/bareboard-manufacturer-docs/032-mips-r8000-microprocessor-chip-set-tfp-user-s-manual-revision-3-0.pdf",
+      "source_url": "https://archive.irixnet.org/sgistuff/hardware/other/documents/R8000_chipset.html",
       "bytes": null,
       "basis": "UNVERIFIED — provenance not established",
       "link_only": true
@@ -2075,7 +2075,7 @@
       "category": "manual",
       "doc_type": "Rare manual · 1990–2014 · few mirrors",
       "url": null,
-      "source_url": "https://archive.org/download/bareboard-manufacturer-docs/076-neuros-osd-abbreviated-user-guide-2page.pdf",
+      "source_url": "https://manualmachine.com/neuros/osd/10140680-quick-start-guide/",
       "bytes": null,
       "basis": "UNVERIFIED — provenance not established",
       "link_only": true
@@ -2212,13 +2212,13 @@
     },
     {
       "title": "Rendition Verite V2200 Technical Specification, Revision B (January 1998)",
-      "maker": "V2200",
-      "model": null,
+      "maker": "Rendition",
+      "model": "V2200",
       "platform": "Vintage & Retro",
       "category": "manual",
       "doc_type": "Rare manual · 1990–2014 · few mirrors",
       "url": null,
-      "source_url": "https://archive.org/download/bareboard-manufacturer-docs/052-rendition-verite-v2200-technical-specification-revision-b-january-1998.pdf",
+      "source_url": "https://wiki.preterhuman.net/Rendition_V%C3%A9rit%C3%A9_V2200_Product_Brief",
       "bytes": null,
       "basis": "UNVERIFIED — provenance not established",
       "link_only": true
@@ -2387,7 +2387,7 @@
       "category": "manual",
       "doc_type": "Rare manual · 1990–2014 · only known copy",
       "url": null,
-      "source_url": "https://archive.org/download/bareboard-manufacturer-docs/003-trident-tvga9440agi-user-s-manual-ver-3-july-1994.pdf",
+      "source_url": "https://manuals.plus/m/1e72961d1d6329a66442f9ab0df46d31c2a4ab449a062e167a47f542e73c94fd",
       "bytes": null,
       "basis": "UNVERIFIED — provenance not established",
       "link_only": true
@@ -8087,13 +8087,13 @@
       "link_only": false
     },
     {
-      "title": "Most Wanted Tracker",
+      "title": "Doc Targets Tracker",
       "maker": "BareBoard",
       "model": null,
-      "platform": "Most Wanted",
+      "platform": "Library",
       "category": "other",
       "doc_type": "Tracker (CSV)",
-      "url": "/library/trackers/most-wanted-tracker.csv",
+      "url": "/library/trackers/doc-targets-tracker.csv",
       "source_url": null,
       "bytes": 4184,
       "basis": "Original work by BareBoard.",

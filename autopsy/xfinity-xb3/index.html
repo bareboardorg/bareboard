@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'none'; base-uri 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
 <meta name="robots" content="noai, noimageai">
 <meta name="tdm-reservation" content="1">
 <title>Xfinity XB3 (Arris TG1682G) — BareBoard</title>
@@ -11,14 +11,169 @@
 <meta property="og:site_name" content="BareBoard">
 <meta property="og:title" content="Xfinity XB3 (Arris TG1682G)">
 <meta property="og:description" content="Full teardown of the Arris TG1682G gateway with FCC filing details.">
-<meta property="og:url" content="https://bareboard.org/autopsy/xfinity-xb3/">
-<meta property="og:image" content="https://bareboard.org/img/frank-clean.jpg">
+<meta property="og:url" content="https://www.bareboard.org/autopsy/xfinity-xb3/">
+<meta property="og:image" content="https://www.bareboard.org/img/frank-clean.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Full teardown of the Arris TG1682G gateway with FCC filing details.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
 <link rel="stylesheet" href="page.css">
 <link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
 <link rel="stylesheet" href="/i18n.css">
 </head>
 <body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+</ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
 <main>
 
 <h1>Xfinity XB3 (Arris TG1682G)</h1>
@@ -428,13 +583,13 @@
 
 <table>
 <tr><th>Tool</th><th>Purpose</th><th>Brand / Model</th><th>Approx. cost</th><th>Where to get it</th></tr>
-<tr><td>UART-to-USB adapter</td><td>Converts the 3.3 V serial signal from the board to USB for your computer</td><td><strong>Glasgow Interface Explorer</strong> (recommended &mdash; open hardware, actively maintained)</td><td>~$140</td><td><a href="https://1bitsquared.com/products/glasgow">1bitsquared.com</a></td></tr>
-<tr><td></td><td></td><td>Alternative: <strong>Adafruit CP2102 USB-to-UART Bridge</strong> (3.3 V, simpler, cheaper)</td><td>~$10</td><td><a href="https://www.adafruit.com/product/3309">adafruit.com/product/3309</a></td></tr>
-<tr><td></td><td></td><td>Alternative: <strong>FTDI FT232RL breakout board</strong> (3.3 V logic)</td><td>~$15</td><td>DigiKey, Mouser, Adafruit</td></tr>
+<tr><td rowspan="3">UART-to-USB adapter</td><td rowspan="3">Converts the 3.3 V serial signal from the board to USB for your computer</td><td><strong>Glasgow Interface Explorer</strong> (recommended &mdash; open hardware, actively maintained)</td><td>~$140</td><td><a href="https://1bitsquared.com/products/glasgow">1bitsquared.com</a></td></tr>
+<tr><td>Alternative: <strong>Adafruit CP2102 USB-to-UART Bridge</strong> (3.3 V, simpler, cheaper)</td><td>~$10</td><td><a href="https://www.adafruit.com/product/3309">adafruit.com/product/3309</a></td></tr>
+<tr><td>Alternative: <strong>FTDI FT232RL breakout board</strong> (3.3 V logic)</td><td>~$15</td><td>DigiKey, Mouser, Adafruit</td></tr>
 <tr><td>Jumper wires (female-to-female)</td><td>Connect the adapter to the J3 header pins</td><td>Dupont female-to-female, 2.54 mm pitch</td><td>~$5 for 40-pack</td><td>Any electronics supplier</td></tr>
-<tr><td>Terminal emulator software</td><td>Capture and display the serial output</td><td><strong>PuTTY</strong> (Windows/Linux, free) &mdash; <a href="https://www.putty.org">putty.org</a></td><td>Free</td><td>putty.org</td></tr>
-<tr><td></td><td></td><td><strong>minicom</strong> (Linux, free) &mdash; install via package manager (<code>sudo apt install minicom</code>)</td><td>Free</td><td></td></tr>
-<tr><td></td><td></td><td><strong>screen</strong> (preinstalled on macOS; on Linux it is a separate package, not part of the base system) &mdash; <code>screen /dev/ttyUSB0 115200</code></td><td>Free/built-in</td><td></td></tr>
+<tr><td rowspan="3">Terminal emulator software</td><td rowspan="3">Capture and display the serial output</td><td><strong>PuTTY</strong> (Windows/Linux, free) &mdash; <a href="https://www.putty.org">putty.org</a></td><td>Free</td><td>putty.org</td></tr>
+<tr><td><strong>minicom</strong> (Linux, free) &mdash; install via package manager (<code>sudo apt install minicom</code>)</td><td>Free</td><td>package manager (apt/brew)</td></tr>
+<tr><td><strong>screen</strong> (preinstalled on macOS; on Linux it is a separate package, not part of the base system) &mdash; <code>screen /dev/ttyUSB0 115200</code></td><td>Free/built-in</td><td>preinstalled on macOS; package manager on Linux</td></tr>
 <tr><td><strong>Optional</strong></td><td>Logic analyzer for verifying baud rate if unknown</td><td>Saleae Logic 8 (reliable, well-documented) or clone</td><td>$109 / ~$15</td><td><a href="https://www.saleae.com">saleae.com</a> / AliExpress</td></tr>
 <tr><td>Phillips screwdriver</td><td>Open the enclosure (four screws on underside)</td><td>PH1 or PH2 tip</td><td>Any toolbox</td><td>Any hardware store</td></tr>
 </table>
@@ -764,6 +919,8 @@ eBay, thrift stores, e-waste recyclers. They sell for almost nothing because the
 </footer>
 
 </main>
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
 <script src="/i18n.js" defer></script>
 </body>
 </html>
