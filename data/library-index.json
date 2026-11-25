@@ -1,16 +1,16 @@
 {
   "version": 1,
-  "generated": "2026-11-23",
-  "total": 633,
+  "generated": "2026-11-25",
+  "total": 631,
   "counts": {
     "manual": 187,
     "schematic": 10,
-    "documentation": 13,
+    "documentation": 10,
     "datasheet": 126,
     "lawsuit": 30,
     "fda": 170,
     "fcc": 88,
-    "other": 9
+    "other": 10
   },
   "documents": [
     {
@@ -2627,32 +2627,6 @@
       "link_only": false
     },
     {
-      "title": "Attack Secure Boot of SEP — MOSEC 2020 (Team Pangu)",
-      "maker": "Apple",
-      "model": "Secure Enclave Processor (SEP)",
-      "platform": "Apple",
-      "category": "documentation",
-      "doc_type": "Conference paper (PDF)",
-      "url": "/library/collected-public-docs/pangu-mosec2020-attack-secure-boot-of-sep.pdf",
-      "source_url": "https://github.com/windknown/presentations/blob/master/Attack_Secure_Boot_of_SEP.pdf",
-      "bytes": 5359982,
-      "basis": "Held from the archive.org mirror: no open license on file (the author's repository carries no license). Hosted on the site as a publicly published conference paper; license basis not yet established.",
-      "link_only": false
-    },
-    {
-      "title": "Demystifying the Secure Enclave Processor — Black Hat USA 2016 (Mandt et al.)",
-      "maker": "Apple",
-      "model": "Secure Enclave Processor (SEP)",
-      "platform": "Apple",
-      "category": "documentation",
-      "doc_type": "Conference paper (PDF)",
-      "url": "/library/collected-public-docs/mandt-blackhat2016-demystifying-sep.pdf",
-      "source_url": "https://blackhat.com/docs/us-16/materials/us-16-Mandt-Demystifying-The-Secure-Enclave-Processor.pdf",
-      "bytes": 3459164,
-      "basis": "Held from the archive.org mirror: no open license on file. Hosted on the site as a publicly published conference paper; license basis not yet established.",
-      "link_only": false
-    },
-    {
       "title": "Hot 100 Methodology Notes",
       "maker": "BareBoard",
       "model": null,
@@ -2663,19 +2637,6 @@
       "source_url": null,
       "bytes": 3136,
       "basis": "Original work by BareBoard.",
-      "link_only": false
-    },
-    {
-      "title": "Intel ME Secrets — REcon 2014 (Skochinsky)",
-      "maker": "Intel",
-      "model": "Management Engine (ME/CSME)",
-      "platform": "Intel",
-      "category": "documentation",
-      "doc_type": "Conference paper (PDF)",
-      "url": "/library/collected-public-docs/skochinsky-recon2014-intel-me-secrets.pdf",
-      "source_url": "https://gaspar-ilom.github.io/heads-wiki/PDFs/Recon_2014_Skochinsky.pdf",
-      "bytes": 740367,
-      "basis": "Held from the archive.org mirror: no open license on file - every slide carries '(c) 2014 Igor Skochinsky'. Hosted on the site as a publicly published conference paper; license basis not yet established.",
       "link_only": false
     },
     {
@@ -8226,6 +8187,19 @@
       "url": "/library/collected-public-docs/pmd/pride_jazzy-evo-613_order-form.pdf",
       "source_url": "https://cdn.southwestmedical.com/manual/jazzy_evo_613_li_order_form.pdf",
       "bytes": 1083159,
+      "basis": "Manufacturer-published document, posted with attribution under fair use.",
+      "link_only": false
+    },
+    {
+      "title": "Pride Jazzy 1107 Basic Troubleshooting Instructions",
+      "maker": "Pride Mobility",
+      "model": "Jazzy 1107",
+      "platform": "PMD",
+      "category": "other",
+      "doc_type": "troubleshooting",
+      "url": "/library/collected-public-docs/pmd/pride_jazzy-1107_troubleshooting.pdf",
+      "source_url": "https://archive.org/download/manualsbase-id-626525/626525.pdf",
+      "bytes": 23747,
       "basis": "Manufacturer-published document, posted with attribution under fair use.",
       "link_only": false
     },
