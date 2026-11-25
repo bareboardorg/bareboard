@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
   <meta name="tdm-reservation" content="1">
@@ -24,9 +24,9 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "BareBoard Protocol Reverse Engineering",
-  "description": "Closed protocols the community has reverse engineered, with open resources."
+  "@type": "WebPage",
+  "name": "The Cheap Fixes — PMD",
+  "description": "Five power wheelchair repairs an owner can do today with no dealer tool: freewheel brake reset, charger inhibit pin cleaning, battery load test, bus cable contacts, caster bearings."
 }
 </script>
 <link rel="stylesheet" href="/i18n.css">
@@ -99,6 +99,7 @@
               <div class="colnav">
                 <ul class="colnav-col">
                 <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
                 <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
                 <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
                 <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
@@ -148,7 +149,7 @@
               </div>
             </div>
           </div></li>
-              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
           <div class="col-panel">
             <div class="dropdown-inner">
               <div class="colnav">
@@ -167,8 +168,19 @@
               </div>
             </div>
           </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
 </ul>
     </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
   </div>
 </header>
 
@@ -192,7 +204,7 @@
     <p><strong>Fixes:</strong> VR2 6 bars &mdash; the chair acts as if the charger is plugged in when it is not.<br><strong>You need:</strong> A flashlight, a can of electrical contact cleaner, and a small <strong>non-metal</strong> flat tool (a plastic spudger) for the last step.</p>
     <p>The <strong>charger socket</strong> is a round socket with three pins (a 3-pin XLR socket &mdash; the same connector family as a stage microphone). Pin 3 is the <strong>inhibit pin</strong>: while the charger is plugged in, it tells the chair &ldquo;do not drive,&rdquo; so you cannot drive off plugged into the wall. Dirt, moisture, or a bent contact can fake that signal permanently.</p>
     <figure>
-      <img src="/img/pmd-xlr.jpg" alt="A 3-pin XLR connector plugged into audio equipment" loading="lazy">
+      <img src="/img/pmd-xlr.jpg" width="761" height="210" alt="A 3-pin XLR connector plugged into audio equipment" loading="lazy">
       <figcaption><strong>Know the shape:</strong> a 3-pin XLR connector &mdash; round metal shell, three pins. This photo shows the audio version (microphone into a mixing desk); your chair&rsquo;s charger socket is the same connector family and shape, on the chair. Photo: &lsquo;XLR.jpg&rsquo; by Doktorcik, Wikimedia Commons. Source: https://commons.wikimedia.org/wiki/File:XLR.jpg. Licensed under CC BY-SA 3.0: https://creativecommons.org/licenses/by-sa/3.0/.</figcaption>
     </figure>
     <ol><li><strong>Make it safe first.</strong> Turn the chair OFF <strong>and disconnect the battery</strong> &mdash; unplug the main battery harness or trip the main circuit breaker. The socket&rsquo;s pins carry battery voltage (Pin 1 is +24V) even with the chair switched off, and they sit millimetres apart: a metal tool bridging them is a direct short. Nothing goes into the socket until the battery is disconnected. Then unplug the charger and find the 3-pin socket &mdash; usually on the front of the joystick unit or on the power base.</li><li>Shine the flashlight into the socket. Look for dirt, grit, moisture, or a bent piece of metal around Pin 3.</li><li>Spray a short burst of electrical contact cleaner into the socket. It washes out grit and moisture, then evaporates. Let it dry a minute before testing.</li><li>If you saw a bent contact, ease it gently back into line with the non-metal tool (battery still disconnected). It only needs to line up with the plug pin again &mdash; bending it too far or too often can snap it.</li></ol>
@@ -217,7 +229,7 @@
     <p><strong>Fixes:</strong> Mechanical drag &mdash; seized caster bearings that overheat the power module and kill batteries early.<br><strong>You need:</strong> Two sockets and a bench vise, and new sealed bearings in the size printed on the old ones.</p>
     <p><strong>Casters</strong> are the small swivel wheels at the front (and sometimes the rear). Each spins on a <strong>bearing</strong> &mdash; a steel ring of small balls that lets it turn almost without friction. Chair casters use <strong>sealed bearings</strong> in size <strong>608RS</strong> or <strong>6001RS</strong> &mdash; standard industrial bearings, sold everywhere for about <strong>$3&ndash;$8 each</strong>. Hair and carpet fiber wind around the axle and destroy them; a seized bearing makes the motors pull far more current in every turn. Quantum&rsquo;s warranty insert (INFINFB2779) covers bearings and bushings for 6 months.</p>
     <figure>
-      <img src="/img/pmd-caster.jpg" alt="A wheelchair front caster and its fork, next to the large wheel" loading="lazy">
+      <img src="/img/pmd-caster.jpg" width="1200" height="900" alt="A wheelchair front caster and its fork, next to the large wheel" loading="lazy">
       <figcaption><strong>The part:</strong> a front caster and its fork &mdash; the small swivel wheel this procedure services, with the axle bolt you will remove at its center. Photo: Wikimedia Commons, public domain.</figcaption>
     </figure>
     <ol><li><strong>Set up safely.</strong> No one is seated in the chair. Chair OFF, on a level surface. The chair stays resting on its drive wheels while a caster comes off. If you need to lift a corner to free the wheel, lift only enough, and block the frame solidly on a stand or blocks &mdash; never work on a chair held up by a jack alone, and never put any part of yourself under an unsupported chair. Then take the caster wheel off its fork so you can work at a bench. Pull off all the hair and carpet fiber wound around the axle &mdash; that fiber is what works into the bearing and wrecks it.</li><li>Put the wheel in the vise between two sockets: one supports the hub around the bearing, the other pushes on the bearing itself. Close the vise slowly; the bearing presses out. <strong>Read the size printed on the old bearing&rsquo;s seal</strong> (608RS or 6001RS) before ordering the new one.</li><li>Set the new bearing in place. Arrange the sockets so the vise pushes only on the bearing&rsquo;s <strong>outer ring</strong>, and close slowly until it sits fully seated, level with where the old one sat.</li><li>Bolt the caster back into its fork the way it came off. Spin it by hand before you sit in the chair.</li></ol>
@@ -226,10 +238,30 @@
   <section>
     <p><a href="/pmd.html">&larr; Back to PMD</a> &middot; <a href="/pmd-fault-codes.html">Fault codes &rarr;</a></p>
   </section>
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a> &middot; <a href="/terms.html">The Tee-O-Ess</a> &middot; <a href="/dmca.html">DMCA</a> &middot; <a href="/copyright.html">Copyright</a> &middot; <a href="/privacy.html">Privacy</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
 </main>
 
 <script src="/nav.js" defer></script>
-<script src="/bb-util.js" defer></script><script src="/protocols.js" defer></script>
+<script src="/search.js" defer></script>
+
 <script src="/i18n.js" defer></script>
 </body>
 </html>

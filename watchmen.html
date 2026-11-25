@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org thumb.wikimedia.org; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org thumb.wikimedia.org; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
   <meta name="tdm-reservation" content="1">
@@ -90,6 +90,7 @@
               <div class="colnav">
                 <ul class="colnav-col">
                 <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
                 <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
                 <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
                 <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
@@ -139,7 +140,7 @@
               </div>
             </div>
           </div></li>
-              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
           <div class="col-panel">
             <div class="dropdown-inner">
               <div class="colnav">
@@ -158,8 +159,19 @@
               </div>
             </div>
           </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
 </ul>
     </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
   </div>
 </header>
 
@@ -168,8 +180,7 @@
   <h1><em>Who Watches the Watchmen?</em></h1>
   <blockquote class="watchmen-quote">
     <p>&ldquo;WHO WATCHES THE WATCHMEN?&rdquo;</p>
-    <blockquote class="bb-quote"><p>&ldquo;One of my most productive days was throwing away 1000 lines of code.&rdquo;</p><p class="bb-quote-by">&mdash; Ken Thompson</p></blockquote>
-<footer>&mdash; Alan Moore, <em>Watchmen</em> (1986&ndash;1987). The phrase appears as graffiti throughout the graphic novel, adapted from Juvenal&rsquo;s Latin <em>&ldquo;Quis custodiet ipsos custodes?&rdquo;</em> (<em>Satires</em> VI, circa 100 AD).</footer>
+    <p class="bb-quote-by">&mdash; Alan Moore, <em>Watchmen</em> (1986&ndash;1987). The phrase appears as graffiti throughout the graphic novel, adapted from Juvenal&rsquo;s Latin <em>&ldquo;Quis custodiet ipsos custodes?&rdquo;</em> (<em>Satires</em> VI, circa 100 AD).</p>
   </blockquote>
 
   <p class="lede">Every instrument on the BareBoard bench exists to answer one question: <strong>what is really inside this hardware?</strong> This page turns that question around. The logic analyzers, debug probes, and programmers we trust with our examinations &mdash; do we know what is inside <em>them</em>?</p>
@@ -290,7 +301,7 @@
   <h2 id="amassed-bench">The Amassed Bench</h2>
   <section class="w3r2">
 <p><em>Who watches the watchmen? You do.</em> The amassed bench: <strong>28 devices</strong>,
-each examined the same way we examine everything else. Every entry carries the same
+23 examined in full below and 5 summarized in the table, awaiting full examination. Each full examination carries the same
 fields — <strong>pictures</strong> (public, including the internal photos inside FCC
 filings), <strong>FCC ID</strong>, <strong>datasheets</strong>, <strong>documentation</strong>,
 a <strong>litigation &amp; controversy check</strong>, and a <strong>basic-as-basic,
@@ -306,13 +317,13 @@ that <em>is</em> the finding. A closed design is a trust decision, not a shoppin
 <li><strong>Nothing weaponizable.</strong> We document behavior; we don't publish exploits.</li>
 <li><strong>Verified findings only.</strong> Litigation and controversy checks are
 point-in-time (2026-10-08) and dated. Re-run the search before relying on a clean result.</li>
-<li><strong>Every entry ends with a DIY audit</strong> written for a complete beginner.
+<li><strong>Every full examination ends with a DIY audit</strong> written for a complete beginner.
 If you can read this page, you can run it.</li>
 </ul>
 </div>
 
 <h2>The amassed index — 28 devices</h2>
-<p class="small">Full examinations below the table. Verdicts in one line; the sections carry the evidence.</p>
+<p class="small">Full examinations for 23 of the 28 below the table; 5 are summarized here and await full examination. Verdicts in one line; the sections carry the evidence.</p>
 <table>
 <tr><th>Device</th><th>Type</th><th>Open?</th><th>Verdict</th><th>Exam</th></tr>
 <tr><td><a href="#glasgow">Glasgow Interface Explorer</a></td><td>USB multitool</td><td>Full</td><td>Fully verifiable — the reference example</td><td><a href="#glasgow">W³</a></td></tr>
@@ -345,24 +356,24 @@ If you can read this page, you can run it.</li>
 <tr><td>GreatFET</td><td>USB multitool</td><td>Full</td><td>Open hardware and firmware</td><td>—</td></tr>
 </table>
 
-<h2>The examinations</h2>
+<h2>The examinations, sections 1&ndash;16</h2>
 
 <h3 id="saleae">§1 — Saleae Logic 8 / Logic Pro 8</h3>
 <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/E-mu_Systems_Emulator_II_Serial_No._729_-_closeup_-_emulator_2_memory_option_board%2C_with_Saleae_Logic_analyzer_connected_to_one_of_the_many_DRAM_chips_%282011-01-22_19.25.56_by_John_R._Southern_%40Flickr5404785842%29.jpg/1280px-thumbnail.jpg" alt="Saleae Logic analyzer connected to a board under test" loading="lazy">
 <p class="small">Photo: John R. Southern from Toronto, Ontario, Canada, CC BY-SA 2.0, via <a href="https://commons.wikimedia.org/wiki/File:E-mu_Systems_Emulator_II_Serial_No._729_-_closeup_-_emulator_2_memory_option_board,_with_Saleae_Logic_analyzer_connected_to_one_of_the_many_DRAM_chips_(2011-01-22_19.25.56_by_John_R._Southern_@Flickr5404785842).jpg">Wikimedia Commons</a>. Pictured: the original Saleae Logic in use, clipped onto a board.</p>
 <p><strong>What it is:</strong> the industry-standard USB logic analyzer — 8 digital
 channels (Pro adds analog, ±10 V, 12-bit, up to 500 MS/s digital — analog sampling is 50 MS/s). The software is the product:
-Logic 2, with an SDK for custom protocol analyzers [46].</p>
+Logic 2, with an SDK for custom protocol analyzers.</p>
 <p><strong>How open is it:</strong> hardware closed — no public schematics, no firmware
 source. The software is proprietary. What <em>is</em> public: an EEVblog teardown of the
-Logic Pro 8 [47], and the company itself — Saleae, Inc., South San Francisco, roughly
-20 people [48].</p>
+Logic Pro 8 [49], and the company itself — Saleae, Inc., South San Francisco, roughly
+20 people [50].</p>
 <p><strong>Public record:</strong> <strong>FCC ID:</strong> not yet verified — look it up
 (DIY step 2). <strong>Datasheet &amp; docs:</strong> saleae.com (Logic 2 download,
 protocol-analyzer SDK, knowledge base). <strong>Controversies &amp; litigation (checked
 2026-10-08):</strong> no public litigation found. The notable public episode is the
 clone market — the same Cypress FX2 chip that powered old Saleae units powers $10
-clones (see the FX2 entry on the main W³ page).</p>
+clones (see the <a href="#fx2">FX2 entry</a> above).</p>
 <p><strong>Watch-outs:</strong> closed firmware — trust rests entirely on the vendor.
 Cheap units lack input buffers; overvoltage kills them. The clones are a different
 trust boundary than the original.</p>
@@ -380,7 +391,7 @@ that's the board, without opening it.</li>
 <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/RIGOL_DS1054Z_Digital_Storage_Oscilloscope.jpg/1280px-RIGOL_DS1054Z_Digital_Storage_Oscilloscope.jpg" alt="Rigol DS1054Z oscilloscope" loading="lazy">
 <p class="small">Photo: Draconichiaro, CC BY-SA 4.0, via <a href="https://commons.wikimedia.org/wiki/File:RIGOL_DS1054Z_Digital_Storage_Oscilloscope.jpg">Wikimedia Commons</a>.</p>
 <p><strong>What it is:</strong> 4-channel, 50 MHz, 1 GS/s digital oscilloscope with a
-7-inch display and Ethernet — the most-hacked scope in history [1][4].</p>
+7-inch display and Ethernet — the most-hacked scope in history [3][4].</p>
 <p><strong>How open is it:</strong> closed. No public schematics, no firmware source.
 The scope runs Linux; the community has booted it, reverse-engineered it [6], and
 started an open-scope project on the hardware [4].</p>
@@ -389,7 +400,7 @@ up (DIY step 2). <strong>Datasheet:</strong> rigolna.com (1000Z series) [2].
 <strong>Controversies &amp; litigation (checked 2026-10-08):</strong> the "riglol"
 license-keygen saga — option licenses (bandwidth upgrades, serial decoders) have been
 generatable offline since ~2014 because of a weak EC-crypto implementation (the MIRACL
-library); public keygens and write-ups since 2014 [1][5]. The hack history runs
+library); public keygens and write-ups since 2014 [4][5]. The hack history runs
 DS1022C → DS1054Z → MSO5000, the last with a default root password of "root" over SSH
 and a "-fullopt" startup flag [3][4]. At times Rigol bundled all options free [5].
 No public litigation found.</p>
@@ -418,12 +429,12 @@ up (DIY step 2). <strong>Datasheet:</strong> siglent.com. <strong>Controversies 
 litigation (checked 2026-10-08):</strong> two documented cases. <strong>(1)</strong>
 The license-key extraction hack (2018): the scope's license keys are readable from its
 shadow file, and bandwidth licenses are activated over SCPI — 100 MHz → 200 MHz for
-free [9]. <strong>(2)</strong> SEC Consult (2018, disclosed via VDE CERT): the
+free [8]. <strong>(2)</strong> SEC Consult (2018, disclosed via VDE CERT): the
 SDS1202X-E has <strong>two backdoor accounts with hardcoded passwords reachable over
 telnet port 23</strong> on the local network; the EasyScopeX control software answers
 without authentication and speaks unencrypted TCP; BusyBox, glibc, and the kernel are
 outdated with known vulnerabilities; no patch at disclosure. SEC Consult's verdict:
-"all procedures executed with this device are untrustworthy" [8]. No public litigation
+"all procedures executed with this device are untrustworthy" [7]. No public litigation
 found. <strong>Model gap, stated plainly:</strong> the documented backdoor case is the
 SDS1202X-E — the 2-channel sibling of this section's 4-channel SDS1104X-E, not the
 1104X-E itself. The two share the X-E platform and firmware lineage, which is why the
@@ -438,7 +449,7 @@ as unverified until proven otherwise.</p>
 <li>Find the model and serial number.</li>
 <li>Search fccid.io for "Siglent".</li>
 <li>Download the datasheet from siglent.com.</li>
-<li>Read the SEC Consult advisory [8].</li>
+<li>Read the SEC Consult advisory [7].</li>
 <li>On your own network only: check whether your scope answers on telnet port 23.</li>
 <li>If it does — that's a finding. Disconnect it, record the firmware version, report it to Siglent.</li>
 </ol>
@@ -453,10 +464,10 @@ the chipset is public documentation: a Cypress EZ-USB FX2 plus an AD9288 dual 8-
 ADC. The firmware is not stored on the device at all — it is uploaded at every
 power-up and lives in RAM. The community replaced it entirely: OpenHantek6022 is
 GPL-3.0 and "completely free open source — all nonfree Hantek firmware is removed"
-[10]; sigrok supports the 6022BE with zero proprietary software [11].</p>
+[9]; sigrok supports the 6022BE with zero proprietary software [10].</p>
 <p><strong>Public record:</strong> <strong>FCC ID:</strong> not yet verified — look it
 up (DIY step 2). <strong>Datasheet &amp; docs:</strong> hantek.com; OpenHantek6022
-GitHub [10]; sigrok wiki. <strong>Controversies &amp; litigation (checked 2026-10-08):</strong>
+GitHub [9]; sigrok wiki. <strong>Controversies &amp; litigation (checked 2026-10-08):</strong>
 no litigation found. The notable episode is the driver split — the original Hantek
 Windows driver does not work with the open software; the open stack uses WinUSB.</p>
 <p><strong>Watch-outs:</strong> 48 MS/s is theoretical; USB overhead limits it. 20 MHz
@@ -466,7 +477,7 @@ circuits with it (shock and short hazard).</p>
 <ol>
 <li>Find the model on the case.</li>
 <li>Search fccid.io for "Hantek".</li>
-<li>Install sigrok/PulseView (free) — the 6022BE works with no proprietary software on Linux [11].</li>
+<li>Install sigrok/PulseView (free) — the 6022BE works with no proprietary software on Linux [10].</li>
 <li>Feed it a known signal — a 1 kHz square wave from a $5 timer kit — and confirm the display matches.</li>
 <li>Compare a voltage reading against your multimeter.</li>
 </ol>
@@ -479,17 +490,17 @@ CAT III 1000 V / CAT IV 600 V, audible input alert. When a reading must be trust
 this is the instrument.</p>
 <p><strong>How open is it:</strong> the hardware is closed, but the paper trail is
 unusually public: the original 87 service manual (108 pages, with schematics) is on
-Fluke's own site [14]; the 80 Series III service information is public [13]; the 87V
+Fluke's own site [13]; the 80 Series III service information is public [12]; the 87V
 MAX calibration information — including the password-protected CAL mode — is a public
-Fluke PDF [12]. The finding: there is <strong>no</strong> public service manual for the
-87 III / 87V themselves [15]. Older Fluke = open docs; newer = closed.</p>
+Fluke PDF [11]. The finding: there is <strong>no</strong> public service manual for the
+87 III / 87V themselves [14]. Older Fluke = open docs; newer = closed.</p>
 <p><strong>Public record:</strong> <strong>FCC ID:</strong> none shown on the product
 page (agency approvals: CE, CSA, RCM); test equipment may be exempt under FCC §15.103 —
-verify at fccid.io. <strong>Datasheet &amp; docs:</strong> fluke.com product page [16].
+verify at fccid.io. <strong>Datasheet &amp; docs:</strong> fluke.com product page [15].
 <strong>Controversies &amp; litigation (checked 2026-10-08):</strong> the 2014 SparkFun
 trademark case — Fluke's trademark on a dark-gray multimeter with a yellow border
 (US 2796480) led US Customs to seize 2,000 SparkFun meters worth $30,000, to be
-destroyed; Fluke later "extended a generous hand" [17][18]. A real, documented legal
+destroyed; Fluke later "extended a generous hand" [16][17]. A real, documented legal
 action with community impact.</p>
 <p><strong>Watch-outs:</strong> check the calibration sticker date — calibration is
 recommended annually; past it, treat readings as approximate. Counterfeit probes and
@@ -498,9 +509,9 @@ leads exist — buy from authorized dealers.</p>
 <ol>
 <li>Find the model and serial number on the back.</li>
 <li>Search fccid.io for "Fluke" — the filings include internal photos.</li>
-<li>Download the user manual from fluke.com [16].</li>
+<li>Download the user manual from fluke.com [15].</li>
 <li>Check the calibration date sticker.</li>
-<li>Fuse test: turn the dial to ohms, touch a probe tip to the metal of the A input jack — it should beep [12].</li>
+<li>Fuse test: turn the dial to ohms, touch a probe tip to the metal of the A input jack — it should beep [11].</li>
 <li>Sanity check: measure a fresh AA battery. Expect about 1.5 V.</li>
 </ol>
 
@@ -511,12 +522,12 @@ leads exist — buy from authorized dealers.</p>
 RS232 data logging, around $50–70 — the hacker's budget meter.</p>
 <p><strong>How open is it:</strong> high. The meter chip (ES51922) has a public
 datasheet; the serial protocol is documented by the community; logging programs are
-published [19]; and the famous public hack — dump, modify, and reflash the calibration
+published [18]; and the famous public hack — dump, modify, and reflash the calibration
 EEPROM, with a single bit-flip enabling serial output — is written up step by step
-(Hackaday, 2016) [20]. A review-and-teardown documents the optical isolation [21].</p>
+(Hackaday, 2016) [19]. A review-and-teardown documents the optical isolation [20].</p>
 <p><strong>Public record:</strong> <strong>FCC ID:</strong> not yet verified — look it
 up (DIY step 2). <strong>Datasheet &amp; docs:</strong> uni-trend.com; UT-D04 USB cable;
-community logging software [19]. <strong>Controversies &amp; litigation (checked
+community logging software [18]. <strong>Controversies &amp; litigation (checked
 2026-10-08):</strong> no litigation found. The notable public position is safety:
 minimal input protection — the community consensus is to treat it as a low-voltage
 meter.</p>
@@ -536,24 +547,24 @@ rating. The optical link is isolated, which is genuinely good.</p>
 <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Aneng_AN870_multimeter_01.jpg/1280px-Aneng_AN870_multimeter_01.jpg" alt="Aneng AN870 multimeter" loading="lazy">
 <p class="small">Photo: Retired electrician, CC0, via <a href="https://commons.wikimedia.org/wiki/File:Aneng_AN870_multimeter_01.jpg">Wikimedia Commons</a>. Pictured: the AN870, the AN8008's bigger sibling.</p>
 <p><strong>What it is:</strong> a pocket true-RMS multimeter under $25 that Dave Jones
-of EEVblog reviewed — critical of the safety, impressed by the value [22].</p>
+of EEVblog reviewed — critical of the safety, impressed by the value [21].</p>
 <p><strong>How open is it:</strong> medium. The meter chip (DM1106EN, an improved
 DTM0660) has public family datasheets; calibration runs through a hidden three-button
 sequence; the community publishes hardware mods (faster continuity with a capacitor;
-accuracy mods) [23][24]. Teardowns document the internals: EEPROM beside the blob chip,
-10 mm fuses, minimal input protection [24].</p>
+accuracy mods) [22][23]. Teardowns document the internals: EEPROM beside the blob chip,
+10 mm fuses, minimal input protection [23].</p>
 <p><strong>Public record:</strong> <strong>FCC ID:</strong> not yet verified — look it
 up (DIY step 2). <strong>Datasheet &amp; docs:</strong> EEVblog review; teardown and
-mod guides [22][23][24]. <strong>Controversies &amp; litigation (checked 2026-10-08):</strong>
+mod guides [21][22][23]. <strong>Controversies &amp; litigation (checked 2026-10-08):</strong>
 no litigation found. The public safety case is the community warning: do not use this
-meter above 30 V [23].</p>
+meter above 30 V [22].</p>
 <p><strong>Watch-outs:</strong> minimal input protection — low-voltage work only. The
-continuity buzzer is slow (a documented mod speeds it up [23]).</p>
+continuity buzzer is slow (a documented mod speeds it up [22]).</p>
 <p><strong>Do it yourself — the basic audit:</strong></p>
 <ol>
 <li>Find the model on the back.</li>
 <li>Search fccid.io for "Aneng".</li>
-<li>Watch the EEVblog review [22] — learn exactly where the safety gaps are.</li>
+<li>Read the community safety discussion [21] — learn exactly where the safety gaps are.</li>
 <li>Open the battery door; check the fuse is the type the manual specifies.</li>
 <li>Measure a fresh AA. Expect about 1.5 V.</li>
 <li>Stay under 30 V. That's the whole safety case.</li>
@@ -564,18 +575,18 @@ continuity buzzer is slow (a documented mod speeds it up [23]).</p>
 <p class="small">Photo: Zuzu, CC BY-SA 3.0, via <a href="https://commons.wikimedia.org/wiki/File:Hakko_936_soldering_station_complete.jpeg">Wikimedia Commons</a>. Pictured: the Hakko 936 — the FX-888D examined here is its successor.</p>
 <p><strong>What it is:</strong> 70 W digital soldering station, 120–899 °F, closed-loop
 sensor, ESD-safe (tip-to-ground &lt; 2 Ω) — the workhorse iron, now replaced by the
-FX-888DX [25].</p>
+FX-888DX [24].</p>
 <p><strong>How open is it:</strong> closed — no public schematics. The instruction
-manual is public [25]. The definitive counterfeit tell, per the EEVblog forum: a genuine
-unit's main IC is a Hakko custom part; fakes use an Atmel ATMEGA8A [26].</p>
+manual is public [24]. The definitive counterfeit tell, per the EEVblog forum: a genuine
+unit's main IC is a Hakko custom part; fakes use an Atmel ATMEGA8A [25].</p>
 <p><strong>Public record:</strong> <strong>FCC ID:</strong> not yet verified — look it
 up (DIY step 2). <strong>Datasheet &amp; docs:</strong> hakkousa.com product page
-(FX888D-23BY) [25]. <strong>Controversies &amp; litigation (checked 2026-10-08):</strong>
+(FX888D-23BY) [24]. <strong>Controversies &amp; litigation (checked 2026-10-08):</strong>
 the counterfeit epidemic — near-indistinguishable fakes, and per a 2016 forum report,
 "Hakko have taken legal action against factories in several Chinese provinces to no
-avail" [27]. Identification tells documented publicly: embossed logo vs. sticker on the
+avail" [26]. Identification tells documented publicly: embossed logo vs. sticker on the
 base, metal insert in the holder, silk-screened label vs. scratched lettering, soldering
-quality, and serial-number verification with Hakko or the distributor [26][27][28].</p>
+quality, and serial-number verification with Hakko or the distributor [25][26][27].</p>
 <p><strong>Watch-outs:</strong> a soldering station is mains-powered; a fake with poor
 soldering and unknown parts is a fire risk. Verify the serial with Hakko before you
 trust it with mains.</p>
@@ -583,8 +594,8 @@ trust it with mains.</p>
 <ol>
 <li>Find the model and serial number on the base.</li>
 <li>Search fccid.io for "Hakko".</li>
-<li>Email Hakko (or your distributor) the serial number — they will verify it [28].</li>
-<li>Look at the base: embossed logo = likely genuine; sticker = suspect [27].</li>
+<li>Email Hakko (or your distributor) the serial number — they will verify it [27].</li>
+<li>Look at the base: embossed logo = likely genuine; sticker = suspect [26].</li>
 <li>Check the holder has the metal insert that catches solder drips.</li>
 <li>If it's a fake: low-value work only, or replace it. Don't trust it with mains.</li>
 </ol>
@@ -595,39 +606,39 @@ trust it with mains.</p>
 <p><strong>What it is:</strong> a $25 USB-C pocket soldering iron with a RISC-V brain —
 open hardware running open firmware. The people's iron.</p>
 <p><strong>How open is it:</strong> <strong>fully.</strong> Schematics are published
-(PINE64 wiki) [29]; the firmware, IronOS by Ralim, is GPL v3 on GitHub [30]; official
-PINE64 documentation covers flashing for both hardware versions [31]. V1 (DFU files,
+(PINE64 wiki) [28]; the firmware, IronOS by Ralim, is GPL v3 on GitHub [29]; official
+PINE64 documentation covers flashing for both hardware versions [30]. V1 (DFU files,
 sold until July 2022) and V2 (BL706, .bin files, Blisp flasher) are both supported.</p>
 <p><strong>Public record:</strong> <strong>FCC ID:</strong> not yet verified — look it
-up (DIY step 2). <strong>Datasheet &amp; docs:</strong> pine64.org [31]; IronOS GitHub
-[30]; schematics [29]. <strong>Controversies &amp; litigation (checked 2026-10-08):</strong>
+up (DIY step 2). <strong>Datasheet &amp; docs:</strong> pine64.org [30]; IronOS GitHub
+[29]; schematics [28]. <strong>Controversies &amp; litigation (checked 2026-10-08):</strong>
 no litigation found. Notable: V1 replicas circulate on AliExpress; and the official
-warning — never use both power ports at once, or you can damage the PC and the iron [31].</p>
+warning — never use both power ports at once, or you can damage the PC and the iron [30].</p>
 <p><strong>Watch-outs:</strong> use genuine Pinecil/TS tips — tip quality is the whole
 game. The V2 boot-logo feature is still in progress.</p>
 <p><strong>Do it yourself — the basic audit:</strong></p>
 <ol>
 <li>Find the version — V1 or V2 (V2 has the green grip).</li>
 <li>Search fccid.io for "Pinecil" or "PINE64".</li>
-<li>Go to github.com/Ralim/IronOS releases; download the firmware for your version [30].</li>
+<li>Go to github.com/Ralim/IronOS releases; download the firmware for your version [29].</li>
 <li>Hold the minus button, plug in USB-C, keep holding — a black screen means DFU mode. Normal.</li>
-<li>Flash with dfu-util (V1) or the Blisp flasher (V2) [31].</li>
+<li>Flash with dfu-util (V1) or the Blisp flasher (V2) [30].</li>
 <li>Read the IronOS source. It's GPL. Yours to read, build, and change.</li>
 </ol>
 
 <h3 id="quick">§10 — Quick 861DW</h3>
 <p><strong>What it is:</strong> 1000 W hot-air rework station, 100–500 °C, digital PID —
-the repair-shop standard. Genuine units run roughly $150–220 depending on market;
+the repair-shop standard. Genuine units run roughly $250–300 depending on market;
 clones are much cheaper.</p>
 <p><strong>How open is it:</strong> closed — no public schematics. Community knowledge
 documents the clone differences: cheaper fans, non-socketed (unreplaceable) heating
 elements, different control boards — and clones-of-clones using FR-1 paper laminate
-PCBs with safety components (X/Y capacitors, thermal fuses) omitted [32].</p>
+PCBs with safety components (X/Y capacitors, thermal fuses) omitted [31].</p>
 <p><strong>Public record:</strong> <strong>FCC ID:</strong> not yet verified — look it
 up (DIY step 2). Genuine units are made in the Wujin High-Tech Development Zone,
 Changzhou, Jiangsu, China. <strong>Controversies &amp; litigation (checked 2026-10-08):</strong>
 the clone epidemic — community verdict: "It's not serviceable. If you lose the heater
-element, throw it in the trash and buy another" [32]. No litigation found.</p>
+element, throw it in the trash and buy another" [31]. No litigation found.</p>
 <p><strong>Watch-outs:</strong> a hot-air station is mains plus up to 500 °C. A clone that
 omits safety components is a fire risk. Check the back label; buy from authorized
 distributors.</p>
@@ -647,23 +658,23 @@ distributors.</p>
 the professional's choice.</p>
 <p><strong>How open is it:</strong> closed. The firmware is proprietary, and the
 software terms of use state it plainly: "The use of the licensed software to operate
-SEGGER product clones is prohibited and illegal" [33]. Community reports indicate Segger
-discovers clone serial numbers and disables them in software updates [34].</p>
+SEGGER product clones is prohibited and illegal" [32]. Community reports indicate Segger
+discovers clone serial numbers and disables them in software updates [33].</p>
 <p><strong>Public record:</strong> <strong>FCC ID:</strong> <strong>verified — exempt.</strong>
 The official user guide states: "This device is test equipment and consequently is exempt
-from part 15 of the FCC rules under section 15.103" [35]. <strong>Datasheet &amp; docs:</strong>
-UM08001 user guide and the full knowledge base, public [35]. <strong>Controversies &amp;
+from part 15 of the FCC rules under section 15.103" [34]. <strong>Datasheet &amp; docs:</strong>
+UM08001 user guide and the full knowledge base, public [34]. <strong>Controversies &amp;
 litigation (checked 2026-10-08):</strong> the clone war — STM32F103-based clones
 everywhere, typically capped at ~12 MHz vs. the genuine 50 MHz, with limited flash-algo
-support [36]. No public litigation found.</p>
+support [35]. No public litigation found.</p>
 <p><strong>Watch-outs:</strong> clones vary wildly; a clone disabled by a software
 update is a paperweight; some clones power the target unexpectedly — check before
 connecting.</p>
 <p><strong>Do it yourself — the basic audit:</strong></p>
 <ol>
 <li>Find the serial number on the case.</li>
-<li>Check the FCC status: test equipment, exempt under §15.103 — verified in the user guide [35].</li>
-<li>Run the latest J-Link software. A clone may refuse, warn, or be blacklisted — that's the check [34].</li>
+<li>Check the FCC status: test equipment, exempt under §15.103 — verified in the user guide [34].</li>
+<li>Run the latest J-Link software. A clone may refuse, warn, or be blacklisted — that's the check [33].</li>
 <li>Compare clock rate and flash-programming behavior against the datasheet.</li>
 <li>If in doubt, buy from Segger, Digikey, Mouser, or Element14.</li>
 </ol>
@@ -673,22 +684,22 @@ connecting.</p>
 the free on-board debugger on every Nucleo board.</p>
 <p><strong>How open is it:</strong> firmware closed source (per ST's own community);
 host tools open (OpenOCD, STM32CubeProgrammer). ST publishes an official guide: "How to
-recognize a genuine ST-Link/V2 versus a cloned one" [37].</p>
+recognize a genuine ST-Link/V2 versus a cloned one" [36].</p>
 <p><strong>Public record:</strong> <strong>FCC ID:</strong> not yet verified — look it
 up (DIY step 2). Genuine standalone ST-LINK/V2 units report USB ID 0483:3748 —
 and so do the clones, which copy it, so the ID alone authenticates nothing.
 0483:374B is a different device: the STLINK-V2-1 soldered onto Nucleo/Discovery
-boards [38]. <strong>Controversies &amp; litigation (checked 2026-10-08):</strong>
+boards [37]. <strong>Controversies &amp; litigation (checked 2026-10-08):</strong>
 the clone epidemic — inconsistent pinouts (SWCLK/SWIO swapped between clones from the
 same seller), the SWO pin missing, RST wired as SWIM reset; ST supports genuine units
-only [37][38]. No litigation found.</p>
+only [36][37]. No litigation found.</p>
 <p><strong>Watch-outs:</strong> clones misbehave sporadically; some power the target
 when they shouldn't. A clone probe on a Blue Pill (itself often a clone STM32) is a
 stack of unknowns.</p>
 <p><strong>Do it yourself — the basic audit:</strong></p>
 <ol>
 <li>Plug it in. On Linux, type <code>lsusb</code> — look for "STMicroelectronics ST-LINK/V2", ID 0483:3748. Expect clones to show the identical ID: it proves nothing either way. (ID 0483:374B would mean a board-mounted STLINK-V2-1, not a standalone V2.) Judge the unit by the checks below, not by its USB ID.</li>
-<li>Check the SWO pin is present on the header — clones often omit it [38].</li>
+<li>Check the SWO pin is present on the header — clones often omit it [37].</li>
 <li>Try a firmware update with the official ST tool — clones often fail.</li>
 <li>If it works, it works — but record which unit it is, because clones vary.</li>
 <li>For critical work, use a Nucleo's on-board ST-Link or a genuine unit.</li>
@@ -698,20 +709,20 @@ stack of unknowns.</p>
 <p><strong>What it is:</strong> an open-source JTAG/SWD debug probe with a built-in GDB
 server — plug in, run GDB, done. No OpenOCD middleman.</p>
 <p><strong>How open is it:</strong> <strong>fully.</strong> Hardware schematic published
-(v2.1 and later); firmware GPLv3 on GitHub (blackmagic-debug/blackmagic) [39]; sold by
-1BitSquared, Adafruit, and Elektor; buildable on a Blue Pill STM32F103 [40]. The host
-app also drives ST-Link, CMSIS-DAP, J-Link, and FTDI MPSSE probes [39]. A free book,
-"Embedded Debugging with the Black Magic Probe," documents the whole stack [41].</p>
+(v2.1 and later); firmware GPLv3 on GitHub (blackmagic-debug/blackmagic) [38]; sold by
+1BitSquared, Adafruit, and Elektor; buildable on a Blue Pill STM32F103 [39]. The host
+app also drives ST-Link, CMSIS-DAP, J-Link, and FTDI MPSSE probes [38]. A free book,
+"Embedded Debugging with the Black Magic Probe," documents the whole stack [40].</p>
 <p><strong>Public record:</strong> <strong>FCC ID:</strong> not yet verified — look it
-up (DIY step 2). <strong>Datasheet &amp; docs:</strong> blackmagic.org; GitHub [39];
-the free book [41]. <strong>Controversies &amp; litigation (checked 2026-10-08):</strong>
+up (DIY step 2). <strong>Datasheet &amp; docs:</strong> blackmagic.org; GitHub [38];
+the free book [40]. <strong>Controversies &amp; litigation (checked 2026-10-08):</strong>
 no litigation found. This is the reference example of a fully auditable debug probe.</p>
 <p><strong>Watch-outs:</strong> Blue Pill builds need 128 KB flash (the common C8 has
 64 KB — use a 128 KB part or another board); the probe does not power the target (good —
 but check your wiring).</p>
 <p><strong>Do it yourself — the basic audit:</strong></p>
 <ol>
-<li>Buy one, or build one — schematic and firmware are public [39][40].</li>
+<li>Buy one, or build one — schematic and firmware are public [38][39].</li>
 <li>Search fccid.io for "Black Magic" or "1BitSquared".</li>
 <li>Clone github.com/blackmagic-debug/blackmagic and build the firmware — it compiles with free tools.</li>
 <li>Flash it to the probe.</li>
@@ -733,10 +744,10 @@ October 2014: FTDI shipped a Windows driver — delivered silently via Windows U
 that <strong>reprogrammed the USB product ID to 0 on counterfeit FT232 chips, bricking
 them</strong>, on users who often had no way to know their chip was fake. The EULA even
 warned that non-genuine use "MAY IRRETRIEVABLY DAMAGE" the component. Community
-backlash (Hackaday, ZDNet, Techdirt) [1][42][43]; the Linux kernel patched within days
-to recognize the bricked ID [43]; FTDI withdrew the driver and admitted intent (CEO Fred
-Dart, 24 Oct 2014) without apologizing [42]. February 2016: a second driver with DRM
-that replaces all data with "NON GENUINE DEVICE FOUND!" [43]. No vendor-vs-user
+backlash (Hackaday, ZDNet, Techdirt) [1][41][42]; the Linux kernel patched within days
+to recognize the bricked ID [42]; FTDI withdrew the driver and admitted intent (CEO Fred
+Dart, 24 Oct 2014) without apologizing [41]. February 2016: a second driver with DRM
+that replaces all data with "NON GENUINE DEVICE FOUND!" [42]. No vendor-vs-user
 litigation found; the episode is documented in the press.</p>
 <p><strong>Watch-outs:</strong> if your USB-serial adapter died after a Windows Update
 and shows PID 0000, this is probably what happened. Recovery: reprogram the PID with
@@ -746,7 +757,7 @@ against hardware its users own.</p>
 <p><strong>Do it yourself — the basic audit:</strong></p>
 <ol>
 <li>Plug in your USB-serial adapter. On Windows: Device Manager — check VID/PID (genuine FT232RL: 0403:6001). On Linux: <code>lsusb</code>.</li>
-<li>If you see 0403:0000 — the device was bricked by the 2014 driver [42].</li>
+<li>If you see 0403:0000 — the device was bricked by the 2014 driver [41].</li>
 <li>Download FT_PROG from ftdichip.com.</li>
 <li>Read the current PID, set it back to 6001, program.</li>
 <li>The device works again.</li>
@@ -762,21 +773,21 @@ against hardware its users own.</p>
 public (wch.cn). The host drivers are the story — and the open community's answer.</p>
 <p><strong>Public record:</strong> <strong>FCC ID:</strong> as with FTDI, the chips are
 not certified — the devices are. <strong>Datasheet &amp; docs:</strong> CH341SER
-official drivers at wch.cn [44]; the community open-source macOS driver on GitHub [45];
+official drivers at wch.cn [43]; the community open-source macOS driver on GitHub [44];
 Windows 10+ has an inbox driver; Linux works out of the box. <strong>Controversies &amp;
 litigation (checked 2026-10-08):</strong> the macOS driver saga — macOS never shipped
 native support; Apple's security (SIP, kernel-extension approval) blocks the official WCH
 driver on modern macOS; old WCH drivers caused system restarts on 10.12+ (SparkFun's
-warning) [46]; the community maintains an open driver because the vendor's support lags
-[45]. No litigation found.</p>
+warning) [45]; the community maintains an open driver because the vendor's support lags
+[44]. No litigation found.</p>
 <p><strong>Watch-outs:</strong> on macOS, always approve the "Jiangsu Qinheng" kernel
 extension in System Settings → Privacy &amp; Security, then restart. Use a data cable,
 not a charge-only one. The CH341A programmer's bundled vendor software is of uncertain
-provenance — use flashrom or AsProgrammer (see the CH341A entry on the main W³ page).</p>
+provenance — use flashrom or AsProgrammer (see the <a href="#ch341a">CH341A entry</a> above).</p>
 <p><strong>Do it yourself — the basic audit:</strong></p>
 <ol>
 <li>Plug in your board. On Linux: <code>lsusb</code> — look for 1a86:7523 (CH340). On macOS: <code>ls /dev/cu.*</code> — look for cu.wchusbserial.</li>
-<li>If nothing appears on macOS, install the community driver from GitHub [45].</li>
+<li>If nothing appears on macOS, install the community driver from GitHub [44].</li>
 <li>Approve the kernel extension in System Settings, then restart.</li>
 <li>The port appears.</li>
 <li>Open a serial terminal at 9600 baud and type. If the board echoes, the whole chain works.</li>
@@ -797,8 +808,8 @@ docs.flipper.net; GitHub firmware. <strong>Controversies &amp; litigation (check
 2026-10-08):</strong> the regulatory saga — US CBP seized ~15,000 units in late 2022
 (released after review); Amazon banned it in April 2023 as a "card skimming device";
 Brazil's ANATEL seized shipments from early 2023 and blocked certification, with the
-EFF intervening [47]; a Gatwick Airport confiscation (Sept 2023); Canada weighed a ban
-[48]. Legal to own in the US. No lawsuits against the company found — the record is
+EFF intervening [46]; a Gatwick Airport confiscation (Sept 2023); Canada weighed a ban
+[47]. Legal to own in the US. No lawsuits against the company found — the record is
 regulatory and marketplace action.</p>
 <p><strong>Watch-outs:</strong> the power is real — use it on your own systems or with
 written authorization. Transmit only in bands you're licensed for. BadUSB-style apps
@@ -829,8 +840,7 @@ known voltage, a known signal. If the tool agrees with reality, it passes step o
 <li><strong>Write it down.</strong> What you checked, what you found, what date. That's
 an audit. Publish it.</li>
 </ol>
-<p>The full methodology and the open alternative stack are on the <a href="/watchmen.html">main
-W³ page</a>. Every claim here is designed to be checked. We don't ask for your trust —
+<p>The full methodology is <a href="#methodology">below, under How we stay honest</a>. Every claim here is designed to be checked. We don't ask for your trust —
 we ask for your scrutiny.</p>
 
 <h2>Sources</h2>
@@ -841,7 +851,6 @@ we ask for your scrutiny.</p>
 <li><a href="https://hackaday.com/2014/11/12/how-to-get-50-more-zed-from-your-rigol-ds1054z/">Hackaday — How to get 50 more Zed from your Rigol DS1054Z (2014)</a></li>
 <li><a href="https://nyctomachia.wordpress.com/2018/09/02/riglol-unlock-extra-features-on-rigol-oscilloscopes/">nyctomachia — Riglol: unlock extra features on Rigol oscilloscopes (2018)</a></li>
 <li><a href="https://www.epanorama.net/blog/2014/10/25/how-to-reverse-engineer-rigol-ds1054z/">ePanorama — How to reverse engineer Rigol DS1054Z (2014)</a></li>
-<li><a href="https://hackaday.com/2014/11/12/how-to-get-50-more-zed-from-your-rigol-ds1054z/">Hackaday — DS1054Z coverage and community discussion</a></li>
 <li><a href="https://www.securityweek.com/flaws-siglent-oscilloscope-allow-hackers-tamper-measurements/">SecurityWeek — Flaws in Siglent oscilloscope allow hackers to tamper with measurements (SEC Consult, 2018)</a></li>
 <li><a href="https://www.mitsake.net/posts/unlocking-siglent-sds-1104x-e/">mitsake.net — Unlocking the Siglent SDS1104X-E (2018)</a></li>
 <li><a href="https://github.com/OpenHantek/OpenHantek6022">GitHub — OpenHantek6022 (GPL-3.0, open firmware for Hantek 6022BE/BL)</a></li>
@@ -897,26 +906,7 @@ we ask for your scrutiny.</p>
 <p class="small">All sources accessed 2026-10-08. Litigation and controversy checks are
 point-in-time; re-run before relying on a clean result. License: CC BY-SA 4.0 — BareBoard.</p>
 
-  <footer>
-    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
-    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
-        <nav>
-      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
-    </nav>
-
-    <div class="legal-framework">
-      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
-      <ul>
-      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
-        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
-        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
-        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
-        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
-      </ul>
-      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association (OSHWA)</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
-    </div>
-  </footer>
-  </section>
+    </section>
 
   <h2 id="verdict">The verdict, in one table</h2>
   <div class="table-wrap"><table>
@@ -959,15 +949,15 @@ point-in-time; re-run before relying on a clean result. License: CC BY-SA 4.0 �
     <h2 id="tools">The bench</h2>
     <p class="lede">Claims are only as good as the instruments behind them. These are the most widely used tools in hardware research &mdash; the ones you&rsquo;ll find on benches everywhere, including ours:</p>
     <ul>
-      <li><strong>Saleae Logic Pro 8 / Logic 8</strong> &mdash; the logic analyzer. Captures UART, SPI, I2C, and unknown digital protocols straight off the board. It captures digital signal transitions reliably.</li>
-      <li><strong>Rigol DS1054Z</strong> &mdash; a widely adopted oscilloscope. Four channels, 50 MHz (software-upgradable to 100), under $400. It is widely used in electronics laboratories.</li>
+      <li><strong>Saleae Logic Pro 8 / Logic 8</strong> &mdash; the logic analyzer. Captures UART, SPI, I2C, and unknown digital protocols straight off the board.</li>
+      <li><strong>Rigol DS1054Z</strong> &mdash; a widely adopted oscilloscope. Four channels, 50 MHz (software-upgradable to 100), under $400.</li>
       <li><strong>Fluke 87V / 117</strong> &mdash; the multimeter. When a reading must be trusted, it is the reference instrument.</li>
-      <li><strong>Hakko FX-888D</strong> &mdash; the soldering iron. Blue and yellow, indestructible, and commonly found in electronics laboratories.</li>
+      <li><strong>Hakko FX-888D</strong> &mdash; the soldering iron. Blue and yellow, and commonly found in electronics laboratories.</li>
       <li><strong>Pinecil</strong> &mdash; the open-source iron. USB-C powered, $25, community firmware. Proof that open hardware can win.</li>
       <li><strong>Quick 861DW</strong> &mdash; the hot-air station for lifting shields and QFN packages without destroying the board.</li>
-      <li><strong>Bus Pirate</strong> &mdash; the classic multitool. Talks UART, SPI, I2C, 1-Wire, and more from a single board. an open-source contribution from Dangerous Prototypes.</li>
+      <li><strong>Bus Pirate</strong> &mdash; the classic multitool. Talks UART, SPI, I2C, 1-Wire, and more from a single board. An open-source contribution from Dangerous Prototypes.</li>
       <li><strong>Glasgow</strong> &mdash; the open-source USB interface explorer. The new standard for communicating with uncommon hardware.</li>
-      <li><strong>Segger J-Link</strong> &mdash; the JTAG/SWD debugger. When the debug headers are populated and the silicon can be analyzed.</li>
+      <li><strong>Segger J-Link</strong> &mdash; the JTAG/SWD debugger, for chips whose debug headers are populated.</li>
       <li><strong>ST-Link V2</strong> &mdash; the affordable ST debugger. Compatible units are widely available.</li>
       <li><strong>FTDI FT232 / CH340 breakouts</strong> &mdash; USB-to-serial adapters. A standard choice for UART interface work.</li>
     </ul>
@@ -993,6 +983,8 @@ point-in-time; re-run before relying on a clean result. License: CC BY-SA 4.0 �
     <p><em>Quis custodiet ipsos custodes?</em> You do. That&rsquo;s why everything is published.</p>
   </section>
 
+  <blockquote class="bb-quote"><p>&ldquo;One of my most productive days was throwing away 1000 lines of code.&rdquo;</p><p class="bb-quote-by">&mdash; Ken Thompson</p></blockquote>
+
   <footer>
     <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
     <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
@@ -1009,7 +1001,7 @@ point-in-time; re-run before relying on a clean result. License: CC BY-SA 4.0 �
         <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
         <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
       </ul>
-      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association (OSHWA)</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
     </div>
   </footer>
 

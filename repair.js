@@ -38,18 +38,14 @@
       "</article>";
   }
 
-  fetch("repair-guides.json", { credentials: "same-origin" })
-    .then(function (response) {
-      if (!response.ok) throw new Error("HTTP " + response.status);
-      return response.json();
-    })
-    .then(function (data) {
+  BB.loadJson("repair-guides.json",
+    function (data) {
       var guides = ((data && data.guides) || []).slice().sort(function (a, b) {
         return a.ifixit_score - b.ifixit_score;
       });
       container.innerHTML = guides.map(card).join("") || "<p>No guides found.</p>";
-    })
-    .catch(function (err) {
+    },
+    function (err) {
       container.innerHTML = "<p>Could not load repair-guides.json (" + BB.esc(err.message) + ").</p>";
     });
 })();

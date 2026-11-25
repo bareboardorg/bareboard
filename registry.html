@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org thumb.wikimedia.org; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
   <meta name="tdm-reservation" content="1">
@@ -21,6 +21,14 @@
 <link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
 <link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
 <link rel="stylesheet" href="/i18n.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "The Registry",
+  "description": "Every important document, ranked by honesty. A document's value to a repairer is not proportional to how hard a company guards it — so we say exactly what exists, what is public, and what is"
+}
+</script>
 </head>
 <body>
 <header class="site-nav">
@@ -90,6 +98,7 @@
               <div class="colnav">
                 <ul class="colnav-col">
                 <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
                 <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
                 <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
                 <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
@@ -139,7 +148,7 @@
               </div>
             </div>
           </div></li>
-              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
           <div class="col-panel">
             <div class="dropdown-inner">
               <div class="colnav">
@@ -158,8 +167,19 @@
               </div>
             </div>
           </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
 </ul>
     </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
   </div>
 </header>
 
@@ -171,10 +191,10 @@ public, and what is sealed.</p>
 
 <h2>Status legend</h2>
 <ul>
-<li>🟢 <strong>PUBLIC</strong> — the vendor publishes it. Collect, preserve, cite.</li>
-<li>🔵 <strong>PUBLIC-RESEARCH</strong> — no vendor doc, but public research exists. We compile originals from it.</li>
-<li>🟠 <strong>SEALED (NDA)</strong> — vendor-internal. Listed for awareness, with public-research pointers. <strong>No bounties.</strong></li>
-<li>⛔ <strong>EXCLUDED</strong> — material that exists only to defeat hardware security. Never a target.</li>
+<li><strong>PUBLIC</strong> — the vendor publishes it. Collect, preserve, cite.</li>
+<li><strong>PUBLIC-RESEARCH</strong> — no vendor doc, but public research exists. We compile originals from it.</li>
+<li><strong>SEALED (NDA)</strong> — vendor-internal. Listed for awareness, with public-research pointers. <strong>No bounties.</strong></li>
+<li><strong>EXCLUDED</strong> — material that exists only to defeat hardware security. Never a target.</li>
 </ul>
 
 <h2>Level legend (<a href="/foundry.html">The Foundry</a>)</h2>
@@ -186,34 +206,34 @@ public, and what is sealed.</p>
 <h2>The board (condensed)</h2>
 <table>
 <tr><th>Target</th><th>Level</th><th>Status</th><th>Legitimate resource</th></tr>
-<tr><td>Intel CSME register maps</td><td>L0</td><td>🟠</td><td>me_cleaner · REcon 2014 · coreboot tooling → original doc in Library</td></tr>
-<tr><td>Intel DFX / JTAG lock-override procedures</td><td>L0</td><td>⛔</td><td>Excluded — circumvention material</td></tr>
-<tr><td>AMD PSP integration manual</td><td>L0</td><td>🟠</td><td>coreboot PSP Integration Guide · PSPTool → original doc in Library</td></tr>
-<tr><td>Apple SEP register specs</td><td>L0</td><td>🟠</td><td>Black Hat 2016 · MOSEC 2020 → original doc in Library</td></tr>
-<tr><td>Qualcomm QSEE fuse maps</td><td>L0</td><td>🟠</td><td>Public academic TrustZone research</td></tr>
-<tr><td>Microsoft Pluton</td><td>L0</td><td>🟢</td><td>Microsoft Learn documentation</td></tr>
-<tr><td>STMicro ST33</td><td>L0</td><td>🟢</td><td>st.com datasheets (security-target docs are NDA)</td></tr>
-<tr><td>NXP SE050 EdgeLock</td><td>L0</td><td>🟢</td><td>nxp.com datasheet + user guides + open-source middleware</td></tr>
-<tr><td>Google Titan M/M2</td><td>L0</td><td>🟠</td><td>Google's published Titan M/M2 security material. (OpenTitan is a separate open-source root-of-trust reference design — related in spirit, but it is not documentation of the Titan chips.)</td></tr>
-<tr><td>Apple ANS NVMe controller</td><td>L2</td><td>🟠</td><td>Asahi Linux m1n1 project documents it publicly</td></tr>
-<tr><td>Samsung / Phison / SMI controller registers</td><td>L2</td><td>🟠</td><td>nvme-cli · smartmontools · vendor tools</td></tr>
-<tr><td>SK hynix H9-series memory/eMMC</td><td>L2</td><td>🟢</td><td>SK hynix + distributor datasheets (one preserved in Library)</td></tr>
-<tr><td>Broadcom BCM43xx registers</td><td>L2</td><td>🟠 / 🔵</td><td>Linux b43/brcmfmac · OpenFWWF · community register wiki</td></tr>
-<tr><td>Apple 339S/338S PMICs</td><td>L1</td><td>🟠</td><td>Original identification guide in Library</td></tr>
-<tr><td>TI / Maxim-ADI / Dialog-Renesas power ICs</td><td>L1</td><td>🟢</td><td>ti.com · analog.com · renesas.com</td></tr>
+<tr><td>Intel CSME register maps</td><td>L0</td><td>SEALED</td><td>me_cleaner · REcon 2014 · coreboot tooling → original doc in Library</td></tr>
+<tr><td>Intel DFX / JTAG lock-override procedures</td><td>L0</td><td>EXCLUDED</td><td>Excluded — circumvention material</td></tr>
+<tr><td>AMD PSP integration manual</td><td>L0</td><td>SEALED</td><td>coreboot PSP Integration Guide · PSPTool → original doc in Library</td></tr>
+<tr><td>Apple SEP register specs</td><td>L0</td><td>SEALED</td><td>Black Hat 2016 · MOSEC 2020 → original doc in Library</td></tr>
+<tr><td>Qualcomm QSEE fuse maps</td><td>L0</td><td>SEALED</td><td>Public academic TrustZone research</td></tr>
+<tr><td>Microsoft Pluton</td><td>L0</td><td>PUBLIC</td><td>Microsoft Learn documentation</td></tr>
+<tr><td>STMicro ST33</td><td>L0</td><td>PUBLIC</td><td>st.com datasheets (security-target docs are NDA)</td></tr>
+<tr><td>NXP SE050 EdgeLock</td><td>L0</td><td>PUBLIC</td><td>nxp.com datasheet + user guides + open-source middleware</td></tr>
+<tr><td>Google Titan M/M2</td><td>L0</td><td>SEALED</td><td>Google's published Titan M/M2 security material. (OpenTitan is a separate open-source root-of-trust reference design — related in spirit, but it is not documentation of the Titan chips.)</td></tr>
+<tr><td>Apple ANS NVMe controller</td><td>L2</td><td>SEALED</td><td>Asahi Linux m1n1 project documents it publicly</td></tr>
+<tr><td>Samsung / Phison / SMI controller registers</td><td>L2</td><td>SEALED</td><td>nvme-cli · smartmontools · vendor tools</td></tr>
+<tr><td>SK hynix H9-series memory/eMMC</td><td>L2</td><td>PUBLIC</td><td>SK hynix + distributor datasheets (one preserved in Library)</td></tr>
+<tr><td>Broadcom BCM43xx registers</td><td>L2</td><td>SEALED / PUBLIC-RESEARCH</td><td>Linux b43/brcmfmac · OpenFWWF · community register wiki</td></tr>
+<tr><td>Apple 339S/338S PMICs</td><td>L1</td><td>SEALED</td><td>Original identification guide in Library</td></tr>
+<tr><td>TI / Maxim-ADI / Dialog-Renesas power ICs</td><td>L1</td><td>PUBLIC</td><td>ti.com · analog.com · renesas.com</td></tr>
 </table>
 
 <h2>Bounty rules</h2>
 <ol>
-<li>✅ Bounties for <strong>devices</strong> to teardown and document.</li>
-<li>✅ Bounties for rare <strong>public</strong> documents — collect and preserve.</li>
-<li>✅ Bounties for <strong>original documentation</strong> written from public research.</li>
-<li>❌ No bounties for sealed documents — that is a market for stolen trade secrets.</li>
-<li>❌ Never list circumvention material.</li>
+<li>Bounties for <strong>devices</strong> to teardown and document.</li>
+<li>Bounties for rare <strong>public</strong> documents — collect and preserve.</li>
+<li>Bounties for <strong>original documentation</strong> written from public research.</li>
+<li>No bounties for sealed documents — that is a market for stolen trade secrets.</li>
+<li>Never list circumvention material.</li>
 </ol>
 
 <p class="small">Full registry: <a href="/library/original-docs/bareboard-registry-draft.md">bareboard-registry-draft.md</a> ·
-Tracker (CSV): <a href="/library/trackers/most-wanted-tracker.csv">most-wanted-tracker.csv</a> ·
+Tracker (CSV): <a href="/library/trackers/doc-targets-tracker.csv">doc-targets-tracker.csv</a> ·
 Entry template: <a href="/templates/registry-entry.md">templates/registry-entry.md</a></p>
 
   <blockquote class="bb-quote"><p>&ldquo;The most effective debugging tool is still careful thought, coupled with judiciously placed print statements.&rdquo;</p><p class="bb-quote-by">&mdash; Brian W. Kernighan, in the paper Unix for Beginners (1979)</p></blockquote>
@@ -221,7 +241,7 @@ Entry template: <a href="/templates/registry-entry.md">templates/registry-entry.
     <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
     <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
         <nav>
-      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a> &middot; <a href="/terms.html">The Tee-O-Ess</a> &middot; <a href="/dmca.html">DMCA</a> &middot; <a href="/copyright.html">Copyright</a> &middot; <a href="/privacy.html">Privacy</a>
     </nav>
 
     <div class="legal-framework">
@@ -240,6 +260,7 @@ Entry template: <a href="/templates/registry-entry.md">templates/registry-entry.
 
 <script src="/nav.js" defer></script>
 <script src="/search.js" defer></script>
+
 <script src="/i18n.js" defer></script>
 </body>
 </html>

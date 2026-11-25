@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
   <meta name="tdm-reservation" content="1">
@@ -24,9 +24,9 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "BareBoard Protocol Reverse Engineering",
-  "description": "Closed protocols the community has reverse engineered, with open resources."
+  "@type": "WebPage",
+  "name": "Quantum Q6 Edge 3, Opened — Every Part, Named — PMD",
+  "description": "The Quantum Q6 Edge 3 taken apart on paper: every assembly from Quantum’s own parts breakdown, callout by callout, with part numbers and a plain-language line for every part."
 }
 </script>
 <link rel="stylesheet" href="/i18n.css">
@@ -99,6 +99,7 @@
               <div class="colnav">
                 <ul class="colnav-col">
                 <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
                 <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
                 <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
                 <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
@@ -148,7 +149,7 @@
               </div>
             </div>
           </div></li>
-              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
           <div class="col-panel">
             <div class="dropdown-inner">
               <div class="colnav">
@@ -167,8 +168,19 @@
               </div>
             </div>
           </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
 </ul>
     </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
   </div>
 </header>
 
@@ -207,7 +219,7 @@
     <h3>Main Frame Assy, Edge 3</h3>
     <p>IPB p. 1–2 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p6.jpg" alt="Main Frame Assy — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p6.jpg" width="1239" height="1600" alt="Main Frame Assy — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 1.</strong> Main Frame Assy &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -226,7 +238,7 @@
     <h3>Front Caster Arm &amp; Suspension Assy, Edge 3</h3>
     <p>IPB p. 3–4 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p8.jpg" alt="Front Caster Arm &amp; Suspension Assy — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p8.jpg" width="1240" height="1600" alt="Front Caster Arm &amp; Suspension Assy — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 2.</strong> Front Caster Arm &amp; Suspension Assy &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -261,7 +273,7 @@
     <h3>Rear Caster Arm &amp; Suspension Assy, Edge 3</h3>
     <p>IPB p. 5–6 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p10.jpg" alt="Rear Caster Arm &amp; Suspension Assy — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p10.jpg" width="1240" height="1600" alt="Rear Caster Arm &amp; Suspension Assy — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 3.</strong> Rear Caster Arm &amp; Suspension Assy &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -293,7 +305,7 @@
     <h3>Drive Motor Assy - 5-Spoke Hub, Curtis Connector, Edge 3</h3>
     <p>IPB p. 7–8 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p12.jpg" alt="Drive Motor Assy - 5-Spoke Hub, Curtis Connector — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p12.jpg" width="1241" height="1600" alt="Drive Motor Assy - 5-Spoke Hub, Curtis Connector — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 4.</strong> Drive Motor Assy - 5-Spoke Hub, Curtis Connector &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -313,7 +325,7 @@
     <h3>Drive Motor Assy - ACCU-TRAC, 5-Spoke Hub, Curtis Connector, Edge 3</h3>
     <p>IPB p. 9–10 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p14.jpg" alt="Drive Motor Assy - ACCU-TRAC, 5-Spoke Hub, Curtis Connector — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p14.jpg" width="1241" height="1600" alt="Drive Motor Assy - ACCU-TRAC, 5-Spoke Hub, Curtis Connector — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 5.</strong> Drive Motor Assy - ACCU-TRAC, 5-Spoke Hub, Curtis Connector &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -339,7 +351,7 @@
     <h3>NE/NE+ Joystick Assy&#x27;s</h3>
     <p>IPB p. 11–12 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p16.jpg" alt="NE/NE+ Joystick Assy&#x27;s — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p16.jpg" width="1241" height="1600" alt="NE/NE+ Joystick Assy&#x27;s — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 6.</strong> NE/NE+ Joystick Assy&#x27;s &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -355,7 +367,7 @@
     <h3>Q-Logic 3 Joystick Assy&#x27;s</h3>
     <p>IPB p. 13–14 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p18.jpg" alt="Q-Logic 3 Joystick Assy&#x27;s — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p18.jpg" width="1240" height="1600" alt="Q-Logic 3 Joystick Assy&#x27;s — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 7.</strong> Q-Logic 3 Joystick Assy&#x27;s &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -373,7 +385,7 @@
     <h3>Q-Logic 3e Joystick Assy&#x27;s - Q6 Edge 3</h3>
     <p>IPB p. 15–16 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p20.jpg" alt="Q-Logic 3e Joystick Assy&#x27;s - — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p20.jpg" width="1240" height="1600" alt="Q-Logic 3e Joystick Assy&#x27;s - — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 8.</strong> Q-Logic 3e Joystick Assy&#x27;s - &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -390,7 +402,7 @@
     <h3>Q-Logic 3 Stand Alone Joystick Assy</h3>
     <p>IPB p. 17–18 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p22.jpg" alt="Q-Logic 3 Stand Alone Joystick Assy — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p22.jpg" width="1241" height="1600" alt="Q-Logic 3 Stand Alone Joystick Assy — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 9.</strong> Q-Logic 3 Stand Alone Joystick Assy &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -408,11 +420,11 @@
     <h3>Q-Logic 3 SD Cards for Edge 3</h3>
     <p>IPB p. 19–20 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p24.jpg" alt="Q-Logic 3 SD Cards for — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p24.jpg" width="1240" height="1600" alt="Q-Logic 3 SD Cards for — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 10.</strong> Q-Logic 3 SD Cards for &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p44.jpg" alt="Q-Logic 3 SD Cards for — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p44.jpg" width="1239" height="1600" alt="Q-Logic 3 SD Cards for — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 11.</strong> Q-Logic 3 SD Cards for &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -428,7 +440,7 @@
     <h3>Aftermarket Joystick Knobs</h3>
     <p>IPB p. 21–22 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p26.jpg" alt="Aftermarket Joystick Knobs — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p26.jpg" width="1241" height="1600" alt="Aftermarket Joystick Knobs — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 12.</strong> Aftermarket Joystick Knobs &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -449,7 +461,7 @@
     <h3>Q-Logic 1 / Stand Alone / NE / NE+ Joystick Overlays</h3>
     <p>IPB p. 23–24 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p28.jpg" alt="Q-Logic 1 / Stand Alone / NE / NE+ Joystick Overlays — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p28.jpg" width="1241" height="1600" alt="Q-Logic 1 / Stand Alone / NE / NE+ Joystick Overlays — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 13.</strong> Q-Logic 1 / Stand Alone / NE / NE+ Joystick Overlays &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -467,7 +479,7 @@
     <h3>Q-Logic Joystick Knobs</h3>
     <p>IPB p. 25–26 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p30.jpg" alt="Q-Logic Joystick Knobs — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p30.jpg" width="1241" height="1600" alt="Q-Logic Joystick Knobs — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 14.</strong> Q-Logic Joystick Knobs &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -484,7 +496,7 @@
     <h3>Q-Logic 2 &amp; 3 Joystick Shrouds</h3>
     <p>IPB p. 27–28 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p32.jpg" alt="Q-Logic 2 &amp; 3 Joystick Shrouds — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p32.jpg" width="1240" height="1600" alt="Q-Logic 2 &amp; 3 Joystick Shrouds — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 15.</strong> Q-Logic 2 &amp; 3 Joystick Shrouds &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -532,7 +544,7 @@
     <h3>NE + Joystick Bottom Housing w/Bus Cable</h3>
     <p>IPB p. 29–30 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p34.jpg" alt="NE + Joystick Bottom Housing w/Bus Cable — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p34.jpg" width="1241" height="1600" alt="NE + Joystick Bottom Housing w/Bus Cable — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 16.</strong> NE + Joystick Bottom Housing w/Bus Cable &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -545,7 +557,7 @@
     <h3>Q-Logic 2 &amp;3 Joystick Bottom Housing w/Bus Cable</h3>
     <p>IPB p. 31–32 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p36.jpg" alt="Q-Logic 2 &amp;3 Joystick Bottom Housing w/Bus Cable — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p36.jpg" width="1241" height="1600" alt="Q-Logic 2 &amp;3 Joystick Bottom Housing w/Bus Cable — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 17.</strong> Q-Logic 2 &amp;3 Joystick Bottom Housing w/Bus Cable &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -565,7 +577,7 @@
     <h3>Q-Logic 3 Base Electronics Matrix, 6 MPH Motors, Edge 3</h3>
     <p>IPB p. 33–34 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p38.jpg" alt="Q-Logic 3 Base Electronics Matrix, 6 MPH Motors — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p38.jpg" width="1239" height="1600" alt="Q-Logic 3 Base Electronics Matrix, 6 MPH Motors — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 18.</strong> Q-Logic 3 Base Electronics Matrix, 6 MPH Motors &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -595,7 +607,7 @@
     <h3>Q-Logic 3 Electronics, Power Seat Thru Joystick, Edge 3</h3>
     <p>IPB p. 35–36 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p40.jpg" alt="Q-Logic 3 Electronics, Power Seat Thru Joystick — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p40.jpg" width="1239" height="1600" alt="Q-Logic 3 Electronics, Power Seat Thru Joystick — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 19.</strong> Q-Logic 3 Electronics, Power Seat Thru Joystick &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -628,7 +640,7 @@
     <h3>Q-Logic 3 Electronics, Power Positioning &amp; Static Seating, Edge 3</h3>
     <p>IPB p. 37–38 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p42.jpg" alt="Q-Logic 3 Electronics, Power Positioning &amp; Static Seating — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p42.jpg" width="1239" height="1600" alt="Q-Logic 3 Electronics, Power Positioning &amp; Static Seating — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 20.</strong> Q-Logic 3 Electronics, Power Positioning &amp; Static Seating &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -656,7 +668,7 @@
     <h3>NE Electronics, Non-Power Positioning, Edge 3</h3>
     <p>IPB p. 41–42 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p46.jpg" alt="NE Electronics, Non-Power Positioning — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p46.jpg" width="1240" height="1600" alt="NE Electronics, Non-Power Positioning — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 21.</strong> NE Electronics, Non-Power Positioning &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -679,7 +691,7 @@
     <h3>NE Electronics, Tilt Thru Toggle, Edge 3</h3>
     <p>IPB p. 43–44 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p48.jpg" alt="NE Electronics, Tilt Thru Toggle — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p48.jpg" width="1239" height="1600" alt="NE Electronics, Tilt Thru Toggle — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 22.</strong> NE Electronics, Tilt Thru Toggle &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -703,7 +715,7 @@
     <h3>NE Electronics, Power Seat Thru Toggle, Edge 3</h3>
     <p>IPB p. 45–46 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p50.jpg" alt="NE Electronics, Power Seat Thru Toggle — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p50.jpg" width="1239" height="1600" alt="NE Electronics, Power Seat Thru Toggle — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 23.</strong> NE Electronics, Power Seat Thru Toggle &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -727,7 +739,7 @@
     <h3>NE+ Electronics, Non-Power Positioning, Edge 3</h3>
     <p>IPB p. 47–48 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p52.jpg" alt="NE+ Electronics, Non-Power Positioning — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p52.jpg" width="1240" height="1600" alt="NE+ Electronics, Non-Power Positioning — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 24.</strong> NE+ Electronics, Non-Power Positioning &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -750,7 +762,7 @@
     <h3>NE+ Electronics, Quantum Ready/Tilt Thru Toggle, Edge 3</h3>
     <p>IPB p. 49–50 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p54.jpg" alt="NE+ Electronics, Quantum Ready/Tilt Thru Toggle — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p54.jpg" width="1239" height="1600" alt="NE+ Electronics, Quantum Ready/Tilt Thru Toggle — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 25.</strong> NE+ Electronics, Quantum Ready/Tilt Thru Toggle &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -776,7 +788,7 @@
     <h3>NE+ Electronics, Power Seat Thru Joystick, Edge 3</h3>
     <p>IPB p. 51–52 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p56.jpg" alt="NE+ Electronics, Power Seat Thru Joystick — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p56.jpg" width="1239" height="1600" alt="NE+ Electronics, Power Seat Thru Joystick — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 26.</strong> NE+ Electronics, Power Seat Thru Joystick &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -807,7 +819,7 @@
     <h3>NE+ Electronics, Fender Lights, Non-Power Positioning/Quantum Ready, Edge 3</h3>
     <p>IPB p. 53–54 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p58.jpg" alt="NE+ Electronics, Fender Lights, Non-Power Positioning/Quantum Ready — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p58.jpg" width="1239" height="1600" alt="NE+ Electronics, Fender Lights, Non-Power Positioning/Quantum Ready — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 27.</strong> NE+ Electronics, Fender Lights, Non-Power Positioning/Quantum Ready &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -832,7 +844,7 @@
     <h3>NE+ Electronics, Fender Lights, Power Seat Thru Joystick, Edge 3</h3>
     <p>IPB p. 55–56 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p60.jpg" alt="NE+ Electronics, Fender Lights, Power Seat Thru Joystick — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p60.jpg" width="1239" height="1600" alt="NE+ Electronics, Fender Lights, Power Seat Thru Joystick — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 28.</strong> NE+ Electronics, Fender Lights, Power Seat Thru Joystick &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -870,7 +882,7 @@
     <h3>Foot Platform Assy&#x27;s, Edge Series</h3>
     <p>IPB p. 57–58 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p62.jpg" alt="Foot Platform Assy&#x27;s — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p62.jpg" width="1239" height="1600" alt="Foot Platform Assy&#x27;s — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 29.</strong> Foot Platform Assy&#x27;s &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -890,7 +902,7 @@
     <h3>Recessed Battery Access Bracket Assy</h3>
     <p>IPB p. 59–60 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p64.jpg" alt="Recessed Battery Access Bracket Assy — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p64.jpg" width="1240" height="1600" alt="Recessed Battery Access Bracket Assy — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 30.</strong> Recessed Battery Access Bracket Assy &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -903,7 +915,7 @@
     <h3>Standard Battery Access Bracket Assy&#x27;s</h3>
     <p>IPB p. 61–62 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p66.jpg" alt="Standard Battery Access Bracket Assy&#x27;s — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p66.jpg" width="1240" height="1600" alt="Standard Battery Access Bracket Assy&#x27;s — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 31.</strong> Standard Battery Access Bracket Assy&#x27;s &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -917,7 +929,7 @@
     <h3>Power Seat (Pedestal Actuator) Battery Access Brackets, Edge Series</h3>
     <p>IPB p. 63–64 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p68.jpg" alt="Power Seat (Pedestal Actuator) Battery Access Brackets — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p68.jpg" width="1240" height="1600" alt="Power Seat (Pedestal Actuator) Battery Access Brackets — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 32.</strong> Power Seat (Pedestal Actuator) Battery Access Brackets &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -937,7 +949,7 @@
     <h3>Main Carrier &amp; Rear Door Shroud Assy&#x27;s, Edge 3</h3>
     <p>IPB p. 65–66 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p70.jpg" alt="Main Carrier &amp; Rear Door Shroud Assy&#x27;s — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p70.jpg" width="1240" height="1600" alt="Main Carrier &amp; Rear Door Shroud Assy&#x27;s — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 33.</strong> Main Carrier &amp; Rear Door Shroud Assy&#x27;s &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -978,7 +990,7 @@
     <h3>Center Panel Shrouds and Battery Spacer</h3>
     <p>IPB p. 67–68 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p72.jpg" alt="Center Panel Shrouds and Battery Spacer — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p72.jpg" width="1239" height="1600" alt="Center Panel Shrouds and Battery Spacer — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 34.</strong> Center Panel Shrouds and Battery Spacer &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1001,7 +1013,7 @@
     <h3>Standard &amp; Recessed Front Battery Door Assy&#x27;s, Edge 3</h3>
     <p>IPB p. 69–72 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p74.jpg" alt="Standard &amp; Recessed Front Battery Door Assy&#x27;s — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p74.jpg" width="1239" height="1600" alt="Standard &amp; Recessed Front Battery Door Assy&#x27;s — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 35.</strong> Standard &amp; Recessed Front Battery Door Assy&#x27;s &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1064,7 +1076,7 @@
     <h3>Fender Shroud Assy, Without Lights, Edge 2.0 / Edge 3</h3>
     <p>IPB p. 73–74 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p78.jpg" alt="Fender Shroud Assy, Without Lights, Edge 2.0 / — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p78.jpg" width="1239" height="1600" alt="Fender Shroud Assy, Without Lights, Edge 2.0 / — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 36.</strong> Fender Shroud Assy, Without Lights, Edge 2.0 / &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1079,7 +1091,7 @@
     <h3>Fender Shroud Assy with Lights, Edge Series</h3>
     <p>IPB p. 75–76 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p80.jpg" alt="Fender Shroud Assy with Lights — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p80.jpg" width="1239" height="1600" alt="Fender Shroud Assy with Lights — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 37.</strong> Fender Shroud Assy with Lights &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1106,7 +1118,7 @@
     <h3>Power Seat Assy w/ Universal Interface, Q6 Edge Series</h3>
     <p>IPB p. 77–78 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p82.jpg" alt="Power Seat Assy w/ Universal Interface, Q6 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p82.jpg" width="1239" height="1600" alt="Power Seat Assy w/ Universal Interface, Q6 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 38.</strong> Power Seat Assy w/ Universal Interface, Q6 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1131,7 +1143,7 @@
     <h3>Trapeze Bar Assy</h3>
     <p>IPB p. 79–80 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p84.jpg" alt="Trapeze Bar Assy — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p84.jpg" width="1239" height="1600" alt="Trapeze Bar Assy — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 39.</strong> Trapeze Bar Assy &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1151,11 +1163,11 @@
     <h3>L-Bracket Towers and Transit Loops</h3>
     <p>IPB p. 81–84 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p86.jpg" alt="L-Bracket Towers and Transit Loops — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p86.jpg" width="1239" height="1600" alt="L-Bracket Towers and Transit Loops — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 40.</strong> L-Bracket Towers and Transit Loops &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p88.jpg" alt="L-Bracket Towers and Transit Loops — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p88.jpg" width="1239" height="1600" alt="L-Bracket Towers and Transit Loops — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 41.</strong> L-Bracket Towers and Transit Loops &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1211,7 +1223,7 @@
     <h3>Flat-free Drive Wheel, 5-Spoke, Black Rim / Black Tire w/Painted Inserts</h3>
     <p>IPB p. 85–86 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p90.jpg" alt="Flat-free Drive Wheel, 5-Spoke, Black Rim / Black Tire w/Painted Inserts — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p90.jpg" width="1240" height="1600" alt="Flat-free Drive Wheel, 5-Spoke, Black Rim / Black Tire w/Painted Inserts — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 42.</strong> Flat-free Drive Wheel, 5-Spoke, Black Rim / Black Tire w/Painted Inserts &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1247,7 +1259,7 @@
     <h3>Pneumatic Drive Wheel, 5-Spoke, Black Rim / Black Tire w/Painted Inserts</h3>
     <p>IPB p. 87–88 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p92.jpg" alt="Pneumatic Drive Wheel, 5-Spoke, Black Rim / Black Tire w/Painted Inserts — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p92.jpg" width="1240" height="1600" alt="Pneumatic Drive Wheel, 5-Spoke, Black Rim / Black Tire w/Painted Inserts — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 43.</strong> Pneumatic Drive Wheel, 5-Spoke, Black Rim / Black Tire w/Painted Inserts &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1284,7 +1296,7 @@
     <h3>Painted Wheel Inserts</h3>
     <p>IPB p. 89–90 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p94.jpg" alt="Painted Wheel Inserts — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p94.jpg" width="1240" height="1600" alt="Painted Wheel Inserts — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 44.</strong> Painted Wheel Inserts &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1320,7 +1332,7 @@
     <h3>Flat-free Drive Wheel, 4 Spoke Black Rim/Black &quot;Knobby&quot; Tire</h3>
     <p>IPB p. 91–92 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p96.jpg" alt="Flat-free Drive Wheel, 4 Spoke Black Rim/Black &quot;Knobby&quot; Tire — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p96.jpg" width="1241" height="1600" alt="Flat-free Drive Wheel, 4 Spoke Black Rim/Black &quot;Knobby&quot; Tire — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 45.</strong> Flat-free Drive Wheel, 4 Spoke Black Rim/Black &quot;Knobby&quot; Tire &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1336,7 +1348,7 @@
     <h3>Pneumatic Drive Wheel, 4 Spoke Black Rim/Black &quot;Knobby&quot; Tire</h3>
     <p>IPB p. 93–94 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p98.jpg" alt="Pneumatic Drive Wheel, 4 Spoke Black Rim/Black &quot;Knobby&quot; Tire — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p98.jpg" width="1241" height="1600" alt="Pneumatic Drive Wheel, 4 Spoke Black Rim/Black &quot;Knobby&quot; Tire — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 46.</strong> Pneumatic Drive Wheel, 4 Spoke Black Rim/Black &quot;Knobby&quot; Tire &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1353,7 +1365,7 @@
     <h3>Flat-free Drive Wheel, 5 Spoke, Black Rim / Black &quot;Knobby&quot; Tire, 14&quot; x 4&quot;</h3>
     <p>IPB p. 95–96 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p100.jpg" alt="Flat-free Drive Wheel, 5 Spoke, Black Rim / Black &quot;Knobby&quot; Tire, 14&quot; x 4&quot; — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p100.jpg" width="1240" height="1600" alt="Flat-free Drive Wheel, 5 Spoke, Black Rim / Black &quot;Knobby&quot; Tire, 14&quot; x 4&quot; — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 47.</strong> Flat-free Drive Wheel, 5 Spoke, Black Rim / Black &quot;Knobby&quot; Tire, 14&quot; x 4&quot; &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1375,7 +1387,7 @@
     <h3>8 amp CTE Charger, Australia</h3>
     <p>IPB p. 97–98 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p102.jpg" alt="8 amp CTE Charger, Australia — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p102.jpg" width="1239" height="1600" alt="8 amp CTE Charger, Australia — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 48.</strong> 8 amp CTE Charger, Australia &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1391,7 +1403,7 @@
     <h3>8 Amp UPG Charger Assy, AGM / GEL Selectable</h3>
     <p>IPB p. 99–100 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p104.jpg" alt="8 Amp UPG Charger Assy, AGM / GEL Selectable — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p104.jpg" width="1239" height="1600" alt="8 Amp UPG Charger Assy, AGM / GEL Selectable — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 49.</strong> 8 Amp UPG Charger Assy, AGM / GEL Selectable &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1414,7 +1426,7 @@
     <h3>Owner&#x27;s Package - Edge 3, Domestic</h3>
     <p>IPB p. 101–102 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p106.jpg" alt="Owner&#x27;s Package - Edge 3, Domestic — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p106.jpg" width="1239" height="1600" alt="Owner&#x27;s Package - Edge 3, Domestic — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 50.</strong> Owner&#x27;s Package - Edge 3, Domestic &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1433,7 +1445,7 @@
     <h3>Decal Package - Edge 3</h3>
     <p>IPB p. 103–104 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p108.jpg" alt="Decal Package - — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p108.jpg" width="1239" height="1600" alt="Decal Package - — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 51.</strong> Decal Package - &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1460,7 +1472,7 @@
     <h3>MK, NF-22, AGM, Battery Assy</h3>
     <p>IPB p. 105–106 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p110.jpg" alt="MK, NF-22, AGM, Battery Assy — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p110.jpg" width="1239" height="1600" alt="MK, NF-22, AGM, Battery Assy — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 52.</strong> MK, NF-22, AGM, Battery Assy &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1473,7 +1485,7 @@
     <h3>MK, NF-22, GEL, Battery Assy</h3>
     <p>IPB p. 107–108 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p112.jpg" alt="MK, NF-22, GEL, Battery Assy — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p112.jpg" width="1239" height="1600" alt="MK, NF-22, GEL, Battery Assy — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 53.</strong> MK, NF-22, GEL, Battery Assy &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1493,7 +1505,7 @@
     <h3>Interceptor, NF-22, GEL, Battery Assy</h3>
     <p>IPB p. 109–110 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p114.jpg" alt="Interceptor, NF-22, GEL, Battery Assy — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p114.jpg" width="1239" height="1600" alt="Interceptor, NF-22, GEL, Battery Assy — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 54.</strong> Interceptor, NF-22, GEL, Battery Assy &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1512,7 +1524,7 @@
     <h3>Swing-away Joystick Bracket &amp; Components, Version 3</h3>
     <p>IPB p. 111–112 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p116.jpg" alt="Swing-away Joystick Bracket &amp; Components, Version 3 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p116.jpg" width="1241" height="1600" alt="Swing-away Joystick Bracket &amp; Components, Version 3 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 55.</strong> Swing-away Joystick Bracket &amp; Components, Version 3 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1535,7 +1547,7 @@
     <h3>Swing-away &amp; Multi-axis Mount Matrix, Rehab Seat, Version 2</h3>
     <p>IPB p. 113–114 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p118.jpg" alt="Swing-away &amp; Multi-axis Mount Matrix, Rehab Seat, Version 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p118.jpg" width="1240" height="1600" alt="Swing-away &amp; Multi-axis Mount Matrix, Rehab Seat, Version 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 56.</strong> Swing-away &amp; Multi-axis Mount Matrix, Rehab Seat, Version 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1572,7 +1584,7 @@
     <h3>Swing-away &amp; Multi-axis Mount Matrix, Captain Seat, Version 2</h3>
     <p>IPB p. 115–116 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p120.jpg" alt="Swing-away &amp; Multi-axis Mount Matrix, Captain Seat, Version 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p120.jpg" width="1240" height="1600" alt="Swing-away &amp; Multi-axis Mount Matrix, Captain Seat, Version 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 57.</strong> Swing-away &amp; Multi-axis Mount Matrix, Captain Seat, Version 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1600,7 +1612,7 @@
     <h3>Swing-away Joystick Bracket Components, Version 2</h3>
     <p>IPB p. 117–118 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p122.jpg" alt="Swing-away Joystick Bracket Components, Version 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p122.jpg" width="1241" height="1600" alt="Swing-away Joystick Bracket Components, Version 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 58.</strong> Swing-away Joystick Bracket Components, Version 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1623,7 +1635,7 @@
     <h3>Multi-Axis Joystick Bracket Components, Version 2</h3>
     <p>IPB p. 119–120 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p124.jpg" alt="Multi-Axis Joystick Bracket Components, Version 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p124.jpg" width="1240" height="1600" alt="Multi-Axis Joystick Bracket Components, Version 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 59.</strong> Multi-Axis Joystick Bracket Components, Version 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1643,7 +1655,7 @@
     <h3>Retract 4 Swing-away Joystick Bracket for Curtis Joysticks</h3>
     <p>IPB p. 121–122 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p126.jpg" alt="Retract 4 Swing-away Joystick Bracket for Curtis Joysticks — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p126.jpg" width="1241" height="1600" alt="Retract 4 Swing-away Joystick Bracket for Curtis Joysticks — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 60.</strong> Retract 4 Swing-away Joystick Bracket for Curtis Joysticks &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1659,7 +1671,7 @@
     <h3>Stealth Swing-away / Flip Down Joystick Brackets &amp; Mounts</h3>
     <p>IPB p. 123–124 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p128.jpg" alt="Stealth Swing-away / Flip Down Joystick Brackets &amp; Mounts — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p128.jpg" width="1240" height="1600" alt="Stealth Swing-away / Flip Down Joystick Brackets &amp; Mounts — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 61.</strong> Stealth Swing-away / Flip Down Joystick Brackets &amp; Mounts &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1675,7 +1687,7 @@
     <h3>Fixed Joystick Mounts, Quantum Joysticks</h3>
     <p>IPB p. 125–126 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p130.jpg" alt="Fixed Joystick Mounts, Quantum Joysticks — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p130.jpg" width="1240" height="1600" alt="Fixed Joystick Mounts, Quantum Joysticks — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 62.</strong> Fixed Joystick Mounts, Quantum Joysticks &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1697,7 +1709,7 @@
     <h3>Joystick Receiver Mounts, Quantum</h3>
     <p>IPB p. 127–128 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p132.jpg" alt="Joystick Receiver Mounts, Quantum — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p132.jpg" width="1241" height="1600" alt="Joystick Receiver Mounts, Quantum — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 63.</strong> Joystick Receiver Mounts, Quantum &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1722,7 +1734,7 @@
     <h3>Edge 3 Base Mounted LED Lights</h3>
     <p>IPB p. 129–130 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p134.jpg" alt="Edge 3 Base Mounted LED Lights — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p134.jpg" width="1240" height="1600" alt="Edge 3 Base Mounted LED Lights — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 64.</strong> Edge 3 Base Mounted LED Lights &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1758,7 +1770,7 @@
     <h3>I-Level Power Base Components, Curtis, Edge 2.0 / Edge 3</h3>
     <p>IPB p. 131–132 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p136.jpg" alt="I-Level Power Base Components, Curtis, Edge 2.0 / — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p136.jpg" width="1240" height="1600" alt="I-Level Power Base Components, Curtis, Edge 2.0 / — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 65.</strong> I-Level Power Base Components, Curtis, Edge 2.0 / &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1782,7 +1794,7 @@
     <h3>I-Level Power Base Components, Edge 2.0 / Edge 3 w/Base Mounted Lights</h3>
     <p>IPB p. 133–134 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p138.jpg" alt="I-Level Power Base Components, Edge 2.0 / Edge 3 w/Base Mounted Lights — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p138.jpg" width="1240" height="1600" alt="I-Level Power Base Components, Edge 2.0 / Edge 3 w/Base Mounted Lights — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 66.</strong> I-Level Power Base Components, Edge 2.0 / Edge 3 w/Base Mounted Lights &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1806,7 +1818,7 @@
     <h3>I-Level Power Base Cable &amp; Mounting Block Assy</h3>
     <p>IPB p. 135–136 &mdash; diagram and parts list. <a href="/library/collected-public-docs/pmd/quantum_q6-edge-3_ipb.pdf">Open the IPB</a> to that page and match the callouts.</p>
         <figure>
-      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p140.jpg" alt="I-Level Power Base Cable &amp; Mounting Block Assy — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/q6-edge-3/q6-edge-3-p140.jpg" width="1240" height="1600" alt="I-Level Power Base Cable &amp; Mounting Block Assy — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 67.</strong> I-Level Power Base Cable &amp; Mounting Block Assy &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
 <table>
@@ -1892,10 +1904,30 @@
       <li><a href="/pmd.html"><strong>PMD, the whole picture</strong></a> &mdash; why the lock exists, the numbers behind it, and the law catching up.</li>
     </ul>
   </section>
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a> &middot; <a href="/terms.html">The Tee-O-Ess</a> &middot; <a href="/dmca.html">DMCA</a> &middot; <a href="/copyright.html">Copyright</a> &middot; <a href="/privacy.html">Privacy</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
 </main>
 
 <script src="/nav.js" defer></script>
-<script src="/bb-util.js" defer></script><script src="/protocols.js" defer></script>
+<script src="/search.js" defer></script>
+
 <script src="/i18n.js" defer></script>
 </body>
 </html>

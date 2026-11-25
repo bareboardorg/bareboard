@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
   <meta name="tdm-reservation" content="1">
@@ -84,6 +84,7 @@
               <div class="colnav">
                 <ul class="colnav-col">
                 <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
                 <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
                 <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
                 <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
@@ -133,7 +134,7 @@
               </div>
             </div>
           </div></li>
-              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
           <div class="col-panel">
             <div class="dropdown-inner">
               <div class="colnav">
@@ -152,16 +153,27 @@
               </div>
             </div>
           </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
 </ul>
     </nav>
   </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
 </header>
-<main class="content">
+<main>
 <h1>Privacy Policy</h1>
-<p class="lede">We collect almost nothing. Here is exactly what that means. Last updated: October 7, 2026.</p>
+<p class="lede">We collect almost nothing. Here is exactly what that means. Last updated: November 24, 2026.</p>
 
 <h2>What we collect</h2>
-<p>BareBoard is designed to minimize data collection. We do not require accounts, do not sell or share personal data — because we do not have it to sell. We use Cloudflare Web Analytics to count page views; it sets no cookies and does not track individual visitors.</p>
+<p>BareBoard is designed to minimize data collection. We do not require accounts, do not sell or share personal data — because we do not have it to sell. No analytics runs on this site as published: no page-view counting, no cookies, no tracking of individual visitors.</p>
 
 <h3>Information you provide voluntarily</h3>
 <ul>
@@ -173,7 +185,7 @@
 <ul>
 <li><strong>Server logs:</strong> Our hosting provider may log standard web server data (IP address, requested URL, user agent, timestamp) for security and operational purposes. We do not use this data for tracking or profiling.</li>
 <li><strong>No cookies:</strong> BareBoard does not set tracking cookies. No third-party advertising or social media scripts are loaded.</li>
-<li><strong>Web analytics:</strong> We use <a href="https://www.cloudflare.com/web-analytics/">Cloudflare Web Analytics</a> to measure aggregate page views. It does not use cookies, does not collect personal identifiers, and does not track individual visitors across sessions or sites. It records only aggregate data such as pages viewed, referring sites, device type, browser, and country.</li>
+<li><strong>Web analytics:</strong> None. No analytics script or beacon runs on this site as published, so no page views are counted and no visitor data is collected for measurement.</li>
 <li><strong>No fingerprinting:</strong> We do not attempt to identify or track individual visitors across sessions.</li>
 </ul>
 
@@ -205,7 +217,7 @@
     <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
     <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
         <nav>
-      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/chips.html">Chip Database</a> &middot; <a href="/obsolescence.html">Planned Obsolescence</a> &middot; <a href="/repair.html">Repair Guides</a> &middot; <a href="/protocols.html">Protocol RE</a> &middot; <a href="/colophon.html">Colophon</a> &middot; <a href="/terms.html">T's & C's</a> &middot; <a href="/dmca.html">DMCA</a> &middot; <a href="/copyright.html">Copyright</a> &middot; <a href="/privacy.html">Privacy</a>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
     </nav>
 
     <div class="legal-framework">

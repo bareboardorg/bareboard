@@ -188,4 +188,4 @@ User-agent: img2dataset
 Disallow: /
 
 # Point legitimate search engines at the sitemap
-Sitemap: https://bareboard.org/sitemap.xml
+Sitemap: https://www.bareboard.org/sitemap.xml

@@ -130,6 +130,12 @@ a:focus-visible {
   color: var(--text);
 }
 
+/* The page you are on, marked in the bar and in dropdown columns. */
+.site-nav a[aria-current="page"] {
+  background: rgba(0, 102, 204, 0.1);
+  color: var(--text);
+}
+
 /* Search toggle in the bar. */
 .nav-search-item {
   margin-left: 0.5rem;
@@ -365,8 +371,7 @@ html:not(.js) .site-nav .has-children:focus-within .dropdown-inner {
   text-decoration: none;
 }
 
-.colnav-col > li > a,
-.colnav-col > li > .colnav-note {
+.colnav-col > li > a {
   align-items: center;
   border-radius: 8px;
   color: var(--text);
@@ -422,12 +427,6 @@ html:not(.js) .site-nav .has-children:focus-within .dropdown-inner {
   padding: 0.55rem 0.75rem;
   text-align: left;
   width: 100%;
-}
-
-.colnav-col > li > .colnav-note {
-  color: var(--secondary);
-  cursor: default;
-  font-size: 0.85rem;
 }
 
 html:not(.js) .colnav ul ul {
@@ -500,25 +499,6 @@ html:not(.js) .colnav ul ul a {
 .search-close:hover {
   border-color: var(--secondary);
   color: var(--text);
-}
-
-.search-hint {
-  color: var(--tertiary);
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.02em;
-  margin: 0 auto;
-  max-width: 46rem;
-  padding: 0 1.5rem 0.6rem;
-}
-
-.search-hint kbd {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-bottom-width: 2px;
-  border-radius: 4px;
-  font-family: inherit;
-  padding: 0.05rem 0.35rem;
 }
 
 .search-results {
@@ -807,11 +787,6 @@ table.hot100 tbody tr:hover td {
   white-space: nowrap;
 }
 
-.device-name {
-  font-weight: 600;
-  letter-spacing: -0.005em;
-}
-
 .units {
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 0.88em;
@@ -823,11 +798,6 @@ table.hot100 tbody tr:hover td {
   display: block;
   font-size: 0.82em;
   margin-top: 0.2rem;
-}
-
-.conf {
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 0.85em;
 }
 
 .cat {
@@ -951,114 +921,6 @@ body {
   }
 }
 
-/* Atlas mini-map (Hot 100 dropdown). */
-.atlas-minimap {
-  margin: 0 auto;
-  max-width: 46rem;
-  padding: 0.9rem 1.5rem 0;
-}
-
-.atlas-minimap-head {
-  align-items: baseline;
-  display: flex;
-  gap: 1rem;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
-}
-
-.atlas-minimap-kicker {
-  color: var(--tertiary);
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-}
-
-.atlas-minimap-more {
-  color: var(--secondary);
-  font-size: 0.85rem;
-  white-space: nowrap;
-}
-
-.atlas-minimap-more:hover {
-  color: var(--text);
-  text-decoration: none;
-}
-
-.atlas-minimap-svg {
-  background: rgba(255, 255, 255, 0.55);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  display: block;
-  height: auto;
-  width: 100%;
-}
-
-.atlas-quad-bg {
-  fill: rgba(0, 0, 0, 0.028);
-}
-
-.atlas-quad:hover .atlas-quad-bg,
-.atlas-quad:focus .atlas-quad-bg {
-  fill: rgba(0, 102, 204, 0.09);
-}
-
-.atlas-quad-label {
-  fill: #86868b;
-  font-family: var(--mono, ui-monospace, monospace);
-  font-size: 13px;
-  pointer-events: none;
-}
-
-.atlas-quad:hover .atlas-quad-label {
-  fill: #1d1d1f;
-}
-
-.atlas-div {
-  stroke: rgba(0, 0, 0, 0.12);
-  stroke-width: 1;
-}
-
-/* Small screens. */
-@media (max-width: 560px) {
-  main {
-    padding: 2.5rem 1.25rem 4rem;
-  }
-  .nav-inner {
-    justify-content: flex-start;
-    padding: 0.55rem 1rem;
-  }
-  /* The nav row itself — horizontal scroll, hidden scrollbar,
-     fixed-width items — lives in mobile.css, which every page loads
-     for screens up to 820px. This block does not repeat it. */
-  .site-nav nav > ul > li > a {
-    font-size: 0.86rem;
-    white-space: nowrap;
-  }
-  .colnav-col > li > a {
-    font-size: 0.95rem;
-  }
-  .search-inner {
-    padding: 1rem 1.25rem 0.4rem;
-  }
-  #site-search {
-    font-size: 1.15rem;
-  }
-  .search-hint, .search-results {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-  table.hot100 th, table.hot100 td {
-    padding: 0.55rem 0.6rem;
-  }
-  .atlas-minimap {
-    padding: 0.75rem 1rem 0;
-  }
-  .atlas-minimap-more {
-    font-size: 0.8rem;
-  }
-}
 
 /* Autopsy entries — figures and notes. */
 figure {
@@ -1158,12 +1020,6 @@ p.note {
 }
 
 /* Chip table. */
-.table-scroll {
-  margin: 1.25rem -1.5rem;
-  overflow-x: auto;
-  padding: 0 1.5rem;
-}
-
 .chips {
   border-collapse: collapse;
   font-size: 0.92rem;
@@ -1190,12 +1046,6 @@ p.note {
   border-bottom: none;
 }
 
-.partno {
-  color: var(--secondary);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 0.8rem;
-}
-
 .badge {
   border-radius: 999px;
   display: inline-block;
@@ -1213,16 +1063,6 @@ p.note {
 .b-likely {
   background: #fff3d1;
   color: #8a6100;
-}
-
-.b-mixed {
-  background: #e8eefc;
-  color: #27448f;
-}
-
-.b-unknown {
-  background: #ececf1;
-  color: #55555e;
 }
 
 /* History timeline. */
@@ -1580,11 +1420,6 @@ pre.term a {
   margin: 0 0 0.5rem;
 }
 
-.hot-why {
-  font-size: 0.95rem;
-  margin: 0 0 0.6rem;
-}
-
 .hot-sources {
   font-size: 0.8rem;
   margin: 0;
@@ -1690,110 +1525,6 @@ pre.term a {
 
 .wanted li {
   margin-bottom: 1.1rem;
-}
-
-/* Most Wanted posters. */
-.fbi-banner {
-  background: #0a2a5c;
-  border-bottom: 6px solid #c8a951;
-  color: #fff;
-  margin: 0 0 2rem;
-  padding: 2.5rem 1rem;
-  text-align: center;
-}
-
-.fbi-banner .fbi-org {
-  color: #c8a951;
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.4em;
-  margin: 0 0 0.5rem;
-}
-
-.fbi-banner h1 {
-  color: #fff;
-  font-size: 2.8rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  margin: 0 0 0.5rem;
-}
-
-.fbi-banner .fbi-sub {
-  color: #d6e0f0;
-  font-size: 1rem;
-  letter-spacing: 0.1em;
-  margin: 0;
-}
-
-.wanted-grid {
-  display: block;
-  margin: 2rem auto;
-  max-width: 720px;
-}
-
-.wanted-poster {
-  background: #fff;
-  border: 3px solid #0a2a5c;
-  border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  margin-bottom: 1.5rem;
-  overflow: hidden;
-  padding: 0;
-}
-
-.wanted-banner {
-  background: #0a2a5c;
-  color: #fff;
-  font-size: 1.8rem;
-  font-weight: 800;
-  letter-spacing: 0.3em;
-  margin: 0;
-  padding: 0.6rem;
-  text-align: center;
-}
-
-.wanted-name {
-  color: #0a2a5c;
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin: 1rem 1rem 0.5rem;
-}
-
-.wanted-for {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin: 0.5rem 1rem;
-}
-
-.wanted-why {
-  color: #333;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin: 0.5rem 1rem;
-}
-
-.wanted-priority {
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  margin: 1rem;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-.wanted-priority.high {
-  background: #a00;
-  color: #fff;
-}
-
-.wanted-priority.elevated {
-  background: #c8a951;
-  color: #0a2a5c;
-}
-
-.wanted-priority.standard {
-  background: #ddd;
-  color: #333;
 }
 
 /* Watchmen quote — thematic anchor. */

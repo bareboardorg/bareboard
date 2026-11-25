@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
   <meta name="tdm-reservation" content="1">
@@ -24,9 +24,9 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "BareBoard Protocol Reverse Engineering",
-  "description": "Closed protocols the community has reverse engineered, with open resources."
+  "@type": "WebPage",
+  "name": "PMD — Power Mobility Devices",
+  "description": "PMD: BareBoard’s power wheelchair section. Fault codes in plain English, dealer settings explained for owners, cheap fixes, and the parts — so owners take back their own chairs."
 }
 </script>
 <link rel="stylesheet" href="/i18n.css">
@@ -99,6 +99,7 @@
               <div class="colnav">
                 <ul class="colnav-col">
                 <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
                 <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
                 <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
                 <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
@@ -148,7 +149,7 @@
               </div>
             </div>
           </div></li>
-              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
           <div class="col-panel">
             <div class="dropdown-inner">
               <div class="colnav">
@@ -167,8 +168,19 @@
               </div>
             </div>
           </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
 </ul>
     </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
   </div>
 </header>
 
@@ -236,7 +248,7 @@
     <ul>
       <li><strong>There is no cryptography to break.</strong> The chair&rsquo;s bus &mdash; the cable network its parts use to talk to each other &mdash; is standard CAN &mdash; the project&rsquo;s captured dealer-tool sessions ran at 125 kbps &mdash; with no encryption. The only authentication anywhere on the bus is R-net&rsquo;s documented XOR serial handshake &mdash; a simple fixed check between modules, not cryptographic authentication. The lock was never a cipher. It is a tool they won&rsquo;t sell you.</li>
       <li><strong>The gate is the software, not a cipher.</strong> The proven gate is the dealer software and its access tiers. The project record contains incompatible accounts of what is inside the manufacturer&rsquo;s dongle, so this page does not state the dongle&rsquo;s internal hardware as settled fact.</li>
-      <li><strong>We decoded the configuration protocol.</strong> A chair&rsquo;s configuration moves as data objects, each with a checksum (a number that proves the data arrived unchanged). We read 16 configuration objects straight off the bus in captured dealer-tool sessions. Those reads came from captured dealer-tool sessions. A generic owner adapter that can make the same backup without the dealer tool is not yet proven.</li>
+      <li><strong>We decoded the configuration protocol.</strong> A chair&rsquo;s configuration moves as data objects, each with a checksum (a number that proves the data arrived unchanged). We read 16 configuration objects straight off the bus in captured dealer-tool sessions. A generic owner adapter that can make the same backup without the dealer tool is not yet proven.</li>
     </ul>
     <p>How these findings were made &mdash; and how to listen to your own chair the same way &mdash; is published as a bench procedure: <a href="/pmd-reading.html">Reading the Chair</a>.</p>
   </section>
@@ -251,7 +263,7 @@
   <section id="honest-limits">
     <h2>Honest limits</h2>
     <ul>
-      <li><strong>Proven today: reading captured dealer-tool sessions and understanding them.</strong> Backup through the proposed owner adapter, and the write/restore path, are <strong>not proven</strong>. The write/restore path is <strong>not proven</strong>. The shortcut the community assumes &mdash; that configuration-file byte offsets equal live bus addresses &mdash; is one our own captures contradict, so we do not ship a restore claim. It settles only with a live power module on the bench.</li>
+      <li><strong>Proven today: reading captured dealer-tool sessions and understanding them.</strong> Backup through the proposed owner adapter, and the write/restore path, are <strong>not proven</strong>. The shortcut the community assumes &mdash; that configuration-file byte offsets equal live bus addresses &mdash; is one our own captures contradict, so we do not ship a restore claim. It settles only with a live power module on the bench.</li>
       <li>The cheap fixes on this site run on a few dollars in parts &mdash; the $10 class of failures: lockouts, dirty contacts, worn bearings. Battery pairs, motors, and power modules are real money.</li>
       <li>Education does not fix Medicare&rsquo;s replacement clock or suppliers&rsquo; repair economics. Those are policy fights. Ours works without permission: the knowledge stops being theirs alone.</li>
     </ul>
@@ -266,10 +278,30 @@
       <li><strong>The remaining federal gap is only half of the DMCA.</strong> Circumventing a lock to diagnose or repair your own device is federally exempt &mdash; the Copyright Office&rsquo;s triennial rulemakings made it so (<a href="/library/collected-public-docs/lawsuits/usco-1201-final-rule-2021-govinfo.pdf">37 CFR &sect;201.40</a>). What has no exemption, and what the Librarian of Congress has no authority to exempt, is &sect;1201&rsquo;s anti-trafficking ban: nobody may legally make or distribute the tools that do the circumventing. Owners may legally pick the lock; selling them the pick is still banned.</li>
     </ul>
   </section>
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a> &middot; <a href="/terms.html">The Tee-O-Ess</a> &middot; <a href="/dmca.html">DMCA</a> &middot; <a href="/copyright.html">Copyright</a> &middot; <a href="/privacy.html">Privacy</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
 </main>
 
 <script src="/nav.js" defer></script>
-<script src="/bb-util.js" defer></script><script src="/protocols.js" defer></script>
+<script src="/search.js" defer></script>
+
 <script src="/i18n.js" defer></script>
 </body>
 </html>

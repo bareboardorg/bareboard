@@ -101,30 +101,12 @@ function guessFromPath(relPath) {
    descriptions as published on library.html / datasheets.html. Manifest
    records override these when collection crews land richer data. */
 const KNOWN = {
-  "/library/collected-public-docs/mandt-blackhat2016-demystifying-sep.pdf": {
-    title: "Demystifying the Secure Enclave Processor — Black Hat USA 2016 (Mandt et al.)",
-    maker: "Apple", model: "Secure Enclave Processor (SEP)", platform: "Apple",
-    category: "documentation", doc_type: "Conference paper (PDF)",
-    source_url: "https://blackhat.com/docs/us-16/materials/us-16-Mandt-Demystifying-The-Secure-Enclave-Processor.pdf",
-    basis: "Held from the archive.org mirror: no open license on file. Hosted on the site as a publicly published conference paper; license basis not yet established." },
-  "/library/collected-public-docs/pangu-mosec2020-attack-secure-boot-of-sep.pdf": {
-    title: "Attack Secure Boot of SEP — MOSEC 2020 (Team Pangu)",
-    maker: "Apple", model: "Secure Enclave Processor (SEP)", platform: "Apple",
-    category: "documentation", doc_type: "Conference paper (PDF)",
-    source_url: "https://github.com/windknown/presentations/blob/master/Attack_Secure_Boot_of_SEP.pdf",
-    basis: "Held from the archive.org mirror: no open license on file (the author's repository carries no license). Hosted on the site as a publicly published conference paper; license basis not yet established." },
   "/library/collected-public-docs/buhren-blackhat2020-amd-psp.pdf": {
     title: "All You Ever Wanted to Know About the AMD PSP — Black Hat USA 2020 (Buhren et al.)",
     maker: "AMD", model: "Platform Security Processor (PSP)", platform: "AMD",
     category: "documentation", doc_type: "Conference paper (PDF)",
     source_url: "https://github.com/PSPReverse/psp-docs/blob/master/Presentations/BlackHat2020/us-20-BuhrenEichner-All-you-ever-wanted-to-know-about-the-AMD-Platform-Security-Processor-and-were-Afraid-to-Emulate.pdf",
     basis: "Openly licensed (GPL-3.0): the authors' repository PSPReverse/psp-docs distributes this PDF under the GNU GPL v3, which permits verbatim redistribution with attribution." },
-  "/library/collected-public-docs/skochinsky-recon2014-intel-me-secrets.pdf": {
-    title: "Intel ME Secrets — REcon 2014 (Skochinsky)",
-    maker: "Intel", model: "Management Engine (ME/CSME)", platform: "Intel",
-    category: "documentation", doc_type: "Conference paper (PDF)",
-    source_url: "https://gaspar-ilom.github.io/heads-wiki/PDFs/Recon_2014_Skochinsky.pdf",
-    basis: "Held from the archive.org mirror: no open license on file - every slide carries '(c) 2014 Igor Skochinsky'. Hosted on the site as a publicly published conference paper; license basis not yet established." },
   "/library/collected-public-docs/kioxia-xg6-product-brief.pdf": {
     title: "XG6 Client NVMe SSD Product Brief",
     maker: "Kioxia", model: "XG6", platform: "Storage",
@@ -175,9 +157,9 @@ const KNOWN = {
     maker: "BareBoard", model: null, platform: "Hot 100",
     category: "documentation", doc_type: "Original document (Markdown)",
     basis: "Original work by BareBoard." },
-  "/library/trackers/most-wanted-tracker.csv": {
-    title: "Most Wanted Tracker",
-    maker: "BareBoard", model: null, platform: "Most Wanted",
+  "/library/trackers/doc-targets-tracker.csv": {
+    title: "Doc Targets Tracker",
+    maker: "BareBoard", model: null, platform: "Library",
     category: "other", doc_type: "Tracker (CSV)",
     basis: "Original work by BareBoard." },
   "/library/collected-public-docs/pmd/permobil_m3-corpus_owner.pdf.xml": {

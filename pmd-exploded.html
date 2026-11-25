@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
   <meta name="tdm-reservation" content="1">
@@ -24,9 +24,9 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "BareBoard Protocol Reverse Engineering",
-  "description": "Closed protocols the community has reverse engineered, with open resources."
+  "@type": "WebPage",
+  "name": "Exploded Views — PMD",
+  "description": "Every power wheelchair on this page, broken down to the component level from the manufacturer&rsquo;s own parts guide: exploded diagrams, callouts, part numbers, and plain language for every part."
 }
 </script>
 <link rel="stylesheet" href="/i18n.css">
@@ -99,6 +99,7 @@
               <div class="colnav">
                 <ul class="colnav-col">
                 <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
                 <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
                 <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
                 <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
@@ -148,7 +149,7 @@
               </div>
             </div>
           </div></li>
-              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
           <div class="col-panel">
             <div class="dropdown-inner">
               <div class="colnav">
@@ -167,8 +168,19 @@
               </div>
             </div>
           </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
 </ul>
     </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
   </div>
 </header>
 
@@ -176,7 +188,7 @@
   <section class="hero">
     <h1>Exploded Views</h1>
     <p class="lede">A power wheelchair is not one expensive assembly. It is a frame, two motors, a handful of wheels, a seat, a controller, and two batteries &mdash; and every one of those parts has a number. These pages take each chair apart <strong>using the manufacturer&rsquo;s own parts guide</strong>: the exploded diagram the dealer sees, the callout for every component, and the maker&rsquo;s part number, with one plain line explaining what each part does.</p>
-    <p>859 manufacturer diagrams and 8125 component rows, across 23 chairs. Where a maker publishes the full breakdown, the page is complete. Where a maker publishes nothing, the page says so, in the open, with the maker&rsquo;s own words quoted. Nobody should have to guess what their chair is made of.</p>
+    <p>883 manufacturer diagrams and 8225 component rows, across 24 chairs. Where a maker publishes the full breakdown, the page is complete. Where a maker publishes nothing, the page says so, in the open, with the maker&rsquo;s own words quoted. Nobody should have to guess what their chair is made of.</p>
   </section>
 
   <section>
@@ -195,6 +207,7 @@
         <tr><td><a href="/pmd-exploded-tdx-sp.html">Invacare TDX SP</a></td><td>Invacare</td><td><a href="/library/collected-public-docs/pmd/invacare_tdx-sp_parts.pdf">Spare Parts Catalogue, v2015/08/21c EN</a></td><td>Full parts catalog</td><td>183</td><td>1356</td></tr>
         <tr><td><a href="/pmd-exploded-jazzy-600-es.html">Pride Jazzy 600 ES</a></td><td>Pride Mobility</td><td><a href="/library/collected-public-docs/pmd/pride_jazzy-600-es_owner.pdf">Owner&rsquo;s Manual, INFMANU4480 Rev. C</a></td><td>Partial — manual figures</td><td>4</td><td>28</td></tr>
         <tr><td><a href="/pmd-exploded-jazzy-614-hd.html">Pride Jazzy 614 / 614 HD</a></td><td>Pride Mobility</td><td><a href="/library/collected-public-docs/pmd/pride_jazzy-614_owner.pdf">Owner&rsquo;s Manual, INFMANU3823 Rev. B</a></td><td>Manual-only &mdash; no IPB exists in public</td><td>16</td><td>71</td></tr>
+        <tr><td><a href="/pmd-exploded-jazzy-1107.html">Pride Jazzy 1107</a></td><td>Pride Mobility</td><td><a href="/library/collected-public-docs/pmd/pride_jazzy-1107_owner.pdf">Owner&rsquo;s Manual, INFMANU2846 Rev. B</a></td><td>Manual-only &mdash; no IPB exists in public</td><td>23</td><td>100</td></tr>
         <tr><td><a href="/pmd-exploded-jazzy-1450.html">Pride Jazzy 1450</a></td><td>Pride Mobility</td><td><a href="/library/collected-public-docs/pmd/pride_jazzy-1450_ipb.pdf">Illustrated Parts Breakdown, INFMANU5144 Rev. A</a></td><td>Full IPB</td><td>15</td><td>88</td></tr>
         <tr><td><a href="/pmd-exploded-jazzy-evo-613.html">Pride Jazzy EVO 613 / 613 Li</a></td><td>Pride Mobility</td><td><a href="/library/collected-public-docs/pmd/pride_jazzy-evo-613_owner.pdf">Owner&rsquo;s Manual, INFMANU5239 Rev. B</a></td><td>Manual-only &mdash; no IPB exists in public</td><td>9</td><td>77</td></tr>
         <tr><td><a href="/pmd-exploded-quickie-pulse-6.html">Sunrise Quickie Pulse 6</a></td><td>Sunrise Medical</td><td><a href="/library/collected-public-docs/pmd/sunrise_quickie-pulse-6_owner.pdf">Owner&rsquo;s Manual, doc. 119832</a></td><td>Manual-only</td><td>1</td><td>11</td></tr>
@@ -218,10 +231,30 @@
     <p>Assemblies are laid out in <strong>build order</strong> &mdash; frame, drive, motors, wheels, seating, electronics, batteries &mdash; so a reader with zero experience can follow how the chair goes together, one step at a time. Safety warnings are the makers&rsquo; own, quoted word for word on each page &mdash; except the AVIVA FX page, which paraphrases them in plain language with the maker&rsquo;s exact words in quotation marks.</p>
     <p><a href="/pmd.html">&larr; Back to PMD</a></p>
   </section>
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a> &middot; <a href="/terms.html">The Tee-O-Ess</a> &middot; <a href="/dmca.html">DMCA</a> &middot; <a href="/copyright.html">Copyright</a> &middot; <a href="/privacy.html">Privacy</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
 </main>
 
 <script src="/nav.js" defer></script>
-<script src="/bb-util.js" defer></script><script src="/protocols.js" defer></script>
+<script src="/search.js" defer></script>
+
 <script src="/i18n.js" defer></script>
 </body>
 </html>

@@ -24,10 +24,11 @@
      description, so the feed never promises words the page lacks.
    - Newest first, capped at 25 items; lastBuildDate is the newest
      item's date. Re-running changes nothing. */
-import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, statSync, existsSync } from "node:fs";
 import { dirname, join, relative, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { decodeEntities } from "./html-entities.mjs";
+import { collectHtml } from "./site-files.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const HOST = "https://www.bareboard.org";
@@ -54,16 +55,6 @@ const FEED_PAGES = [
 ];
 
 /* ----- sitemap ----- */
-
-function collectHtml(dir, found) {
-  const entries = readdirSync(dir).sort();
-  for (const name of entries) {
-    const full = join(dir, name);
-    if (statSync(full).isDirectory()) collectHtml(full, found);
-    else if (name.endsWith(".html")) found.push(full);
-  }
-  return found;
-}
 
 function pageUrl(relPath) {
   if (relPath === "index.html") return HOST + "/";

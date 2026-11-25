@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
   <meta name="tdm-reservation" content="1">
@@ -24,9 +24,9 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "BareBoard Protocol Reverse Engineering",
-  "description": "Closed protocols the community has reverse engineered, with open resources."
+  "@type": "WebPage",
+  "name": "The Shield: Right-to-Repair Law",
+  "description": "The layered legal defense for owners and independent repairers: Magnuson-Moss, the DMCA §1201 repair exemptions, the eight powered-wheelchair state laws with citations, the electronics laws, and the escalation ladder for when they say no."
 }
 </script>
 <link rel="stylesheet" href="/i18n.css">
@@ -99,6 +99,7 @@
               <div class="colnav">
                 <ul class="colnav-col">
                 <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
                 <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
                 <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
                 <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
@@ -148,7 +149,7 @@
               </div>
             </div>
           </div></li>
-              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
           <div class="col-panel">
             <div class="dropdown-inner">
               <div class="colnav">
@@ -167,8 +168,19 @@
               </div>
             </div>
           </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
 </ul>
     </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
   </div>
 </header>
 
@@ -195,7 +207,7 @@
 
     <h3>Your warranty cannot be voided for repairing your own device</h3>
     <p>The <strong>Magnuson-Moss Warranty Act</strong> (the federal warranty law, 15 U.S.C. &sect;&sect; 2301&ndash;2312) contains the sentence manufacturers hope you never read, at <strong>15 U.S.C. &sect; 2302(c)</strong>: a warrantor may not condition warranty coverage on the customer using an article or service that carries a brand, trade, or corporate name &mdash; unless the article or service is provided free, or the Federal Trade Commission (FTC, the federal consumer-protection agency) has waived the rule for that product. That is the <strong>tie-in ban</strong>: &ldquo;use our parts or lose your warranty&rdquo; is unlawful as a blanket condition, and the FTC&rsquo;s own interpretation (<strong>16 C.F.R. &sect; 700.10</strong>) treats a warranty that purports to void coverage when the owner uses non-branded parts as deceptive. The burden runs the other way from what service desks claim: a maker that wants to deny a claim must show that <em>your</em> part or <em>your</em> repair caused the failure &mdash; it is not your job to prove it didn&rsquo;t.</p>
-    <p>This is enforced law, not theory. In 2022 the FTC ordered Harley-Davidson (<a href="/library/collected-public-docs/lawsuits/ftc-harley-davidson-consent-order-2022.pdf">Decision and Order, File No. 2123140</a>) and MWE Investments/Westinghouse (<a href="/library/collected-public-docs/lawsuits/ftc-mwe-westinghouse-decision-order-2022.pdf">Decision and Order, Docket No. C-4774</a>) to strike their void-if-repaired terms and to tell customers their rights were restored; <a href="/library-hub.html">Weber</a> settled the same charge the same summer. And the Act gives you <strong>standing</strong> of your own: <strong>15 U.S.C. &sect; 2310(d)</strong> lets a consumer sue a warrantor that fails to comply, with attorney&rsquo;s fees recoverable if you win. Template 3 on the <a href="/repair-demand-letter.html">demand-letter page</a> is built on this layer.</p>
+    <p>This is enforced law, not theory. In 2022 the FTC ordered Harley-Davidson (<a href="/library/collected-public-docs/lawsuits/ftc-harley-davidson-consent-order-2022.pdf">Decision and Order, File No. 2123140</a>) and MWE Investments/Westinghouse (<a href="/library/collected-public-docs/lawsuits/ftc-mwe-westinghouse-decision-order-2022.pdf">Decision and Order, Docket No. C-4774</a>) to strike their void-if-repaired terms and to tell customers their rights were restored; <a href="https://www.ftc.gov/system/files/ftc_gov/pdf/Agreement%20Containing%20Consent%20Order%20(6.17.22).pdf">Weber</a> settled the same charge the same summer. And the Act gives you <strong>standing</strong> of your own: <strong>15 U.S.C. &sect; 2310(d)</strong> lets a consumer sue a warrantor that fails to comply, with attorney&rsquo;s fees recoverable if you win. Template 3 on the <a href="/repair-demand-letter.html">demand-letter page</a> is built on this layer.</p>
 
     <h3>Picking the lock on your own device is federally exempt</h3>
     <p>The <strong>Digital Millennium Copyright Act (DMCA), &sect; 1201</strong> (17 U.S.C. &sect; 1201) bans circumventing &mdash; bypassing &mdash; the digital locks on copyrighted software, which includes the firmware inside almost every modern device. Every three years the Librarian of Congress, on the Copyright Office&rsquo;s recommendation, issues <strong>exemptions</strong> to that ban, codified at <strong>37 C.F.R. &sect; 201.40</strong>. The repair exemptions now include:</p>
@@ -207,7 +219,7 @@
     <p><strong>The honest limit, and it matters:</strong> the exemptions free the <em>act</em> of circumventing for repair. They do not free the <em>tools</em>. &sect; 1201&rsquo;s separate <strong>anti-trafficking</strong> ban &mdash; no making or distributing circumvention tools &mdash; is not something the Librarian has statutory authority to exempt, so it stands. An owner may legally pick their own lock; selling them the pick remains banned. Our <a href="/pmd.html#the-law">PMD law section</a> states the same line. No state law can override this, because of <strong>preemption</strong>: federal copyright law wins where the two conflict.</p>
 
     <h3>The FTC is actively enforcing against repair restrictions</h3>
-    <p>Three markers worth citing in any dispute. The FTC&rsquo;s report to Congress <a href="/library-hub.html"><em>Nixing the Fix</em></a> (May 2021) found &ldquo;scant evidence&rdquo; justifying manufacturer repair restrictions. Its <a href="/library-hub.html"><strong>Policy Statement on Repair Restrictions</strong></a> (July 21, 2021) committed the Commission to prioritizing enforcement under the FTC Act, Magnuson-Moss, and the antitrust laws. And on July 8, 2026 the FTC and five states settled <em>FTC v. Deere &amp; Company</em>: <a href="/library/collected-public-docs/lawsuits/ftc-v-deere-stipulated-order-2026.pdf">the stipulated order</a> requires Deere, for ten years, to give owners and independent repairers repair resources equivalent to its dealers&rsquo;, on fair and reasonable terms. A manufacturer refusing you in 2026 is refusing against the stated position of its federal regulator.</p>
+    <p>Three markers worth citing in any dispute. The FTC&rsquo;s report to Congress <a href="https://www.ftc.gov/system/files/documents/reports/nixing-fix-ftc-report-congress-repairrestrictions/nixing_the_fix_report_final_5521_630pm-508_002.pdf"><em>Nixing the Fix</em></a> (May 2021) found &ldquo;scant evidence&rdquo; justifying manufacturer repair restrictions. Its <a href="https://www.ftc.gov/system/files/documents/public_statements/1592330/p194400repairrestrictionspolicystatement.pdf"><strong>Policy Statement on Repair Restrictions</strong></a> (July 21, 2021) committed the Commission to prioritizing enforcement under the FTC Act, Magnuson-Moss, and the antitrust laws. And on July 8, 2026 the FTC and five states settled <em>FTC v. Deere &amp; Company</em>: <a href="/library/collected-public-docs/lawsuits/ftc-v-deere-stipulated-order-2026.pdf">the stipulated order</a> requires Deere, for ten years, to give owners and independent repairers repair resources equivalent to its dealers&rsquo;, on fair and reasonable terms. A manufacturer refusing you in 2026 is refusing against the stated position of its federal regulator.</p>
 
     <h3>Once it&rsquo;s sold, patent law stops policing it</h3>
     <p><em>Impression Products, Inc. v. Lexmark International, Inc.</em>, 581 U.S. 360 (2017) &mdash; <a href="/library/collected-public-docs/lawsuits/impression-products-v-lexmark-scotus-opinion-2017.pdf">Supreme Court opinion in our library</a> &mdash; held that a patent holder&rsquo;s rights are <strong>exhausted</strong> (used up) at the first authorized sale, domestic or foreign: post-sale restrictions cannot be enforced through patent law. It is the doctrine under the whole refill-and-repair economy, and the reason &ldquo;patent protected, no unauthorized parts&rdquo; stickers mean less than they claim.</p>
@@ -313,7 +325,28 @@
   </section>
 </main>
 
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+
 <script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
 <script src="/bb-util.js" defer></script><script src="/protocols.js" defer></script>
 <script src="/i18n.js" defer></script>
 </body>

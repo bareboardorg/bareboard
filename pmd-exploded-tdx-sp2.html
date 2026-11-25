@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data: upload.wikimedia.org www.espressif.com; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noai, noimageai">
   <meta name="tdm-reservation" content="1">
@@ -24,9 +24,9 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "BareBoard Protocol Reverse Engineering",
-  "description": "Closed protocols the community has reverse engineered, with open resources."
+  "@type": "WebPage",
+  "name": "Exploded View: Invacare TDX SP2 — PMD",
+  "description": "Every assembly of the Invacare TDX SP2 exploded to the component level, from Invacare&rsquo;s own Spare Parts Catalogue: 210 plates with part numbers and a plain-language line for every part."
 }
 </script>
 <link rel="stylesheet" href="/i18n.css">
@@ -99,6 +99,7 @@
               <div class="colnav">
                 <ul class="colnav-col">
                 <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
                 <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
                 <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
                 <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
@@ -148,7 +149,7 @@
               </div>
             </div>
           </div></li>
-              <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
           <div class="col-panel">
             <div class="dropdown-inner">
               <div class="colnav">
@@ -167,8 +168,19 @@
               </div>
             </div>
           </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
 </ul>
     </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
   </div>
 </header>
 
@@ -213,7 +225,7 @@
     <p>Start with the skeleton. Every other system bolts to the frame, so it goes together first.</p>
     <h3 id="step-1">Step 1 &mdash; Battery Box Hardware</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p30.jpg" alt="Battery Box Hardware — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p30.jpg" width="1078" height="1600" alt="Battery Box Hardware — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 1.</strong> Battery Box Hardware &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -225,7 +237,7 @@
     </table>
     <h3 id="step-2">Step 2 &mdash; Walking Beam</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p31.jpg" alt="Walking Beam — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p31.jpg" width="1078" height="1600" alt="Walking Beam — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 2.</strong> Walking Beam &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -243,7 +255,7 @@
     </table>
     <h3 id="step-3">Step 3 &mdash; Rear Pivot Wide Base</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p32.jpg" alt="Rear Pivot Wide Base — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p32.jpg" width="1078" height="1600" alt="Rear Pivot Wide Base — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 3.</strong> Rear Pivot Wide Base &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -262,7 +274,7 @@
     </table>
     <h3 id="step-4">Step 4 &mdash; Shrouds Wide Base</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p33.jpg" alt="Shrouds Wide Base — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p33.jpg" width="1078" height="1600" alt="Shrouds Wide Base — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 4.</strong> Shrouds Wide Base &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -276,7 +288,7 @@
     </table>
     <h3 id="step-5">Step 5 &mdash; Rear Shrouds - Wide Base</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p34.jpg" alt="Rear Shrouds - Wide Base — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p34.jpg" width="1078" height="1600" alt="Rear Shrouds - Wide Base — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 5.</strong> Rear Shrouds - Wide Base &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -295,7 +307,7 @@
     </table>
     <h3 id="step-6">Step 6 &mdash; Bezel Shroud</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p35.jpg" alt="Bezel Shroud — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p35.jpg" width="1078" height="1600" alt="Bezel Shroud — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 6.</strong> Bezel Shroud &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -324,7 +336,7 @@
     </table>
     <h3 id="step-7">Step 7 &mdash; Front Shroud - Wide Base</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p36.jpg" alt="Front Shroud - Wide Base — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p36.jpg" width="1078" height="1600" alt="Front Shroud - Wide Base — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 7.</strong> Front Shroud - Wide Base &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -343,7 +355,7 @@
     </table>
     <h3 id="step-8">Step 8 &mdash; Fender</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p37.jpg" alt="Fender — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p37.jpg" width="1078" height="1600" alt="Fender — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 8.</strong> Fender &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -373,7 +385,7 @@
     </table>
     <h3 id="step-9">Step 9 &mdash; Rear Caps</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p38.jpg" alt="Rear Caps — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p38.jpg" width="1078" height="1600" alt="Rear Caps — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 9.</strong> Rear Caps &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -392,7 +404,7 @@
     </table>
     <h3 id="step-10">Step 10 &mdash; Low Rider Option</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p39.jpg" alt="Low Rider Option — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p39.jpg" width="1078" height="1600" alt="Low Rider Option — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 10.</strong> Low Rider Option &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -403,7 +415,7 @@
     </table>
     <h3 id="step-11">Step 11 &mdash; Battery Box Hardware</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p41.jpg" alt="Battery Box Hardware — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p41.jpg" width="1078" height="1600" alt="Battery Box Hardware — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 11.</strong> Battery Box Hardware &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -415,7 +427,7 @@
     </table>
     <h3 id="step-12">Step 12 &mdash; Rear Pivot Narrow Base</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p42.jpg" alt="Rear Pivot Narrow Base — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p42.jpg" width="1078" height="1600" alt="Rear Pivot Narrow Base — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 12.</strong> Rear Pivot Narrow Base &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -434,7 +446,7 @@
     </table>
     <h3 id="step-13">Step 13 &mdash; Shrouds Narrow Base</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p43.jpg" alt="Shrouds Narrow Base — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p43.jpg" width="1078" height="1600" alt="Shrouds Narrow Base — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 13.</strong> Shrouds Narrow Base &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -448,7 +460,7 @@
     </table>
     <h3 id="step-14">Step 14 &mdash; Rear Shrouds Narrow Base</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p44.jpg" alt="Rear Shrouds Narrow Base — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p44.jpg" width="1078" height="1600" alt="Rear Shrouds Narrow Base — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 14.</strong> Rear Shrouds Narrow Base &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -467,7 +479,7 @@
     </table>
     <h3 id="step-15">Step 15 &mdash; Front Shroud Narrow Base</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p45.jpg" alt="Front Shroud Narrow Base — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p45.jpg" width="1078" height="1600" alt="Front Shroud Narrow Base — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 15.</strong> Front Shroud Narrow Base &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -490,7 +502,7 @@
     <p>The motor and gearbox on each side are the muscles of the chair. One pair per side.</p>
     <h3 id="step-16">Step 16 &mdash; Overview Propulsion SSD</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p165.jpg" alt="Overview Propulsion SSD — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p165.jpg" width="1078" height="1600" alt="Overview Propulsion SSD — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 16.</strong> Overview Propulsion SSD &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -517,7 +529,7 @@
     </table>
     <h3 id="step-17">Step 17 &mdash; Overview Propulsion SSD</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p166.jpg" alt="Overview Propulsion SSD — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p166.jpg" width="1078" height="1600" alt="Overview Propulsion SSD — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 17.</strong> Overview Propulsion SSD &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -563,7 +575,7 @@
     </table>
     <h3 id="step-18">Step 18 &mdash; Overview Propulsion SSD</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p167.jpg" alt="Overview Propulsion SSD — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p167.jpg" width="1078" height="1600" alt="Overview Propulsion SSD — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 18.</strong> Overview Propulsion SSD &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -581,7 +593,7 @@
     </table>
     <h3 id="step-19">Step 19 &mdash; Propulsion SSD - Wide Base</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p168.jpg" alt="Propulsion SSD - Wide Base — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p168.jpg" width="1078" height="1600" alt="Propulsion SSD - Wide Base — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 19.</strong> Propulsion SSD - Wide Base &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -598,7 +610,7 @@
     </table>
     <h3 id="step-20">Step 20 &mdash; Propulsion SSD - Narrow Base</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p169.jpg" alt="Propulsion SSD - Narrow Base — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p169.jpg" width="1078" height="1600" alt="Propulsion SSD - Narrow Base — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 20.</strong> Propulsion SSD - Narrow Base &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -617,7 +629,7 @@
     <p>Wheels next: the big drive wheels in the middle, the small swiveling casters at the corners.</p>
     <h3 id="step-21">Step 21 &mdash; Castors</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p162.jpg" alt="Castors — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p162.jpg" width="1078" height="1600" alt="Castors — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 21.</strong> Castors &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -637,7 +649,7 @@
     </table>
     <h3 id="step-22">Step 22 &mdash; Drive Wheels 14&quot;</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p163.jpg" alt="Drive Wheels 14&quot; — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p163.jpg" width="1078" height="1600" alt="Drive Wheels 14&quot; — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 22.</strong> Drive Wheels 14&quot; &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -655,7 +667,7 @@
     </table>
     <h3 id="step-23">Step 23 &mdash; Wheel Hub 5-hole</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p164.jpg" alt="Wheel Hub 5-hole — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p164.jpg" width="1078" height="1600" alt="Wheel Hub 5-hole — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 23.</strong> Wheel Hub 5-hole &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -672,7 +684,7 @@
     <p>Seating goes on once the base rolls. This is the system that holds the rider — fit is safety here.</p>
     <h3 id="step-24">Step 24 &mdash; man. settable Tilt</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p48.jpg" alt="man. settable Tilt — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p48.jpg" width="1078" height="1600" alt="man. settable Tilt — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 24.</strong> man. settable Tilt &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -683,7 +695,7 @@
     </table>
     <h3 id="step-25">Step 25 &mdash; powered simple Tilt 20°</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p49.jpg" alt="powered simple Tilt 20° — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p49.jpg" width="1078" height="1600" alt="powered simple Tilt 20° — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 25.</strong> powered simple Tilt 20° &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -702,7 +714,7 @@
     </table>
     <h3 id="step-26">Step 26 &mdash; powered Tilt 0°-30°</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p50.jpg" alt="powered Tilt 0°-30° — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p50.jpg" width="1078" height="1600" alt="powered Tilt 0°-30° — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 26.</strong> powered Tilt 0°-30° &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -716,7 +728,7 @@
     </table>
     <h3 id="step-27">Step 27 &mdash; Lifter</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p51.jpg" alt="Lifter — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p51.jpg" width="1078" height="1600" alt="Lifter — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 27.</strong> Lifter &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -732,7 +744,7 @@
     </table>
     <h3 id="step-28">Step 28 &mdash; One Piece Seat Plate</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p52.jpg" alt="One Piece Seat Plate — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p52.jpg" width="1078" height="1600" alt="One Piece Seat Plate — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 28.</strong> One Piece Seat Plate &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -743,7 +755,7 @@
     </table>
     <h3 id="step-29">Step 29 &mdash; Telescopic Seat Frame for man. /pow. 20° Tilt</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p54.jpg" alt="Telescopic Seat Frame for man. /pow. 20° Tilt — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p54.jpg" width="1078" height="1600" alt="Telescopic Seat Frame for man. /pow. 20° Tilt — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 29.</strong> Telescopic Seat Frame for man. /pow. 20° Tilt &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -762,7 +774,7 @@
     </table>
     <h3 id="step-30">Step 30 &mdash; Telescopic Seat Frame for Tilt 30° / Lifter</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p55.jpg" alt="Telescopic Seat Frame for Tilt 30° / Lifter — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p55.jpg" width="1078" height="1600" alt="Telescopic Seat Frame for Tilt 30° / Lifter — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 30.</strong> Telescopic Seat Frame for Tilt 30° / Lifter &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -782,7 +794,7 @@
     </table>
     <h3 id="step-31">Step 31 &mdash; Armrest Bracket</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p56.jpg" alt="Armrest Bracket — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p56.jpg" width="1078" height="1600" alt="Armrest Bracket — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 31.</strong> Armrest Bracket &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -794,7 +806,7 @@
     </table>
     <h3 id="step-32">Step 32 &mdash; Legrest Support</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p57.jpg" alt="Legrest Support — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p57.jpg" width="1078" height="1600" alt="Legrest Support — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 32.</strong> Legrest Support &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -808,7 +820,7 @@
     </table>
     <h3 id="step-33">Step 33 &mdash; Seat Plate</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p58.jpg" alt="Seat Plate — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p58.jpg" width="1078" height="1600" alt="Seat Plate — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 33.</strong> Seat Plate &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -820,7 +832,7 @@
     </table>
     <h3 id="step-34">Step 34 &mdash; Telescopic Seat Frame for man. / pow. 20° Tilt</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p60.jpg" alt="Telescopic Seat Frame for man. / pow. 20° Tilt — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p60.jpg" width="1078" height="1600" alt="Telescopic Seat Frame for man. / pow. 20° Tilt — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 34.</strong> Telescopic Seat Frame for man. / pow. 20° Tilt &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -839,7 +851,7 @@
     </table>
     <h3 id="step-35">Step 35 &mdash; Telescopic Seat Frame for Tilt 30° / Lifter</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p61.jpg" alt="Telescopic Seat Frame for Tilt 30° / Lifter — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p61.jpg" width="1078" height="1600" alt="Telescopic Seat Frame for Tilt 30° / Lifter — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 35.</strong> Telescopic Seat Frame for Tilt 30° / Lifter &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -859,7 +871,7 @@
     </table>
     <h3 id="step-36">Step 36 &mdash; Legrest Support</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p62.jpg" alt="Legrest Support — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p62.jpg" width="1078" height="1600" alt="Legrest Support — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 36.</strong> Legrest Support &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -873,7 +885,7 @@
     </table>
     <h3 id="step-37">Step 37 &mdash; Sling Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p63.jpg" alt="Sling Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p63.jpg" width="1078" height="1600" alt="Sling Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 37.</strong> Sling Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -887,7 +899,7 @@
     </table>
     <h3 id="step-38">Step 38 &mdash; Adapter Kit for Universal Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p65.jpg" alt="Adapter Kit for Universal Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p65.jpg" width="1078" height="1600" alt="Adapter Kit for Universal Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 38.</strong> Adapter Kit for Universal Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -899,7 +911,7 @@
     </table>
     <h3 id="step-39">Step 39 &mdash; Seat Cushion</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p66.jpg" alt="Seat Cushion — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p66.jpg" width="1078" height="1600" alt="Seat Cushion — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 39.</strong> Seat Cushion &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -913,7 +925,7 @@
     </table>
     <h3 id="step-40">Step 40 &mdash; Seat Cushion</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p67.jpg" alt="Seat Cushion — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p67.jpg" width="1078" height="1600" alt="Seat Cushion — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 40.</strong> Seat Cushion &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -933,7 +945,7 @@
     </table>
     <h3 id="step-41">Step 41 &mdash; Seat Cushion</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p68.jpg" alt="Seat Cushion — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p68.jpg" width="1078" height="1600" alt="Seat Cushion — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 41.</strong> Seat Cushion &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -948,7 +960,7 @@
     </table>
     <h3 id="step-42">Step 42 &mdash; Seat Tilt</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p70.jpg" alt="Seat Tilt — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p70.jpg" width="1078" height="1600" alt="Seat Tilt — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 42.</strong> Seat Tilt &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -960,7 +972,7 @@
     </table>
     <h3 id="step-43">Step 43 &mdash; Seat Lifter with Tilt</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p71.jpg" alt="Seat Lifter with Tilt — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p71.jpg" width="1078" height="1600" alt="Seat Lifter with Tilt — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 43.</strong> Seat Lifter with Tilt &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -973,7 +985,7 @@
     </table>
     <h3 id="step-44">Step 44 &mdash; Seat Cushions &quot;Matrx Vi&quot;</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p74.jpg" alt="Seat Cushions &quot;Matrx Vi&quot; — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p74.jpg" width="1078" height="1600" alt="Seat Cushions &quot;Matrx Vi&quot; — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 44.</strong> Seat Cushions &quot;Matrx Vi&quot; &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1000,7 +1012,7 @@
     </table>
     <h3 id="step-45">Step 45 &mdash; Seat Cushions &quot;Matrx Flo-Tech&quot;</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p75.jpg" alt="Seat Cushions &quot;Matrx Flo-Tech&quot; — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p75.jpg" width="1078" height="1600" alt="Seat Cushions &quot;Matrx Flo-Tech&quot; — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 45.</strong> Seat Cushions &quot;Matrx Flo-Tech&quot; &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1019,7 +1031,7 @@
     </table>
     <h3 id="step-46">Step 46 &mdash; man. settable Tilt</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p77.jpg" alt="man. settable Tilt — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p77.jpg" width="1078" height="1600" alt="man. settable Tilt — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 46.</strong> man. settable Tilt &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1033,7 +1045,7 @@
     </table>
     <h3 id="step-47">Step 47 &mdash; powered simple Tilt</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p78.jpg" alt="powered simple Tilt — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p78.jpg" width="1078" height="1600" alt="powered simple Tilt — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 47.</strong> powered simple Tilt &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1049,7 +1061,7 @@
     </table>
     <h3 id="step-48">Step 48 &mdash; Seat Frame and Plate</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p79.jpg" alt="Seat Frame and Plate — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p79.jpg" width="1078" height="1600" alt="Seat Frame and Plate — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 48.</strong> Seat Frame and Plate &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1065,7 +1077,7 @@
     </table>
     <h3 id="step-49">Step 49 &mdash; Seat Cushion</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p80.jpg" alt="Seat Cushion — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p80.jpg" width="1078" height="1600" alt="Seat Cushion — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 49.</strong> Seat Cushion &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1078,7 +1090,7 @@
     </table>
     <h3 id="step-50">Step 50 &mdash; Support for Backrest Frame</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p83.jpg" alt="Support for Backrest Frame — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p83.jpg" width="1078" height="1600" alt="Support for Backrest Frame — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 50.</strong> Support for Backrest Frame &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1091,7 +1103,7 @@
     </table>
     <h3 id="step-51">Step 51 &mdash; Backrest Frame</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p84.jpg" alt="Backrest Frame — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p84.jpg" width="1078" height="1600" alt="Backrest Frame — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 51.</strong> Backrest Frame &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1102,7 +1114,7 @@
     </table>
     <h3 id="step-52">Step 52 &mdash; Sling Back, tension adjustable</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p85.jpg" alt="Sling Back, tension adjustable — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p85.jpg" width="1078" height="1600" alt="Sling Back, tension adjustable — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 52.</strong> Sling Back, tension adjustable &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1128,7 +1140,7 @@
     </table>
     <h3 id="step-53">Step 53 &mdash; Backrest support</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p86.jpg" alt="Backrest support — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p86.jpg" width="1078" height="1600" alt="Backrest support — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 53.</strong> Backrest support &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1145,7 +1157,7 @@
     </table>
     <h3 id="step-54">Step 54 &mdash; Backposts</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p87.jpg" alt="Backposts — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p87.jpg" width="1078" height="1600" alt="Backposts — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 54.</strong> Backposts &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1165,7 +1177,7 @@
     </table>
     <h3 id="step-55">Step 55 &mdash; Connection tube</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p88.jpg" alt="Connection tube — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p88.jpg" width="1078" height="1600" alt="Connection tube — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 55.</strong> Connection tube &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1179,7 +1191,7 @@
     </table>
     <h3 id="step-56">Step 56 &mdash; Back Recliner / Stabilization bracket</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p89.jpg" alt="Back Recliner / Stabilization bracket — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p89.jpg" width="1078" height="1600" alt="Back Recliner / Stabilization bracket — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 56.</strong> Back Recliner / Stabilization bracket &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1196,7 +1208,7 @@
     </table>
     <h3 id="step-57">Step 57 &mdash; Flex 3 / Laguna</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p91.jpg" alt="Flex 3 / Laguna — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p91.jpg" width="1078" height="1600" alt="Flex 3 / Laguna — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 57.</strong> Flex 3 / Laguna &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1216,7 +1228,7 @@
     </table>
     <h3 id="step-58">Step 58 &mdash; Flex 3 / Laguna</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p92.jpg" alt="Flex 3 / Laguna — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p92.jpg" width="1078" height="1600" alt="Flex 3 / Laguna — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 58.</strong> Flex 3 / Laguna &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1227,7 +1239,7 @@
     </table>
     <h3 id="step-59">Step 59 &mdash; Matrx Posture Back</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p93.jpg" alt="Matrx Posture Back — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p93.jpg" width="1078" height="1600" alt="Matrx Posture Back — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 59.</strong> Matrx Posture Back &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1244,7 +1256,7 @@
     </table>
     <h3 id="step-60">Step 60 &mdash; Matrx Elite T/R Back</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p94.jpg" alt="Matrx Elite T/R Back — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p94.jpg" width="1078" height="1600" alt="Matrx Elite T/R Back — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 60.</strong> Matrx Elite T/R Back &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1257,7 +1269,7 @@
     </table>
     <h3 id="step-61">Step 61 &mdash; Matrx Elite Deep Back</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p95.jpg" alt="Matrx Elite Deep Back — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p95.jpg" width="1078" height="1600" alt="Matrx Elite Deep Back — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 61.</strong> Matrx Elite Deep Back &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1270,7 +1282,7 @@
     </table>
     <h3 id="step-62">Step 62 &mdash; Matrx Elite (Full) Back</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p96.jpg" alt="Matrx Elite (Full) Back — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p96.jpg" width="1078" height="1600" alt="Matrx Elite (Full) Back — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 62.</strong> Matrx Elite (Full) Back &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1283,7 +1295,7 @@
     </table>
     <h3 id="step-63">Step 63 &mdash; Backrest Cushions</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p101.jpg" alt="Backrest Cushions — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p101.jpg" width="1078" height="1600" alt="Backrest Cushions — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 63.</strong> Backrest Cushions &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1311,7 +1323,7 @@
     </table>
     <h3 id="step-64">Step 64 &mdash; Posture Back</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p105.jpg" alt="Posture Back — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p105.jpg" width="1078" height="1600" alt="Posture Back — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 64.</strong> Posture Back &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1328,7 +1340,7 @@
     </table>
     <h3 id="step-65">Step 65 &mdash; Elite T/R Back</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p106.jpg" alt="Elite T/R Back — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p106.jpg" width="1078" height="1600" alt="Elite T/R Back — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 65.</strong> Elite T/R Back &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1347,7 +1359,7 @@
     </table>
     <h3 id="step-66">Step 66 &mdash; Elite Deep Back</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p107.jpg" alt="Elite Deep Back — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p107.jpg" width="1078" height="1600" alt="Elite Deep Back — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 66.</strong> Elite Deep Back &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1366,7 +1378,7 @@
     </table>
     <h3 id="step-67">Step 67 &mdash; Privacy Flaps</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p108.jpg" alt="Privacy Flaps — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p108.jpg" width="1078" height="1600" alt="Privacy Flaps — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 67.</strong> Privacy Flaps &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1379,7 +1391,7 @@
     </table>
     <h3 id="step-68">Step 68 &mdash; Manual backrest adjustment</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p110.jpg" alt="Manual backrest adjustment — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p110.jpg" width="1078" height="1600" alt="Manual backrest adjustment — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 68.</strong> Manual backrest adjustment &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1390,7 +1402,7 @@
     </table>
     <h3 id="step-69">Step 69 &mdash; Powered backrest adjustment</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p111.jpg" alt="Powered backrest adjustment — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p111.jpg" width="1078" height="1600" alt="Powered backrest adjustment — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 69.</strong> Powered backrest adjustment &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1401,7 +1413,7 @@
     </table>
     <h3 id="step-70">Step 70 &mdash; Seat depth adapter</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p112.jpg" alt="Seat depth adapter — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p112.jpg" width="1078" height="1600" alt="Seat depth adapter — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 70.</strong> Seat depth adapter &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1412,7 +1424,7 @@
     </table>
     <h3 id="step-71">Step 71 &mdash; Backrest</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p113.jpg" alt="Backrest — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p113.jpg" width="1078" height="1600" alt="Backrest — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 71.</strong> Backrest &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1435,7 +1447,7 @@
     </table>
     <h3 id="step-72">Step 72 &mdash; Legrest Support, Vari series - Modulite Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p117.jpg" alt="Legrest Support, Vari series - Modulite Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p117.jpg" width="1078" height="1600" alt="Legrest Support, Vari series - Modulite Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 72.</strong> Legrest Support, Vari series - Modulite Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1450,7 +1462,7 @@
     </table>
     <h3 id="step-73">Step 73 &mdash; Hanger Vari A (04/2009 =&gt;)</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p118.jpg" alt="Hanger Vari A (04/2009 =&gt;) — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p118.jpg" width="1078" height="1600" alt="Hanger Vari A (04/2009 =&gt;) — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 73.</strong> Hanger Vari A (04/2009 =&gt;) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1466,7 +1478,7 @@
     </table>
     <h3 id="step-74">Step 74 &mdash; Hanger Vari F</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p119.jpg" alt="Hanger Vari F — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p119.jpg" width="1078" height="1600" alt="Hanger Vari F — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 74.</strong> Hanger Vari F &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1480,7 +1492,7 @@
     </table>
     <h3 id="step-75">Step 75 &mdash; Hangers ADM LH/RH manual</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p120.jpg" alt="Hangers ADM LH/RH manual — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p120.jpg" width="1078" height="1600" alt="Hangers ADM LH/RH manual — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 75.</strong> Hangers ADM LH/RH manual &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1499,7 +1511,7 @@
     </table>
     <h3 id="step-76">Step 76 &mdash; Hanger Vari ADE/ADP electric (07/2005 =&gt;)</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p121.jpg" alt="Hanger Vari ADE/ADP electric (07/2005 =&gt;) — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p121.jpg" width="1078" height="1600" alt="Hanger Vari ADE/ADP electric (07/2005 =&gt;) — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 76.</strong> Hanger Vari ADE/ADP electric (07/2005 =&gt;) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1517,7 +1529,7 @@
     </table>
     <h3 id="step-77">Step 77 &mdash; Footrests Vari, Flip-Up (01.08.10 =&gt;)</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p122.jpg" alt="Footrests Vari, Flip-Up (01.08.10 =&gt;) — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p122.jpg" width="1078" height="1600" alt="Footrests Vari, Flip-Up (01.08.10 =&gt;) — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 77.</strong> Footrests Vari, Flip-Up (01.08.10 =&gt;) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1533,7 +1545,7 @@
     </table>
     <h3 id="step-78">Step 78 &mdash; Footrests Vari, Flip-Up &amp; angle adjustable (01.08.10 =&gt;)</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p123.jpg" alt="Footrests Vari, Flip-Up &amp; angle adjustable (01.08.10 =&gt;) — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p123.jpg" width="1078" height="1600" alt="Footrests Vari, Flip-Up &amp; angle adjustable (01.08.10 =&gt;) — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 78.</strong> Footrests Vari, Flip-Up &amp; angle adjustable (01.08.10 =&gt;) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1550,7 +1562,7 @@
     </table>
     <h3 id="step-79">Step 79 &mdash; Footrests Vari, angle &amp; depth adjustable</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p124.jpg" alt="Footrests Vari, angle &amp; depth adjustable — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p124.jpg" width="1078" height="1600" alt="Footrests Vari, angle &amp; depth adjustable — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 79.</strong> Footrests Vari, angle &amp; depth adjustable &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1562,7 +1574,7 @@
     </table>
     <h3 id="step-80">Step 80 &mdash; Footboard Vari, pre-assembled</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p125.jpg" alt="Footboard Vari, pre-assembled — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p125.jpg" width="1078" height="1600" alt="Footboard Vari, pre-assembled — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 80.</strong> Footboard Vari, pre-assembled &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1573,7 +1585,7 @@
     </table>
     <h3 id="step-81">Step 81 &mdash; Support Centr. Legrest LNX man. - Modulite Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p126.jpg" alt="Support Centr. Legrest LNX man. - Modulite Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p126.jpg" width="1078" height="1600" alt="Support Centr. Legrest LNX man. - Modulite Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 81.</strong> Support Centr. Legrest LNX man. - Modulite Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1588,7 +1600,7 @@
     </table>
     <h3 id="step-82">Step 82 &mdash; Support Centr. Legrest LNX el. - Modulite Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p127.jpg" alt="Support Centr. Legrest LNX el. - Modulite Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p127.jpg" width="1078" height="1600" alt="Support Centr. Legrest LNX el. - Modulite Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 82.</strong> Support Centr. Legrest LNX el. - Modulite Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1599,7 +1611,7 @@
     </table>
     <h3 id="step-83">Step 83 &mdash; Centr. Legrest man.</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p128.jpg" alt="Centr. Legrest man. — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p128.jpg" width="1078" height="1600" alt="Centr. Legrest man. — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 83.</strong> Centr. Legrest man. &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1617,7 +1629,7 @@
     </table>
     <h3 id="step-84">Step 84 &mdash; Centr. Legrest LNX el.</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p129.jpg" alt="Centr. Legrest LNX el. — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p129.jpg" width="1078" height="1600" alt="Centr. Legrest LNX el. — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 84.</strong> Centr. Legrest LNX el. &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1637,7 +1649,7 @@
     </table>
     <h3 id="step-85">Step 85 &mdash; Supports, Vari</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p135.jpg" alt="Supports, Vari — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p135.jpg" width="1078" height="1600" alt="Supports, Vari — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 85.</strong> Supports, Vari &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1651,7 +1663,7 @@
     </table>
     <h3 id="step-86">Step 86 &mdash; Legrest Support, Vari series - Max Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p140.jpg" alt="Legrest Support, Vari series - Max Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p140.jpg" width="1078" height="1600" alt="Legrest Support, Vari series - Max Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 86.</strong> Legrest Support, Vari series - Max Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1666,7 +1678,7 @@
     </table>
     <h3 id="step-87">Step 87 &mdash; Support Centr. Legrest man. LNX - Max Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p141.jpg" alt="Support Centr. Legrest man. LNX - Max Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p141.jpg" width="1078" height="1600" alt="Support Centr. Legrest man. LNX - Max Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 87.</strong> Support Centr. Legrest man. LNX - Max Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1680,7 +1692,7 @@
     </table>
     <h3 id="step-88">Step 88 &mdash; Support Centr. Legrest LNX el. - Max Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p142.jpg" alt="Support Centr. Legrest LNX el. - Max Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p142.jpg" width="1078" height="1600" alt="Support Centr. Legrest LNX el. - Max Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 88.</strong> Support Centr. Legrest LNX el. - Max Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1692,7 +1704,7 @@
     </table>
     <h3 id="step-89">Step 89 &mdash; Fixed footboard</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p143.jpg" alt="Fixed footboard — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p143.jpg" width="1078" height="1600" alt="Fixed footboard — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 89.</strong> Fixed footboard &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1710,7 +1722,7 @@
     </table>
     <h3 id="step-90">Step 90 &mdash; Calf plates</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p144.jpg" alt="Calf plates — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p144.jpg" width="1078" height="1600" alt="Calf plates — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 90.</strong> Calf plates &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1730,7 +1742,7 @@
     </table>
     <h3 id="step-91">Step 91 &mdash; T-Armrest</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p149.jpg" alt="T-Armrest — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p149.jpg" width="1078" height="1600" alt="T-Armrest — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 91.</strong> T-Armrest &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1756,7 +1768,7 @@
     </table>
     <h3 id="step-92">Step 92 &mdash; Padded Armrest</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p150.jpg" alt="Padded Armrest — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p150.jpg" width="1078" height="1600" alt="Padded Armrest — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 92.</strong> Padded Armrest &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1769,7 +1781,7 @@
     </table>
     <h3 id="step-93">Step 93 &mdash; Inrigged Armrest</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p151.jpg" alt="Inrigged Armrest — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p151.jpg" width="1078" height="1600" alt="Inrigged Armrest — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 93.</strong> Inrigged Armrest &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1794,7 +1806,7 @@
     </table>
     <h3 id="step-94">Step 94 &mdash; Flip-Up Armrest</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p152.jpg" alt="Flip-Up Armrest — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p152.jpg" width="1078" height="1600" alt="Flip-Up Armrest — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 94.</strong> Flip-Up Armrest &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1818,7 +1830,7 @@
     </table>
     <h3 id="step-95">Step 95 &mdash; Following Armrest</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p153.jpg" alt="Following Armrest — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p153.jpg" width="1078" height="1600" alt="Following Armrest — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 95.</strong> Following Armrest &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1848,7 +1860,7 @@
     </table>
     <h3 id="step-96">Step 96 &mdash; Hip Support</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p154.jpg" alt="Hip Support — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p154.jpg" width="1078" height="1600" alt="Hip Support — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 96.</strong> Hip Support &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1863,7 +1875,7 @@
     </table>
     <h3 id="step-97">Step 97 &mdash; Recline Flip-Up Armrest</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p156.jpg" alt="Recline Flip-Up Armrest — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p156.jpg" width="1078" height="1600" alt="Recline Flip-Up Armrest — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 97.</strong> Recline Flip-Up Armrest &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1874,7 +1886,7 @@
     </table>
     <h3 id="step-98">Step 98 &mdash; Cantilever Flip-Up Armrest</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p157.jpg" alt="Cantilever Flip-Up Armrest — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p157.jpg" width="1078" height="1600" alt="Cantilever Flip-Up Armrest — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 98.</strong> Cantilever Flip-Up Armrest &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1885,7 +1897,7 @@
     </table>
     <h3 id="step-99">Step 99 &mdash; Armrests for Max Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p161.jpg" alt="Armrests for Max Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p161.jpg" width="1078" height="1600" alt="Armrests for Max Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 99.</strong> Armrests for Max Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1910,7 +1922,7 @@
     </table>
     <h3 id="step-100">Step 100 &mdash; Head- / Neckrest</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p271.jpg" alt="Head- / Neckrest — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p271.jpg" width="1078" height="1600" alt="Head- / Neckrest — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 100.</strong> Head- / Neckrest &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1924,7 +1936,7 @@
     </table>
     <h3 id="step-101">Step 101 &mdash; Headrest sidewise adjustable</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p272.jpg" alt="Headrest sidewise adjustable — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p272.jpg" width="1078" height="1600" alt="Headrest sidewise adjustable — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 101.</strong> Headrest sidewise adjustable &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1941,7 +1953,7 @@
     </table>
     <h3 id="step-102">Step 102 &mdash; Headrest with cheek support</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p273.jpg" alt="Headrest with cheek support — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p273.jpg" width="1078" height="1600" alt="Headrest with cheek support — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 102.</strong> Headrest with cheek support &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1959,7 +1971,7 @@
     </table>
     <h3 id="step-103">Step 103 &mdash; Headrests - Ultra Low Maxx Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p274.jpg" alt="Headrests - Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p274.jpg" width="1078" height="1600" alt="Headrests - Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 103.</strong> Headrests - Ultra Low Maxx Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1971,7 +1983,7 @@
     </table>
     <h3 id="step-104">Step 104 &mdash; Lateral Support (Dartex)</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p277.jpg" alt="Lateral Support (Dartex) — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p277.jpg" width="1078" height="1600" alt="Lateral Support (Dartex) — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 104.</strong> Lateral Support (Dartex) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -1983,7 +1995,7 @@
     </table>
     <h3 id="step-105">Step 105 &mdash; Lateral Support, extended arm (Dartex)</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p278.jpg" alt="Lateral Support, extended arm (Dartex) — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p278.jpg" width="1078" height="1600" alt="Lateral Support, extended arm (Dartex) — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 105.</strong> Lateral Support, extended arm (Dartex) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2001,7 +2013,7 @@
     <p>The electronics wire the chair together: controller, joystick, and the cables between them.</p>
     <h3 id="step-106">Step 106 &mdash; Power Modul - ACS</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p173.jpg" alt="Power Modul - ACS — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p173.jpg" width="1078" height="1600" alt="Power Modul - ACS — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 106.</strong> Power Modul - ACS &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2013,7 +2025,7 @@
     </table>
     <h3 id="step-107">Step 107 &mdash; Bracket for Power Modul Wide Base</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p174.jpg" alt="Bracket for Power Modul Wide Base — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p174.jpg" width="1078" height="1600" alt="Bracket for Power Modul Wide Base — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 107.</strong> Bracket for Power Modul Wide Base &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2024,7 +2036,7 @@
     </table>
     <h3 id="step-108">Step 108 &mdash; ACT for ACS 2</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p175.jpg" alt="ACT for ACS 2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p175.jpg" width="1078" height="1600" alt="ACT for ACS 2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 108.</strong> ACT for ACS 2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2036,7 +2048,7 @@
     </table>
     <h3 id="step-109">Step 109 &mdash; Bracket ACT - Modulite Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p176.jpg" alt="Bracket ACT - Modulite Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p176.jpg" width="1078" height="1600" alt="Bracket ACT - Modulite Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 109.</strong> Bracket ACT - Modulite Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2048,7 +2060,7 @@
     </table>
     <h3 id="step-110">Step 110 &mdash; Bracket ACT - Ultra Low Maxx Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p177.jpg" alt="Bracket ACT - Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p177.jpg" width="1078" height="1600" alt="Bracket ACT - Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 110.</strong> Bracket ACT - Ultra Low Maxx Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2059,7 +2071,7 @@
     </table>
     <h3 id="step-111">Step 111 &mdash; Bracket ACT - Max Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p178.jpg" alt="Bracket ACT - Max Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p178.jpg" width="1078" height="1600" alt="Bracket ACT - Max Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 111.</strong> Bracket ACT - Max Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2070,7 +2082,7 @@
     </table>
     <h3 id="step-112">Step 112 &mdash; Light Board</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p179.jpg" alt="Light Board — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p179.jpg" width="1078" height="1600" alt="Light Board — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 112.</strong> Light Board &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2081,7 +2093,7 @@
     </table>
     <h3 id="step-113">Step 113 &mdash; G-Trac-sensor</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p180.jpg" alt="G-Trac-sensor — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p180.jpg" width="1078" height="1600" alt="G-Trac-sensor — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 113.</strong> G-Trac-sensor &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2092,7 +2104,7 @@
     </table>
     <h3 id="step-114">Step 114 &mdash; Remote REM 24SD</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p183.jpg" alt="Remote REM 24SD — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p183.jpg" width="1078" height="1600" alt="Remote REM 24SD — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 114.</strong> Remote REM 24SD &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2103,7 +2115,7 @@
     </table>
     <h3 id="step-115">Step 115 &mdash; Remote Bracket Standard</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p184.jpg" alt="Remote Bracket Standard — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p184.jpg" width="1078" height="1600" alt="Remote Bracket Standard — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 115.</strong> Remote Bracket Standard &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2114,7 +2126,7 @@
     </table>
     <h3 id="step-116">Step 116 &mdash; Remote Bracket Standard - Ultra Low Maxx Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p185.jpg" alt="Remote Bracket Standard - Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p185.jpg" width="1078" height="1600" alt="Remote Bracket Standard - Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 116.</strong> Remote Bracket Standard - Ultra Low Maxx Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2126,7 +2138,7 @@
     </table>
     <h3 id="step-117">Step 117 &mdash; Remote Bracket Swing away &amp; height adjust.</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p186.jpg" alt="Remote Bracket Swing away &amp; height adjust. — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p186.jpg" width="1078" height="1600" alt="Remote Bracket Swing away &amp; height adjust. — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 117.</strong> Remote Bracket Swing away &amp; height adjust. &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2139,7 +2151,7 @@
     </table>
     <h3 id="step-118">Step 118 &mdash; Remote Bracket Swing away &amp; height adjust. Ultra Low Maxx Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p187.jpg" alt="Remote Bracket Swing away &amp; height adjust. Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p187.jpg" width="1078" height="1600" alt="Remote Bracket Swing away &amp; height adjust. Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 118.</strong> Remote Bracket Swing away &amp; height adjust. Ultra Low Maxx Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2153,7 +2165,7 @@
     </table>
     <h3 id="step-119">Step 119 &mdash; Remote Bracket Attendant</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p188.jpg" alt="Remote Bracket Attendant — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p188.jpg" width="1078" height="1600" alt="Remote Bracket Attendant — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 119.</strong> Remote Bracket Attendant &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2167,7 +2179,7 @@
     </table>
     <h3 id="step-120">Step 120 &mdash; Remote Bracket Attendant Ultra Low Maxx Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p189.jpg" alt="Remote Bracket Attendant Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p189.jpg" width="1078" height="1600" alt="Remote Bracket Attendant Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 120.</strong> Remote Bracket Attendant Ultra Low Maxx Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2179,7 +2191,7 @@
     </table>
     <h3 id="step-121">Step 121 &mdash; REM A &amp; B with brackets</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p190.jpg" alt="REM A &amp; B with brackets — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p190.jpg" width="1078" height="1600" alt="REM A &amp; B with brackets — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 121.</strong> REM A &amp; B with brackets &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2191,7 +2203,7 @@
     </table>
     <h3 id="step-122">Step 122 &mdash; Remote Bracket Swing away &amp; height adjust.</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p191.jpg" alt="Remote Bracket Swing away &amp; height adjust. — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p191.jpg" width="1078" height="1600" alt="Remote Bracket Swing away &amp; height adjust. — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 122.</strong> Remote Bracket Swing away &amp; height adjust. &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2204,7 +2216,7 @@
     </table>
     <h3 id="step-123">Step 123 &mdash; REM 550 with brackets</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p192.jpg" alt="REM 550 with brackets — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p192.jpg" width="1078" height="1600" alt="REM 550 with brackets — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 123.</strong> REM 550 with brackets &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2215,7 +2227,7 @@
     </table>
     <h3 id="step-124">Step 124 &mdash; Remote Bracket Swing away Quad Link Ultra Low Maxx Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p193.jpg" alt="Remote Bracket Swing away Quad Link Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p193.jpg" width="1078" height="1600" alt="Remote Bracket Swing away Quad Link Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 124.</strong> Remote Bracket Swing away Quad Link Ultra Low Maxx Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2228,7 +2240,7 @@
     </table>
     <h3 id="step-125">Step 125 &mdash; REM 34 with brackets</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p194.jpg" alt="REM 34 with brackets — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p194.jpg" width="1078" height="1600" alt="REM 34 with brackets — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 125.</strong> REM 34 with brackets &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2239,7 +2251,7 @@
     </table>
     <h3 id="step-126">Step 126 &mdash; Remote Bracket Standard</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p195.jpg" alt="Remote Bracket Standard — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p195.jpg" width="1078" height="1600" alt="Remote Bracket Standard — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 126.</strong> Remote Bracket Standard &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2250,7 +2262,7 @@
     </table>
     <h3 id="step-127">Step 127 &mdash; Remote Bracket Swing away &amp; height adjust.</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p196.jpg" alt="Remote Bracket Swing away &amp; height adjust. — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p196.jpg" width="1078" height="1600" alt="Remote Bracket Swing away &amp; height adjust. — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 127.</strong> Remote Bracket Swing away &amp; height adjust. &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2263,7 +2275,7 @@
     </table>
     <h3 id="step-128">Step 128 &mdash; G90A with brackets</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p197.jpg" alt="G90A with brackets — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p197.jpg" width="1078" height="1600" alt="G90A with brackets — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 128.</strong> G90A with brackets &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2274,7 +2286,7 @@
     </table>
     <h3 id="step-129">Step 129 &mdash; Remote Bracket Standard</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p198.jpg" alt="Remote Bracket Standard — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p198.jpg" width="1078" height="1600" alt="Remote Bracket Standard — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 129.</strong> Remote Bracket Standard &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2285,7 +2297,7 @@
     </table>
     <h3 id="step-130">Step 130 &mdash; Remote Bracket Standard Ultra Low Maxx Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p199.jpg" alt="Remote Bracket Standard Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p199.jpg" width="1078" height="1600" alt="Remote Bracket Standard Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 130.</strong> Remote Bracket Standard Ultra Low Maxx Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2297,7 +2309,7 @@
     </table>
     <h3 id="step-131">Step 131 &mdash; Remote Bracket Swing away &amp; height adjust.</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p200.jpg" alt="Remote Bracket Swing away &amp; height adjust. — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p200.jpg" width="1078" height="1600" alt="Remote Bracket Swing away &amp; height adjust. — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 131.</strong> Remote Bracket Swing away &amp; height adjust. &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2310,7 +2322,7 @@
     </table>
     <h3 id="step-132">Step 132 &mdash; Remote Bracket Swing away &amp; height adjust. Ultra Low Maxx Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p201.jpg" alt="Remote Bracket Swing away &amp; height adjust. Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p201.jpg" width="1078" height="1600" alt="Remote Bracket Swing away &amp; height adjust. Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 132.</strong> Remote Bracket Swing away &amp; height adjust. Ultra Low Maxx Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2324,7 +2336,7 @@
     </table>
     <h3 id="step-133">Step 133 &mdash; Remote Bracket Attendant</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p202.jpg" alt="Remote Bracket Attendant — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p202.jpg" width="1078" height="1600" alt="Remote Bracket Attendant — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 133.</strong> Remote Bracket Attendant &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2338,7 +2350,7 @@
     </table>
     <h3 id="step-134">Step 134 &mdash; Remote Bracket Attendant Ultra Low Maxx Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p203.jpg" alt="Remote Bracket Attendant Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p203.jpg" width="1078" height="1600" alt="Remote Bracket Attendant Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 134.</strong> Remote Bracket Attendant Ultra Low Maxx Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2350,7 +2362,7 @@
     </table>
     <h3 id="step-135">Step 135 &mdash; G91S with brackets</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p204.jpg" alt="G91S with brackets — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p204.jpg" width="1078" height="1600" alt="G91S with brackets — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 135.</strong> G91S with brackets &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2361,7 +2373,7 @@
     </table>
     <h3 id="step-136">Step 136 &mdash; Remote Bracket Standard</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p205.jpg" alt="Remote Bracket Standard — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p205.jpg" width="1078" height="1600" alt="Remote Bracket Standard — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 136.</strong> Remote Bracket Standard &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2377,7 +2389,7 @@
     </table>
     <h3 id="step-137">Step 137 &mdash; Centre control REM 41</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p206.jpg" alt="Centre control REM 41 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p206.jpg" width="1078" height="1600" alt="Centre control REM 41 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 137.</strong> Centre control REM 41 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2392,7 +2404,7 @@
     </table>
     <h3 id="step-138">Step 138 &mdash; Small Chincontrol</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p208.jpg" alt="Small Chincontrol — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p208.jpg" width="1078" height="1600" alt="Small Chincontrol — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 138.</strong> Small Chincontrol &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2411,7 +2423,7 @@
     </table>
     <h3 id="step-139">Step 139 &mdash; Framework for chincontrol</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p209.jpg" alt="Framework for chincontrol — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p209.jpg" width="1078" height="1600" alt="Framework for chincontrol — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 139.</strong> Framework for chincontrol &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2427,7 +2439,7 @@
     </table>
     <h3 id="step-140">Step 140 &mdash; Dual Control with brackets</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p210.jpg" alt="Dual Control with brackets — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p210.jpg" width="1078" height="1600" alt="Dual Control with brackets — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 140.</strong> Dual Control with brackets &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2438,7 +2450,7 @@
     </table>
     <h3 id="step-141">Step 141 &mdash; Remote Bracket Dual Control for Modulite Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p211.jpg" alt="Remote Bracket Dual Control for Modulite Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p211.jpg" width="1078" height="1600" alt="Remote Bracket Dual Control for Modulite Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 141.</strong> Remote Bracket Dual Control for Modulite Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2450,7 +2462,7 @@
     </table>
     <h3 id="step-142">Step 142 &mdash; Remote Bracket Dual Control for Max Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p212.jpg" alt="Remote Bracket Dual Control for Max Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p212.jpg" width="1078" height="1600" alt="Remote Bracket Dual Control for Max Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 142.</strong> Remote Bracket Dual Control for Max Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2461,7 +2473,7 @@
     </table>
     <h3 id="step-143">Step 143 &mdash; Compact Dual Control</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p214.jpg" alt="Compact Dual Control — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p214.jpg" width="1078" height="1600" alt="Compact Dual Control — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 143.</strong> Compact Dual Control &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2472,7 +2484,7 @@
     </table>
     <h3 id="step-144">Step 144 &mdash; Bracket, Compact Dual Control - Ultra Low Maxx Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p215.jpg" alt="Bracket, Compact Dual Control - Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p215.jpg" width="1078" height="1600" alt="Bracket, Compact Dual Control - Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 144.</strong> Bracket, Compact Dual Control - Ultra Low Maxx Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2483,7 +2495,7 @@
     </table>
     <h3 id="step-145">Step 145 &mdash; Bracket, Compact Dual Control - short</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p216.jpg" alt="Bracket, Compact Dual Control - short — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p216.jpg" width="1078" height="1600" alt="Bracket, Compact Dual Control - short — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 145.</strong> Bracket, Compact Dual Control - short &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2494,7 +2506,7 @@
     </table>
     <h3 id="step-146">Step 146 &mdash; Bracket, Compact Dual Control - long</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p217.jpg" alt="Bracket, Compact Dual Control - long — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p217.jpg" width="1078" height="1600" alt="Bracket, Compact Dual Control - long — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 146.</strong> Bracket, Compact Dual Control - long &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2505,7 +2517,7 @@
     </table>
     <h3 id="step-147">Step 147 &mdash; Intuitive Dual Control with brackets</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p219.jpg" alt="Intuitive Dual Control with brackets — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p219.jpg" width="1078" height="1600" alt="Intuitive Dual Control with brackets — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 147.</strong> Intuitive Dual Control with brackets &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2524,7 +2536,7 @@
     </table>
     <h3 id="step-148">Step 148 &mdash; Intuitive Dual Control with bracket (Ultra Low Maxx Seat)</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p220.jpg" alt="Intuitive Dual Control with bracket (Ultra Low Maxx Seat) — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p220.jpg" width="1078" height="1600" alt="Intuitive Dual Control with bracket (Ultra Low Maxx Seat) — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 148.</strong> Intuitive Dual Control with bracket (Ultra Low Maxx Seat) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2542,7 +2554,7 @@
     </table>
     <h3 id="step-149">Step 149 &mdash; Bus-Cables ACS</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p222.jpg" alt="Bus-Cables ACS — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p222.jpg" width="1078" height="1600" alt="Bus-Cables ACS — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 149.</strong> Bus-Cables ACS &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2556,7 +2568,7 @@
     </table>
     <h3 id="step-150">Step 150 &mdash; Light Cable ACS</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p223.jpg" alt="Light Cable ACS — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p223.jpg" width="1078" height="1600" alt="Light Cable ACS — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 150.</strong> Light Cable ACS &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2567,7 +2579,7 @@
     </table>
     <h3 id="step-151">Step 151 &mdash; T-Adapter - Modulite &amp; Max Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p224.jpg" alt="T-Adapter - Modulite &amp; Max Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p224.jpg" width="1078" height="1600" alt="T-Adapter - Modulite &amp; Max Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 151.</strong> T-Adapter - Modulite &amp; Max Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2580,7 +2592,7 @@
     </table>
     <h3 id="step-152">Step 152 &mdash; T-Adapter - Ultra Low Maxx Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p225.jpg" alt="T-Adapter - Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p225.jpg" width="1078" height="1600" alt="T-Adapter - Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 152.</strong> T-Adapter - Ultra Low Maxx Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2591,7 +2603,7 @@
     </table>
     <h3 id="step-153">Step 153 &mdash; Tilt Sensors - Ultra Low Maxx Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p226.jpg" alt="Tilt Sensors - Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p226.jpg" width="1078" height="1600" alt="Tilt Sensors - Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 153.</strong> Tilt Sensors - Ultra Low Maxx Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2602,7 +2614,7 @@
     </table>
     <h3 id="step-154">Step 154 &mdash; Programming Kits</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p227.jpg" alt="Programming Kits — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p227.jpg" width="1078" height="1600" alt="Programming Kits — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 154.</strong> Programming Kits &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2614,7 +2626,7 @@
     </table>
     <h3 id="step-155">Step 155 &mdash; Magnetkey for Remotes</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p228.jpg" alt="Magnetkey for Remotes — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p228.jpg" width="1078" height="1600" alt="Magnetkey for Remotes — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 155.</strong> Magnetkey for Remotes &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2625,7 +2637,7 @@
     </table>
     <h3 id="step-156">Step 156 &mdash; Bracket for Power Modul Narrow Base</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p232.jpg" alt="Bracket for Power Modul Narrow Base — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p232.jpg" width="1078" height="1600" alt="Bracket for Power Modul Narrow Base — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 156.</strong> Bracket for Power Modul Narrow Base &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2636,7 +2648,7 @@
     </table>
     <h3 id="step-157">Step 157 &mdash; Bracket ACT at Chassis - Narrow Base</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p233.jpg" alt="Bracket ACT at Chassis - Narrow Base — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p233.jpg" width="1078" height="1600" alt="Bracket ACT at Chassis - Narrow Base — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 157.</strong> Bracket ACT at Chassis - Narrow Base &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2647,7 +2659,7 @@
     </table>
     <h3 id="step-158">Step 158 &mdash; Light Board</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p234.jpg" alt="Light Board — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p234.jpg" width="1078" height="1600" alt="Light Board — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 158.</strong> Light Board &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2659,7 +2671,7 @@
     </table>
     <h3 id="step-159">Step 159 &mdash; Dual Control with brackets - Modulite Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p236.jpg" alt="Dual Control with brackets - Modulite Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p236.jpg" width="1078" height="1600" alt="Dual Control with brackets - Modulite Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 159.</strong> Dual Control with brackets - Modulite Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2670,7 +2682,7 @@
     </table>
     <h3 id="step-160">Step 160 &mdash; T-Adapter - Modulite Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p238.jpg" alt="T-Adapter - Modulite Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p238.jpg" width="1078" height="1600" alt="T-Adapter - Modulite Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 160.</strong> T-Adapter - Modulite Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2682,7 +2694,7 @@
     </table>
     <h3 id="step-161">Step 161 &mdash; Power Modul</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p241.jpg" alt="Power Modul — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p241.jpg" width="1078" height="1600" alt="Power Modul — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 161.</strong> Power Modul &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2693,7 +2705,7 @@
     </table>
     <h3 id="step-162">Step 162 &mdash; Bracket for Power Modul</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p242.jpg" alt="Bracket for Power Modul — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p242.jpg" width="1078" height="1600" alt="Bracket for Power Modul — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 162.</strong> Bracket for Power Modul &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2704,7 +2716,7 @@
     </table>
     <h3 id="step-163">Step 163 &mdash; Remote Shark with Brackets</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p244.jpg" alt="Remote Shark with Brackets — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p244.jpg" width="1078" height="1600" alt="Remote Shark with Brackets — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 163.</strong> Remote Shark with Brackets &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2717,7 +2729,7 @@
     </table>
     <h3 id="step-164">Step 164 &mdash; Remote Dual Control with Brackets</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p245.jpg" alt="Remote Dual Control with Brackets — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p245.jpg" width="1078" height="1600" alt="Remote Dual Control with Brackets — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 164.</strong> Remote Dual Control with Brackets &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2728,7 +2740,7 @@
     </table>
     <h3 id="step-165">Step 165 &mdash; Remote Bracket Dual Control</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p246.jpg" alt="Remote Bracket Dual Control — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p246.jpg" width="1078" height="1600" alt="Remote Bracket Dual Control — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 165.</strong> Remote Bracket Dual Control &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2739,7 +2751,7 @@
     </table>
     <h3 id="step-166">Step 166 &mdash; Bus-Cables Shark</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p248.jpg" alt="Bus-Cables Shark — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p248.jpg" width="1078" height="1600" alt="Bus-Cables Shark — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 166.</strong> Bus-Cables Shark &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2755,7 +2767,7 @@
     </table>
     <h3 id="step-167">Step 167 &mdash; Cables Shark</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p249.jpg" alt="Cables Shark — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p249.jpg" width="1078" height="1600" alt="Cables Shark — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 167.</strong> Cables Shark &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2770,7 +2782,7 @@
     <p>Batteries last — they are the heaviest parts, and everything electrical depends on them.</p>
     <h3 id="step-168">Step 168 &mdash; Battery, Tray &amp; Wiring - Wide Base</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p251.jpg" alt="Battery, Tray &amp; Wiring - Wide Base — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p251.jpg" width="1078" height="1600" alt="Battery, Tray &amp; Wiring - Wide Base — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 168.</strong> Battery, Tray &amp; Wiring - Wide Base &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2787,7 +2799,7 @@
     </table>
     <h3 id="step-169">Step 169 &mdash; Battery, Tray &amp; Wiring - Wide Base</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p252.jpg" alt="Battery, Tray &amp; Wiring - Wide Base — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p252.jpg" width="1078" height="1600" alt="Battery, Tray &amp; Wiring - Wide Base — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 169.</strong> Battery, Tray &amp; Wiring - Wide Base &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2805,7 +2817,7 @@
     </table>
     <h3 id="step-170">Step 170 &mdash; Battery, Tray &amp; Wire Harness - Narrow Base</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p253.jpg" alt="Battery, Tray &amp; Wire Harness - Narrow Base — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p253.jpg" width="1078" height="1600" alt="Battery, Tray &amp; Wire Harness - Narrow Base — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 170.</strong> Battery, Tray &amp; Wire Harness - Narrow Base &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2824,7 +2836,7 @@
     </table>
     <h3 id="step-171">Step 171 &mdash; Chargers</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p254.jpg" alt="Chargers — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p254.jpg" width="1078" height="1600" alt="Chargers — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 171.</strong> Chargers &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2842,7 +2854,7 @@
     <p>Covers, decals, and accessories finish the chair.</p>
     <h3 id="step-172">Step 172 &mdash; User Manuals TDX-SP2</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p13.jpg" alt="User Manuals TDX-SP2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p13.jpg" width="1078" height="1600" alt="User Manuals TDX-SP2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 172.</strong> User Manuals TDX-SP2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2868,7 +2880,7 @@
     </table>
     <h3 id="step-173">Step 173 &mdash; User Manuals Ultra Low Maxx Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p14.jpg" alt="User Manuals Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p14.jpg" width="1078" height="1600" alt="User Manuals Ultra Low Maxx Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 173.</strong> User Manuals Ultra Low Maxx Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2888,7 +2900,7 @@
     </table>
     <h3 id="step-174">Step 174 &mdash; User Manuals Shark2</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p15.jpg" alt="User Manuals Shark2 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p15.jpg" width="1078" height="1600" alt="User Manuals Shark2 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 174.</strong> User Manuals Shark2 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2919,7 +2931,7 @@
     </table>
     <h3 id="step-175">Step 175 &mdash; User Manuals REM A &amp; REM B</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p16.jpg" alt="User Manuals REM A &amp; REM B — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p16.jpg" width="1078" height="1600" alt="User Manuals REM A &amp; REM B — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 175.</strong> User Manuals REM A &amp; REM B &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2948,7 +2960,7 @@
     </table>
     <h3 id="step-176">Step 176 &mdash; User Manuals REM24SD</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p17.jpg" alt="User Manuals REM24SD — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p17.jpg" width="1078" height="1600" alt="User Manuals REM24SD — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 176.</strong> User Manuals REM24SD &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -2977,7 +2989,7 @@
     </table>
     <h3 id="step-177">Step 177 &mdash; User Manuals REM550</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p18.jpg" alt="User Manuals REM550 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p18.jpg" width="1078" height="1600" alt="User Manuals REM550 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 177.</strong> User Manuals REM550 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3005,7 +3017,7 @@
     </table>
     <h3 id="step-178">Step 178 &mdash; User Manuals G90</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p19.jpg" alt="User Manuals G90 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p19.jpg" width="1078" height="1600" alt="User Manuals G90 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 178.</strong> User Manuals G90 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3016,7 +3028,7 @@
     </table>
     <h3 id="step-179">Step 179 &mdash; User Manuals G91</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p20.jpg" alt="User Manuals G91 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p20.jpg" width="1078" height="1600" alt="User Manuals G91 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 179.</strong> User Manuals G91 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3037,7 +3049,7 @@
     </table>
     <h3 id="step-180">Step 180 &mdash; User Manuals REM34 &amp; REM41 Tray/Centre Control</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p21.jpg" alt="User Manuals REM34 &amp; REM41 Tray/Centre Control — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p21.jpg" width="1078" height="1600" alt="User Manuals REM34 &amp; REM41 Tray/Centre Control — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 180.</strong> User Manuals REM34 &amp; REM41 Tray/Centre Control &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3059,7 +3071,7 @@
     </table>
     <h3 id="step-181">Step 181 &mdash; User Manuals IDC Dual Control</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p22.jpg" alt="User Manuals IDC Dual Control — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p22.jpg" width="1078" height="1600" alt="User Manuals IDC Dual Control — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 181.</strong> User Manuals IDC Dual Control &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3079,7 +3091,7 @@
     </table>
     <h3 id="step-182">Step 182 &mdash; User Manuals Compact Dual Control</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p23.jpg" alt="User Manuals Compact Dual Control — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p23.jpg" width="1078" height="1600" alt="User Manuals Compact Dual Control — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 182.</strong> User Manuals Compact Dual Control &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3113,7 +3125,7 @@
     </table>
     <h3 id="step-183">Step 183 &mdash; User Manuals ACS Handprogrammer</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p24.jpg" alt="User Manuals ACS Handprogrammer — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p24.jpg" width="1078" height="1600" alt="User Manuals ACS Handprogrammer — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 183.</strong> User Manuals ACS Handprogrammer &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3125,7 +3137,7 @@
     </table>
     <h3 id="step-184">Step 184 &mdash; User Manual Proximity Head Remote DSL-105</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p25.jpg" alt="User Manual Proximity Head Remote DSL-105 — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p25.jpg" width="1078" height="1600" alt="User Manual Proximity Head Remote DSL-105 — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 184.</strong> User Manual Proximity Head Remote DSL-105 &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3146,7 +3158,7 @@
     </table>
     <h3 id="step-185">Step 185 &mdash; User Manuals Headcontrol</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p26.jpg" alt="User Manuals Headcontrol — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p26.jpg" width="1078" height="1600" alt="User Manuals Headcontrol — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 185.</strong> User Manuals Headcontrol &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3159,7 +3171,7 @@
     </table>
     <h3 id="step-186">Step 186 &mdash; User Manuals iPortal</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p27.jpg" alt="User Manuals iPortal — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p27.jpg" width="1078" height="1600" alt="User Manuals iPortal — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 186.</strong> User Manuals iPortal &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3181,7 +3193,7 @@
     </table>
     <h3 id="step-187">Step 187 &mdash; Lightsystem LED</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p256.jpg" alt="Lightsystem LED — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p256.jpg" width="1078" height="1600" alt="Lightsystem LED — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 187.</strong> Lightsystem LED &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3200,7 +3212,7 @@
     </table>
     <h3 id="step-188">Step 188 &mdash; Lightsystem german Homologation</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p257.jpg" alt="Lightsystem german Homologation — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p257.jpg" width="1078" height="1600" alt="Lightsystem german Homologation — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 188.</strong> Lightsystem german Homologation &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3218,7 +3230,7 @@
     </table>
     <h3 id="step-189">Step 189 &mdash; Rear Light Protector Kit</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p258.jpg" alt="Rear Light Protector Kit — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p258.jpg" width="1078" height="1600" alt="Rear Light Protector Kit — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 189.</strong> Rear Light Protector Kit &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3229,7 +3241,7 @@
     </table>
     <h3 id="step-190">Step 190 &mdash; Reflective Sign</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p260.jpg" alt="Reflective Sign — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p260.jpg" width="1078" height="1600" alt="Reflective Sign — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 190.</strong> Reflective Sign &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3242,7 +3254,7 @@
     </table>
     <h3 id="step-191">Step 191 &mdash; Reflective Sign (Ultra Low Maxx Seat)</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p261.jpg" alt="Reflective Sign (Ultra Low Maxx Seat) — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p261.jpg" width="1078" height="1600" alt="Reflective Sign (Ultra Low Maxx Seat) — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 191.</strong> Reflective Sign (Ultra Low Maxx Seat) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3253,7 +3265,7 @@
     </table>
     <h3 id="step-192">Step 192 &mdash; Adapter-Kit DAHL Docking Station - Wide Base</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p262.jpg" alt="Adapter-Kit DAHL Docking Station - Wide Base — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p262.jpg" width="1078" height="1600" alt="Adapter-Kit DAHL Docking Station - Wide Base — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 192.</strong> Adapter-Kit DAHL Docking Station - Wide Base &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3264,7 +3276,7 @@
     </table>
     <h3 id="step-193">Step 193 &mdash; Adapter-Kit DAHL Docking Station - Narrow Base</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p263.jpg" alt="Adapter-Kit DAHL Docking Station - Narrow Base — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p263.jpg" width="1078" height="1600" alt="Adapter-Kit DAHL Docking Station - Narrow Base — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 193.</strong> Adapter-Kit DAHL Docking Station - Narrow Base &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3275,7 +3287,7 @@
     </table>
     <h3 id="step-194">Step 194 &mdash; Lap Belts (Modulite Seat)</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p265.jpg" alt="Lap Belts (Modulite Seat) — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p265.jpg" width="1078" height="1600" alt="Lap Belts (Modulite Seat) — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 194.</strong> Lap Belts (Modulite Seat) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3288,7 +3300,7 @@
     </table>
     <h3 id="step-195">Step 195 &mdash; Lap Belt (Ultra Low Maxx)</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p266.jpg" alt="Lap Belt (Ultra Low Maxx) — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p266.jpg" width="1078" height="1600" alt="Lap Belt (Ultra Low Maxx) — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 195.</strong> Lap Belt (Ultra Low Maxx) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3299,7 +3311,7 @@
     </table>
     <h3 id="step-196">Step 196 &mdash; Lap Belt (Max Seat)</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p267.jpg" alt="Lap Belt (Max Seat) — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p267.jpg" width="1078" height="1600" alt="Lap Belt (Max Seat) — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 196.</strong> Lap Belt (Max Seat) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3310,7 +3322,7 @@
     </table>
     <h3 id="step-197">Step 197 &mdash; H-Belts (Modulite Seat)</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p268.jpg" alt="H-Belts (Modulite Seat) — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p268.jpg" width="1078" height="1600" alt="H-Belts (Modulite Seat) — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 197.</strong> H-Belts (Modulite Seat) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3322,7 +3334,7 @@
     </table>
     <h3 id="step-198">Step 198 &mdash; Rearview Mirror</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p269.jpg" alt="Rearview Mirror — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p269.jpg" width="1078" height="1600" alt="Rearview Mirror — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 198.</strong> Rearview Mirror &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3336,7 +3348,7 @@
     </table>
     <h3 id="step-199">Step 199 &mdash; Cane holder (Modulite: backrest frame)</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p281.jpg" alt="Cane holder (Modulite: backrest frame) — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p281.jpg" width="1078" height="1600" alt="Cane holder (Modulite: backrest frame) — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 199.</strong> Cane holder (Modulite: backrest frame) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3348,7 +3360,7 @@
     </table>
     <h3 id="step-200">Step 200 &mdash; Cane holder (Modulite: back posts man recliner)</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p282.jpg" alt="Cane holder (Modulite: back posts man recliner) — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p282.jpg" width="1078" height="1600" alt="Cane holder (Modulite: back posts man recliner) — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 200.</strong> Cane holder (Modulite: back posts man recliner) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3360,7 +3372,7 @@
     </table>
     <h3 id="step-201">Step 201 &mdash; Cane holder (Modulite: back posts pow recliner)</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p283.jpg" alt="Cane holder (Modulite: back posts pow recliner) — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p283.jpg" width="1078" height="1600" alt="Cane holder (Modulite: back posts pow recliner) — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 201.</strong> Cane holder (Modulite: back posts pow recliner) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3372,7 +3384,7 @@
     </table>
     <h3 id="step-202">Step 202 &mdash; Cane holder (MAX Seat)</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p284.jpg" alt="Cane holder (MAX Seat) — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p284.jpg" width="1078" height="1600" alt="Cane holder (MAX Seat) — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 202.</strong> Cane holder (MAX Seat) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3384,7 +3396,7 @@
     </table>
     <h3 id="step-203">Step 203 &mdash; Trays</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p286.jpg" alt="Trays — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p286.jpg" width="1078" height="1600" alt="Trays — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 203.</strong> Trays &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3416,7 +3428,7 @@
     </table>
     <h3 id="step-204">Step 204 &mdash; Trays</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p287.jpg" alt="Trays — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p287.jpg" width="1078" height="1600" alt="Trays — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 204.</strong> Trays &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3429,7 +3441,7 @@
     </table>
     <h3 id="step-205">Step 205 &mdash; Hour Counter</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p289.jpg" alt="Hour Counter — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p289.jpg" width="1078" height="1600" alt="Hour Counter — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 205.</strong> Hour Counter &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3440,7 +3452,7 @@
     </table>
     <h3 id="step-206">Step 206 &mdash; KLICKfix® bag</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p291.jpg" alt="KLICKfix® bag — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p291.jpg" width="1078" height="1600" alt="KLICKfix® bag — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 206.</strong> KLICKfix® bag &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3451,7 +3463,7 @@
     </table>
     <h3 id="step-207">Step 207 &mdash; KLICKfix® bracket for T-Armrest</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p292.jpg" alt="KLICKfix® bracket for T-Armrest — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p292.jpg" width="1078" height="1600" alt="KLICKfix® bracket for T-Armrest — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 207.</strong> KLICKfix® bracket for T-Armrest &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3462,7 +3474,7 @@
     </table>
     <h3 id="step-208">Step 208 &mdash; KLICKfix® bracket for Fixed Armrest</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p293.jpg" alt="KLICKfix® bracket for Fixed Armrest — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p293.jpg" width="1078" height="1600" alt="KLICKfix® bracket for Fixed Armrest — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 208.</strong> KLICKfix® bracket for Fixed Armrest &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3473,7 +3485,7 @@
     </table>
     <h3 id="step-209">Step 209 &mdash; KLICKfix® bracket for Inrigged/Flip-Up/Following Armrest (Modulite)</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p294.jpg" alt="KLICKfix® bracket for Inrigged/Flip-Up/Following Armrest (Modulite) — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p294.jpg" width="1078" height="1600" alt="KLICKfix® bracket for Inrigged/Flip-Up/Following Armrest (Modulite) — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 209.</strong> KLICKfix® bracket for Inrigged/Flip-Up/Following Armrest (Modulite) &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3484,7 +3496,7 @@
     </table>
     <h3 id="step-210">Step 210 &mdash; T-Nuts for Accessories Modulite Seat</h3>
     <figure>
-      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p295.jpg" alt="T-Nuts for Accessories Modulite Seat — exploded view from the manufacturer guide" loading="lazy">
+      <img src="/img/pmd-exploded/tdx-sp2/tdx-sp2-p295.jpg" width="1078" height="1600" alt="T-Nuts for Accessories Modulite Seat — exploded view from the manufacturer guide" loading="lazy">
       <figcaption><strong>Fig. 210.</strong> T-Nuts for Accessories Modulite Seat &mdash; exploded view reproduced from the manufacturer&rsquo;s guide (source below).</figcaption>
     </figure>
     <table>
@@ -3505,10 +3517,30 @@
     <p>Every plate and every part number above comes from Invacare&rsquo;s own spare parts catalogue &mdash; nothing redrawn, nothing guessed. The &ldquo;What this part does&rdquo; column is ours. Some catalogue pages list a single part (a mounting rail, a cable) because Invacare sells it that way; those pages are here too, at the same size as the big ones.</p>
     <p><a href="/pmd-exploded.html">&larr; All exploded views</a> &middot; <a href="/pmd.html">PMD section</a></p>
   </section>
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a> &middot; <a href="/terms.html">The Tee-O-Ess</a> &middot; <a href="/dmca.html">DMCA</a> &middot; <a href="/copyright.html">Copyright</a> &middot; <a href="/privacy.html">Privacy</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
 </main>
 
 <script src="/nav.js" defer></script>
-<script src="/bb-util.js" defer></script><script src="/protocols.js" defer></script>
+<script src="/search.js" defer></script>
+
 <script src="/i18n.js" defer></script>
 </body>
 </html>
