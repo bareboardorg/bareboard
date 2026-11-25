@@ -17,7 +17,9 @@
    doc_type, url, source_url, bytes, link_only, basis}. basis is the
    rights-gate sentence for the record — why it may be published or
    linked. Manifests and the KNOWN table carry real basis sentences;
-   anything else gets UNVERIFIED_BASIS. category is one of manual,
+   rare-manual rows carry the link-only sentence (plus the ledger's
+   verified note when data/rare-manuals-ledger.json matches their public
+   source); anything else gets UNVERIFIED_BASIS. category is one of manual,
    schematic, documentation, datasheet, lawsuit, fda, fcc, other. url is
    the local path (leading slash) or null; link-only records carry
    source_url instead. Same inputs always produce the same array. */
@@ -31,6 +33,33 @@ const outFile = join(root, "data", "library-index.json");
 const manifestsDir = join(root, "..", "bareboard-library-manifests");
 const checkOnly = process.argv.includes("--check");
 const UNVERIFIED_BASIS = "UNVERIFIED \u2014 provenance not established";
+const LINK_ONLY_BASIS = "Link-only: not hosted; links to a publicly accessible copy of a manufacturer-published document.";
+/* Rare-manuals ledger: data/rare-manuals-ledger.json, a copy of the
+   collection worklist entries whose public source a crew verified present,
+   with that verification note. A source-3 record
+   whose source_url matches a ledger entry gets the verified note appended;
+   every other source-3 record with a Public source link gets the plain
+   link-only sentence above, which describes what the record is (the
+   rare-manuals page itself labels the link a public source) — never a
+   verification that did not happen. Records with no public source link
+   stay UNVERIFIED. */
+const RARE_LEDGER = new Map();
+function ledgerKey(url) {
+  try { return decodeURIComponent(String(url)); } catch { return String(url); }
+}
+{
+  const ledgerFile = join(root, "data", "rare-manuals-ledger.json");
+  if (existsSync(ledgerFile)) {
+    try {
+      const parsed = JSON.parse(readFileSync(ledgerFile, "utf8"));
+      for (const entry of parsed.entries || []) {
+        if (entry.source_url) RARE_LEDGER.set(ledgerKey(entry.source_url), entry);
+      }
+    } catch (err) {
+      console.error(`WARN: unparseable rare-manuals ledger: ${err.message}`);
+    }
+  }
+}
 
 const CATEGORIES = ["manual", "schematic", "documentation", "datasheet",
   "lawsuit", "fda", "fcc", "other"];
@@ -167,6 +196,12 @@ const KNOWN = {
     maker: "Permobil", model: "M3 Corpus", platform: "Power Mobility (PMD)",
     category: "manual", doc_type: "Text extraction (XML)",
     basis: "Derived file: machine text extraction (pdf2xml) of a manufacturer-published document (Permobil M3 Corpus owner manual), posted with attribution under fair use." },
+  "/library/collected-public-docs/018-gp2x-caanoo-user-manual-v1-1-english.pdf": {
+    title: "GP2X Caanoo User Manual v1.1 (English)",
+    maker: "GamePark Holdings", model: "GP2X Caanoo", platform: "Gaming & entertainment",
+    category: "manual", doc_type: "User manual (PDF, 54 pages)",
+    source_url: "https://www.video-games-museum.com/screenshots/Caanoo/doc/Caanoo%20User%20Manual%20(English).pdf",
+    basis: "Manufacturer-published document, posted with attribution under fair use. Collected 2026-11-25: the surviving public copy is v1.1, not the v1.0 the worklist seeks — the file name says so, and page 1 reads 'User Manual Version 1.1'." },
   "/datasheets/NCP302150.pdf": {
     title: "NCP302150 Datasheet",
     maker: "onsemi", model: "NCP302150", platform: "Power",
@@ -408,12 +443,21 @@ let manualEntries = 0;
     let docType = "Rare manual";
     if (decade) docType += " · " + decade;
     if (rarity) docType += " · " + rarity;
+    const sourceUrl = sourceLink ? decodeEntities(sourceLink[1]) : null;
+    let basis = null;
+    if (sourceUrl) {
+      const ledgerEntry = RARE_LEDGER.get(ledgerKey(sourceUrl));
+      basis = ledgerEntry && ledgerEntry.verified
+        ? LINK_ONLY_BASIS + " " + ledgerEntry.verified
+        : LINK_ONLY_BASIS;
+    }
     storeRecord({
       title, maker, model, platform, category,
       doc_type: docType,
       url: null,
-      source_url: sourceLink ? decodeEntities(sourceLink[1]) : null,
+      source_url: sourceUrl,
       bytes: null,
+      basis,
     }, false);
     manualEntries++;
   }

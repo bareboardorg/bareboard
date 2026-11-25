@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>“Hello Again”: the TPM Attack That Breaks Your PIN Lockout — BareBoard</title>
+<meta name="description" content="Researchers at Technische Universität Berlin showed how to defeat the firmware-TPM lockout protecting Windows Hello and BitLocker PINs (CVE-2026-43613). How fTPM and RPMC work, why a 4-digit PIN is now unsafe, and what to do.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+</ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+<h1>&ldquo;Hello Again&rdquo;: the attack that breaks your laptop&rsquo;s PIN lockout</h1>
+<p class="lede">Your laptop&rsquo;s short PIN &mdash; the four digits
+you type to unlock Windows Hello, or to unlock BitLocker disk
+encryption &mdash; is protected by a lockout: guess wrong too many
+times, and the chip refuses to try again. Researchers at
+Technische Universit&auml;t Berlin have shown how to defeat that
+lockout with a small board, a voltage glitch, and physical access
+to the machine. A 4-digit PIN that should have taken 69 days to
+guess now takes 40 hours at worst. A 6-digit BitLocker PIN that
+should have taken 19 years now takes 20 days at worst. There are
+no reported attacks outside the lab. But the fix is yours to make
+now: a longer PIN, and a firmware update when your maker ships
+one.</p>
+
+<h2>First, the pieces, defined</h2>
+<ul>
+<li><strong>TPM (Trusted Platform Module):</strong> a security chip
+(or, on modern machines, a piece of firmware running inside the
+processor &mdash; a <strong>firmware TPM</strong>, or
+<strong>fTPM</strong>) that stores secrets such as the keys that
+protect your disk encryption, and that counts wrong PIN guesses.</li>
+<li><strong>Windows Hello:</strong> Microsoft&rsquo;s sign-in system
+&mdash; face, fingerprint, or PIN &mdash; that uses the TPM to
+protect your credentials.</li>
+<li><strong>BitLocker:</strong> Windows&rsquo; built-in disk
+encryption. A BitLocker PIN unlocks the key that decrypts the
+drive.</li>
+<li><strong>Lockout (anti-hammering):</strong> after a set number of
+wrong guesses, the TPM refuses further guesses for a long time.
+This is what makes a 4-digit PIN safe: there are only 10,000
+possible 4-digit PINs, so without a lockout an attacker could try
+them all in minutes. With a working lockout, trying them all takes
+69 days.</li>
+<li><strong>SPI flash:</strong> a small memory chip on the
+motherboard that holds firmware, including the fTPM&rsquo;s saved
+state &mdash; among other things, its wrong-guess counter.</li>
+<li><strong>RPMC (replay-protected monotonic counter):</strong> a
+counter stored in the flash chip that only ever goes up, and whose
+value is protected by a cryptographic signature (an
+<strong>HMAC</strong> &mdash; a keyed checksum that proves a value
+is genuine). Its job is to stop <strong>rollback</strong>: an
+attacker copying an old saved state of the fTPM back onto the
+flash to reset the wrong-guess counter to zero.</li>
+</ul>
+
+<h2>How the attack works</h2>
+<p>The attack, presented at the ACM Conference on Computer and
+Communications Security (CCS &rsquo;26) in The Hague in November
+2026 and covered by The Hacker News on November 18, 2026, is
+called &ldquo;Hello Again.&rdquo; It breaks the RPMC protection in
+two ways:</p>
+<ol>
+<li><strong>The counter is never checked (AMD).</strong> AMD&rsquo;s
+Secure Processor firmware &mdash; the code that runs the fTPM on
+AMD machines &mdash; never verifies that the RPMC counter actually
+increased. So an attacker can put a small <strong>interposer
+board</strong> (a thin circuit board fitted between the processor
+and the flash chip) in the way, block the counter update, and
+report success. The fTPM believes the counter moved forward; it
+did not. The attacker can then replay an old fTPM state with a
+fresh wrong-guess counter, as many times as they like. This flaw
+is <strong>CVE-2026-43613</strong> (a CVE number is the standard
+public ID for a security flaw; CVSS 5.1, AMD bulletin
+AMD-SN-7079).</li>
+<li><strong>The counter&rsquo;s signing key can be stolen
+(Winbond flash).</strong> A brief <strong>voltage glitch</strong>
+&mdash; a precisely timed dip in the power supplied to the flash
+chip &mdash; makes Winbond RPMC flash leak its HMAC signing key
+in about a second. With the key, an attacker can forge any counter
+value they want, so the counter&rsquo;s signature proves nothing.</li>
+</ol>
+<p>With the lockout defeated, the attacker simply tries PINs until
+one works. In the lab, a 4-digit Windows Hello PIN was cracked in
+57 minutes; the worst case, trying every combination, is 40 hours
+instead of 69 days. A 6-digit BitLocker PIN was cracked in under
+7 minutes in the lab; the worst case is 20 days instead of 19
+years.</p>
+
+<h2>What was tested, and what was not</h2>
+<p>The researchers tested an HP OmniBook 3 (Ryzen AI 5 330) and a
+Framework Laptop 13 (Core Ultra 5 125H). AMD has confirmed the
+flaw and plans firmware fixes for most affected chips between
+November 2026 and February 2027.</p>
+<aside class="bb-notice-amber">
+<p><strong>The physical-access caveat, stated plainly.</strong>
+This is not a remote attack. Nobody can do this to your laptop
+over the internet. The attacker needs the machine in their hands,
+needs to open it, and needs to fit hardware to it (or glitch its
+power supply). If your laptop is stolen, that is exactly the
+scenario that matters &mdash; a thief has physical access. If your
+laptop never leaves your sight, this attack does not reach you.
+And no attacks outside the lab have been reported. The point of
+this page is not panic; it is that the lockout you were relying
+on is weaker than advertised, so your PIN needs to be longer than
+you thought.</p>
+</aside>
+
+<h2>What to do</h2>
+<ol>
+<li><strong>Make your PIN longer &mdash; today.</strong> This is the
+fix that works regardless of firmware. A 4-digit PIN has 10,000
+possibilities; a 6-digit PIN has a million; an 8-digit PIN has a
+hundred million. The researchers&rsquo; own numbers show the
+difference: even with the lockout broken, a 6-digit BitLocker PIN
+takes up to 20 days to brute-force, and longer PINs scale far
+beyond that. Use at least 8 digits for a BitLocker PIN, and at
+least 6 for Windows Hello &mdash; longer if you will remember it.
+A passphrase (words, not just digits) is stronger still where the
+system allows it.</li>
+<li><strong>Install the firmware update when it arrives.</strong>
+AMD plans fixes for most affected chips between November 2026 and
+February 2027. Your laptop maker (HP, Framework, Lenovo, and
+others) will ship them as BIOS/UEFI updates &mdash; install them
+the way you would any other firmware update. Check your
+maker&rsquo;s support page for your exact model rather than
+assuming you are covered.</li>
+<li><strong>Keep treating a stolen laptop as compromised.</strong>
+Physical access has always been the boundary of laptop security:
+a thief with time and tools can read a drive that is not
+encrypted, and can now also attack a short PIN faster than
+before. Full-disk encryption (BitLocker, with a long PIN) plus a
+long PIN is the honest defense. If a laptop is stolen, change your
+passwords and treat the data as exposed.</li>
+</ol>
+
+<h2>Why this matters beyond laptops</h2>
+<p>The lesson is general, and it is why this page is on a repair
+site. The TPM&rsquo;s lockout depended on a counter stored in a
+separate flash chip, protected by a signature &mdash; and the
+protection failed in two different places at once: the firmware
+never checked the counter, and the flash chip leaked the signing
+key. Security that lives in firmware is only as good as the
+firmware&rsquo;s handling of its own state, and no software scan or
+parts list (no SBOM) can catch a flaw like this, because the flaw
+is in how the platform security processor treats a counter. The
+people who find these flaws do it the same way repair people work:
+by reading the hardware, probing the bus between two chips, and
+testing what the documentation claims. SPI flash, interposer
+boards, and voltage glitching are bench skills &mdash; and they
+cut both ways.</p>
+
+<h2>Sources</h2>
+<ul>
+<li>&ldquo;Flash Chip Attack Bypasses TPM Lockout, Cracks Windows
+Hello and BitLocker PINs&rdquo; &mdash; The Hacker News,
+November 18, 2026:
+<a href="https://thehackernews.com/2026/11/flash-chip-attack-bypasses-tpm-lockout.html" target="_blank" rel="noopener">thehackernews.com</a>.</li>
+<li>&ldquo;&lsquo;Hello&rsquo; Attack Bypasses Windows Hello and
+BitLocker&rdquo; &mdash; Cyber Security News, November 18, 2026:
+<a href="https://cybersecuritynews.com/hello-attack-bypasses-windows-hello-and-bitlocker/" target="_blank" rel="noopener">cybersecuritynews.com</a>.</li>
+<li>CVE-2026-43613 &mdash; AMD bulletin AMD-SN-7079 (via the
+sources above). AMD firmware fixes planned November 2026 to
+February 2027.</li>
+<li>On this site: <a href="/gpu-repair.html">GPU Repair</a> (the
+same bench skills, applied to graphics cards).</li>
+</ul>
+
+<p class="signoff">BareBoard &mdash; free hardware education. A
+4-digit PIN was safe because the lockout worked. The lockout
+does not work. Make the PIN longer.</p>
+
+</main>
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

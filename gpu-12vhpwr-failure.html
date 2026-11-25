@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The 16-Pin Connector That Keeps Melting — BareBoard</title>
+<meta name="description" content="More than ten melted GeForce 16-pin power connectors were reported in November 2026 alone, from the RTX 5090 down to the 5070. What melts, why, the thirty-second inspection, and when a card or power supply can still be saved.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+</ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+<h1>The 16-pin connector that keeps melting</h1>
+<p class="lede">Four years after RTX 4090 owners first reported
+melted power plugs, the same failure is back &mdash; and it is no
+longer only a flagship problem. In November 2026 alone, more than
+ten melted GeForce 16-pin connectors were reported, spanning the
+RTX 5090 down to the RTX 5070, and even an RTX 4090. This page is
+the failure analysis: what melts, why it melts, how to inspect
+your own connector in thirty seconds, and when a melted card or
+power supply can still be saved. It complements our
+<a href="/gpu-repair.html">GPU Repair</a> hub, which carries the
+full documented record back to 2022 and the CPSC recall &mdash;
+this page is the November 2026 evidence and the inspection
+procedure.</p>
+
+<h2>What the connector is</h2>
+<p>High-end NVIDIA cards since the RTX 40 series take power through
+one 16-pin plug. The original version is called
+<strong>12VHPWR</strong>: twelve power pins carrying 12 volts, plus
+four small <strong>sense pins</strong> that tell the card what the
+cable can deliver. It is rated for up to 600 watts through a plug
+smaller than the 6- and 8-pin plugs it replaced. The revised
+version, <strong>12V-2x6</strong>, arrived with the ATX 3.1 power
+supply standard in September 2023. The revision shortened the
+sense pins, so a plug that is not fully seated should receive no
+power at all &mdash; a fail-safe against the exact failure that
+melted the first plugs. The November 2026 cases show the failure
+mode is not gone.</p>
+
+<h2>What melts, and why</h2>
+<p>What melts is the plastic housing of the plug and socket, and
+sometimes the metal pins inside it. The cause is heat from
+electrical resistance at a bad contact. The chain works like
+this:</p>
+<ol>
+<li><strong>A pin does not make full contact.</strong> The plug is
+not fully seated, a retaining clip is broken, debris is in the
+socket, or the cable pulls sideways on the plug.</li>
+<li><strong>Less contact means more resistance.</strong> The same
+current forced through a smaller contact area heats that spot.</li>
+<li><strong>Heat softens the plastic.</strong> The housing deforms,
+the contact gets worse, the heat rises further. The loop feeds
+itself until the plastic melts and, in the worst cases, chars.</li>
+</ol>
+<p>The key point is that this is a <em>contact</em> failure, not a
+wattage failure. A 5070-class card draws far less power than a
+5090, but if only one or two pins are carrying the load, those
+pins overheat anyway. That is why the November cases include
+lower-power cards, and why &ldquo;only 5090s at 600 watts&rdquo;
+was never the full story.</p>
+<p>The November 7, 2026 case makes the mechanism concrete. A Galax
+RTX 4080 SG owner found melted plastic and carbon deposits on the
+12VHPWR housing after freezes and black screens in Cyberpunk 2077.
+The retaining clips were broken on both the cable plug and a
+Cooler Master MWE Gold V2 1050W ATX 3.1 power supply. With nothing
+holding the plug firmly home, vibration shifted it, the contact
+area shrank, and the connector heated locally until it melted.
+The card had been warning the owner first &mdash; freezes and
+black screens under load are the symptoms of a connector going
+bad, and they should be treated as a stop-and-inspect signal, not
+a driver problem.</p>
+
+<h2>The November 2026 case list</h2>
+<p>VideoCardz documented more than ten melted GeForce power
+connector and cable cases shared in November 2026 alone, drawn
+from Reddit, Weibo, Taiwanese forums, Facebook, and the Thermal
+Grizzly community. The spread:</p>
+<ul>
+<li><strong>RTX 5090 and 5090 D</strong> &mdash; melted GPU sockets
+and melted adapters.</li>
+<li><strong>RTX 5080, 5070 Ti, and 5070</strong> &mdash; melted
+connectors on cards well below flagship power draw.</li>
+<li><strong>RTX 4090</strong> &mdash; the original melting card,
+still appearing in the case list four years on.</li>
+<li><strong>Damage on both ends</strong> &mdash; cases include
+melted GPU sockets, melted adapters, and damaged power-supply-side
+connectors. A melted PSU-side connector means the power supply
+itself is part of the failure, not just the cable.</li>
+</ul>
+<p>No manufacturer and no regulator has published an overall
+failure rate for the connector, so anyone who quotes you one is
+inventing it. What the case list does prove is that the failure is
+ongoing, that it spans the whole RTX 50 stack, and that the
+12V-2x6 revision did not end it.</p>
+
+<h2>The thirty-second inspection</h2>
+<p>Do this with the PC switched off and unplugged. Do it when you
+first install a card, after moving the PC, and any time the card
+crashes or black-screens under load.</p>
+<ol>
+<li><strong>Look for a gap.</strong> The plug must sit fully home
+in the socket, with no visible gap between the plug body and the
+socket. A gap means it is not seated &mdash; push it in firmly
+and evenly until it is flush.</li>
+<li><strong>Listen for the latch click.</strong> The plug has a
+retaining latch (a small clip that snaps over a tab on the socket).
+When the plug seats, the latch clicks. No click, no seat. If the
+clip is broken &mdash; on the plug or on the socket &mdash; the
+plug can walk out with vibration, exactly as in the November 7
+case. A broken clip is a failed connector: replace the cable, and
+if the socket&rsquo;s clip is broken, have the socket replaced.</li>
+<li><strong>Check the bend.</strong> Do not bend the cable sharply
+right at the plug. Give it a gentle run of cable first; cable
+makers commonly specify about 35&nbsp;mm before any bend. A sharp
+bend at the plug pulls the pins sideways and unseats them.</li>
+<li><strong>Look and smell.</strong> Brown discoloration, softened
+or shiny plastic, a burnt smell, or black carbon deposits mean the
+connector has already overheated. Stop using the card. This is a
+fire hazard, not a quirk.</li>
+<li><strong>Seat the cable before the card.</strong> NVIDIA&rsquo;s
+own guidance, from its November 2022 statement, is to plug the
+power cable into the card first, firmly and evenly, before
+installing the card into the machine. It is easier to seat the
+plug properly when the card is in your hands than when it is
+wedged in a case.</li>
+<li><strong>Use the right cable.</strong> Use the cable that came
+with your power supply, or the card&rsquo;s own adapter. Do not
+use third-party angled adapters: the CableMod angled 12VHPWR
+adapters were recalled by the U.S. Consumer Product Safety
+Commission on February 8, 2024 (recall 24-112, about 25,300
+units, 272 reports of loosening, overheating, and melting). If
+you own one, the CPSC instruction still stands: stop using it.</li>
+</ol>
+
+<h2>When a card or power supply is salvageable</h2>
+<p>A melted connector is a repair, not an obituary &mdash; but only
+if the damage stopped at the connector.</p>
+<ul>
+<li><strong>Card socket melted, board otherwise fine:</strong> the
+16-pin socket is a soldered part, and replacing it is routine work
+for a board-level repair shop. One U.S. repair shop reported
+fixing on the order of a hundred melted-connector RTX 4090s a
+month. Do not power the card again until the socket is replaced
+and the board is checked for heat damage to nearby parts.</li>
+<li><strong>Only the cable plug melted:</strong> replace the cable
+with the power supply maker&rsquo;s own cable for that exact
+model. Then inspect the card&rsquo;s socket closely &mdash; a
+melted plug usually leaves heat damage in the socket too.</li>
+<li><strong>PSU-side connector damaged:</strong> replace the power
+supply, not just the cable. A damaged PSU-side connector means the
+power supply&rsquo;s own socket has been overheated, and it
+cannot be trusted to hold contact again. Never open the power
+supply itself &mdash; it stores lethal charge even unplugged.</li>
+<li><strong>Not salvageable:</strong> if the heat spread into the
+board &mdash; charred circuit board, melted solder on nearby
+components, or a burnt smell from the board itself rather than
+just the connector &mdash; the repair gets expensive fast, and a
+shop should quote it before you commit. A card that still
+black-screens after a socket replacement has damage beyond the
+connector.</li>
+</ul>
+
+<h2>Sources</h2>
+<ul>
+<li>&ldquo;Here are all the melted GeForce power connector and
+cable cases reported in November alone&rdquo; &mdash; VideoCardz,
+November 2026:
+<a href="https://videocardz.com/newz/here-are-all-the-melted-geforce-power-connector-and-cable-cases-reported-in-november-alone" target="_blank" rel="noopener">videocardz.com</a>.</li>
+<li>&ldquo;Damaged 12VHPWR connector triggers RTX 4080 PC
+crashes&rdquo; &mdash; Nerds Magazine, November 7, 2026:
+<a href="https://nerdsmagazine.com/technews/damaged-12vhpwr-connector-triggers-rtx-4080-pc-crashes-117319/" target="_blank" rel="noopener">nerdsmagazine.com</a>.</li>
+<li>12V-2x6 connector explainer &mdash; OMC Network forum,
+November 18, 2026:
+<a href="https://forum.omc.network/posts/12v-2x6-connector-homelab-2026" target="_blank" rel="noopener">forum.omc.network</a>.</li>
+<li>On this site: <a href="/gpu-repair.html">GPU Repair</a> &mdash;
+the full 16-pin connector record from 2022, the CPSC recall
+24-112, and the board-level repair levels.</li>
+</ul>
+
+<p class="signoff">BareBoard &mdash; free hardware education. If
+the plug does not click, it is not seated. If it smells burnt,
+stop using it.</p>
+
+</main>
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>

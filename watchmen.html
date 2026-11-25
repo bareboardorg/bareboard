@@ -301,7 +301,7 @@
   <h2 id="amassed-bench">The Amassed Bench</h2>
   <section class="w3r2">
 <p><em>Who watches the watchmen? You do.</em> The amassed bench: <strong>28 devices</strong>,
-23 examined in full below and 5 summarized in the table, awaiting full examination. Each full examination carries the same
+21 examined in full below and 7 summarized in the table, awaiting full examination. Each full examination carries the same
 fields — <strong>pictures</strong> (public, including the internal photos inside FCC
 filings), <strong>FCC ID</strong>, <strong>datasheets</strong>, <strong>documentation</strong>,
 a <strong>litigation &amp; controversy check</strong>, and a <strong>basic-as-basic,
@@ -323,7 +323,7 @@ If you can read this page, you can run it.</li>
 </div>
 
 <h2>The amassed index — 28 devices</h2>
-<p class="small">Full examinations for 23 of the 28 below the table; 5 are summarized here and await full examination. Verdicts in one line; the sections carry the evidence.</p>
+<p class="small">Full examinations for 21 of the 28 below the table; 7 are summarized here and await full examination. Verdicts in one line; the sections carry the evidence.</p>
 <table>
 <tr><th>Device</th><th>Type</th><th>Open?</th><th>Verdict</th><th>Exam</th></tr>
 <tr><td><a href="#glasgow">Glasgow Interface Explorer</a></td><td>USB multitool</td><td>Full</td><td>Fully verifiable — the reference example</td><td><a href="#glasgow">W³</a></td></tr>
@@ -349,11 +349,11 @@ If you can read this page, you can run it.</li>
 <tr><td><a href="#ftdi">FTDI FT232RL</a></td><td>USB-serial chip</td><td>Chip closed</td><td>The 2014 driver kill-switch — the canonical case</td><td><a href="#ftdi">§14</a></td></tr>
 <tr><td><a href="#wch">WCH CH340 / CH341A</a></td><td>USB chips</td><td>Chips closed</td><td>macOS driver saga; community driver is the fix</td><td><a href="#wch">§15</a></td></tr>
 <tr><td><a href="#flipper">Flipper Zero</a></td><td>Pocket multi-tool</td><td>Full</td><td>Open device; regulatory seizures on record; app trust boundary</td><td><a href="#flipper">§16</a></td></tr>
-<tr><td>Proxmark3 (RDV4)</td><td>RFID/NFC tool</td><td>Full (GPLv3)</td><td>Open; dual-use — use on your own systems only</td><td>—</td></tr>
-<tr><td>DSLogic</td><td>Logic analyzer</td><td>High (GPLv2+)</td><td>Open firmware; DSView GPL episode resolved</td><td>—</td></tr>
-<tr><td>CMSIS-DAP / DAPLink</td><td>Debug interface</td><td>Full (Apache 2.0)</td><td>Arm's open reference; on nearly every dev board</td><td>—</td></tr>
-<tr><td>HackRF One</td><td>SDR</td><td>Full</td><td>Open hardware and firmware</td><td>—</td></tr>
-<tr><td>GreatFET</td><td>USB multitool</td><td>Full</td><td>Open hardware and firmware</td><td>—</td></tr>
+<tr><td>Proxmark3 (RDV4)</td><td>RFID/NFC tool</td><td>Full (GPLv3)</td><td>Open; dual-use — use on your own systems only</td><td>§17</td></tr>
+<tr><td>DSLogic</td><td>Logic analyzer</td><td>High (GPLv2+)</td><td>Mixed — FX2 firmware open, FPGA bitstream closed</td><td>§18</td></tr>
+<tr><td>CMSIS-DAP / DAPLink</td><td>Debug interface</td><td>Full (Apache 2.0)</td><td>Arm's open reference; on nearly every dev board</td><td>§19</td></tr>
+<tr><td>HackRF One</td><td>SDR</td><td>Full</td><td>Open hardware and firmware</td><td>§20</td></tr>
+<tr><td>GreatFET</td><td>USB multitool</td><td>Full</td><td>Open hardware and firmware</td><td>§21</td></tr>
 </table>
 
 <h2>The examinations, sections 1&ndash;16</h2>
@@ -824,6 +824,71 @@ can attack the host computer — treat apps like software from strangers.</p>
 <li>Before installing any third-party app, read what permissions it asks for. That's the whole audit.</li>
 </ol>
 
+<h3 id="proxmark">§17 — Proxmark3 RDV4</h3>
+<p><strong>What it is:</strong> the reference RFID/NFC research tool — reads, writes, emulates and clones 125&nbsp;kHz / 134&nbsp;kHz low-frequency and 13.56&nbsp;MHz high-frequency tags, and the default build target of the firmware everyone actually runs.</p>
+<p><strong>How open is it:</strong> <strong>open, end to end.</strong> The RDV4 hardware is an open design from RRG / Proxgrind (added flash memory, a smart-card module, a connector for Bluetooth and battery accessories, and swappable antennas), and the Iceman firmware fork is published under GPLv3-or-later [59]. The repository builds for the RDV4 out of the box, so nothing about the board is a special case. The one boundary to know: cheap clone boards exist that ship with closed factory firmware and tag DRM — those are not this device, and the Iceman project says so plainly.</p>
+<p><strong>Public record:</strong> <strong>Controversies &amp; litigation (checked 2026-11-25):</strong> no lawsuits against the project found. The public record is the tool&rsquo;s dual-use nature itself: it is the standard instrument for testing building access, transit, and payment-adjacent RFID, which is why its own documentation carries a legal notice about using it only on systems you own or are authorized to test [54].</p>
+<p><strong>Watch-outs:</strong> this is the most dual-use tool on the bench. Everything it can do to a tag you own, it can do to a tag you do not. Use it on your own systems or with written authorization, and never clone a credential you were not asked to test.</p>
+<p><strong>Do it yourself — the basic audit:</strong></p>
+<ol>
+<li>Build the Iceman firmware from source for PLATFORM=PM3RDV4 and flash it. If the build fails, stop — the board is not what it claims to be.</li>
+<li>Read a 13.56&nbsp;MHz card you own and confirm the UID matches what is printed on it.</li>
+<li>Test the low-frequency side on a 125&nbsp;kHz tag you own.</li>
+<li>Check the antennas: the RDV4&rsquo;s swappable antennas are the difference between a read at contact and a read at distance. That is the whole audit.</li>
+</ol>
+
+<h3 id="dslogic">§18 — DSLogic</h3>
+<p><strong>What it is:</strong> a 16-channel USB logic analyzer from DreamSourceLab — 400&nbsp;MHz on 4 channels, 200&nbsp;MHz on 8, 100&nbsp;MHz on all 16, with 256&nbsp;Mbit of on-board memory and an adjustable 0&ndash;5&nbsp;V input threshold [58].</p>
+<p><strong>How open is it:</strong> <strong>mixed — and the table&rsquo;s old verdict was wrong.</strong> The host software, DSView, is GPL, and the FX2 USB firmware is published as GPLv2+ [55]. But the measurement logic lives in the FPGA, and the FPGA bitstream is a closed vendor binary: sigrok can only use the device by extracting the vendor&rsquo;s firmware and bitstream files, and the FPGA design itself is not published [58]. An &ldquo;open firmware&rdquo; verdict for a logic analyzer whose sampling core is a blob you cannot inspect is not a verdict — it is a hope. The board&rsquo;s own numbers are honest (a Xilinx Spartan-6 XC6SLX9, a Cypress CY7C68013A FX2, 32&nbsp;MB of SDRAM [58]), and the hardware was sold as open from its 2013 Kickstarter [56]. What you can verify is the host side and the FX2 side. What you cannot verify is the part that decides what a signal was.</p>
+<p><strong>Public record:</strong> <strong>Controversies &amp; litigation (checked 2026-11-25):</strong> the DSView GPL episode — DSView began as a fork of sigrok code, and its licensing history was disputed before the project settled on GPL publication [56]. No lawsuits found. The live question is not legal but practical: DreamSourceLab&rsquo;s newer models (U3Pro16, U3Pro32) run DSView only, and sigrok support for the line depends on vendor binaries that are not packaged by distributions.</p>
+<p><strong>Watch-outs:</strong> do not treat a DSLogic capture as proof of a voltage: it records logic levels against a threshold you set, not the analog waveform. And do not update its firmware from anywhere but DSView itself — the bitstream comes from the vendor, and a wrong one bricks the measurement path, not just the USB side.</p>
+<p><strong>Do it yourself — the basic audit:</strong></p>
+<ol>
+<li>Install DSView from DreamSourceLab and confirm the device enumerates with its model name.</li>
+<li>Capture a known clock — a 1&nbsp;MHz square wave from a source you trust — and confirm the measured frequency.</li>
+<li>Run the same capture in sigrok&rsquo;s PulseView with the extracted vendor firmware and confirm the two agree.</li>
+<li>Read the DSLogic-fw repository and confirm the FX2 firmware you run is the published one. The bitstream you cannot check — write that down. That is the whole audit.</li>
+</ol>
+
+<h3 id="cmsisdap">§19 — CMSIS-DAP / DAPLink</h3>
+<p><strong>What it is:</strong> not one board but the debug interface on nearly every Arm development board — the protocol and firmware that let a host program and debug a Cortex-M target over SWD or JTAG, presented as a USB device that also offers drag-and-drop flashing and a virtual serial port [62].</p>
+<p><strong>How open is it:</strong> <strong>open, with a boundary worth naming.</strong> Arm publishes the CMSIS-DAP protocol and reference firmware under Apache 2.0, and DAPLink — the interface firmware that runs on the board&rsquo;s secondary MCU — is Apache 2.0 as well [57] [62]. CMSIS-DAP v2 runs over WinUSB with no driver install and streams SWO trace [62]. The boundary: the probe is only as open as the hardware interface circuit it runs on. A DAPLink build you compile yourself is verifiable; a ten-dollar dongle with a factory firmware image is a black box wearing an open protocol&rsquo;s name. And the flash algorithms the host tools push into target RAM (pyOCD and friends) are per-chip blobs — they run on the target, not the probe, and they are a separate trust decision.</p>
+<p><strong>Public record:</strong> <strong>Controversies &amp; litigation (checked 2026-11-25):</strong> none found. The standard is maintained by Arm in the open, and the old restriction that CMSIS-DAP could only be deployed on Arm Cortex processors is gone with the Apache 2.0 license [62].</p>
+<p><strong>Watch-outs:</strong> a debug probe has total control of its target — it can read and write flash, halt the core, and extract secrets. A compromised probe compromises everything it has ever touched. Build your own from the published source, or buy from a vendor you can name — and never debug a production device with secrets in it using a probe you have not verified.</p>
+<p><strong>Do it yourself — the basic audit:</strong></p>
+<ol>
+<li>Build DAPLink from the ARMmbed repository for a board you own and flash it.</li>
+<li>Connect it to a target you own and confirm pyOCD or OpenOCD lists it as a CMSIS-DAP probe.</li>
+<li>Flash a known binary and read it back; confirm the bytes match.</li>
+<li>Check the SWO trace stream works. That is the whole audit.</li>
+</ol>
+
+<h3 id="hackrf">§20 — HackRF One</h3>
+<p><strong>What it is:</strong> a half-duplex software-defined radio peripheral — 1&nbsp;MHz to 6&nbsp;GHz, up to 20&nbsp;million samples per second at 8-bit I/Q, over USB 2.0 [60]. The wideband SDR the open-source RF world standardizes on.</p>
+<p><strong>How open is it:</strong> <strong>open.</strong> Hardware under the CERN Open Hardware Licence (current revisions; earlier revisions were CC-BY), firmware GPL [61]. The chain is documented chip by chip: an NXP LPC4320 Cortex-M4F in the middle, a Maxim MAX2837 transceiver, and a Qorvo RFFC5072 mixer/synthesizer — all reachable and readable from the published design [61]. Great Scott Gadgets has certified the HackRF Pro (April 2026) as the One&rsquo;s replacement, as the MAX2837 supply chain thins [63] — the One is not discontinued, but its successor is now the supported path.</p>
+<p><strong>Public record:</strong> <strong>Controversies &amp; litigation (checked 2026-11-25):</strong> none found against the device or its maker. The record is regulatory and practical: it transmits, so the operator — not the maker — carries the legal responsibility for what goes out of the antenna, and the maker says so on the product page [60]. Clones are common and vary in quality; a clone is not the examined device.</p>
+<p><strong>Watch-outs:</strong> transmitting is the risk. Receive all you like; transmit only where you are licensed, and never on a frequency you have not checked. The 8-bit samples are also a limit, not a flaw: weak signals next to strong ones will drown, and that is physics, not a defect.</p>
+<p><strong>Do it yourself — the basic audit:</strong></p>
+<ol>
+<li>Build the firmware from the published source and flash it with hackrf_spiflash; confirm the version string matches the release.</li>
+<li>Receive a known station — a local FM broadcast — and confirm the frequency and audio.</li>
+<li>Check the board revision against Great Scott Gadgets&rsquo; revision list.</li>
+<li>Confirm the schematic in the repository matches the board in your hand. That is the whole audit.</li>
+</ol>
+
+<h3 id="greatfet">§21 — GreatFET One</h3>
+<p><strong>What it is:</strong> Great Scott Gadgets&rsquo; USB multitool — a Hi-Speed USB peripheral with a second USB port, 100 expansion pins, and add-on boards (&ldquo;neighbors&rdquo;) that turn it into almost any USB interface: logic analyzer, JTAG adapter, serial bridge, or a FaceDancer USB-device emulator [59].</p>
+<p><strong>How open is it:</strong> <strong>open.</strong> The hardware (codenamed Azalea) is BSD 3-Clause, built around the same NXP LPC4330 Cortex-M4 at 204&nbsp;MHz as the HackRF One, and the firmware and host software are published open source in the greatfet project [59]. It boots from the LPC4330&rsquo;s ROM bootloader, so a hand-built board can be flashed with no external programmer — the design is reproducible, not just readable. Its sigrok driver turns it into an 8-channel logic analyzer at 40.8&nbsp;MHz with no local sample memory: samples stream to the host continuously [59].</p>
+<p><strong>Public record:</strong> <strong>Controversies &amp; litigation (checked 2026-11-25):</strong> none found. The feature that draws the most scrutiny is also the point of the device: as a FaceDancer backend it can emulate arbitrary USB devices with arbitrary VID/PID values, so the identity a target sees may bear no relation to the hardware in front of it.</p>
+<p><strong>Watch-outs:</strong> a tool that can pretend to be any USB device can also pretend to be yours. Treat USB VID/PID as an untrusted claim whenever a GreatFET is in the loop — and never leave one connected to a host you care about while running firmware you have not read.</p>
+<p><strong>Do it yourself — the basic audit:</strong></p>
+<ol>
+<li>Install the greatfet host software and confirm the board enumerates with its serial number.</li>
+<li>Update the firmware from the published source and confirm the version string.</li>
+<li>Run it as an 8-channel logic analyzer in sigrok on a known clock and confirm the measurement.</li>
+<li>Emulate a simple USB device with FaceDancer and confirm the host sees what you told it to present. That is the whole audit.</li>
+</ol>
+
 <h2>Run your own W³ audit — seven basic steps</h2>
 <ol>
 <li><strong>Find the model number and serial number.</strong> They're printed on the device.</li>
@@ -902,6 +967,12 @@ we ask for your scrutiny.</p>
 <li><a href="https://daplink.io/">daplink.io — Arm Mbed DAPLink (Apache 2.0)</a></li>
 <li><a href="https://github.com/ARMmbed/DAPLink">GitHub — ARMmbed/DAPLink</a></li>
 <li><a href="https://github.com/RfidResearchGroup/proxmark3">GitHub — RfidResearchGroup/proxmark3 (GPLv3)</a></li>
+<li><a href="https://sigrok.org/wiki/DreamSourceLab_DSLogic">sigrok — DreamSourceLab DSLogic (vendor firmware and bitstream required; FPGA design not open)</a></li>
+<li><a href="https://sigrok.org/wiki/GreatFET_One">sigrok — GreatFET One (hardware BSD 3-Clause; LPC4330; 8-channel logic analyzer mode)</a></li>
+<li><a href="https://www.adafruit.com/product/3583">Adafruit — Great Scott Gadgets HackRF One (1 MHz to 6 GHz; open source hardware)</a></li>
+<li><a href="https://hacking.fubsypoly.com/hackrf-one/vol-1/">Fubsy Polymath — HackRF One series (CERN OHL hardware, GPL firmware; LPC4320, MAX2837, RFFC5072)</a></li>
+<li><a href="https://arm-software.github.io/CMSIS-DAP/latest/">Arm — CMSIS-DAP overview (Apache 2.0; v2 WinUSB and SWO trace)</a></li>
+<li><a href="https://ringmast4r.substack.com/p/the-cheap-sdr-is-disappearing">Ringmast4r — The Cheap SDR Is Disappearing (HackRF Pro certified April 2026 as the One&rsquo;s replacement)</a></li>
 </ol>
 <p class="small">All sources accessed 2026-10-08. Litigation and controversy checks are
 point-in-time; re-run before relying on a clean result. License: CC BY-SA 4.0 — BareBoard.</p>

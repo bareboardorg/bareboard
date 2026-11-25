@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://translate.googleapis.com; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noai, noimageai">
+<meta name="tdm-reservation" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repair Economics: Why Fixing What You Have Is Now the Rational Move — BareBoard</title>
+<meta name="description" content="AI data centers ate the memory supply: DRAM up 400% since 2024, an RTX 5090 at about $4,900 against a $1,999 price, a DDR5 kit up sevenfold. The November 2026 numbers, and what they do to the repair-or-replace decision.">
+<meta name="theme-color" content="#fbfbfc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%231d1d1f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='system-ui,-apple-system,sans-serif'%20font-size='36'%20font-weight='700'%20fill='white'%20text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/mobile.css" media="(max-width: 820px)">
+<link rel="alternate" type="application/rss+xml" title="BareBoard &mdash; What&apos;s New" href="/feed.xml">
+<link rel="stylesheet" href="/i18n.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="nav-inner">
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="/" class="brand-word">BareBoard</a></li>
+        <li class="has-children"><a href="/hot-100.html" aria-haspopup="true" aria-expanded="false">Top 100</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Top 100</li>
+                <li><a href="/hot-100.html">The Top 100</a></li>
+                <li><a href="/devices/">Device Hubs</a></li>
+                <li><a href="/autopsy/">Autopsies</a></li>
+                <li><a href="/eras.html">Eras</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/most-wanted.html" aria-haspopup="true" aria-expanded="false">Most Wanted</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Most Wanted</li>
+                <li><a href="/most-wanted.html#board">The Board</a></li>
+                <li><a href="/registry.html">Registry</a></li>
+                <li><a href="/contribute.html">Contribute</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/watchmen.html" aria-haspopup="true" aria-expanded="false">W&sup3;</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">W³</li>
+                <li><a href="/watchmen.html">The Watchmen</a></li>
+                <li><a href="/watchmen.html#amassed-bench">The Amassed Bench</a></li>
+                <li><a href="/glossary.html">Glossary</a></li>
+                <li><a href="/protocols.html">Protocols</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/foundry.html" aria-haspopup="true" aria-expanded="false">Foundry</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Foundry</li>
+                <li><a href="/foundry.html">The Foundry</a></li>
+                <li><a href="/datasheets.html">Datasheet Index</a></li>
+                <li><a href="/chips.html">Chip Database</a></li>
+                <li><a href="/obsolescence.html">Planned Obsolescence</a></li>
+                <li><a href="/repair.html">Repair Guides</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public" aria-haspopup="true" aria-expanded="false">GPU</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">GPU</li>
+                <li><a href="/gpu-repair.html">GPU Repair</a></li>
+                <li><a href="/datasheets.html#gpus-ai-accelerators-what-s-actually-public">GPUs &amp; AI Accelerators</a></li>
+                <li><a href="/devices/nintendo-switch/">Nintendo Switch — Tegra X1</a></li>
+                <li><a href="/devices/playstation/">PlayStation — AMD Graphics</a></li>
+                <li><a href="/level-0-silicon/lithography-nodes.html">Fabs &amp; Lithography Nodes</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/rare-manuals.html" aria-haspopup="true" aria-expanded="false">Rare Manuals</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Rare Manuals</li>
+                <li><a href="/rare-manuals.html">Rare Manuals</a></li>
+                <li><a href="/library.html">The Library</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/support.html" aria-haspopup="true" aria-expanded="false">Support</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Support</li>
+                <li><a href="/support.html#mission">Mission</a></li>
+                <li><a href="/support.html#chip-in">Donate</a></li>
+                <li><a href="/support.html#allies">Allies</a></li>
+                <li><a href="/start-here.html">Start Here</a></li>
+                <li><a href="/about.html">About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/terms.html" aria-haspopup="true" aria-expanded="false">Legal</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">Legal</li>
+                <li><a href="/terms.html">Terms</a></li>
+                <li><a href="/privacy.html">Privacy</a></li>
+                <li><a href="/dmca.html">DMCA</a></li>
+                <li><a href="/copyright.html">Copyright</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="has-children"><a href="/pmd.html" aria-haspopup="true" aria-expanded="false">PMD</a>
+          <div class="col-panel">
+            <div class="dropdown-inner">
+              <div class="colnav">
+                <ul class="colnav-col">
+                <li class="colnav-col-head">PMD</li>
+                <li><a href="/pmd.html">Power Mobility Devices</a></li>
+                <li><a href="/pmd-start.html">Start Here: Your Chair Stopped</a></li>
+                <li><a href="/pmd-fault-codes.html">Fault Codes, Translated</a></li>
+                <li><a href="/pmd-settings.html">The Settings</a></li>
+                <li><a href="/pmd-fixes.html">The Cheap Fixes</a></li>
+                <li><a href="/pmd-parts.html">Parts, Not Assemblies</a></li>
+                <li><a href="/pmd-reading.html">Reading the Chair</a></li>
+                <li><a href="/pmd.html#honest-limits">Honest Limits</a></li>
+                <li><a href="/pmd.html#the-law">The Law</a></li>
+                </ul>
+              </div>
+            </div>
+          </div></li>
+        <li class="nav-search-item">
+          <button type="button" class="search-toggle" aria-label="Search BareBoard" aria-expanded="false" aria-controls="search-panel"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+        </li>
+</ul>
+    </nav>
+  </div>
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-inner">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="search-icon"><circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.7"/><line x1="11.2" y1="11.2" x2="14.6" y2="14.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      <input type="search" id="site-search" placeholder="Search BareBoard" aria-label="Search BareBoard" autocomplete="off" spellcheck="false">
+      <button type="button" class="search-close" aria-label="Close search">&times;</button>
+    </div>
+    <ul class="search-results" id="search-results" aria-live="polite"></ul>
+  </div>
+</header>
+
+<main>
+<h1>Repair economics: why fixing what you have is now the rational move</h1>
+<p class="lede">For years, the honest advice about a broken graphics
+card or an old laptop was often &ldquo;buy a new one &mdash;
+it&rsquo;s cheaper than the repair.&rdquo; That advice is out of
+date. AI data centers have eaten the memory supply, and the prices
+of new hardware have moved so far that repair is now the
+economical choice in cases where it was not two years ago. This
+page lays out the numbers &mdash; all of them from November 2026
+tracking and reporting &mdash; and what they mean for the decision
+to repair or replace.</p>
+
+<h2>What happened: the &ldquo;RAMpocalypse&rdquo;</h2>
+<p>AI data-center construction has diverted DRAM and HBM wafer
+capacity &mdash; the memory chips that go into both data-center
+accelerators and consumer devices &mdash; away from consumer
+memory. JP Morgan&rsquo;s estimate: DRAM prices up 400% since
+2024 by the end of 2026. TrendForce expects DRAM to stay tight
+through 2027; Intel points to 2028 for normalization. There is no
+relief in sight this year, and probably not next year either.</p>
+
+<h2>The numbers, November 2026</h2>
+<ul>
+<li><strong>Graphics cards:</strong> Tom&rsquo;s Hardware tracking
+puts the RTX 5090 street price at about $4,920 to $4,999 against
+a $1,999 manufacturer&rsquo;s suggested price &mdash; roughly
+2.5 times. The RTX 5080 is at $1,899 against $999. NVIDIA removed
+the 5090 from its U.S. store in October. Chinese RTX 50 prices
+rose by up to 3,300 yuan (about $500) per card in the first week
+of November alone.</li>
+<li><strong>Memory:</strong> a 2x16GB DDR5-6000 kit went from $59
+in April 2025 to $429 on November 3, 2026 &mdash; more than seven
+times. GDDR6 spot prices went from about $2.50 per gigabyte in
+September 2025 to $12.45 on October 5, 2026 &mdash; about five
+times.</li>
+<li><strong>Everything downstream:</strong> the Steam Deck OLED
+went from $549 to $789; the Raspberry Pi 5 16GB rose $80 to $385
+on November 2, with the maker citing a &ldquo;lack of alternative
+supply for 16GB DRAM&rdquo;; Xbox, PlayStation 5, and Switch 2
+prices have risen too. MSI told investors gaming hardware prices
+rise 15 to 30% across 2026; AMD confirmed a 10% or larger Radeon
+price increase effective August 2026. Amazon cancelled GPU
+orders &mdash; Epic Games CEO Tim Sweeney said his were among
+them.</li>
+</ul>
+
+<h2>What this does to the repair-or-replace decision</h2>
+<p>Work the arithmetic on a concrete case. A graphics card with a
+melted 16-pin connector (see our
+<a href="/gpu-12vhpwr-failure.html">failure analysis</a>) is a
+soldered-connector replacement at a board-level shop &mdash; a
+repair measured in tens or low hundreds of dollars. The
+replacement card, at street prices, is $1,899 for a 5080 or about
+$4,900 for a 5090. The repair was always cheaper; the gap is now
+so large that the repair is cheaper by an order of magnitude.</p>
+<p>The same logic reaches further down the stack:</p>
+<ul>
+<li><strong>Fans, paste, and pads</strong> &mdash; the Level 1
+service on our <a href="/gpu-repair.html">GPU Repair</a> page
+&mdash; cost tens of dollars in parts and an afternoon. They
+restore a card that would cost thousands to replace.</li>
+<li><strong>Memory-chip faults</strong> that once meant
+&ldquo;scrap the card&rdquo; are now worth a shop&rsquo;s labor
+to isolate, because the card itself is worth so much more than
+the labor.</li>
+<li><strong>Used cards are worth verifying, not fearing.</strong>
+At these prices, a secondhand card is a serious purchase &mdash;
+which is why our <a href="/gpu-fake-spotting.html">fake-GPU
+guide</a> matters: the scams exist precisely because the prices
+make them profitable.</li>
+<li><strong>Old hardware gains a second life.</strong> A machine
+that was marginal at 2024 prices is worth keeping at 2026
+prices. The same logic applies beyond GPUs: a laptop with a
+failing fan or a dead battery is a repair, not a replacement,
+when its replacement costs 30% more than it did a year ago.</li>
+</ul>
+
+<h2>The honest limits</h2>
+<p>Repair is not always the answer, and the prices do not change
+the cases where it is not:</p>
+<ul>
+<li>Some failures are genuinely uneconomical &mdash; a dead GPU
+die, or heat damage spread across the board, can cost more to fix
+than the card is worth even now.</li>
+<li>Replacement parts have risen too: memory chips and modules
+cost more, and a repair that needs new RAM may cost more than
+the same repair did last year. Get a quote before committing.</li>
+<li>Prices are volatile. The figures on this page are November
+2026 tracking; check current street prices before deciding. The
+direction of travel &mdash; tight supply through 2027 &mdash; is
+the part analysts agree on, not the exact price of any one card
+next month.</li>
+</ul>
+
+<h2>Why this page is here</h2>
+<p>This site&rsquo;s mission is to put repair knowledge in
+everyone&rsquo;s hands, free. For most of its life, that mission
+fought an economic headwind: new was cheap, repair was dear, and
+the rational consumer replaced. The memory shortage has reversed
+the headwind. Repair is now, for a large class of failures, the
+rational economic choice &mdash; not only the principled one.
+That is a window, and it will not stay open forever: if supply
+normalizes in 2028, the arithmetic shifts back. While it is open,
+the knowledge on this site is worth more than it has ever been.
+Learn it now.</p>
+
+<h2>Sources</h2>
+<ul>
+<li>&ldquo;GPU supply problem: no end in sight&rdquo; &mdash;
+Engadget, November 2026:
+<a href="https://www.engadget.com/2309554/gpu-supply-problem-no-end-in-sight/" target="_blank" rel="noopener">engadget.com</a>.</li>
+<li>&ldquo;Why are RAM and GPU prices spiking?&rdquo; &mdash;
+Capital &amp; Compute, November 24, 2026:
+<a href="https://capitalandcompute.net/blog/why-are-ram-and-gpu-prices-spiking/" target="_blank" rel="noopener">capitalandcompute.net</a>.</li>
+<li>&ldquo;GPU prices surging: what to do&rdquo; &mdash; Tech
+Journal, November 2026:
+<a href="https://techjournal.org/gpu-prices-surging-what-to-do" target="_blank" rel="noopener">techjournal.org</a>.</li>
+<li>&ldquo;RAM shortage: gaming hardware prices 2026&rdquo;
+&mdash; Tech Insider, November 2026:
+<a href="https://tech-insider.org/ram-shortage-gaming-hardware-prices-2026/" target="_blank" rel="noopener">tech-insider.org</a>.</li>
+<li>On this site: <a href="/gpu-repair.html">GPU Repair</a>;
+<a href="/gpu-12vhpwr-failure.html">the 16-pin connector failure
+analysis</a>; <a href="/gpu-fake-spotting.html">spot a fake GPU
+before you pay</a>.</li>
+</ul>
+
+<p class="signoff">BareBoard &mdash; free hardware education. New
+is expensive. The card you already own is the cheapest card you
+will ever buy &mdash; if you can fix it.</p>
+
+</main>
+<footer>
+    <a href="/tarpit/" class="hp-link" aria-hidden="true" tabindex="-1">device index</a>
+    <p>BareBoard &mdash; a free educational resource. Text and findings published under open terms; nothing here is for sale.</p>
+        <nav>
+      <a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/colophon.html">Colophon</a>
+    </nav>
+
+    <div class="legal-framework">
+      <p><strong>BareBoard Legal Framework &amp; Declarations</strong></p>
+      <ul>
+      <li><strong>No AI training:</strong> All text, findings, and original photography on this site are copyrighted. Automated scraping for AI model training is prohibited. Crawlers that ignore robots.txt are trespassing.</li>
+        <li><strong>Educational nature:</strong> BareBoard operates exclusively as a non-commercial, open educational resource. All material is compiled for academic evaluation, hardware preservation, and technical literacy under 17 U.S.C. &sect; 107 (fair use).</li>
+        <li><strong>Zero-leak / no-binary clause:</strong> This site does not host, distribute, or mirror proprietary firmware binaries, encrypted operating system keys, or weaponizable exploits. Documentation covers only the public, physical realities of circuit hardware.</li>
+        <li><strong>Property verification:</strong> Every hardware autopsy is performed on personally owned, legally acquired equipment. No rented or third-party infrastructure is used.</li>
+        <li><strong>Public source sourcing:</strong> Comparative and regulatory data is aggregated from official public filings, including the U.S. Federal Communications Commission equipment authorization database.</li>
+      </ul>
+      <p class="legal-note"><em>BareBoard &mdash; open hardware allies, documented in alignment with the <a href="https://oshwa.org">Open Source Hardware Association</a> framework. Text and original photography published under open terms; nothing here is for sale.</em></p>
+    </div>
+  </footer>
+
+<script src="/nav.js" defer></script>
+<script src="/search.js" defer></script>
+<script src="/i18n.js" defer></script>
+</body>
+</html>
